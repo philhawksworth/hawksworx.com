@@ -1,0 +1,12 @@
+---
+layout: base
+title: blog
+pageclass: blog
+---
+
+
+<ul>
+{% for post in site.posts  %}	
+	<li><a href="{{post.url}}">{{ post.title }}</a><time datetime="{{post.date}}">{{post.date | date_to_string}}</time></li>
+{% endfor %}
+</ul>

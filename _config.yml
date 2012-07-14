@@ -1,0 +1,7 @@
+auto: 			true
+server: 		true
+server_port: 	4000
+source: 		./src
+destination: 	./site
+exclude: 		.gitignore, README.md
+permalink: 		/blog/:title

@@ -1,0 +1,15 @@
+---
+---
+
+{
+	"posts" : [
+{% for item in site.posts %}		
+	{
+		"title" : "{{ item.title }}",
+		"url" : "{{ item.url }}",
+		"date" : "{{ item.date }}",
+		"words" : "{{ item.content | strip_html | wordmap }}"
+	}
+	{% if forloop.last %}{% else %},{% endif %}
+{% endfor %}
+]}
