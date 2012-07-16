@@ -12,7 +12,7 @@ tags:
 
  
 {% mark image -%}
-<img src="{{site.config.image_path}}/nodejs.png" alt="Getting started with NodeJS" />
+<img src="/images/nodejs.png" alt="Getting started with NodeJS" />
 {%- endmark %}
 
 {% mark excerpt -%}
@@ -27,7 +27,7 @@ tags:
 <p>
     To that end, I resurrected an old idea which I first built circa 1999 for randomly choosing someone from a list to make the tea. Not earth-shattering, but a bit of fun and simple enough for me to see through to completion. For this incarnation, dubbed <a href="http://teafr.com">Teafr.com</a>, I piggybacked on the lists feature of <a href="http://twitter.com/philhawksworth/tea-buddies">Twitter</a> to allow people to create and manage their lists of potential tea-makers somewhere they are already comfortable. <a href="http://teafr.com">My app</a> would allow a user to recall a list of their choosing and then perform a lottery, selecting a winner (or loser) from the list at random. To add a little suspense (in the loosest possible sense) I added a basic animation which gradually got slower until the winner was revealed.
 </p>
-<img src="{{site.config.image_path}}/teafr-tea-rotas-from-twitter-lists.jpg" />
+<img src="/images/teafr-tea-rotas-from-twitter-lists.jpg" />
 <p>
     I captured a couple of <a href="http://www.vimeo.com/8144420">videos</a> showing teafr.com doing its stuff, <a href="http://www.vimeo.com/8457609">one of them</a> on an iPhone. The fun part of this for me was in allowing this lottery and the animation to be visible to everyone viewing the same list from wherever they are. <a href="http://nodesjs.org">Nodejs</a> makes it trivially simple to handle long-lived http requests so that all clients could listen out for the initiation of a new lottery event. Since this is all just lightweight HTTP, HTML, CSS and Javascript, it also runs pretty nicely on both my iPhone and Palm Pre.
 </p>
