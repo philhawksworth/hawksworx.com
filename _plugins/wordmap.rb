@@ -8,7 +8,7 @@
 module Jekyll
   module WordMap
     def wordmap(input)
-      input.gsub(/"/, "").split(" ").uniq.join(" ")
+      input.gsub(/"/, "").gsub(/\./, "").gsub(/,/, "").downcase.split(" ").uniq.join(" ")
     end
   end
 end
