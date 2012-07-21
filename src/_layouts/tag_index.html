@@ -1,0 +1,21 @@
+---
+layout: base
+pageclass: blog
+---
+
+	<h2>Blog posts tagged {{ page.tag }}</h2>
+
+	<ul class="listing">
+	{% for post in site.posts %}{% for tag in post.tags %}{% if tag == page.tag %}	
+  		{% include post_teaser.html %}
+	{% endif %}{% endfor %}{% endfor %}
+	</ul>
+
+	<h2>Other tags:</h2>
+	<ul>
+	{% for tag in site.tags | sort %}
+		{% assign t = tag.first %}
+		{% assign posts = tag.last %}
+		<li><a href="/blog/tag/{{ t }}">{{ t }}</a> ({{ posts | size }})</li>
+	{% endfor %}	
+	</ul>

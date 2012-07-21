@@ -5,7 +5,7 @@ hx.posts = null;		// the site search data.
 // load the search json object for javascript searching.
 hx.loadSearchData = function() {
 
-	// quietly gp and get the search data
+	// quietly go and get the search data
 	$.getJSON('/search.json', function(data) {
 		hx.posts =  data.posts;
 
@@ -21,17 +21,16 @@ hx.loadSearchData = function() {
 // search for blog entries in the blog json object.
 hx.search = function(str) {
 
-	var reference, i;
+	var reference, i, j;
 	var hits = [];
-	
+
 	// no results for an empty saerch string.
 	if(!str.length) {
-		$("div.search div.results").empty();
+		$("div.search .results").empty();
 		return;
 	}
 
-	// find our search hits
-	str = str.toLowerCase();
+	// find our search hits by searching for any of the entered words
 	for (i = hx.posts.length - 1; i >= 0; i--) {
 		if(hx.posts[i].ref.indexOf(str) != -1) {
 			hits.push(hx.posts[i]);
@@ -39,11 +38,15 @@ hx.search = function(str) {
 	}
 
 	// build the results output
-	$("div.search div.results").empty();
+	$("div.search .results").empty();
 	for (i = hits.length - 1; i >= 0; i--) {
-		$("div.search div.results").append("<h2><a href='"+ hits[i].url+ "'>"+ hits[i].title +"</a></h2>");
+		$("div.search .results").append("<li><a href='"+ hits[i].url+ "'>"+ hits[i].title +"</a><time>"+ hits[i].date+"</time></li>");
 	}
+	
 };
+
+
+
 
 
 // Bind the event listeners
@@ -51,9 +54,26 @@ hx.addEventHandlers = function() {
 
 	// blog search
 	$('input.searchstr').keyup(function(k){
+		
+// console.log("k", k.which);
+
+
 		// TODO: cancel search if escape
+		if(k.which == 27) {
+			$('div.search').slideToggle(150);
+		}
+
 		str = $(this).val().trim();
 		hx.search(str);
+	});
+
+	$('.nav a.search').click(function(e){
+		e.preventDefault();
+		$("div.search .results").empty();
+		$('input.searchstr').val("");
+		$('div.search').slideToggle(150);
+		$('input.searchstr').focus();
+		return false;
 	});
 	
 };

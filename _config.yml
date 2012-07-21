@@ -4,4 +4,6 @@ server_port: 	4000
 source: 		./src
 destination: 	./site
 exclude: 		.gitignore, README.md
+pygments:		true
 permalink: 		/blog/:title
+tag_dir:		/blog/tag

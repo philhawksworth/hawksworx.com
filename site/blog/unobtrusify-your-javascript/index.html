@@ -8,27 +8,47 @@
 		<title>Unobtrusify your Javascript</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/syntax.css">
 		<meta name="description" content="">
 	</head>
 	<body class="blog">
-		<div class="wrapper">
-			<div class="header">
+		<div class="header">
+			<div class="wrapper">
 				<h1>hawksworx</h1>
 				<p>noodlings about the web and whatnot</p>
 				<ul class="nav" role="navigtion">
     <li><a href="/" class="home">home</a></li>
     <li><a href="/blog" class="blog">blog</a></li>
+    <li><a href="/search" class="search">search</a></li>
     <li><a href="/atom.xml" class="feed">feed</a></li>
 </ul>
 			</div>
-			<div class="search">
-				<!-- TODO: add fallback form to query google -->
-				<input type="text" class="searchstr" />
-				<div class="results"></div>
+		</div>
+		<div class="search">
+			<div class="wrapper">
+				<label>search the blog<input type="text" class="searchstr" id="searchstr" /></label>
+				<ul class="results"></ul>
 			</div>
+		</div>
+		<div class="wrapper">
+		<div class="post">
 
-			
 <h1>Unobtrusify your Javascript</h1>
+<p class="meta">
+	posted on <time datetime="2009-01-05 00:00:00 +0000">05 January 2009</time>	and tagged with 
+		
+	
+	<a href="/blog/tag/javascript">javascript</a>
+		
+	
+	<a href="/blog/tag/jquery">jquery</a>
+		
+	
+	and 
+	
+	<a href="/blog/tag/development">development</a>
+				
+</p>
 <img src="/images/unobtrusive.jpg" />
 <p class="excerpt">
  	Recently <a href="http://jaybyjayfresh.com" title="jaybyjayfresh">Jon Lister</a>, a colleague of mine at <a href="http://www.osmosoft.com">Osmosoft</a> showed me a website made by his friend <a href="http://joshuabradley.co.uk/" title="Joshua Bradley">Joshua Bradley</a>. The site, used some of the Javscript code from <a href="http://tiddlywiki.com" title="TiddlyWiki">TiddlyWiki</a>'s animation engine to create some nice visual effects. I loved the design, but could see some room for improvement in the implementation. I'm a big advocate of <a href="http://en.wikipedia.org/wiki/Unobtrusive_JavaScript" title="Unobtrusive JavaScript">Unobtrusive Javascript</a> and <a href="http://en.wikipedia.org/wiki/Progressive_enhancement" title="Progressive enhancement">Progressive Enhancement</a> and so I set about producing a quick demo of how a similar result could be achieved in the most Web-kind and accessible way available using <a href="http://jquery.com" title="jQuery">jQuery</a> for the behaviors.
@@ -58,14 +78,14 @@
     I then used a well-known CSS technique to replace the text in the headings with images. This would ensure that the text would remain for non-human consumers of the site, while the images would be presented to those able to appreciate them.  The technique is simple.  You prevent the browser from scrolling the content of your element with <code>overflow:hidden</code> and then scoot the text out of the way with <code>text-indent</code>. Now that the way is clear, you can display an image with <code>background-image</code>.  Be sure to specify the dimensions of your desired image as the <code>background-image</code> property will not resize your element to the correct size automatically. The CSS would look something like this:
 </p> 
  
-<div>
-  <pre><code class='css'>#myHeading {
-    text-indent: -9999px;
-    overflow: hidden;
-    background-image: url(myImage.gif);
-    width: 380px;
-    height: 123px;
-}</code></pre>
+<div class="highlight"><pre><code class="css"><span class="nf">#myHeading</span> <span class="p">{</span>
+    <span class="k">text-indent</span><span class="o">:</span> <span class="m">-9999px</span><span class="p">;</span>
+    <span class="k">overflow</span><span class="o">:</span> <span class="k">hidden</span><span class="p">;</span>
+    <span class="k">background-image</span><span class="o">:</span> <span class="sx">url(myImage.gif)</span><span class="p">;</span>
+    <span class="k">width</span><span class="o">:</span> <span class="m">380px</span><span class="p">;</span>
+    <span class="k">height</span><span class="o">:</span> <span class="m">123px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
 </div>
  
  
@@ -76,24 +96,24 @@
     In order to use this 'image sprite' for each and every heading, I just needed to specify the <code>background-position </code>for each one. Some attributes would be common to each one so I could save some code like this:
 </p> 
  
-<div>
-  <pre><code class='css'>h1 {
-    text-indent: -9999px;
-    overflow: hidden;
-    background-image: url(images/unobtrusive_sprite.gif);
-    width: 380px;
-}
+<div class="highlight"><pre><code class="css"><span class="nt">h1</span> <span class="p">{</span>
+    <span class="k">text-indent</span><span class="o">:</span> <span class="m">-9999px</span><span class="p">;</span>
+    <span class="k">overflow</span><span class="o">:</span> <span class="k">hidden</span><span class="p">;</span>
+    <span class="k">background-image</span><span class="o">:</span> <span class="sx">url(images/unobtrusive_sprite.gif)</span><span class="p">;</span>
+    <span class="k">width</span><span class="o">:</span> <span class="m">380px</span><span class="p">;</span>
+<span class="p">}</span>
  
-h1#uj {
-        background-position: 0 0;
-        height: 123px;
-}
+<span class="nt">h1</span><span class="nf">#uj</span> <span class="p">{</span>
+        <span class="k">background-position</span><span class="o">:</span> <span class="m">0</span> <span class="m">0</span><span class="p">;</span>
+        <span class="k">height</span><span class="o">:</span> <span class="m">123px</span><span class="p">;</span>
+<span class="p">}</span>
  
-h1#cmh {
-        background-position: 0 -123px;
-        height: 150px;
-}
-...</code></pre>
+<span class="nt">h1</span><span class="nf">#cmh</span> <span class="p">{</span>
+        <span class="k">background-position</span><span class="o">:</span> <span class="m">0</span> <span class="m">-123px</span><span class="p">;</span>
+        <span class="k">height</span><span class="o">:</span> <span class="m">150px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="o">...</span>
+</code></pre>
 </div>
 
  
@@ -104,8 +124,8 @@ h1#cmh {
     Using jQuery to easily and unobtrusively add behavior to elements on the page, we can now hide all of the expanded sections. We do this with a simple jQuery statement like this:
 </p> 
  
-<div>
-  <pre><code class='js'>$('#wrapper &gt; div').hide();</code></pre>
+<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#wrapper &gt; div&#39;</span><span class="p">).</span><span class="nx">hide</span><span class="p">();</span>
+</code></pre>
 </div>
 
  
@@ -116,8 +136,8 @@ h1#cmh {
 <p>
     Headings are not by default clickable so we can add some behavior to suggest that the clicking a heading will have a effect by changing the cursor for them like this:
 </p> 
-<div>
-  <pre><code class='js'>$('#wrapper h1').addClass('clickable');</code></pre>
+<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#wrapper h1&#39;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;clickable&#39;</span><span class="p">);</span>
+</code></pre>
 </div>
 
  
@@ -140,14 +160,22 @@ h1#cmh {
 
               
 
-			
-			<div class="footer">
-				<ul class="nav" role="navigtion">
+</div>
+		</div>
+		<div class="footer">
+			<div class="wrapper">
+		        <h1><a href="/" rel="self" title="hawksworx: home">hawksworx</a></h1>
+		        <h2>noodlings about the web, technology and whatnot</h2>
+		      	<ul class="nav" role="navigtion">
     <li><a href="/" class="home">home</a></li>
     <li><a href="/blog" class="blog">blog</a></li>
+    <li><a href="/search" class="search">search</a></li>
     <li><a href="/atom.xml" class="feed">feed</a></li>
 </ul>
-			</div>
+		     </div>
+		     <p>
+				Follow <a href="http://twitter.com/philhawksworth" rel="me">@philhawksworth</a> on twitter for more regular wibblings. This site is hand-whittled with some help from <a href="https://github.com/hyde/hyde">Jekyll</a> and can be found on <a href="https://github.com/philhawksworth/hawksworx.com">Github</a>
+	        </p>	
 		</div>
 		<script src="/js/jquery.1.7.2.min.js" type="text/javascript"></script>
 		<script src="/js/hawksworx.js" type="text/javascript"></script>

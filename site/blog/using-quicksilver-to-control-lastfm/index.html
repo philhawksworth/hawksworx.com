@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>Using Quicksilver to control Last.fm</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/syntax.css">
+		<meta name="description" content="">
+	</head>
+	<body class="blog">
+		<div class="header">
+			<div class="wrapper">
+				<h1>hawksworx</h1>
+				<p>noodlings about the web and whatnot</p>
+				<ul class="nav" role="navigtion">
+    <li><a href="/" class="home">home</a></li>
+    <li><a href="/blog" class="blog">blog</a></li>
+    <li><a href="/search" class="search">search</a></li>
+    <li><a href="/atom.xml" class="feed">feed</a></li>
+</ul>
+			</div>
+		</div>
+		<div class="search">
+			<div class="wrapper">
+				<label>search the blog<input type="text" class="searchstr" id="searchstr" /></label>
+				<ul class="results"></ul>
+			</div>
+		</div>
+		<div class="wrapper">
+		<div class="post">
+
+<h1>Using Quicksilver to control Last.fm</h1>
+<p class="meta">
+	posted on <time datetime="2009-08-07 00:00:00 +0100">07 August 2009</time>	and tagged with 
+		
+	
+	<a href="/blog/tag/osx">osx</a>
+		
+	
+	and 
+	
+	<a href="/blog/tag/tips">tips</a>
+				
+</p>
+<img src="/images/quicksilver_lastfm.jpg" />
+<p class="excerpt">
+ 	For a while, I've been using handy <a href="http://docs.blacktree.com/quicksilver/what_is_quicksilver">Quicksilver</a> triggers to control iTunes. I like not needing to switch my attention from what I'm working on, in order to skip a track, pause the playback, set a rating or whatever.  You can find out <a href="http://leafraker.com/2007/09/17/how-to-create-a-quicksilver-trigger/">how to create a trigger</a> from one of the many great Quicksilver tutorials out on the Web.
+
+</p>
+
+
+<p>
+    At the moment though, I find myself listening to <a href="http://last.fm" rel="org fn url">Last.fm</a> more and more, and have been looking for a similar way to control the Last.fm application. I couldn't find a plugin for Quicksilver to achieve this so I set about writing an Applescript which I could trigger with Quicksilver.  I'm not much of an Applescript whizz, but I managed to put the following script together to skip the track currently playing in the Last.fm application:
+</p>
+
+<div class="highlight"><pre><code class="applescript"><span class="k">tell</span> <span class="nb">application</span> <span class="s2">&quot;Last.fm&quot;</span> <span class="k">to</span> <span class="nb">activate</span>
+<span class="k">tell</span> <span class="nb">application</span> <span class="s2">&quot;System Events&quot;</span>
+        <span class="k">tell</span> <span class="nv">process</span> <span class="s2">&quot;Last.fm&quot;</span>
+                <span class="nv">click</span> <span class="na">menu</span> <span class="nb">item</span> <span class="s2">&quot;Skip&quot;</span> <span class="k">of</span> <span class="na">menu</span> <span class="s2">&quot;Controls&quot;</span> <span class="k">of</span> <span class="na">menu</span> <span class="nv">bar</span> <span class="mi">1</span>
+        <span class="k">end</span> <span class="k">tell</span>
+<span class="k">end</span> <span class="k">tell</span>
+</code></pre>
+</div>
+
+
+<p>
+    After saving this in a suitable location (I have a Utils folder where I keep lots of scripts and utilities), I set a Quicksilver trigger to run the script. Simple!  Happy with the result, I created similar scripts for some other controls like love, ban, play and stop and assigned them all keyboard triggers.
+</p>
+<p>
+     My only wish was that I could do this without giving Last.fm focus. Generally this is fine for my because I have it running in a second display, so it doesn't steal my attention, but it would be nice if I could get Applescript to execute the command without activating the application. I'd welcome suggestions from anyone with more Applescript fu than me.
+</p>
+
+
+
+
+              
+
+</div>
+		</div>
+		<div class="footer">
+			<div class="wrapper">
+		        <h1><a href="/" rel="self" title="hawksworx: home">hawksworx</a></h1>
+		        <h2>noodlings about the web, technology and whatnot</h2>
+		      	<ul class="nav" role="navigtion">
+    <li><a href="/" class="home">home</a></li>
+    <li><a href="/blog" class="blog">blog</a></li>
+    <li><a href="/search" class="search">search</a></li>
+    <li><a href="/atom.xml" class="feed">feed</a></li>
+</ul>
+		     </div>
+		     <p>
+				Follow <a href="http://twitter.com/philhawksworth" rel="me">@philhawksworth</a> on twitter for more regular wibblings. This site is hand-whittled with some help from <a href="https://github.com/hyde/hyde">Jekyll</a> and can be found on <a href="https://github.com/philhawksworth/hawksworx.com">Github</a>
+	        </p>	
+		</div>
+		<script src="/js/jquery.1.7.2.min.js" type="text/javascript"></script>
+		<script src="/js/hawksworx.js" type="text/javascript"></script>
+				<script type="text/javascript">
+			// google analytics
+		</script>
+
+	</body>
+</html>

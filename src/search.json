@@ -7,7 +7,7 @@
 	{
 		"title" : "{{ item.title }}",
 		"url" : "{{ item.url }}",
-		"date" : "{{ item.date }}",
+		"date" : "{{ item.date | date_to_long_string }}",
 		"words" : "{{ item.content | strip_html | wordmap }}"
 	}
 	{% if forloop.last %}{% else %},{% endif %}
