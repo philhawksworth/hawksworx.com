@@ -144,8 +144,9 @@ h2 a:focus {
     }
 
 
-/*  navigation */
-
+/*  
+	navigation 
+*/
 .nav {
 	position: absolute;
 	top: 0px;
@@ -156,6 +157,12 @@ h2 a:focus {
 	margin-left:0.5em;
 	padding: 0;
 }
+.home .nav .home,
+.blog .nav .blog,
+.search .nav .search {
+	border-bottom-width: 3px;
+}
+
 
 
 /*  inline search */
@@ -255,7 +262,9 @@ body.search div.search {
 	}
 
 
-/* in addition to the pygments syntax highlighting styles */
+/* 
+	in addition to the pygments syntax highlighting styles 
+*/
 .highlight {
 	font-size: 0.8em;
 	overflow: auto;
@@ -264,6 +273,10 @@ body.search div.search {
 }
 
 
+
+/*
+	for narrow screens 
+*/
 @media all and (max-width: 760px) {
 
     .wrapper {
