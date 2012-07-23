@@ -27,6 +27,7 @@ hx.search = function(str) {
 	// no results for an empty saerch string.
 	if(!str.length) {
 		$("div.search .results").empty();
+		$('div.search label').css({'text-indent': 0});
 		return;
 	}
 
@@ -55,10 +56,9 @@ hx.addEventHandlers = function() {
 	// blog search
 	$('input.searchstr').keyup(function(k){
 		
-// console.log("k", k.which);
+		$('div.search label').css({'text-indent': "-9999px"});
 
-
-		// TODO: cancel search if escape
+		// cancel search if escape
 		if(k.which == 27) {
 			$('div.search').slideToggle(150);
 		}
@@ -71,6 +71,7 @@ hx.addEventHandlers = function() {
 		e.preventDefault();
 		$("div.search .results").empty();
 		$('input.searchstr').val("");
+		$('div.search label').css({'text-indent': 0});
 		$('div.search').slideToggle(150);
 		$('input.searchstr').focus();
 		return false;

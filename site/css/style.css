@@ -83,7 +83,6 @@ h2 a:focus {
     border-top:solid 1px #fff;
     border-bottom:solid 1px #ddd;
 }
-
     .header h1 {
         margin:0;
         padding:0;
@@ -113,7 +112,6 @@ h2 a:focus {
     border-top:solid 2px #111;
     position:relative;
 }
-
     .footer h1 {
         margin:0;
         padding:0;
@@ -134,7 +132,6 @@ h2 a:focus {
         padding:0; 
         font-weight:normal;               
     }
-    
     .footer p {
         font-size: 0.7em;
         background: #292929;
@@ -179,22 +176,37 @@ body.search div.search {
 	div.search p {
 		color: #fff;
 	}
-	div.search input {
+	div.search .string {
 		background-color: #444;
 		border: solid 1px #000;
+		width:100%;
+		margin: 0;
+	}
+	div.search input {
+		border-style: none;
+		background-color: transparent;
 		color: #fff;
-		font-size: 1.8em;
+		font-size: 1em;
+		line-height: 1;
 		padding: 4px 10px;
-		margin: 0 -6px 0 0;
-		width: 100%;
+		margin: 0;
+		width:100%;
 		font-family: "Helvetica", Helvetica, sans-serif;
+		position: absolute;
+		top:0;
+		left:0;
 	}
 	input:focus {
 	    outline: none;
-	    border: solid 2px #eee;
 	}
 	div.search label {
 		display: block;
+		position: relative;
+		padding: 10px;
+		font-family: "Helvetica", Helvetica, sans-serif;
+		color: #999;
+		font-size: 1.8em;
+		overflow: none;
 	}
 	div.search .results {
 		list-style: none;
@@ -225,7 +237,6 @@ body.search div.search {
 .post {
 	margin: 0 0 3em;
 }
-
 	.post h2,
 	.post h1 {
 		margin: 0 0 0.2em 0;
@@ -233,7 +244,6 @@ body.search div.search {
 		line-height: 1.2;
 		font-size: 2em;
 	}
-
 	.post .meta,
 	.blog .meta {
 		background-color: #222;
@@ -254,7 +264,6 @@ body.search div.search {
 		font-size: 0.8em;
 		border-bottom: solid 1px #fff;
 	}
-
 	.post ul {
 		list-style: disc;
 		margin: 1em 2em;
@@ -282,9 +291,13 @@ body.search div.search {
     .wrapper {
         width:90%;
     }
-    .post img {
+    .post img,
+    .home img  {
     	width:100%;
     	padding:0;
+    }
+    div.search input{
+
     }
 }
 
