@@ -12,7 +12,7 @@
 
 {% if page.image contains 'http' %} 
   <img src="{{ page.image }}" />
-{% else if page.image == empty %}
+{% elsif page.image == empty %}
 {% else %}   
 <img src="/images/{{ page.image }}" />
 {% endif %}
