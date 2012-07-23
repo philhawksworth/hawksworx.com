@@ -1,8 +1,8 @@
 auto: 			true
 server: 		true
 server_port: 	4000
-source: 		./src
-destination: 	./site
+source: 		src
+destination: 	_site
 exclude: 		.gitignore, README.md
 pygments:		true
 permalink: 		/blog/:title
