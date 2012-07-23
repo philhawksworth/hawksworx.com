@@ -23,7 +23,7 @@ def deploy():
     local('git commit -m "deploying latest build as at %(time)s"' %env)
     local('git branch -D gh-pages')
     local('git checkout -b gh-pages')
-    local('git filter-branch --subdirectory-filter site')
+    local('git filter-branch --subdirectory-filter -f site')
     local('git push origin ghp-ages')
 
     print yellow("Done?")
