@@ -9,7 +9,13 @@
 	<a href="/blog/tag/{{ tag }}">{{ tag }}</a>
 	{% endfor %}			
 </p>
+
+{% if page.image contains 'http' %} 
+  <img src="{{ page.image }}" />
+{% else if page.image == empty %}
+{% else %}   
 <img src="/images/{{ page.image }}" />
+{% endif %}
 <p class="excerpt">
  	{{ page.excerpt }}
 </p>
