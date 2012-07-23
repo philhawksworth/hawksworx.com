@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Leveraging jQuery and jQuery plugins in TiddlyWiki</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/syntax.css">
+		<meta name="description" content="">
+	</head>
+	<body class="blog">
+		<div class="header">
+			<div class="wrapper">
+				<h1>hawksworx</h1>
+				<p>noodlings about the web and whatnot</p>
+				<ul class="nav" role="navigtion">
+    <li><a href="/" class="home">home</a></li>
+    <li><a href="/blog" class="blog">blog</a></li>
+    <li><a href="/search" class="search">search</a></li>
+    <li><a href="/atom.xml" class="feed">feed</a></li>
+</ul>
+			</div>
+		</div>
+		<div class="search">
+			<div class="wrapper">
+				<div class="string">
+					<label>search the blog<input type="text" class="searchstr" id="searchstr" /></label></div>
+				<ul class="results"></ul>
+			</div>
+		</div>
+		<div class="wrapper">
+		<div class="post">
+
+<h1>Leveraging jQuery and jQuery plugins in TiddlyWiki</h1>
+<p class="meta">
+	posted on <time datetime="2009-03-13 00:00:00 +0000">13 March 2009</time>	and tagged with 
+		
+	
+	<a href="/blog/tag/javascript">javascript</a>
+		
+	
+	<a href="/blog/tag/jquery">jquery</a>
+		
+	
+	and 
+	
+	<a href="/blog/tag/tiddlywiki">tiddlywiki</a>
+				
+</p>
+
+
+
+<p class="excerpt">
+ 	The recent release of <a href="http://tiddlywiki.com/">TiddlyWiki v2.5</a> included something rather exciting for me: <a href="http://jquery.com">jQuery</a>, the popular Javascript library is now part of the TiddlyWiki core.
+
+</p>
+
+<p>This is exciting for a number of reasons.</p>
+<ol> 
+    <li>The TiddlyWiki core functions can now use jQuery to perform all manner of DOM inspection and DOM manipulation.  We can refactor a ton of code to benefit from jQuery's blistering Sizzle engine and pass the burden of maintaining lots of utility functions over to those clever jQuery bods. All of which will simplify the TiddlyWiki codebase and ultimately make it easier to read and easier to maintain.</li> 
+    <li>TiddlyWiki plugin developers will now be able to make use of jQuery in their plugins. That's great news for both hardcore plugin developers and people dabbling for the first time.  jQuery is elegantly expressive, powerful, and superbly documented.  All of this lowers the barriers to entry for a would be developer and smooths the way for exisiting developers.</li> 
+    <li>There is a huge wealth of jQuery plugins which can now be utilised by TiddlyWiki.  The quality of many of these plugins is tremendously high. Bring 'em on!</li> 
+</ol>
+<p>
+    But how does a TiddlyWiki plugin developer get started? How can we bring a jQuery plugin into TiddlyWiki and make it available via a Macro?  Let's take a look at an example.
+</p>
+<p>
+    <a href="http://fnd.lewcid.org/blog/" title="FND's Blag: Just Another Personal Wobsite">Fred</a>, my colleague at <a href="http://osmosoft.com/" title="osmosoft - open source applications from BT">Osmosoft</a> stumbled upon a plugin which creates a nice navigation structure from an HTML List element.  The plugin has lots of <a href="http://www.ihwy.com/Labs/Demos/Current/jquery-listnav-plugin.aspx" title="ListNav plugin examples">examples</a> and <a href="http://www.ihwy.com/Labs/jquery-listnav-plugin.aspx" title="jQuery listnav plugin - Javascript list navigation control">documentation</a> and seemed like a good contender for bringing something useful into TiddlyWiki.
+</p>
+<p>
+    To include the plugin, all we need to do is copy it into a tiddler and then tag the tiddler with systemConfig. After saving the file and reloading, the plugin is available for us to use.
+</p>
+<img alt="Plugin inclusion" src="/images/plugin_inclusion.jpg" />  
+<p>
+    With the jQuery plugin availble, we can use it to provide a snazzy UI for any UL or LI elements on the page. The Javascript syntax for that is nice and simple:
+</p>
+ 
+<div class="highlight"><pre><code class="js">    <span class="c1">// Turn the list element with an ID of &#39;myList&#39; into a funky ListNav</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myList&#39;</span><span class="p">).</span><span class="nx">listnav</span><span class="p">();</span>
+</code></pre>
+</div>
+
+
+<p>
+     This is great, but we want people to be able to call this from TiddlyWiki without having to write Javascript. If we create a TiddlyWiki macro to call this for us, people can easily make a nice NavList anywhere. Let's make a macro which turns the contents of a tiddler into a NavList like this:
+</p>
+
+
+<div class="highlight"><pre><code class="js"><span class="o">&gt;</span>
+</code></pre>
+</div>
+
+
+
+<p>
+    To make that available, we should create a TiddlyWiki plugin which delivers this macro. We do this in a new tiddler.  I created a tiddler called 'ListNavPlugin' and once again tagged it with systemConfig so that it becomes code that TiddlyWiki knows to interpret. To start with, let's just create the macro and ensure that we can invoke it. 
+</p>
+
+<div class="highlight"><pre><code class="js"><span class="c1">// create macro object</span>
+ <span class="nx">config</span><span class="p">.</span><span class="nx">macros</span><span class="p">.</span><span class="nx">listnav</span> <span class="o">=</span> <span class="p">{</span> 
+   <span class="c1">// Add a handler function to be invoked by &gt; </span>
+   <span class="nx">handler</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">place</span><span class="p">,</span> <span class="nx">macroName</span><span class="p">,</span> <span class="nx">params</span><span class="p">,</span> <span class="nx">wikifier</span><span class="p">,</span> <span class="nx">paramString</span><span class="p">,</span> <span class="nx">tiddler</span><span class="p">)</span> <span class="p">{</span>
+     <span class="c1">// do some magic...</span>
+     <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;I&#39;m gonna make a funky listnav!&quot;</span><span class="p">);</span>
+   <span class="p">}</span>
+ <span class="p">};</span>
+</code></pre>
+</div>
+
+
+<p>
+    To see it working, I created two more new tiddlers. MyFruityList holds a list of items, and ExampleListNav holds a call to the new macro.
+</p>
+<img alt="List amnd example call" src="/images/list-and-example-call.jpg" /> 
+<p>
+     Saving the TiddlyWiki file and reloading will make the macro available to call. If we open the ExampleListNav tiddler, we should see our macro called like this:
+</p> 
+<img alt="" src="/images/macro-called-1.jpg" /> 
+<p> 
+    All good, but not exciting yet. Let's flesh out our TiddlyWiki macro a bit.  We'll use a TiddlyWiki function to get the text from our desired tiddler and then make a list from it.  Where we might once have used some TiddlyWiki utility functions to help us create the HTML elements (like createTiddlyElement), we can now use <a href="http://docs.jquery.com/Manipulation">jQuery's helper functions</a> to append elements to the document. 
+</p> 
+
+<div class="highlight"><pre><code class="js"><span class="c1">// create macro object</span>
+ <span class="nx">config</span><span class="p">.</span><span class="nx">macros</span><span class="p">.</span><span class="nx">listnav</span> <span class="o">=</span> <span class="p">{</span>
+
+   <span class="c1">// Add a handler function to be invoked by &gt; </span>
+   <span class="nx">handler</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">place</span><span class="p">,</span> <span class="nx">macroName</span><span class="p">,</span> <span class="nx">params</span><span class="p">,</span> <span class="nx">wikifier</span><span class="p">,</span> <span class="nx">paramString</span><span class="p">,</span> <span class="nx">tiddler</span><span class="p">)</span> <span class="p">{</span>
+
+     <span class="c1">// target tiddler passed in as macro parameter</span>
+     <span class="kd">var</span> <span class="nx">title</span> <span class="o">=</span> <span class="nx">params</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+
+     <span class="c1">// read list items from tiddler contents</span>
+     <span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="nx">store</span><span class="p">.</span><span class="nx">getTiddlerText</span><span class="p">(</span><span class="nx">title</span><span class="p">);</span>
+     <span class="k">if</span><span class="p">(</span><span class="nx">text</span><span class="p">)</span> <span class="p">{</span>
+
+       <span class="c1">// generate list</span>
+       <span class="kd">var</span> <span class="nx">items</span> <span class="o">=</span> <span class="nx">text</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;\n&#39;</span><span class="p">);</span>
+       <span class="kd">var</span> <span class="nx">list</span> <span class="o">=</span> <span class="nx">jQuery</span><span class="p">(</span><span class="s1">&#39;&lt;ul&gt;&lt;/ul&gt;&#39;</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;listnav&#39;</span><span class="p">).</span><span class="nx">appendTo</span><span class="p">(</span><span class="nx">place</span><span class="p">);</span>
+       <span class="nx">jQuery</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">items</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">itm</span><span class="p">)</span> <span class="p">{</span>
+         <span class="nx">jQuery</span><span class="p">(</span><span class="s1">&#39;&lt;li&gt;&#39;</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">itm</span><span class="p">).</span><span class="nx">appendTo</span><span class="p">(</span><span class="nx">list</span><span class="p">);</span>
+       <span class="p">});</span>
+
+     <span class="p">}</span>
+   <span class="p">}</span>
+ <span class="p">};</span>
+</code></pre>
+</div>
+
+
+<p>
+    Now we're getting somewhere. We've grabbed each line from our MyFruityList tiddler and used jQuery to turn them into an unordered list.
+</p> 
+<img alt="" src="/images/example-list-created.jpg" /> 
+<p>
+    We can now call the jQuery plugin to render our list as a NavList. The plugin requires a little extra HTML so we can create that, and then call the listnav plugin.
+</p>
+
+
+<div class="highlight"><pre><code class="js"><span class="c1">// create macro object</span>
+<span class="nx">config</span><span class="p">.</span><span class="nx">macros</span><span class="p">.</span><span class="nx">listnav</span> <span class="o">=</span> <span class="p">{</span>
+
+    <span class="c1">// Add a handler function to be invoked by &gt; </span>
+    <span class="nx">handler</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">place</span><span class="p">,</span> <span class="nx">macroName</span><span class="p">,</span> <span class="nx">params</span><span class="p">,</span> <span class="nx">wikifier</span><span class="p">,</span> <span class="nx">paramString</span><span class="p">,</span> <span class="nx">tiddler</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="c1">// target tiddler passed in as macro parameter</span>
+        <span class="kd">var</span> <span class="nx">title</span> <span class="o">=</span> <span class="nx">params</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+
+        <span class="c1">// read list items from tiddler contents</span>
+        <span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="nx">store</span><span class="p">.</span><span class="nx">getTiddlerText</span><span class="p">(</span><span class="nx">title</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">text</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// generate nav bar</span>
+            <span class="nx">jQuery</span><span class="p">(</span><span class="s1">&#39;&lt;p /&gt;&#39;</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;listnav-nav&#39;</span><span class="p">).</span><span class="nx">appendTo</span><span class="p">(</span><span class="nx">place</span><span class="p">);</span>
+
+            <span class="c1">// generate list</span>
+            <span class="kd">var</span> <span class="nx">items</span> <span class="o">=</span> <span class="nx">text</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;\n&#39;</span><span class="p">);</span>
+            <span class="kd">var</span> <span class="nx">list</span> <span class="o">=</span> <span class="nx">jQuery</span><span class="p">(</span><span class="s1">&#39;&lt;ul&gt;&lt;/ul&gt;&#39;</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;listnav&#39;</span><span class="p">).</span><span class="nx">appendTo</span><span class="p">(</span><span class="nx">place</span><span class="p">);</span>
+            <span class="nx">jQuery</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">items</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">itm</span><span class="p">)</span> <span class="p">{</span>
+             <span class="nx">jQuery</span><span class="p">(</span><span class="s1">&#39;&lt;/li&gt;&lt;li&gt;&#39;</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">itm</span><span class="p">).</span><span class="nx">appendTo</span><span class="p">(</span><span class="nx">list</span><span class="p">);</span>
+            <span class="p">});</span>
+
+            <span class="c1">// apply listnav</span>
+            <span class="nx">list</span><span class="p">.</span><span class="nx">listnav</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre>
+</div>
+
+
+
+
+
+<p> 
+    When we save our plugin, reload the page and open up our ExampleListNav tiddler, we see the navlist. Cool! Hang on though, it looks a bit rubbish. Not like the examples we saw earlier.  We have to include the CSS to style our new navlist.  Easy enough, let's use our TiddlyWiki plugin to create a sylesheet for our new HTML by adding this:
+</p>
+
+<div class="highlight"><pre><code class="js">      <span class="c1">// add default styles (adapted from http://www.ihwy.com/labs/downloads/jquery-listnav/2.0/listnav.css)</span>
+   <span class="nx">config</span><span class="p">.</span><span class="nx">shadowTiddlers</span><span class="p">.</span><span class="nx">StyleSheetListNav</span> <span class="o">=</span> <span class="s1">&#39;  \n&#39;</span> <span class="o">+</span>
+   <span class="s1">&#39;#listnav-nav { margin: 20px 0 10px; }\n&#39;</span> <span class="o">+</span>
+   <span class="s1">&#39;.ln-letters { overflow: hidden; }\n&#39;</span> <span class="o">+</span>
+   <span class="s1">&#39;.ln-letters a { font-size: 0.9em; display: block; float: left; padding: 2px 6px; border: 1px solid #eee; border-right: none; text-decoration: none; }\n&#39;</span><span class="o">+</span>
+   <span class="s1">&#39;.ln-letters a.ln-last { border-right: 1px solid #eee; }\n&#39;</span> <span class="o">+</span>
+   <span class="s1">&#39;.ln-letters a:hover, .ln-letters a.ln-selected { background-color: #eaeaea; }\n&#39;</span> <span class="o">+</span>
+   <span class="s1">&#39;.ln-letters a.ln-disabled { color: #ccc; }\n&#39;</span> <span class="o">+</span>
+   <span class="s1">&#39;.ln-letter-count { text-align: center; font-size: 0.8em; line-height: 1; margin-bottom: 3px; color: #336699; }&#39;</span><span class="p">;</span>
+   <span class="nx">store</span><span class="p">.</span><span class="nx">addNotification</span><span class="p">(</span><span class="s1">&#39;StyleSheetListNav&#39;</span><span class="p">,</span> <span class="nx">refreshStyles</span><span class="p">);</span>
+ 
+</code></pre>
+</div>
+
+
+<p> 
+    And we're done.  The jQuery plugin is turning our boring old list into a dynamic indexed list with navigation. Cool!  For extra credit, we can make our jQuery a little more concise. Notice that we call jQuery by name rather than with the common idiom of $.  We could simply replace each jQuery with $ in our code and that would work, but beware!  There are other Javascript libraries that use the $ shortcut.  we don't want to introduce the possibility of a clash.  Luckily, there is a simple way to get around that.  All we need to do is wrap our TiddlyWiki plugin in a closure and pass jQuery in as an argument (as explained on the <a href="http://docs.jquery.com/Plugins/Authoring#Custom_Alias_in_plugin_code" title="Plugins/Authoring - jQuery JavaScript Library">jQuery documentation</a> site).  Then we can use whatever shortcut for jQuery in our code that we like.  The final code looks like this:
+</p>
+
+<div class="highlight"><pre><code class="js"><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// set up alias</span>
+
+   <span class="c1">// create macro object</span>
+   <span class="nx">config</span><span class="p">.</span><span class="nx">macros</span><span class="p">.</span><span class="nx">listnav</span> <span class="o">=</span> <span class="p">{</span>
+
+   <span class="c1">// Add a handler function to be invoked by &gt;; </span>
+   <span class="nx">handler</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">place</span><span class="p">,</span> <span class="nx">macroName</span><span class="p">,</span> <span class="nx">params</span><span class="p">,</span> <span class="nx">wikifier</span><span class="p">,</span> <span class="nx">paramString</span><span class="p">,</span> <span class="nx">tiddler</span><span class="p">)</span> <span class="p">{</span>
+
+     <span class="c1">// target tiddler passed in as macro parameter</span>
+     <span class="kd">var</span> <span class="nx">title</span> <span class="o">=</span> <span class="nx">params</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+
+     <span class="c1">// read list items from tiddler contents</span>
+     <span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="nx">store</span><span class="p">.</span><span class="nx">getTiddlerText</span><span class="p">(</span><span class="nx">title</span><span class="p">);</span>
+     <span class="k">if</span><span class="p">(</span><span class="nx">text</span><span class="p">)</span> <span class="p">{</span>
+
+      <span class="c1">// generate nav bar</span>
+      <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;&lt;p /&gt;&#39;</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;listnav-nav&#39;</span><span class="p">).</span><span class="nx">appendTo</span><span class="p">(</span><span class="nx">place</span><span class="p">);</span>
+
+      <span class="c1">// generate list</span>
+      <span class="kd">var</span> <span class="nx">items</span> <span class="o">=</span> <span class="nx">text</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;\n&#39;</span><span class="p">);</span>
+      <span class="kd">var</span> <span class="nx">list</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;&lt;ul&gt;&lt;/ul&gt;&#39;</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;listnav&#39;</span><span class="p">).</span><span class="nx">appendTo</span><span class="p">(</span><span class="nx">place</span><span class="p">);</span>
+      <span class="nx">$</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">items</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">itm</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;&lt;/li&gt;&lt;li&gt;&#39;</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">itm</span><span class="p">).</span><span class="nx">appendTo</span><span class="p">(</span><span class="nx">list</span><span class="p">);</span>
+      <span class="p">});</span>
+
+      <span class="c1">// apply listnav</span>
+      <span class="nx">list</span><span class="p">.</span><span class="nx">listnav</span><span class="p">();</span>
+     <span class="p">}</span>
+   <span class="p">}</span>
+ <span class="p">};</span>
+
+   <span class="c1">// add default styles (adapted from &lt;a href=&quot;http://www.ihwy.com/labs/downloads/jquery-listnav/2.0/listnav.css)&quot;&gt;http://www.ihwy.com/labs/downloads/jquery-listnav/2.0/listnav.css)&lt;/a&gt; </span>
+   <span class="nx">config</span><span class="p">.</span><span class="nx">shadowTiddlers</span><span class="p">.</span><span class="nx">StyleSheetListNav</span> <span class="o">=</span> <span class="s2">&quot;\n&quot;</span> <span class="o">+</span>
+   <span class="s2">&quot;#listnav-nav { margin: 20px 0 10px; }\n&quot;</span> <span class="o">+</span>
+   <span class="s2">&quot;.ln-letters { overflow: hidden; }\n&quot;</span> <span class="o">+</span>
+   <span class="s2">&quot;.ln-letters a { font-size: 0.9em; display: block; float: left; padding: 2px 6px; border: 1px solid #eee; border-right: none; text-decoration: none; }\n&quot;</span><span class="o">+</span>
+   <span class="s2">&quot;.ln-letters a.ln-last { border-right: 1px solid #eee; }\n&quot;</span> <span class="o">+</span>
+   <span class="s2">&quot;.ln-letters a:hover, .ln-letters a.ln-selected { background-color: #eaeaea; }\n&quot;</span> <span class="o">+</span>
+   <span class="s2">&quot;.ln-letters a.ln-disabled { color: #ccc; }\n&quot;</span> <span class="o">+</span>
+   <span class="s2">&quot;.ln-letter-count { text-align: center; font-size: 0.8em; line-height: 1; margin-bottom: 3px; color: #336699; }&quot;</span><span class="p">;</span>
+   <span class="nx">store</span><span class="p">.</span><span class="nx">addNotification</span><span class="p">(</span><span class="s2">&quot;StyleSheetListNav&quot;</span><span class="p">,</span> <span class="nx">refreshStyles</span><span class="p">);</span>	
+
+ <span class="p">})(</span><span class="nx">jQuery</span><span class="p">);</span>
+</code></pre>
+</div>
+ 
+
+<p>
+    You can explore the finished example in a <a href="http://static.hawksworx.com/listnavplugin.html" title="ListNavPlugin example TiddlyWiki"> TiddlyWiki</a>.
+</p>
+
+</div>
+		</div>
+		<div class="footer">
+			<div class="wrapper">
+		        <h1><a href="/" rel="self" title="hawksworx: home">hawksworx</a></h1>
+		        <h2>noodlings about the web, technology and whatnot</h2>
+		      	<ul class="nav" role="navigtion">
+    <li><a href="/" class="home">home</a></li>
+    <li><a href="/blog" class="blog">blog</a></li>
+    <li><a href="/search" class="search">search</a></li>
+    <li><a href="/atom.xml" class="feed">feed</a></li>
+</ul>
+		     </div>
+		     <p>
+				Follow <a href="http://twitter.com/philhawksworth" rel="me">@philhawksworth</a> on twitter for more regular wibblings. This site is hand-whittled with some help from <a href="https://github.com/mojombo/jekyll">Jekyll</a> and can be found on <a href="https://github.com/philhawksworth/hawksworx.com">Github</a>
+	        </p>	
+		</div>
+		<script src="/js/jquery.1.7.2.min.js" type="text/javascript"></script>
+		<script src="/js/hawksworx.js" type="text/javascript"></script>
+				<script type="text/javascript">
+			// google analytics
+		</script>
+
+	</body>
+</html>
