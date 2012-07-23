@@ -11,11 +11,11 @@
 </p>
 
 {% if page.image contains 'http' %} 
-  <img src="{{ page.image }}" />
-{% elsif page.image == empty %}
-{% else %}   
+<img src="{{ page.image }}" />
+{% elsif page.image %}
 <img src="/images/{{ page.image }}" />
 {% endif %}
+
 <p class="excerpt">
  	{{ page.excerpt }}
 </p>
