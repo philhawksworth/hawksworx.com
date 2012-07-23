@@ -310,4 +310,7 @@ body.search div.search {
 		font-size: 1em;
 	}
 
+	.nav {
+		top: 50px;
+	}
 }

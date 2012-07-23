@@ -43,26 +43,19 @@ hx.search = function(str) {
 	for (i = hits.length - 1; i >= 0; i--) {
 		$("div.search .results").append("<li><a href='"+ hits[i].url+ "'>"+ hits[i].title +"</a><time>"+ hits[i].date+"</time></li>");
 	}
-	
 };
-
-
-
 
 
 // Bind the event listeners
 hx.addEventHandlers = function() {
 
 	// blog search
-	$('input.searchstr').keyup(function(k){
-		
+	$('input.searchstr').change(function(k){
 		$('div.search label').css({'text-indent': "-9999px"});
-
 		// cancel search if escape
 		if(k.which == 27) {
 			$('div.search').slideToggle(150);
 		}
-
 		str = $(this).val().trim();
 		hx.search(str);
 	});
@@ -76,7 +69,6 @@ hx.addEventHandlers = function() {
 		$('input.searchstr').focus();
 		return false;
 	});
-	
 };
 
 
