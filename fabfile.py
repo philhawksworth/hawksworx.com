@@ -17,5 +17,7 @@ def deploy():
     local('git add .')
     local('git commit -m "deploying latest build as at %(time)s"' %env)
     local('git push origin gh-pages')
-    # local('git checkout master')
+    local('git checkout master')
+    local('git push origin master')
+
     print yellow("Done?")
