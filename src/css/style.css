@@ -12,6 +12,8 @@ body {
     border-top:solid 3px #258DFF;
     text-align:center;
 	background-color: #f3f3f3;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
 }
 
 .wrapper {
