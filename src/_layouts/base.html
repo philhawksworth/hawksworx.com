@@ -6,7 +6,24 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link rel="stylesheet" href="/css/style.css">
 		<link rel="stylesheet" href="/css/syntax.css">
-		<meta name="description" content="{{ description }}">
+		<meta name="description" content="{{ page.description }}">
+		{% if page.excerpt %}
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:site" content="@philhawsworth">
+		<meta name="twitter:creator" content="@philhawsworth">
+		<meta name="twitter:url" content="http://hawksworx.com{{ page.url }}">
+		<meta name="twitter:title" content="{{ page.title }}">
+		<meta name="twitter:description" content="{{ page.description }}">
+		<meta name="twitter:image" content="http://hawksworx.com/images/{{ page.image }}">
+		{% else %}
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:site" content="@philhawsworth">
+		<meta name="twitter:creator" content="@philhawsworth">
+		<meta name="twitter:url" content="http://hawksworx.com{{ page.url }}">
+		<meta name="twitter:title" content="Hawksworx">
+		<meta name="twitter:description" content="Noodlings about the web and whatnot">
+		<meta name="twitter:image" content="http://hawksworx.com/images/philhawksworth-montage.jpg">
+		{% endif %}
 	</head>
 	<body class="{{ page.pageclass }}">
 		<div class="header">
