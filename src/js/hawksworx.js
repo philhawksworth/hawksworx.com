@@ -50,7 +50,7 @@ hx.search = function(str) {
 hx.addEventHandlers = function() {
 
 	// blog search
-	$('input.searchstr').keypress(function(k){
+	$('input.searchstr').keyup(function(k){
 		$('div.search label').css({'text-indent': "-9999px"});
 		if(k.which == 27) {
 			$('div.search').slideToggle(150);
