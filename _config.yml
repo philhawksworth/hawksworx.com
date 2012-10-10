@@ -1,5 +1,5 @@
-auto: 			true
-server: 		true
+auto: 			false
+server: 		false
 server_port: 	4000
 source: 		src
 destination: 	_site
