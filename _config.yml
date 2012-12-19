@@ -1,9 +1,9 @@
-auto: 			false
-server: 		false
-server_port: 	4000
-source: 		src
-destination: 	_site
-exclude: 		.gitignore, README.md
-pygments:		true
-permalink: 		/blog/:title
-tag_dir:		/blog/tag
+auto:           false
+server:         false
+server_port:    4000
+source:         src
+destination:    _site
+exclude:        .gitignore, README.md
+pygments:       true
+tag_dir:        /blog/tag
+permalink:      /blog/:title
