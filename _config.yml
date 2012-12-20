@@ -7,3 +7,5 @@ exclude:        .gitignore, README.md
 pygments:       true
 tag_dir:        /blog/tag
 permalink:      /blog/:title
+url:            localhost:4000
+apitoken:       22611b33323234eaced7604688874f21
