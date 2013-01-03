@@ -1,0 +1,29 @@
+{
+  "name": "hawksworx.com",
+  "version": "0.0.1",
+  "description": "the personal blog of Phil Hawksworth",
+  "main": "grunt.js",
+  "dependencies": {
+    "grunt": ">=0.3.9",
+    "sass": ">=0.5.0",
+    "grunt-jekyll": ">=0.2.1",
+    "grunt-clean": ">=0.1.0"
+  },
+  "engines": {
+    "node": ">=0.8.x"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/philhawksworth/hawksworx.com.git"
+  },
+  "keywords": [
+    "blog",
+    "jekyll",
+    "static"
+  ],
+  "author": "Phil Hawksworth",
+  "license": "MIT"
+}
