@@ -29,4 +29,4 @@ Each will produce a deployable `_site` directory with the prod target performing
 
 Deployment is via a git push to Git Hub pages and is automated via Fabric:
 
-`fab deloy`
+`fab deploy`
