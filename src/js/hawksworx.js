@@ -33,7 +33,7 @@ hx.search = function(str) {
 
 	// find our search hits by searching for any of the entered words
 	for (i = hx.posts.length - 1; i >= 0; i--) {
-		if(hx.posts[i].ref.indexOf(str) != -1) {
+		if(hx.posts[i].ref.indexOf(str) !== -1) {
 			hits.push(hx.posts[i]);
 		}
 	}
@@ -52,7 +52,7 @@ hx.addEventHandlers = function() {
 	// blog search
 	$('input.searchstr').keyup(function(k){
 		$('div.search label').css({'text-indent': "-9999px"});
-		if(k.which == 27) {
+		if(k.which === 27) {
 			$('div.search').slideToggle(150);
 		}
 		str = $(this).val().trim();
