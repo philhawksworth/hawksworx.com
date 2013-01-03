@@ -14,20 +14,15 @@ To build the site you need:
 
 - Jekyll
 - Node
-- NPM
 - Grunt
 
 To setup the build environment, clone the repository and then in the working directory run: `npm install` to intsall any node modules required by grunt.
 
 The site can then be built via grunt:
 
-`grunt dev`
+`grunt dev` or `grunt prod`
 
-or
-
-`grunt prod`
-
-Each will produce a deployable `_site` directory with the prod target performing some minification etc.
+Each will produce a deployable `_site` directory with the prod target performing some minification etc.  You can serve the produced site locally by running `grunt serve`
 
 
 ## Deployment
