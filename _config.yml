@@ -2,7 +2,8 @@
 # jekyll section of the grunt.js file if built via grunt.
 auto:           false
 server:         false
-server_port:    4000
+server_port:    8000
+port: 8000
 source:         src
 destination:    _site
 pygments:       true

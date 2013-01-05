@@ -58,6 +58,8 @@ module Jekyll
                 comment = Hash.new
                 comment['date'] = item['created_at']
                 comment['name'] = item['data']['name']
+                comment['email'] = item['data']['email']
+                comment['uri'] = item['data']['uri']
                 comment['message'] = item['data']['message']
                 @data[item['referrer']].push(comment)
             }
@@ -74,7 +76,12 @@ module Jekyll
     def render(context)
         context.registers[:comments] ||= Hash.new(0)
 
-        page = "http://" + context.environments.first["site"]['url'] + ":8000" + context.environments.first["page"]["url"] + "/"
+        # construct the uri for the referring page we are checking comments for
+        domain = context.environments.first["site"]['url']
+        path = context.environments.first["page"]['url']
+        port = domain == "hawksworx.com" ? "" : ":8000"
+        page = "http://" + domain + port + path
+
         collection = @data[page]
         result = []
 
@@ -92,7 +99,6 @@ module Jekyll
                     result << render_all(@nodelist, context)
                 end
             end
-
         end
         result
     end

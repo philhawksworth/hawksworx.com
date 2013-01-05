@@ -40,9 +40,19 @@
 			</div>
 		</div>
 		<div class="wrapper">
-
 		{{ content }}
 		</div>
+
+		{% comment %}
+			We conditionally include the blog comments code here by looking to
+			see if the page has tags (only blog posts do).  We have to do it this
+			way as liquid template layouts can't consume blocks created in pages.
+		{% endcomment %}
+
+		{% if page.tags != nill %}
+		{% include comments.html %}
+		{% endif %}
+
 		<div class="footer">
 			<div class="wrapper">
 		        <h1><a href="/" rel="self" title="hawksworx: home">hawksworx</a></h1>
@@ -54,19 +64,13 @@
 	        </p>
 		</div>
 
-
 		{% if site.url == 'hawksworx.com' %}
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<script src="/js/hawksworx.min.js" type="text/javascript"></script>
 		{% else %}
 		<script src="/js/jquery.1.7.2.min.js" type="text/javascript"></script>
 		<script src="/js/hawksworx.js" type="text/javascript"></script>
-
-
-
 		{% endif %}
-
-
 
 		{% include analytics.html %}
 	</body>
