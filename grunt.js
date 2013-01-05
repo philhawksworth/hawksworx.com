@@ -25,6 +25,10 @@ module.exports = function(grunt) {
       dist: {
         src: ['src/js/hawksworx.js'],
         dest: '_site/js/hawksworx.min.js'
+      },
+      dev: {
+        src: ['src/js/hawksworx.js'],
+        dest: '_site/js/hawksworx.min.js'
       }
     },
     watch: {
@@ -80,7 +84,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', 'jekyll:dev');
   grunt.registerTask('prod', 'jekyll:prod concat min');
-  grunt.registerTask('dev', 'jekyll:dev concat serve');
+  grunt.registerTask('dev', 'jekyll:dev concat min:dev serve');
   grunt.registerTask('serve', 'server watch');
 
 
