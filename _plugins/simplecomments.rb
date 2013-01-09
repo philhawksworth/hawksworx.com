@@ -80,7 +80,7 @@ module Jekyll
         domain = context.environments.first["site"]['url']
         path = context.environments.first["page"]['url']
         port = domain == "hawksworx.com" ? "" : ":8000"
-        page = "http://" + domain + port + path
+        page = "http://" + domain + port + path + "/"
 
         collection = @data[page]
         result = []
