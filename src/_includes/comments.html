@@ -1,5 +1,24 @@
 <div class="comments">
-	<div class="wrappper">
+	<div class="wrapper">
+
+		<h2 class="block">Comments</h2>
+
+		{% simplecomments %}
+		<div class="comment">
+			<img src="{{ item.email | to_gravatar }}">
+			{% if item.uri %}
+			<h3><a href="{{ item.uri }}">{{ item.name }}</a> </h3>
+			{% else %}
+			<h3>{{ item.name }}</h3>
+			{% endif %}
+			<h4>{{ item.date }}</h4>
+			<div>{{ item.message }}</div>
+		</div>
+		{% endsimplecomments %}
+
+
+		<h2 class="block">Add your comment</h2>
+
 		<form action="http://getsimpleform.com/messages?form_api_token=22611b33323234eaced7604688874f21" method="post">
 			<input type='hidden' name='redirect_to' value='http://{{ site.url }}:8000{{ page.url }}' />
 			<label for='name'>Name</label>
@@ -21,16 +40,5 @@
 			<input type='submit' value='Submit' />
 		</form>
 
-		{% simplecomments %}
-		<div class="comment">
-			{% if item.uri %}
-			<h3><a href="{{ item.uri }}">{{ item.name }}</a> </h3>
-			{% else %}
-			<h3>{{ item.name }}</h3>
-			{% endif %}
-			<h4>{{ item.date }}</h4>
-			<div>{{ item.message }}</div>
-		</div>
-		{% endsimplecomments %}
 	</div>
 </div>

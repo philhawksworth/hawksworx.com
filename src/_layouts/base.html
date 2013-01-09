@@ -50,7 +50,9 @@
 		{% endcomment %}
 
 		{% if page.tags != nill %}
-		{% include comments.html %}
+			{% if site.url == 'hawksworx.com' %}
+			{% include comments.html %}
+			{% endif %}
 		{% endif %}
 
 		<div class="footer">

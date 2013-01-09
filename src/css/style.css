@@ -117,6 +117,10 @@ blockquote {
         font-weight:normal;
     }
 
+.comments {
+	background-color:
+}
+
 .footer {
     margin:80px 0 0;
     padding:20px 20px;
@@ -284,8 +288,10 @@ body.search div.search {
 	}
 
 .comments {
-
-
+	background-color: #f0f0f0;
+	padding: 2em 0;
+	border-top: solid 1px #aaa;
+	padding: 2em 0;
 }
 
 
