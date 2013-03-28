@@ -47,13 +47,15 @@
 			We conditionally include the blog comments code here by looking to
 			see if the page has tags (only blog posts do).  We have to do it this
 			way as liquid template layouts can't consume blocks created in pages.
-		{% endcomment %}
+
 
 		{% if page.tags != nill %}
 			{% if site.url == 'hawksworx.com' %}
 			{% include comments.html %}
 			{% endif %}
 		{% endif %}
+
+		{% endcomment %}
 
 		<div class="footer">
 			<div class="wrapper">
