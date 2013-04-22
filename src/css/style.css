@@ -192,6 +192,7 @@ blockquote {
 }
 .home .nav .home,
 .blog .nav .blog,
+.speaking .nav .speaking,
 .search .nav .search {
 	border-bottom-width: 3px;
 }
