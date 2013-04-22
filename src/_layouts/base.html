@@ -39,7 +39,7 @@
 				<ul class="results"></ul>
 			</div>
 		</div>
-		<div class="wrapper">
+		<div class="wrapper content">
 		{{ content }}
 		</div>
 
@@ -68,14 +68,7 @@
 	        </p>
 		</div>
 
-		{% if site.url == 'hawksworx.com' %}
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-		<script src="/js/hawksworx.min.js" type="text/javascript"></script>
-		{% else %}
-		<script src="/js/jquery.1.7.2.min.js" type="text/javascript"></script>
 		<script src="/js/hawksworx.js" type="text/javascript"></script>
-		{% endif %}
-
 		{% include analytics.html %}
 	</body>
 </html>

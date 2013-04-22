@@ -84,6 +84,25 @@ blockquote {
 	border-left: solid 3px #258DFF;
 
 }
+
+.speaking time {
+    color: #777;
+    font-size: 0.9em;
+        display: block;
+
+}
+.speaking .content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 3em;
+    border-top: solid 1px #ddd;
+}
+.speaking .content li {
+    margin: 0;
+    padding: 0.4em 0 0.5em;
+    border-bottom: solid 1px #ddd;
+}
+
 .answer {
 	margin-bottom: 3em;
 }
@@ -350,4 +369,5 @@ body.search div.search {
 	.nav {
 		top: 50px;
 	}
+
 }
