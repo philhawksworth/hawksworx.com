@@ -36,7 +36,7 @@ footer {
         background-color: darken($base-color, 20%);
         line-height: 1.6;
         padding-bottom: 4em;
-        color: #ddd;
+        color: #999;
     }
 }
 
@@ -71,15 +71,30 @@ a {
     &:hover,
     &:focus {
         color: $accent-color;
-        padding-bottom: 0.15em;
         border-bottom: solid 1px lighten($accent-color, 20%);
     }
 }
 
+h1.post-title,
+h2.post-title,
+h3.post-title {
+    a {
+        &:link,
+        &:visited {
+            color: $base-color;
+            border-style: none;
+        }
+        &:hover,
+        &:focus {
+            color: $accent-color;
+            border-bottom: solid 1px lighten($accent-color, 20%);
+        }
+    }
+}
 
 .post {
 
-    h1 {
+    .post-title {
         margin: $content-buffer;
     }
     aside {
@@ -106,7 +121,10 @@ a {
         background-color: #eee;
         padding: $content-buffer/2;
     }
-
+    a.more {
+        margin-bottom: 2em;
+        display: inline-block;
+    }
 }
 
 figure ,
@@ -135,6 +153,12 @@ blockquote {
     padding: 0 $content-buffer;
     overflow:auto;
     font-size:0.75em;
+}
+
+.listing {
+    clear:both;
+    margin-bottom: 2em;
+    display:block;
 }
 
 

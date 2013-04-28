@@ -11,4 +11,4 @@ tag_dir:        /blog/tag
 permalink:      /blog/:title
 sass:
     syntax: scss        # scss|sass
-    style:  nested  # nested|expanded|compact|compressed
+    style:  compressed  # nested|expanded|compact|compressed

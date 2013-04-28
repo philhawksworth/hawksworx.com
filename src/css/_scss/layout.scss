@@ -41,42 +41,62 @@
         float:left;
         text-align:right;
         width:22%;
-    }
 
-    .post aside time,
-    .post aside address {
-        display: block;
+        time,
+        address {
+            display: block;
+        }
+        p {
+            margin:1em 0;
+
+        }
     }
-    .post aside p {
-        margin:1em 0;
-    }
+    // .listing aside {
+    //     display: block;
+    //     margin-left:29.5%;
+    //     margin-bottom: 2em;
+    //     text-align:left;
+    //     width:100%;
+    //     time,
+    //     address {
+    //         display: inline;
+    //     }
+    // }
 
     .nav {
         margin-left: 30.5%;
         padding-left:0;
     }
-    .post h1 {
+    .post .post-title  {
         font-size:2.4em;
         display: block;
         margin-left:30.5%;
     }
     .post-content {
+        .post-title,
         h2,
         h3,
         p,
+        a.more,
         ol,
         ul,
         div,
         figure,
-        blockquote {
+        .listing aside,
+        blockquote, {
             display: block;
             margin-left:29.5%;
 
             p,
-            div {
+            div,
+            ul,
+            ol {
                 margin-left:0;
                 margin-right:0;
             }
+        }
+        a.more {
+            display:inline-block;
         }
     }
 

@@ -300,7 +300,7 @@ body.search div.search {
 
 	/* simpler view for the listing */
 	.brief .meta,
-	.meta-brief {
+	.meta {
 		background-color: #ddd;
 		color: #000;
 		padding: 0.5em 0.5em;
