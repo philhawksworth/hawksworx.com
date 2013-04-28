@@ -1,0 +1,117 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Styleguide</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="/css/base.css">
+        <link rel="stylesheet" href="/css/syntax.css">
+        <meta name="description" content="Reference styleguide">
+    </head>
+    <body>
+        <header>
+            <div class="wrapper">
+            <h1><a href="/" title="hawksworx: home">hawksworx</a></h1>
+            <p>noodlings about the web and whatnot</p>
+            {% include navigation.html %}
+            </div>
+        </header>
+        <div class="wrapper">
+            <article class="post">
+                <h1>A blog post title should be short but can sometimes get long</h1>
+                <aside class="meta">
+                    <address class="vcard">
+                        Posted by <a class="url n fn" rel="author" href="/">Phil Hawksworth</a>
+                    </address>
+                    <time datetime="2012-10-01">on October 1, 2012</time>
+                    <p>Tagged
+                        <a href="/tags/tag" rel="tag">tag</a>
+                        <a href="/tags/anothertag" rel="tag">anothertag</a>
+                        <a href="/tags/yetanother" rel="tag">yetanother</a>
+                        and
+                        <a href="/tags/andyetanother" rel="tag">andyetanother</a>
+                    </p>
+                </aside>
+                <div class="post-content">
+                    <figure>
+                        <img src="/images/phil-at-txjs.jpeg" alt="Phil at TX JS 2013" />
+                        <figcaption>some images will have a caption <a href="#">with a link</a></figcaption>
+                    </figure>
+                    <p class="excerpt">
+                        Excerpt text style Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quaerat, porro cum facilis maxime natus earum asperiores voluptates rerum reprehenderit praesentium libero aperiam dolorem totam et hic ratione aliquid voluptatem!
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, quas obcaecati pariatur dignissimos aut inventore dolor tenetur aliquid maxime perspiciatis in vitae quos enim provident odio. Facilis, <a href="#">laboriosam</a>, perspiciatis maiores quia autem fugit fuga soluta molestias provident repudiandae ullam cum atque asperiores vel inventore eum sequi? Et, optio, eligendi, at dolor sequi nemo cum itaque dolore magni nulla ducimus veniam eos suscipit odio molestias velit <a href="#">laborum doloremque amet</a> rem facilis natus illum eaque perferendis harum quaerat. Voluptatum, unde qui fuga.
+                    </p>
+                    <h2>Post sub heading h2</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis excepturi provident nam blanditiis aspernatur. Quisquam, molestias ducimus quibusdam mollitia natus.
+                    </p>
+                    <blockquote>
+                        <p>
+                            Blockquote text looks like this
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipisicing elit. Fuga, nostrum minus quibusdam temporibus dolore voluptas aspernatur molestiae sequi voluptatum? Facilis!
+                        </p>
+                    </blockquote>
+                    <figure>
+                        <img src="/images/philhawksworth-txjs.jpg" alt="" />
+                    </figure>
+
+                    <h2>Second level heading</h2>
+                    <p>
+                        Second level headings are provided using the h2 tag and are intended to be used as sections of a post or a content page.
+                    </p>
+                    <h3>Third level heading</h3>
+                    <p>
+                        Third level headings divide the sections of a blog post or content page up even further.
+                    </p>
+                    <ul>
+                        <li>unordered list item1</li>
+                        <li>unordered list item2</li>
+                        <li>unordered list item3</li>
+                    </ul>
+                    <ol>
+                        <li>odered list item1</li>
+                        <li>odered list item2</li>
+                        <li>odered list item3</li>
+                    </ol>
+
+{% highlight js %}
+
+// code snippets look like this
+var code = {
+    format : function() {
+        console.log("by the highlight plugin in jekyll");
+    },
+    markup : "highlight"
+};
+{% endhighlight %}
+
+
+                </div>
+
+            </article>
+
+        </div>
+
+        <footer>
+            <div class="wrapper">
+                <h1><a href="/" title="hawksworx: home">hawksworx</a></h1>
+                <p>noodlings about the web and whatnot</p>
+                {% include navigation.html %}
+            </div>
+            <p class="colo">
+                Follow <a href="http://twitter.com/philhawksworth" rel="me">@philhawksworth</a> on twitter for more regular wibblings. This site is hand-whittled with some help from <a href="https://github.com/mojombo/jekyll">Jekyll</a> and can be found on <a href="https://github.com/philhawksworth/hawksworx.com">Github</a>
+            </p>
+        </footer>
+
+
+
+
+    </body>
+</html>

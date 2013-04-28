@@ -1,0 +1,86 @@
+
+// if the viewport gets bigger than 500px
+@media all and (min-width: 500px) {
+    figure,
+    blockquote,
+    .highlight {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .highlight {
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        border-radius: 5px
+    }
+}
+
+
+// if the viewport gets bigger than 700px
+@media all and (min-width: 700px) {
+
+    header,
+    footer {
+        text-align: left;
+
+        h1,
+        p {
+            margin-left:30.5%;
+        }
+        .colo {
+            margin-left: 0;
+            // padding-left:30.5%;
+        }
+    }
+
+    .wrapper {
+        width: 90%;
+    }
+
+    .post aside {
+        float:left;
+        text-align:right;
+        width:22%;
+    }
+
+    .post aside time,
+    .post aside address {
+        display: block;
+    }
+    .post aside p {
+        margin:1em 0;
+    }
+
+    .nav {
+        margin-left: 30.5%;
+        padding-left:0;
+    }
+    .post h1 {
+        font-size:2.4em;
+        display: block;
+        margin-left:30.5%;
+    }
+    .post-content {
+        h2,
+        h3,
+        p,
+        ol,
+        ul,
+        div,
+        figure,
+        blockquote {
+            display: block;
+            margin-left:29.5%;
+
+            p,
+            div {
+                margin-left:0;
+                margin-right:0;
+            }
+        }
+    }
+
+    figcaption {
+        margin-left: 0;
+    }
+}

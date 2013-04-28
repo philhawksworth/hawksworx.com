@@ -1,7 +1,7 @@
 # these config valies are overridden by those passed through the
 # jekyll section of the grunt.js file if built via grunt.
-auto:           false
-server:         false
+auto:           true
+server:         true
 server_port:    8000
 port: 8000
 source:         src
@@ -9,3 +9,6 @@ destination:    _site
 pygments:       true
 tag_dir:        /blog/tag
 permalink:      /blog/:title
+sass:
+    syntax: scss        # scss|sass
+    style:  nested  # nested|expanded|compact|compressed

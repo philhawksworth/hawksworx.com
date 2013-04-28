@@ -1,0 +1,60 @@
+body {
+    font: normal 16px/1.5em "Georgia", serif;
+}
+
+h1,h2,h3 {
+ font-family: sans-serif;
+ line-height: 1;
+}
+h1 {
+    font-size:2em;
+}
+h2 {
+    font-size:1.6em;
+    color:lighten($accent-color, 30%);
+    margin-top:1.4em;
+}
+h3 {
+    font-size:1.2em;
+    color:lighten($accent-color, 30%);
+    margin-top:1.4em;
+}
+
+aside {
+    font-style: italic;
+}
+
+header h1,
+footer h1 {
+    margin: 0;
+    padding: 0;
+    font-size:3em;
+
+    a {
+        text-decoration: none;
+
+        &:link,
+        &:visited,
+        &:hover,
+        &:focus {
+            color: $base-color;
+            border-style: none;
+        }
+    }
+}
+
+
+footer h1 {
+    font-size:2.4em;
+
+    a {
+        &:link,
+        &:visited,
+        &:hover,
+        &:focus {
+            color: lighten($base-color, 60%);
+        }
+    }
+}
+
+

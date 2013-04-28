@@ -15,6 +15,7 @@ To build the site you need:
 - Jekyll
 - Node
 - Grunt
+- Jekyll-Sass : https://github.com/noct/jekyll-sass
 
 To setup the build environment, clone the repository and then in the working directory run: `npm install` to intsall any node modules required by grunt.
 
