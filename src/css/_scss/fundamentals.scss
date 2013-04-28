@@ -29,12 +29,13 @@ footer {
     background-color: darken($base-color, 10%);
     color: #bbb;
     border-style: none;
+    margin-top: 2*$content-buffer;
 
     .colo {
         padding: $content-buffer;
         background-color: darken($base-color, 20%);
         line-height: 1.6;
-        padding-bottom: 3em;
+        padding-bottom: 4em;
         color: #ddd;
     }
 }
@@ -78,29 +79,35 @@ a {
 
 .post {
 
-}
-    .post h1 {
+    h1 {
         margin: $content-buffer;
     }
-    .post aside {
+    aside {
         margin: 0 $content-buffer;
         font-size: 0.8em;
     }
-    .post aside time,
-    .post aside address {
+    aside time,
+    aside address {
         display: inline;
     }
-    .post aside p {
+    aside p {
         margin:0;
         padding:0;
     }
-    .post .post-content {
+    .post-content {
         margin: $content-buffer;
     }
-    .post .excerpt {
+    .excerpt {
         font-size: 1.1em;
         font-style: italic;
     }
+    .meta {
+        font-size: 0.8em;
+        background-color: #eee;
+        padding: $content-buffer/2;
+    }
+
+}
 
 figure ,
 blockquote {
@@ -122,12 +129,12 @@ blockquote {
 }
 
 .highlight {
-    background-color: #222;
+    background-color: #eee;
     margin-left: -$content-buffer;
     margin-right: -$content-buffer;
     padding: 0 $content-buffer;
     overflow:auto;
-    font-size:0.8em;
+    font-size:0.75em;
 }
 
 

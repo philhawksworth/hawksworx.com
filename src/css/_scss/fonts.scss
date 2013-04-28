@@ -14,6 +14,11 @@ h2 {
     color:lighten($accent-color, 30%);
     margin-top:1.4em;
 }
+h2.block {
+    color: #fff;
+    background-color: $base-color;
+    padding: $content-buffer;
+}
 h3 {
     font-size:1.2em;
     color:lighten($accent-color, 30%);
