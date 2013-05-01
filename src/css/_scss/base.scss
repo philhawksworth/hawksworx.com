@@ -179,3 +179,79 @@ blockquote {
 }
 
 
+/*  inline search */
+div.search {
+    background-color: #333;
+    border-top: solid 3px #222;
+    margin:-30px 0 30px;
+    padding:2em 0;
+    display: none;
+}
+
+// Show the search on the search page.
+body.search div.search {
+    display: block;
+}
+
+
+    div.search p {
+        color: #fff;
+    }
+    div.search .string {
+        background-color: #444;
+        border: solid 1px #000;
+        width:100%;
+        margin: 0;
+    }
+    div.search input {
+        border-style: none;
+        background-color: transparent;
+        color: #fff;
+        font-size: 1em;
+        line-height: 1;
+        padding: 4px 10px;
+        margin: 0;
+        width:100%;
+        font-family: "Helvetica", Helvetica, sans-serif;
+        position: absolute;
+        top:0;
+        left:0;
+    }
+    input:focus {
+        outline: none;
+    }
+    div.search label {
+        display: block;
+        position: relative;
+        padding: 10px;
+        font-family: "Helvetica", Helvetica, sans-serif;
+        color: #999;
+        font-size: 1.8em;
+        overflow: none;
+    }
+    div.search .results {
+        list-style: none;
+        margin: 1em 0.2em;
+        padding:0;
+    }
+    div.search li {
+        margin: 0 0 0.6em;
+    }
+    div.search .results a:link,
+    div.search .results a:visited {
+        color: #bbb;
+        border-style: none;
+    }
+    div.search .results a:hover,
+    div.search .results a:focus {
+        color: #fff;
+        border-style: none;
+    }
+    div.search .results time {
+        display: block;
+        color: #666;
+        font-size: 0.8em;
+        line-height: 1;
+    }
+
+
