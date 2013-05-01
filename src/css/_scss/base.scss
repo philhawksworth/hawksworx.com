@@ -75,19 +75,18 @@ a {
     }
 }
 
-h1.post-title,
-h2.post-title,
-h3.post-title {
+.post-title {
     a {
+        border-style: none;
+
         &:link,
         &:visited {
-            color: $base-color;
-            border-style: none;
+            color: darken($base-color, 50%);
+
         }
         &:hover,
         &:focus {
             color: $accent-color;
-            border-bottom: solid 1px lighten($accent-color, 20%);
         }
     }
 }
@@ -159,6 +158,24 @@ blockquote {
     clear:both;
     margin-bottom: 2em;
     display:block;
+}
+
+.speaking time {
+    color: #777;
+    font-size: 0.9em;
+    display: block;
+
+}
+.speaking .post-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 3em;
+    border-top: solid 1px #ddd;
+}
+.speaking .post-content li {
+    margin: 0;
+    padding: 0.4em 0 0.5em;
+    border-bottom: solid 1px #ddd;
 }
 
 

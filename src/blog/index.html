@@ -9,8 +9,6 @@ pageclass: blog
 {% endfor %}
 
 
-<h2 class="block">older posts</h2>
-
 {% for post in site.posts offset:5 %}
 
 <article class="post listing">
@@ -29,6 +27,7 @@ pageclass: blog
 	    <p>
 	 	{{ post.excerpt }}
 	    </p>
+	    <a href="{{ post.url }}" class="more">continue reading this post</a>
 	 </div>
 </article>
 

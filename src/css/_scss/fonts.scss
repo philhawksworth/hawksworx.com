@@ -12,17 +12,12 @@ h1 {
 }
 h2 {
     font-size:1.6em;
-    color:lighten($accent-color, 30%);
+    color:darken($base-color, 30%);
     margin-top:1.4em;
-}
-h2.block {
-    color: #fff;
-    background-color: $base-color;
-    padding: $content-buffer;
 }
 h3 {
     font-size:1.2em;
-    color:lighten($accent-color, 30%);
+    color:darken($base-color, 30%);
     margin-top:1.4em;
 }
 
@@ -37,29 +32,25 @@ footer h1 {
     font-size:3em;
 
     a {
-        text-decoration: none;
-
         &:link,
         &:visited,
         &:hover,
         &:focus {
             color: $base-color;
             border-style: none;
+            text-decoration: none;
         }
     }
 }
 
+footer h1 a {
 
-footer h1 {
-    font-size:2.4em;
-
-    a {
-        &:link,
-        &:visited,
-        &:hover,
-        &:focus {
-            color: lighten($base-color, 60%);
-        }
+    &:link,
+    &:visited,
+    &:hover,
+    &:focus {
+        font-size:0.8em;
+        color: lighten($base-color, 60%);
     }
 }
 
