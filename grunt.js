@@ -88,4 +88,8 @@ module.exports = function(grunt) {
   grunt.registerTask('serve', 'server watch');
 
 
+  // build : build a production version of the site ready to deploy
+  // serve : build and then serve the site
+
+
 };
