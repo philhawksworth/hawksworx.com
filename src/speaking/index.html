@@ -16,35 +16,33 @@ pageclass: speaking
             </p>
         </aside>
         <figure><img src="/images/philhawksworth-txjs.jpg" alt="Speaking" /></figure>
+
         <h3>Upcoming conferences</h3>
         <ul>
-					<li><time datetime="2014-05-01">May, 2014</time> TBA - USA</li>
-					<li><time datetime="2014-06-04">June, 2014</time><a href="http://www.jscamp.ro/">JSCamp 2014</a> - Bucharest, Romania</li>
-					<li><time datetime="2014-09-01">September, 2014</time> TBA - Germany</li>
+				{% for event in site.data.events.upcoming %}
+				  <li><time datetime="{{ event.date | date_to_xmlschema }}">{{ event.date | date_to_long_string  }}</time>
+					{% if event.url %}
+						<a href="{{ event.url }}">{{ event.name }}</a>
+					{% else %}
+						{{ event.name }}
+					{% endif %}
+				  - {{ event.location }}</li>
+				{% endfor %}
         </ul>
 
         <h3>Previous conferences</h3>
         <ul>
-        	<li><time datetime="2013-12-13">13th December, 2013</time><a href="http://www.meetup.com/Untangling-the-Web-London/">Untangle The Web</a> - London, UK</li>
-        	<li><time datetime="2013-10-26">24th October, 2013</time> <a href="http://futureofwebapps.com/london-2013/">Future of Web Apps</a> - London, UK</li>
-        	<li><time datetime="2013-10-21">21st October, 2013</time><a href="http://bdconf.com/2013/nashville/">Breaking Development Conference</a> - Nashville, USA</li>
-					<li><time datetime="2013-10-09">9th October, 2013</time><a href="http://www.imworld.ro/">Internet &amp; Mobile World</a> - Bucharest, Romania</li>
-					<li><time datetime="2013-07-23">23rd July, 2013</time><a href="http://speaktheweb.org/">Speak The Web</a> - Leeds, UK</li>
-					<li><time datetime="2013-07-23">22nd July, 2013</time><a href="http://londonwebstandards.org/2013/07/london-web-standard-july-2013-how-to-present-lightning-talks-lwslightning/">London Web Standards</a> - London, UK</li>
-					<li><time datetime="2013-07-12">12th July, 2013</time> <a href="http://www.gothamjs.com/">Gotham JS</a> - New York, USA</li>
-					<li><time datetime="2013-06-17">17th June, 2013</time> <a href="https://togetherlondon.com/events/meetup">Content Strategy Lightning Talks</a> - London, UK</li>
-					<li><time datetime="2013-05-15">15th May, 2013</time> <a href="http://2013.jsday.it">jsDay</a> - Verona, Italy</li>
-					<li><time datetime="2013-04-15">15th April, 2013</time> <a href="http://2013.texasjavascript.com">Texas JavaScript</a> - Austin, USA</li>
-					<li><time datetime="2013-04-01">1st April, 2013</time> <a href="http://2013.html5devconf.com">HTML5 Developer Conference</a> - San Francisco, USA</li>
-					<li><time datetime="2012-10-05">5th October, 2012</time> <a href="http://fronteers.nl/congres/2012">Fronteers</a> - Amsterdam, Netherlands</li>
-					<li><time datetime="2012-05-25">25th May, 2012</time> <a href="http://toster.ru/">Toster JavaScript</a> - Moscow, Russia</li>
-					<li><time datetime="2012-04-27">27th April, 2012</time> <a href="http://devup.ideateca.com/html5/thankyou.php">HTML5 DevUp</a> - Barcelona, Spain</li>
-					<li><time datetime="2012-03-12">12th March, 2012</time> <a href="http://schedule.sxsw.com/2012/events/event_IAP11002">SXSW Interactive</a> - Austin, USA</li>
-					<li><time datetime="2011-11-11">11th November, 2011</time> <a href="http://2011.full-frontal.org">FullFrontal</a> - Brighton, UK</li>
-					<li><time datetime="2011-11-10">10th November, 2011</time> <a href="http://asyncjs.com/intro-nodejs/">Async</a> - Brighton, UK</li>
-					<li><time datetime="2010-03-22">22nd March, 2010</time> <a href="http://uxpeople.co.uk/2010/">UX People</a> - London, UK</li>
-        </ul>
-
+				{% for event in site.data.events.previous %}
+				  <li><time datetime="{{ event.date | date_to_xmlschema }}">{{ event.date | date_to_long_string  }}</time>
+					{% if event.url %}
+						<a href="{{ event.url }}">{{ event.name }}</a>
+					{% else %}
+						{{ event.name }}
+					{% endif %}
+				  - {{ event.location }}</li>
+				{% endfor %}
+        </ul>			
+	
         <p class="meta">
             Photo credit: <a href="http://www.flickr.com/photos/slexaxton/8670375255/sizes/c/in/set-72157633298086859/">Alex Sexton</a>
         </p>

@@ -1,0 +1,113 @@
+upcoming: 
+
+  - name: TBA
+    location: USA
+    date: 2014-05-01 09:00:00 +0000
+
+  - name: JSCamp
+    location: "Bucharest, Romania"
+    date: 2014-06-03 09:00:00 +0000
+    url: http://www.jscamp.ro
+
+  - name: TBA
+    location: Germany
+    date: 2014-09-01 09:00:00 +0000
+
+previous: 
+
+  - name: Untangle The Web
+    location: "London, UK"
+    date: 2013-12-13 19:00:00 +0000
+    url: http://www.meetup.com/Untangling-the-Web-London
+
+  - name: Future of Web Apps
+    location: "London, UK"
+    date: 2013-10-24 09:00:00 +0000
+    url: http://futureofwebapps.com/london-2013/
+
+  - name: Breaking Development Conference
+    location: "Nashville, USA"
+    date: 2013-10-21 09:00:00 +0000
+    url: http://bdconf.com/2013/nashville/
+
+  - name: "Internet &amp; Mobile World"
+    location: "Bucharest, Romania"
+    date: 2013-10-09 09:00:00 +0000
+    url: http://www.imworld.ro/
+
+  - name: Speak The Web
+    location: "Leeds, UK"
+    date: 2013-07-23 20:00:00 +0000
+    url: http://speaktheweb.org
+
+  - name: London Web Standards
+    location: "London, UK"
+    date: 2013-07-22 20:00:00 +0000
+    url: http://londonwebstandards.org/2013/07/london-web-standard-july-2013-how-to-present-lightning-talks-lwslightning
+
+  - name: Gotham JS
+    location: "New York, USA"
+    date: 2013-07-12 08:00:00 +0000
+    url: http://www.gothamjs.com
+
+  - name: Content Strategy Lightning Talks
+    location: "London, UK"
+    date: 2013-06-17 18:00:00 +0000
+    url: https://togetherlondon.com/events/meetup
+
+  - name: jsDay
+    location: "Verona, Italy"
+    date: 2013-05-15 09:00:00 +0000
+    url: http://2013.jsday.it
+
+  - name: Texas JavaScript
+    location: "Austin, USA"
+    date: 2013-04-15 09:00:00 +0000
+    url: http://2013.texasjavascript.com
+
+  - name: HTML5 Developer Conference
+    location: "San Francisco, USA"
+    date: 2013-04-01 09:00:00 +0000
+    url: http://2013.html5devconf.com
+
+  - name: Fronteers
+    location: "Amsterdam, Netherlands"
+    date: 2012-10-05 09:00:00 +0000
+    url: http://fronteers.nl/congres/2012
+
+  - name: Toster JavaScript
+    location: "Moscow, Russia"
+    date: 2012-05-25 09:00:00 +0000
+    url: http://toster.ru/
+
+  - name: HTML5 DevUp
+    location: "Barcelona, Spain"
+    date: 2012-05-27 09:00:00 +0000
+    url: http://devup.ideateca.com/html5/thankyou.php
+
+  - name: SXSW Interactive
+    location: "Austin, USA"
+    date: 2012-03-12 09:00:00 +0000
+    url: http://schedule.sxsw.com/2012/events/event_IAP11002
+
+  - name: FullFrontal
+    location: "Brighton, UK"
+    date: 2011-11-11 11:00:00 +0000
+    url: http://2011.full-frontal.org
+
+  - name: Async - Getting started with Node
+    location: "Brighton, UK"
+    date: 2011-05-26 19:15:00 +0000
+    url: http://asyncjs.com/intro-nodejs/
+
+  - name: Async
+    location: "Brighton, UK"
+    date: 2011-11-10 19:00:00 +0000
+    url: http://asyncjs.com/intro-nodejs/
+
+  - name: UX People
+    location: "London, UK"
+    date: 2010-03-22 10:00:00 +0000
+    url: http://uxpeople.co.uk/2010/
+
+
