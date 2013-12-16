@@ -10,8 +10,11 @@ require 'json'
 
 module Jekyll
   module WordMap
-    def wordmap(input)  
-      words = input.gsub(/"/, "").gsub(/\./, "").gsub(/,/, "").downcase.split(" ")
+    def wordmap(input)
+    	
+      str = input.gsub(/"/, "").gsub(/\./, "").gsub(/,/, "").downcase
+      str = str.split(' tagged', 2).last
+      words = str.split(" ")
 			words.delete_if {|x| x == "a" }
 			words.delete_if {|x| x == "and" }
 			words.delete_if {|x| x == "on" }
