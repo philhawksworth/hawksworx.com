@@ -11,7 +11,6 @@ require 'json'
 module Jekyll
   module WordMap
     def wordmap(input)
-    	
       str = input.gsub(/"/, "").gsub(/\./, "").gsub(/,/, "").downcase
       str = str.split(' tagged', 2).last
       words = str.split(" ")

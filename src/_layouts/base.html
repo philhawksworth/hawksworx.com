@@ -2,10 +2,11 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>{{ page.title }}</title>
+		<meta name="robots" content="index, follow"/>
 		<meta name="viewport" content="width=device-width">
 		<link rel="stylesheet" href="/css/styles.css">
 		<meta name="description" content="{{ page.description }}">
+		<title>{{ page.title }}</title>
 
 		<!--
 		The javascript and assets for this site are compressed for performance reasons.
@@ -31,15 +32,16 @@
 			{% include navigation.html %}
 			</div>
 		</header>
-		<!--
-		<div class="search">
+
+<!--		<div class="search">
 			<div class="wrapper">
 				<div class="string">
-					<label>search the blog<input type="text" class="searchstr" id="searchstr" /></label></div>
+					<label>search the blog<input type="text" class="searchstr" id="searchstr" /></label>
+				</div>
 				<ul class="results"></ul>
 			</div>
 		</div>
-		-->
+-->
 
 		<div class="wrapper">
 		{{ content }}
