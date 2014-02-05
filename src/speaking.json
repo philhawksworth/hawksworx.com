@@ -1,0 +1,25 @@
+---
+---
+
+
+{
+	"talks" : [
+	{% for event in site.data.events.upcoming %}
+		{
+			"date" : "{{ event.date }}",
+			"name" : "{{ event.name }}",
+			"location" : "{{ event.location }}",
+			"url" : "{{ event.url }}"
+		},
+	{% endfor %}
+	
+	{% for event in site.data.events.previous %}
+		{
+			"date" : "{{ event.date }}",
+			"name" : "{{ event.name }}",
+			"location" : "{{ event.location }}",
+			"url" : "{{ event.url }}"
+		},
+	{% endfor %}
+	]
+}

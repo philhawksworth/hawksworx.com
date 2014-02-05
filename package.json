@@ -25,5 +25,8 @@
     "static"
   ],
   "author": "Phil Hawksworth",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "~3.5.1"
+  }
 }
