@@ -1,18 +1,9 @@
-upcoming: 
-
-  - name: LondonJS
-    location: London
-    date: 2014-02-13 09:00:00 +0000
-    url: http://www.londonjsconf.com
+upcoming:
 
   - name: JSCamp
     location: "Bucharest, Romania"
     date: 2014-06-03 09:00:00 +0000
     url: http://www.jscamp.ro
-
-  - name: TBA
-    location: USA
-    date: 2014-06-06 09:00:00 +0000
 
   - name: TBA
     location: "Oop North, UK"
@@ -22,7 +13,12 @@ upcoming:
     location: "Freiberg, Germany"
     date: 2014-09-01 09:00:00 +0000
 
-previous: 
+previous:
+
+  - name: LondonJS
+    location: London
+    date: 2014-02-13 09:00:00 +0000
+    url: http://www.londonjsconf.com
 
   - name: Untangle The Web
     location: "London, UK"
@@ -118,5 +114,3 @@ previous:
     location: "London, UK"
     date: 2010-03-22 10:00:00 +0000
     url: http://uxpeople.co.uk/2010/
-
-
