@@ -19,9 +19,10 @@ upcoming:
     date: 2014-09-01 09:00:00 +0000
     url: http://smashingconf.com/freiburg-2014/
 
-  - name: TBA
+  - name: The Web Is..
     location: "Cardiff, Wales"
     date: 2014-10-30 09:00:00 +0000
+    url: http://theweb.is
 
 previous:
 
