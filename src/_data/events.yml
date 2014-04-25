@@ -14,9 +14,10 @@ upcoming:
     location: "Oop North, UK"
     date: 2014-08-15 09:00:00 +0000
 
-  - name: TBA
+  - name: ColdFront Conference
     location: "Copenhagen, Denmark"
     date: 2014-09-04 09:00:00 +0000
+    url: http://coldfrontconf.com/
 
   - name: Smashing Conference
     location: "Freiburg, Germany"
