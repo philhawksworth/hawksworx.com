@@ -34,7 +34,6 @@ hx.search = function(str) {
 	// no results for an empty saerch string.
 	if(!str.length) {
 		$("div.search .results").empty();
-		// $('div.search label').css({'text-indent': 0});
 		return;
 	}
 
@@ -48,7 +47,7 @@ hx.search = function(str) {
 	// build the results output
 	$("div.search .results").empty();
 	for (i = hits.length - 1; i >= 0; i--) {
-		$("div.search .results").append("<li><a href='"+ hits[i].url+ "'>"+ hits[i].title +"</a><time>"+ hits[i].date+"</time></li>");
+		$("div.search .results").append("<li><time>"+ hits[i].date+"</time><a href='"+ hits[i].url+ "'>"+ hits[i].title +"</a></li>");
 	}
 };
 
@@ -58,7 +57,6 @@ hx.addEventHandlers = function() {
 
 	// blog search
 	$('input.searchstr').keyup(function(k){
-		// $('div.search label').css({'text-indent': "-9999px"});
 		if(k.which === 27) {
 			$('div.search').slideToggle(150);
 		}
@@ -70,7 +68,6 @@ hx.addEventHandlers = function() {
 		e.preventDefault();
 		$("div.search .results").empty();
 		$('input.searchstr').val("");
-		// $('div.search label').css({'text-indent': 0});
 		$('div.search').slideToggle(150);
 		$('input.searchstr').focus();
 		return false;

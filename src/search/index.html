@@ -6,14 +6,21 @@ pageclass: search
 
 
 <div>
-	<noscript>
+	
 	<p>
 		If only you had JavaScript enabled, you would be able to search the contents of this site using our the snazzy instant search. 	Not to worry though. You can still search the site using this Google powered search.
 	</p>
 	<p>
 		The search will take you away to the results page on Google, but the links there will bring you back to this site - where you will recieve a warm welcome.
 	</p>
-	</noscript>
+
+
+	<form action="https://www.google.co.uk/search">
+		<input type="hidden" name="q" value="site:http://hawksworx.com">
+		<input type="text" name="q">
+		<input type="submit">
+	</form>
+
 	
 	<p>
 		As an alternative, you might find what you are looking for by exploring via the tags
