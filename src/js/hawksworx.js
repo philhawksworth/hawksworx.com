@@ -6,21 +6,21 @@ a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^
 
 
 var hx = {};
-hx.posts = null;		// the site search data.
+hx.posts = null;    // the site search data.
 
 
 // load the search json object for javascript searching.
 hx.loadSearchData = function() {
 
-	// quietly go and get the search data
-	$.getJSON('/search.json', function(data) {
-		hx.posts =  data.posts;
+  // quietly go and get the search data
+  $.getJSON('/search.json', function(data) {
+    hx.posts =  data.posts;
 
-		// build a single reference variable for each post
-		for (var i = hx.posts.length - 1; i >= 0; i--) {
-			hx.posts[i].ref = hx.posts[i].title.toLowerCase() + " " + hx.posts[i].words.toLowerCase();
-		}
-	});
+    // build a single reference variable for each post
+    for (var i = hx.posts.length - 1; i >= 0; i--) {
+      hx.posts[i].ref = hx.posts[i].title.toLowerCase() + " " + hx.posts[i].words.toLowerCase();
+    }
+  });
 
 };
 
@@ -28,61 +28,66 @@ hx.loadSearchData = function() {
 // search for blog entries in the blog json object.
 hx.search = function(str) {
 
-	var reference, i, j;
-	var hits = [];
+  var reference, i, j;
+  var hits = [];
 
-	// no results for an empty saerch string.
-	if(!str.length) {
-		$("div.search .results").empty();
-		return;
-	}
+  // no results for an empty saerch string.
+  if(!str.length) {
+    $("div.search .results").empty();
+    return;
+  }
 
-	// find our search hits by searching for any of the entered words
-	for (i = hx.posts.length - 1; i >= 0; i--) {
-		if(hx.posts[i].ref.indexOf(str) !== -1) {
-			hits.push(hx.posts[i]);
-		}
-	}
+  // find our search hits by searching for any of the entered words
+  for (i = hx.posts.length - 1; i >= 0; i--) {
+    if(hx.posts[i].ref.indexOf(str) !== -1) {
+      hits.push(hx.posts[i]);
+    }
+  }
 
-	// build the results output
-	$("div.search .results").empty();
-	for (i = hits.length - 1; i >= 0; i--) {
-		$("div.search .results").append("<li><time>"+ hits[i].date+"</time><a href='"+ hits[i].url+ "'>"+ hits[i].title +"</a></li>");
-	}
+  // build the results output
+  $("div.search .results").empty();
+  for (i = hits.length - 1; i >= 0; i--) {
+    $("div.search .results").append("<li><time>"+ hits[i].date+"</time><a href='"+ hits[i].url+ "'>"+ hits[i].title +"</a></li>");
+  }
 };
 
 
 // Bind the event listeners
 hx.addEventHandlers = function() {
 
-	// blog search
-	$('input.searchstr').keyup(function(k){
-		if(k.which === 27) {
-			$('div.search').slideToggle(150);
-		}
-		str = $(this).val().trim();
-		hx.search(str);
-	});
+  // blog search
+  $('input.searchstr').keyup(function(k){
+    if(k.which === 27) {
+      $('div.search').slideToggle(150);
+    }
+    str = $(this).val().trim();
+    hx.search(str);
+  });
 
-	$('.nav a.search').click(function(e){
-		e.preventDefault();
-		$("div.search .results").empty();
-		$('input.searchstr').val("");
-		$('div.search').slideToggle(150);
-		$('input.searchstr').focus();
-		return false;
-	});
+
+  $('.nav a.search').click(function(e){
+    e.preventDefault();
+    $("div.search .results").empty();
+    $('input.searchstr').val("");
+    $('div.search').slideToggle(150);
+    $('input.searchstr').focus();
+    return false;
+  });
 };
 
 
 // giddy up!
 hx.init = function() {
-	hx.addEventHandlers();
-	hx.loadSearchData();
+  
+  hx.addEventHandlers();
+  
+  // the page has been loaded and rendered now... 
+  // so it is safe to load the search index
+  hx.loadSearchData();
 };
 
 
 // Ready to go.
 $(function() {
-	hx.init();
+  hx.init();
 });
