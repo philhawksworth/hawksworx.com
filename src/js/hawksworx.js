@@ -60,10 +60,24 @@ hx.addEventHandlers = function() {
     if(k.which === 27) {
       $('div.search').slideToggle(150);
     }
-    str = $(this).val().trim();
+    var str = $(this).val().trim();
     hx.search(str);
   });
 
+ // blog search
+  $('input.searchstr').change(function(e){
+    e.preventDefault();
+    var str = $('input.searchstr').val().trim();
+    // console.log("sub!", str);
+    hx.search(str);
+  });
+
+ // blog search
+  $('form').submit(function(e){
+    e.preventDefault();
+    var str = $('input.searchstr').val().trim();
+    hx.search(str);
+  });
 
   $('.nav a.search').click(function(e){
     e.preventDefault();
