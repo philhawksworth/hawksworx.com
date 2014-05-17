@@ -1,6 +1,4 @@
 node_modules
 *.pyc
 _site
-_simpleform_cache
 .sass-cache
-.vagrant

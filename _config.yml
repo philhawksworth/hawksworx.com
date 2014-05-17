@@ -2,11 +2,10 @@ port: 8000
 source:         ./src
 destination:    ./_site
 plugins:        ./_plugins
-pygments:       true
+highlighter:       true
 tag_dir:        /blog/tag
 permalink:      /blog/:title
 
 sass:
-  syntax: scss        # scss|sass
-  style:  compressed  # nested|expanded|compact|compressed
-  compile_in_place: false
+  sass_dir: css/_scss
+  style:  compressed
