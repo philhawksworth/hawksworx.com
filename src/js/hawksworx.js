@@ -8,19 +8,15 @@
 var hx = {};
 hx.posts = null;    // the site search data.
 
-// load the search json object for javascript searching.
+// quietly go and get the search data and
+// build a single reference variable for each post
 hx.loadSearchData = function() {
-
-  // quietly go and get the search data
   $.getJSON('/search.json', function(data) {
     hx.posts =  data.posts;
-
-    // build a single reference variable for each post
     for (var i = hx.posts.length - 1; i >= 0; i--) {
       hx.posts[i].ref = hx.posts[i].title.toLowerCase() + " " + hx.posts[i].words.toLowerCase();
     }
   });
-
 };
 
 
@@ -30,10 +26,11 @@ hx.search = function(str) {
   var reference, i, j;
   var hits = [];
 
+  // clear down ready for the new results
+  hx.clearResults();
+
   // no results for an empty saerch string.
   if(!str.length) {
-    $(".search-results ul").empty();
-    $(".search-results").hide();
     return;
   }
 
@@ -45,7 +42,6 @@ hx.search = function(str) {
   }
 
   // build the results output
-  $(".search-results ul").empty();
   $(".search-results").show();
   for (i = hits.length - 1; i >= 0; i--) {
     $(".search-results ul").append("<li><time>"+ hits[i].date+"</time><a href='"+ hits[i].url+ "'>"+ hits[i].title +"</a></li>");
@@ -53,47 +49,41 @@ hx.search = function(str) {
 };
 
 
-hx.hidesearch = function() {
-	$(".search-results").hide();
-	$('#searchform').hide();
-	$('li.search a').show();
+hx.hideSearch = function() {
+  hx.clearResults();
+  $('#searchform').hide();
+  $('li.search a').show();
 };
 
+hx.clearResults = function() {
+  $(".search-results ul").empty();
+  $(".search-results").hide();
+};
 
 // Bind the event listeners
 hx.addEventHandlers = function() {
 
   // blog search
   $('#searchstr').keyup(function(k){
-  	// handle escape key to dismiss the search
+    // handle escape key to dismiss the search
     if(k.which === 27) {
-			hx.hidesearch();
-   		return;
+      hx.hideSearch();
+    } else {
+      var str = $(this).val().trim();
+      hx.search(str);  
     }
-    var str = $(this).val().trim();
-    hx.search(str);
-  });
-
-  
-  // perform the search when input happens
-  $('#searchstr').change(function(e){
-    e.preventDefault();
-    var str = $('#searchstr').val().trim();
-    hx.search(str);
   });
 
 
-  $('li.search a').click(function(e){
 
+  // get the data ready to query, 
+  // prepare the form and toggle visibility
+  $('li.search a').click(function(e) {
     e.preventDefault();
-
-    // get the data
     hx.loadSearchData();
-
-    // prepare the form and toggle visibility
+    hx.clearResults();
     $('#searchform').css({'display': 'inline-block'});
     $('li.search a').hide();
-    $(".search-results .ul").empty();
     $('#searchstr').val("");
     $('#searchstr').focus();
     return false;

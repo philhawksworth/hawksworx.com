@@ -34,10 +34,10 @@ description: making use of jquery in the tiddlywiki core
     With the jQuery plugin availble, we can use it to provide a snazzy UI for any UL or LI elements on the page. The Javascript syntax for that is nice and simple:
 </p>
 
-{% highlight js %}
+``` js
     // Turn the list element with an ID of 'myList' into a funky ListNav
     $('#myList').listnav();
-{% endhighlight %}
+```
 
 <p>
      This is great, but we want people to be able to call this from TiddlyWiki without having to write Javascript. If we create a TiddlyWiki macro to call this for us, people can easily make a nice NavList anywhere. Let's make a macro which turns the contents of a tiddler into a NavList like this:

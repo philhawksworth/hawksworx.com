@@ -1,66 +1,52 @@
 var gulp = require('gulp');
-// var git = require('gulp-git');
-// var jshint = require('gulp-jshint');
-// var mocha = require('gulp-mocha');
-// var clean = require('gulp-clean');
-// var rename = require('gulp-rename');
-// var uglify = require('gulp-uglify');
-// var size = require('gulp-size');
+var git = require('gulp-git');
+var jshint = require('gulp-jshint');
+
+var paths = {
+  source: 'src/',
+  scripts: 'js/**/*.js',
+  images: 'images/**/*',
+  deploy: 'deploy/'
+};
 
 
-// gulp.task('lint', function () {
-//   return gulp.src('./src/*.js')
-//     .pipe(jshint('.jshintrc'))
-//     .pipe(jshint.reporter('jshint-stylish'));
-// });
+gulp.task('lint', function () {
+  return gulp.src('./src/js/hawksworx.js')
+    .pipe(jshint('.jshintrc'))
+    .pipe(jshint.reporter('jshint-stylish'));
+});
 
-// gulp.task('mocha', function () {
-//   gulp.src('./test/*.js')
-//     .pipe(mocha({ reporter: 'list' }));
-// });
 
 // gulp.task('clean', function () {
 //   return gulp.src('./dist', { read: false })
 //     .pipe(clean());
 // });
 
-gulp.task('harp', function () {
-  return require('child_process').spawn('harp', {
-    stdio: 'inherit'
-  });
+gulp.task('jekyll', function () {
+  return require('child_process').spawn('jekyll', ['build'], {stdio: 'inherit'});
 });
 
 
-// gulp.task('build', ['test', 'clean'], function () {
-//   return gulp.src('./src/contra.js')
-//     .pipe(gulp.dest('./dist'))
-//     .pipe(rename('contra.min.js'))
-//     .pipe(uglify())
-//     .pipe(size())
-//     .pipe(gulp.dest('./dist'));
-// });
 
+// lint js
 
+// build jekyll
 
-// gulp.task('deploy', ['jekyll'], function () {
-//   var pkg = require('./package.json');
-//   var v = 'v' + pkg.version;
-//   var message = 'Release ' + v;
+// concat js
 
-//   return gulp.src('./')
-//     .pipe(git.commit(message))
-//     .pipe(git.tag(v, message))
-//     .pipe(git.push('origin', 'master', '--tags'))
-//     .pipe(gulp.dest('./'));
-// });
+// minify js
 
+// replace js insert
 
+// optim images
+gulp.task('images', function() {
+ return gulp.src(path.src + paths.images)
+    .pipe(imagemin({optimizationLevel: 5}))
+    .pipe(gulp.dest(paths.deploy + paths/images));
+});
 
-// gulp.task('npm', ['tag'], function (done) {
-//   require('child_process').spawn('npm', ['publish'], { stdio: 'inherit' })
-//     .on('close', done);
-// });
+//
 
-// gulp.task('test', ['lint', 'mocha']);
-// gulp.task('ci', ['build']);
-// gulp.task('release', ['npm']);
+// The default task
+gulp.task('default', ['scripts', 'images', 'watch']);
+

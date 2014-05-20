@@ -2,10 +2,9 @@ port: 8000
 source:         ./src
 destination:    ./_site
 plugins:        ./_plugins
-highlighter:       true
+highlighter:    pygments
 tag_dir:        /blog/tag
 permalink:      /blog/:title
-
 sass:
   sass_dir: css/_scss
   style:  compressed
