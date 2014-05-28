@@ -291,16 +291,42 @@ blockquote {
     text-decoration: underline;
   }
 
-/*  .searchform .go {
-    background-color: #fff;
-    color: #850303;
-    border-style: none;
-    border-radius: 0 4px 4px 0;
-    font-family: 'Myriad Pro', Helvetica, Arial, sans-serif;
-    font-size:1em;
-    padding: 0.2em;
+  /* The traditional search form */
+  form.search {
+    margin: 1em 0;
+    padding:2em;
+    background-color: #eee;
+    border-radius: 2px;
+
+    input {
+      font-size: 1.2em;
+      font-family: 'Myriad Pro', Helvetica, Arial, sans-serif;
+      padding: 0.2em;
+      margin:0.2em;
+      color: #555;
+      width: 60%;
+    }
+    .submit {
+      border: solid 1px #999;
+      padding:0.2em 1em;
+      border-bottom-width: 2px;
+      color: #555;
+      cursor: pointer;
+      background-color: #ccc;
+      width: auto;
+    }
+    .submit:hover,
+    .submit:focus {
+      background-color: #c0c0c0;
+      color:#444;
+    }
   }
-*/
+  
+  aside {
+    font-style: italic;
+    color: #666;
+    margin:1em 0;
+  }
 
 
 .footer a:link,
