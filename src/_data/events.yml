@@ -1,15 +1,5 @@
 upcoming:
 
-  - name: DevConFu
-    location: "Riga, Latvia"
-    date: 2014-05-29 13:00:00 +0000
-    url: http://devconfu.eu
-
-  - name: JSCamp
-    location: "Bucharest, Romania"
-    date: 2014-06-03 09:00:00 +0000
-    url: http://www.jscamp.ro
-
   - name: TBA
     location: "Oop North, UK"
     date: 2014-08-15 09:00:00 +0000
@@ -30,6 +20,16 @@ upcoming:
     url: http://theweb.is
 
 previous:
+
+  - name: JSCamp
+    location: "Bucharest, Romania"
+    date: 2014-06-03 09:00:00 +0000
+    url: http://www.jscamp.ro
+    
+  - name: DevConFu
+    location: "Riga, Latvia"
+    date: 2014-05-29 13:00:00 +0000
+    url: http://devconfu.eu
 
   - name: LondonJS
     location: London
