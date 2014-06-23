@@ -4,7 +4,8 @@
   "description": "the personal blog of Phil Hawksworth",
   "main": "grunt.js",
   "dependencies": {
-
+    "gulp-html-replace": "~1.1.0",
+    "gulp-jshint": "~1.6.3"
   },
   "engines": {
     "node": ">=0.8.x"
