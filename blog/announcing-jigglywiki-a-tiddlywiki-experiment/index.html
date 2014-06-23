@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <meta name="description" content="Jigglywiki. An experimental version of Tiddlywiki based on jQuery">
+    <title>Announcing JigglyWiki. A TiddlyWiki experiment with jQuery</title>
+    <!--
+    The javascript and assets for this site are compressed for performance reasons.
+    However, it's always nice to be able to see what is going on under the hood for
+    the sake of learning and tinkering.
+
+    You can see the uncompressed versions of the Javascript, and indeed the entire
+    source of this site at https://github.com/philhawksworth/hawksworx.com
+
+    Thanks for popping by!
+    -->
+     <link rel="alternate" type="application/rss+xml" title="Phil Hawksworth's Blog" href="http://hawksworx.com/posts.rss" />
+  </head>
+  <body class="blog">
+  <div class="header">
+    <div class="container">
+        <ul class="nav">
+          <li><a href="/" class="home">hawksworx</a></li>
+          <li><a href="/blog">blog</a></li>
+          <li><a href="/speaking">speaking</a></li>
+          <li class="search">
+            <a href="/search">search</a>
+            <form action="" method="get" class="searchform" id="searchform">
+              <input type="hidden" name="q" id="site" value="site:hawksworx.com">
+              <input type="text" name="q" class="q" placehoder="search" id="searchstr">
+            </form>
+          </li>
+        </ul>
+        <div class="search-results">
+          <ul class="listing"></ul>
+        </div>
+      <h1 >Announcing JigglyWiki. A TiddlyWiki experiment with jQuery</h1>
+      
+       <div class="meta">
+        Posted by Phil Hawksworth on <time>27 August 2008</time> 
+        <br>and tagged
+        
+          
+          <a href="/blog/tag/javascript">#javascript</a> 
+        
+          
+          <a href="/blog/tag/jquery">#jquery</a> 
+        
+          
+          and 
+          
+          <a href="/blog/tag/tiddlywiki">#tiddlywiki</a> 
+        
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="container">
+    <div class="grab">
+  <p>
+    Once upon a time I was resistant to the idea of Javascript libraries. That was due to a couple of things. Firstly, I was comfortable with writing the Javascript for my projects myself and didn't like the idea of relying on someone else's code which I couldn't easily inspect. Secondly, at the time there weren't really any libraries. Then there were a few, but they were all, well, to be blunt, a bit pants.    
+  </p>
+</div>
+<figure><img src="/images/jigglywiki.jpg" alt=""></figure>
+
+<!-- more -->
+
+
+<p>
+    That all changed for me when <a href="http://jquery.com">jQuery</a> came along. <a href="http://jquery.com">jQuery</a> is a lightweight, elegant but powerful Javascript library originally developed by <a href="http://ejohn.org">John Resig</a>. <a href="http://jquery.com">jQuery</a> provides fast and efficient interrogation and manipulation of the DOM and borrows conventions from CSS and <a>XPATH</a> to provide concise and expressive queries to be constructed. It's worth checking out if you haven't already.  <a href="http://tiddlyWiki.com">TiddlyWiki</a> has been around since before the existence of Javascript libraries and long before <a href="http://jquery.com">jQuery</a> came along, so it was never developed in a way to take advantage of such things. It could easily be argued that TiddlyWiki is itself, a Javascript library since it provides helper functions for many common Javascript tasks.  The extent of this library though, is a little limited since it has evolved to serve a single purpose: To drive TiddlyWiki.
+</p>
+<p>
+    Recently I have been longing to experiment with replacing a lot of the TiddlyWiki core with code built to take advantage of <a href="http://jquery.com">jQuery</a>. The idea of developing TiddlyWiki with a Javascript library turns out not to be a new one as similar discussions have occurred in the past and different libraries considered.  I then began to imagine other benefits from reengineering TiddlyWiki from first principles taking advantage of all of the lessons learned over its lifetime.   It became too hard to resist.  Over the course of 2 reasonably long train journeys, I set about building my own version of TiddlyWiki with <a href="http://jquery.com">jQuery</a> at its core. I settled on a number of objectives:
+</p>
+<ol>
+    <li>To use <a href="http://jquery.com">jQuery</a> to provide the core TiddlyWiki functions.</li>
+    <li>To make the code modular such that the core could be very small and additional functionality could easily be included via bespoke <a href="http://jquery.com">jQuery</a> plugins.</li>
+    <li>To use <a href="http://en.wikipedia.org/wiki/Unobtrusive_JavaScript">unobtrusive Javascript</a></li>
+    <li>For the document to be sensibly parsed by screen readers and web crawlers.</li>
+    <li>To allow navigation of the document even without Javascript</li>
+    <li>To use HTML and CSS which is valid according to the <a href="http://www.w3.org/">W3C</a></li>
+    <li>To conform to the TiddlyWiki naming convention and adopt a suitably ridiculous working title for the project</li>
+</ol>
+<p>
+    An important thing to note, is that I am not attempting to replace TiddlyWiki. I see JigglyWiki as an experimental prototype to explore ways that TiddlyWiki 3.0 might evolve.  I also hoped to keep this quiet for long enough to allow it to progress to the point that I was happy to reveal a working prototype for general discussion. That proved tricky thanks to my own excitement and the way that gossip spreads around the web and discussion groups!
+</p>
+<p>
+    In its current state, it provides some of the more basic TiddlyWiki functions in terms of displaying tiddlers and allowing editing. It also demonstrates how it might elegantly degrade when CSS or Javascript are not available.  Below are a few different build which demonstrate those scenarios.
+</p>
+<ol>
+    <li><a href="http://static.hawksworx.com/playground/jigglywiki/html_only.html">Just the HTML</a>. I've not included CSS or any of the Javascript here. The data store is visible and you can navigate the document via the tiddler links.</li>
+    <li><a href="http://static.hawksworx.com/playground/jigglywiki/html_css.html">The HTML and CSS</a>. This will function just as the version above, only it will look a bit prettier. In environments where Javascript is not available or is slow to be initialised, this is how things look until the Javascript kicks in.</li>
+    <li><a href="http://static.hawksworx.com/playground/jigglywiki/html_css_js.html">HTML, CSS and Javascript</a>. Now the data store is hidden and the default content is displayed with additional, Javascript dependent functionality included.</li>
+</ol>
+<p>
+    I'd love to get comments on this approach. I'd also be very interested to get advise on TiddlyWiki issues that we might be able to avoid if the opportunity to develop this into TiddlyWiki 3.0 really did come about. I'm less interested in bug reports though. This is a very early proof of concept which will contain many bugs and glitches.  You can get to the source of this project via the <a href="http://svn.tiddlywiki.org/Trunk/contributors/PhilHawksworth/experimental/jigglywiki/proto/">TiddlyWiki subversion repository</a> More to come!
+</p>
+
+
+
+
+    </div>
+  </div>
+
+  
+
+  <div class="footer">
+    <div class="container">
+      <div class="howdy">
+        <h2>Howdy</h2>
+        <img src="/images/philhawksworth.jpg" alt="Phil Hawksworth" class="face">
+        <p>
+          I'm Phil Hawksworth, a web developer working in London at <a href="http://rga.com">R/GA</a>
+        </p>
+        <p>
+          Elsewhere 
+          <a rel="me" href="http://twitter.com/philhawksworth">Twitter</a>
+          <a rel="me" href="http://flickr.com/philhawksworth">Flickr</a>
+          <a rel="me" href="http://instagram.com/philhawksworth">Instagram</a>
+          <a rel="me" href="http://github.com/philhawksworth">Github</a>
+        </p>
+        <p>
+          Nerds and colleagues might need my <a href="/philhawksworth.pub.txt">Public ssh key</a>
+        </p>
+      </div>
+      <div class="colo">
+        <h2>About this site</h2>
+        <p>
+          This site is served statically from Github pages after being built with Jekyll. The source is available on Github.
+        </p>
+        <p>
+          <em>Other than where specified, the content on this site is published under a <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons</a> Attribution 3.0 licence.</em>
+        </p>
+      </div>
+    </div>
+    <div class="nav">
+      <div class="container">
+        <ul class="nav">
+          <li><a href="/" class="home">hawksworx</a></li>
+          <li><a href="/blog">blog</a></li>
+          <li><a href="/speaking">speaking</a></li>
+          <li><a href="/search">search</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <!-- build:js -->
+    <script src="/js/jquery.min.js" type="text/javascript"></script>
+    <script src="/js/hawksworx.js" type="text/javascript"></script>
+    <!-- endbuild -->
+
+    <script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-119040-3']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+
+  </body>
+</html>

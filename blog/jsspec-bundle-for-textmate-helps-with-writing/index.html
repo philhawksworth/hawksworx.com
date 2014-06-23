@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <meta name="description" content="I went and got married">
+    <title>JSSpec bundle for Textmate helps with writing tests</title>
+    <!--
+    The javascript and assets for this site are compressed for performance reasons.
+    However, it's always nice to be able to see what is going on under the hood for
+    the sake of learning and tinkering.
+
+    You can see the uncompressed versions of the Javascript, and indeed the entire
+    source of this site at https://github.com/philhawksworth/hawksworx.com
+
+    Thanks for popping by!
+    -->
+     <link rel="alternate" type="application/rss+xml" title="Phil Hawksworth's Blog" href="http://hawksworx.com/posts.rss" />
+  </head>
+  <body class="blog">
+  <div class="header">
+    <div class="container">
+        <ul class="nav">
+          <li><a href="/" class="home">hawksworx</a></li>
+          <li><a href="/blog">blog</a></li>
+          <li><a href="/speaking">speaking</a></li>
+          <li class="search">
+            <a href="/search">search</a>
+            <form action="" method="get" class="searchform" id="searchform">
+              <input type="hidden" name="q" id="site" value="site:hawksworx.com">
+              <input type="text" name="q" class="q" placehoder="search" id="searchstr">
+            </form>
+          </li>
+        </ul>
+        <div class="search-results">
+          <ul class="listing"></ul>
+        </div>
+      <h1 >JSSpec bundle for Textmate helps with writing tests</h1>
+      
+       <div class="meta">
+        Posted by Phil Hawksworth on <time>18 April 2008</time> 
+        <br>and tagged
+        
+          
+          <a href="/blog/tag/javascript">#javascript</a> 
+        
+          
+          <a href="/blog/tag/development">#development</a> 
+        
+          
+          <a href="/blog/tag/tools">#tools</a> 
+        
+          
+          <a href="/blog/tag/tiddlywiki">#tiddlywiki</a> 
+        
+          
+          and 
+          
+          <a href="/blog/tag/osmosoft">#osmosoft</a> 
+        
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="container">
+    <div class="grab">
+  <p>
+    Recently, we at <a href="http://www.osmosoft.com">Osmosoft</a> have been trying to make good on one of our pledges: To introduce a unit testing framework to <a href="http://www.tiddlywiki.com">Tiddlywiki</a> development.
+  </p>
+</div>
+
+<!-- more -->
+
+<p>Along the way we examined several Javascript testing frameworks and found that JSSpec suited our needs quite nicely. JSSpec resembles the popular <a href="http://rspec.info/">RSpec</a> testing framework popularly used by Ruby developers.
+</p>
+<p>As a result, I have been dabbling away at writing tests in my favoured text editor - the rather lovely  <a href="http://www.macromates.com/">Textmate</a>. Since this is a repetitive task, I figured that it was worth creating some helper to speed things along. Textmate offers an easy to make powerful bundles to automate tasks and help you in your code development and so I quickly put together a JSSpec bundle Textmate. This simple bundle offers a set of snippets which can act as a quick reference of what methods are available in JSSpec and let you rapidly create your test code.  Textmate users can <a href="http://www.hawksworx.com/resources/JSSpec.tmbundle.zip">download this bundle</a> and just double-click it to make it available for use in Textmate.</p>
+
+
+<p><a href="http://static.hawksworx.com/JSSpec.tmbundle.zip">Download the bundle</a></p>
+
+<p>I won't go into the workings of testing with JSSpec here, rather, you can learn about that at the <a href="http://code.google.com/p/jsspec/">official site</a>.</p>
+
+<p>Feel free to take this bundle and modify it to fit your purpose. Enjoy.</p>
+
+
+
+
+
+    </div>
+  </div>
+
+  
+
+  <div class="footer">
+    <div class="container">
+      <div class="howdy">
+        <h2>Howdy</h2>
+        <img src="/images/philhawksworth.jpg" alt="Phil Hawksworth" class="face">
+        <p>
+          I'm Phil Hawksworth, a web developer working in London at <a href="http://rga.com">R/GA</a>
+        </p>
+        <p>
+          Elsewhere 
+          <a rel="me" href="http://twitter.com/philhawksworth">Twitter</a>
+          <a rel="me" href="http://flickr.com/philhawksworth">Flickr</a>
+          <a rel="me" href="http://instagram.com/philhawksworth">Instagram</a>
+          <a rel="me" href="http://github.com/philhawksworth">Github</a>
+        </p>
+        <p>
+          Nerds and colleagues might need my <a href="/philhawksworth.pub.txt">Public ssh key</a>
+        </p>
+      </div>
+      <div class="colo">
+        <h2>About this site</h2>
+        <p>
+          This site is served statically from Github pages after being built with Jekyll. The source is available on Github.
+        </p>
+        <p>
+          <em>Other than where specified, the content on this site is published under a <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons</a> Attribution 3.0 licence.</em>
+        </p>
+      </div>
+    </div>
+    <div class="nav">
+      <div class="container">
+        <ul class="nav">
+          <li><a href="/" class="home">hawksworx</a></li>
+          <li><a href="/blog">blog</a></li>
+          <li><a href="/speaking">speaking</a></li>
+          <li><a href="/search">search</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <!-- build:js -->
+    <script src="/js/jquery.min.js" type="text/javascript"></script>
+    <script src="/js/hawksworx.js" type="text/javascript"></script>
+    <!-- endbuild -->
+
+    <script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-119040-3']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+
+  </body>
+</html>
