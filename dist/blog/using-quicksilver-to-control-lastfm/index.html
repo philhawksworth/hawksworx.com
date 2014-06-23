@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <meta name="description" content="Experimenting with ways to control playback from Last.FM with Quicksilver">
+    <title>Using Quicksilver to control Last.fm</title>
+    <!--
+    The javascript and assets for this site are compressed for performance reasons.
+    However, it's always nice to be able to see what is going on under the hood for
+    the sake of learning and tinkering.
+
+    You can see the uncompressed versions of the Javascript, and indeed the entire
+    source of this site at https://github.com/philhawksworth/hawksworx.com
+
+    Thanks for popping by!
+    -->
+     <link rel="alternate" type="application/rss+xml" title="Phil Hawksworth's Blog" href="http://hawksworx.com/posts.rss" />
+  </head>
+  <body class="blog">
+  <div class="header">
+    <div class="container">
+        <ul class="nav">
+          <li><a href="/" class="home">hawksworx</a></li>
+          <li><a href="/blog">blog</a></li>
+          <li><a href="/speaking">speaking</a></li>
+          <li class="search">
+            <a href="/search">search</a>
+            <form action="" method="get" class="searchform" id="searchform">
+              <input type="hidden" name="q" id="site" value="site:hawksworx.com">
+              <input type="text" name="q" class="q" placehoder="search" id="searchstr">
+            </form>
+          </li>
+        </ul>
+        <div class="search-results">
+          <ul class="listing"></ul>
+        </div>
+      <h1 >Using Quicksilver to control Last.fm</h1>
+      
+       <div class="meta">
+        Posted by Phil Hawksworth on <time>07 August 2009</time> 
+        <br>and tagged
+        
+          
+          <a href="/blog/tag/osx">#osx</a> 
+        
+          
+          and 
+          
+          <a href="/blog/tag/tips">#tips</a> 
+        
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="container">
+    <div class="grab">
+  <p>
+    For a while, I've been using handy <a href="http://docs.blacktree.com/quicksilver/what_is_quicksilver">Quicksilver</a> triggers to control iTunes. I like not needing to switch my attention from what I'm working on, in order to skip a track, pause the playback, set a rating or whatever.  You can find out <a href="http://leafraker.com/2007/09/17/how-to-create-a-quicksilver-trigger/">how to create a trigger</a> from one of the many great Quicksilver tutorials out on the Web.  	
+  </p>
+</div>
+<figure><img src="/images/quicksilver_lastfm.jpg" alt=""></figure>
+
+<!-- more -->
+
+<p>
+    At the moment though, I find myself listening to <a href="http://last.fm" rel="org fn url">Last.fm</a> more and more, and have been looking for a similar way to control the Last.fm application. I couldn't find a plugin for Quicksilver to achieve this so I set about writing an Applescript which I could trigger with Quicksilver.  I'm not much of an Applescript whizz, but I managed to put the following script together to skip the track currently playing in the Last.fm application:
+</p>
+
+{% highlight applescript %}
+
+tell application "Last.fm" to activate
+tell application "System Events"
+        tell process "Last.fm"
+                click menu item "Skip" of menu "Controls" of menu bar 1
+        end tell
+end tell
+{% endhighlight %}
+
+<p>
+    After saving this in a suitable location (I have a Utils folder where I keep lots of scripts and utilities), I set a Quicksilver trigger to run the script. Simple!  Happy with the result, I created similar scripts for some other controls like love, ban, play and stop and assigned them all keyboard triggers.
+</p>
+<p>
+     My only wish was that I could do this without giving Last.fm focus. Generally this is fine for my because I have it running in a second display, so it doesn't steal my attention, but it would be nice if I could get Applescript to execute the command without activating the application. I'd welcome suggestions from anyone with more Applescript fu than me.
+</p>
+
+
+
+
+    </div>
+  </div>
+
+  
+
+  <div class="footer">
+    <div class="container">
+      <div class="howdy">
+        <h2>Howdy</h2>
+        <img src="/images/philhawksworth.jpg" alt="Phil Hawksworth" class="face">
+        <p>
+          I'm Phil Hawksworth, a web developer working in London at <a href="http://rga.com">R/GA</a>
+        </p>
+        <p>
+          Elsewhere 
+          <a rel="me" href="http://twitter.com/philhawksworth">Twitter</a>
+          <a rel="me" href="http://flickr.com/philhawksworth">Flickr</a>
+          <a rel="me" href="http://instagram.com/philhawksworth">Instagram</a>
+          <a rel="me" href="http://github.com/philhawksworth">Github</a>
+        </p>
+        <p>
+          Nerds and colleagues might need my <a href="/philhawksworth.pub.txt">Public ssh key</a>
+        </p>
+      </div>
+      <div class="colo">
+        <h2>About this site</h2>
+        <p>
+          This site is served statically from Github pages after being built with Jekyll. The source is available on Github.
+        </p>
+        <p>
+          <em>Other than where specified, the content on this site is published under a <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons</a> Attribution 3.0 licence.</em>
+        </p>
+      </div>
+    </div>
+    <div class="nav">
+      <div class="container">
+        <ul class="nav">
+          <li><a href="/" class="home">hawksworx</a></li>
+          <li><a href="/blog">blog</a></li>
+          <li><a href="/speaking">speaking</a></li>
+          <li><a href="/search">search</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <!-- build:js -->
+    <script src="/js/jquery.min.js" type="text/javascript"></script>
+    <script src="/js/hawksworx.js" type="text/javascript"></script>
+    <!-- endbuild -->
+
+    <script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-119040-3']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+
+  </body>
+</html>

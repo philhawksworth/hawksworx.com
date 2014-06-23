@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <meta name="description" content="Yet another ridiculous single page web site with giant page weight">
+    <title>Oakley's monster page of baubles</title>
+    <!--
+    The javascript and assets for this site are compressed for performance reasons.
+    However, it's always nice to be able to see what is going on under the hood for
+    the sake of learning and tinkering.
+
+    You can see the uncompressed versions of the Javascript, and indeed the entire
+    source of this site at https://github.com/philhawksworth/hawksworx.com
+
+    Thanks for popping by!
+    -->
+     <link rel="alternate" type="application/rss+xml" title="Phil Hawksworth's Blog" href="http://hawksworx.com/posts.rss" />
+  </head>
+  <body class="blog">
+  <div class="header">
+    <div class="container">
+        <ul class="nav">
+          <li><a href="/" class="home">hawksworx</a></li>
+          <li><a href="/blog">blog</a></li>
+          <li><a href="/speaking">speaking</a></li>
+          <li class="search">
+            <a href="/search">search</a>
+            <form action="" method="get" class="searchform" id="searchform">
+              <input type="hidden" name="q" id="site" value="site:hawksworx.com">
+              <input type="text" name="q" class="q" placehoder="search" id="searchstr">
+            </form>
+          </li>
+        </ul>
+        <div class="search-results">
+          <ul class="listing"></ul>
+        </div>
+      <h1 >Oakley's monster page of baubles</h1>
+      
+       <div class="meta">
+        Posted by Phil Hawksworth on <time>22 April 2013</time> 
+        <br>and tagged
+        
+          
+          <a href="/blog/tag/excess">#excess</a> 
+        
+          
+          and 
+          
+          <a href="/blog/tag/examples">#examples</a> 
+        
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="container">
+    <div class="grab">
+    <p>
+      The ridiculous trend of giant, bloated web pages crammed with every visual bauble and gimmick imaginable seems set to continue. This time thanks to a site by Oakley.
+    </p>
+</div>
+
+<figure><img src="/images/airbrakemx.png" alt=""></figure>
+
+<p>
+    I have been gathering examples of this kind of site and using them as examples of what NOT to do in my talk "Excessive Enhancement" for some time.
+</p>
+<p>
+    When <a href="http://bradfrostweb.com">Brad Frost</a> <a href="https://twitter.com/brad_frost/status/326425797768388608">alerted me</a> to this example though, I thought it had to be a spoof. Nobody would consider this to be a good idea would they? Really? These types of site, which uses HTML5, CSS3 and emerging web development techniques to create a page with parallax effects and animations as you scroll are frequently bloated and terrible citizens of the Web.
+</p>
+
+<h3>Vital statistics</h3>
+<p>
+    Without a primed cache, over my home broadband (advertised by my provider as 16meg but usually peaking around 11meg) this was my experience:
+</p>
+<blockquote>
+    <ul>
+        <li>85.4MB page weight</li>
+        <li>471 HTTP requests</li>
+        <li>2 minutes 45 seconds until loading screen replaced with content</li>
+        <li>4 minutes 10 seconds minute onLoad event</li>
+    </ul>
+</blockquote>
+<p>
+    Astounding!
+</p>
+<p>
+    You can visit the page to take a look while it is still around at <a href="http://moto.oakley.com/">http://moto.oakley.com</a> (I predict it might not last forever) but you can see a video of it below at a cost of just 28.5MB (saving you almost 60MB of bandwidth and allowing you to skip 2 minutes 45 seconds ahead to see the site)
+</p>
+
+
+<div class='embed-container'><iframe src='http://player.vimeo.com/video/64598508' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+
+<p>
+    Now, I want these things to stop emerging, but at the same time, I'd rather not let Brad beat me with this example. Does anyone have a better (worse) example out there to share? Send them my way on Twitter at <a href="http://twitter.com/philhawksworth">@philhawksworth</a>
+</p>
+<h3>Update</h3>
+<p>
+    Oakley responded and have updated this site. Some of the particulars are in my follow-up post: <a href="/blog/oakleys-moto-diet/">Oakley's Moto diet</a>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+  
+  <div class="credits">
+    <div class="container">
+    Related: <a href="/blog/reflecting-on-fullfrontal-2011/">Reflecting on Full Frontal 2011</a>
+
+    </div>
+  </div>
+  
+
+  <div class="footer">
+    <div class="container">
+      <div class="howdy">
+        <h2>Howdy</h2>
+        <img src="/images/philhawksworth.jpg" alt="Phil Hawksworth" class="face">
+        <p>
+          I'm Phil Hawksworth, a web developer working in London at <a href="http://rga.com">R/GA</a>
+        </p>
+        <p>
+          Elsewhere 
+          <a rel="me" href="http://twitter.com/philhawksworth">Twitter</a>
+          <a rel="me" href="http://flickr.com/philhawksworth">Flickr</a>
+          <a rel="me" href="http://instagram.com/philhawksworth">Instagram</a>
+          <a rel="me" href="http://github.com/philhawksworth">Github</a>
+        </p>
+        <p>
+          Nerds and colleagues might need my <a href="/philhawksworth.pub.txt">Public ssh key</a>
+        </p>
+      </div>
+      <div class="colo">
+        <h2>About this site</h2>
+        <p>
+          This site is served statically from Github pages after being built with Jekyll. The source is available on Github.
+        </p>
+        <p>
+          <em>Other than where specified, the content on this site is published under a <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons</a> Attribution 3.0 licence.</em>
+        </p>
+      </div>
+    </div>
+    <div class="nav">
+      <div class="container">
+        <ul class="nav">
+          <li><a href="/" class="home">hawksworx</a></li>
+          <li><a href="/blog">blog</a></li>
+          <li><a href="/speaking">speaking</a></li>
+          <li><a href="/search">search</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <!-- build:js -->
+    <script src="/js/jquery.min.js" type="text/javascript"></script>
+    <script src="/js/hawksworx.js" type="text/javascript"></script>
+    <!-- endbuild -->
+
+    <script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-119040-3']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+
+  </body>
+</html>

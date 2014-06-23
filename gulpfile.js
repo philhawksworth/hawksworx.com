@@ -48,19 +48,12 @@ gulp.task('lint', function () {
 
 // build jekyll
 gulp.task('jekyll', function() {
- 
-  console.log("jekyll bake.....");
-
- return gulp.src('', {quiet: false})
+  return gulp.src('', {quiet: false})
     .pipe(shell([
-      'echo "clean up"',
       'rm -rf ' + paths.deploy,
-      'echo "bake"',
       'jekyll build',
-      'echo "copy to dist"',
       'cp -R _site/ ' + paths.deploy
     ]));
-
 });
 
 
@@ -92,6 +85,7 @@ gulp.task('build', ['jekyll', 'scripts', 'styles', 'images']);
 // Build, optimise, then push the dist subtree to gh-pages
 gulp.task('deploy', ['build'], shell.task([
   'cp CNAME dist',
+  // 'git add CNAME',
   'git subtree push --prefix dist origin gh-pages'
 ]));
 

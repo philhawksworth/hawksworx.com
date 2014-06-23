@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <meta name="description" content="Seeing fantastic results from simple architecture and avoiding CMS complexity on the Obama fund-raising site.">
+    <title>Simplicity and performance with static files</title>
+    <!--
+    The javascript and assets for this site are compressed for performance reasons.
+    However, it's always nice to be able to see what is going on under the hood for
+    the sake of learning and tinkering.
+
+    You can see the uncompressed versions of the Javascript, and indeed the entire
+    source of this site at https://github.com/philhawksworth/hawksworx.com
+
+    Thanks for popping by!
+    -->
+     <link rel="alternate" type="application/rss+xml" title="Phil Hawksworth's Blog" href="http://hawksworx.com/posts.rss" />
+  </head>
+  <body class="blog">
+  <div class="header">
+    <div class="container">
+        <ul class="nav">
+          <li><a href="/" class="home">hawksworx</a></li>
+          <li><a href="/blog">blog</a></li>
+          <li><a href="/speaking">speaking</a></li>
+          <li class="search">
+            <a href="/search">search</a>
+            <form action="" method="get" class="searchform" id="searchform">
+              <input type="hidden" name="q" id="site" value="site:hawksworx.com">
+              <input type="text" name="q" class="q" placehoder="search" id="searchstr">
+            </form>
+          </li>
+        </ul>
+        <div class="search-results">
+          <ul class="listing"></ul>
+        </div>
+      <h1 >Simplicity and performance with static files</h1>
+      
+       <div class="meta">
+        Posted by Phil Hawksworth on <time>29 November 2012</time> 
+        <br>and tagged
+        
+          
+          <a href="/blog/tag/development">#development</a> 
+        
+          
+          <a href="/blog/tag/observations">#observations</a> 
+        
+          
+          and 
+          
+          <a href="/blog/tag/smellcms">#smellcms</a> 
+        
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="container">
+    <div class="grab">
+    <p>
+            I've been beating a drum recently, and it has a lot to do with pursuing simplicity in technical architectures. I want to allow for optimizations where it matter most and avoid the kind of technical and functional bloat you can get through using some CMS platforms. So I was delighted when a colleague recently shared a link to <a href="http://kylerush.net/blog/meet-the-obama-campaigns-250-million-fundraising-platform/">Kyle Rush's post</a> which demonstrates some huge value in this approach on the Obama fund-rising campaign site.
+    </p>
+</div>
+<figure><img src="/images/contribute_obama.jpeg" alt=""></figure>
+
+<!-- more -->
+
+<p>
+    Kyle's article is well worth a read. In it, he talks at high level about some of the principles and approaches that were used to ensure high performance on the <a href="https://contribute.barackobama.com">contribute.barackobama.com</a> site.
+</p>
+<p>
+    Many of the techniques and technical architecture decisions map very closely to those that I have been championing recently, and I talked a little about this <a href="http://hawksworx.com/blog/i-can-smell-your-cms-a-talk-at-fronteers/">at Fronteers in Amsterdam</a> when I spoke about the complexity overhead from some Content Management Systems.
+</p>
+<p>Of particular interest to me, Kyle mentions some great stuff like:</p>
+<ul>
+    <li>Generating a static site with <a href="http://jekyllrb.com/">Jekyll</a></li>
+    <li>Using <a href="http://github.com">Github</a> for version control</li>
+    <li>Abstracting the payment gateway off to a RESTful API and calling it from the client</li>
+    <li>Performing A/B testing with <a href="https://www.optimizely.com/">Optimizely</a> and iterating rapidly</li>
+</ul>
+
+
+<p>So much of this rings true to me, but it is great to read of the very tangible and financial benefits of ensuring that the site is well optimized and front-end development is not compromised by (what I call) CMS Stink.</p>
+
+<p>A couple of quotes from Kyle that gave me real, 'Amen brother!' moments:</p>
+
+<blockquote>
+    <p>
+        By using Jekyll we managed to avoid the complexity that comes with most CMS (databases, server configuration) and instead focus on things like optimizing the UI and providing a better user experience.
+    </p>
+</blockquote>
+
+<p>and</p>
+
+<blockquote>
+    <p>
+        There is a lot to be said about simplicity.
+    </p>
+</blockquote>
+
+<p>Can I get a 'hell yeah!'</p>
+
+
+
+
+    </div>
+  </div>
+
+  
+  <div class="credits">
+    <div class="container">
+    Just go and read <a href="http://kylerush.net/blog/meet-the-obama-campaigns-250-million-fundraising-platform/">Kyle Rush's blog post</a>
+
+    </div>
+  </div>
+  
+
+  <div class="footer">
+    <div class="container">
+      <div class="howdy">
+        <h2>Howdy</h2>
+        <img src="/images/philhawksworth.jpg" alt="Phil Hawksworth" class="face">
+        <p>
+          I'm Phil Hawksworth, a web developer working in London at <a href="http://rga.com">R/GA</a>
+        </p>
+        <p>
+          Elsewhere 
+          <a rel="me" href="http://twitter.com/philhawksworth">Twitter</a>
+          <a rel="me" href="http://flickr.com/philhawksworth">Flickr</a>
+          <a rel="me" href="http://instagram.com/philhawksworth">Instagram</a>
+          <a rel="me" href="http://github.com/philhawksworth">Github</a>
+        </p>
+        <p>
+          Nerds and colleagues might need my <a href="/philhawksworth.pub.txt">Public ssh key</a>
+        </p>
+      </div>
+      <div class="colo">
+        <h2>About this site</h2>
+        <p>
+          This site is served statically from Github pages after being built with Jekyll. The source is available on Github.
+        </p>
+        <p>
+          <em>Other than where specified, the content on this site is published under a <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons</a> Attribution 3.0 licence.</em>
+        </p>
+      </div>
+    </div>
+    <div class="nav">
+      <div class="container">
+        <ul class="nav">
+          <li><a href="/" class="home">hawksworx</a></li>
+          <li><a href="/blog">blog</a></li>
+          <li><a href="/speaking">speaking</a></li>
+          <li><a href="/search">search</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <!-- build:js -->
+    <script src="/js/jquery.min.js" type="text/javascript"></script>
+    <script src="/js/hawksworx.js" type="text/javascript"></script>
+    <!-- endbuild -->
+
+    <script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-119040-3']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+
+  </body>
+</html>
