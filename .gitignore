@@ -1,4 +1,3 @@
 node_modules
-*.pyc
 _site
 .sass-cache
