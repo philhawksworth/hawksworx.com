@@ -17,7 +17,7 @@ To build the site you need:
 - Gulp
 
 
-To setup the build environment, clone the repository and then in the working directory run: `npm install` to intsall any node modules required by grunt.
+To setup the build environment, clone the repository and then in the working directory run: `npm install` to install any node modules required by grunt.
 
 The site can then be built and served via Jekyll:
 
