@@ -75,6 +75,15 @@ gulp.task("tasks", function() {
 });
 
 
+// task: comments
+
+/*
+
+- get json from comments service endpoint
+- transform json to yaml and save to data dir
+- build jekyll as normal
+
+*/
 
 
 // Build and optimise the site and serve it locally.
@@ -84,7 +93,6 @@ gulp.task('build', ['jekyll', 'scripts', 'styles', 'images']);
 // deploy to gh-pages.
 // Build, optimise, then push the dist subtree to gh-pages
 gulp.task('deploy', ['build'], shell.task([
-  'cp CNAME dist',
   'git subtree push --prefix dist origin gh-pages'
 ]));
 
