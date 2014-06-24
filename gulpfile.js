@@ -85,7 +85,6 @@ gulp.task('build', ['jekyll', 'scripts', 'styles', 'images']);
 // Build, optimise, then push the dist subtree to gh-pages
 gulp.task('deploy', ['build'], shell.task([
   'cp CNAME dist',
-  // 'git add CNAME',
   'git subtree push --prefix dist origin gh-pages'
 ]));
 
