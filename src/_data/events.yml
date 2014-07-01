@@ -1,8 +1,9 @@
 upcoming:
 
-  - name: TBA
-    location: "Oop North, UK"
+  - name: Wuthering Bytes
+    location: "Hebden Bridge, UK"
     date: 2014-08-15 09:00:00 +0000
+    url: http://wutheringbytes.com/
 
   - name: ColdFront Conference
     location: "Copenhagen, Denmark"
