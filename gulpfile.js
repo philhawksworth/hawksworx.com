@@ -1,12 +1,12 @@
-var gulp = require('gulp');
-var gutil = require('gulp-util');
-var jshint = require('gulp-jshint');
-var uglify = require('gulp-uglify');
-var cssmin = require('gulp-cssmin');
-var shell = require('gulp-shell');
-var connect = require('gulp-connect');
-var imagemin = require('gulp-imagemin');
-var htmlreplace = require('gulp-html-replace');
+var gulp        = require('gulp');
+var gutil       = require('gulp-util');
+var jshint      = require('gulp-jshint');
+var uglify      = require('gulp-uglify');
+var cssmin      = require('gulp-cssmin');
+var shell       = require('gulp-shell');
+var connect     = require('gulp-connect');
+var imagemin    = require('gulp-imagemin');
+// var htmlreplace = require('gulp-html-replace');
 
 
 var paths = {
