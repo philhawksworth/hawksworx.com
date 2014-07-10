@@ -6,6 +6,9 @@ var cssmin      = require('gulp-cssmin');
 var shell       = require('gulp-shell');
 var connect     = require('gulp-connect');
 var imagemin    = require('gulp-imagemin');
+var yaml        = require('json2yaml');
+var fs          = require('fs');
+var http        = require('http');
 // var htmlreplace = require('gulp-html-replace');
 
 
@@ -27,6 +30,7 @@ gulp.task('scripts', function() {
   return gulp.src([paths.source + '/js/**/*.js', '!'+ paths.source + '/js/jquery.min.js'])
     .pipe(uglify())
     .pipe(gulp.dest(paths.deploy + '/js/'));
+
 });
 
 
@@ -84,6 +88,45 @@ gulp.task("tasks", function() {
 - build jekyll as normal
 
 */
+
+gulp.task("comments", function() {
+  console.log("Getting comments data");
+
+  var options = {
+    hostname: 'pooleapp.herokuapp.com',
+    port: 80,
+    path: '/data/ee2367e8-082d-11e4-8f63-16a76ac6964e.json',
+    method: 'GET',
+    auth: "pooleapp:sweet"
+  };
+
+  http.get(options, function(res) {
+    var body = '';
+    res.on('data', function(chunk) {
+        body += chunk;
+    });
+    res.on('end', function() {
+      var comments = JSON.parse(body);
+      console.log("Got response: ", comments);
+      var ymlText = yaml.stringify(comments);
+      console.log("YAML: ", ymlText);
+
+      fs.writeFile('./src/_data/comments.yml', ymlText, function(err) {
+        if(err) {
+          console.log(err);
+        } else {
+          console.log("The file was saved!");
+        }
+      });
+      
+    });
+  }).on('error', function(e) {
+    console.log("Got error: ", e);
+  });
+
+});
+
+
 
 
 // Build and optimise the site and serve it locally.

@@ -12,7 +12,8 @@
     "gulp-cssmin": "~0.1.6",
     "gulp-uglify": "~0.3.1",
     "gulp-connect": "~2.0.5",
-    "gulp-imagemin": "~0.6.1"
+    "gulp-imagemin": "~0.6.1",
+    "json2yaml": "~1.0.3"
   },
   "engines": {
     "node": ">=0.8.x"

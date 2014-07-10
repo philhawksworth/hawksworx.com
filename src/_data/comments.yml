@@ -1,0 +1,12 @@
+---
+  sessions: 
+    - 
+      name: "flip"
+      email: "ph@gggmail.com"
+      created: "2014-07-10T13:23:45Z"
+      comment: "foo bar baz"
+    - 
+      name: "jon"
+      email: "jon@bonjovi.com"
+      created: "2014-07-10T13:25:19Z"
+      comment: "living on a prayer"

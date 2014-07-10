@@ -6,3 +6,28 @@ pageclass: blog
 {{ page.content }}
 
 
+<h2>Comments</h2>
+<ul class="listing comments">
+  {% for comment in site.data.comments.sessions %}
+  <li>
+    <time datetime="{{ comment.created | date_to_xmlschema }}">{{ comment.created | date_to_long_string  }}</time>
+    {% if comment.url %}
+      <a href="{{ comment.url }}">{{ comment.name }}</a>
+    {% else %}
+      {{ comment.name }}
+    {% endif %}
+      <div>
+        {{ comment.comment }}
+      </div>
+  </li>
+  {% endfor %}
+</ul>
+
+
+<form action="http://pooleapp.herokuapp.com/data/5420ae49-e1f7-49de-b094-b4fce4e8156c/" method="post">
+  <input type="hidden" name="redirect_to" value="/search" />
+  <label>name<input type="text" name="name"></label>
+  <label>email<input type="text" name="email"></label>
+  <label>comment<textarea name="comment"></textarea>
+  <input type="submit" value="submit" />
+</form>
