@@ -9,6 +9,7 @@ var imagemin    = require('gulp-imagemin');
 var yaml        = require('json2yaml');
 var fs          = require('fs');
 var http        = require('http');
+var gravatar    = require('gravatar');
 // var htmlreplace = require('gulp-html-replace');
 
 
@@ -107,18 +108,22 @@ gulp.task("comments", function() {
     });
     res.on('end', function() {
       var comments = JSON.parse(body);
-      console.log("Got response: ", comments);
+      
+      // add gravatar image links if available
+      for (var i = 0; i < comments.sessions.length; i++) {
+        comments.sessions[i].avatar = gravatar.url(comments.sessions[i].email, {s: '50', r: 'pg', d: '404'});
+      }
+      
+      // convert the json to yaml and save it for jekyll to use.
       var ymlText = yaml.stringify(comments);
-      console.log("YAML: ", ymlText);
-
       fs.writeFile('./src/_data/comments.yml', ymlText, function(err) {
         if(err) {
           console.log(err);
         } else {
-          console.log("The file was saved!");
+          console.log("Comments data saved.");
         }
       });
-      
+
     });
   }).on('error', function(e) {
     console.log("Got error: ", e);
