@@ -392,12 +392,16 @@ ul.comments {
   background-color: #eee;
   padding: 1px 32px 32px 32px;
 
-
   label {
     display:block;
     color:#666;
     margin-top: 0.6em;
     font-size: 0.9em;
+
+    span {
+      color: #aaa;
+      margin-left:0.2em;
+    }
   }
 
   input, textarea {
@@ -420,8 +424,6 @@ ul.comments {
       color: #fff;
     }
   }
-
-
 
   textarea {
     width: 100%;
