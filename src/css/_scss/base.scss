@@ -47,6 +47,9 @@ h2, h3, h4 {
 h2 {
   font-size: 3em;
 }
+h3 {
+  font-size: 2.2em;
+}
 
 ul.nav  {
   list-style: none;
@@ -366,6 +369,22 @@ ul.listing time {
   color:#bbb;
   font-size: 0.8em;
 }
+
+
+div.highlight {
+  font-size: 0.9em;
+  padding: 1em;
+  overflow:auto;
+  border: 1px solid #d5d5e9;
+  background-color: #eef;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+
+
+
 
 
 ul.comments {
