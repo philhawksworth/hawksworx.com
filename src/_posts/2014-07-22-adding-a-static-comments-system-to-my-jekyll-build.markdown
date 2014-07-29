@@ -3,15 +3,15 @@ published: true
 layout: post
 tags: ["jekyll", "static", "ssg", "poole"]
 title: Adding a static comments system to my Jekyll build
-description: Building a tool to provide comments and other user generated content for sites buolt with static site generators like Jekyll.
+description: Building a tool to provide comments and other user generated content for sites built with static site generators like Jekyll.
 ---
 
 <div class="grab">
 <p>
-  I'm a big fan of simplicity when building web sites. That's just one of the reasons I like using Jekyll, a static site generator, to build out this site. Sometimes though, it would be nice to gather content from the site visitors via a form, and hosting the site as a set of static assets doesn't cater for that.
+  I'm a big fan of simplicity when building web sites. That's just one of the reasons I like using Jekyll, a static site generator, to build out this site. Sometimes though, it would be nice to gather content from the site visitors via a form, and hosting a site as a set of static assets doesn't cater for that.
 </p>
 <p>
-  That's way I deciced to create a simple service which would provide that capability to any static sites. I'm using it to add comments to this site, and you can use it for yours too. 
+  That's why I decided to create a simple service which would provide that capability to any static sites. I'm using it to add comments to this site, and you can use it for yours too. 
 </p>
 </div>
 <figure><img src="/images/hello-poole.png" alt="Poole"></figure>
@@ -28,26 +28,26 @@ description: Building a tool to provide comments and other user generated conten
 
 <h2>How Poole works</h2>
 <p>
-  We wanted getting setup and integrating Poole into your workflow to be a simple and felxible as possible. Currently there is one prerequisute, and that is a <a href="http://github.com">Github</a> account. We use this to authenticate you to manage your forms rather than ask you to create yet another account. We may add Twitter oAuth later too.
+  We wanted getting setup and integrating Poole into your workflow to be super simple, and as flexible as possible. Currently there is one prerequisite, and that is a <a href="http://github.com">Github</a> account. We use this to authenticate you to manage your forms rather than ask you to create yet another account. <a href="https://trello.com/b/lyQEqQMq/poole">We may add</a> Twitter oAuth later too.
 </p>
 <p>Here is an overview of the process:</p>
 <ul>
   <li>Visit <a href="http://pooleapp.com" title="PooleApp.com">PooleApp.com</a> and sign in with Github</li>
   <li>Create a new form. This generates an API key and an API secret for you.</li>
-  <li>Add a form to your site which posts to the end point we give you. This includes your API key.</li>
-  <li>Add whatever fields you like to your form. Their data will be avaible in JSON or YAML format later.</li>
+  <li>Add some form HTML to your site which posts to the end point we give you. This includes your API key.</li>
+  <li>Add whatever fields you like to your form. Their data will be available in JSON or YAML format later.</li>
   <li>Use your form to post content.</li>
-  <li>Retrive your data from Poole at the obscure URL it generated for you when you. This includes your API secret.</li>
+  <li>Retrieve your data from Poole at the obscure URL it generated for you when you. This includes your API secret.</li>
 </ul>
 
 <p>That's it.</p>
 <p>
-  Poole offers security by obscurity. Your data is retrievable from the "unguessable" URL containing your API secret. It does not require authentication to access this readonly API, so once again - <em>no bank details or trade secrets please!</em>
+  Poole offers security by obscurity. Your data is retrievable from the "unguessable" URL containing your API secret. It does not require authentication to access this readonly API, so once again - <em>no bank details, trade secrets, or nuclear launch codes please!</em>
 </p>
  
 <h2>Managing your data</h2>
 <p>
-  Although your content is availble without authentication from the readonly endpoint, you need to authenticate with your Github credentials in order to delete data or manage your forms.
+  Although your content is available without authentication from the readonly endpoint, you need to authenticate with your Github credentials in order to delete data or manage your forms.
 </p>
 
 <h2>Notifications</h2>
@@ -62,14 +62,14 @@ description: Building a tool to provide comments and other user generated conten
 
 <h2>Using Poole with Jekyll</h2>
 <p>
-  I use <a href="http://gulpjs.com">Gulp</a> to automate my build tasks on this site. In order to add comments to the site, I added a new Gulp task which just pulls the data that has been posted to my form on Poole. That data is evalable as YAML which is handy since this is the format that Jekyll can treat as structured data.  Once I have the data, Jekyll doe the rest. It parses the comments data an adds the comments to the appropriate blog posts.
+  I use <a href="http://gulpjs.com">Gulp</a> to automate my build tasks on this site. In order to add comments to the site, I added a new Gulp task which just pulls the data that has been posted to my form on Poole. That data is available as YAML which is handy since this is the format that Jekyll can treat as structured data.  Once I have the data, Jekyll does the rest. It parses the comments data and adds the comments to the appropriate blog posts.
 </p>  
 <p>
-  Since the comments are part of my pages rather than being loaded later by Javascript, they are part of the site and available for search engines to easily parse. It also means that I autimaticcaly get to retain a store of the comments made on my site. Handy.
+  Since the comments are part of my pages rather than being loaded later by JavaScript, they are part of the site and available for search engines to easily parse. It also means that I automatically get to retain a store of the comments made on my site. Handy.
 </p>
 
 <h3>The Gulp task to get comments from Poole</h3>
-<p>I run this when I get a notification from Poole of a new comment. I also have a command to deply which just pushes the build to Github pages.</p>
+<p>I run this when I get a notification from Poole of a new comment. I also have a command to deploy which just pushes the build to Github pages.</p>
 
 {% highlight javascript %}
 gulp.task("comments", function() {
@@ -142,7 +142,7 @@ gulp.task("comments", function() {
 
 <h3>The comments form which posts the data to Poole</h3>
 <p>
-  The post template adds this form to each blog post page. A hidden field keeps track of the page whhere a comment originates from do that it can be inserted by the template later.  Poole also lets you specify which page to redirect to after a successful post. That way the user never feels like they have been routed away to a third party service.
+  The post template adds this form to each blog post page. A hidden field keeps track of the page where a comment originates from so that it can be inserted by the template later.  Poole also lets you specify which page on your domain to redirect to after a successful post. That way the user never feels like they have been routed away to a third party service.
 </p>
 {% highlight html %}
 <form action="http://pooleapp.herokuapp.com/data/{API-KEY}/" method="post">
@@ -159,10 +159,10 @@ gulp.task("comments", function() {
 
 <h2>Try it out</h2>
 <p>
-  Poole is available to try now. We've made it super easy to liberate your data and walk away if it's not for you, but hopefully it will be a useful tool for all kinds of use cases.
+  <a href="http://poooleapp.com">Poole is available to try now</a>. We've made it super easy to liberate your data and walk away if it's not for you, but hopefully it will be a useful tool for all kinds of use cases.
 </p>
 <p>
-  I've keen to hear thoughts on the usefulness or otherwise of this tool, and also to receive feature requests in the comments below.
+  I've keen to hear thoughts on the usefulness or otherwise of this tool, and also to receive feature requests in the comments below or on our <a href="https://trello.com/b/lyQEqQMq/poole">roadmap board on Trello</a>.
 </p>
 
 
