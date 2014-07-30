@@ -80,25 +80,16 @@ gulp.task("tasks", function() {
 });
 
 
-// task: comments
-
-/*
-
-- get json from comments service endpoint
-- transform json to yaml and save to data dir
-- build jekyll as normal
-
-*/
-
+// Get comments form Poole
 gulp.task("comments", function() {
+  
   console.log("Getting comments data");
 
   var options = {
-    hostname: 'pooleapp.herokuapp.com',
+    hostname: 'pooleapp.com',
     port: 80,
-    path: '/data/ee2367e8-082d-11e4-8f63-16a76ac6964e.json',
-    method: 'GET',
-    auth: "pooleapp:sweet"
+    path: '/data/d90ecd8b-f781-4fa6-806f-6a4fbc84a2cc.json',
+    method: 'GET'
   };
 
   http.get(options, function(res) {
@@ -112,6 +103,11 @@ gulp.task("comments", function() {
       // add gravatar image links if available
       for (var i = 0; i < comments.sessions.length; i++) {
         comments.sessions[i].avatar = gravatar.url(comments.sessions[i].email, {s: '50', r: 'pg', d: '404'});
+        
+        console.log(comments.sessions[i].comment);
+        console.log(unescape(comments.sessions[i].comment));
+
+        comments.sessions[i].comment = unescape(comments.sessions[i].comment);
       }
 
       // convert the json to yaml and save it for jekyll to use.

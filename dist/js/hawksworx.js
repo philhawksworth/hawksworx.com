@@ -64,13 +64,13 @@ hx.addEventHandlers = function() {
       hx.hideSearch();
     } else {
       var str = $(this).val().trim();
-      hx.search(str);  
+      hx.search(str);
     }
   });
 
 
 
-  // get the data ready to query, 
+  // get the data ready to query,
   // prepare the form and toggle visibility
   $('li.search a').click(function(e) {
     e.preventDefault();

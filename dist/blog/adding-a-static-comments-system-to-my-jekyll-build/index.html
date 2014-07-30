@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <meta name="description" content="Building a tool to provide comments and other user generated content for sites built with static site generators like Jekyll.">
+    <title>Adding a static comments system to my Jekyll build</title>
+    <!--
+    The javascript and assets for this site are compressed for performance reasons.
+    However, it's always nice to be able to see what is going on under the hood for
+    the sake of learning and tinkering.
+
+    You can see the uncompressed versions of the Javascript, and indeed the entire
+    source of this site at https://github.com/philhawksworth/hawksworx.com
+
+    Thanks for popping by!
+    -->
+     <link rel="alternate" type="application/rss+xml" title="Phil Hawksworth's Blog" href="http://hawksworx.com/posts.rss" />
+  </head>
+  <body class="blog">
+  <div class="header">
+    <div class="container">
+        <ul class="nav">
+          <li><a href="/" class="home">hawksworx</a></li>
+          <li><a href="/blog">blog</a></li>
+          <li><a href="/speaking">speaking</a></li>
+          <li class="search">
+            <a href="/search">search</a>
+            <form action="" method="get" class="searchform" id="searchform">
+              <input type="hidden" name="q" id="site" value="site:hawksworx.com">
+              <input type="text" name="q" class="q" placehoder="search" id="searchstr">
+            </form>
+          </li>
+        </ul>
+        <div class="search-results">
+          <ul class="listing"></ul>
+        </div>
+      <h1 >Adding a static comments system to my Jekyll build</h1>
+      
+       <div class="meta">
+        Posted by Phil Hawksworth on <time>22 July 2014</time> 
+        <br>and tagged
+        
+          
+          <a href="/blog/tag/jekyll">#jekyll</a> 
+        
+          
+          <a href="/blog/tag/static">#static</a> 
+        
+          
+          <a href="/blog/tag/ssg">#ssg</a> 
+        
+          
+          and 
+          
+          <a href="/blog/tag/poole">#poole</a> 
+        
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="container">
+    <div class="grab">
+<p>
+  I'm a big fan of simplicity when building web sites. That's just one of the reasons I like using Jekyll, a static site generator, to build out this site. Sometimes though, it would be nice to gather content from the site visitors via a form, and hosting a site as a set of static assets doesn't cater for that.
+</p>
+<p>
+  That's why I decided to create a simple service which would provide that capability to any static sites. I'm using it to add comments to this site, and you can use it for yours too. 
+</p>
+</div>
+<figure><img src="/images/hello-poole.png" alt="Poole" /></figure>
+
+<!-- more -->
+
+<h2>Introducing Poole</h2>
+<p>
+  After finding that I was not alone in having this itch, I teamed up with my friend <a href="http://madewithbytes.com/">Alfredo Aguirre</a> and we set about scratching it by building a simple service which would be easy to reuse on all kinds of projects. <a href="http://pooleapp.com">Poole</a> simply provides a place to post your content with an HTTP Post, and then an API to get it back again using an HTTP Get.
+</p>
+<p>
+  We handle some privacy and security, but this isn't the place to put your most sensitive data. It's perfect though, for things like blog comments since they are intended to be public.
+</p>
+
+<h2>How Poole works</h2>
+<p>
+  We wanted getting setup and integrating Poole into your workflow to be super simple, and as flexible as possible. Currently there is one prerequisite, and that is a <a href="http://github.com">Github</a> account. We use this to authenticate you to manage your forms rather than ask you to create yet another account. <a href="https://trello.com/b/lyQEqQMq/poole">We may add</a> Twitter oAuth later too.
+</p>
+<p>Here is an overview of the process:</p>
+<ul>
+  <li>Visit <a href="http://pooleapp.com" title="PooleApp.com">PooleApp.com</a> and sign in with Github</li>
+  <li>Create a new form. This generates an API key and an API secret for you.</li>
+  <li>Add some form HTML to your site which posts to the end point we give you. This includes your API key.</li>
+  <li>Add whatever fields you like to your form. Their data will be available in JSON or YAML format later.</li>
+  <li>Use your form to post content.</li>
+  <li>Retrieve your data from Poole at the obscure URL it generated for you when you. This includes your API secret.</li>
+</ul>
+
+<p>That's it.</p>
+<p>
+  Poole offers security by obscurity. Your data is retrievable from the "unguessable" URL containing your API secret. It does not require authentication to access this readonly API, so once again - <em>no bank details, trade secrets, or nuclear launch codes please!</em>
+</p>
+
+<h2>Managing your data</h2>
+<p>
+  Although your content is available without authentication from the readonly endpoint, you need to authenticate with your Github credentials in order to delete data or manage your forms.
+</p>
+
+<h2>Notifications</h2>
+<p>
+  For this to be useful, you may need to be notified when data is posted to your forms. Poole can be configured to send email notifications when data is posted. We might add daily digests or other settings soon.
+</p>
+
+<h2>But what about spam?</h2>
+<p>
+  What indeed! We are offering this for free, so we can't spring for Akismet spam filtering. You can however enable it yourself by providing your own personal Akismet API key.  That is <a href="http://akismet.com/plans/">free and very quick to setup</a> with Akismet and will allow Poole to protect your forms from spammers.
+</p>
+
+<h2>Using Poole with Jekyll</h2>
+<p>
+  I use <a href="http://gulpjs.com">Gulp</a> to automate my build tasks on this site. In order to add comments to the site, I added a new Gulp task which just pulls the data that has been posted to my form on Poole. That data is available as YAML which is handy since this is the format that Jekyll can treat as structured data.  Once I have the data, Jekyll does the rest. It parses the comments data and adds the comments to the appropriate blog posts.
+</p>
+<p>
+  Since the comments are part of my pages rather than being loaded later by JavaScript, they are part of the site and available for search engines to easily parse. It also means that I automatically get to retain a store of the comments made on my site. Handy.
+</p>
+
+<h3>The Gulp task to get comments from Poole</h3>
+<p>I run this when I get a notification from Poole of a new comment. I also have a command to deploy which just pushes the build to Github pages.</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s2">&quot;comments&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+  <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">hostname</span><span class="o">:</span> <span class="s1">&#39;pooleapp.com&#39;</span><span class="p">,</span>
+    <span class="nx">port</span><span class="o">:</span> <span class="mi">80</span><span class="p">,</span>
+    <span class="nx">path</span><span class="o">:</span> <span class="s1">&#39;/data/{API-SECRET}.yaml&#39;</span><span class="p">,</span>
+    <span class="nx">method</span><span class="o">:</span> <span class="s1">&#39;GET&#39;</span>
+  <span class="p">};</span>
+
+  <span class="nx">http</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">options</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">comments</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">chunk</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">comments</span> <span class="o">+=</span> <span class="nx">chunk</span><span class="p">;</span>
+    <span class="p">});</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;end&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+      
+      <span class="c1">// add gravatar image links to the JSON if available</span>
+      <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">comments</span><span class="p">.</span><span class="nx">sessions</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">comments</span><span class="p">.</span><span class="nx">sessions</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">avatar</span> <span class="o">=</span> <span class="nx">gravatar</span><span class="p">.</span><span class="nx">url</span><span class="p">(</span><span class="nx">comments</span><span class="p">.</span><span class="nx">sessions</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">email</span><span class="p">,</span> <span class="p">{</span><span class="nx">s</span><span class="o">:</span> <span class="s1">&#39;50&#39;</span><span class="p">,</span> <span class="nx">r</span><span class="o">:</span> <span class="s1">&#39;pg&#39;</span><span class="p">,</span> <span class="nx">d</span><span class="o">:</span> <span class="s1">&#39;404&#39;</span><span class="p">});</span>
+      <span class="p">}</span>
+      
+      <span class="c1">// save the YAML file for jekyll to use.</span>
+      <span class="nx">fs</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span><span class="s1">&#39;./src/_data/comments.yml&#39;</span><span class="p">,</span> <span class="nx">comments</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+          <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Comments data saved.&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+      <span class="p">});</span>
+
+    <span class="p">});</span>
+  <span class="p">}).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;error&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Got error: &quot;</span><span class="p">,</span> <span class="nx">e</span><span class="p">);</span>
+  <span class="p">});</span>
+
+<span class="p">});</span></code></pre></div>
+
+<h3>The Jekyll template which adds comments to the pages</h3>
+<p>
+  Once I've run the Gulp task above, I just run the Jekyll build as normal. The post template includes this logic to add the comments to the page which they originated from.
+</p>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;listing comments&quot;</span><span class="nt">&gt;</span>
+  {% for comment in site.data.comments.sessions %}
+    {% if comment.path == page.url %}
+    <span class="nt">&lt;li&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;{{ comment.avatar }}&quot;</span> <span class="na">alt=</span><span class="s">&quot;{{ comment.name }}&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;time</span> <span class="na">datetime=</span><span class="s">&quot;{{ comment.created | date_to_xmlschema }}&quot;</span><span class="nt">&gt;</span>{{ comment.created | date_to_long_string  }}<span class="nt">&lt;/time&gt;</span>
+      {% if comment.url %}
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ comment.url }}&quot;</span> <span class="na">class=</span><span class="s">&quot;commenter&quot;</span><span class="nt">&gt;</span>{{ comment.name }}<span class="nt">&lt;/a&gt;</span>
+      {% else %}
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;commenter&quot;</span><span class="nt">&gt;</span>{{ comment.name }}<span class="nt">&lt;/span&gt;</span>
+      {% endif %}
+      <span class="nt">&lt;div&gt;</span>
+        {{ comment.comment }}
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    {% endif %}
+  {% endfor %}
+<span class="nt">&lt;/ul&gt;</span></code></pre></div>
+
+<h3>The comments form which posts the data to Poole</h3>
+<p>
+  The post template adds this form to each blog post page. A hidden field keeps track of the page where a comment originates from so that it can be inserted by the template later.  Poole also lets you specify which page on your domain to redirect to after a successful post. That way the user never feels like they have been routed away to a third party service.
+</p>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">&quot;http://pooleapp.herokuapp.com/data/{API-KEY}/&quot;</span> <span class="na">method=</span><span class="s">&quot;post&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h2&gt;</span>Leave your comment<span class="nt">&lt;/h2&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;hidden&quot;</span> <span class="na">name=</span><span class="s">&quot;redirect_to&quot;</span> <span class="na">value=</span><span class="s">&quot;/thanks&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;hidden&quot;</span> <span class="na">name=</span><span class="s">&quot;path&quot;</span> <span class="na">value=</span><span class="s">&quot;/blog/adding-a-static-comments-system-to-my-jekyll-build&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>Your name<span class="nt">&lt;/label&gt;&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;url&quot;</span><span class="nt">&gt;</span>Your website <span class="nt">&lt;span&gt;</span>(optional)<span class="nt">&lt;/span&gt;&lt;/label&gt;&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">name=</span><span class="s">&quot;url&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;email&quot;</span><span class="nt">&gt;</span>Your email <span class="nt">&lt;span&gt;</span>(I&#39;ll never spam you)<span class="nt">&lt;/span&gt;&lt;/label&gt;&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">name=</span><span class="s">&quot;email&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;comment&quot;</span><span class="nt">&gt;</span>Your comment<span class="nt">&lt;/label&gt;&lt;textarea</span> <span class="na">name=</span><span class="s">&quot;comment&quot;</span> <span class="na">class=</span><span class="s">&quot;comment-text&quot;</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span> <span class="na">value=</span><span class="s">&quot;Post comment&quot;</span> <span class="na">class=</span><span class="s">&quot;submit&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></div>
+
+<h2>Try it out</h2>
+<p>
+  <a href="http://poooleapp.com">Poole is available to try now</a>. We've made it super easy to liberate your data and walk away if it's not for you, but hopefully it will be a useful tool for all kinds of use cases.
+</p>
+<p>
+  I've keen to hear thoughts on the usefulness or otherwise of this tool, and also to receive feature requests in the comments below or on our <a href="https://trello.com/b/lyQEqQMq/poole">roadmap board on Trello</a>.
+</p>
+
+
+
+
+<h2 class="comments">Comments</h2>
+<p>
+  Let me know your thoughts using <a href="#comment-form">the form below</a>.
+</p>
+<ul class="listing comments">
+  
+    
+  
+    
+  
+    
+  
+</ul>
+
+<form action="http://pooleapp.com/data/5420ae49-e1f7-49de-b094-b4fce4e8156c/" method="post" id="comment-form"class="comment-form">
+
+  <h2>Leave your comment</h2>
+  <p>
+    <a href="https://daringfireball.net/projects/markdown/syntax">Markdown</a> is allowed. Spam is not.
+  </p>
+
+  <input type="hidden" name="redirect_to" value="/search" />
+  <input type="hidden" name="path" value="/blog/adding-a-static-comments-system-to-my-jekyll-build" />
+  <label for="name">Your name</label><input type="text" name="name">
+  <label for="url">Your website <span>(optional)</span></label><input type="text" name="url">
+  <label for="email">Your email <span>(I'll never spam you)</span></label><input type="text" name="email">
+  <label for="comment">Your comment</label><textarea name="comment" class="comment-text"></textarea>
+  <input type="submit" value="Post comment" class="submit" />
+</form>
+
+    </div>
+  </div>
+
+  
+
+  <div class="footer">
+    <div class="container">
+      <div class="howdy">
+        <h2>Howdy</h2>
+        <img src="/images/philhawksworth.jpg" alt="Phil Hawksworth" class="face">
+        <p>
+          I'm Phil Hawksworth, a web developer working in London at <a href="http://rga.com">R/GA</a>
+        </p>
+        <p>
+          Elsewhere 
+          <a rel="me" href="http://twitter.com/philhawksworth">Twitter</a>
+          <a rel="me" href="http://flickr.com/philhawksworth">Flickr</a>
+          <a rel="me" href="http://instagram.com/philhawksworth">Instagram</a>
+          <a rel="me" href="http://github.com/philhawksworth">Github</a>
+        </p>
+        <p>
+          Nerds and colleagues might need my <a href="/philhawksworth.pub.txt">Public ssh key</a>
+        </p>
+      </div>
+      <div class="colo">
+        <h2>About this site</h2>
+        <p>
+          This site is served statically from Github pages after being built with Jekyll. The source is available on Github.
+        </p>
+        <p>
+          <em>Other than where specified, the content on this site is published under a <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons</a> Attribution 3.0 licence.</em>
+        </p>
+      </div>
+    </div>
+    <div class="nav">
+      <div class="container">
+        <ul class="nav">
+          <li><a href="/" class="home">hawksworx</a></li>
+          <li><a href="/blog">blog</a></li>
+          <li><a href="/speaking">speaking</a></li>
+          <li><a href="/search">search</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <!-- build:js -->
+    <script src="/js/jquery.min.js" type="text/javascript"></script>
+    <script src="/js/hawksworx.js" type="text/javascript"></script>
+    <!-- endbuild -->
+
+    <script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-119040-3']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+
+  </body>
+</html>

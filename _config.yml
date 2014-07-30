@@ -4,6 +4,8 @@ destination:    ./_site
 plugins:        ./_plugins
 tag_dir:        /blog/tag
 permalink:      /blog/:title
+markdown:      kramdown
+markdown_ext:  html
 sass:
   sass_dir: css/_scss
   style:  compressed
