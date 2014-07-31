@@ -14,7 +14,11 @@ pageclass: blog
   {% for comment in site.data.comments.sessions %}
     {% if comment.path == page.url %}
     <li>
+      {% if comment.email != "" %}
       <img src="{{ comment.avatar }}" alt="{{ comment.name }}">
+      {% else %}
+      <img src="/images/poole-avatar.png" alt="{{ comment.name }}">
+      {% endif %}
       <time datetime="{{ comment.created | date_to_xmlschema }}">{{ comment.created | date_to_long_string  }}</time>
       {% if comment.url != "" %}
         <a href="{{ comment.url }}" class="commenter">{{ comment.name }}</a>
