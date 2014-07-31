@@ -1,6 +1,26 @@
 ---
   sessions: 
     - 
+      _id: 10
+      comment: "Thanks Jon!\r\n\r\nThat was one of the main reasons for making Poole. I&#39;d rather not have to load in my comments with JavaScript for a service like Disqus.\r\n\r\nI hope it proves useful for you. If you find yourself wanting it to do something it doesn;t yet, feel free to make suggestions on the [roadmap trello board](https://trello.com/b/lyQEqQMq/poole)"
+      created: "2014-07-31T12:24:44.465Z"
+      email: "phawksworth@gmail.com"
+      name: "Phil Hawksworth"
+      path: "/blog/adding-a-static-comments-system-to-my-jekyll-build"
+      redirect_to: "/thanks"
+      url: "http://hawksworx.com"
+      avatar: "http://www.gravatar.com/avatar/465724d73fe3a92c0879fdfb43a3a6f3?s=50&r=pg&d=404"
+    - 
+      _id: 9
+      comment: "Looks beautifully simple, great work! For someone looking to make their first static site on GitHub this couldn&#39;t have come at a better time."
+      created: "2014-07-31T11:49:11.182Z"
+      email: "jonscottclark@gmail.com"
+      name: "Jon Scott Clark"
+      path: "/blog/adding-a-static-comments-system-to-my-jekyll-build"
+      redirect_to: "/thanks"
+      url: ""
+      avatar: "http://www.gravatar.com/avatar/adf2288e9f4fbd825d8bebeae68380e8?s=50&r=pg&d=404"
+    - 
       _id: 8
       comment: "Sorry Alfredo, but I had to publish that. Not just the first comment on this post, but *also* the first data published via [Poole](http://pooleapp.com).\r\n"
       created: "2014-07-31T11:14:52.098Z"
