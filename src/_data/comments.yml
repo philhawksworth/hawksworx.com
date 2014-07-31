@@ -1,12 +1,2 @@
 ---
-  sessions: 
-    - 
-      _id: 1
-      comment: "Looks interesting. Will it handling simple formatting.\r\n\r\nLike paragraphs."
-      created: "2014-07-30T22:09:33.923Z"
-      email: "phawksworth@gmail.com"
-      name: "Phil"
-      path: "/blog/adding-a-static-comments-system-to-my-jekyll-build"
-      redirect_to: "/search"
-      url: "http://hawksworx.com"
-      avatar: "http://www.gravatar.com/avatar/465724d73fe3a92c0879fdfb43a3a6f3?s=50&r=pg&d=404"
+  sessions: []

@@ -406,6 +406,41 @@ ul.comments {
   }
 }
 
+  
+  
+    .comment {
+
+      ul li {
+        border-style: none;
+        padding: 0;
+        margin:0;
+      }
+
+      h1, h2, h3, h4, h5 {
+        color: #333;
+        margin:1em 0 0.5em;
+        font-size: 1em;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+      h2 {
+        font-size: 1.6em;
+      }
+
+      code {
+        display: block;
+        padding: 1em;
+        font-size: 0.7em;
+        background-color: #333;
+        color:#eee;
+      }
+
+
+  }
+
+
 .comment-form {
 
   background-color: #eee;
