@@ -1,2 +1,22 @@
 ---
-  sessions: []
+  sessions: 
+    - 
+      _id: 8
+      comment: "Sorry Alfredo, but I had to publish that. Not just the first comment on this post, but *also* the first data published via [Poole](http://pooleapp.com).\r\n"
+      created: "2014-07-31T11:14:52.098Z"
+      email: "phawksworth@gmail.com"
+      name: "Phil Hawksworth"
+      path: "/blog/adding-a-static-comments-system-to-my-jekyll-build"
+      redirect_to: "/thanks"
+      url: "http://hawksworx.com"
+      avatar: "http://www.gravatar.com/avatar/465724d73fe3a92c0879fdfb43a3a6f3?s=50&r=pg&d=404"
+    - 
+      _id: 7
+      comment: "First! (Do not publish)."
+      created: "2014-07-31T11:06:34.406Z"
+      email: "hello@madewithbyt.es"
+      name: "Alfredo Aguirre"
+      path: "/blog/adding-a-static-comments-system-to-my-jekyll-build"
+      redirect_to: "/thanks"
+      url: "http://madewithbyt.es"
+      avatar: "http://www.gravatar.com/avatar/f34c14a75e0394c7ca48ed4479dc08df?s=50&r=pg&d=404"
