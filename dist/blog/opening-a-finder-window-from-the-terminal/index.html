@@ -69,10 +69,8 @@
 <p>To set things up so that it is easy to use whenever you need it, you just need to follow these two steps:</p>
 <p>First, using your <a href="http://www.macromates.com">preferred text editor</a> create a file which contains this command:</p>
 
-{% highlight bash %}
-!/bin/bash
-open /System/Library/CoreServices/Finder.app $PWD
-{% endhighlight %}
+<div class="highlight"><pre><code class="bash">!/bin/bash
+open /System/Library/CoreServices/Finder.app <span class="nv">$PWD</span></code></pre></div>
 
 <p>You should name this file with whatever you want to use to call it later.  I named it <code>fndr</code>.</p>
 <p>Second, you should place this somewhere that is visible on your path. I collect any little utility scripts like this together in a directory called <code>Utils</code> which I added to my path to make all of its contents easily accessible.</p>
@@ -80,22 +78,47 @@ open /System/Library/CoreServices/Finder.app $PWD
 <p>If you need help adding something to your path, I recommend creating a file in your home directory (it may even already exist) called <code>.bash_profile</code>.  This file gets invoked whenever you enter the Terminal environment. </p>
 <p>Add an item to your path by entering a line something like this to your <code>.bash_profile</code> file:</p>
 
-{% highlight bash %}
-export PATH='$PATH:/Users/PhilH/Utils'
-{% endhighlight %}
+<div class="highlight"><pre><code class="bash"><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s1">&#39;$PATH:/Users/PhilH/Utils&#39;</span></code></pre></div>
 
 <p>I'm always on the look out for bits and pieces like this to help make my life easier in Mac OSX.  Not that I think that things are difficult in this excellent OS, but there is always room for shortcuts to speed up common tasks. If you have any little gems that might be useful to the Mac OSX world, it would be great if you could post them in the comments. Thanks!</p>
 <h3>Update:</h3>
 
 <p>This can simple be done with a single command already as it turns out. Just use this:</p>
 
-{% highlight bash %}
-open .
-{% endhighlight %}
+<div class="highlight"><pre><code class="bash">open .</code></pre></div>
               
 
 
 
+<h2 class="comments">Comments</h2>
+<p>
+  Let me know your thoughts using <a href="#comment-form">the form below</a>.
+</p>
+<ul class="listing comments">
+  
+    
+  
+    
+  
+    
+  
+</ul>
+
+<form action="http://pooleapp.com/data/5420ae49-e1f7-49de-b094-b4fce4e8156c/" method="post" id="comment-form"class="comment-form">
+
+  <h2>Leave your comment</h2>
+  <p>
+    <a href="https://daringfireball.net/projects/markdown/syntax">Markdown</a> is allowed. Spam is not.
+  </p>
+
+  <input type="hidden" name="redirect_to" value="/search" />
+  <input type="hidden" name="path" value="/blog/opening-a-finder-window-from-the-terminal" />
+  <label for="name">Your name</label><input type="text" name="name">
+  <label for="url">Your website <span>(optional)</span></label><input type="text" name="url">
+  <label for="email">Your email <span>(I'll never spam you)</span></label><input type="text" name="email">
+  <label for="comment">Your comment</label><textarea name="comment" class="comment-text"></textarea>
+  <input type="submit" value="Post comment" class="submit" />
+</form>
 
     </div>
   </div>

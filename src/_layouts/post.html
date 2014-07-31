@@ -3,6 +3,42 @@ layout: base
 pageclass: blog
 ---
 
-{{ page.content }}
+{{ content }}
 
 
+<h2 class="comments">Comments</h2>
+<p>
+  Let me know your thoughts using <a href="#comment-form">the form below</a>.
+</p>
+<ul class="listing comments">
+  {% for comment in site.data.comments.sessions %}
+    {% if comment.path == page.url %}
+    <li>
+      <img src="{{ comment.avatar }}" alt="{{ comment.name }}">
+      <time datetime="{{ comment.created | date_to_xmlschema }}">{{ comment.created | date_to_long_string  }}</time>
+      {% if comment.url != "" %}
+        <a href="{{ comment.url }}" class="commenter">{{ comment.name }}</a>
+      {% else %}
+        <span class="commenter">{{ comment.name }}</span>
+      {% endif %}
+      <div class="comment">
+        {% markdown %}{{ comment.comment }}{% endmarkdown %}
+      </div>
+    </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
+<form action="http://pooleapp.com/stash/dfccc723-152c-4537-9b28-713e0e43c040/" method="post" id="comment-form"class="comment-form">
+  <h2>Leave your comment</h2>
+  <p>
+    <a href="https://daringfireball.net/projects/markdown/syntax">Markdown</a> is allowed, but HTML is not. Neither is spam thanks.
+  </p>
+  <input type="hidden" name="redirect_to" value="/thanks" />
+  <input type="hidden" name="path" value="{{ page.url }}" />
+  <label for="name">Your name</label><input type="text" name="name">
+  <label for="url">Your website <span>(optional)</span></label><input type="text" name="url">
+  <label for="email">Your email <span>(I'll never spam you)</span></label><input type="text" name="email">
+  <label for="comment">Your comment</label><textarea name="comment" class="comment-text"></textarea>
+  <input type="submit" value="Post comment" class="submit" />
+</form>

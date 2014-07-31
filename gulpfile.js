@@ -6,6 +6,10 @@ var cssmin      = require('gulp-cssmin');
 var shell       = require('gulp-shell');
 var connect     = require('gulp-connect');
 var imagemin    = require('gulp-imagemin');
+var yaml        = require('json2yaml');
+var fs          = require('fs');
+var http        = require('http');
+var gravatar    = require('gravatar');
 // var htmlreplace = require('gulp-html-replace');
 
 
@@ -27,6 +31,7 @@ gulp.task('scripts', function() {
   return gulp.src([paths.source + '/js/**/*.js', '!'+ paths.source + '/js/jquery.min.js'])
     .pipe(uglify())
     .pipe(gulp.dest(paths.deploy + '/js/'));
+
 });
 
 
@@ -75,15 +80,49 @@ gulp.task("tasks", function() {
 });
 
 
-// task: comments
+// Get comments form Poole
+gulp.task("comments", function() {
+  
+  console.log("Getting comments data");
 
-/*
+  var options = {
+    hostname: 'pooleapp.com',
+    port: 80,
+    path: '/data/d90ecd8b-f781-4fa6-806f-6a4fbc84a2cc.json',
+    method: 'GET'
+  };
 
-- get json from comments service endpoint
-- transform json to yaml and save to data dir
-- build jekyll as normal
+  http.get(options, function(res) {
+    var body = '';
+    res.on('data', function(chunk) {
+        body += chunk;
+    });
+    res.on('end', function() {
+      var comments = JSON.parse(body);
 
-*/
+      // add gravatar image links if available
+      for (var i = 0; i < comments.sessions.length; i++) {
+        comments.sessions[i].avatar = gravatar.url(comments.sessions[i].email, {s: '50', r: 'pg', d: '404'});
+      }
+
+      // convert the json to yaml and save it for jekyll to use.
+      var ymlText = yaml.stringify(comments);
+      fs.writeFile('./src/_data/comments.yml', ymlText, function(err) {
+        if(err) {
+          console.log(err);
+        } else {
+          console.log("Comments data saved.");
+        }
+      });
+
+    });
+  }).on('error', function(e) {
+    console.log("Got error: ", e);
+  });
+
+});
+
+
 
 
 // Build and optimise the site and serve it locally.
@@ -108,6 +147,3 @@ gulp.task('serve', ['build'], function() {
 
 // The default task.
 gulp.task('default', ['build']);
-
-
-

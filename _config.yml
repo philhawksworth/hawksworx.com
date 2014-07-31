@@ -1,8 +1,7 @@
-port: 8000
+port: 4000
 source:         ./src
 destination:    ./_site
 plugins:        ./_plugins
-highlighter:    pygments
 tag_dir:        /blog/tag
 permalink:      /blog/:title
 sass:
