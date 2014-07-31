@@ -71,7 +71,7 @@
     At the moment though, I find myself listening to <a href="http://last.fm" rel="org fn url">Last.fm</a> more and more, and have been looking for a similar way to control the Last.fm application. I couldn't find a plugin for Quicksilver to achieve this so I set about writing an Applescript which I could trigger with Quicksilver.  I'm not much of an Applescript whizz, but I managed to put the following script together to skip the track currently playing in the Last.fm application:
 </p>
 
-<div class="highlight"><pre><code class="applescript"><span class="k">tell</span> <span class="nb">application</span> <span class="s2">&quot;Last.fm&quot;</span> <span class="k">to</span> <span class="nb">activate</span>
+<div class="highlight"><pre><code class="language-applescript" data-lang="applescript"><span class="k">tell</span> <span class="nb">application</span> <span class="s2">&quot;Last.fm&quot;</span> <span class="k">to</span> <span class="nb">activate</span>
 <span class="k">tell</span> <span class="nb">application</span> <span class="s2">&quot;System Events&quot;</span>
         <span class="k">tell</span> <span class="nv">process</span> <span class="s2">&quot;Last.fm&quot;</span>
                 <span class="nv">click</span> <span class="na">menu</span> <span class="nb">item</span> <span class="s2">&quot;Skip&quot;</span> <span class="k">of</span> <span class="na">menu</span> <span class="s2">&quot;Controls&quot;</span> <span class="k">of</span> <span class="na">menu</span> <span class="nv">bar</span> <span class="mi">1</span>
@@ -93,22 +93,14 @@
 </p>
 <ul class="listing comments">
   
-    
-  
-    
-  
-    
-  
 </ul>
 
-<form action="http://pooleapp.com/data/5420ae49-e1f7-49de-b094-b4fce4e8156c/" method="post" id="comment-form"class="comment-form">
-
+<form action="http://pooleapp.com/stash/dfccc723-152c-4537-9b28-713e0e43c040/" method="post" id="comment-form"class="comment-form">
   <h2>Leave your comment</h2>
   <p>
-    <a href="https://daringfireball.net/projects/markdown/syntax">Markdown</a> is allowed. Spam is not.
+    <a href="https://daringfireball.net/projects/markdown/syntax">Markdown</a> is allowed, but HTML is not. Neither is spam thanks.
   </p>
-
-  <input type="hidden" name="redirect_to" value="/search" />
+  <input type="hidden" name="redirect_to" value="/thanks" />
   <input type="hidden" name="path" value="/blog/using-quicksilver-to-control-lastfm" />
   <label for="name">Your name</label><input type="text" name="name">
   <label for="url">Your website <span>(optional)</span></label><input type="text" name="url">

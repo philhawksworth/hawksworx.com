@@ -72,7 +72,7 @@
   That's why I decided to create a simple service which would provide that capability to any static sites. I'm using it to add comments to this site, and you can use it for yours too. 
 </p>
 </div>
-<figure><img src="/images/hello-poole.png" alt="Poole" /></figure>
+<figure><img src="/images/hello-poole.png" alt="Poole"></figure>
 
 <!-- more -->
 
@@ -102,7 +102,7 @@
 <p>
   Poole offers security by obscurity. Your data is retrievable from the "unguessable" URL containing your API secret. It does not require authentication to access this readonly API, so once again - <em>no bank details, trade secrets, or nuclear launch codes please!</em>
 </p>
-
+ 
 <h2>Managing your data</h2>
 <p>
   Although your content is available without authentication from the readonly endpoint, you need to authenticate with your Github credentials in order to delete data or manage your forms.
@@ -121,7 +121,7 @@
 <h2>Using Poole with Jekyll</h2>
 <p>
   I use <a href="http://gulpjs.com">Gulp</a> to automate my build tasks on this site. In order to add comments to the site, I added a new Gulp task which just pulls the data that has been posted to my form on Poole. That data is available as YAML which is handy since this is the format that Jekyll can treat as structured data.  Once I have the data, Jekyll does the rest. It parses the comments data and adds the comments to the appropriate blog posts.
-</p>
+</p>  
 <p>
   Since the comments are part of my pages rather than being loaded later by JavaScript, they are part of the site and available for search engines to easily parse. It also means that I automatically get to retain a store of the comments made on my site. Handy.
 </p>
@@ -129,29 +129,32 @@
 <h3>The Gulp task to get comments from Poole</h3>
 <p>I run this when I get a notification from Poole of a new comment. I also have a command to deploy which just pushes the build to Github pages.</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s2">&quot;comments&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get comments form Poole</span>
+<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s2">&quot;comments&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  
   <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
     <span class="nx">hostname</span><span class="o">:</span> <span class="s1">&#39;pooleapp.com&#39;</span><span class="p">,</span>
     <span class="nx">port</span><span class="o">:</span> <span class="mi">80</span><span class="p">,</span>
-    <span class="nx">path</span><span class="o">:</span> <span class="s1">&#39;/data/{API-SECRET}.yaml&#39;</span><span class="p">,</span>
+    <span class="nx">path</span><span class="o">:</span> <span class="s1">&#39;/data/{API-SECRET}.json&#39;</span><span class="p">,</span>
     <span class="nx">method</span><span class="o">:</span> <span class="s1">&#39;GET&#39;</span>
   <span class="p">};</span>
 
   <span class="nx">http</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">options</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nx">comments</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">body</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
     <span class="nx">res</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">chunk</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">comments</span> <span class="o">+=</span> <span class="nx">chunk</span><span class="p">;</span>
+        <span class="nx">body</span> <span class="o">+=</span> <span class="nx">chunk</span><span class="p">;</span>
     <span class="p">});</span>
     <span class="nx">res</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;end&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-      
-      <span class="c1">// add gravatar image links to the JSON if available</span>
+      <span class="kd">var</span> <span class="nx">comments</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">body</span><span class="p">);</span>
+
+      <span class="c1">// add gravatar image links if available</span>
       <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">comments</span><span class="p">.</span><span class="nx">sessions</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">comments</span><span class="p">.</span><span class="nx">sessions</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">avatar</span> <span class="o">=</span> <span class="nx">gravatar</span><span class="p">.</span><span class="nx">url</span><span class="p">(</span><span class="nx">comments</span><span class="p">.</span><span class="nx">sessions</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">email</span><span class="p">,</span> <span class="p">{</span><span class="nx">s</span><span class="o">:</span> <span class="s1">&#39;50&#39;</span><span class="p">,</span> <span class="nx">r</span><span class="o">:</span> <span class="s1">&#39;pg&#39;</span><span class="p">,</span> <span class="nx">d</span><span class="o">:</span> <span class="s1">&#39;404&#39;</span><span class="p">});</span>
       <span class="p">}</span>
-      
-      <span class="c1">// save the YAML file for jekyll to use.</span>
-      <span class="nx">fs</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span><span class="s1">&#39;./src/_data/comments.yml&#39;</span><span class="p">,</span> <span class="nx">comments</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+
+      <span class="c1">// convert the json to yaml and save it for jekyll to use.</span>
+      <span class="kd">var</span> <span class="nx">ymlText</span> <span class="o">=</span> <span class="nx">yaml</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">comments</span><span class="p">);</span>
+      <span class="nx">fs</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span><span class="s1">&#39;./src/_data/comments.yml&#39;</span><span class="p">,</span> <span class="nx">ymlText</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">if</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
           <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
         <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
@@ -166,12 +169,13 @@
 
 <span class="p">});</span></code></pre></div>
 
+
 <h3>The Jekyll template which adds comments to the pages</h3>
 <p>
   Once I've run the Gulp task above, I just run the Jekyll build as normal. The post template includes this logic to add the comments to the page which they originated from.
 </p>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;listing comments&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;listing comments&quot;</span><span class="nt">&gt;</span>
   {% for comment in site.data.comments.sessions %}
     {% if comment.path == page.url %}
     <span class="nt">&lt;li&gt;</span>
@@ -190,12 +194,12 @@
   {% endfor %}
 <span class="nt">&lt;/ul&gt;</span></code></pre></div>
 
+
 <h3>The comments form which posts the data to Poole</h3>
 <p>
   The post template adds this form to each blog post page. A hidden field keeps track of the page where a comment originates from so that it can be inserted by the template later.  Poole also lets you specify which page on your domain to redirect to after a successful post. That way the user never feels like they have been routed away to a third party service.
 </p>
-
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">&quot;http://pooleapp.herokuapp.com/data/{API-KEY}/&quot;</span> <span class="na">method=</span><span class="s">&quot;post&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">&quot;http://pooleapp.herokuapp.com/data/{API-KEY}/&quot;</span> <span class="na">method=</span><span class="s">&quot;post&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;h2&gt;</span>Leave your comment<span class="nt">&lt;/h2&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;hidden&quot;</span> <span class="na">name=</span><span class="s">&quot;redirect_to&quot;</span> <span class="na">value=</span><span class="s">&quot;/thanks&quot;</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;hidden&quot;</span> <span class="na">name=</span><span class="s">&quot;path&quot;</span> <span class="na">value=</span><span class="s">&quot;/blog/adding-a-static-comments-system-to-my-jekyll-build&quot;</span> <span class="nt">/&gt;</span>
@@ -217,28 +221,25 @@
 
 
 
+
+
+
+
+
 <h2 class="comments">Comments</h2>
 <p>
   Let me know your thoughts using <a href="#comment-form">the form below</a>.
 </p>
 <ul class="listing comments">
   
-    
-  
-    
-  
-    
-  
 </ul>
 
-<form action="http://pooleapp.com/data/5420ae49-e1f7-49de-b094-b4fce4e8156c/" method="post" id="comment-form"class="comment-form">
-
+<form action="http://pooleapp.com/stash/dfccc723-152c-4537-9b28-713e0e43c040/" method="post" id="comment-form"class="comment-form">
   <h2>Leave your comment</h2>
   <p>
-    <a href="https://daringfireball.net/projects/markdown/syntax">Markdown</a> is allowed. Spam is not.
+    <a href="https://daringfireball.net/projects/markdown/syntax">Markdown</a> is allowed, but HTML is not. Neither is spam thanks.
   </p>
-
-  <input type="hidden" name="redirect_to" value="/search" />
+  <input type="hidden" name="redirect_to" value="/thanks" />
   <input type="hidden" name="path" value="/blog/adding-a-static-comments-system-to-my-jekyll-build" />
   <label for="name">Your name</label><input type="text" name="name">
   <label for="url">Your website <span>(optional)</span></label><input type="text" name="url">

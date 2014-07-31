@@ -93,7 +93,7 @@
     I then used a well-known CSS technique to replace the text in the headings with images. This would ensure that the text would remain for non-human consumers of the site, while the images would be presented to those able to appreciate them.  The technique is simple.  You prevent the browser from scrolling the content of your element with <code>overflow:hidden</code> and then scoot the text out of the way with <code>text-indent</code>. Now that the way is clear, you can display an image with <code>background-image</code>.  Be sure to specify the dimensions of your desired image as the <code>background-image</code> property will not resize your element to the correct size automatically. The CSS would look something like this:
 </p>
 
-<div class="highlight"><pre><code class="css"><span class="nf">#myHeading</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nf">#myHeading</span> <span class="p">{</span>
     <span class="k">text-indent</span><span class="o">:</span> <span class="m">-9999px</span><span class="p">;</span>
     <span class="k">overflow</span><span class="o">:</span> <span class="k">hidden</span><span class="p">;</span>
     <span class="k">background-image</span><span class="o">:</span> <span class="sx">url(myImage.gif)</span><span class="p">;</span>
@@ -108,7 +108,7 @@
     In order to use this 'image sprite' for each and every heading, I just needed to specify the <code>background-position </code>for each one. Some attributes would be common to each one so I could save some code like this:
 </p>
 
-<div class="highlight"><pre><code class="css"><span class="nt">h1</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">h1</span> <span class="p">{</span>
     <span class="k">text-indent</span><span class="o">:</span> <span class="m">-9999px</span><span class="p">;</span>
     <span class="k">overflow</span><span class="o">:</span> <span class="k">hidden</span><span class="p">;</span>
     <span class="k">background-image</span><span class="o">:</span> <span class="sx">url(images/unobtrusive_sprite.gif)</span><span class="p">;</span>
@@ -133,7 +133,7 @@
     Using jQuery to easily and unobtrusively add behavior to elements on the page, we can now hide all of the expanded sections. We do this with a simple jQuery statement like this:
 </p>
 
-<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#wrapper &gt; div&#39;</span><span class="p">).</span><span class="nx">hide</span><span class="p">();</span></code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#wrapper &gt; div&#39;</span><span class="p">).</span><span class="nx">hide</span><span class="p">();</span></code></pre></div>
 
 
 <p>
@@ -142,7 +142,7 @@
 <p>
     Headings are not by default clickable so we can add some behavior to suggest that the clicking a heading will have a effect by changing the cursor for them like this:
 </p>
-<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#wrapper h1&#39;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;clickable&#39;</span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#wrapper h1&#39;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;clickable&#39;</span><span class="p">);</span></code></pre></div>
 
 
 <p>
@@ -171,22 +171,14 @@
 </p>
 <ul class="listing comments">
   
-    
-  
-    
-  
-    
-  
 </ul>
 
-<form action="http://pooleapp.com/data/5420ae49-e1f7-49de-b094-b4fce4e8156c/" method="post" id="comment-form"class="comment-form">
-
+<form action="http://pooleapp.com/stash/dfccc723-152c-4537-9b28-713e0e43c040/" method="post" id="comment-form"class="comment-form">
   <h2>Leave your comment</h2>
   <p>
-    <a href="https://daringfireball.net/projects/markdown/syntax">Markdown</a> is allowed. Spam is not.
+    <a href="https://daringfireball.net/projects/markdown/syntax">Markdown</a> is allowed, but HTML is not. Neither is spam thanks.
   </p>
-
-  <input type="hidden" name="redirect_to" value="/search" />
+  <input type="hidden" name="redirect_to" value="/thanks" />
   <input type="hidden" name="path" value="/blog/unobtrusify-your-javascript" />
   <label for="name">Your name</label><input type="text" name="name">
   <label for="url">Your website <span>(optional)</span></label><input type="text" name="url">
