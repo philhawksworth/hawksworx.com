@@ -69,3 +69,12 @@
       path: "/blog/adding-a-static-comments-system-to-my-jekyll-build"
       url: ""
       avatar: "http://www.gravatar.com/avatar/fc3f7c4681868f3fce25def028d08ab7?s=50&r=pg&d=404"
+    - 
+      _id: 95
+      comment: "Thanks Justin.\r\n\r\nI&#39;m interested in hearing how people get on with using Poole for things like comments systems on their blogs. Do let me know if you have questions or suggestions for the [feature roadmap](https://trello.com/b/lyQEqQMq/poole).\r\n\r\n"
+      created: "2014-08-06T08:16:26.726Z"
+      email: "phawksworth@gmail.com"
+      name: "Phil Hawksworth"
+      path: "/blog/adding-a-static-comments-system-to-my-jekyll-build"
+      url: "http://hawksworx.com"
+      avatar: "http://www.gravatar.com/avatar/465724d73fe3a92c0879fdfb43a3a6f3?s=50&r=pg&d=404"
