@@ -1,6 +1,15 @@
 ---
   sessions: 
     - 
+      _id: "MjQ5"
+      comment: "Hello Wuthering Bytes!"
+      created: "2014-08-14T22:43:05.948Z"
+      email: "phawksworth@gmail.com"
+      name: "Phil"
+      path: "/blog/adding-a-static-comments-system-to-my-jekyll-build"
+      url: ""
+      avatar: "http://www.gravatar.com/avatar/465724d73fe3a92c0879fdfb43a3a6f3?s=50&r=pg&d=404"
+    - 
       _id: "OTU="
       comment: "Thanks Justin.\r\n\r\nI&#39;m interested in hearing how people get on with using Poole for things like comments systems on their blogs. Do let me know if you have questions or suggestions for the [feature roadmap](https://trello.com/b/lyQEqQMq/poole).\r\n\r\n"
       created: "2014-08-06T08:16:26.726Z"
