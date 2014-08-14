@@ -11,7 +11,7 @@ pageclass: blog
   Let me know your thoughts using <a href="#comment-form">the form below</a>.
 </p>
 <ul class="listing comments">
-  {% for comment in site.data.comments.sessions %}
+  {% for comment in site.data.comments.sessions reversed %}
     {% if comment.path == page.url %}
     <li>
       {% if comment.email != "" %}
