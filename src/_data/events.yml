@@ -1,10 +1,5 @@
 upcoming:
 
-  - name: Wuthering Bytes
-    location: "Hebden Bridge, UK"
-    date: 2014-08-15 09:00:00 +0000
-    url: http://wutheringbytes.com/
-
   - name: ColdFront Conference
     location: "Copenhagen, Denmark"
     date: 2014-09-04 09:00:00 +0000
@@ -21,6 +16,11 @@ upcoming:
     url: http://theweb.is
 
 previous:
+
+  - name: Wuthering Bytes
+    location: "Hebden Bridge, UK"
+    date: 2014-08-15 09:00:00 +0000
+    url: http://wutheringbytes.com/
 
   - name: JSCamp
     location: "Bucharest, Romania"
