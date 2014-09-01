@@ -15,10 +15,15 @@ upcoming:
     date: 2014-10-30 09:00:00 +0000
     url: http://theweb.is
 
+  - name: Front End North
+    location: "Manchester, England"
+    date: 2014-11-15 09:00:00 +0000
+    url: http://makedo.in/frontendnorth/
+
 previous:
 
   - name: Wuthering Bytes
-    location: "Hebden Bridge, UK"
+    location: "Hebden Bridge, England"
     date: 2014-08-15 09:00:00 +0000
     url: http://wutheringbytes.com/
 
@@ -33,17 +38,17 @@ previous:
     url: http://devconfu.eu
 
   - name: LondonJS
-    location: London
+    location: "London, England"
     date: 2014-02-13 09:00:00 +0000
     url: http://www.londonjsconf.com
 
   - name: Untangle The Web
-    location: "London, UK"
+    location: "London, England"
     date: 2013-12-13 19:00:00 +0000
     url: http://www.meetup.com/Untangling-the-Web-London
 
   - name: Future of Web Apps
-    location: "London, UK"
+    location: "London, England"
     date: 2013-10-24 09:00:00 +0000
     url: http://futureofwebapps.com/london-2013/
 
@@ -58,12 +63,12 @@ previous:
     url: http://www.imworld.ro/
 
   - name: Speak The Web
-    location: "Leeds, UK"
+    location: "Leeds, England"
     date: 2013-07-23 20:00:00 +0000
     url: http://speaktheweb.org
 
   - name: London Web Standards
-    location: "London, UK"
+    location: "London, England"
     date: 2013-07-22 20:00:00 +0000
     url: http://londonwebstandards.org/2013/07/london-web-standard-july-2013-how-to-present-lightning-talks-lwslightning
 
@@ -73,7 +78,7 @@ previous:
     url: http://www.gothamjs.com
 
   - name: Content Strategy Lightning Talks
-    location: "London, UK"
+    location: "London, England"
     date: 2013-06-17 18:00:00 +0000
     url: https://togetherlondon.com/events/meetup
 
@@ -113,21 +118,21 @@ previous:
     url: http://schedule.sxsw.com/2012/events/event_IAP11002
 
   - name: FullFrontal
-    location: "Brighton, UK"
+    location: "Brighton, England"
     date: 2011-11-11 11:00:00 +0000
     url: http://2011.full-frontal.org
 
   - name: Async - Getting started with Node
-    location: "Brighton, UK"
+    location: "Brighton, England"
     date: 2011-05-26 19:15:00 +0000
     url: http://asyncjs.com/intro-nodejs/
 
   - name: Async
-    location: "Brighton, UK"
+    location: "Brighton, England"
     date: 2011-11-10 19:00:00 +0000
     url: http://asyncjs.com/intro-nodejs/
 
   - name: UX People
-    location: "London, UK"
+    location: "London, England"
     date: 2010-03-22 10:00:00 +0000
     url: http://uxpeople.co.uk/2010/
