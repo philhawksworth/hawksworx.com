@@ -1,6 +1,15 @@
 ---
   sessions: 
     - 
+      _id: "MjcwMQ=="
+      comment: "&gt;“Exactly!&quot; said Deep Thought. &quot;So once you do know what the question actually is, you&#39;ll know what the answer means.” \r\n&gt;— The Hitchhiker&#39;s Guide to the Galaxy\r\n\r\nTotally great! Besides for commenting this just gave a brilliant boost to an idea I am having with (somewhat) front-end form submission of content... would love to chat. Might be something to further build upon."
+      created: "2014-09-02T10:37:45.967Z"
+      email: "jan@ipears.com"
+      name: "jan"
+      path: "/blog/adding-a-static-comments-system-to-my-jekyll-build"
+      url: "http://ipears.com"
+      avatar: "http://www.gravatar.com/avatar/1c74db81df393b36d01ce99268ebcbc0?s=50&r=pg&d=404"
+    - 
       _id: "OTU="
       comment: "Thanks Justin.\r\n\r\nI&#39;m interested in hearing how people get on with using Poole for things like comments systems on their blogs. Do let me know if you have questions or suggestions for the [feature roadmap](https://trello.com/b/lyQEqQMq/poole).\r\n\r\n"
       created: "2014-08-06T08:16:26.726Z"
