@@ -1,10 +1,5 @@
 upcoming:
 
-  - name: ColdFront Conference
-    location: "Copenhagen, Denmark"
-    date: 2014-09-04 09:00:00 +0000
-    url: http://coldfrontconf.com/
-
   - name: Smashing Conference
     location: "Freiburg, Germany"
     date: 2014-09-14 09:00:00 +0000
@@ -25,6 +20,11 @@ upcoming:
     date: 2015-02-24 09:00:00 +0000
 
 previous:
+
+  - name: ColdFront Conference
+    location: "Copenhagen, Denmark"
+    date: 2014-09-04 09:00:00 +0000
+    url: http://coldfrontconf.com/
 
   - name: Wuthering Bytes
     location: "Hebden Bridge, England"
