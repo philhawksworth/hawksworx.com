@@ -1,10 +1,5 @@
 upcoming:
 
-  - name: Smashing Conference
-    location: "Freiburg, Germany"
-    date: 2014-09-14 09:00:00 +0000
-    url: http://smashingconf.com/freiburg-2014/
-
   - name: The Web Is..
     location: "Cardiff, Wales"
     date: 2014-10-30 09:00:00 +0000
@@ -21,6 +16,11 @@ upcoming:
     url: http://conference.awwwards.com/
 
 previous:
+
+  - name: Smashing Conference
+    location: "Freiburg, Germany"
+    date: 2014-09-14 09:00:00 +0000
+    url: http://smashingconf.com/freiburg-2014/
 
   - name: ColdFront Conference
     location: "Copenhagen, Denmark"
