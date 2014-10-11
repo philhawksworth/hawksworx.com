@@ -3,7 +3,7 @@
   margin: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 body,
@@ -212,7 +212,7 @@ blockquote {
 
   h2 {
     margin:0;
-  
+
     a {
       &:link,
       &:visited {
@@ -236,7 +236,7 @@ blockquote {
     font-size: 1em;
     margin: 1em 0;
   }
-  
+
 }
 
 
@@ -324,7 +324,7 @@ blockquote {
       color:#444;
     }
   }
-  
+
   aside {
     font-style: italic;
     color: #666;
@@ -358,11 +358,11 @@ h1.shout {
 ul.listing {
   margin: 1em 0 3em;
   list-style: none;
-  border-top: 1px solid #eee; 
+  border-top: 1px solid #eee;
 }
 ul.listing li {
   padding: 0.8em 0;
-  border-bottom: 1px solid #eee; 
+  border-bottom: 1px solid #eee;
 }
 ul.listing time {
   display: block;
@@ -406,8 +406,8 @@ ul.comments {
   }
 }
 
-  
-  
+
+
     .comment {
 
       ul li {
@@ -471,7 +471,7 @@ ul.comments {
     padding: 0.6em;
     border-radius: 4px;
     border-style: none;
-    cursor: pointer; 
+    cursor: pointer;
 
     &:hover {
       background-color: $accent-color;
@@ -486,10 +486,23 @@ ul.comments {
 
 }
 
+.lobsterpot {
+  position: relative;
+  overflow: hidden;
+  padding:0;
+  margin:0;
+  height: 1px;
+}
+
+.lobsterpot input {
+  border-style: none;
+}
+
+
 
 
 @media all and (min-width: 400px) {
-  
+
   figure {
     margin: 1em 0;
   }
@@ -573,5 +586,3 @@ ul.comments {
     display: inline-block;
   }
 }
-
-

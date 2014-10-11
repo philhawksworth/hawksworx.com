@@ -69,7 +69,6 @@ hx.addEventHandlers = function() {
   });
 
 
-
   // get the data ready to query,
   // prepare the form and toggle visibility
   $('li.search a').click(function(e) {
@@ -82,9 +81,24 @@ hx.addEventHandlers = function() {
     $('#searchstr').focus();
     return false;
   });
+
+
+  // deal with pesky bots
+  $("#comment-form").submit(function(){
+    var trap = $(".homepage-url")[0];
+    if (trap.value.length) {
+      document.location.href = $(".redirect")[0].value;
+      return false;
+    } else {
+      return false;
+    }
+  });
+
+
 };
 
 // Ready to go.
 $(function() {
   hx.addEventHandlers();
+
 });
