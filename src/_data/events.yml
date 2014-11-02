@@ -1,10 +1,5 @@
 upcoming:
 
-  - name: The Web Is..
-    location: "Cardiff, Wales"
-    date: 2014-10-30 09:00:00 +0000
-    url: http://theweb.is
-
   - name: Front End North
     location: "Manchester, England"
     date: 2014-11-15 09:00:00 +0000
@@ -16,6 +11,11 @@ upcoming:
     url: http://conference.awwwards.com/
 
 previous:
+
+  - name: The Web Is..
+    location: "Cardiff, Wales"
+    date: 2014-10-30 09:00:00 +0000
+    url: http://theweb.is
 
   - name: Smashing Conference
     location: "Freiburg, Germany"

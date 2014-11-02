@@ -102,7 +102,15 @@ gulp.task("comments", function() {
 
       // add gravatar image links if available
       for (var i = 0; i < comments.sessions.length; i++) {
-        comments.sessions[i].avatar = gravatar.url(comments.sessions[i].email, {s: '50', r: 'pg', d: '404'});
+        if(comments.sessions[i].email) {
+          comments.sessions[i].avatar = gravatar.url(comments.sessions[i].email, {s: '50', r: 'pg', d: '404'});
+
+          if(comments.sessions[i].email.substring(0, 4) == "http") {
+            console.log(comments.sessions[i].email);
+            delete comments.sessions[i];
+          }
+        }
+
       }
 
       // convert the json to yaml and save it for jekyll to use.
