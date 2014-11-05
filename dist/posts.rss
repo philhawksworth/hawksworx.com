@@ -4,7 +4,7 @@
   <title>hawksworx.com</title>
   <link href="http://hawksworx.com/"/>
   <link type="application/atom+xml" rel="self" href="http://hawksworx.com/atom.xml"/>
-  <updated>2014-11-05T13:40:25+00:00</updated>
+  <updated>2014-11-05T18:43:43+00:00</updated>
   <id>http://hawksworx.com/</id>
   <author>
     <name>Phil Hawksworth</name>
@@ -26,7 +26,7 @@
     A few nice folks around the web have been sharing visualisations of the most popular viewport sizes appearing in the analytics for their sites. I thought these were beautiful and useful and wanted to make it easier for people to create their own and highlight the need for responsive web design.
   &lt;/p&gt;
   &lt;figure&gt;
-  &lt;img src=&quot;/images/viewport-graph.png&quot; alt=&quot;The most common viewports used to view this site&quot;&gt;
+  &lt;img src=&quot;/images/viewport-graph-wide.png&quot; alt=&quot;The most common viewports used to view this site&quot;&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
 
