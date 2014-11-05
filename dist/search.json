@@ -2,6 +2,14 @@
 	"posts" : [
 		
 	{
+		"title" : "The shapes of web views",
+		"url" : "/blog/the-shapes-of-web-views",
+		"date" : "05 November 2014",
+		"words" : "few nice folks around web have been sharing visualisations most popular viewport sizes appearing analytics their sites thought these were beautiful useful wanted make easier people create own laura hogan (nee swanson) etsy published first that caught my eye are doing great work when comes learning about site performance optimisations this just another example shortly after image surfaced twitter bill ben created shared visulisations from bestbuycom sportbbccouk lovely stuff decided print images display them wall r/ga london office they serve as reminder all us developers designers alike squishy we need design build manner unknowns viewports - up see your quickly suggested there must tool generate rather than crafting photoshop surprise could find nothing would cobbled something together enter viewportify simple little which will turn blob data used view into you can share save whatever clunky but seems graph page its glory over here love gallery graphs grow contribute @aral curious did google donation conditional nobody voice any [negative] opinion @codeclub board being cautious?"
+	}
+	,
+		
+	{
 		"title" : "Adding a static comments system to my Jekyll build",
 		"url" : "/blog/adding-a-static-comments-system-to-my-jekyll-build",
 		"date" : "22 July 2014",

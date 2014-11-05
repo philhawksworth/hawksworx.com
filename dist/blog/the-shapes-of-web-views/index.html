@@ -5,8 +5,8 @@
     <meta name="robots" content="index, follow"/>
     <meta name="viewport" content="width=device-width, minimum-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
-    <meta name="description" content="">
-    <title>hawksworx</title>
+    <meta name="description" content="Hacking together a tool to generate charts of the viewports used to view our sites">
+    <title>The shapes of web views</title>
     <!--
     The javascript and assets for this site are compressed for performance reasons.
     However, it's always nice to be able to see what is going on under the hood for
@@ -19,7 +19,7 @@
     -->
      <link rel="alternate" type="application/rss+xml" title="Phil Hawksworth's Blog" href="http://hawksworx.com/posts.rss" />
   </head>
-  <body class="home">
+  <body class="blog">
   <div class="header">
     <div class="container">
         <ul class="nav">
@@ -37,32 +37,28 @@
         <div class="search-results">
           <ul class="listing"></ul>
         </div>
-      <h1 class="shout">hawksworx</h1>
+      <h1 >The shapes of web views</h1>
+      
+       <div class="meta">
+        Posted by Phil Hawksworth on <time>05 November 2014</time> 
+        <br>and tagged
+        
+          
+          <a href="/blog/tag/web">#web</a> 
+        
+          
+          and 
+          
+          <a href="/blog/tag/development">#development</a> 
+        
+      </div>
       
     </div>
   </div>
 
   <div class="content">
     <div class="container">
-    
-
-<article class="post listing">
-	<h2 class="post-title"><a href="/blog/the-shapes-of-web-views">The shapes of web views</a></h2>
-	<div class="meta">
-	    <time datetime="2014-11-05 00:00:00 +0000">05 November 2014</time>
-	    Tagged
-	    
-	    
-	    <a href="/blog/tag/web">web</a>
-	    
-	    
-	    and
-	    
-	    <a href="/blog/tag/development">development</a>
-	    
-	</div>
-	<div class="grab">
-	 	<div class="grab">
+    <div class="grab">
   <p>
     A few nice folks around the web have been sharing visualisations of the most popular viewport sizes appearing in the analytics for their sites. I thought these were beautiful and useful and wanted to make it easier for people to create their own.
   </p>
@@ -70,15 +66,107 @@
   <img src="/images/viewport-graph.png" alt="The most common viewports used to view this site">
 </figure>
 
+</div>
 
-	    <a href="/blog/the-shapes-of-web-views" class="more">continue reading this post</a>
-	 </div>
-</article>
+<!-- more -->
+<p>
+  Laura Hogan (nee Swanson) of Etsy published the first that caught my eye. Etsy are doing great work when it comes to sharing their learning about site performance and optimisations. This was just another example of that.
+</p>
+<p>
+  Shortly after this image surfaced on Twitter, Bill and Ben created and shared their own visulisations from Bestbuy.com and sport.bbc.co.uk. Lovely stuff.
+</p>
+<p>
+  I decided to print these lovely images and display them on the wall in the <a href="http://rga.com">R/GA London</a> office. They serve as a nice reminder to all of us, developers and designers alike, that the web is squishy, and that we need to design and build for all manner of unknowns.
+</p>
+
+<figure>
+  <img src="/images/viewports.jpg" alt="Three viewport graphs shared by nice people on the web">
+  <figcaption><a href="http://instagram.com/p/tlM_tfyaf2">Viewports</a> - Up on the wall for all to see. A nice reminder.</figcaption>
+</figure>
+
+<h2>Make your own</h2>
+<p>
+  It was quickly suggested that there must be a tool on the web to generate these images rather than crafting them in Photoshop. To my surprise, I could find nothing that would do it for me... so I cobbled something together.
+</p>
+<p>
+  Enter <a href="http://viewportify.hawksworx.com">Viewportify</a>. A simple little tool which will turn a blob of analytics data about the viewports used to view your site, into an image you can share, save, print or whatever. It's clunky but it seems to work. I used it to create the graph on this page, which you can see <a href="http://viewportify.hawksworx.com/graph">in all its glory over here</a>.
+</p>
+<p>
+  I'd love to see the gallery of visualisations or <em>graphs</em> grow as people generate and contribute their own.
+</p>
+
+
+
+
+<blockquote>
+  <div>
+    <a href="http://twitter.com/aral">@aral</a> Curious - did Google make their donation conditional that nobody voice any [negative] opinion, or was the <a href="http://twitter.com/codeclub">@CodeClub</a> board being cautious?
+  </div>
+</blockquote>
+
+
+
+
+<!-- <figure><img src="/images/funk.jpg" alt=""></figure> -->
 
 
 
 
 
+<h2 class="comments">Comments</h2>
+<p>
+  Let me know your thoughts using <a href="#comment-form">the form below</a>.
+</p>
+<ul class="listing comments">
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+</ul>
+
+<form action="http://pooleapp.com/stash/dfccc723-152c-4537-9b28-713e0e43c040/" method="post" id="comment-form" class="comment-form">
+  <h2>Leave your comment</h2>
+  <p>
+    <a href="https://daringfireball.net/projects/markdown/syntax">Markdown</a> is allowed, but HTML is not. Neither is spam thanks.
+  </p>
+  <input type="hidden" name="redirect_to" class="redirect" value="/thanks" />
+  <input type="hidden" name="path" value="/blog/the-shapes-of-web-views" />
+  <div class="lobsterpot"><input type="text" name="homepage-url" class="homepage-url"/></div>
+  <label for="name">Your name</label><input type="text" name="name">
+  <label for="url">Your website <span>(optional)</span></label><input type="text" name="url">
+  <label for="email">Your email <span>(I'll never spam you)</span></label><input type="text" name="email">
+  <label for="comment">Your comment</label><textarea name="comment" class="comment-text"></textarea>
+  <input type="submit" value="Post comment" class="submit" />
+</form>
 
     </div>
   </div>
