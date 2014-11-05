@@ -4,7 +4,7 @@
   <title>hawksworx.com</title>
   <link href="http://hawksworx.com/"/>
   <link type="application/atom+xml" rel="self" href="http://hawksworx.com/atom.xml"/>
-  <updated>2014-11-05T09:03:10+00:00</updated>
+  <updated>2014-11-05T13:40:25+00:00</updated>
   <id>http://hawksworx.com/</id>
   <author>
     <name>Phil Hawksworth</name>
@@ -23,20 +23,20 @@
     </author>
     <content type="html">&lt;div class=&quot;grab&quot;&gt;
   &lt;p&gt;
-    A few nice folks around the web have been sharing visualisations of the most popular viewport sizes appearing in the analytics for their sites. I thought these were beautiful and useful and wanted to make it easier for people to create their own.
+    A few nice folks around the web have been sharing visualisations of the most popular viewport sizes appearing in the analytics for their sites. I thought these were beautiful and useful and wanted to make it easier for people to create their own and highlight the need for responsive web design.
   &lt;/p&gt;
   &lt;figure&gt;
   &lt;img src=&quot;/images/viewport-graph.png&quot; alt=&quot;The most common viewports used to view this site&quot;&gt;
 &lt;/figure&gt;
-
 &lt;/div&gt;
 
 &lt;!-- more --&gt;
+
 &lt;p&gt;
-  Laura Hogan (nee Swanson) of Etsy published the first that caught my eye. Etsy are doing great work when it comes to sharing their learning about site performance and optimisations. This was just another example of that.
+  Lara Hogan (nee Swanson) of Etsy &lt;a href=&quot;https://twitter.com/lara_hogan/status/516660720378052608&quot;&gt;published the first which caught my eye&lt;/a&gt;. Etsy are doing great work when it comes to sharing their learning about site performance and optimisations. This was just another example of that.
 &lt;/p&gt;
 &lt;p&gt;
-  Shortly after this image surfaced on Twitter, Bill and Ben created and shared their own visulisations from Bestbuy.com and sport.bbc.co.uk. Lovely stuff.
+  Shortly after this image surfaced on Twitter, &lt;a href=&quot;https://twitter.com/seanstopnik/status/516711485507403776&quot;&gt;Sean Stopnik&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/shaunbent/status/516922521455951872&quot;&gt;Shaun Bent&lt;/a&gt; both created and shared their own visulisations from Bestbuy and BBC Sport. Lovely stuff. Thanks for sharing, fellas!
 &lt;/p&gt;
 &lt;p&gt;
   I decided to print these lovely images and display them on the wall in the &lt;a href=&quot;http://rga.com&quot;&gt;R/GA London&lt;/a&gt; office. They serve as a nice reminder to all of us, developers and designers alike, that the web is squishy, and that we need to design and build for all manner of unknowns.
@@ -44,34 +44,19 @@
 
 &lt;figure&gt;
   &lt;img src=&quot;/images/viewports.jpg&quot; alt=&quot;Three viewport graphs shared by nice people on the web&quot;&gt;
-  &lt;figcaption&gt;&lt;a href=&quot;http://instagram.com/p/tlM_tfyaf2&quot;&gt;Viewports&lt;/a&gt; - Up on the wall for all to see. A nice reminder.&lt;/figcaption&gt;
+  &lt;figcaption&gt;&lt;a href=&quot;https://twitter.com/philhawksworth/status/517036718105837568&quot;&gt;Viewports&lt;/a&gt; - Up on the wall for all to see. A nice reminder.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;h2&gt;Make your own&lt;/h2&gt;
+&lt;h2&gt;Make your own with Viewportify&lt;/h2&gt;
 &lt;p&gt;
-  It was quickly suggested that there must be a tool on the web to generate these images rather than crafting them in Photoshop. To my surprise, I could find nothing that would do it for me... so I cobbled something together.
+  It was &lt;a href=&quot;https://twitter.com/yoanngrange/status/517038913551351809&quot;&gt;quickly suggested&lt;/a&gt; that there must already be a tool on the web to generate these images rather than crafting them in Photoshop. To my surprise, I could find nothing that would do it for me... so I cobbled something together.
 &lt;/p&gt;
 &lt;p&gt;
-  Enter &lt;a href=&quot;http://viewportify.hawksworx.com&quot;&gt;Viewportify&lt;/a&gt;. A simple little tool which will turn a blob of analytics data about the viewports used to view your site, into an image you can share, save, print or whatever. It&#39;s clunky but it seems to work. I used it to create the graph on this page, which you can see &lt;a href=&quot;http://viewportify.hawksworx.com/graph&quot;&gt;in all its glory over here&lt;/a&gt;.
+  Enter &lt;a href=&quot;http://viewportify.hawksworx.com&quot;&gt;Viewportify&lt;/a&gt;. A simple little tool which will turn a blob of analytics data about the viewports used to view your site, into an image you can share, save, print or whatever. It&#39;s clunky but it seems to work. I used it to create the graph on this page, which you can see &lt;a href=&quot;http://viewportify.hawksworx.com/graph/d-d10C&quot;&gt;in all its glory over here&lt;/a&gt;.
 &lt;/p&gt;
 &lt;p&gt;
   I&#39;d love to see the gallery of visualisations or &lt;em&gt;graphs&lt;/em&gt; grow as people generate and contribute their own.
 &lt;/p&gt;
-
-
-
-
-&lt;blockquote&gt;
-  &lt;div&gt;
-    &lt;a href=&quot;http://twitter.com/aral&quot;&gt;@aral&lt;/a&gt; Curious - did Google make their donation conditional that nobody voice any [negative] opinion, or was the &lt;a href=&quot;http://twitter.com/codeclub&quot;&gt;@CodeClub&lt;/a&gt; board being cautious?
-  &lt;/div&gt;
-&lt;/blockquote&gt;
-
-
-
-
-&lt;!-- &lt;figure&gt;&lt;img src=&quot;/images/funk.jpg&quot; alt=&quot;&quot;&gt;&lt;/figure&gt; --&gt;
-
 
 </content>
   </entry>
