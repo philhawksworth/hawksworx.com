@@ -29,7 +29,8 @@ body {
   position: relative;
 }
 
-  .header::before {
+  .header::before,
+  .footer::before {
     content: "";
     width: 100%;
     height: 100%;
@@ -169,6 +170,8 @@ blockquote {
   color: #aaa;
   padding: 2em 0 0;
   font-size: 0.8em;
+  position:relative;
+
 }
 
 .footer .container {
@@ -184,6 +187,7 @@ blockquote {
   background-color: #222;
   margin:3em 0 0;
   padding: 1em 0 0 0;
+  // position: inherit;
 }
 
 .footer .nav a:link,
