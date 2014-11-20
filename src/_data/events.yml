@@ -1,10 +1,5 @@
 upcoming:
 
-  - name: Front End North
-    location: "Manchester, England"
-    date: 2014-11-15 09:00:00 +0000
-    url: http://makedo.in/frontendnorth/
-
   - name: Awwwards Conference
     location: "Barcelona, Spain"
     date: 2015-02-24 09:00:00 +0000
@@ -16,6 +11,11 @@ upcoming:
     url: http://dotyork.com
 
 previous:
+
+  - name: Front End North
+    location: "Manchester, England"
+    date: 2014-11-15 09:00:00 +0000
+    url: http://makedo.in/frontendnorth/
 
   - name: The Web Is..
     location: "Cardiff, Wales"
