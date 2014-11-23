@@ -4,7 +4,7 @@
   <title>hawksworx.com</title>
   <link href="http://hawksworx.com/"/>
   <link type="application/atom+xml" rel="self" href="http://hawksworx.com/atom.xml"/>
-  <updated>2014-11-20T20:18:37+00:00</updated>
+  <updated>2014-11-23T12:07:48+00:00</updated>
   <id>http://hawksworx.com/</id>
   <author>
     <name>Phil Hawksworth</name>
@@ -52,7 +52,7 @@
   It was &lt;a href=&quot;https://twitter.com/yoanngrange/status/517038913551351809&quot;&gt;quickly suggested&lt;/a&gt; that there must already be a tool on the web to generate these images rather than crafting them in Photoshop. To my surprise, I could find nothing that would do it for me... so I cobbled something together.
 &lt;/p&gt;
 &lt;p&gt;
-  Enter &lt;a href=&quot;http://viewportify.hawksworx.com&quot;&gt;Viewportify&lt;/a&gt;. A simple little tool which will turn a blob of analytics data about the viewports used to view your site, into an image you can share, save, print or whatever. It&#39;s clunky but it seems to work. I used it to create the graph on this page, which you can see &lt;a href=&quot;http://viewportify.hawksworx.com/graph/d-d10C&quot;&gt;in all its glory over here&lt;/a&gt;.
+  Enter &lt;a href=&quot;http://viewportify.hawksworx.com&quot;&gt;Viewportify&lt;/a&gt;. A simple little tool which will turn a blob of analytics data about the viewports used to view your site, into an image you can share, save, print or whatever. It&#39;s clunky but it seems to work. I used it to create the graph on this page, which you can see &lt;a href=&quot;http://viewportify.hawksworx.com/graph/7BXp0C&quot;&gt;in all its glory over here&lt;/a&gt;.
 &lt;/p&gt;
 &lt;p&gt;
   I&#39;d love to see the gallery of visualisations or &lt;em&gt;graphs&lt;/em&gt; grow as people generate and contribute their own.
