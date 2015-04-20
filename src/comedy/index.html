@@ -1,0 +1,39 @@
+---
+layout: base
+title: Stand up comedy
+pageclass: speaking
+---
+
+<p>
+   I've recently started dabbling with stand up comedy. Just a few open mic comedy nights to get the blood pumping, so I'll not be booking the Hammersmith Apollo any time soon.
+</p>
+<p>
+  This page is a record of my previous and upcoming gigs.
+</p>
+
+<h2>Upcoming gigs</h2>
+<ul class="listing">
+	{% for event in site.data.standup.upcoming %}
+	  <li><time datetime="{{ event.date | date_to_xmlschema }}">{{ event.date | date_to_long_string  }}</time>
+		{% if event.url %}
+			<a href="{{ event.url }}">{{ event.name }}</a>
+		{% else %}
+			{{ event.name }}
+		{% endif %}
+	  - {{ event.location }}</li>
+	{% endfor %}
+</ul>
+
+<h2>Previous gigs</h2>
+<ul class="listing">
+	{% for event in site.data.standup.previous %}
+	  <li><time datetime="{{ event.date | date_to_xmlschema }}">{{ event.date | date_to_long_string  }}</time>
+		{% if event.url %}
+			<a href="{{ event.url }}">{{ event.name }}</a>
+		{% else %}
+			{{ event.name }}
+		{% endif %}
+	  - {{ event.location }}</li>
+	{% endfor %}
+</ul>
+

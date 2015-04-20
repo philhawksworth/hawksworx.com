@@ -205,7 +205,7 @@
   
   
   <url>
-    <loc>http://hawksworx.com/</loc>
+    <loc>http://hawksworx.com/comedy/</loc>
   </url>
   
   
@@ -217,13 +217,19 @@
   
   
   <url>
-    <loc>http://hawksworx.com/speaking/</loc>
+    <loc>http://hawksworx.com/search/</loc>
   </url>
   
   
   
   <url>
-    <loc>http://hawksworx.com/search/</loc>
+    <loc>http://hawksworx.com/</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://hawksworx.com/speaking/</loc>
   </url>
   
   
