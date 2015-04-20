@@ -90,7 +90,7 @@ hx.addEventHandlers = function() {
       document.location.href = $(".redirect")[0].value;
       return false;
     } else {
-      return false;
+      return true;
     }
   });
 

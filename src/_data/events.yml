@@ -1,16 +1,20 @@
 upcoming:
 
-  - name: Awwwards Conference
-    location: "Barcelona, Spain"
-    date: 2015-02-24 09:00:00 +0000
-    url: http://conference.awwwards.com/
+  - name: TBA
+    location: "Milton Keynes, England"
+    date: 2015-09-01 09:00:00 +0000
+
+previous:
 
   - name: Dot York
     location: "York, England"
     date: 2015-04-09 09:00:00 +0000
     url: http://dotyork.com
 
-previous:
+  - name: Awwwards Conference
+    location: "Barcelona, Spain"
+    date: 2015-02-24 09:00:00 +0000
+    url: http://conference.awwwards.com/
 
   - name: Front End North
     location: "Manchester, England"
