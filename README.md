@@ -1,6 +1,6 @@
 # hawksworx.com
 
-Phil Hawksworth's blog.  Served up at [http://hawksworx.com]() and hosted on Github Pages.
+Phil Hawksworth's blog.  Served up at [https://hawksworx.com]() and hosted on Github Pages.
 
 
 ## Overview
