@@ -1,11 +1,14 @@
 upcoming:
 
+  - name: Freedom Fridge
+    location: "The Rose and Crown, Kentish Town, London"
+    date: 2015-06-25 20:00:00 +0000
+
+previous:
+
   - name: TNT
     location: "The Vine, Kentish Town, London"
     date: 2015-05-26 20:00:00 +0000
-
-
-previous:
 
   - name: Underdogs
     location: "Blue Posts, Picadilly Circus, London"
@@ -19,6 +22,6 @@ previous:
     location: "The Vine, Kentish Town, London"
     date: 2015-3-31 20:00:00 +0000
 
-  - name: "Dirty Dicks"
-    location: "Liverpool Street, London"
+  - name: "We Are Funny Projects"
+    location: "Dirty Dicks, Liverpool Street, London"
     date: 2015-03-23 20:00:00 +0000
