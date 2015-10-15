@@ -1,10 +1,29 @@
 upcoming:
 
+  - name: Comedy in the Crown
+    location: "The Crown, St Albans"
+    date: 2015-11-10 20:00:00 +0000
+    url: http://comedyinthecrown.com
+
+previous:
+
+  - name: Comedy in the Crown (MC)
+    location: "The Crown, St Albans"
+    date: 2015-10-13 20:00:00 +0000
+    url: http://comedyinthecrown.com
+
+  - name: Comedy in the Crown
+    location: "The Crown, St Albans"
+    date: 2015-09-29 20:00:00 +0000
+    url: http://comedyinthecrown.com
+
+  - name: Party Piece
+    location: "Smiths of Smithfields, Spitalfields, London"
+    date: 2015-08-12 20:00:00 +0000
+
   - name: Freedom Fridge
     location: "The Rose and Crown, Kentish Town, London"
     date: 2015-06-25 20:00:00 +0000
-
-previous:
 
   - name: TNT
     location: "The Vine, Kentish Town, London"

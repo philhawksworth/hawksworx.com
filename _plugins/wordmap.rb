@@ -1,5 +1,5 @@
-require 'httparty'
-require 'json'
+# require 'httparty'
+# require 'json'
 
 # Sanitise text to remove "s and remove duplicate words.
 # Usefull for creating an index of unique words in a text
