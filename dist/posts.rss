@@ -4,7 +4,7 @@
   <title>hawksworx.com</title>
   <link href="https://hawksworx.com/"/>
   <link type="application/atom+xml" rel="self" href="https://hawksworx.com/atom.xml"/>
-  <updated>2015-10-15T16:03:01+01:00</updated>
+  <updated>2015-11-18T09:17:57-08:00</updated>
   <id>https://hawksworx.com/</id>
   <author>
     <name>Phil Hawksworth</name>
@@ -16,7 +16,7 @@
     <id>https://hawksworx.com/blog/the-shapes-of-web-views</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/the-shapes-of-web-views"/>
     <title>The shapes of web views</title>
-    <updated>2014-11-05T00:00:00+00:00</updated>
+    <updated>2014-11-05T00:00:00-08:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -65,7 +65,7 @@
     <id>https://hawksworx.com/blog/adding-a-static-comments-system-to-my-jekyll-build</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/adding-a-static-comments-system-to-my-jekyll-build"/>
     <title>Adding a static comments system to my Jekyll build</title>
-    <updated>2014-07-22T00:00:00+01:00</updated>
+    <updated>2014-07-22T00:00:00-07:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -236,7 +236,7 @@
     <id>https://hawksworx.com/blog/too-funky-didnt-read</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/too-funky-didnt-read"/>
     <title>TF;DR - Too funky; Didn&#39;t read.</title>
-    <updated>2014-01-06T00:00:00+00:00</updated>
+    <updated>2014-01-06T00:00:00-08:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -302,7 +302,7 @@
     <id>https://hawksworx.com/blog/using-a-wiimote-for-presentations</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/using-a-wiimote-for-presentations"/>
     <title>Using a Wiimote for presentations</title>
-    <updated>2013-11-16T00:00:00+00:00</updated>
+    <updated>2013-11-16T00:00:00-08:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -380,7 +380,7 @@
     <id>https://hawksworx.com/blog/on-hiring-developers</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/on-hiring-developers"/>
     <title>On hiring web developers</title>
-    <updated>2013-11-14T00:00:00+00:00</updated>
+    <updated>2013-11-14T00:00:00-08:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -499,7 +499,7 @@
     <id>https://hawksworx.com/blog/london-content-strategy-meetup</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/london-content-strategy-meetup"/>
     <title>London Content Strategy Meetup</title>
-    <updated>2013-06-18T00:00:00+01:00</updated>
+    <updated>2013-06-18T00:00:00-07:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -549,7 +549,7 @@
     <id>https://hawksworx.com/blog/oakleys-moto-diet</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/oakleys-moto-diet"/>
     <title>Oakley&#39;s Moto diet</title>
-    <updated>2013-06-05T00:00:00+01:00</updated>
+    <updated>2013-06-05T00:00:00-07:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -615,7 +615,7 @@
     <id>https://hawksworx.com/blog/data-viz-at-digital-dumbo</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/data-viz-at-digital-dumbo"/>
     <title>Data viz at Digital Dumbo</title>
-    <updated>2013-05-29T00:00:00+01:00</updated>
+    <updated>2013-05-29T00:00:00-07:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -668,7 +668,7 @@
     <id>https://hawksworx.com/blog/pathing-the-gimmicky-cowpaths</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/pathing-the-gimmicky-cowpaths"/>
     <title>Pathing the gimmicky cow-paths</title>
-    <updated>2013-05-09T00:00:00+01:00</updated>
+    <updated>2013-05-09T00:00:00-07:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -722,7 +722,7 @@
     <id>https://hawksworx.com/blog/talking-at-jsday-verona</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/talking-at-jsday-verona"/>
     <title>Talking at JSDay in Verona</title>
-    <updated>2013-05-07T00:00:00+01:00</updated>
+    <updated>2013-05-07T00:00:00-07:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -812,7 +812,7 @@
     <id>https://hawksworx.com/blog/oakleys-monster-page-of-baubles</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/oakleys-monster-page-of-baubles"/>
     <title>Oakley&#39;s monster page of baubles</title>
-    <updated>2013-04-22T00:00:00+01:00</updated>
+    <updated>2013-04-22T00:00:00-07:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -875,7 +875,7 @@
     <id>https://hawksworx.com/blog/reflecting-on-txjs</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/reflecting-on-txjs"/>
     <title>Reflecting on Texas JavaScript 2013</title>
-    <updated>2013-04-21T00:00:00+01:00</updated>
+    <updated>2013-04-21T00:00:00-07:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -973,7 +973,7 @@
     <id>https://hawksworx.com/blog/excess-cms-and-stink-at-txjs</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/excess-cms-and-stink-at-txjs"/>
     <title>Excess, CMS and Stink at Texas JavaScript</title>
-    <updated>2013-04-12T00:00:00+01:00</updated>
+    <updated>2013-04-12T00:00:00-07:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -1019,7 +1019,7 @@
     <id>https://hawksworx.com/blog/smelly-cms-at-html5devconf</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/smelly-cms-at-html5devconf"/>
     <title>Smelly CMS at HTML5DevConf</title>
-    <updated>2013-03-28T00:00:00+00:00</updated>
+    <updated>2013-03-28T00:00:00-07:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -1066,7 +1066,7 @@
     <id>https://hawksworx.com/blog/simplicity-and-performance</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/simplicity-and-performance"/>
     <title>Simplicity and performance with static files</title>
-    <updated>2012-11-29T00:00:00+00:00</updated>
+    <updated>2012-11-29T00:00:00-08:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -1121,7 +1121,7 @@
     <id>https://hawksworx.com/blog/i-can-smell-your-cms-a-talk-at-fronteers</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/i-can-smell-your-cms-a-talk-at-fronteers"/>
     <title>I can smell your CMS at Fronteers 2012</title>
-    <updated>2012-10-09T00:00:00+01:00</updated>
+    <updated>2012-10-09T00:00:00-07:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -1404,7 +1404,7 @@ Wes, Randy, I think that a good CMS should be totally transparent in the front e
     <id>https://hawksworx.com/blog/bootrapping-front-end-development-with-yeoman</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/bootrapping-front-end-development-with-yeoman"/>
     <title>Bootstrapping front-end development with Yeoman</title>
-    <updated>2012-07-25T00:00:00+01:00</updated>
+    <updated>2012-07-25T00:00:00-07:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -1442,7 +1442,7 @@ Wes, Randy, I think that a good CMS should be totally transparent in the front e
     <id>https://hawksworx.com/blog/sketchjs-adds-convenient-canvas-rendering</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/sketchjs-adds-convenient-canvas-rendering"/>
     <title>Sketch.js adds convenient canvas rendering</title>
-    <updated>2012-07-24T00:00:00+01:00</updated>
+    <updated>2012-07-24T00:00:00-07:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -1472,7 +1472,7 @@ Wes, Randy, I think that a good CMS should be totally transparent in the front e
     <id>https://hawksworx.com/blog/visiting-bbc-online-at-salford</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/visiting-bbc-online-at-salford"/>
     <title>Visiting BBC Online at Salford</title>
-    <updated>2011-11-18T00:00:00+00:00</updated>
+    <updated>2011-11-18T00:00:00-08:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -1529,7 +1529,7 @@ Wes, Randy, I think that a good CMS should be totally transparent in the front e
     <id>https://hawksworx.com/blog/reflecting-on-fullfrontal-2011</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/reflecting-on-fullfrontal-2011"/>
     <title>Reflecting on Full Frontal 2011</title>
-    <updated>2011-11-13T00:00:00+00:00</updated>
+    <updated>2011-11-13T00:00:00-08:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -1589,7 +1589,7 @@ Wes, Randy, I think that a good CMS should be totally transparent in the front e
     <id>https://hawksworx.com/blog/excessive-enhancement-at-full-frontal</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/excessive-enhancement-at-full-frontal"/>
     <title>Excessive Enhancement at Full Frontal</title>
-    <updated>2011-11-03T00:00:00+00:00</updated>
+    <updated>2011-11-03T00:00:00-07:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -1625,7 +1625,7 @@ Wes, Randy, I think that a good CMS should be totally transparent in the front e
     <id>https://hawksworx.com/blog/joining-rga-london</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/joining-rga-london"/>
     <title>Joining R/GA</title>
-    <updated>2011-11-02T00:00:00+00:00</updated>
+    <updated>2011-11-02T00:00:00-07:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -1660,7 +1660,7 @@ Wes, Randy, I think that a good CMS should be totally transparent in the front e
     <id>https://hawksworx.com/blog/time-to-move-on-from-the-team</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/time-to-move-on-from-the-team"/>
     <title>Time to move on from The Team</title>
-    <updated>2011-11-01T00:00:00+00:00</updated>
+    <updated>2011-11-01T00:00:00-07:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -1702,7 +1702,7 @@ Wes, Randy, I think that a good CMS should be totally transparent in the front e
     <id>https://hawksworx.com/blog/value-in-a-happy-hackday</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/value-in-a-happy-hackday"/>
     <title>Value in a happy hack day</title>
-    <updated>2011-09-19T00:00:00+01:00</updated>
+    <updated>2011-09-19T00:00:00-07:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -1755,7 +1755,7 @@ Wes, Randy, I think that a good CMS should be totally transparent in the front e
     <id>https://hawksworx.com/blog/expectations-of-web-development-at-agencies</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/expectations-of-web-development-at-agencies"/>
     <title>Expectations of web development at agencies</title>
-    <updated>2011-09-09T00:00:00+01:00</updated>
+    <updated>2011-09-09T00:00:00-07:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -1796,7 +1796,7 @@ Wes, Randy, I think that a good CMS should be totally transparent in the front e
     <id>https://hawksworx.com/blog/social-media-did-not-cause-the-london-riots</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/social-media-did-not-cause-the-london-riots"/>
     <title>Social media did not cause the London riots</title>
-    <updated>2011-08-09T00:00:00+01:00</updated>
+    <updated>2011-08-09T00:00:00-07:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -1847,7 +1847,7 @@ Wes, Randy, I think that a good CMS should be totally transparent in the front e
     <id>https://hawksworx.com/blog/getting-started-with-node-at-asyncjs</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/getting-started-with-node-at-asyncjs"/>
     <title>Getting started with Node at AsyncJS</title>
-    <updated>2011-05-27T00:00:00+01:00</updated>
+    <updated>2011-05-27T00:00:00-07:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -1870,7 +1870,7 @@ Wes, Randy, I think that a good CMS should be totally transparent in the front e
     <id>https://hawksworx.com/blog/developing-a-side-project</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/developing-a-side-project"/>
     <title>Developing a side project</title>
-    <updated>2011-05-09T00:00:00+01:00</updated>
+    <updated>2011-05-09T00:00:00-07:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -1918,7 +1918,7 @@ Wes, Randy, I think that a good CMS should be totally transparent in the front e
     <id>https://hawksworx.com/blog/the-next-generation-stack-is-nodejs-ready-to-go-mainstream</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/the-next-generation-stack-is-nodejs-ready-to-go-mainstream"/>
     <title>The next generation stack. Is NodeJS ready to go mainstream?</title>
-    <updated>2010-09-10T00:00:00+01:00</updated>
+    <updated>2010-09-10T00:00:00-07:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -1960,7 +1960,7 @@ Wes, Randy, I think that a good CMS should be totally transparent in the front e
     <id>https://hawksworx.com/blog/hitched</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/hitched"/>
     <title>Hitched</title>
-    <updated>2010-07-27T00:00:00+01:00</updated>
+    <updated>2010-07-27T00:00:00-07:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -2030,7 +2030,7 @@ Wes, Randy, I think that a good CMS should be totally transparent in the front e
     <id>https://hawksworx.com/blog/nodejs-i-just-have-to-use-it-for-something</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/nodejs-i-just-have-to-use-it-for-something"/>
     <title>Nodejs. I just have to use it for something</title>
-    <updated>2010-02-15T00:00:00+00:00</updated>
+    <updated>2010-02-15T00:00:00-08:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -2075,7 +2075,7 @@ Wes, Randy, I think that a good CMS should be totally transparent in the front e
     <id>https://hawksworx.com/blog/in-defense-of-ie6</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/in-defense-of-ie6"/>
     <title>In defense of IE6</title>
-    <updated>2009-08-10T00:00:00+01:00</updated>
+    <updated>2009-08-10T00:00:00-07:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -2118,7 +2118,7 @@ Wes, Randy, I think that a good CMS should be totally transparent in the front e
     <id>https://hawksworx.com/blog/using-quicksilver-to-control-lastfm</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/using-quicksilver-to-control-lastfm"/>
     <title>Using Quicksilver to control Last.fm</title>
-    <updated>2009-08-07T00:00:00+01:00</updated>
+    <updated>2009-08-07T00:00:00-07:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -2156,7 +2156,7 @@ Wes, Randy, I think that a good CMS should be totally transparent in the front e
     <id>https://hawksworx.com/blog/flash-v-web-behind-enemy-lines</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/flash-v-web-behind-enemy-lines"/>
     <title>Flash v Web. Behind Enemy Lines</title>
-    <updated>2009-07-27T00:00:00+01:00</updated>
+    <updated>2009-07-27T00:00:00-07:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -2190,7 +2190,7 @@ Wes, Randy, I think that a good CMS should be totally transparent in the front e
     <id>https://hawksworx.com/blog/moving-on-from-osmosoft</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/moving-on-from-osmosoft"/>
     <title>Moving on from Osmosoft</title>
-    <updated>2009-04-23T00:00:00+01:00</updated>
+    <updated>2009-04-23T00:00:00-07:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -2232,7 +2232,7 @@ Wes, Randy, I think that a good CMS should be totally transparent in the front e
     <id>https://hawksworx.com/blog/leveraging-jquery-and-jquery-plugins-in-tiddlyWiki</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/leveraging-jquery-and-jquery-plugins-in-tiddlyWiki"/>
     <title>Leveraging jQuery and jQuery plugins in TiddlyWiki</title>
-    <updated>2009-03-13T00:00:00+00:00</updated>
+    <updated>2009-03-13T00:00:00-07:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -2441,7 +2441,7 @@ Wes, Randy, I think that a good CMS should be totally transparent in the front e
     <id>https://hawksworx.com/blog/mashing-up-flickr-in-the-client-with-jquery</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/mashing-up-flickr-in-the-client-with-jquery"/>
     <title>Mashing up flickr in the client with jQuery</title>
-    <updated>2009-02-15T00:00:00+00:00</updated>
+    <updated>2009-02-15T00:00:00-08:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -2478,7 +2478,7 @@ Wes, Randy, I think that a good CMS should be totally transparent in the front e
     <id>https://hawksworx.com/blog/unobtrusify-your-javascript</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/unobtrusify-your-javascript"/>
     <title>Unobtrusify your Javascript</title>
-    <updated>2009-01-05T00:00:00+00:00</updated>
+    <updated>2009-01-05T00:00:00-08:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -2591,7 +2591,7 @@ Wes, Randy, I think that a good CMS should be totally transparent in the front e
     <id>https://hawksworx.com/blog/enthusiasm-and-good-food-at-tiddlyparis</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/enthusiasm-and-good-food-at-tiddlyparis"/>
     <title>Enthusiasm and Good Food at TiddlyParis</title>
-    <updated>2008-08-27T00:00:00+01:00</updated>
+    <updated>2008-08-27T00:00:00-07:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -2642,7 +2642,7 @@ Wes, Randy, I think that a good CMS should be totally transparent in the front e
     <id>https://hawksworx.com/blog/announcing-jigglywiki-a-tiddlywiki-experiment</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/announcing-jigglywiki-a-tiddlywiki-experiment"/>
     <title>Announcing JigglyWiki. A TiddlyWiki experiment with jQuery</title>
-    <updated>2008-08-27T00:00:00+01:00</updated>
+    <updated>2008-08-27T00:00:00-07:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -2693,7 +2693,7 @@ Wes, Randy, I think that a good CMS should be totally transparent in the front e
     <id>https://hawksworx.com/blog/get-your-task-management-wiki</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/get-your-task-management-wiki"/>
     <title>Get your Task Management wiki</title>
-    <updated>2008-07-16T00:00:00+01:00</updated>
+    <updated>2008-07-16T00:00:00-07:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -2732,7 +2732,7 @@ Wes, Randy, I think that a good CMS should be totally transparent in the front e
     <id>https://hawksworx.com/blog/nba-updates-on-twitter</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/nba-updates-on-twitter"/>
     <title>NBA updates on Twitter</title>
-    <updated>2008-05-19T00:00:00+01:00</updated>
+    <updated>2008-05-19T00:00:00-07:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -2772,7 +2772,7 @@ Thanks also to &lt;a href=&quot;http://www.flickr.com/photos/balakov&quot;&gt;Ba
     <id>https://hawksworx.com/blog/jsspec-bundle-for-textmate-helps-with-writing</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/jsspec-bundle-for-textmate-helps-with-writing"/>
     <title>JSSpec bundle for Textmate helps with writing tests</title>
-    <updated>2008-04-18T00:00:00+01:00</updated>
+    <updated>2008-04-18T00:00:00-07:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -2803,7 +2803,7 @@ Thanks also to &lt;a href=&quot;http://www.flickr.com/photos/balakov&quot;&gt;Ba
     <id>https://hawksworx.com/blog/how-to-create-and-distribute-lovely-screencasts</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/how-to-create-and-distribute-lovely-screencasts"/>
     <title>How to create and distribute lovely screencasts</title>
-    <updated>2008-03-28T00:00:00+00:00</updated>
+    <updated>2008-03-28T00:00:00-07:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -2868,7 +2868,7 @@ Here is an example screencast.  &lt;a href=&quot;http://vimeo.com/833608&quot; t
     <id>https://hawksworx.com/blog/observing-twitter-behaviours</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/observing-twitter-behaviours"/>
     <title>Observing Twitter behaviours</title>
-    <updated>2008-01-07T00:00:00+00:00</updated>
+    <updated>2008-01-07T00:00:00-08:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -2897,7 +2897,7 @@ Here is an example screencast.  &lt;a href=&quot;http://vimeo.com/833608&quot; t
     <id>https://hawksworx.com/blog/osmosoft-return-from-leweb3-intact</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/osmosoft-return-from-leweb3-intact"/>
     <title>Osmosoft return from LeWeb3 intact</title>
-    <updated>2007-12-17T00:00:00+00:00</updated>
+    <updated>2007-12-17T00:00:00-08:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
@@ -2944,7 +2944,7 @@ Here is an example screencast.  &lt;a href=&quot;http://vimeo.com/833608&quot; t
     <id>https://hawksworx.com/blog/opening-a-finder-window-from-the-terminal</id>
     <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/opening-a-finder-window-from-the-terminal"/>
     <title>Opening a Finder window from the Terminal</title>
-    <updated>2007-11-04T00:00:00+00:00</updated>
+    <updated>2007-11-04T00:00:00-07:00</updated>
     <author>
       <name>Phil Hawksworth</name>
       <uri>https://hawksworx.com/</uri>
