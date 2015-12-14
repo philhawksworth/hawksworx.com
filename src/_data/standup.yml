@@ -1,11 +1,21 @@
 upcoming:
 
+  - name: Comedy in the Crown
+    location: "The Crown, St Albans"
+    date: 2016-05-01 20:00:00 +0000
+    url: http://comedyinthecrown.com
+
+  - name: Comedy in the Yurt
+    location: "The Blacksmiths Arms, St Albans"
+    date: 2016-06-01 20:00:00 +0000
+    url: https://www.facebook.com/ComedyintheYurt
+
+previous:
+
   - name: Comedy in the Crown Christmas Special
     location: "The Crown, St Albans"
     date: 2015-12-08 20:00:00 +0000
     url: http://comedyinthecrown.com
-
-previous:
 
   - name: Comedy in the Crown
     location: "The Crown, St Albans"
