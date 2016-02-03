@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hawksworx.com/blog/progressive-enhancement-design-smackdown</loc>
+  </url>
+  
+  <url>
     <loc>https://hawksworx.com/blog/the-shapes-of-web-views</loc>
   </url>
   
@@ -506,6 +510,12 @@
   
   <url>
     <loc>https://hawksworx.com/blog/tag/rwd/</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://hawksworx.com/blog/tag/conference/</loc>
   </url>
   
   

@@ -4,13 +4,74 @@
   <title>hawksworx.com</title>
   <link href="https://hawksworx.com/"/>
   <link type="application/atom+xml" rel="self" href="https://hawksworx.com/atom.xml"/>
-  <updated>2015-12-20T19:40:53+00:00</updated>
+  <updated>2016-02-03T12:08:53+00:00</updated>
   <id>https://hawksworx.com/</id>
   <author>
     <name>Phil Hawksworth</name>
     <email>phawksworth@gmail.com</email>
   </author>
 
+  
+  <entry>
+    <id>https://hawksworx.com/blog/progressive-enhancement-design-smackdown</id>
+    <link type="text/html" rel="alternate" href="https://hawksworx.com/blog/progressive-enhancement-design-smackdown"/>
+    <title>Progressive enhancement design smackdown</title>
+    <updated>2016-02-01T00:00:00+00:00</updated>
+    <author>
+      <name>Phil Hawksworth</name>
+      <uri>https://hawksworx.com/</uri>
+    </author>
+    <content type="html">&lt;div class=&quot;grab&quot;&gt;
+  &lt;p&gt;
+    Seven years ago &lt;a href=&quot;/blog/flash-v-web-behind-enemy-lines/&quot;&gt;I picked a fight&lt;/a&gt;. It was during my first few months of working at an agency and I was full of pith and vinegar. I was entering a place where building for the open web was not traditionally valued as much as I felt it should be, and so I began making my case and being disruptive.
+  &lt;/p&gt;
+  &lt;p&gt;
+    Feathers were ruffled. Debates were had.
+  &lt;/p&gt;
+  &lt;figure&gt;
+    &lt;img src=&quot;/images/hawk-v-wall-wide-promo.gif&quot; alt=&quot;Hawk vs Wall&quot;&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;
+  With the arrogance of someone who had enjoyed the cosily aligned opinions of a comfortable echo chamber, I set about educating my new colleagues on matters that were, of course, &quot;common sense, right?&quot;
+&lt;/p&gt;
+&lt;p&gt;
+  Since then I have regularly butted heads with Steve, who came to be a trusted and valued colleague, and also a good friend. Steve, a remarkably talented designer and illustrator, is someone with whom I often disagree on matters of the Web. I&#39;ve continued to evangelise about the importance of building things &quot;the right way&quot; on the Web while he gritted his teeth at my lack of balance.
+&lt;/p&gt;
+&lt;p&gt;
+  Finally, after seven years of debating in offices and pubs and on twitter, after countless conference tweets where my message was echoed by  fellow developers while he looked on from the distance, Steve has finally, and quite rightly called me out.
+&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;
+  @philhawksworth What I’m saying is, Phil, I think we need to have some sort of public smackdown over this. Get it all out and go at it. :)
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;a href=&quot;https://twitter.com/bruised_blood/status/570514818811232256&quot;&gt;– Steve Waller&lt;/a&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;
+  So we are going to talk about this. In an effort to free the conversation from its 140 character shackles, and to bring some balance to what can be a rather echoing chamber at web development conferences, Steve has agreed to join me at Enhance Conference where we will talk about whether or not modern Web design and development practices can damage creativity. We&#39;ll discuss what we both think is important on the Web and we&#39;ll probably touch on whether or not I have been an smug and insufferable arse for the last seven years.
+&lt;/p&gt;
+&lt;p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;
+    @philhawksworth @bruised_blood where can I buy tickets?
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;a href=&quot;https://twitter.com/jaffathecake/status/570541467346857986&quot;&gt;– Jake Archibald&lt;/a&gt;
+  &lt;/p&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+  Well Jake, you can get tickets for this at &lt;a href=&quot;http://enhanceconf.com&quot;&gt;Enhance Conf&lt;/a&gt; to be held at the Royal Society of Arts in London on March 4th, 2016. I can&#39;t wait!
+&lt;/p&gt;
+</content>
+  </entry>
   
   <entry>
     <id>https://hawksworx.com/blog/the-shapes-of-web-views</id>
