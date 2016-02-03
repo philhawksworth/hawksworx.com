@@ -1,5 +1,10 @@
 upcoming:
 
+  - name: Enhance Conference
+    location: "London, England"
+    date: 2016-03-04 09:00:00 +0000
+    url: http://enhanceconf.com
+
   - name: Front-trends
     location: "Warsaw, Poland"
     date: 2016-05-18 09:00:00 +0000
