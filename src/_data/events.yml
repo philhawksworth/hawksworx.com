@@ -1,21 +1,25 @@
 upcoming:
 
-  - name: Enhance Conference
-    location: "London, England"
-    date: 2016-03-04 09:00:00 +0000
-    url: http://enhanceconf.com
+  - name: Dutch Digital Day
+    location: "Amsterdam, Netherlands"
+    date: 2016-09-15 09:00:00 +0000
 
-  - name: Front-trends
-    location: "Warsaw, Poland"
-    date: 2016-05-18 09:00:00 +0000
-    url: http://2016.front-trends.com
+previous:
 
   - name: Smashing Conference
     location: "New York, USA"
     date: 2016-06-14 09:00:00 +0000
     url: http://lanyrd.com/2016/smashingconf-new-york
 
-previous:
+  - name: Front-trends
+    location: "Warsaw, Poland"
+    date: 2016-05-18 09:00:00 +0000
+    url: http://2016.front-trends.com
+
+  - name: Enhance Conference
+    location: "London, England"
+    date: 2016-03-04 09:00:00 +0000
+    url: http://enhanceconf.com
 
   - name: Fronteers
     location: "Amsterdam, Netherlands"
