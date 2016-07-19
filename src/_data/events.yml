@@ -4,6 +4,10 @@ upcoming:
     location: "Amsterdam, Netherlands"
     date: 2016-09-15 09:00:00 +0000
 
+  - name: TBA
+    location: "Amsterdam, Netherlands"
+    date: 2016-10-07 09:00:00 +0000
+
 previous:
 
   - name: Smashing Conference
