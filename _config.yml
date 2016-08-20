@@ -1,4 +1,4 @@
-url: https://hawksworx.com
+url: https://www.hawksworx.com
 port: 4000
 source:         ./src
 destination:    ./_site
