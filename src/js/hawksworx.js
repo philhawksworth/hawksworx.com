@@ -7,9 +7,6 @@ hx.posts = null;    // the site search data.
 hx.loadSearchData = function() {
   $.getJSON('/search.json', function(data) {
     hx.posts = data.posts;
-
-    alert("loaded:" + hx.posts.length);
-
     for (var i = hx.posts.length - 1; i >= 0; i--) {
       hx.posts[i].ref = hx.posts[i].title.toLowerCase() + " " + hx.posts[i].words.toLowerCase();
     }
@@ -26,8 +23,6 @@ hx.search = function(str) {
   // clear down ready for the new results
   hx.clearResults();
 
-  alert("String: " + str);
-
   // no results for an empty saerch string.
   if(!str.length) {
     return;
@@ -39,6 +34,9 @@ hx.search = function(str) {
       hits.push(hx.posts[i]);
     }
   }
+
+  alert("hits:" + hits.length);
+
 
   // build the results output
   $(".search-results").show();
