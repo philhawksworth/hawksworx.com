@@ -100,5 +100,4 @@ hx.addEventHandlers = function() {
 // Ready to go.
 $(function() {
   hx.addEventHandlers();
-
 });
