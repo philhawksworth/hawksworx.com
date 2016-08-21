@@ -35,7 +35,7 @@ hx.search = function(str) {
     }
   }
 
-  alert("hits:" + hits.length, "posts: " + hx.posts.length);
+  alert("hits:" + hits.length +  ", posts: " + hx.posts.length);
 
 
   // build the results output
