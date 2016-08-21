@@ -30,7 +30,6 @@ hx.search = function(str) {
 
   // find our search hits by searching for any of the entered words
   for (i= hx.posts.length - 1; i >= 0; i--) {
-
     if(hx.posts[i].ref.indexOf(str) !== -1) {
       hits.push(hx.posts[i]);
     }
@@ -68,6 +67,11 @@ hx.addEventHandlers = function() {
       hx.search(str);
     }
   });
+
+
+  $('#searchstr').on("blur", function(){
+    hx.hideSearch();
+  })
 
 
   // get the data ready to query,
