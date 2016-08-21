@@ -29,17 +29,12 @@ hx.search = function(str) {
   }
 
   // find our search hits by searching for any of the entered words
-  for (i=5 - 1; i >= 0; i--) {
-    
-    // alert(hx.posts[i].ref +", "+ str +", "+ hx.posts[i].ref.indexOf(str));
+  for (i= hx.posts.length - 1; i >= 0; i--) {
 
     if(hx.posts[i].ref.indexOf(str) !== -1) {
       hits.push(hx.posts[i]);
     }
   }
-
-  // alert("hits:" + hits.length +  ", posts: " + hx.posts.length);
-
 
   // build the results output
   $(".search-results").show();
@@ -69,7 +64,7 @@ hx.addEventHandlers = function() {
     if(k.which === 27) {
       hx.hideSearch();
     } else {
-      var str = $(this).val().trim();
+      var str = $(this).val().trim().toLowerCase();
       hx.search(str);
     }
   });
