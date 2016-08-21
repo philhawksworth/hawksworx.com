@@ -58,7 +58,7 @@ hx.clearResults = function() {
 hx.addEventHandlers = function() {
 
   // blog search
-  $('#searchstr').keyup(function(k){
+  $('#searchstr').on("keyup", function(k){
     // handle escape key to dismiss the search
     if(k.which === 27) {
       hx.hideSearch();
