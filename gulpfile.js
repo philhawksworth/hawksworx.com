@@ -137,13 +137,6 @@ gulp.task("comments", function() {
 gulp.task('build', ['jekyll', 'scripts', 'styles', 'images']);
 
 
-// deploy to gh-pages.
-// Build, optimise, then push the dist subtree to gh-pages
-gulp.task('deploy', shell.task([
-  'git subtree push --prefix dist origin gh-pages'
-]));
-
-
 // run a local server
 gulp.task('serve', ['build'], function() {
   connect.server({

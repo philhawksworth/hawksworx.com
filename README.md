@@ -1,6 +1,6 @@
 # hawksworx.com
 
-Phil Hawksworth's blog.  Served up at [https://hawksworx.com]() and hosted on Github Pages.
+Phil Hawksworth's blog.  Served up at [https://hawksworx.com]() and hosted on [http://www.netlify.com](Netlify)
 
 
 ## Overview
@@ -19,16 +19,15 @@ To build the site you need:
 
 To setup the build environment, clone the repository and then in the working directory run: `npm install` to install any node modules required by grunt.
 
-The site can then be built and served via Jekyll:
+The site can then be built and served via Gulp:
 
-`jekyll serve -w`
+`gulp serve`
 
 
 ## Deployment
 
-Deployment is via a git push to GitHub Pages and is automated via Gulp:
+Deployment is triggered by a push to the master branch of the repo on Github. Netlify monitors this branch and initiates a build and deplyment within Netlify automatically.
 
 
 Build and optimise the deployable site, and serve that up on [http://localhost:8000]() : `gulp`
 
-Deploy the site to gh-pages: `gulp deploy`

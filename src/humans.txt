@@ -1,13 +1,10 @@
 -----------------------------------------
 
-https://hawksworx.com
+https://www.hawksworx.com
 
 -----------------------------------------
 Built by Phil Hawksworth using Jekyll and
-served up by http://pages.github.com
+served up by https://www.netlify.com
 
 Contact https://twitter.com/philhawksworth
 -----------------------------------------
-
-
-
