@@ -4,7 +4,7 @@ source:         ./src
 destination:    ./_site
 plugins_dir:    ./_plugins
 tag_dir:        /blog/tag
-permalink:      /blog/:title
+permalink:      /blog/:title/
 sass:
   sass_dir: css/_scss
   style:  compressed

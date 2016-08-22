@@ -68,11 +68,12 @@ hx.addEventHandlers = function() {
     }
   });
 
-
   $('#searchstr').on("blur", function(){
-    hx.hideSearch();
-  })
-
+    setTimeout(function(){
+      hx.hideSearch();
+    }, 150);
+    
+  });
 
   // get the data ready to query,
   // prepare the form and toggle visibility
