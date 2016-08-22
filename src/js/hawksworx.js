@@ -69,9 +69,11 @@ hx.addEventHandlers = function() {
   });
 
   $('#searchstr').on("blur", function(){
+    console.log('clocked');
+    
     setTimeout(function(){
       hx.hideSearch();
-    }, 150);
+    }, 1000);
     
   });
 
