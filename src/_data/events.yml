@@ -1,20 +1,21 @@
 upcoming:
 
-  - name: Dutch Digital Day
+previous:
+
+  - name: Fronteers
     location: "Amsterdam, Netherlands"
-    date: 2016-09-15 09:00:00 +0000
-    url: http://dutchdigitalday.com/
+    date: 2016-10-06 09:00:00 +0000
+    url: http://fronteers.nl/congres/2016
 
   - name: Internet Mobile World
     location: "Bucharest, Romania"
     date: 2016-10-05 09:00:00 +0000
     url: http://imworld.ro/
 
-  - name: TBA
+  - name: Dutch Digital Day
     location: "Amsterdam, Netherlands"
-    date: 2016-10-06 09:00:00 +0000
-
-previous:
+    date: 2016-09-15 09:00:00 +0000
+    url: http://dutchdigitalday.com/
 
   - name: Smashing Conference
     location: "New York, USA"
