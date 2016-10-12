@@ -1,11 +1,16 @@
 upcoming:
 
+  - name: Comedy in the Crown (MC)
+    location: "The Crown, St Albans"
+    date: 2016-10-18 20:00:00 +0000
+    url: https://www.comedyinthecrown.com
+
+previous:
+
   - name: Comedy in the Crown
     location: "The Crown, St Albans"
     date: 2016-10-11 20:00:00 +0000
     url: https://www.comedyinthecrown.com
-
-previous:
 
   - name: Jester Jester
     location: "The Bestsy Trotwood, London"
