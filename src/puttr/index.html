@@ -52,12 +52,8 @@
   </form>
 
   <div class="results">
-    <p>{{results.length}} results</p>
-    <ul>
-    {{#results}}
-      <li>{{date_added}} - <a href="{{torrent_link}}" class="magnet">{{title}}</a> <p>{{size}} {{seeds}} (from {{source}})</p></li>
-    {{/results}}
-    </ul>
+    <p class="count">{{results.length}} results</p>
+    <ul></ul>
   </div>
   
   <script>
@@ -72,8 +68,14 @@
             $.ajax({
                 dataType: "json",
                 url: "/puttr/api?search=" + searchString,
-                success: function(results){
-                    console.log(results);
+                success: function(data){                    
+                    var d = JSON.parse(data.body);
+                    var html = "";
+                    $(d.results).each(function(){
+                      console.log(this.title);
+                      html += "<li>"+ this.date_added + " - <a href='" + this.torrent_link +  "' class='magnet'>"+ this.title +"</a><p>"+ this.size+ " " + this.seeds + "(from " + this.source +")</p></li>";
+                    })
+                    $('.results ul').append(html);
                 }
             });    
         });
