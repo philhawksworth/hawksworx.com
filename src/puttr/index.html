@@ -64,6 +64,7 @@
         $('#searchForm').submit(function(e){
             e.preventDefault();
             var searchString = $('#search').val();
+            $('.count').html("Searching...");
             $.ajax({
                 dataType: "json",
                 url: "/puttr/api?search=" + searchString,
@@ -76,8 +77,8 @@
                         " - <a href='" + this.torrent_link + "' class='magnet'>"+ this.title + "</a>" + 
                         "<p>"+ this.size+ " " + this.seeds + "(from " + this.source +")</p></li>";
                     })
-                    $('.results ul').append(html);
-                    $('.count').append(d.results.length + " results");
+                    $('.results ul').html(html);
+                    $('.count').html(d.results.length + " results");
                 }
             });    
         });
