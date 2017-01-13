@@ -10,6 +10,7 @@ var yaml        = require('json2yaml');
 var fs          = require('fs');
 var http        = require('http');
 var gravatar    = require('gravatar');
+var runSequence = require('run-sequence');
 // var htmlreplace = require('gulp-html-replace');
 
 
@@ -143,7 +144,18 @@ gulp.task("comments", function() {
 
 
 // Build and optimise the site and serve it locally.
-gulp.task('build', ['jekyll', 'scripts', 'styles', 'configs']);
+// gulp.task('build', ['jekyll', 'scripts', 'styles', 'configs']);
+
+gulp.task('build', function(callback) {
+  runSequence(
+    'jekyll',
+    ['scripts', 'styles', 'configs'],
+    callback
+  );
+});
+
+
+
 
 
 // run a local server
