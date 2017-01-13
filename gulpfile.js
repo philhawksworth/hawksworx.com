@@ -5,7 +5,7 @@ var uglify      = require('gulp-uglify');
 var cssmin      = require('gulp-cssmin');
 var shell       = require('gulp-shell');
 var connect     = require('gulp-connect');
-var imagemin    = require('gulp-imagemin');
+// var imagemin    = require('gulp-imagemin');
 var yaml        = require('json2yaml');
 var fs          = require('fs');
 var http        = require('http');
@@ -143,7 +143,7 @@ gulp.task("comments", function() {
 
 
 // Build and optimise the site and serve it locally.
-gulp.task('build', ['jekyll', 'scripts', 'styles', 'images', 'configs']);
+gulp.task('build', ['jekyll', 'scripts', 'styles', 'configs']);
 
 
 // run a local server
