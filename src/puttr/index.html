@@ -50,9 +50,8 @@
   <form id="searchForm" action="." method="post" accept-charset="utf-8">
     <input type="search" id="search" name="search" value=""></input>
   </form>
-
   <div class="results">
-    <p class="count">{{results.length}} results</p>
+    <p class="count"></p>
     <ul></ul>
   </div>
   
@@ -73,9 +72,12 @@
                     var html = "";
                     $(d.results).each(function(){
                       console.log(this.title);
-                      html += "<li>"+ this.date_added + " - <a href='" + this.torrent_link +  "' class='magnet'>"+ this.title +"</a><p>"+ this.size+ " " + this.seeds + "(from " + this.source +")</p></li>";
+                      html += "<li>"+ this.date_added + 
+                        " - <a href='" + this.torrent_link + "' class='magnet'>"+ this.title + "</a>" + 
+                        "<p>"+ this.size+ " " + this.seeds + "(from " + this.source +")</p></li>";
                     })
                     $('.results ul').append(html);
+                    $('.count').append(d.results.length + " results");
                 }
             });    
         });
