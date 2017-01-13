@@ -1,6 +1,6 @@
 var gulp        = require('gulp');
 var gutil       = require('gulp-util');
-var jshint      = require('gulp-jshint');
+var jshint      = require('gulp-jshint'); 
 var uglify      = require('gulp-uglify');
 var cssmin      = require('gulp-cssmin');
 var shell       = require('gulp-shell');
@@ -70,6 +70,15 @@ gulp.task('images', function() {
 });
 
 
+
+// Ensure any config files make to the dist folder
+gulp.task('configs', () =>
+  gulp.src(['_redirects'])
+    .pipe(gulp.dest('dist'))
+);
+
+
+
 // List the available tasks
 gulp.task("tasks", function() {
   console.log("Available gulp tasks:");
@@ -134,7 +143,7 @@ gulp.task("comments", function() {
 
 
 // Build and optimise the site and serve it locally.
-gulp.task('build', ['jekyll', 'scripts', 'styles', 'images']);
+gulp.task('build', ['jekyll', 'scripts', 'styles', 'images', 'configs']);
 
 
 // run a local server
