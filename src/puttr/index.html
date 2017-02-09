@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>puttr</title>
+  <title>Puttr</title>
   <meta name=viewport content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
   <style type="text/css" media="screen">
@@ -46,42 +46,38 @@
   <script src="/js/jquery.min.js"></script>
 </head>
 <body>
-  
   <form id="searchForm" action="." method="post" accept-charset="utf-8">
-    <input type="search" id="search" name="search" value=""></input>
+    <input type="search" id="search" name="search"></input>
   </form>
   <div class="results">
     <p class="count"></p>
     <ul></ul>
   </div>
-  
   <script>
-    $('#search').focus();
 
-    // Ready to go.
     $(function() {
-    
-        $('#searchForm').submit(function(e){
-            e.preventDefault();
-            var searchString = $('#search').val();
-            $('.count').html("Searching...");
-            $.ajax({
-                dataType: "json",
-                url: "/puttr/api?search=" + searchString,
-                success: function(data){                    
-                    var d = JSON.parse(data.body);
-                    var html = "";
-                    $(d.results).each(function(){
-                      console.log(this.title);
-                      html += "<li>"+ this.date_added + 
-                        " - <a href='" + this.torrent_link + "' class='magnet'>"+ this.title + "</a>" + 
-                        "<p>"+ this.size+ " " + this.seeds + "(from " + this.source +")</p></li>";
-                    })
-                    $('.results ul').html(html);
-                    $('.count').html(d.results.length + " results");
-                }
-            });    
-        });
+
+      $('#search').focus();    
+      $('#searchForm').submit(function(e){
+        e.preventDefault();
+        var searchString = $('#search').val();
+        $('.count').html("Searching...");
+        $.ajax({
+            dataType: "json",
+            url: "/puttr/api?search=" + searchString,
+            success: function(data){                    
+                var d = JSON.parse(data.body);
+                var html = "";
+                $(d.results).each(function(){
+                  html += "<li>"+ this.date_added + 
+                    " - <a href='" + this.torrent_link + "' class='magnet'>"+ this.title + "</a>" + 
+                    "<p>"+ this.size+ " " + this.seeds + "(from " + this.source +")</p></li>";
+                })
+                $('.results ul').html(html);
+                $('.count').html(d.results.length + " results");
+            }
+        });    
+      });
 
     });
 

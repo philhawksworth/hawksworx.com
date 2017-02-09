@@ -1,11 +1,19 @@
 upcoming:
 
+  - name: TBA
+    location: "Leeds, England"
+    date: 2017-04-24 09:00:00 +0000
+
+  - name: TBA
+    location: "San Francisco, USA"
+    date: 2017-04-28 09:00:00 +0000
+
+previous:
+
   - name: JAMStack meetup
     location: "San Francisco, USA"
     date: 2016-11-09 19:00:00 +0000
     url: http://www.meetup.com/jamstack-sf/
-
-previous:
 
   - name: Fronteers
     location: "Amsterdam, Netherlands"
