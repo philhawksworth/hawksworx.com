@@ -116,11 +116,7 @@ gulp.task("comments", function() {
     res.on('end', function() {
       var comments = JSON.parse(body);
       var formatted = [];
-
-      // abstract to an external config file
-      var excluded = {
-        "58bbfc6671e20a278d458bf5": true
-      };
+      var excluded = require('./comment-exclusions.js');
 
       // format the comments object into something friendly for saving and serving.
       for (var i = 0; i < comments.length; i++) {
@@ -149,10 +145,8 @@ gulp.task("comments", function() {
         }
       }
 
-
       // include legacy comments for Poole
       var oldComments = fs.readFileSync('./src/_data/comments-poole.yml', {'encoding': 'utf8'} );
-      console.log(oldComments);
 
       // convert the json to yaml and save it for jekyll to use.
       var ymlText = yaml.stringify(formatted) + oldComments;
