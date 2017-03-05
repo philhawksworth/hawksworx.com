@@ -178,6 +178,7 @@ gulp.task("comments", function() {
 
 gulp.task('build', function(callback) {
   runSequence(
+    'comments',
     'jekyll',
     ['scripts', 'styles', 'configs'],
     callback
