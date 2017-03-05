@@ -3,5 +3,6 @@
 module.exports = {
     "58bbf9af668674165d061163": true,
     "58bc14bac4d9cc08f2ffa5aa": true,
-    "58bc18fe6686747c59d25f51": true
+    "58bc18fe6686747c59d25f51": true,
+    "58bc53f3d6865d278c39e82d": true
 };
