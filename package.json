@@ -4,6 +4,7 @@
   "description": "the personal blog of Phil Hawksworth",
   "main": "grunt.js",
   "dependencies": {
+    "dotenv": "^4.0.0",
     "gravatar": "~1.0.6",
     "gulp": "~3.8.1",
     "gulp-connect": "~2.0.5",

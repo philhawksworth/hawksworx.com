@@ -1,22 +1,3 @@
----
-  - 
-    _id: "58bbfdf5a7e2d24ef7919391"
-    created: "2017-03-05T12:00:53Z"
-    path: "/blog/isomorphic-rendering-on-the-jam-stack/"
-    name: "Really phil"
-    url: "hawksworx.com"
-    email: "phawksworth@gmail.com"
-    comment: "* foo\r\n* bar"
-    avatar: "http://www.gravatar.com/avatar/465724d73fe3a92c0879fdfb43a3a6f3?s=50&r=pg"
-  - 
-    _id: "58bbfaf36686746e64d25f44"
-    created: "2017-03-05T11:48:03Z"
-    path: "/blog/isomorphic-rendering-on-the-jam-stack/"
-    name: "Phil"
-    url: "hawksworx.com"
-    email: "phil@gmail.com"
-    comment: "foo bar"
-    avatar: "http://www.gravatar.com/avatar/31ba0a78f04a7480ae82e100b14d200d?s=50&r=pg"
   -
     _id: "MTQ5Mjc="
     comment: "Thanks for this - solves a major problem for static bloggers concerned about owning their comment data."
