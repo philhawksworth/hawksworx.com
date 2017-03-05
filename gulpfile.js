@@ -149,7 +149,10 @@ gulp.task("comments", function() {
       var oldComments = fs.readFileSync('./src/_data/comments-poole.yml', {'encoding': 'utf8'} );
 
       // convert the json to yaml and save it for jekyll to use.
-      var ymlText = yaml.stringify(formatted) + oldComments;
+      if(formatted.length){
+        var ymlText = yaml.stringify(formatted) + oldComments;
+      } else
+      var ymlText = oldComments;
       fs.writeFile('./src/_data/comments.yml', ymlText, function(err) {
         if(err) {
           console.log(err);

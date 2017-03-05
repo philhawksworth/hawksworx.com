@@ -1,13 +1,3 @@
----
-  - 
-    _id: "58bc18fe6686747c59d25f51"
-    created: "2017-03-05T13:56:14Z"
-    path: "/blog/progressive-enhancement-design-smackdown/"
-    name: "Phil"
-    url: "http://hawksworx.com"
-    email: "phawksworth@gmail.com"
-    comment: "a testing entry, to verify that the _live_ version of the form is accepting data\r\n"
-    avatar: "http://www.gravatar.com/avatar/465724d73fe3a92c0879fdfb43a3a6f3?s=50&r=pg"
   -
     _id: "MTQ5Mjc="
     comment: "Thanks for this - solves a major problem for static bloggers concerned about owning their comment data."
