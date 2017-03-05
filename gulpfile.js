@@ -116,6 +116,8 @@ gulp.task("comments", function() {
     res.on('end', function() {
       var comments = JSON.parse(body);
       var formatted = [];
+
+      // abstract to an external config file
       var excluded = {
         "58bbfc6671e20a278d458bf5": true
       };
@@ -143,8 +145,6 @@ gulp.task("comments", function() {
             //   delete thisComment.human_fields;
             // }
           }
-
-          console.log(formattedComment);
           formatted.push(formattedComment);
         }
       }
