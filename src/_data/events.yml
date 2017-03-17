@@ -4,9 +4,14 @@ upcoming:
     location: "Leeds, England"
     date: 2017-04-24 09:00:00 +0000
 
+  - name: Beyond Tellerand
+    location: "Düsseldorf, Germany"
+    date: 2017-05-15 09:00:00 +0000
+    url: https://beyondtellerrand.com/events/duesseldorf-2017
+
   - name: Front Trends
     location: "Warsaw, Poland"
-    date: 2017-04-24 09:00:00 +0000
+    date: 2017-05-24 09:00:00 +0000
     url: https://2017.front-trends.com
 
 previous:
