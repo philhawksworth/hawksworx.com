@@ -11,6 +11,7 @@ var fs          = require('fs');
 var http        = require('http');
 var gravatar    = require('gravatar');
 var runSequence = require('run-sequence');
+var Twitter     = require('twitter');
 
 // var htmlreplace = require('gulp-html-replace');
 
@@ -135,11 +136,6 @@ gulp.task("comments", function() {
           // add gravatar image links if available
           if(formattedComment.email) {
             formattedComment.avatar = gravatar.url(formattedComment.email, {s: '50', r: 'pg'});
-            // delete this regular spam pattern
-            // if(thisComment.human_fields.Email.substring(0, 4) == "http") {
-            //   console.log(thisComment.human_fields.Email);
-            //   delete thisComment.human_fields;
-            // }
           }
           formatted.push(formattedComment);
         }
@@ -169,10 +165,51 @@ gulp.task("comments", function() {
 });
 
 
+// Get the latest few tweets to include in some pages
+gulp.task('get:tweets', function() {
+
+  var client = new Twitter({
+    consumer_key: process.env.TWITTER_KEY,
+    consumer_secret: process.env.TWITTER_SECRET,
+    access_token_key: '',
+    access_token_secret: ''
+  });
+  var params = {screen_name: 'philhawksworth', count: 20};
+
+  client.get('statuses/user_timeline', params, function(error, tweets, response) {
+    if (!error) {
+      var recentTweets = [];
+      for(var tweet in tweets){
+        var t = {
+          text: tweets[tweet].text,
+          url: "https://twitter.com/philhawksworth/status/" + tweets[tweet].id_str,
+          date:  tweets[tweet].created_at,
+        };
+        // Not sharing direct mentions
+        if(t.text.charAt(0) !== "@"){
+          recentTweets.push(t);
+        }
+      }
+      // fs.writeFileSync('api/tweets.json', JSON.stringify(recentTweets));
+
+      var ymlText = yaml.stringify(recentTweets)
+      fs.writeFile('./src/_data/tweets.yml', ymlText, function(err) {
+        if(err) {
+          console.log(err);
+        } else {
+          console.log("Tweets data saved.");
+        }
+      });
+
+    }
+  });
+
+});
+
+
+
 
 // Build and optimise the site and serve it locally.
-// gulp.task('build', ['jekyll', 'scripts', 'styles', 'configs']);
-
 gulp.task('build', function(callback) {
   runSequence(
     'comments',
@@ -181,7 +218,6 @@ gulp.task('build', function(callback) {
     callback
   );
 });
-
 
 
 // run a local server

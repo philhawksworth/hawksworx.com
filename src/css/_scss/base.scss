@@ -364,6 +364,17 @@ blockquote {
   margin:2em 0 0;
   vertical-align: top;
   position:relative;
+
+    h2 {
+      margin-top:1em;
+    }
+    h2:first-of-type {
+      margin-top: 0;
+    }
+
+    ul {
+      list-style:none;
+    }
 }
 
 .face {
@@ -517,6 +528,17 @@ ul.comments {
 
 .lobsterpot input {
   border-style: none;
+}
+
+
+ul.tweets {
+  li {
+    margin-bottom: 1em;
+  }
+  time {
+    font-style: italic;
+    display: block;
+  }
 }
 
 
