@@ -95,7 +95,7 @@ gulp.task("tasks", function() {
 
 
 // Get comments form Poole
-gulp.task("comments", function() {
+gulp.task("get:comments", function() {
 
   console.log("Getting comments data");
 
@@ -190,7 +190,6 @@ gulp.task('get:tweets', function() {
           recentTweets.push(t);
         }
       }
-      // fs.writeFileSync('api/tweets.json', JSON.stringify(recentTweets));
 
       var ymlText = yaml.stringify(recentTweets)
       fs.writeFile('./src/_data/tweets.yml', ymlText, function(err) {
@@ -212,7 +211,8 @@ gulp.task('get:tweets', function() {
 // Build and optimise the site and serve it locally.
 gulp.task('build', function(callback) {
   runSequence(
-    'comments',
+    'get:comments',
+    'get:tweets',
     'jekyll',
     ['scripts', 'styles', 'configs'],
     callback
