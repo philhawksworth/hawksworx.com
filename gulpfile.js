@@ -211,7 +211,6 @@ gulp.task('get:tweets', function() {
 // Build and optimise the site and serve it locally.
 gulp.task('build', function(callback) {
   runSequence(
-    'get:comments',
     'get:tweets',
     'jekyll',
     ['scripts', 'styles', 'configs'],
