@@ -1,20 +1,31 @@
 upcoming:
 
   - name: TBA
-    location: "Leeds, England"
-    date: 2017-04-24 09:00:00 +0000
+    location: "Germany"
+    date: 2017-09-11 09:00:00 +0000
+    url: https://2017.front-trends.com
 
-  - name: Beyond Tellerrand
-    location: "Düsseldorf, Germany"
-    date: 2017-05-15 09:00:00 +0000
-    url: https://beyondtellerrand.com/events/duesseldorf-2017
+previous:
 
   - name: Front Trends
     location: "Warsaw, Poland"
     date: 2017-05-24 09:00:00 +0000
     url: https://2017.front-trends.com
 
-previous:
+  - name: Beyond Tellerrand
+    location: "Düsseldorf, Germany"
+    date: 2017-05-15 09:00:00 +0000
+    url: https://beyondtellerrand.com/events/duesseldorf-2017
+
+  - name: Contentful meetup
+    location: "London, UK"
+    date: 2016-05-10 19:00:00 +0000
+    url: https://www.meetup.com/meetup-group-qCrvByhz/events/239172315/
+
+  - name: All Day Hey
+    location: "Leeds, England"
+    date: 2017-04-24 09:00:00 +0000
+    url: https://heyst.ac/all-day
 
   - name: JAMStack meetup
     location: "San Francisco, USA"

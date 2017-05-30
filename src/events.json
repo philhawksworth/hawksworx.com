@@ -1,0 +1,13 @@
+---
+---
+
+[
+{% for item in site.data.events.previous %}
+	{
+		"date" : "{{ item.date | date_to_xmlschema }}",
+		"name" : "{{ item.name }}",
+		"url" : "{{ item.url }}",
+		"location" : "{{ item.location }}"
+	},
+{% endfor %}
+]
