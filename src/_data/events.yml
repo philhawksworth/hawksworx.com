@@ -1,9 +1,12 @@
 upcoming:
 
   - name: TBA
+    location: "Linz, Austria"
+    date: 2018-01-26 09:00:00 +0000
+
+  - name: TBA
     location: "Germany"
     date: 2017-09-11 09:00:00 +0000
-    url: https://2017.front-trends.com
 
 previous:
 
