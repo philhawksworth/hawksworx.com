@@ -165,6 +165,83 @@ gulp.task("get:comments", function() {
 });
 
 
+// Get comments form Poole
+gulp.task("get:magnets", function() {
+
+  console.log("Getting magnets data");
+
+  var token = process.env.NETLIFY_TOKEN;;
+  var formID = "58a82ac5a7e2d225d7b81df4";
+
+  var options = {
+    hostname: 'api.netlify.com',
+    port: 80,
+    path: '/api/v1/forms/'+ formID +'/submissions?access_token=' + token,
+    method: 'GET'
+  };
+
+  http.get(options, function(res) {
+    var body = '';
+    res.on('data', function(chunk) {
+      body += chunk;
+    });
+    res.on('end', function() {
+      var magents = JSON.parse(body);
+      var formatted = [];
+
+      // format the comments object into something friendly for saving and serving.
+      for (var i = 0; i < magents.length; i++) {
+
+        var thisMagent = magents[i];
+        console.log(thisMagent);
+
+        // exclude any comments flagged for deletion (while Netlify don't support deleting submissions)
+        // if(!excluded[thisComment.id]) {
+
+        //   var formattedComment = {};
+        //   formattedComment._id = thisComment.id;
+        //   formattedComment.created = thisComment.created_at;
+        //   for(var field in thisComment.human_fields) {
+        //     formattedComment[field.toLowerCase()] = thisComment.human_fields[field];
+        //   }
+        //   // add gravatar image links if available
+        //   if(formattedComment.email) {
+        //     formattedComment.avatar = gravatar.url(formattedComment.email, {s: '50', r: 'pg'});
+        //   }
+        //   formatted.push(formattedComment);
+        // }
+      }
+
+      // include legacy comments for Poole
+      // var oldComments = fs.readFileSync('./src/_data/comments-poole.yml', {'encoding': 'utf8'} );
+
+      // // convert the json to yaml and save it for jekyll to use.
+      // if(formatted.length){
+      //   var ymlText = yaml.stringify(formatted) + oldComments;
+      // } else
+      // var ymlText = oldComments;
+      // fs.writeFile('./src/_data/comments.yml', ymlText, function(err) {
+      //   if(err) {
+      //     console.log(err);
+      //   } else {
+      //     console.log("Comments data saved.");
+      //   }
+      // });
+
+    });
+  }).on('error', function(e) {
+    console.log("Got error: ", e);
+  });
+
+});
+
+
+
+
+
+
+
+
 // Get the latest few tweets to include in some pages
 gulp.task('get:tweets', function() {
 
