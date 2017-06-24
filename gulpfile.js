@@ -12,6 +12,7 @@ var http        = require('http');
 var gravatar    = require('gravatar');
 var runSequence = require('run-sequence');
 var Twitter     = require('twitter');
+const qs = require('qs')
 
 // var htmlreplace = require('gulp-html-replace');
 
@@ -165,13 +166,13 @@ gulp.task("get:comments", function() {
 });
 
 
-// Get comments form Poole
+// Get magnet files previously downlaoded to Put.io
 gulp.task("get:magnets", function() {
 
   console.log("Getting magnets data");
 
   var token = process.env.NETLIFY_TOKEN;;
-  var formID = "58a82ac5a7e2d225d7b81df4";
+  var formID = "594e98b9d9c76768c45c5bb2";
 
   var options = {
     hostname: 'api.netlify.com',
@@ -186,47 +187,31 @@ gulp.task("get:magnets", function() {
       body += chunk;
     });
     res.on('end', function() {
-      var magents = JSON.parse(body);
-      var formatted = [];
+      var magnets = JSON.parse(body);
+      var store = [];
+      var index = {};
 
       // format the comments object into something friendly for saving and serving.
-      for (var i = 0; i < magents.length; i++) {
-
-        var thisMagent = magents[i];
-        console.log(thisMagent);
-
-        // exclude any comments flagged for deletion (while Netlify don't support deleting submissions)
-        // if(!excluded[thisComment.id]) {
-
-        //   var formattedComment = {};
-        //   formattedComment._id = thisComment.id;
-        //   formattedComment.created = thisComment.created_at;
-        //   for(var field in thisComment.human_fields) {
-        //     formattedComment[field.toLowerCase()] = thisComment.human_fields[field];
-        //   }
-        //   // add gravatar image links if available
-        //   if(formattedComment.email) {
-        //     formattedComment.avatar = gravatar.url(formattedComment.email, {s: '50', r: 'pg'});
-        //   }
-        //   formatted.push(formattedComment);
-        // }
+      for (var i = 0; i < magnets.length; i++) {
+        if(magnets[i].number > 3) {
+          var payload = qs.parse(magnets[i].data.payload);
+          var hash = payload.source.split("dn=")[0]
+          if (!index[hash]) {
+            store.push(payload);
+            index[hash] = true;
+          }
+        }
       }
 
-      // include legacy comments for Poole
-      // var oldComments = fs.readFileSync('./src/_data/comments-poole.yml', {'encoding': 'utf8'} );
+      var ymlText = yaml.stringify(store);
+      fs.writeFile('./src/_data/magnets.yml', ymlText, function(err) {
+        if(err) {
+          console.log(err);
+        } else {
+          console.log("Magnets data saved.");
+        }
+      });
 
-      // // convert the json to yaml and save it for jekyll to use.
-      // if(formatted.length){
-      //   var ymlText = yaml.stringify(formatted) + oldComments;
-      // } else
-      // var ymlText = oldComments;
-      // fs.writeFile('./src/_data/comments.yml', ymlText, function(err) {
-      //   if(err) {
-      //     console.log(err);
-      //   } else {
-      //     console.log("Comments data saved.");
-      //   }
-      // });
 
     });
   }).on('error', function(e) {
@@ -234,10 +219,6 @@ gulp.task("get:magnets", function() {
   });
 
 });
-
-
-
-
 
 
 
@@ -289,6 +270,7 @@ gulp.task('get:tweets', function() {
 gulp.task('build', function(callback) {
   runSequence(
     'get:tweets',
+    'get:magnets',
     'jekyll',
     ['scripts', 'styles', 'configs'],
     callback
