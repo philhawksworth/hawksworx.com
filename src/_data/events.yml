@@ -1,10 +1,11 @@
 upcoming:
 
-  - name: TBA
+  - name: Coldfront (MC)
     location: "Copenhagen, Denmark"
     date: 2017-09-07 09:00:00 +0000
+    url: https://2017.coldfront.co
 
-  - name: TBA
+  - name: Smashing Conference (MC)
     location: "Freiburg, Germany"
     date: 2017-09-11 09:00:00 +0000
 
@@ -12,13 +13,13 @@ upcoming:
     location: "Linz, Austria"
     date: 2018-01-26 09:00:00 +0000
 
-  - name: TBA
+  - name: TBA (MC)
     location: "Leeds, UK"
     date: 2018-04-30 09:00:00 +0000
 
 previous:
 
-  - name: Front Trends
+  - name: Front Trends (Talk and MC)
     location: "Warsaw, Poland"
     date: 2017-05-24 09:00:00 +0000
     url: https://2017.front-trends.com
@@ -30,10 +31,10 @@ previous:
 
   - name: Contentful meetup
     location: "London, UK"
-    date: 2016-05-10 19:00:00 +0000
+    date: 2017-05-10 19:00:00 +0000
     url: https://www.meetup.com/meetup-group-qCrvByhz/events/239172315/
 
-  - name: All Day Hey
+  - name: All Day Hey (MC)
     location: "Leeds, UK"
     date: 2017-04-24 09:00:00 +0000
     url: https://heyst.ac/all-day
@@ -43,7 +44,7 @@ previous:
     date: 2016-11-09 19:00:00 +0000
     url: http://www.meetup.com/jamstack-sf/
 
-  - name: Fronteers
+  - name: Fronteers (MC)
     location: "Amsterdam, Netherlands"
     date: 2016-10-06 09:00:00 +0000
     url: http://fronteers.nl/congres/2016
@@ -67,6 +68,11 @@ previous:
     location: "Warsaw, Poland"
     date: 2016-05-18 09:00:00 +0000
     url: http://2016.front-trends.com
+
+  - name: Fronteers Spring (MC)
+    location: "Amsterdam, Netherlands"
+    date: 2016-04-01 09:00:00 +0000
+    url: https://fronteers.nl/congres/2016-spring
 
   - name: Enhance Conference
     location: "London, England"
