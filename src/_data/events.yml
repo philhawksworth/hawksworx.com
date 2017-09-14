@@ -1,24 +1,28 @@
 upcoming:
 
-  - name: Coldfront (MC)
-    location: "Copenhagen, Denmark"
-    date: 2017-09-07 09:00:00 +0000
-    url: https://2017.coldfront.co
-
-  - name: Smashing Conference (MC)
-    location: "Freiburg, Germany"
-    date: 2017-09-11 09:00:00 +0000
-    url: https://smashingconf.com/freiburg-2017/
-
   - name: TBA
     location: "Linz, Austria"
     date: 2018-01-26 09:00:00 +0000
+
+  - name: TBA
+    location: "London, UK"
+    date: 2018-02-07 09:00:00 +0000
 
   - name: TBA (MC)
     location: "Leeds, UK"
     date: 2018-04-30 09:00:00 +0000
 
 previous:
+
+  - name: Smashing Conference (MC)
+    location: "Freiburg, Germany"
+    date: 2017-09-11 09:00:00 +0000
+    url: https://smashingconf.com/freiburg-2017/
+
+  - name: Coldfront (MC)
+    location: "Copenhagen, Denmark"
+    date: 2017-09-07 09:00:00 +0000
+    url: https://2017.coldfront.co
 
   - name: Front Trends (Talk and MC)
     location: "Warsaw, Poland"
