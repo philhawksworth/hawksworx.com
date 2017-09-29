@@ -1,8 +1,9 @@
 upcoming:
 
-  - name: TBA
+  - name: ScriptConf
     location: "Linz, Austria"
     date: 2018-01-26 09:00:00 +0000
+    url: https://scriptconf.org/
 
   - name: TBA
     location: "London, UK"
