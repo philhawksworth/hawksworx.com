@@ -5,7 +5,6 @@ var runSequence   = require('run-sequence');
 var hash          = require("gulp-hash");
 var del           = require("del");
 var execFile      = require("child_process").execFile;
-var hugo          = require('hugo-bin');
 var Pageres       = require('pageres');
 
 
@@ -41,8 +40,8 @@ gulp.task("watch", ["scss"], function () {
 gulp.task("cards", function () {
   // return gulp.src('public/**/card.html')
   var pageres = new Pageres({})
-    .src('./public/blog/ttfn-rga/card.html', ['800x140'], {scale: 2})
-    .src('./public/blog/isomorphic-rendering-on-the-jam-stack/card.html', ['800x140'], {scale: 2})
+    .src('./dist/blog/ttfn-rga/card.html', ['800x140'], {scale: 2})
+    .src('./dist/blog/isomorphic-rendering-on-the-jam-stack/card.html', ['800x140'], {scale: 2})
     .dest(__dirname)
     .run()
     .then(() => console.log('done'));
@@ -52,11 +51,12 @@ gulp.task("cards", function () {
 
 // Run a complete build
 gulp.task("generate", function () {
-  del(["dist"]);
+  // del(["dist"]);
   return execFile('hugo', function (err, stdout, stderr) {
     console.log(stdout); // See Hugo output
   });
 });
+
 
 
 gulp.task('build', function(callback) {
