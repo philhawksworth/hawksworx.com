@@ -1,7 +1,7 @@
 <div class="post content">
   <div class="container">
     <p class="publish-date">{{ .PublishDate.Format "2 January, 2006" }}</p>
-    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+    <h3><a href="{{ .URL }}">{{ .Title }}</a></h3>
     <p class="excerpt">
       {{ .Summary | markdownify }}
     </p>
