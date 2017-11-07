@@ -8,13 +8,11 @@ var execFile      = require("child_process").execFile;
 var Pageres       = require('pageres');
 
 
-
-
 // Compile SCSS files to CSS
 gulp.task("scss", function () {
 
   //Delete our old css files
-  del(["themes/simple-starter/static/css/**/*"])
+  // del(["themes/simple-starter/static/css/**/*"])
 
   //compile hashed css files
   gulp.src("src/scss/main.scss")
@@ -29,6 +27,7 @@ gulp.task("scss", function () {
     .pipe(hash.manifest("hash.json"))
     .pipe(gulp.dest("data/css"))
 });
+
 
 // Watch asset folder for changes
 gulp.task("watch", ["scss"], function () {
