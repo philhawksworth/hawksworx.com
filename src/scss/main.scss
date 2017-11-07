@@ -236,7 +236,6 @@ a.scroll-hint:hover {
   padding-top:0em;
   padding-bottom:3em;
   h3 {
-    margin-top:1em;
     margin-bottom:1em;
     font-size: 20px;
     line-height: 1.2em;
@@ -313,6 +312,10 @@ a.scroll-hint:hover {
 
   margin-bottom: 10em;
 
+  h2 {
+    margin-bottom:0em;
+  }
+
   ul {
     list-style: none;
     margin-left: -2em;
@@ -327,8 +330,17 @@ a.scroll-hint:hover {
   }
   .talk {
     border-top: solid 1px #eee;
-    padding-top:1em;
-    padding-bottom:1em;
+    padding-top:1.5em;
+    padding-bottom:1.5em;
+    .publish-date {
+      margin-bottom: -0.4em;
+    }
+    h3 {
+      display: inline-block;
+    }
+    span {
+      margin-left:0.5em;
+    }
   }
   .talk:first-of-type {
     border-top: none;

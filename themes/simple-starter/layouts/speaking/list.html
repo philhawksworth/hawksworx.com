@@ -8,27 +8,29 @@
 {{ end }}
 
 {{ define "main" }}
-<div class="container listing content">
+<div class="container content">
 
   {{ .Content }}
 
-  <h2>Upcoming</h2>
-  <ul>
-    {{ range sort .Site.Data.speaking.events "date" "asc" }}
+  <div class="listing">
+    <h2>Upcoming events</h2>
+    <ul>
+      {{ range sort .Site.Data.speaking.events "date" "asc" }}
       {{ if (time .date).After now }}
-        {{ partial "talk.html" . }}
+      {{ partial "talk.html" . }}
       {{ end }}
-    {{ end }}
-  </ul>
+      {{ end }}
+    </ul>
 
-  <h2>Previously</h2>
-  <ul>
-    {{ range .Site.Data.speaking.events }}
+    <h2>Previous events</h2>
+    <ul>
+      {{ range .Site.Data.speaking.events }}
       {{ if (time .date).Before now }}
-        {{ partial "talk.html" . }}
+      {{ partial "talk.html" . }}
       {{ end }}
-    {{ end }}
-  </ul>
+      {{ end }}
+    </ul>
+  </div>
 </div>
 {{ end }}
 

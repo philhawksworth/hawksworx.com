@@ -15,16 +15,18 @@
         {{ end }}
       </ul>
     </div>
-    <div class="container listing">
+    <div class="container ">
       <h2>Upcoming talks</h2>
       <p>I'll be speaking at these events soon. For information on more upcoming events, coverage or previous events, or on infoprmation on booking me to speak at your event, visit the <a href="/speaking">speaking</a> page.</p>
-      <ul>
-        {{ range sort .Site.Data.speaking.events "date" "asc" }}
-          {{ if (time .date).After now }}
-            {{ partial "talk.html" . }}
+      <div class="listing">
+        <ul>
+          {{ range sort .Site.Data.speaking.events "date" "asc" }}
+            {{ if (time .date).After now }}
+              {{ partial "talk.html" . }}
+            {{ end }}
           {{ end }}
-        {{ end }}
-      </ul>
+        </ul>
+      </div>
     </div>
   </div>
   {{ end }}
