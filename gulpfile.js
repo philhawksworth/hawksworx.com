@@ -1,291 +1,61 @@
-var gulp        = require('gulp');
-var gutil       = require('gulp-util');
-var jshint      = require('gulp-jshint');
-var uglify      = require('gulp-uglify');
-var cssmin      = require('gulp-cssmin');
-var shell       = require('gulp-shell');
-var connect     = require('gulp-connect');
-// var imagemin    = require('gulp-imagemin');
-var yaml        = require('json2yaml');
-var fs          = require('fs');
-var http        = require('http');
-var gravatar    = require('gravatar');
-var runSequence = require('run-sequence');
-var Twitter     = require('twitter');
-const qs = require('qs')
-
-// var htmlreplace = require('gulp-html-replace');
-
-// load environment variables
-require('dotenv').config()
-
-var paths = {
-  source: '_site',
-  deploy: 'dist'
-};
+var gulp          = require("gulp");
+var sass          = require("gulp-sass");
+var autoprefixer  = require("gulp-autoprefixer");
+var hash          = require("gulp-hash");
+var del           = require("del");
+var execFile      = require("child_process").execFile;
+var hugo          = require('hugo-bin');
+var Pageres       = require('pageres');
 
 
-// Minify and copy all JavaScript (except third party scripts)
-// then concat the scripts
-gulp.task('scripts', function() {
 
-  // gulp.src('index.html')
-  //   .pipe(htmlreplace({
-  //     'js': 'js/hawksworx.min.js'
-  // }));
 
-  return gulp.src([paths.source + '/js/**/*.js', '!'+ paths.source + '/js/jquery.min.js'])
-    .pipe(uglify())
-    .pipe(gulp.dest(paths.deploy + '/js/'));
+// Compile SCSS files to CSS
+gulp.task("scss", function () {
 
+  //Delete our old css files
+  del(["themes/simple-starter/static/css/**/*"])
+
+  //compile hashed css files
+  gulp.src("src/scss/main.scss")
+    .pipe(sass({
+      outputStyle: "compressed"
+    }).on('error', sass.logError))
+    .pipe(autoprefixer({
+      browsers: ["last 10 versions"]
+    }))
+    .pipe(hash())
+    .pipe(gulp.dest("themes/simple-starter/static/css"))
+    .pipe(hash.manifest("hash.json"))
+    .pipe(gulp.dest("data/css"))
+});
+
+// Watch asset folder for changes
+gulp.task("watch", ["scss"], function () {
+  gulp.watch("src/scss/**/*", ["scss"])
 });
 
 
-// Minify and copy all CSS
-gulp.task('styles', function() {
-  return gulp.src(paths.source + '/css/*.css')
-    .pipe(cssmin())
-    .pipe(gulp.dest(paths.deploy + '/css/'));
-});
-
-
-// lint the javascripts (except third party scripts)
-gulp.task('lint', function () {
-  return gulp.src([paths.source + '/js/**/*.js'])
-    .pipe(jshint('.jshintrc'))
-    .pipe(jshint.reporter('jshint-stylish'));
-});
-
-
-// build jekyll
-gulp.task('jekyll', function() {
-  return gulp.src('', {quiet: false})
-    .pipe(shell([
-      'rm -rf ' + paths.deploy,
-      'jekyll build',
-      'cp -R _site/ ' + paths.deploy
-    ]));
-});
-
-
-// optim images
-gulp.task('images', function() {
- return gulp.src(paths.src + '/images/**')
-    .pipe(imagemin({optimizationLevel: 5}))
-    .pipe(gulp.dest(paths.deploy + '/images/'));
+// Generate social media assets
+gulp.task("cards", function () {
+  // return gulp.src('public/**/card.html')
+  var pageres = new Pageres({})
+    .src('./public/blog/ttfn-rga/card.html', ['800x140'], {scale: 2})
+    .src('./public/blog/isomorphic-rendering-on-the-jam-stack/card.html', ['800x140'], {scale: 2})
+    .dest(__dirname)
+    .run()
+    .then(() => console.log('done'));
 });
 
 
 
-// Ensure any config files make to the dist folder
-gulp.task('configs', () =>
-  gulp.src(['_redirects'])
-    .pipe(gulp.dest('dist'))
-);
-
-
-
-// List the available tasks
-gulp.task("tasks", function() {
-  console.log("Available gulp tasks:");
-  var t = Object.keys(gulp.tasks);
-  for (var i = t.length - 1; i >= 0; i--) {
-    console.log("  gulp", t[i]);
-  }
-});
-
-
-// Get comments form Poole
-gulp.task("get:comments", function() {
-
-  console.log("Getting comments data");
-
-  var token = process.env.NETLIFY_TOKEN;
-  var formID = process.env.FORM_ID;
-
-  var options = {
-    hostname: 'api.netlify.com',
-    port: 80,
-    path: '/api/v1/forms/'+ formID +'/submissions?access_token=' + token,
-    method: 'GET'
-  };
-
-  http.get(options, function(res) {
-    var body = '';
-    res.on('data', function(chunk) {
-      body += chunk;
-    });
-    res.on('end', function() {
-      var comments = JSON.parse(body);
-      var formatted = [];
-      var excluded = require('./comment-exclusions.js');
-
-      // format the comments object into something friendly for saving and serving.
-      for (var i = 0; i < comments.length; i++) {
-
-        var thisComment = comments[i];
-
-        // exclude any comments flagged for deletion (while Netlify don't support deleting submissions)
-        if(!excluded[thisComment.id]) {
-
-          var formattedComment = {};
-          formattedComment._id = thisComment.id;
-          formattedComment.created = thisComment.created_at;
-          for(var field in thisComment.human_fields) {
-            formattedComment[field.toLowerCase()] = thisComment.human_fields[field];
-          }
-          // add gravatar image links if available
-          if(formattedComment.email) {
-            formattedComment.avatar = gravatar.url(formattedComment.email, {s: '50', r: 'pg'});
-          }
-          formatted.push(formattedComment);
-        }
-      }
-
-      // include legacy comments for Poole
-      var oldComments = fs.readFileSync('./src/_data/comments-poole.yml', {'encoding': 'utf8'} );
-
-      // convert the json to yaml and save it for jekyll to use.
-      if(formatted.length){
-        var ymlText = yaml.stringify(formatted) + oldComments;
-      } else
-      var ymlText = oldComments;
-      fs.writeFile('./src/_data/comments.yml', ymlText, function(err) {
-        if(err) {
-          console.log(err);
-        } else {
-          console.log("Comments data saved.");
-        }
-      });
-
-    });
-  }).on('error', function(e) {
-    console.log("Got error: ", e);
-  });
-
-});
-
-
-// Get magnet files previously downlaoded to Put.io
-gulp.task("get:magnets", function() {
-
-  console.log("Getting magnets data");
-
-  var token = process.env.NETLIFY_TOKEN;;
-  var formID = "594e98b9d9c76768c45c5bb2";
-
-  var options = {
-    hostname: 'api.netlify.com',
-    port: 80,
-    path: '/api/v1/forms/'+ formID +'/submissions?access_token=' + token,
-    method: 'GET'
-  };
-
-  http.get(options, function(res) {
-    var body = '';
-    res.on('data', function(chunk) {
-      body += chunk;
-    });
-    res.on('end', function() {
-      var magnets = JSON.parse(body);
-      var store = [];
-      var index = {};
-
-      // format the comments object into something friendly for saving and serving.
-      for (var i = 0; i < magnets.length; i++) {
-        if(magnets[i].number > 3) {
-          var payload = qs.parse(magnets[i].data.payload);
-          var hash = payload.source.split("dn=")[0]
-          if (!index[hash]) {
-            store.push(payload);
-            index[hash] = true;
-          }
-        }
-      }
-
-      var ymlText = yaml.stringify(store);
-      fs.writeFile('./src/_data/magnets.yml', ymlText, function(err) {
-        if(err) {
-          console.log(err);
-        } else {
-          console.log("Magnets data saved.");
-        }
-      });
-
-
-    });
-  }).on('error', function(e) {
-    console.log("Got error: ", e);
-  });
-
-});
-
-
-
-
-// Get the latest few tweets to include in some pages
-gulp.task('get:tweets', function() {
-
-  var client = new Twitter({
-    consumer_key: process.env.TWITTER_KEY,
-    consumer_secret: process.env.TWITTER_SECRET,
-    access_token_key: '',
-    access_token_secret: ''
-  });
-  var params = {screen_name: 'philhawksworth', count: 20};
-
-  client.get('statuses/user_timeline', params, function(error, tweets, response) {
-    if (!error) {
-      var recentTweets = [];
-      for(var tweet in tweets){
-        var t = {
-          text: tweets[tweet].text,
-          url: "https://twitter.com/philhawksworth/status/" + tweets[tweet].id_str,
-          date:  tweets[tweet].created_at,
-        };
-        // Not sharing direct mentions
-        if(t.text.charAt(0) !== "@"){
-          recentTweets.push(t);
-        }
-      }
-
-      var ymlText = yaml.stringify(recentTweets)
-      fs.writeFile('./src/_data/tweets.yml', ymlText, function(err) {
-        if(err) {
-          console.log(err);
-        } else {
-          console.log("Tweets data saved.");
-        }
-      });
-
-    }
-  });
-
-});
-
-
-
-
-// Build and optimise the site and serve it locally.
-gulp.task('build', function(callback) {
-  runSequence(
-    'get:tweets',
-    'get:magnets',
-    'jekyll',
-    ['scripts', 'styles', 'configs'],
-    callback
-  );
-});
-
-
-// run a local server
-gulp.task('serve', ['build'], function() {
-  connect.server({
-  root: paths.deploy,
-  port: 8000,
+// Run a complete build
+gulp.task("build", ["scss"], function () {
+  del(["public"]);
+  return execFile('hugo', function (err, stdout, stderr) {
+    console.log(stdout); // See Hugo output
   });
 });
 
-
-// The default task.
-gulp.task('default', ['build']);
+// Set watch as default task
+gulp.task("default", ["watch"]);

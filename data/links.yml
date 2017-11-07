@@ -1,0 +1,41 @@
+public:
+
+  - title: Dev.to
+    url: https://dev.to/
+    date: 2017-11-06 14:42:52
+    comment: An interesting looking and lively technical discussion site
+    tags:
+      - community
+
+  - title: Airtable
+    url: https://airtable.com/
+    date: 2017-11-05 13:11:39
+    comment: Airtable works like a spreadsheet but gives you the power of a database to organize anything. Sign up for free.
+    tags:
+      - cloud
+      - database
+      - service
+
+  - title: Gatsby
+    url: https://www.gatsbyjs.org/
+    date: 2017-11-06 07:59:54
+    comment: A static site generator which uses React and provides both pre-rendering and client-side hydration. Some interesting bonuses included such as easy service worker support and GraphQL built in for provising templates with their data.
+    tags:
+      - jamstack
+      - ssg
+
+  - title: VS Code Insert Date String
+    url: https://marketplace.visualstudio.com/items?itemName=jsynowiec.vscode-insertdatestring
+    date: 2017-11-05 13:11:42
+    comment: A handy and configurable VS Code extension to insert formatted date strings.
+    tags:
+      - tools
+      - vscode
+
+  - title: Notist
+    url: https://noti.st/
+    date: 2017-11-05 14:08:45
+    comment: A new resource for conference speakers and attendees. Hoping that this will grow to replace the now dusty Lanyrd site which Eventbright appear to have mothballed.
+    tags:
+      - service
+      - conferences

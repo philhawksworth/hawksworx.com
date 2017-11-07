@@ -1,41 +1,26 @@
 {
-  "name": "hawksworx.com",
-  "version": "0.0.1",
-  "description": "the personal blog of Phil Hawksworth",
-  "main": "grunt.js",
-  "dependencies": {
-    "dotenv": "^4.0.0",
-    "gravatar": "~1.0.6",
-    "gulp": "~3.8.1",
-    "gulp-connect": "~2.0.5",
-    "gulp-cssmin": "~0.1.6",
-    "gulp-html-replace": "~1.1.0",
-    "gulp-imagemin": "~0.6.1",
-    "gulp-jshint": "~1.6.3",
-    "gulp-prompt": "~0.1.1",
-    "gulp-shell": "~0.2.7",
-    "gulp-uglify": "~0.3.1",
-    "gulp-util": "~2.2.17",
-    "json2yaml": "~1.0.3",
-    "qs": "^6.4.0",
-    "run-sequence": "^1.2.2",
-    "twitter": "^1.7.0"
-  },
-  "engines": {
-    "node": ">=0.8.x"
-  },
+  "name": "HugoBoilerplate",
+  "version": "1.0.0",
+  "description": "Useful to help me get new hugo site builds up and running quickly",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build",
+    "watch": "gulp watch",
+    "scss": "gulp scss",
+    "cards": "gulp cards"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/philhawksworth/hawksworx.com.git"
-  },
-  "keywords": [
-    "blog",
-    "jekyll",
-    "static"
-  ],
+  "keywords": [],
   "author": "Phil Hawksworth",
-  "license": "MIT"
+  "license": "ISC",
+  "devDependencies": {
+    "child_process": "^1.0.2",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-hash": "^4.1.1",
+    "gulp-sass": "^3.1.0",
+    "hugo-bin": "^0.17.0",
+    "pageres": "^4.5.1"
+  }
 }

@@ -1,0 +1,27 @@
+
+{{ define "hero" }}
+<div class="hero hero-{{ .Params.section }}">
+    <div class="container">
+      <p class="publish-date">{{ .PublishDate.Format "2 January, 2006" }}</p>
+      <h1>{{ .Title }}</h1>
+      <div class="tags">
+        tagged:
+        <ul>
+        {{ range .Params.tags }}
+          <li><a href="/blog/tags/{{ . }}">{{ . }}</a></li>
+        {{ end }}
+        </ul>
+      </div>
+    </div>
+  </div>
+{{ end }}
+
+{{ define "main" }}
+  <div class="content container post-content">
+    {{ .Content }}
+  </div>
+{{ end }}
+
+
+
+

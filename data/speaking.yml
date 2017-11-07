@@ -1,0 +1,294 @@
+events:
+
+  - name: TBA (MC)
+    location: "Leeds, UK"
+    date: 2018-04-30T09:00:00Z
+    countrycode: gb-eng
+
+  - name: Smashing Conference
+    location: "London, UK"
+    date: 2018-02-07T09:00:00Z
+    url: https://smashingconf.com/london-2018/
+    countrycode: gb-eng
+
+  - name: ScriptConf
+    location: "Linz, Austria"
+    date: 2018-01-19T09:00:00Z
+    url: https://scriptconf.org/
+    countrycode: at
+
+  - name: Smashing Conference (MC)
+    location: "Freiburg, Germany"
+    date: 2017-09-11T09:00:00Z
+    url: https://smashingconf.com/freiburg-2017/
+    countrycode: de
+
+  - name: Coldfront (MC)
+    location: "Copenhagen, Denmark"
+    date: 2017-09-07T09:00:00Z
+    url: https://2017.coldfront.co
+    countrycode: dk
+
+  - name: Front Trends (Talk and MC)
+    location: "Warsaw, Poland"
+    date: 2017-05-24T09:00:00Z
+    url: https://2017.front-trends.com
+    countrycode: pl
+
+  - name: Beyond Tellerrand
+    location: "Düsseldorf, Germany"
+    date: 2017-05-15T09:00:00Z
+    url: https://beyondtellerrand.com/events/duesseldorf-2017
+    countrycode: de
+
+  - name: Contentful meetup
+    location: "London, UK"
+    date: 2017-05-10T19:00:00Z
+    url: https://www.meetup.com/meetup-group-qCrvByhz/events/239172315/
+    countrycode: gb-eng
+
+  - name: All Day Hey (MC)
+    location: "Leeds, UK"
+    date: 2017-04-24T09:00:00Z
+    url: https://heyst.ac/all-day
+    countrycode: gb-eng
+
+  - name: JAMStack meetup
+    location: "San Francisco, USA"
+    date: 2016-11-09 19:00:00Z
+    url: http://www.meetup.com/jamstack-sf/
+    countrycode: us
+
+  - name: Fronteers (MC)
+    location: "Amsterdam, Netherlands"
+    date: 2016-10-06T09:00:00Z
+    url: http://fronteers.nl/congres/2016
+    countrycode: nl
+
+  - name: Internet Mobile World
+    location: "Bucharest, Romania"
+    date: 2016-10-05T09:00:00Z
+    url: http://imworld.ro/
+    countrycode: ro
+
+  - name: Dutch Digital Day
+    location: "Amsterdam, Netherlands"
+    date: 2016-09-15T09:00:00Z
+    url: http://dutchdigitalday.com/
+    countrycode: nl
+
+  - name: Smashing Conference
+    location: "New York, USA"
+    date: 2016-06-14T09:00:00Z
+    url: http://lanyrd.com/2016/smashingconf-new-york
+    countrycode: us
+
+  - name: Front-trends
+    location: "Warsaw, Poland"
+    date: 2016-05-18T09:00:00Z
+    url: http://2016.front-trends.com
+    countrycode: pl
+
+  - name: Fronteers Spring (MC)
+    location: "Amsterdam, Netherlands"
+    date: 2016-04-01T09:00:00Z
+    url: https://fronteers.nl/congres/2016-spring
+    countrycode: nl
+
+  - name: Enhance Conference
+    location: "London, England"
+    date: 2016-03-04T09:00:00Z
+    url: http://enhanceconf.com
+    countrycode: gb-eng
+
+  - name: Fronteers
+    location: "Amsterdam, Netherlands"
+    date: 2015-10-08T09:00:00Z
+    url: https://fronteers.nl/congres/2015
+    countrycode: nl
+
+  - name: Generate
+    location: "London, England"
+    date: 2015-09-17T09:30:00Z
+    url: http://www.generateconf.com/london-2015
+    countrycode: gb-eng
+
+  - name: Milton Keynes Geek Night
+    location: "Milton Keynes, England"
+    date: 2015-09-10 20:00:00Z
+    url: http://mkgeeknight.co.uk
+    countrycode: gb-eng
+
+  - name: Dot York
+    location: "York, England"
+    date: 2015-04-09T09:00:00Z
+    url: http://dotyork.com
+    countrycode: gb-eng
+
+  - name: Awwwards Conference
+    location: "Barcelona, Spain"
+    date: 2015-02-24T09:00:00Z
+    url: http://conference.awwwards.com/
+    countrycode: es
+
+  - name: Front End North
+    location: "Manchester, England"
+    date: 2014-11-15T09:00:00Z
+    url: http://makedo.in/frontendnorth/
+    countrycode: gb-eng
+
+  - name: The Web Is..
+    location: "Cardiff, Wales"
+    date: 2014-10-30T09:00:00Z
+    url: http://theweb.is
+    countrycode: gb-wls
+
+  - name: Smashing Conference
+    location: "Freiburg, Germany"
+    date: 2014-09-14T09:00:00Z
+    url: http://smashingconf.com/freiburg-2014/
+    countrycode: de
+
+  - name: ColdFront Conference
+    location: "Copenhagen, Denmark"
+    date: 2014-09-04T09:00:00Z
+    url: http://coldfrontconf.com/
+    countrycode: dk
+
+  - name: Wuthering Bytes
+    location: "Hebden Bridge, England"
+    date: 2014-08-15T09:00:00Z
+    url: http://wutheringbytes.com/
+    countrycode: gb-eng
+
+  - name: JSCamp
+    location: "Bucharest, Romania"
+    date: 2014-06-03T09:00:00Z
+    url: http://www.jscamp.ro
+    countrycode: ro
+
+  - name: DevConFu
+    location: "Riga, Latvia"
+    date: 2014-05-29 13:00:00Z
+    url: http://devconfu.eu
+    countrycode: lv
+
+  - name: LondonJS
+    location: "London, England"
+    date: 2014-02-13T09:00:00Z
+    url: http://www.londonjsconf.com
+    countrycode: gb-eng
+
+  - name: Untangle The Web
+    location: "London, England"
+    date: 2013-12-13 19:00:00Z
+    url: http://www.meetup.com/Untangling-the-Web-London
+    countrycode: gb-eng
+
+  - name: Future of Web Apps
+    location: "London, England"
+    date: 2013-10-24T09:00:00Z
+    url: http://futureofwebapps.com/london-2013/
+    countrycode: gb-eng
+
+  - name: Breaking Development Conference
+    location: "Nashville, USA"
+    date: 2013-10-21T09:00:00Z
+    url: http://bdconf.com/2013/nashville/
+    countrycode: us
+
+  - name: "Internet &amp; Mobile World"
+    location: "Bucharest, Romania"
+    date: 2013-10-09T09:00:00Z
+    url: http://www.imworld.ro/
+    countrycode: ro
+
+  - name: Speak The Web
+    location: "Leeds, England"
+    date: 2013-07-23 20:00:00Z
+    url: http://speaktheweb.org
+    countrycode: gb-eng
+
+  - name: London Web Standards
+    location: "London, England"
+    date: 2013-07-22 20:00:00Z
+    url: http://londonwebstandards.org/2013/07/london-web-standard-july-2013-how-to-present-lightning-talks-lwslightning
+    countrycode: gb-eng
+
+  - name: Gotham JS
+    location: "New York, USA"
+    date: 2013-07-12T08:00:00Z
+    url: http://www.gothamjs.com
+    countrycode: us
+
+  - name: Content Strategy Lightning Talks
+    location: "London, England"
+    date: 2013-06-17 18:00:00Z
+    url: https://togetherlondon.com/events/meetup
+    countrycode: gb-eng
+
+  - name: jsDay
+    location: "Verona, Italy"
+    date: 2013-05-15T09:00:00Z
+    url: http://2013.jsday.it
+    countrycode: it
+
+  - name: Texas JavaScript
+    location: "Austin, USA"
+    date: 2013-04-15T09:00:00Z
+    url: http://2013.texasjavascript.com
+    countrycode: us
+
+  - name: HTML5 Developer Conference
+    location: "San Francisco, USA"
+    date: 2013-04-01T09:00:00Z
+    url: http://2013.html5devconf.com
+    countrycode: us
+
+  - name: Fronteers
+    location: "Amsterdam, Netherlands"
+    date: 2012-10-05T09:00:00Z
+    url: http://fronteers.nl/congres/2012
+    countrycode: nl
+
+  - name: Toster JavaScript
+    location: "Moscow, Russia"
+    date: 2012-05-25T09:00:00Z
+    url: http://toster.ru/
+    countrycode: ru
+
+  - name: HTML5 DevUp
+    location: "Barcelona, Spain"
+    date: 2012-05-27T09:00:00Z
+    url: http://devup.ideateca.com/html5/thankyou.php
+    countrycode: es
+
+  - name: SXSW Interactive
+    location: "Austin, USA"
+    date: 2012-03-12T09:00:00Z
+    url: http://schedule.sxsw.com/2012/events/event_IAP11002
+    countrycode: us
+
+  - name: FullFrontal
+    location: "Brighton, England"
+    date: 2011-11-11 11:00:00Z
+    url: http://2011.full-frontal.org
+    countrycode: gb-eng
+
+  - name: Async - Getting started with Node
+    location: "Brighton, England"
+    date: 2011-05-26 19:15:00Z
+    url: http://asyncjs.com/intro-nodejs/
+    countrycode: gb-eng
+
+  - name: Async
+    location: "Brighton, England"
+    date: 2011-11-10 19:00:00Z
+    url: http://asyncjs.com/intro-nodejs/
+    countrycode: gb-eng
+
+  - name: UX People
+    location: "London, England"
+    date: 2010-03-22 10:00:00Z
+    url: http://uxpeople.co.uk/2010/
+    countrycode: gb-eng

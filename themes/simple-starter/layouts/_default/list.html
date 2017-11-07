@@ -1,0 +1,27 @@
+{{ define "hero" }}
+<div class="hero hero-{{ .Params.section }}">
+  <div class="container">
+    <p>{{ .Params.subtitle }}</p>
+    <h1>{{ .Title }}</h1>
+  </div>
+</div>
+{{ end }}
+
+
+{{ define "main" }}
+  {{ .Content }}
+
+  <h1>generic listing</h1>
+
+  {{ range .Data.Pages }}
+  <div class="post">
+    <div class="container">
+      <p class="publish-date">{{ .Date.Format "2 January, 2006" }}</p>
+      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      <p class="excerpt">
+        {{ .Summary | markdownify }}
+      </p>
+    </div>
+  </div>
+  {{ end }}
+{{ end }}

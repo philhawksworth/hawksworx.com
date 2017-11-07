@@ -1,0 +1,36 @@
+{{ define "hero" }}
+<div class="hero hero-blog">
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+    <p class="subtitle">{{ .Params.subtitle }}</p>
+  </div>
+</div>
+{{ end }}
+
+{{ define "main" }}
+<div class="container listing content">
+
+  {{ .Content }}
+
+  <h2>Upcoming</h2>
+  <ul>
+    {{ range sort .Site.Data.speaking.events "date" "asc" }}
+      {{ if (time .date).After now }}
+        {{ partial "talk.html" . }}
+      {{ end }}
+    {{ end }}
+  </ul>
+
+  <h2>Previously</h2>
+  <ul>
+    {{ range .Site.Data.speaking.events }}
+      {{ if (time .date).Before now }}
+        {{ partial "talk.html" . }}
+      {{ end }}
+    {{ end }}
+  </ul>
+</div>
+{{ end }}
+
+
+

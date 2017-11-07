@@ -1,0 +1,17 @@
+{{ define "hero" }}
+<div class="hero hero-{{ .Params.section }}">
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+    <p class="subtitle">{{ .Params.subtitle }}</p>
+  </div>
+</div>
+{{ end }}
+
+{{ define "main" }}
+  {{ .Content }}
+  <div class="listing">
+  {{ range .Data.Pages.ByPublishDate.Reverse }}
+    {{ partial "post-teaser.html" . }}
+  {{ end }}
+  </div>
+{{ end }}

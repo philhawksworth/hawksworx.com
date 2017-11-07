@@ -1,0 +1,30 @@
+{{ define "main" }}
+  {{ .Content }}
+  <div class="content">
+    <div class="container">
+      <h2>Latest blog post</h2>
+    </div>
+    {{ range first 1  (where .Data.Pages "Section" "blog").ByPublishDate.Reverse }}
+      {{ partial "post-teaser.html" . }}
+    {{ end }}
+    <div class="container listing">
+      <h2>Recent links</h2>
+      <ul>
+        {{ range first 3 .Site.Data.links.public }}
+          {{ partial "link.html" . }}
+        {{ end }}
+      </ul>
+    </div>
+    <div class="container listing">
+      <h2>Upcoming talks</h2>
+      <p>I'll be speaking at these events soon. For information on more upcoming events, coverage or previous events, or on infoprmation on booking me to speak at your event, visit the <a href="/speaking">speaking</a> page.</p>
+      <ul>
+        {{ range sort .Site.Data.speaking.events "date" "asc" }}
+          {{ if (time .date).After now }}
+            {{ partial "talk.html" . }}
+          {{ end }}
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+  {{ end }}

@@ -1,0 +1,22 @@
+baseURL: "https://www.hawksworx.com"
+title: "Hawksworx - Phil Hawksworth"
+theme: "./simple-starter"
+publishDir: "public"
+
+outputFormats:
+  card:
+    mediaType: "text/html"
+    baseName: "card"
+    isHTML: true
+
+outputs:
+  home:
+    - "html"
+    - "rss"
+    - "card"
+  page:
+    - "html"
+    - "card"
+  section:
+    - "html"
+    - "card"
