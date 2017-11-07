@@ -1,4 +1,5 @@
 /node_modules
 /public
+/dist
 /data/**/hash.*
 /themes/simple-starter/static/css/*.css
