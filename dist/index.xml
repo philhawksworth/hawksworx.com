@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home page on Hawksworx - Phil Hawksworth</title>
+    <link>https://www.hawksworx.com/</link>
+    <description>Recent content in Home page on Hawksworx - Phil Hawksworth</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 29 Jun 2017 11:52:41 +0100</lastBuildDate>
+    
+	<atom:link href="https://www.hawksworx.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>TTFN R/GA</title>
+      <link>https://www.hawksworx.com/blog/ttfn-rga/</link>
+      <pubDate>Mon, 06 Nov 2017 19:46:38 +0000</pubDate>
+      
+      <guid>https://www.hawksworx.com/blog/ttfn-rga/</guid>
+      <description>&lt;p&gt;The time has come to close a precious chapter of my career. Six years ago I joined &lt;a href=&#34;https://www.rga.com&#34;&gt;R/GA&lt;/a&gt; and by crikey, it has been quite a ride. I&amp;rsquo;ll soon be handing in my R/GA &lt;em&gt;badge and gun&lt;/em&gt; to move on to my next adventure, and I&amp;rsquo;m incredibly excited about it. But more on that later. For now, I want to take a breath and reflect on six rewarding years.&lt;/p&gt;
+
+&lt;!-- badge and gun - laptop and swipe card photo --&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Isomorphic Rendering on the JAMstack</title>
+      <link>https://www.hawksworx.com/blog/isomorphic-rendering-on-the-jam-stack/</link>
+      <pubDate>Mon, 06 Nov 2017 08:23:35 +0000</pubDate>
+      
+      <guid>https://www.hawksworx.com/blog/isomorphic-rendering-on-the-jam-stack/</guid>
+      <description>&lt;p&gt;I have been experimenting with something that seemed obvious to me for a while. A web development model which gives a pre-rendered, ready-to-consume, straight-into-the-eyeballs web page at every URL of a site. One which, once loaded, then behaves like a client-side, single page app.&lt;/p&gt;
+
+&lt;p&gt;The fact that so many frameworks set about this with all manner of complex add-ons and machinery gave me cause to think I was missing something big. So I built a simple proof of concept with a static site generator to see if this model could work. I&amp;rsquo;m pretty pleased with it. Let me talk you through the approach and show you the result.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Keeping a Jamstack Site Feeling Fresh With Recent Tweets</title>
+      <link>https://www.hawksworx.com/blog/keeping-a-jamstack-site-feeling-fresh-with-recent-tweets/</link>
+      <pubDate>Sun, 05 Nov 2017 10:56:18 +0000</pubDate>
+      
+      <guid>https://www.hawksworx.com/blog/keeping-a-jamstack-site-feeling-fresh-with-recent-tweets/</guid>
+      <description>&lt;p&gt;Having somewhere on your site to show a few of your recent tweets is a common requirement. Twitter provides some easy ways to embed tweets or twitter feeds onto your site via Javascript, but I&amp;rsquo;m keen to remove external javascript dependencies from my site. It helps the site to render more quickly, and lets me control exactly how it looks.&lt;/p&gt;
+
+&lt;p&gt;But for a &lt;a href=&#34;https://www.jamstack.org&#34;&gt;static site&lt;/a&gt;, it would be a pain to need to compile and deploy after every tweet. Luckily, by stitching together some simple tools, this can all happen automagically whenever a new tweet is posted.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

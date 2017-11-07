@@ -1,6 +1,7 @@
 var gulp          = require("gulp");
 var sass          = require("gulp-sass");
 var autoprefixer  = require("gulp-autoprefixer");
+var runSequence   = require('run-sequence');
 var hash          = require("gulp-hash");
 var del           = require("del");
 var execFile      = require("child_process").execFile;
@@ -50,12 +51,22 @@ gulp.task("cards", function () {
 
 
 // Run a complete build
-gulp.task("build", ["scss"], function () {
-  del(["public"]);
+gulp.task("generate", function () {
+  del(["dist"]);
   return execFile('hugo', function (err, stdout, stderr) {
     console.log(stdout); // See Hugo output
   });
 });
+
+
+gulp.task('build', function(callback) {
+  runSequence(
+    'scss',
+    'generate',
+    callback
+  );
+});
+
 
 // Set watch as default task
 gulp.task("default", ["watch"]);

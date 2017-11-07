@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hawksworx - Phil Hawksworth</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <link rel="stylesheet" href="/css/main-cfc530f8.css" />
+  </head>
+  <body class="blog">
+    <header>
+  <ul class="nav">
+  <li><a class="home" href="/">HAWKSWORX<p class="hint">web noodlings from Phil Hawksworth</p></a></li>
+  <li><a class="blog" href="/blog">Writing<p class="hint">blog posts &amp; announcements</p></a></li>
+  <li><a class="speaking" href="/speaking">Speaking<p class="hint">conferences &amp; meetups</p></a></li>
+  <li><a class="links" href="/links">Links<p class="hint">notes and resources</p></a></li>
+  <li><a class="about" href="/about">About<p class="hint">about the author</p></a></li>
+</ul>
+
+</header>
+
+    
+<div class="hero hero-">
+    <div class="container">
+      <p class="publish-date">1 August, 2016</p>
+      <h1>Isomorphic Rendering on the JAMstack</h1>
+      <div class="tags">
+        tagged:
+        <ul>
+        
+          <li><a href="/blog/tags/web">web</a></li>
+        
+          <li><a href="/blog/tags/development">development</a></li>
+        
+          <li><a href="/blog/tags/static">static</a></li>
+        
+          <li><a href="/blog/tags/jamstack">jamstack</a></li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    
+  <div class="content container post-content">
+    <p>I have been experimenting with something that seemed obvious to me for a while. A web development model which gives a pre-rendered, ready-to-consume, straight-into-the-eyeballs web page at every URL of a site. One which, once loaded, then behaves like a client-side, single page app.</p>
+
+<p>The fact that so many frameworks set about this with all manner of complex add-ons and machinery gave me cause to think I was missing something big. So I built a simple proof of concept with a static site generator to see if this model could work. I&rsquo;m pretty pleased with it. Let me talk you through the approach and show you the result.</p>
+
+<p></p>
+
+<figure>
+<img src="https://www.hawksworx.com/images/Comedy_in_the_Crown.jpg" alt="comedyinthecrown.com - delivered via an enhanced JAM stack">
+</figure>
+
+<p>First thing&rsquo;s first. Let&rsquo;s look at the site. It&rsquo;s a simple site, not a big complex application, but that&rsquo;s precisely the type of thing I&rsquo;m seeing regularly over-engineered, so it fits my purpose. Take a quick peek, then come back to read about how it was put together.</p>
+
+<blockquote>
+<p><a href="https://www.comedyinthecrown.com">https://www.comedyinthecrown.com</a></p>
+</blockquote>
+
+<p>Still with me? Ok. Let&rsquo;s list out the principles I wanted to demonstrate with this site:</p>
+
+<ol>
+<li>A consumable page of content at every URL without the need for JavaScript to display things in the browser</li>
+<li>A valid, bookmark-able entry point to the site at every URL</li>
+<li>Client-side rendering with JavaScript <em>as an enhancement</em> for reduced data over the wire and rapid (and perhaps fancy) page transition</li>
+<li>Simple server-side architecture which could be served from any static web server</li>
+<li>Content management through a CMS outside of a development environment</li>
+</ol>
+
+<h2 id="jam-stack">JAM Stack</h2>
+
+<p>At its heart, this project would use a static site generator to build out a deployable site. This should satisfy point 4 above if we do it right and don&rsquo;t add anything that muddys the waters.</p>
+
+<p>We&rsquo;ll use Gulp to run a build and generate our static assets with NodeJS on the server, and some APIs to get data. I&rsquo;ve been calling this kind of build Short Stack development, but it fits nicely with what <a href="https://vimeo.com/163522126">Mathias Biilmann</a> of <a href="https://netlify.com">Netlify</a> calls the <a href="https://jamstack.org/">JAM Stack</a>. That is:</p>
+
+<ul>
+<li><strong>J</strong>avaScript</li>
+<li><strong>A</strong>PIs</li>
+<li><strong>M</strong>arkup</li>
+</ul>
+
+<h2 id="abstracting-the-content-management">Abstracting the content management</h2>
+
+<p>My first step was to look at a way to abstract the content which the site would deliver so that it could be managed via a CMS. I chose to use <a href="https://contentful.com">Contentful</a> which is a headless CMS as a service. It takes care of all of the CMS user interface, publishing flows and user roles. In Contentful I could define any content data model that I wanted and have it expose the data as JSON over an API.</p>
+
+<p>I modeled the two main parts of <a href="https://www.comedyinthecrown.com">comedyinthecrown.com</a> that I wanted to be easily managed. Information about the gig nights, and the acts who would perform. These form the basis of what is dynamic on the site.</p>
+
+<h2 id="consuming-the-data">Consuming the data</h2>
+
+<p>Next, I wanted to consume the data from my CMS in 2 places:</p>
+
+<ol>
+<li>During a build of the site, to generate static versions of every page.</li>
+<li>In the browser for client-side render of subsequent page loads.</li>
+</ol>
+
+<p>For the sake of portability, efficiency, and developing away from the network (like many things I make, this site would be developed mostly on my daily train ride) I chose to locally cache the data from the CMS within the site as a local instance of the API.</p>
+
+<ul>
+<li><a href="https://comedyinthecrown.com/dates">comedyinthecrown.com/dates</a> renders data from <a href="https://comedyinthecrown.com/api/nights.json">comedyinthecrown.com/api/nights.json</a></li>
+<li><a href="https://comedyinthecrown.com/acts">comedyinthecrown.com/acts</a> renders data from <a href="https://comedyinthecrown.com/api/nights.json">comedyinthecrown.com/api/acts.json</a></li>
+<li>..and so on</li>
+</ul>
+
+<p>This has a few advantages:</p>
+
+<h3 id="it-loosens-the-coupling-between-the-site-and-the-hosted-cms">It loosens the coupling between the site and the hosted CMS</h3>
+
+<p>If for any reason, Contentful were to go away, the site would still function and all of our content would still be abstracted in a structured form. We could move our CMS elsewhere if we had to.</p>
+
+<h3 id="it-speeds-up-our-build">It speeds up our build</h3>
+
+<p>The build process doesn&rsquo;t need to get the latest content from the CMS every time we run it. By stashing the content locally, our build process can avoid going to the network while we our doing our development.</p>
+
+<h3 id="we-can-serve-our-own-data-api">We can serve our own data API</h3>
+
+<p>Since we&rsquo;ve grabbed the data, we can make it available on our own domain for our templates to use when rendering in the client. This reduces our dependencies when serving the site. And since we&rsquo;ll be serving everything as static files from a CDN, this can be rapid.</p>
+
+<h2 id="templating-and-generating-the-site">Templating and generating the site</h2>
+
+<p>For the site to rendered on the server, and also to support client-side rendering, I chose a templating language which can be used both on the server and the client. There were several options, but I chose <a href="https://mozilla.github.io/nunjucks/">Nunjucks</a> which has some nice features and a syntax I like.</p>
+
+<p>With Nunjucks in place, I used Gulp to control some build activities:</p>
+
+<ol>
+<li>Download and stash the content in a local version of the API</li>
+<li>Render the HTML pages from the Nunjucks templates and our content data</li>
+<li>Precompile the same Nunjucks templates for use client-side with JavaScript</li>
+<li>Do the usual squashing, optimising and baking to create a deployable directory of static assets.</li>
+<li>Bake our local API to our deployable directory as a set of json files</li>
+</ol>
+
+<p>Now we have a site which has a fully populated pages, an API we can get more data from, and JavaScript templates which can render subsequent pages. Adding event listeners to all of our internal links with JavaScript as a progressive enhancement allows us to enable the client-site rendering.</p>
+
+<h2 id="hosting-and-deployments-that-keep-things-fresh">Hosting and deployments that keep things fresh</h2>
+
+<p>Our content can feel fresh if we make it simple to get data or code changes, run a build, and push the output to a server somewhere. That sounds like a lot to do though, and things will only really stay fresh if we can make this as friction free as possible.</p>
+
+<p>Enter Netlify which serves not only as our static site host, but and also a build server. Netlify can run the same build as we run locally with Gulp and deploy the result to its static hosting infrastructure. Better than that, it can be triggered to build whenever we push code changes to our git repository.</p>
+
+<p>This gives developers a frictionless way to deploy versions of our site. <code>git push</code> ..done!</p>
+
+<p>Now, how about for content authors? We want changes published in our CMS on Contentful to trigger a build too. We can do this thanks to webhooks which both Netlify and Contentful support. When content is published on Contentful, it fires a webhook on Netlify which then causes our build to run. The content is pulled in from the CMS and our build gets all the latest data. Nice.</p>
+
+<h2 id="so-how-did-we-do">So how did we do?</h2>
+
+<p>The result of this is a reasonably simple development architecture which keeps all of the guesswork out of what will run when people visit our site. What we see in development is the same as in any environment we care to deploy to.</p>
+
+<p>The delivery performance of this model is great. The pages are prerendered and cached and ready to be displayed in the browser with no additional work. We get a working page into the user&rsquo;s eyes pretty damn quickly. After the page as loaded, JavaScript (if available) loads our client-side templates and add new behaviours to our internal links.</p>
+
+<div class='embed-container'>
+  <iframe src="https://www.youtube.com/embed/XN9CpRT7SB4" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<p>From this point onwards, when an internal link is clicked, it no longer requests a new page, instead it makes a request for the data it needs from our API. Minified, gzipped JSON is delivered from our CDN and is then rendered by our client-side templates. It uses a fraction of the bandwidth and browser effort of a full page reload, so this goes FAST.</p>
+
+<p>By taking care of the browser&rsquo;s History state via the History APi, we keep the Back and Forward button of our browser working as expected and everything feels pretty slick.</p>
+
+<p>This is the kind of behaviour that has become popular in single page applications (SPAs), but with the distinction that here the pages all work by default with no need for JavaScript The client-side rendering is a progressive enhancement.</p>
+
+<h2 id="taking-this-further">Taking this further</h2>
+
+<p>This model already makes good use of static and cached assets, but we can go further by removing the need to go back to the network for templates and data sources if we have encountered them before. Service Workers can help with that.</p>
+
+<p>A prerequisite for this is serving the site over https, which was <a href="https://www.netlify.com/docs/ssl">trivial on Netlify</a>. (Seriously. It took 10 seconds.)</p>
+
+<div class='embed-container'>
+  <iframe src="https://www.youtube.com/embed/k-9T0FYd-QU" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
+<p>You can <a href="https://github.com/philhawksworth/comedy-in-the-crown">check out the code</a> for the site (warts and all) on Github.</p>
+  </div>
+
+    <footer>
+  <div class="callout">
+    <div class="logo">
+      <h1>Hawksworx</h1>
+      <p class="subtitle">web noodlings from Phil Hawksworth</p>
+    </div>
+    <h2>Some other places to find Phil Hawksworth on the web</h2>
+    <ul class="nav">
+  <li><a href="https://www.twitter.com/philhawksworth">Twitter<p class="hint">@philhawksworth</p></a></li>
+  <li><a href="https://www.speakerdeck.com/philhawksworth">Speakerdeck<p class="hint">/philhawksworth</p></a></li>
+  <li><a href="https://www.github.com/philhawksworth">Github<p class="hint">/philhawksworth</p></a></li>
+</ul>
+
+  </div>
+  <img src="/images/philhawksworth-goon@2x.jpg" alt="Phil Hawksworth's face" class="avatar" />
+  <div class="meta">
+    <p> The source code of this site is available to view and fork on <a href="https://www.github.com/philhawksworth">Github</a> and served on the <a href="https://www.jamstack.org">JAMstack</a> by <a href="https://www.netlify.com">Netlify</a>.</p>
+    <p>Other than where specified, the content on this site is published under a <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a> licence.</p>
+  </div>
+</footer>
+
+  </body>
+</html>
