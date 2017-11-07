@@ -3,16 +3,26 @@ var sass          = require("gulp-sass");
 var autoprefixer  = require("gulp-autoprefixer");
 var runSequence   = require('run-sequence');
 var hash          = require("gulp-hash");
-var del           = require("del");
+var clean         = require('gulp-clean');
 var execFile      = require("child_process").execFile;
 var Pageres       = require('pageres');
 
 
-// Compile SCSS files to CSS
-gulp.task("scss", function () {
+// Delete our old css files
+gulp.task('clean-css', function () {
+  return gulp.src('themes/simple-starter/static/css/**/*', {read: false})
+    .pipe(clean());
+});
 
-  //Delete our old css files
-  // del(["themes/simple-starter/static/css/**/*"])
+// cleanup the build output
+gulp.task('clean-build', function () {
+  return gulp.src('dist', {read: false})
+    .pipe(clean());
+});
+
+
+// Compile SCSS files to CSS
+gulp.task("scss", ['clean-css'], function () {
 
   //compile hashed css files
   gulp.src("src/scss/main.scss")
@@ -49,9 +59,8 @@ gulp.task("cards", function () {
 
 
 // Run a complete build
-gulp.task("generate", function () {
-  // del(["dist"]);
-  return execFile('hugo', function (err, stdout, stderr) {
+gulp.task("generate", ['clean-build'], function () {
+  return execFile('hugo', ["--verbose"], function (err, stdout, stderr) {
     console.log(stdout); // See Hugo output
   });
 });
