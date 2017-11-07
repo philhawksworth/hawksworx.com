@@ -9,4 +9,4 @@ subtitle: talks at conferences and meetups
 
 I enjoy talking about what I do, and sometimes this happens at conferences. If you'd like me to speak at an event then please do get in touch.
 
-I'm [@philhawksworth](https://www.twitter.com/philhawksworth) on Twitter and this is often the easiest way to make contact.
+I'm [@philhawksworth](https://www.twitter.com/philhawksworth) on Twitter and this is often the easiest route for making contact.
