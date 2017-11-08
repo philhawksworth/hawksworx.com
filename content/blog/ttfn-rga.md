@@ -7,10 +7,9 @@ draft: false
 tags: ["announcements", "rga"]
 ---
 
-The time has come to close a precious chapter of my career. Six years ago I joined [R/GA](https://www.rga.com) and by crikey, it has been quite a ride. I'll soon be handing in my R/GA _badge and gun_ to move on to my next adventure, and I'm incredibly excited about it. But more on that later. For now, I want to take a breath and reflect on six rewarding years.
+The time has come to close a precious chapter of my career. Six years ago I joined [R/GA](https://www.rga.com) and by crikey, it has been quite a ride. I'll soon be handing in my "R/GA badge and gun" to move on to my next adventure, and I'm incredibly excited about it. But more on that later. For now, I want to take a breath and reflect on six rewarding years.
 
-<!-- badge and gun - laptop and swipe card photo -->
-
+![My R/GA badge and gun](/images/badge-and-gun.jpg "My R/GA badge and gun")
 <!--more-->
 
 Agency life is not easy. Nor is it for everyone. But working at [R/GA in London](https://www.rga.com/offices/london) represents, I think, one of the best agency working experiences around.  Yes it has been intense at times. Yes there have been some sleepless nights. But the skills of my colleagues, the level of the ambition, and the quality of the work, have made for an unforgettable time.
