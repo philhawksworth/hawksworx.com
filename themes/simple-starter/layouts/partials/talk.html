@@ -1,4 +1,12 @@
 <li class="talk">
   <p class="publish-date">{{ (time .date).Format "2 January, 2006" }}</p>
-  <h3><img class="flag" src="/images/flags/{{ .countrycode }}.svg" /><a href="{{ .url }}" target="_BLANK" rel="noopener">{{ .name }}</a></h3><span>- {{ .location }} </span>
+  <h3>
+    <img class="flag" src="/images/flags/{{ .countrycode }}.svg" />
+    {{ if .url }}
+    <a href="{{ .url }}" target="_BLANK" rel="noopener">{{ .name }}</a>
+    {{ else }}
+    {{ .name }}
+    {{ end }}
+  </h3>
+  <span>- {{ .location }} </span>
 </li>
