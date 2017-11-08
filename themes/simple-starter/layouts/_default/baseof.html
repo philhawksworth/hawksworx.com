@@ -10,6 +10,9 @@
     {{ partial "header.html" . }}
     {{ block "hero" . }}{{ end }}
     {{ block "main" . }}{{ end }}
-    {{ partial "footer.html" . }}
+    <footer>
+      {{ block "footer-tout" . }}{{ end }}
+      {{ partial "footer.html" . }}
+    </footer>
   </body>
 </html>

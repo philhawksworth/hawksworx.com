@@ -1,6 +1,6 @@
 ---
 title: "Isomorphic Rendering on the JAMstack"
-date: 2017-11-06T08:23:35Z
+date: 2016-08-01T08:23:35Z
 publishdate: 2016-08-01T08:23:35Z
 draft: false
 tags: ["web", "development", "static", "jamstack"]

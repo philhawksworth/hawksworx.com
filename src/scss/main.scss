@@ -261,7 +261,7 @@ a.scroll-hint:hover {
   }
 
   h2 {
-    margin-top: 5em;
+    margin-top: 2em;
   }
 
   h3 {
@@ -448,6 +448,35 @@ footer {
     padding: 1px;
     margin-top: -4em;
 }
+
+.footer-tout {
+  background-color: rgb(192, 255, 17);
+  color: #000;
+  width:100%;
+
+  .nav  {
+    background-color: rgb(192, 255, 17);
+    color: #000;
+
+    li {
+      width: 300px;
+
+    }
+
+    a:link,
+    a:visited {
+      color: #000;
+      padding-left: 2em;
+      padding-right: 2em;
+    }
+    a:hover,
+    a:focus {
+      color: rgb(192, 255, 17);
+    }
+  }
+
+}
+
 
 .avatar-upclose {
 

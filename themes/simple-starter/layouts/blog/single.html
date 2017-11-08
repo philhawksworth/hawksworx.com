@@ -22,6 +22,15 @@
   </div>
 {{ end }}
 
-
+{{  define "footer-tout" }}
+<div class="footer-tout">
+<ul class="nav">
+  <li><a href="/blog">Explore the blog by index, by tags<br/ >or by search<p class="hint">More posts</p></a></li>
+  {{ with .Next }}
+  <li><a href="{{ .URL }}">{{ .Title }}<p class="hint">{{ .PublishDate.Format "January 2, 2006" }}</p></a></li>
+  {{ end }}
+</ul>
+</div>
+{{ end }}
 
 

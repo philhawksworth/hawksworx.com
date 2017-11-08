@@ -42,3 +42,5 @@ Well yes. I think it is. And I'm looking forward to being able to share that new
 
 But just now, I'm sending my heartfelt thanks to eveyone at R/GA. You most certainly did not disappoint!
 
+Ta ta for now.
+

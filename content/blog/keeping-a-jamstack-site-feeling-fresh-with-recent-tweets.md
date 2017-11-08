@@ -1,6 +1,6 @@
 ---
 title: Keeping a Jamstack Site Feeling Fresh With Recent Tweets
-date: 2017-11-05T10:56:18Z
+date: 2017-03-27T10:56:18Z
 publishdate: 2017-03-27T10:56:18Z
 section: blog
 draft: false
