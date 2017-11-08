@@ -50,7 +50,7 @@ h1 {
 h2 {
   font-weight: 500;
   font-size: 20px;
-  margin-top: 3em;
+  padding-top: 3em;
   margin-bottom: 2em;
 }
 
@@ -310,7 +310,7 @@ a.scroll-hint:hover {
 
 .listing {
 
-  margin-bottom: 10em;
+  margin-bottom: 4em;
 
   h2 {
     margin-bottom:0em;
@@ -319,6 +319,7 @@ a.scroll-hint:hover {
   ul {
     list-style: none;
     margin-left: -2em;
+    margin-top: 2em;
   }
   .post {
     border-bottom: solid 1px #eee;
@@ -344,7 +345,6 @@ a.scroll-hint:hover {
   }
   .talk:first-of-type {
     border-top: none;
-    padding-top:3em;
   }
   .link {
      margin-bottom: 4em;
@@ -375,7 +375,7 @@ a.scroll-hint:hover {
   background-color: #000;
   color: #ccc;
   padding-top:3em;
-  margin-bottom:6em;
+  margin-bottom:4em;
 
   h2 {
     display: inline-block;
@@ -390,6 +390,7 @@ a.scroll-hint:hover {
 
 footer {
   width: 100%;
+  margin-top: 6em;
   padding-bottom: 4em;
   font-size: 12px;
   background-color: #000;
@@ -405,7 +406,10 @@ footer {
   }
   .logo {
     padding-top: 3em;
-    padding-bottom: 6em;
+    padding-bottom: 3em;
+  }
+  .callout {
+    margin-bottom:6em;
   }
   .meta {
     padding-top:6em;

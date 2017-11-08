@@ -7,13 +7,16 @@
     {{ range first 1  (where .Data.Pages "Section" "blog").ByPublishDate.Reverse }}
       {{ partial "post-teaser.html" . }}
     {{ end }}
-    <div class="container listing">
+    <div class="container">
       <h2>Recent links</h2>
-      <ul>
-        {{ range first 3 .Site.Data.links.public }}
-          {{ partial "link.html" . }}
-        {{ end }}
-      </ul>
+      <p>Like a magpie, I spotted these, thought "oooh shiny" and stashed them on my <a href="/links">links</a> page. Not blogged, but stashed.</p>
+      <div class="listing">
+        <ul>
+          {{ range first 3 .Site.Data.links.public }}
+            {{ partial "link.html" . }}
+          {{ end }}
+        </ul>
+      </div>
     </div>
     <div class="container ">
       <h2>Upcoming talks</h2>

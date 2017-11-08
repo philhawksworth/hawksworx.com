@@ -10,13 +10,13 @@
 {{ define "main" }}
   <div class="content container">
     {{ .Content }}
-  </div>
-  <div class="container listing content">
-    <ul>
-      {{ range .Site.Data.links.public }}
-      {{ partial "link.html" . }}
-      {{ end }}
-    </ul>
+    <div class="listing">
+      <ul>
+        {{ range .Site.Data.links.public }}
+        {{ partial "link.html" . }}
+        {{ end }}
+      </ul>
+    </div>
   </div>
 {{ end }}
 
