@@ -6,7 +6,8 @@ var hash          = require("gulp-hash");
 var clean         = require('gulp-clean');
 var execFile      = require("child_process").execFile;
 var Pageres       = require('pageres');
-
+var glob          = require('glob');
+var path          = require('path');
 
 // Delete our old css files
 gulp.task('clean-css', function () {
@@ -44,16 +45,21 @@ gulp.task("watch", ["scss"], function () {
   gulp.watch("src/scss/**/*", ["scss"])
 });
 
+function shout(str) {
+  console.log(str);
+}
+
 
 // Generate social media assets
 gulp.task("cards", function () {
-  // return gulp.src('public/**/card.html')
-  var pageres = new Pageres({})
-    .src('./dist/blog/ttfn-rga/card.html', ['800x140'], {scale: 2})
-    .src('./dist/blog/isomorphic-rendering-on-the-jam-stack/card.html', ['800x140'], {scale: 2})
-    .dest(__dirname)
-    .run()
-    .then(() => console.log('done'));
+  var files = glob.sync('dist/**/card.html');
+  for (const file in files) {
+    var p = path.dirname(files[file]);
+    var pageres = new Pageres({filename:"twitter-card"})
+      .src(p+'/card.html', ['800x140'], {scale: 2})
+      .dest(__dirname + "/" +p)
+      .run()
+  }
 });
 
 
