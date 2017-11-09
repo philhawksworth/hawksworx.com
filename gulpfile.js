@@ -4,7 +4,6 @@ var autoprefixer  = require("gulp-autoprefixer");
 var runSequence   = require('run-sequence');
 var hash          = require("gulp-hash");
 var clean         = require('gulp-clean');
-var execFile      = require("child_process").execFile;
 var Pageres       = require('pageres');
 var glob          = require('glob');
 var path          = require('path');
@@ -45,39 +44,17 @@ gulp.task("watch", ["scss"], function () {
   gulp.watch("src/scss/**/*", ["scss"])
 });
 
-function shout(str) {
-  console.log(str);
-}
-
 
 // Generate social media assets
 gulp.task("cards", function () {
   var files = glob.sync('dist/**/card.html');
   for (const file in files) {
     var p = path.dirname(files[file]);
-    var pageres = new Pageres({filename:"twitter-card"})
-      .src(p+'/card.html', ['800x140'], {scale: 2})
+    var pageres = new Pageres({filename:"og-card-image"})
+      .src(p+'/card.html', ['800x400'], {scale: 2})
       .dest(__dirname + "/" +p)
       .run()
   }
-});
-
-
-
-// Run a complete build
-gulp.task("generate", ['clean-build'], function () {
-  return execFile('hugo', ["--verbose"], function (err, stdout, stderr) {
-    console.log(stdout); // See Hugo output
-  });
-});
-
-
-gulp.task('build', function(callback) {
-  runSequence(
-    'scss',
-    'generate',
-    callback
-  );
 });
 
 
