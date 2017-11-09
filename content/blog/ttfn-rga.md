@@ -7,7 +7,7 @@ draft: false
 tags: ["announcements", "rga"]
 ---
 
-The time has come to close a precious chapter of my career. Six years ago I joined [R/GA](https://www.rga.com) and by crikey, it has been quite a ride. I'll soon be handing in my "R/GA badge and gun" to move on to my next adventure, and I'm incredibly excited about it. But more on that later. For now, I want to take a breath and reflect on six rewarding years.
+The time has come to close a precious chapter of my career. [Six years ago](/blog/joining-rga-london/) I joined R/GA, and by crikey, it has been quite a ride. I'll soon be handing in my "R/GA badge and gun" to move on to my next adventure, and I'm incredibly excited about it. But more on that later. For now, I want to take a breath and reflect on six rewarding years.
 
 <!--more-->
 
@@ -41,6 +41,4 @@ Why then, would I trade this in? Something pretty compelling must be around the 
 Well yes. I think it is. And I'm looking forward to being able to share that news soon.
 
 But just now, I'm sending my heartfelt thanks to eveyone at R/GA. You most certainly did not disappoint!
-
-Ta ta for now.
 
