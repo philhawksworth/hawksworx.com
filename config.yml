@@ -2,6 +2,7 @@ baseURL: "https://www.hawksworx.com"
 title: "Hawksworx - Phil Hawksworth"
 theme: "./simple-starter"
 publishDir: "dist"
+enableGitInfo: true
 
 outputFormats:
   card:
