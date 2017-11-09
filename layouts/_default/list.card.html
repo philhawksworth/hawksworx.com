@@ -2,18 +2,30 @@
   <head>
     <style>
 
+      @font-face {
+        font-family: '_.sf_compact_displaylight';
+        src:  url('/fonts/sfcompactdisplay-light-webfont.woff2') format('woff2'),
+              url('/fonts/sfcompactdisplay-light-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+
       * {
         margin: 0;
         padding: 0;
       }
 
       body {
-        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+        font-family: '_.sf_compact_displaylight';
+        /* font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif; */
         -webkit-font-smoothing: antialiased;
         font-size: 14px;
         color: #000;
         background-color: rgb(192, 255, 17);
       }
+
+
 
       .masthead {
         position: absolute;
