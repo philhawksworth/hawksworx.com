@@ -50,9 +50,11 @@ gulp.task("cards", function () {
   var files = glob.sync('dist/**/card.html');
   for (const file in files) {
     var p = path.dirname(files[file]);
-    var pageres = new Pageres({filename:"og-card-image"})
+    var name = p.replace(/\//g, '-');
+    var name = name.replace("dist-","og-");
+    var pageres = new Pageres({filename: name})
       .src(p+'/card.html', ['800x400'], {scale: 2})
-      .dest(__dirname + "/" +p)
+      .dest(__dirname + "/dist/images/")
       .run()
   }
 });
