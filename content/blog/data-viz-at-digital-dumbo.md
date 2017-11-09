@@ -3,7 +3,7 @@ title: Data Viz at Digital Dumbo
 date: 2013-05-29T00:00:00Z
 publishdate: 2013-05-29T00:00:00Z
 draft: false
-description: A quiock look at what we did with visualising R/GA's instagram usage
+description: A quick look at what we did with visualising R/GA's instagram usage
   for Digital Dumbo in Shoreditch.
 tags:
   - events
