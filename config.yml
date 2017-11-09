@@ -12,7 +12,6 @@ outputFormats:
 outputs:
   home:
     - "html"
-    - "rss"
     - "card"
   page:
     - "html"
