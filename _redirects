@@ -1,6 +1,17 @@
-/puttr/api  https://w04p8v061j.execute-api.us-east-1.amazonaws.com/dev/listings 200
-/covfefe    /teapot   418
+[[redirects]]
+from = "/puttr/api"
+to = "https://w04p8v061j.execute-api.us-east-1.amazonaws.com:443/dev/listings"
+status = 200
+force = false
 
-/philhawksworth-*  /images/philhawksworth-:splat
+[[redirects]]
+from = "/philhawksworth-*"
+to = "/images/philhawksworth-:splat"
+status = 301
+force = false
 
-/journal  /blog
+[[redirects]]
+from = "/journal"
+to = "/blog"
+status = 301
+force = false
