@@ -1,7 +1,7 @@
 ---
 title: How to create and distribute lovely screencasts
-date: 008-03-28T00:00:00Z
-publishdate: 008-03-28T00:00:00Z
+date: 2008-03-28T00:00:00Z
+publishdate: 2008-03-28T00:00:00Z
 draft: false
 description: Some lessons learned while capturing screencasts on my Mac
 tags:
