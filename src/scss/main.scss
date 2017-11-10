@@ -227,6 +227,19 @@ a.scroll-hint:hover {
     margin-top: 0.4em;
     font-size: 14px;
   }
+
+  a:link,
+  a:visited {
+    text-decoration: none;
+    color: rgba(0,0,0,0.9);
+    border-bottom: solid 1px rgba(0,0,0,0.5);
+  }
+  a:hover,
+  a:focus {
+    opacity: 1;
+    color: #000;
+    border-bottom: solid 1px #000;
+  }
 }
 
 
