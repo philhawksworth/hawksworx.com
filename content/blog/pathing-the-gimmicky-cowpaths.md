@@ -15,8 +15,8 @@ tags:
 
 I've ranted quite a bit about clumsy and excessive parallax scrolling effects on web sites recently. Following Adobe's announcement that they are making this kind of effect simple to do via a WYSIWYG authoring tool, I'm bracing for another glut of sites with this effect. Some might be beautiful. Many will not.
 
-<!--more-->
 <img src="/images/train-window.jpeg" alt="">
+<!--more-->
 
 <p>
     And so what? What's the problem with recognising the desire for this visual effect and providing a tool to help deliver it?  Well first of all, I'm still <a href="https://speakerdeck.com/philhawksworth/i-can-smell-your-cms?slide=102">wary of WYSYWIG</a> authoring tools. I'm just not convinced that they capture the subtlety and nuance of crafting experiences in the browser that perform well everywhere, gracefully degrade and are <a href="http://futurefriend.ly/">future friendly</a>.

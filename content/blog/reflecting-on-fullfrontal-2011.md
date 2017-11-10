@@ -15,9 +15,9 @@ tags:
 
 The third installment of Full Frontal, the JavaScript conference hosted each year in Brighton by <a href="http://leftlogic.com">LeftLogic</a>, was a great event once again. I was lucky enough to be a speaker this year, which perhaps gave me a slightly different perspective of the day, but as an enthusiastic attendee I also found it to be an excellent experience.
 
+<img src="/images/ph_excessive_enhancement.jpg" alt="">
 <!--more-->
 
-<img src="/images/ph_excessive_enhancement.jpg" alt="">
 
 <p>
 	Something that strikes me about Full Frontal is that it has established itself in just two years to be a really valuable addition to the web development conference calendar.  Never mind the speakers who <a href="http://twitter.com/rem">Remy</a> managed to secure (I found myself among an impressive line-up of established conference speakers and well-respected technologists - somewhat daunting for my first outing as a proper conference speaker), but also just a glance around the venue at the delegates revealed a gathering of some amazing talent. Clearly, over the last couple of years, Full Frontal has been doing something right just to attract so many big brains.

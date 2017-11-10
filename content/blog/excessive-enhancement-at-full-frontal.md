@@ -13,9 +13,9 @@ title: Excessive Enhancement at Full Frontal
 
 In a few days I will be speaking at <a href="http://2011.fullfrontal.com">Full Frontal</a> in Brighton. This conference, now in its third year, has done a great job of capturing so much of what is important and exciting to many front-end web developers.
 
+<img src="/images/full-frontal-conf.png" alt="">
 <!--more-->
 
-<img src="/images/full-frontal-conf.png" alt="">
 
 <p>
 	I've attended Full Frontal each year so far and so I'm rather delighted to get the chance to speak. The technical community in Brighton is fantastic and attracts smart speakers and a knowledgeable and enthusiastic audience from far and wide. Somehow I've managed to fight my way in and find myself on a list with some <a href="http://2011.full-frontal.org/schedule" title="FullFrontal Schedule 2011">awesome speakers</a>.

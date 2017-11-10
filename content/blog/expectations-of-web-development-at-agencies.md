@@ -15,8 +15,9 @@ tags:
 
 Recently I was involved in an very short bit of consultancy for an e-commerce company. We were focussing on the performance of their site in the browser, and they were more than a little surprised at the software engineering rigour that we exhibited given that we are <i>just</i> an agency. Perhaps we're thought of us web development production lines who churn out web sites. That's not my view.
 
-<!--more-->
 <img src="/images/production-line.jpg" alt=""></figure>
+
+<!--more-->
 
 <p>
     This isn't the first time that I've encountered that attitude towards agencies. It seems that there is a perception from companies whose bread and butter is developing their product for the Web, that an agency would never go to the same lengths as them to ensure quality and performance.

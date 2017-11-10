@@ -14,9 +14,9 @@ tags:
 
 Recently, I made <a href="https://twitter.com/philhawksworth/status/400319683372392448">a comment on twitter</a> about how I think developers can make it easier for employers to recruit them. It sparked a little discussion which has been hard to summarise in 140 characters, so here's a short blog post to try to clarify my point.
 
+<img src="/images/resume.jpg" alt="">
 <!--more-->
 
-<img src="/images/resume.jpg" alt="">
 
 <h2>What I said</h2>
 

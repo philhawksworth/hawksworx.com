@@ -13,9 +13,9 @@ tags:
 
 A little while ago, inspired by <a href="http://simonwillison.net/2009/Nov/23/node/">Simon Willison</a>'s demo of <a href="http://nodesjs.org">Nodejs</a> at the <a href="http://2009.full-frontal.org/">FullFrontal</a> conference, I felt the urge to make something, anything, using Nodejs. <a href="http://nodesjs.org">Nodejs</a> gives lightening fast, event driven IO with Javascript running server-side in the rather nippy <a href="http://code.google.com/p/v8/">V8</a> Javascript engine. Until <a href="http://nodesjs.org">Nodejs</a>, I hadn't seen much need to bring Javascript to the server other than for testing and as a bit of a novelty. <a href="http://nodesjs.org">Nodejs</a> changed all of that.
 
+<img src="/images/nodejs.png" alt="">
 <!--more-->
 
-<img src="/images/nodejs.png" alt="">
 
 
 <p>

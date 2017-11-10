@@ -6,17 +6,13 @@ draft: false
 tags: ["web", "development", "static", "jamstack"]
 description: A simplified yet powerful model for delivering ready-to-consume web pages which enhance to a dynamic client-side rendering approach
 ---
-
-I have been experimenting with something that seemed obvious to me for a while. A web development model which gives a pre-rendered, ready-to-consume, straight-into-the-eyeballs web page at every URL of a site. One which, once loaded, then behaves like a client-side, single page app.
+I have been experimenting with something that seemed obvious to me for a while. A web development model which gives a pre-rendered, ready-to-consume, straight-into-the-eyeballs web page at every URL of a site. One which, once loaded then behaves like a client-side, single page app.
 
 The fact that so many frameworks set about this with all manner of complex add-ons and machinery gave me cause to think I was missing something big. So I built a simple proof of concept with a static site generator to see if this model could work. I'm pretty pleased with it. Let me talk you through the approach and show you the result.
 
+![comedyinthecrown.com](/images/Comedy_in_the_Crown.jpg "comedyinthecrown.com - delivered via an enhanced JAM stack")
+
 <!--more-->
-
-<figure>
-<img src="/images/Comedy_in_the_Crown.jpg" alt="comedyinthecrown.com - delivered via an enhanced JAM stack">
-</figure>
-
 
 
 First thing's first. Let's look at the site. It's a simple site, not a big complex application, but that's precisely the type of thing I'm seeing regularly over-engineered, so it fits my purpose. Take a quick peek, then come back to read about how it was put together.

@@ -14,8 +14,8 @@ tags:
 
 Last week the entire <a href="http://www.osmosoft.com">Osmosoft</a> team visited Paris to attend the <a href="http://www.leweb3.com">LeWeb3</a> conference.  Initially, we had intended to be attending simply as delegates, but as time went by, we decided that we might be able to build something handy to use at the conference, and that perhaps, others might find it useful too.
 
-<!--more-->
 <img src="/images/le-web-3.jpg" alt=""></figure>
+<!--more-->
 
 
 <p>And so, <a href="http://ripplerap.com">RippeRap</a> (then dubbed 'TiddleLeWeb') was conceived. We considered that building a tool based on <a href="http://www.tiddlywiki.com">TiddlyWiki</a> where you could make notes on the conference and effortlessly share those notes with others, while being shielded from network hiccups, would be cool. To be ready, we had much to do, and little time to do it.</p>

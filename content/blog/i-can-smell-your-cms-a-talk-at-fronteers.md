@@ -14,9 +14,9 @@ tags:
 
 This year, I was lucky enough to be invited to speak at <a href="http://fronteers.nl/congres/2012">Fronteers</a>, the very well regarded web development conference in Amsterdam.  I was particular excited by this since the event had been high on my wishlist to attend for the last few years.  I spoke about the negative impact that content management systems regularly have on the front-end development effort, and how we might try to combat this.
 
+<img src="/images/fronteers-theatre.jpg" alt="">
 <!--more-->
 
-<img src="/images/fronteers-theatre.jpg" alt="">
 
 <p>
     The format this year adopted a small but very positive change. The two days of the conference were MC'd by Christian Heilmann of Mozilla and Yahoo! fame, and rather than accepting questions from the floor at the end of each session, Christian interviewed the speaker and presented questions from the audience via Twitter. This worked beautifully, and he should be praised for doing a wonderful job of getting the best out of the speakers.

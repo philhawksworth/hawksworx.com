@@ -11,9 +11,9 @@ tags:
 
 For a while I have been meaning to start posting screencasts of some of my work to spread the word, and to explain some of the details that are difficult to describe in text.
 
+<img src="http://farm4.static.flickr.com/3182/2674867706_0397fca6e0.jpg" alt="">
 <!--more-->
 
-<img src="http://farm4.static.flickr.com/3182/2674867706_0397fca6e0.jpg" alt="">
 
 
 After much tinkering, I think that I have arrived at a nice setup and have found a good way to distribute the screencasts, making them available to stream over the web or to download for consumption in your own sweet time.

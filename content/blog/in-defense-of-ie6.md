@@ -15,9 +15,9 @@ tags:
 
 No really! Read that title again. I'm about to argue against placing so much blame for painful Web development at the door of Internet Explorer 6. I'm not going try and claim that IE6 isn't a huge pain in the arse of all good Web developers. Let's face it, Web developers <a href="http://twitter.com/#search?q=ie6" title="Twitter - search for IE6">love to bitch</a> about it, but I do think that it's time for some accountability.
 
+<img src="/images/defending-ie.jpg" alt=""></figure>
 <!--more-->
 
-<img src="/images/defending-ie.jpg" alt=""></figure>
 
 <p>
     The problem with IE6 is simple. It has poor support for <a href="http://www.webstandards.org/">Web standards</a>. It doesn't always correctly render valid HTML and CSS, and requires nudging, tweaking and finagling in order to display the content in the desired way. Its interpretation of Javascript and interactions with the DOM are also less than perfect. That's a pain, but does it really warrant such <a href="http://iedeathmarch.org/" title="IE Death March">massive hatred</a> from Web developers? As a Web developer, my first instinct would be to answer, 'well, yes'. The cost of developing for IE6 is <a href="http://ejohn.org/blog/the-browsers-of-2009/" title="John Resig -   The Browsers of 2009">extraordinarily high</a>, even when compared to the benefit from its market share, because it is such a horrible and time consuming slog.

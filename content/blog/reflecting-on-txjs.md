@@ -14,9 +14,9 @@ draft: false
 
 I recently <a href="/blog/excess-cms-and-stink-at-txjs/">blogged</a> that I'd be speaking at the annual <a href="http://2013.texasjavascript.com">Texas JavaScript</a> conference in Austin. After a few days to reflect, I'd have to say that it was not only a privilege to speak at TXJS, but also that it was a pretty special event to attend.
 
+<img src="/images/paramount-theatre.jpeg" alt="">
 <!--more-->
 
-<img src="/images/paramount-theatre.jpeg" alt="">
 
 <p>
     This was my first visit to TXJS, now in its fourth year. The event has steadily grown in size and popularity over the years, but <a href="http://alexsexton.com/">Alex Sexton</a>, who runs the event, has worked hard to retain its intimate and friendly atmosphere.

@@ -15,8 +15,8 @@ tags:
 
 One of the nice things about being a web developer today, is that thanks to the incredibly low cost of resilient, scalable hosting infrastructure, and the abundance of free tools and technologies, you are empowered to create things and release them to the a huge audience. You can experiment with much less risk than ever before. We are seeing evidence of this with so many entrepreneurs and startups entering the market. Some more successfully than others.
 
-<!--more-->
 <img src="/images/include_beer.jpeg" alt="">
+<!--more-->
 
 <p>
     Thanks to this low cost of innovation, conversations in pubs between friends who have the right set of skills can quickly flourish into exciting and viable products (or indeed, display the inner madness of their creators and become curiosities or simply be overlooked.)

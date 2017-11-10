@@ -15,9 +15,9 @@ tags:
 
 Last week was both sad and exciting for me. Exciting because I was gearing up to start my new job at <a href="http://theteam.co.uk">theTeam</a>, a London-based communications agency with a slightly silly name. Sad because it was my last week working at <a href="http://osmosoft.com">Osmosoft</a> (a company that created plenty of silly named things itself).
 
+<img src="/images/osmosoft.jpg" alt="">
 <!--more-->
 
-<img src="/images/osmosoft.jpg" alt="">
 
 <p>
     I had been at Osmosoft since it grew from a <a href="http://jermolene.com/2007/05/29/i-for-one-welcome-my-new-bt-overlords/">one man band</a> into an open source innovations team at <a href="http://bt.com">BT</a>, and had a terrific experience along the way. I think that it is safe to say that I have learned more about The Web during my time at Osmosoft than in any previous job and that is in no small part due to the quality and experience of the people around me.

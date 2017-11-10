@@ -13,9 +13,9 @@ tags:
 
 Last week I travelled with some of my <a href="/blog/joining-rga.html">new R/GA colleagues</a> to Salford near Manchester to visit the BBC's new Media City development and talk to The Beeb about their continuing efforts to engage more openly and effectively with the online community. The BBC are keen to share their thinking and product plans for this and the event was kicked off by <a href="http://www.bbc.co.uk/blogs/bbcinternet/ralph_rivera/">Ralph Rivera</a>, Director, Future Media.
 
+<img src="/images/fmedia_city.jpg" alt="">
 <!--more-->
 
-<img src="/images/fmedia_city.jpg" alt="">
 
 <p>
     Rivera began the afternoon by talking about the ambition to unify the existing silos around the BBC into a cohesive online experience. The ten core online products of Home page, Search, News, Sport, Weather, Knowledge and Learning, TV, Radio, cBBC and Cbeebies are set to form the backbone of the online offering accross the various BBC estates.

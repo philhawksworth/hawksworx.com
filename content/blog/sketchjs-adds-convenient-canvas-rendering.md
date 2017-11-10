@@ -17,9 +17,9 @@ tags:
 <a href="https://github.com/soulwire/sketch.js">Sketch.js</a> is an open source javascript library which offers some animation utilities. Aimed at making animating with canvas or webgl easier, sketch.js is a lightweight piece of boilerplate code which streamlines a number of common tasks.
 	</p>
 
+<img src="/images/sketchjs.png" alt="">
 <!--more-->
 
-<img src="/images/sketchjs.png" alt="">
 <p>
     Sketch helps by augmenting things like the mouse, touch and keyboard events with often neded utilities. It also sets up your animation loop and helps to manage it with enriched math functions and other handy bits and pieces.
 </p>

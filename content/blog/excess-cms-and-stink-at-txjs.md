@@ -14,9 +14,10 @@ tags:
 
 I'm rather excited to be speaking at Texas JavaScript in Austin this year. <a href="http://2013.texasjavascript.com">TXJS</a> takes place on Monday the 15th of April at Austin's rather beautiful <a href="http://www.austintheatre.org/site/PageNavigator/venues/paramount">Paramount Theatre</a>. This talk will take from my Smelly CMS talk and also touch on aspects of another talk of mine called Excessive Enahnacement.
 
+<img src="/images/txjs.jpeg" alt="">
+
 <!--more-->
 
-<img src="/images/txjs.jpeg" alt="">
 
 <h3>Here's the synopsis:</h3>
 <blockquote>

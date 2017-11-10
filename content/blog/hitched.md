@@ -11,9 +11,10 @@ tags:
 ---
 
 After more than 14 wonderful years with my girlfriend, Verity, last weekend we finally tied the knot.
-<!--more-->
 
 <img src="/images/hitched-beam.jpeg" alt="">
+<!--more-->
+
 
 
 <p>It's hard to put into words just how excited I was to finally get to enjoy our wedding day with so many of our family and friends and there is a risk that this post could become a sprawling gush-a-thon. I'll try not to do that. You can take my gushing and delight as read. I do want to take a moment to acknowledge the effort that so many people put into making our day so fabulous though, and perhaps mention a few highlights.</p>

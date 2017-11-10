@@ -13,9 +13,9 @@ tags:
 
 The ridiculous trend of giant, bloated web pages crammed with every visual bauble and gimmick imaginable seems set to continue. This time thanks to a site by Oakley.
 
+<img src="/images/airbrakemx.png" alt="">
 <!--more-->
 
-<img src="/images/airbrakemx.png" alt="">
 
 <p>
     I have been gathering examples of this kind of site and using them as examples of what NOT to do in my talk "Excessive Enhancement" for some time.

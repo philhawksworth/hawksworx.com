@@ -16,8 +16,8 @@ Seven years ago <a href="/blog/flash-v-web-behind-enemy-lines/">I picked a fight
 
 Feathers were ruffled. Debates were had.
 
-<!--more-->
 <img src="/images/hawk-v-wall-wide-promo.gif" alt="Hawk vs Wall">
+<!--more-->
 
 <p>
   With the arrogance of someone who had enjoyed the cosily aligned opinions of a comfortable echo chamber, I set about educating my new colleagues on matters that were, of course, "common sense, right?"

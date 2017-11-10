@@ -16,8 +16,8 @@ tags:
 A few weeks ago at <a href="http://theteam.com">The Team</a>, inspired by the <a href="http://www.atlassian.com/" title="Atlassian - Software Development Tools and Collaboration Software">Atlassian</a> model of <a href="http://blogs.atlassian.com/news/2010/11/fedex_day_in_the_wild.html" title="FedEx Day in the wild - Atlassian News">FedEx days</a> which we have have successfully employed before, we managed to make some time for the development team to spend the day away from the office to work on something for themselves. No clients and no managers, just our own requirements and some time to work in new ways together. It yielded some valuable results.
 
 <img src="/images/scamp-python.jpg" alt="">
-
 <!--more-->
+
 
 <p>
     The notion of creating <i>value</i> from activities like this is not immediately obvious to all, but there is value to be found in many different places when working together on a project like this.  I'll try to mention a few of them here as a kind of a primer for anyone who is looking to arrange a similar day of their own. That might be useful when you need to convince the folks at work who need to look carefully at things like <i>utilisation</i>, <i>opportunity cost</i> and <i>project resourcing</i>.

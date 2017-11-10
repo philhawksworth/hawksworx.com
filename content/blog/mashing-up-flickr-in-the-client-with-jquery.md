@@ -13,8 +13,9 @@ tags:
 
 Recently I saw Tim Stevens <a href="http://twitter.com/san1t1/status/1193906661">post on Twitter</a> about a slide show he had built using his <a href="http://www.liveloom.com/">Liveloom</a> application. His slide show grabs some photos from Flickr tagged with 'Osmosoft' and then renders them with all manner of visual effects using Flex.  While the visual effects available via Tim's app are impressive, I'm a big advocate of open web standards and enjoy making things from HTML and Javascript, rather than using tools like Flex.
 
-<!--more-->
 <img src="/images/polaroiderizer-a-slideshow-from-your-flickr-tags.jpg" alt=""></figure>
+
+<!--more-->
 
 <p>
     My first encounter with the slide show made by Liveloom was on an iPhone where it couldn't run. The temptation to cobble together a simple Flickr mashup which could operate in any Javascript capable browser was too much to resist.  Let's not pretend, that there aren't already slide show mashups galore, or that I was going to be able to rival some of the advanced visual effects that Liveloom can offer, but making a simple, attractive slide show which could run on lots of devices seemed like a fun and valuable exercise.  I was also keen to see just how quickly and easily I could produce this using jQuery.  I'm forever going on about how good jQuery is at manipulating the DOM, so this seemed like a good chance to demonstrate that.  I shared the result my efforts as the 'Poloaroiderizer' and after getting some great feedback, promoted it to its very own domain.

@@ -16,9 +16,9 @@ tags:
 
  I've been beating a drum recently, and it has a lot to do with pursuing simplicity in technical architectures. I want to allow for optimizations where it matter most and avoid the kind of technical and functional bloat you can get through using some CMS platforms. So I was delighted when a colleague recently shared a link to <a href="http://kylerush.net/blog/meet-the-obama-campaigns-250-million-fundraising-platform/">Kyle Rush's post</a> which demonstrates some huge value in this approach on the Obama fund-rising campaign site.
 
+<img src="/images/contribute_obama.jpeg" alt=""></figure>
 <!--more-->
 
-<img src="/images/contribute_obama.jpeg" alt=""></figure>
 
 <p>
     Kyle's article is well worth a read. In it, he talks at high level about some of the principles and approaches that were used to ensure high performance on the <a href="https://contribute.barackobama.com">contribute.barackobama.com</a> site.

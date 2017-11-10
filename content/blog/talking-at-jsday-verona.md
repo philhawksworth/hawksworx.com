@@ -15,8 +15,8 @@ tags:
 
 In a few days I'll be speaking at <a href="http://2013.jsday.it/" title="JS Day, Verona, 2013">JSDay</a> in Verona. I'm lucky enough to have another chance to present a version of my Excessive Enhancement talk which I first gave in Brighton way back in November 2011.  But isn't it out of date?
 
-<!--more-->
 <img src="/images/jsday-2013.gif" alt="">
+<!--more-->
 
 <p>
     Well, I don't think so. The message that I'm trying to convey in this talk is, sadly, still as pertinent as ever.  I'll be updating it to keep it current, with new examples and case studies, but the trends that I'm hoping to encourage people to think about remains the same.

@@ -18,9 +18,9 @@ Was that a Wiimote controller you were using to control your slides?</p>
 
 The answer is yes. This is a quick post to explain why and how.
 
+<img src="/images/phil-with-wiimote.jpg" alt="">
 <!--more-->
 
-<img src="/images/phil-with-wiimote.jpg" alt="">
 
 <h2>Why use a wiimote?</h2>
 <p>
