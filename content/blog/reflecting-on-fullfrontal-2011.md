@@ -8,8 +8,8 @@ description: Looking back on Full Frontal 2011, the JavaScript and front end dev
 footnote: |
   Photo credit: <a href="http://www.flickr.com/photos/remysharp/6344244492/">Remy</a>
 tags:
-  - fullfrontalconf
   - conferences
+  - events
   - talks
 ---
 

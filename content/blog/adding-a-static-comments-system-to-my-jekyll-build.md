@@ -9,7 +9,8 @@ tags:
   - jekyll
   - static
   - ssg
-  - poole
+  - jamstack
+
 ---
 
 I'm a big fan of simplicity when building web sites. That's just one of the reasons I like using Jekyll, a static site generator, to build out this site. Sometimes though, it would be nice to gather content from the site visitors via a form, and hosting a site as a set of static assets doesn't cater for that.
