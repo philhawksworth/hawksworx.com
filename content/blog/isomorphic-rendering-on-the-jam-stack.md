@@ -14,7 +14,7 @@ The fact that so many frameworks set about this with all manner of complex add-o
 <!--more-->
 
 <figure>
-<img src="https://www.hawksworx.com/images/Comedy_in_the_Crown.jpg" alt="comedyinthecrown.com - delivered via an enhanced JAM stack">
+<img src="/images/Comedy_in_the_Crown.jpg" alt="comedyinthecrown.com - delivered via an enhanced JAM stack">
 </figure>
 
 
