@@ -1,4 +1,4 @@
-baseURL: "https://www.hawksworx.com"
+baseURL: "https://gohugo--hawksworx.netlify.com"
 title: "Hawksworx - Phil Hawksworth"
 theme: "./simple-starter"
 publishDir: "dist"

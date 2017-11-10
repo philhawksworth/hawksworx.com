@@ -57,6 +57,7 @@ gulp.task("cards", function () {
       .dest(__dirname + "/dist/images/")
       .run()
   }
+  return;
 });
 
 
