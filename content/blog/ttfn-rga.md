@@ -1,6 +1,6 @@
 ---
 title: TTFN R/GA
-description: Waving a find farewell to R/GA as I prepare for a new chapter
+description: Waving a fond farewell to R/GA as I prepare for a new chapter
 date: 2017-11-06T19:46:38Z
 publishdate: 2017-11-06T19:46:38Z
 section: blog

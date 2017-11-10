@@ -4,6 +4,7 @@ date: '2017-06-29T11:52:41+01:00'
 draft: false
 title: About
 subtitle: About the author, and about this site
+description: A little background on Phil Hawksworth, and on how this website is built.
 ---
 <img src="/images/philhawksworth-goon@2x.jpg" alt="Phil Hawksworth's face" class="avatar avatar-upclose" />
 
@@ -39,7 +40,7 @@ You can find me in the following places on the web:
 
 ## Speaking
 
-As an active member of the web development community I enjoy attending and speakign at conferences. For information of where I'll be speaking soon, or if you are interested in my speaking at your event, visit the [Speaking](/speaking) page of this site.
+As an active member of the web development community, I enjoy attending and speaking at conferences. For information of where I'll be speaking soon, or if you are interested in my speaking at your event, visit the [Speaking](/speaking) page of this site.
 
 
 ## About this site
