@@ -11,7 +11,7 @@ status = 301
 force = false
 
 [[redirects]]
-from = "/journal"
-to = "/blog"
+from = "/journal*"
+to = "/blog:splat"
 status = 301
 force = false
