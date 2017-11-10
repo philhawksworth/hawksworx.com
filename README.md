@@ -33,7 +33,7 @@ My prefered method is to host on [Netlify](http://www.netlify.com) who can also 
 
 ## Development
 
-To develop the site locally, run
+To develop the site locally, run:
 
 - `npm run watch` to monitor and regenerate all Sass code automatically
 - `hugo server --disableFastRender` to monitor and rebuild the entire site automatically (and relosd the local site)
