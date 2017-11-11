@@ -1,17 +1,3 @@
-[[redirects]]
-from = "/puttr/api"
-to = "https://w04p8v061j.execute-api.us-east-1.amazonaws.com:443/dev/listings"
-status = 200
-force = false
-
-[[redirects]]
-from = "/philhawksworth-*"
-to = "/images/philhawksworth-:splat"
-status = 301
-force = false
-
-[[redirects]]
-from = "/journal*"
-to = "/blog:splat"
-status = 301
-force = false
+/puttr/api	https://w04p8v061j.execute-api.us-east-1.amazonaws.com:443/dev/listings 200
+/philhawksworth-*	/images/philhawksworth-:splat
+/journal*	/blog:splat
