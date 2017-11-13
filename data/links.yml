@@ -1,5 +1,19 @@
 public:
 
+  - title: Prettier - now with Markdown support
+    url: https://prettier.io/
+    date: 2017-11-13 08:37:53
+    comment: This useful, opinionated code formatter now adds support for Markdown files to existing support for JavaScript, CSS and GraphQL.
+    tags:
+      - tools
+
+  - title: JAMStack tools list on TheNewDynamic
+    url: https://www.thenewdynamic.org/tools/
+    date: 2017-11-13 08:34:17
+    comment: A long list of tools and resources for sites built around a [JAMstack](http://www.jamstack.org) architecture. Includes static site generators, hosting, CMS as a service, APIs and more.
+    tags:
+      - jamstack
+
   - title: screenrecord.sh
     url: https://gist.github.com/PaulKinlan/2fdb0c8a6b6f6a646f87
     date: 2017-11-13 07:46:10
