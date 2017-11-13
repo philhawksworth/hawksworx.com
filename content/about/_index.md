@@ -31,7 +31,7 @@ You can find me in the following places on the web:
 
 - [Twitter](https://www.twitter.com/philhawksworth) - www.twitter.com/philhawksworth
 - [Github](https://www.github.com/philhawksworth) - www.github.com/philhawksworth
-- [Speakerdeck](https://www.speakdeck.com/philhawksworth) - www.speakerdeck.com/philhawksworth
+- [Speakerdeck](https://www.speakerdeck.com/philhawksworth) - www.speakerdeck.com/philhawksworth
 - [Lanyrd](https://www.lanyrd.com/philhawksworth) - www.lanyrd.com/philhawksworth
 - [Flickr](https://www.flickr.com/philhawksworth) - www.flickr.com/philhawksworth
 - [Instagram](https://www.instagram.com/philhawksworth) - www.instagram.com/philhawksworth
