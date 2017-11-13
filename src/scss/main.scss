@@ -347,7 +347,8 @@ a.scroll-hint:hover {
   .post:last-of-type {
     border-bottom: none;
   }
-  .talk {
+  .talk,
+  .tweet {
     border-top: solid 1px #eee;
     padding-top:1.5em;
     padding-bottom:1.5em;
@@ -361,7 +362,8 @@ a.scroll-hint:hover {
       margin-left:0.5em;
     }
   }
-  .talk:first-of-type {
+  .talk:first-of-type,
+  .tweet:first-of-type {
     border-top: none;
   }
   .link {
@@ -373,6 +375,25 @@ a.scroll-hint:hover {
     margin-right:0.4em;
     vertical-align: baseline;
     box-shadow: 0 0 4px rgba(0,0,0,0.2);
+  }
+  .tweet-content {
+    padding-top:1em;
+    margin-bottom: 0em;
+    padding-left: 30px;
+  }
+  .twitter-avatar {
+    width: 20px;
+    margin-right: 0.6em;
+    vertical-align: middle;
+  }
+
+  .tweet a:link,
+  .tweet a:visited {
+    color: #777;
+  }
+  .tweet a:focus,
+  .tweet a:hover {
+    color: #333;
   }
 }
 
@@ -511,3 +532,6 @@ footer {
     border: 2px solid #fff;
   }
 }
+
+
+

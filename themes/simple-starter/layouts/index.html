@@ -1,6 +1,6 @@
 {{ define "main" }}
   {{ .Content }}
-  <div class="content">
+  <div3 class="content">
     <div class="container">
       <h2>Latest blog post</h2>
     </div>
@@ -31,5 +31,18 @@
         </ul>
       </div>
     </div>
+    <div class="container ">
+      <h2>Recently, on Twitter</h2>
+      <p>Follow me <a href="https://www.twitter.com/philhawksworth" target="_BLANK" rel="noopener">on Twitter</a>. Some of it is interesting (although some of it might be cats and dogs which made me giggle)</p>
+      <div class="listing">
+        <ul>
+          {{ range first 3 .Site.Data.tweets.recent }}
+          {{ partial "tweet.html" . }}
+          {{ end }}
+        </ul>
+      </div>
+    </div>
   </div>
   {{ end }}
+
+

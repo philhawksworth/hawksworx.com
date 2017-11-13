@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp clean-build && gulp scss && hugo && gulp cards && gulp configs",
+    "build": "gulp clean-build && gulp scss && gulp get:tweets && hugo && gulp cards && gulp configs",
     "watch": "gulp watch",
     "scss": "gulp scss",
+    "tweets": "gulp get:tweets",
     "cards": "gulp cards"
   },
   "keywords": [],
@@ -15,12 +16,15 @@
   "license": "ISC",
   "devDependencies": {
     "del": "^3.0.0",
+    "dotenv": "^4.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-clean": "^0.3.2",
     "gulp-hash": "^4.1.1",
     "gulp-sass": "^3.1.0",
+    "json2yaml": "^1.1.0",
     "pageres": "^4.5.1",
-    "run-sequence": "^2.2.0"
+    "run-sequence": "^2.2.0",
+    "twitter": "^1.7.1"
   }
 }

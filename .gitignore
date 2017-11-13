@@ -3,3 +3,4 @@
 /dist
 /data/**/hash.*
 /themes/simple-starter/static/css/*.css
+.env

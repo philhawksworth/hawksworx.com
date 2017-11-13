@@ -5,8 +5,14 @@ var runSequence   = require('run-sequence');
 var hash          = require("gulp-hash");
 var clean         = require('gulp-clean');
 var Pageres       = require('pageres');
+var Twitter       = require('twitter');
+var fs            = require('fs');
+var yaml          = require('json2yaml');
 var glob          = require('glob');
 var path          = require('path');
+
+// load environment variables
+require('dotenv').config()
 
 // Delete our old css files
 gulp.task('clean-css', function () {
@@ -43,6 +49,50 @@ gulp.task("scss", ['clean-css'], function () {
 gulp.task("watch", ["scss"], function () {
   gulp.watch("src/scss/**/*", ["scss"])
 });
+
+
+// Get the latest few tweets to include in some pages
+gulp.task('get:tweets', function() {
+
+  var client = new Twitter({
+    consumer_key: process.env.TWITTER_KEY,
+    consumer_secret: process.env.TWITTER_SECRET,
+    access_token_key: '',
+    access_token_secret: ''
+  });
+  var params = {screen_name: 'philhawksworth', count: 50, exclude_replies: true};
+
+  client.get('statuses/user_timeline', params, function(error, tweets, response) {
+
+    if (!error) {
+      var recentTweets = {"recent" : []};
+      for(var tweet in tweets){
+        var t = {
+          text: tweets[tweet].text,
+          url: "https://twitter.com/philhawksworth/status/" + tweets[tweet].id_str,
+          date:  tweets[tweet].created_at,
+        };
+        recentTweets.recent.push(t);
+      }
+
+      var ymlText = yaml.stringify(recentTweets)
+      fs.writeFile(__dirname + "/data/tweets.yml", ymlText, function(err) {
+        if(err) {
+          console.log(err);
+        } else {
+          console.log("Tweets data saved.");
+        }
+      });
+
+    }
+    else {
+      console.log(error);
+    }
+
+  });
+
+});
+
 
 
 // Generate social media assets
