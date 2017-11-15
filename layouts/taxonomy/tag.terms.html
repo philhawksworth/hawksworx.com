@@ -19,7 +19,13 @@
         {{ range $taxonomy.Pages }}
         <li>
           <span class="publish-date">{{ .PublishDate.Format "2 January, 2006" }}</span> -
-          <a href="{{ .Permalink}}"> {{ .LinkTitle }} </a>
+          <a href="{{ .Permalink}}">
+            {{ if isset .Params "displayname" }}
+              {{ .Params.displayname }}
+            {{ else }}
+              {{ .LinkTitle }}
+            {{ end }}
+          </a>
         </li>
         {{ end }}
     </ul>

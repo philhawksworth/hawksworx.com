@@ -1,7 +1,7 @@
 ---
 title: newdynamics-tools
 displayName: JAMStack tools list on TheNewDynamic
-link:
+link: https://www.thenewdynamic.org/tools/
 date: 2017-11-13T12:41:08Z
 tags:
   - jamstack
