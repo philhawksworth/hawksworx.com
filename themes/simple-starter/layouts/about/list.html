@@ -10,9 +10,12 @@
 {{ define "main" }}
 <div class="content container">
   {{ .Content }}
+
+  {{ with .GitInfo }}
   <h2>Freshness</h2>
   <p>
-    The most recent updates to this site were made on {{ .GitInfo.AuthorDate.Format "2 Jan, 2006 at 15:04" }}. You can <a href="https://github.com/philhawksworth/hawksworx.com/commit/{{ .GitInfo.Hash }}">view them in the site's Git repository</a>
-  </p>
+   {{ .GitInfo }}
+   </p>
+  {{ end }}
 </div>
 {{ end }}

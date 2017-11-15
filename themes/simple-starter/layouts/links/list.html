@@ -12,7 +12,7 @@
     {{ .Content }}
     <div class="listing">
       <ul>
-        {{ range .Site.Data.links.public }}
+        {{ range .Data.Pages.ByDate.Reverse }}
         {{ partial "link.html" . }}
         {{ end }}
       </ul>

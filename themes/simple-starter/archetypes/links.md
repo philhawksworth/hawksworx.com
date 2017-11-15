@@ -1,6 +1,6 @@
 ---
 title: {{ replace .TranslationBaseName "-" " " | humanize }}
+link:
 date: {{ .Date }}
-publishdate: {{ .Date }}
-draft: false
+tags:
 ---

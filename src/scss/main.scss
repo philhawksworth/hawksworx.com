@@ -366,9 +366,7 @@ a.scroll-hint:hover {
   .tweet:first-of-type {
     border-top: none;
   }
-  .link {
-     margin-bottom: 4em;
-  }
+
   .flag {
     width: 16px;
     margin-top:1em;
@@ -397,11 +395,34 @@ a.scroll-hint:hover {
   }
 }
 
+
 .link {
   margin-bottom: 4em;
-  .hint {
-    font-size:10px;
-    color: #999;
+
+  h3 {
+    margin-top:6em;
+    color:#000;
+  }
+
+  .link-permalink {
+     position: relative;
+
+     a:link,
+     a:visited {
+       border-bottom: none;
+       opacity: 0.5;
+       font-size: 0.7em;
+     }
+     a:focus,
+     a:hover {
+       opacity: 1;
+     }
+     img {
+       position: absolute;
+       left: -20px;
+       top: 6px;
+       width: 12px;
+     }
   }
 }
 

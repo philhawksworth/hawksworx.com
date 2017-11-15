@@ -1,6 +1,9 @@
 <li class="link">
-  <h3><a href="{{ .url }}" target="_BLANK" rel="noopener">{{ .title }}</a></h3>
-  <p class="hint">{{ .url }}</p>
-  <p>{{ .comment | markdownify }}</p>
+  <h3><a href="{{ .Permalink}}">{{ .Params.displayName }}</a></h3>
+  <p class="link-permalink">
+    <a href="{{ .Params.link }}" target="_BLANK" rel="noopener">
+      <img src="/images/web-link.svg" alt="Permalink to this item" />
+      {{ .Params.link }}</p>
+    </a>
+  <p>{{ .Content | markdownify }}</p>
 </li>
-

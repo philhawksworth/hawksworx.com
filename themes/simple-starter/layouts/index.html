@@ -12,7 +12,7 @@
       <p>Like a magpie, I spotted these, thought "oooh shiny" and stashed them on my <a href="/links">links</a> page. Not blogged, but stashed.</p>
       <div class="listing">
         <ul>
-          {{ range first 3 .Site.Data.links.public }}
+          {{ range first 3 (where .Data.Pages "Section" "links").ByDate.Reverse }}
             {{ partial "link.html" . }}
           {{ end }}
         </ul>
