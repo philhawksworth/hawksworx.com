@@ -10,12 +10,5 @@
 {{ define "main" }}
 <div class="content container">
   {{ .Content }}
-
-  {{ with .GitInfo }}
-  <h2>Freshness</h2>
-  <p>
-   {{ .GitInfo }}
-   </p>
-  {{ end }}
 </div>
 {{ end }}

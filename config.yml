@@ -2,7 +2,6 @@ baseURL: "https://www.hawksworx.com"
 title: "Hawksworx - Phil Hawksworth"
 theme: "./simple-starter"
 publishDir: "dist"
-enableGitInfo: true
 permalinks:
   links: :section/:title/
 
