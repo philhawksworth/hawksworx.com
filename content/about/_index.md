@@ -49,6 +49,12 @@ This site is built using a [static site generator](https://www.staticgen.com/) c
 
 The source code is available on [Github](https://github.com/philhawksworth/hawksworx.com). Feel free to look at over and borrow any techniques or code you like.
 
-The flag images on the [speaking](/speaking) page are sourced as SVGs from [flag-icon-css](http://flag-icon-css.lip.is/), generously created and maintained by [Lipis](https://github.com/lipis).
+
+## Credits and licensing
 
 Other than where specified, the content on this site is published under a [Creative Commons Attribution 3.0](http://creativecommons.org/licenses/by/3.0/) licence.
+
+The flag images on the [speaking](/speaking) page are sourced as SVGs from [flag-icon-css](http://flag-icon-css.lip.is/), generously created and maintained by [Lipis](https://github.com/lipis).
+
+Link icon courtesy of [Daniel Bruce](https://www.flaticon.com/authors/daniel-bruce) via [www.flaticon.com](https://www.flaticon.com/)
+
