@@ -17,7 +17,9 @@
       {{ $tag := lower .Title}}
       {{ range .Site.Pages }}
         {{ if in .Params.tags $tag }}
-        {{ partial "post-teaser.html" . }}
+          {{ if not (isset .Params "proof") }}
+            {{ partial "post-teaser.html" . }}
+          {{ end }}
         {{ end }}
      {{ end }}
 

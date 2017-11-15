@@ -11,14 +11,17 @@ var yaml          = require('json2yaml');
 var glob          = require('glob');
 var path          = require('path');
 
+
 // load environment variables
 require('dotenv').config()
+
 
 // Delete our old css files
 gulp.task('clean-css', function () {
   return gulp.src('themes/simple-starter/static/css/**/*', {read: false})
     .pipe(clean());
 });
+
 
 // cleanup the build output
 gulp.task('clean-build', function () {

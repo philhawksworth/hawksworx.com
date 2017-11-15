@@ -11,7 +11,9 @@
   {{ .Content }}
   <div class="listing">
   {{ range .Data.Pages.ByPublishDate.Reverse }}
-    {{ partial "post-teaser.html" . }}
+    {{ if not (isset .Params "proof") }}
+      {{ partial "post-teaser.html" . }}
+    {{end }}
   {{ end }}
   </div>
 {{ end }}

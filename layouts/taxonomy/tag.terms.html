@@ -17,16 +17,18 @@
     <h2><a href="/tags/{{ $key }}">{{ $key }}</a></h2>
     <ul>
         {{ range $taxonomy.Pages }}
-        <li>
-          <span class="publish-date">{{ .PublishDate.Format "2 January, 2006" }}</span> -
-          <a href="{{ .Permalink}}">
-            {{ if isset .Params "displayname" }}
-              {{ .Params.displayname }}
-            {{ else }}
-              {{ .LinkTitle }}
-            {{ end }}
-          </a>
-        </li>
+          {{ if not (isset .Params "proof") }}
+          <li>
+            <span class="publish-date">{{ .PublishDate.Format "2 January, 2006" }}</span> -
+            <a href="{{ .Permalink}}">
+              {{ if isset .Params "displayname" }}
+                {{ .Params.displayname }}
+              {{ else }}
+                {{ .LinkTitle }}
+              {{ end }}
+            </a>
+          </li>
+          {{ end }}
         {{ end }}
     </ul>
     {{ end }}
