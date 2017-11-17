@@ -434,7 +434,6 @@ a.scroll-hint:hover {
 .callout {
   background-color: #000;
   color: #ccc;
-  // padding-top:3em;
   margin-bottom:4em;
 
   h2 {
@@ -445,6 +444,23 @@ a.scroll-hint:hover {
     text-align: center;
     margin-top: 0;
     margin-bottom: 1em;
+  }
+}
+
+blockquote {
+  background-color: #f9f9f9;
+  padding-top: 2em;
+  padding-bottom: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+  margin-top:2em;
+  margin-bottom:2em;
+  border-left: solid 6px rgb(192, 255, 17);
+  cite {
+    display: block;
+    text-align: right;
+    margin-top:1em;
+    font-style: italic;
   }
 }
 

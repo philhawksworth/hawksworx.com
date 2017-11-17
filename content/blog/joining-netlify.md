@@ -46,6 +46,14 @@ Beyond providing an intuitive and speedy way to _just get a site hosted_, Netlif
 
 Much of the magic "just happens", but there are further [powerful features](https://www.netlify.com/docs/) available for those who want to take control of them.
 
+I'm not alone in being a fan of Netlify. You may have heard some the Smashing Magazine team enthusing about their [move from Wordpress to a JAMstack](https://www.netlify.com/case-studies/smashing/) architecture, with [Vitaly Friedman](https://www.twitter.com/smashingmag) and [Sara Soueidan](https://www.twitter.com/SaraSoueidan) amongst those being vocal about the benefits.
+
+
+> we could have what we always wanted in terms of flexibility, speed, performance, architecture for the front end. <cite>— Vitaly Friedman</cite>
+
+and
+
+> everything works like magic. <cite>— Sara Soueidan</cite>
 
 ## The product and the team
 
