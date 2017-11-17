@@ -70,26 +70,6 @@ They marry impeccable technical taste, deep technical ability, business smarts, 
 As the company has progressed through their [Seed](https://www.netlify.com/blog/2016/08/16/netlify-raises-2.1m-from-the-founders-of-github-heroku-and-rackspace-cloud/) and [Series A](https://www.netlify.com/blog/2017/08/09/netlify-raises-12m-from-a16z/) rounds of funding, they have been growing. Their offering and the team are getting stronger and stronger. Joining their ranks is a thrilling prospect.
 
 
-<!-- ## How did I get here?
-
-It was at the [2012 edition of Fronteers](https://speakerdeck.com/philhawksworth/i-can-smell-your-cms) in Amsterdam that I first publicly suggested a combination of build automation and static sited generators could solve many of the problems that often hamper large enterprise web builds. During several talks that followed, I mentioned [BitBalloon](https://www.bitballoon.com/) as one of a number of emerging hosting providers who were making it easier to do hosting well and enable some of the things I had been working towards.
-
-I got a nice fuzzy glow when BitBalloon reached out on Twitter to thank me for the name-check. When, at subsequent conferences I started describing ways that I was using another great service, called Netlify, I got thanks from that company too.
-
-Later I discovered that BitBalloon had [grown up to become Netlify](https://www.bitballoon.com/blog/2015/11/03/netlify-a-pro-version-of-bitballoon), and that I was becoming a fan of the work and vision of a small team, with big ambitions.
-
-I began a journey from impressed customer, to a vocal advocate. So many of the themes I discuss in conference talks find a solution powered by Netlify's approach to automation and hosting.
-
-The regularity with which I've pointed and coo-ed at Netlify's latest feature has lead me to joke about how, "I'm not on their payroll. I just think they are brilliant." but that situation has changed now, as graduate from perpetual cheerleader, to full-time member of the Developer Relations team.
-
-I'll be tasked with spreading the word, and helping grow the offering to fit thr needs of web developers everywhere.
-
-
-I've been recommending Netlify to friends and colleagues for a while. With more than one of them levelling the term "fanboy" at me.
-
-Not unfairly. -->
-
-
 ## What am I for?
 
 It is clear to me that my initial focus at Netlify will need to be to:
