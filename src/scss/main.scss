@@ -297,6 +297,32 @@ a.scroll-hint:hover {
 
 }
 
+a.btn {
+
+  &:link,
+  &:visited {
+    display: inline-block;
+    margin-top: -3em;
+    margin-bottom: 2em;
+    padding: 0.5em 1em 0.5em 1em;
+    text-decoration: none;
+    border: 1px solid rgba(0,0,0,0.7);
+    border-radius: 2px;
+    color: #000;
+    font-size: 0.9em;
+  }
+  &:hover,
+  &focus {
+    background-color: rgba(0,0,0,1);
+    color: rgb(192, 255, 17);
+    text-shadow: none;
+  }
+
+}
+
+
+
+
 .tags {
 
   margin-top: 1.6em;
