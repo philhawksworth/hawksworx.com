@@ -1,5 +1,5 @@
 ---
-title: Smashing magazine on the JAMstack
+title: Smashing Magazine moves to a JAM stack architecture
 date: 2017-11-22T10:23:03Z
 publishdate: 2017-11-22T10:23:03Z
 draft: false
@@ -12,12 +12,12 @@ Smashing Magazine, the much beloved and prolific resource for web designers and 
 
 <!--more-->
 
-I'll be watching the progress and impact of this carefully. But already, we can see a more than 10x improvement in page performance. That's huge!
+> I'll be watching the progress and impact of this carefully. But already, we can see a more than 10x improvement in page performance. That's huge!
 
 Aside from the page speed improvements and reduced server complexity (and all of the headaches that go with that) this move should also bring about some changes to the way that authoring and publishing workflows happen for the team. Smashing moved from Wordpress to adopt (and significantly contribute to) [Netlify CMS](https://www.netlifycms.org) which enables a very powerful and productive editorial workflow.
 
 I saw a demonstration of this back in later 2016 and it _blew my mind_. So much of what I had been calling for in conference talks about legacy vs modern CMS and the untapped power of [JAM stack](https://www.jamstack.org) architectures was coming to life through the hard work of Netlify, Smashing Magazine, and some generous and dedicated open-source contributors.
 
-I'm excited to hear how this is received by the Smashing Team, and the community.
+I'm excited to hear how this is received by the Smashing team, and the community.
 
 Go and explore the new [Smashing Magazine](https://www.smnashingmagazine.com) and consider supporting their move to reduce on-site ads by joining their [membership](https://www.smashingmagazine.com/membership) program which gives access to even more content.
