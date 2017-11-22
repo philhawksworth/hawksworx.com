@@ -20,4 +20,4 @@ I saw a demonstration of this back in later 2016 and it _blew my mind_. So much 
 
 I'm excited to hear how this is received by the Smashing team, and the community.
 
-Go and explore the new [Smashing Magazine](https://www.smnashingmagazine.com) and consider supporting their move to reduce on-site ads by joining their [membership](https://www.smashingmagazine.com/membership) program which gives access to even more content.
+Go and explore the new [Smashing Magazine](https://www.smashingmagazine.com) and consider supporting their move to reduce on-site ads by joining their [membership](https://www.smashingmagazine.com/membership) program which gives access to even more content.
