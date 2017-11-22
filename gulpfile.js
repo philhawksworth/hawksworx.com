@@ -54,6 +54,7 @@ gulp.task("watch", ["scss"], function () {
 });
 
 
+
 // Get the latest few tweets to include in some pages
 gulp.task('get:tweets', function() {
 
@@ -68,8 +69,9 @@ gulp.task('get:tweets', function() {
   client.get('statuses/user_timeline', params, function(error, tweets, response) {
 
     if (!error) {
+
       var recentTweets = {"recent" : []};
-      for(var tweet in tweets){
+      for(const tweet in tweets) {
         var t = {
           text: tweets[tweet].text,
           url: "https://twitter.com/philhawksworth/status/" + tweets[tweet].id_str,

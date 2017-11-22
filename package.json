@@ -24,6 +24,8 @@
     "gulp-sass": "^3.1.0",
     "json2yaml": "^1.1.0",
     "pageres": "^4.5.1",
+    "resolve-redirect": "0.0.3",
+    "resolver": "^0.1.12",
     "run-sequence": "^2.2.0",
     "twitter": "^1.7.1"
   }
