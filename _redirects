@@ -2,4 +2,4 @@
 /philhawksworth-*	/images/philhawksworth-:splat
 /journal*	/blog:splat
 
-/api/*  /.netlify/functions/:splat  200
+/api/*  /.netlify/functions/:splat  200!
