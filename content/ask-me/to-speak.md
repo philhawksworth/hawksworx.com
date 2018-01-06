@@ -40,5 +40,3 @@ _*actually, those last 2 might be a bit wierd_
 </form>
 
 
-Content-Security-Policy: default-src https://www.hawksworx.com
-
