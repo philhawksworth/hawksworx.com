@@ -23,6 +23,8 @@ After 9 years working at agencies, I returned to working on a product. Now as pa
 
 I live in the leafy English city of [St Albans](https://en.wikipedia.org/wiki/St_Albans), just a few miles north of London with my wife and our 2 naughty cats.
 
+If you want to know more, you can [ask me anything](/ask-me).
+
 
 ## Home on the web
 
@@ -39,8 +41,7 @@ You can find me in the following places on the web:
 
 ## Speaking
 
-As an active member of the web development community, I enjoy attending and speaking at conferences. For information of where I'll be speaking soon, or if you are interested in my speaking at your event, visit the [Speaking](/speaking) page of this site.
-
+As an active member of the web development community, I enjoy attending and speaking at conferences. If you are interested in my speaking at your event you can [ask me about speaking](/ask-me/to-speak) or visit the [Speaking](/speaking) page to see where I've spoken and what I have coming up.
 
 ## About this site
 

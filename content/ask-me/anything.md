@@ -11,9 +11,9 @@ description: Need answers? You can ask me questions via this site.
 
 I'm happy to answer questions if I can.
 
-How was this site made? What do you do for a living? How did you get started? Who is your favorite Beatle, Do you only like cats or are dogs ok too?
+How was this site made? What do you do for a living? How did you get started? Who is your favorite Beatle? Do you only like cats or are dogs ok too?
 
-these are all perfectly reasonable questions. I'm probably not going to give you my PIN number though.
+These are all perfectly reasonable questions. I'm probably not going to give you my PIN number though.
 
 
 <form name="ask-me-anything" netlify-honeypot="full-name" action="thanks" netlify>
