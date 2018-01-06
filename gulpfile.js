@@ -117,7 +117,7 @@ gulp.task("cards", function () {
 
 // Ensure any config files make to the dist folder
 gulp.task("configs", function () {
-  gulp.src(['_redirects'])
+  gulp.src(['_redirects', '_headers'])
     .pipe(gulp.dest('dist'))
 });
 
