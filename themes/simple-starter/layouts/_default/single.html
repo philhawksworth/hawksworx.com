@@ -1,0 +1,16 @@
+{{ define "hero" }}
+<div class="hero hero-blog">
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+    <p class="subtitle">{{ .Params.subtitle }}</p>
+  </div>
+</div>
+{{ end }}
+
+{{ define "main" }}
+<div class="container content">
+
+  {{ .Content }}
+
+</div>
+{{ end }}

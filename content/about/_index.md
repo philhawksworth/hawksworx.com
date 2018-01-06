@@ -14,10 +14,9 @@ This site is the online home of Phil Hawksworth, and Phil doesn't love talking a
 
 ## About me
 
-I have been building things on the web professoinally for almost 20 years. Between 2009 and 2018 that happened at agencies where I was fortunate to work with a wide range of public and private sector clients.
+I have been building things on the web professionally for almost 20 years. Between 2009 and 2018 that happened at agencies where I was fortunate to work with a wide range of public and private sector clients.
 
-<!--
-After 9 years working at agencies, I returned to working on a product. Now as part of the Developer Relations team at [Netlify](https://www.netlify.com) my focus is on developing strategies for using [JAMstack](https://www.jamstack.org) technologies to make building for the web simpler, faster and more secure. -->
+After 9 years working at agencies, I returned to working on a product. Now as part of the Developer Relations team at [Netlify](https://www.netlify.com) my focus is on developing strategies for using [JAMstack](https://www.jamstack.org) technologies to make building for the web simpler, faster and more secure.
 
 
 ## Home in the world
