@@ -17,7 +17,7 @@ Recently <a href="http://jaybyjayfresh.com" title="jaybyjayfresh">Jon Lister</a>
 
 
 <p>
-    The result has been published as <a href="http://unobtrusify.com" title="Unobtrusify.com - Unobtrusive Javascript for Progressive Enhancement">Unobtrusify.com</a>.
+    The result has been published as <a href="http://unobtrusify.hawksworx.com" title="Unobtrusify - Unobtrusive Javascript for Progressive Enhancement">unobtrusify.hawksworx.com</a>.
 </p>
 
 <h3>The aim.</h3>
@@ -33,7 +33,7 @@ Recently <a href="http://jaybyjayfresh.com" title="jaybyjayfresh">Jon Lister</a>
     First of all, I wrote the text for the page. I chose a simple statement and tried to structure it such that it would make sense regardless of which sections were expanded.
 </p>
 <p>
-    Then I used the simplest HTML markup I could to logically represent the content with its various headings.  <a href="http://unobtrusify.com/justhtml.html" title="Unobtrusify.com - Unobtrusive Javascript for Progressive Enhancement (HTML only)">This is how the page would look</a> to text-only browsers search engines, web-crawlers and screen-readers.
+    Then I used the simplest HTML markup I could to logically represent the content with its various headings.  <a href="http://unobtrusify.hawksworx.com/justhtml.html" title="Unobtrusify - Unobtrusive Javascript for Progressive Enhancement (HTML only)">This is how the page would look</a> to text-only browsers search engines, web-crawlers and screen-readers.
 </p>
 <p>
     I then used a well-known CSS technique to replace the text in the headings with images. This would ensure that the text would remain for non-human consumers of the site, while the images would be presented to those able to appreciate them.  The technique is simple.  You prevent the browser from scrolling the content of your element with <code>overflow:hidden</code> and then scoot the text out of the way with <code>text-indent</code>. Now that the way is clear, you can display an image with <code>background-image</code>.  Be sure to specify the dimensions of your desired image as the <code>background-image</code> property will not resize your element to the correct size automatically. The CSS would look something like this:
@@ -77,7 +77,7 @@ h1#cmh {
 {{< / highlight >}}
 
 <p>
-    At this point our <a href="http://unobtrusify.com/withcss.html" title="Unobtrusify.com - Unobtrusive Javascript for Progressive Enhancement (with CSS)">page looks like this</a>.  This is exactly how we want things to appear for those without Javascript. There is no ability to toggle the display of the various sections, the content is shown in full, and there is no mouseover behavior on the headings to suggest that they can be clicked (since they cannot).  This is the essence of <a href="http://en.wikipedia.org/wiki/Progressive_enhancement" title="Progressive enhancement">Progressive Enhancement</a>.  We have a perfectly serviceable web page (albeit a simple one) which we can now enhance for those with Javascript enabled.
+    At this point our <a href="http://unobtrusify.hawksworx.com/withcss.html" title="Unobtrusify - Unobtrusive Javascript for Progressive Enhancement (with CSS)">page looks like this</a>.  This is exactly how we want things to appear for those without Javascript. There is no ability to toggle the display of the various sections, the content is shown in full, and there is no mouseover behavior on the headings to suggest that they can be clicked (since they cannot).  This is the essence of <a href="http://en.wikipedia.org/wiki/Progressive_enhancement" title="Progressive enhancement">Progressive Enhancement</a>.  We have a perfectly serviceable web page (albeit a simple one) which we can now enhance for those with Javascript enabled.
 </p>
 <p>
     Using jQuery to easily and unobtrusively add behavior to elements on the page, we can now hide all of the expanded sections. We do this with a simple jQuery statement like this:
@@ -112,7 +112,7 @@ $('#wrapper h1').addClass('clickable');
     I also use an additional trick to prevent a flash of unstyled content or FOUC (gratifyingly pronounced 'FOOOOOOK' by <a href="http://hicksdesign.co.uk/" title="hicksdesign: design for print and new-fangled media">John Hicks</a>) while the Javascript is being downloaded. This trick is <a href="http://www.learningjquery.com/2008/10/1-awesome-way-to-avoid-the-not-so-excellent-flash-of-amazing-unstyled-content" title="1 (Awesome) Way To Avoid the (Not So Excellent) Flash of (Amazing) Unstyled Content &raquo; Learning jQuery - Tips, Techniques, Tutorials">very well explained</a> by <a href="http://www.englishrules.com/" title="English Rules">Karl Swedberg</a> on the excellent <a href="http://www.learningjquery.com/" title="Learning jQuery - Tips, Techniques, Tutorials">learningjquery.com</a> site.
 </p>
 <p>
-    For a better picture of exactly what is going on, why not swing by <a href="http://Unobtrusify.com" title="Unobtrusify.com - Unobtrusive Javascript for Progressive Enhancement">Unobtrusify.com</a> and exercise your right as a citizen of the Web to view the source. Hitting View Source is so often the best way to learn how things are done. Go on! Go and get your hands dirty!
+    For a better picture of exactly what is going on, why not swing by <a href="http://unobtrusify.hawksworx.com" title="Unobtrusify - Unobtrusive Javascript for Progressive Enhancement">unobtrusify.hawksworx.com</a> and exercise your right as a citizen of the Web to view the source. Hitting View Source is so often the best way to learn how things are done. Go on! Go and get your hands dirty!
 </p>
 
 
