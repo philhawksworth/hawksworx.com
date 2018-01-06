@@ -1,5 +1,4 @@
 /puttr/api	https://w04p8v061j.execute-api.us-east-1.amazonaws.com:443/dev/listings 200
 /philhawksworth-*	/images/philhawksworth-:splat
-/journal*	/blog:splat
-
-/api/*  /.netlify/functions/:splat  200!
+/journal*	/blog:splat 301
+/blog/:year/:month/:day/:slug  /blog/:slug  301
