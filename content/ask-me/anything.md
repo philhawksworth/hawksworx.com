@@ -1,22 +1,34 @@
 ---
 date: '2017-06-29T11:52:41+01:00'
 draft: false
-title: Ask me
-subtitle: You can ask me things. I'm a chatty chappy.
+title: Ask me anything
+subtitle: But you know, don't be rude.
 description: Need answers? You can ask me questions via this site.
 ---
 <img src="/images/philhawksworth-goon@2x.jpg" alt="Phil Hawksworth's face" class="avatar avatar-upclose" />
 
-## How can I help?
+## You can ask. I don't mind.
 
-Got questions? I might have answers. You can but ask!
+I'm happy to answer questions if I can.
 
-You can always [ask me things on Twitter](https://www.twitter.com/philhawksworth) but if that's not your thing don't worry, you can ask me questions directly through this site.
+How was this site made? What do you do for a living? How did you get started? Who is your favorite Beatle, Do you only like cats or are dogs ok too?
 
-I'll do my best to respond, just as long as you ask nicely ;)
+these are all perfectly reasonable questions. I'm probably not going to give you my PIN number though.
 
 
-## What?
-
-- [Questions about speaking.](to-speak)
-- [Questions about, well, anything else.](anything)
+<form name="ask-me-anything" netlify-honeypot="full-name" action="thanks" netlify>
+  <p class="honey">
+    <label>Your full name: <input name="full-name"></label>
+  </p>
+  <p>
+    <label for="email">Your contact details<small>usually email or twitter works best</small></label>
+    <input type="text" name="name" id="email">
+  </p>
+  <p>
+    <label for="message">Your question<small>I'll do my best to answer if I can</small></label>
+    <textarea name="message" id="message"></textarea>
+  </p>
+  <p>
+    <button type=”submit” class="btn">Ask Phil that burning question</button>
+  </p>
+</form>
