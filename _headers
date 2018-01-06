@@ -1,2 +1,7 @@
-Content-Security-Policy: default-src https://www.hawksworx.com:*
+/*
+  Content-Security-Policy: default-src https://www.hawksworx.com:*
+  X-XSS-Protection: 1; mode=block
+  X-Frame-Options: deny
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer-when-downgrade
 
