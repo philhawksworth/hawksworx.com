@@ -1,0 +1,24 @@
+#
+# http headers
+#
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Content-Security-Policy = "script-src 'unsafe-inline' https://www.hawksworx.com:* https://*.netlify.com:* https://www.google-analytics.com:*"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy= "no-referrer-when-downgrade"
+
+
+#
+# Redirect and proxies
+#
+redirects = [
+  {from = "/puttr/api", to = "https://w04p8v061j.execute-api.us-east-1.amazonaws.com:443/dev/listings", status = 200},
+  {from = "/philhawksworth-*", to = "/images/philhawksworth-:splat"},
+  {from = "/journal/*", to = "	/blog/:splat", status = 301},
+  {from = "/blog/:year/:month/:day/:slug", to = "	//blog/:slug", status = 301},
+]
+
+
