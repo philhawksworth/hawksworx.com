@@ -3,8 +3,9 @@ date: '2017-06-29T11:52:41+01:00'
 draft: false
 title: Ask me
 subtitle: You can ask me things. I'm a chatty chappy.
-description: Need answers? You can ask me questions via this site.
+description: You can ask me things. I'm a chatty chappy.
 ---
+
 <img src="/images/philhawksworth-goon@2x.jpg" alt="Phil Hawksworth's face" class="avatar avatar-upclose" />
 
 ## How can I help?
