@@ -17,5 +17,5 @@ I'll do my best to respond, just as long as you ask nicely ;)
 
 ## What?
 
-- [Questions about speaking.](to-speak)
-- [Questions about, well, anything else.](anything)
+- [Ask me questions about speaking.](to-speak)
+- [Ask me questions about, well... anything else.](anything)
