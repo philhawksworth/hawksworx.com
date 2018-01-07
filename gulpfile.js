@@ -115,12 +115,6 @@ gulp.task("cards", function () {
   return;
 });
 
-// Ensure any config files make to the dist folder
-gulp.task("configs", function () {
-  gulp.src(['_redirects', '_headers'])
-    .pipe(gulp.dest('dist'))
-});
-
 
 // Set watch as default task
 gulp.task("default", ["watch"]);
