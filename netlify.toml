@@ -1,8 +1,23 @@
-redirects = [
-  {from = "/puttr/api", to = "https://w04p8v061j.execute-api.us-east-1.amazonaws.com:443/dev/listings", status = 200},
-  {from = "/philhawksworth-*", to = "/images/philhawksworth-:splat"},
-  {from = "/journal*", to = "	/blog:splat", status = 301},
-  {from = "/blog/:year/:month/:day/:slug", to = "	/blog/:slug", status = 301}
-]
 
+# Simplify requests for my headshots
+[[redirects]]
+  from = "/philhawksworth-*"
+  to = "/images/philhawksworth-:splat"
 
+# Look after the old use of journal in urls
+[[redirects]]
+  from = "/journal*"
+  to = "/blog:splat"
+  status = 301
+
+# Simplified blog urls for slugs
+[[redirects]]
+  from = "/blog/:year/:month/:day/:slug"
+  to = "/blog/:slug"
+  status = 301
+
+# Proxy puttr seaches to my search lambda
+[[redirects]]
+  from = "/puttr/api"
+  to = "https://w04p8v061j.execute-api.us-east-1.amazonaws.com:443/dev/listings"
+  status = 200
