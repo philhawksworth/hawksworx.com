@@ -29,6 +29,6 @@ These are all perfectly reasonable questions. I'm probably not going to give you
     <textarea name="message" id="message"></textarea>
   </p>
   <p>
-    <button type=”submit” class="btn">Ask Phil that burning question</button>
+    <button type="submit" class="btn">Ask Phil that burning question</button>
   </p>
 </form>

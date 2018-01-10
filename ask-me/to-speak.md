@@ -25,6 +25,6 @@ If you'd like me to speak at your conference, meetup, company, university, or sc
     <textarea name="message" id="message"></textarea>
   </p>
   <p>
-    <button type=”submit” class="btn">Ask Phil about speaking</button>
+    <button type="submit" class="btn">Ask Phil about speaking</button>
   </p>
 </form>
