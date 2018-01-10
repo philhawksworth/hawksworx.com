@@ -3,7 +3,7 @@ date: '2017-06-29T11:52:41+01:00'
 draft: false
 title: Ask me to speak
 subtitle: Let me know if you'd like me to speak at your event
-description: Need answers? You can ask me questions via this site.
+description: Let me know if you'd like me to speak at your event
 ---
 <img src="/images/philhawksworth-goon@2x.jpg" alt="Phil Hawksworth's face" class="avatar avatar-upclose" />
 
@@ -25,6 +25,6 @@ If you'd like me to speak at your conference, meetup, company, university, or sc
     <textarea name="message" id="message"></textarea>
   </p>
   <p>
-    <button type=”submit” class="btn">Ask Phil about speaking</button>
+    <button type="submit" class="btn">Ask Phil about speaking</button>
   </p>
 </form>
