@@ -24,6 +24,8 @@ body {
 }
 
 
+
+
 header {
   position: fixed;
   top:0;
@@ -656,6 +658,15 @@ form {
      padding-bottom: 8px;
      padding-left: 4px;
      font-size: 16px;
+
+      &::-moz-selection {
+        color: rgb(192, 255, 17);
+        background-color: #000;
+      }
+      &::selection {
+        color: rgb(192, 255, 17);
+        background-color: #000;
+      }
    }
 
    textarea {
