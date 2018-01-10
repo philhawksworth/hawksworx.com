@@ -10,7 +10,7 @@ description: You can ask me things. I'm a chatty chappy.
 
 ## How can I help?
 
-Got questions? I might have answers. You can but ask!
+You've got questions? I might have answers. You can but ask!
 
 You can always [ask me things on Twitter](https://www.twitter.com/philhawksworth) but if that's not your thing don't worry, you can ask me questions directly through this site.
 
