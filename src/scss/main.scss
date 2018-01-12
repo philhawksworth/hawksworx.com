@@ -416,6 +416,7 @@ button {
   .flag {
     width: 16px;
     margin-top:1em;
+    margin-bottom: 0;
     margin-right:0.4em;
     vertical-align: baseline;
     box-shadow: 0 0 4px rgba(0,0,0,0.2);
@@ -468,6 +469,8 @@ button {
        left: -20px;
        top: 6px;
        width: 12px;
+       margin-top: 0;
+       margin-bottom: 0;
      }
   }
 }
