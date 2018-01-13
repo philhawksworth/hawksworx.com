@@ -18,7 +18,10 @@
 
 {{ define "main" }}
   <div class="content container post-content">
-    {{ .Content }}
+    <div class="post-summary">
+      {{ .Summary}}
+    </div>
+    {{ strings.TrimPrefix .Summary .Content | safeHTML }}
   </div>
 {{ end }}
 
