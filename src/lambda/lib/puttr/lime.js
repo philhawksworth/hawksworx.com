@@ -39,10 +39,8 @@ function html(response){
 
 
 module.exports.search = function(query) {
-
   var url = "http://limetorrents.cc/search/all/" + query + "/seeds/1";
-  console.log("Checking google for " + query ) ;
+  console.log("Checking limewire for " + query ) ;
   console.log("  " + url) ;
-
   return fetch(url).then(html).then(inspect);
 };
