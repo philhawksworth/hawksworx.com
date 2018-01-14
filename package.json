@@ -9,7 +9,8 @@
     "watch": "gulp watch",
     "scss": "gulp scss",
     "tweets": "gulp get:tweets",
-    "cards": "gulp cards"
+    "cards": "gulp cards",
+    "build:lambda": "netlify-lambda build src/lambda"
   },
   "keywords": [],
   "author": "Phil Hawksworth",
@@ -27,6 +28,11 @@
     "resolve-redirect": "0.0.3",
     "resolver": "^0.1.12",
     "run-sequence": "^2.2.0",
-    "twitter": "^1.7.1"
+    "twitter": "^1.7.1",
+    "netlify-lambda": "^0.2.0",
+    "cheerio": "^0.18.0",
+    "moment": "^2.9.0",
+    "q": "^2.0.3",
+    "request": "^2.51.0"
   }
 }
