@@ -36,7 +36,7 @@ function html(response){
 
 
 module.exports.search = function(query) {
-  var url = "https://www.eztv.it/search/" + query.splt(" ").join("-");
+  var url = "https://www.eztv.it/search/" + query.split(" ").join("-");
   console.log("Checking EZTV for " + query ) ;
   console.log("  " + url) ;
   return fetch(url).then(html).then(inspect);
