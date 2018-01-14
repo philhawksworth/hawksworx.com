@@ -5,7 +5,7 @@ var http = require('http');
 var fetch = require("node-fetch");
 
 var lime = require("./lib/puttr/lime.js");
-// var google = require("./lib/puttr/google.js");
+var eztv = require("./lib/puttr/eztv.js");
 
 
 export function handler(event, context, callback) {
@@ -13,7 +13,8 @@ export function handler(event, context, callback) {
   var searchStr = event.queryStringParameters['q'];
 
   Promise.all([
-    lime.search(searchStr)
+    lime.search(searchStr),
+    eztv.search(searchStr)
   ])
   .then(function(values){
     var hits = [].concat.apply([], values); // combine all of the results arrays
