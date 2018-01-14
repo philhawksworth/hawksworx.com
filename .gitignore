@@ -1,6 +1,7 @@
 /node_modules
 /public
 /dist
+/functions
 /data/**/hash.*
 /themes/simple-starter/static/css/*.css
 .env
