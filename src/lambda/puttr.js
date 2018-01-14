@@ -4,8 +4,8 @@ var fs = require('fs');
 var http = require('http');
 var fetch = require("node-fetch");
 
-// var lime = require("./lib/puttr/lime.js");
-var google = require("./lib/puttr/google.js");
+var lime = require("./lib/puttr/lime.js");
+// var google = require("./lib/puttr/google.js");
 
 
 export function handler(event, context, callback) {
@@ -13,8 +13,7 @@ export function handler(event, context, callback) {
   var searchStr = event.queryStringParameters['q'];
 
   Promise.all([
-    google.search(searchStr),
-    google.search("hawksworx")
+    lime.search(searchStr)
   ])
   .then(function(values){
     var hits = [].concat.apply([], values); // combine all of the results arrays

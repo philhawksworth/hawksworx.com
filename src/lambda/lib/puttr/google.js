@@ -8,7 +8,6 @@ function inspect(html) {
 
   var results = [];
   var $ = cheerio.load(html);
-  var res = $('li.talk').length;
 
   $('li.talk').each(function(index, item){
     results.push({
