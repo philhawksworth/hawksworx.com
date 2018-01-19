@@ -38,6 +38,20 @@
   to = "https://w04p8v061j.execute-api.us-east-1.amazonaws.com:443/dev/listings"
   status = 200
 
+# Talks and sldes
+[[redirects]]
+  from = "/talks"
+  to = "/speaking"
+  status = 302
 
+# Talks and sldes
+[[redirects]]
+  from = "/talks/scriptconf"
+  to = "https://speakerdeck.com/philhawksworth/next-wave-infrastructure"
+  status = 302
 
+  [[redirects]]
+  from = "/talks/scriptcom"
+  to = "https://speakerdeck.com/philhawksworth/next-wave-infrastructure"
+  status = 302
 
