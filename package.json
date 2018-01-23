@@ -16,7 +16,6 @@
   "author": "Phil Hawksworth",
   "license": "ISC",
   "devDependencies": {
-    "cheerio": "^0.18.0",
     "del": "^3.0.0",
     "dotenv": "^4.0.0",
     "gulp": "^3.9.1",
@@ -29,14 +28,10 @@
     "netlify-lambda": "^0.2.0",
     "node-fetch": "^1.7.3",
     "pageres": "^4.5.1",
-    "q": "^2.0.3",
     "request": "^2.51.0",
     "resolve-redirect": "0.0.3",
     "resolver": "^0.1.12",
     "run-sequence": "^2.2.0",
     "twitter": "^1.7.1"
-  },
-  "dependencies": {
-    "fetch-cheerio-object": "^1.2.0"
   }
 }
