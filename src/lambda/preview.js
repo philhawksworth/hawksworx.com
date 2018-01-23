@@ -3,7 +3,6 @@
 var request = require("request");
 
 
-
 export function handler(event, context, callback) {
 
   // define the desired URL
