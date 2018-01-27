@@ -8,7 +8,7 @@ export function handler(event, context, callback) {
   console.log(event.body);
 
   // get the id of the submission in question from the request
-  var id = event.body["id"];
+  var id = JSON.parse(event.body);
   // var email = event.body.email;
   // var comment = event.body.body;
 
