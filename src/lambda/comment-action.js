@@ -40,17 +40,18 @@ export function handler(event, context, callback) {
       }]
     };
 
-
+    console.log("slackURL:", slackURL);
+    console.log(slackPayload);
     // console.log("comment", data.summary);
     // request.post(slackURL).form(slackPayload);
 
 
-    request.post({url:slackURL, formData: JSON.stringify(slackPayload)}, function optionalCallback(err, httpResponse, body) {
-      if (err) {
-        return console.error('upload failed:', err);
-      }
-      console.log('Upload successful!  Server responded with:', body);
-    });
+    request.post({url:slackURL, formData: slackPayload}, function optionalCallback(err, httpResponse, body) {
+    if (err) {
+      return console.error('upload failed:', err);
+    }
+    console.log('Upload successful!  Server responded with:', body);
+  });
 
 
 
