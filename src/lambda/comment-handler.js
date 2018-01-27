@@ -8,14 +8,12 @@ export function handler(event, context, callback) {
   console.log(event.body);
 
   // get the id of the submission in question from the request
-  var id = JSON.parse(event.body);
-  // var email = event.body.email;
-  // var comment = event.body.body;
+  var data = JSON.parse(event.body);
 
   console.log("-----------");
-  console.log("id", id);
-  // console.log("email", email);
-  // console.log("comment", comment);
+  console.log("id", data.id);
+  console.log("email", data.email);
+  console.log("comment", data.summary);
 
   // var url = "https://api.netlify.com/api/v1/submissions/" +id + "?access_token=" + oauth_token;
   // console.log("Requesting ", url);
