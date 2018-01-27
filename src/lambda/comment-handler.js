@@ -5,10 +5,18 @@ var oauth_token = process.env.NETLIFY_TOKEN;
 
 export function handler(event, context, callback) {
 
-  console.log(event);
+  console.log(event.body);
 
   // get the id of the submission in question from the request
-  // var id = event.queryStringParameters['id'];
+  var id = event.body.id;
+  var email = event.body.email;
+  var comment = event.body.body;
+
+  console.log("-----------");
+  console.log("id", id);
+  console.log("email", email);
+  console.log("comment", comment);
+
   // var url = "https://api.netlify.com/api/v1/submissions/" +id + "?access_token=" + oauth_token;
   // console.log("Requesting ", url);
 
