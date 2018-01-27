@@ -43,7 +43,9 @@ export function handler(event, context, callback) {
 
     // console.log("comment", data.summary);
     // request.post(slackURL).form(slackPayload);
-
+    slackPayload  = {
+      "text": "New comment on hawksworx.com"
+    };
 
     request.post({url:slackURL, formData: JSON.stringify(slackPayload)
     }, function optionalCallback(err, httpResponse, body) {
