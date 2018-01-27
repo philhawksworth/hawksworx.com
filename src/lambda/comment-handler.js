@@ -45,7 +45,8 @@ export function handler(event, context, callback) {
     // request.post(slackURL).form(slackPayload);
 
 
-    request.post({url:slackURL, formData: JSON.stringify(slackPayload)}, function optionalCallback(err, httpResponse, body) {
+    request.post({url:slackURL, formData: JSON.stringify(slackPayload)
+    }, function optionalCallback(err, httpResponse, body) {
       if (err) {
         return console.error('upload failed:', err);
       }
