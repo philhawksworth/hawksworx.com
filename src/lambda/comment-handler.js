@@ -6,12 +6,13 @@ var oauth_token = process.env.NETLIFY_TOKEN;
 
 export function handler(event, context, callback) {
 
-  // get the id of the submission in question from the request
+  // get the arguments from the notification
   var data = JSON.parse(event.body);
 
-  console.log("-----------");
-
   var slackURL = process.env.SLACK_WEBHOOK_COMMENT_URL;
+  console.log("-----------");
+  console.log(slackURL);
+
   var slackPayload = {
     "text": "New comment on hawksworx.com",
 	  "attachments": [
@@ -41,14 +42,7 @@ export function handler(event, context, callback) {
     };
 
 
-    // console.log("comment", data.summary);
-    // request.post(slackURL).form(slackPayload);
-    slackPayload  = {
-      "text": "New comment on hawksworx.com"
-    };
-
-    request.post({url:slackURL, formData: JSON.stringify(slackPayload)
-    }, function optionalCallback(err, httpResponse, body) {
+    request.post({url:slackURL, json: slackPayload}, function optionalCallback(err, httpResponse, body) {
       if (err) {
         return console.error('upload failed:', err);
       }
@@ -57,35 +51,10 @@ export function handler(event, context, callback) {
 
 
 
-  // var url = "https://api.netlify.com/api/v1/submissions/" +id + "?access_token=" + oauth_token;
-  // console.log("Requesting ", url);
+  // callback(null, {
+  //   statusCode: 200,
+  //   body: JSON.stringify(event)
+  // })
 
-
-  // // get the action we'll perform" [ delete | approve ]
-  // var action = event.queryStringParameters['action'];
-
-  // delete: delete this submission via the api
-
-  // approve: post this comment to the approved comments form and let Netlify trigger a build to include it.
-
-
-
-
-  callback(null, {
-    statusCode: 200,
-    body: JSON.stringify(event)
-  })
-
-
-  // go get it
-  // request(url, function(err, response, body){
-  //   if(!err && response.statusCode === 200){
-  //     console.log("...we got a result");
-  //     callback(null, {
-  //       statusCode: 200,
-  //       body: body
-  //     })
-  //   }
-  // });
 }
 
