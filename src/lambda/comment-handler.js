@@ -10,40 +10,48 @@ export function handler(event, context, callback) {
   var data = JSON.parse(event.body);
 
   console.log("-----------");
-  console.log("id", data.id);
-  console.log("email", data.email);
-  console.log("comment", data.summary);
 
   var slackURL = process.env.SLACK_WEBHOOK_COMMENT_URL;
   var slackPayload = {
     "text": "New comment on hawksworx.com",
 	  "attachments": [
-		{
-      "fallback": "Required plain-text summary of the attachment.",
-      "color": "#36a64f",
-      "author_name": data.email,
-      "title": "Title of page commented",
-      "title_link": "https://www/hawksworx.com/blog/commented-on",
-      "text": data.summary
-    },
-    {
-      "fallback": "Manage comments on https://www.hawksworx.com",
-      "actions": [
-        {
-          "type": "button",
-          "text": "Approve comment",
-          "url": "https://www.hawksworx.com/.netlify/functions/comments-action?id=" & data.id & "&action=approve"
-        },
-		    {
-          "type": "button",
-          "text": "Delete comment",
-          "url": "https://www.hawksworx.com/.netlify/functions/comments-action?id=" & data.id & "&action=delete"
-        }
-      ]
-    }]
-  };
+      {
+        "fallback": "Required plain-text summary of the attachment.",
+        "color": "#36a64f",
+        "author_name": data.email,
+        "title": "Title of page commented",
+        "title_link": "https://www/hawksworx.com/blog/commented-on",
+        "text": data.summary
+      },
+      {
+        "fallback": "Manage comments on https://www.hawksworx.com",
+        "actions": [
+          {
+            "type": "button",
+            "text": "Approve comment",
+            "url": "https://www.hawksworx.com/.netlify/functions/comments-action?id=" & data.id & "&action=approve"
+          },
+          {
+            "type": "button",
+            "text": "Delete comment",
+            "url": "https://www.hawksworx.com/.netlify/functions/comments-action?id=" & data.id & "&action=delete"
+          }
+        ]
+      }]
+    };
 
-  request.post(slackURL).form(slackPayload);
+    console.log("slackURL:", slackURL);
+    console.log(slackPayload);
+    // console.log("comment", data.summary);
+    // request.post(slackURL).form(slackPayload);
+
+
+    request.post({url:slackURL, formData: slackPayload}, function optionalCallback(err, httpResponse, body) {
+    if (err) {
+      return console.error('upload failed:', err);
+    }
+    console.log('Upload successful!  Server responded with:', body);
+  });
 
 
 
