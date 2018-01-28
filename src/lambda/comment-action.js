@@ -51,12 +51,13 @@ export function handler(event, context, callback) {
         var data = JSON.parse(body).data;
 
         // var approvedURL = "https://www.hawksworx.com/stubs/comments/thanks";
-        var approvedURL = "https://comment--hawksworx.netlify.com/stubs/comments";
+        var approvedURL = "https://comment--hawksworx.netlify.com/stubs/comments/thanks";
         var payload = {
-          path: data.path,
-          email: data.email,
-          name: data.name,
-          comment: data.comment
+          "form-name" : "approved-blog-comments",
+          "path": data.path,
+          "email": data.email,
+          "name": data.name,
+          "comment": data.comment
         };
 
         console.log(payload);
