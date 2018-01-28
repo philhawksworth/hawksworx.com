@@ -7,6 +7,8 @@ export function handler(event, context, callback) {
   // get the arguments from the notification
   var data = JSON.parse(event.body);
 
+  console.log(data);
+
   // prepare call to the Slack API
   var slackURL = process.env.SLACK_WEBHOOK_COMMENT_URL;
   var slackPayload = {
@@ -27,14 +29,14 @@ export function handler(event, context, callback) {
           {
             "type": "button",
             "text": "Approve comment",
-            "name": "action",
-            "value": "approve"
+            "name": "approve",
+            "value": data.id
           },
           {
             "type": "button",
             "text": "Delete comment",
-            "name": "action",
-            "value": "delete"
+            "name": "delete",
+            "value": data.id
           }
         ]
       }]

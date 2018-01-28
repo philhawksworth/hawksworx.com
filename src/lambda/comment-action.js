@@ -17,17 +17,11 @@ export function handler(event, context, callback) {
 
   // parse the payload
   var body = event.body.split("payload=")[1];
+  var payload = JSON.parse(unescape(body));
+  var method = payload.actions[0].name
+  var id = payload.actions[0].value
 
-  console.log("BODY:", body);
-  var body = unescape(body);
-  console.log("BODY(U):", body);
-
-  var payload = JSON.parse(body);
-
-
-  console.log(payload);
-  // console.log("Action: ", action, id);
-
+  console.log(method, id);
 
   // delete: delete this submission via the api
 
@@ -36,7 +30,7 @@ export function handler(event, context, callback) {
 
   callback(null, {
     statusCode: 200,
-    body: payload.actions[0].value
+    body: method + ", " + id
   })
 
 
