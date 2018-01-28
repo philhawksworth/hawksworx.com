@@ -1,7 +1,7 @@
 'use strict';
 
 var request = require("request");
-var oauth_token = process.env.NETLIFY_TOKEN;
+// var oauth_token = process.env.NETLIFY_TOKEN;
 
 
 export function handler(event, context, callback) {
@@ -14,7 +14,7 @@ export function handler(event, context, callback) {
 
 
   // var url = "https://api.netlify.com/api/v1/submissions/" +id + "?access_token=" + oauth_token;
-  console.log("Event: ", event);
+  console.log("Event: ", "event");
   // console.log("Action: ", action, id);
 
 
@@ -25,7 +25,7 @@ export function handler(event, context, callback) {
 
   callback(null, {
     statusCode: 200,
-    body: event
+    body: "event"
   })
 
 
