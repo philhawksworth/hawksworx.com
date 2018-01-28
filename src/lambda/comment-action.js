@@ -16,7 +16,7 @@ export function handler(event, context, callback) {
   // var url = "https://api.netlify.com/api/v1/submissions/" +id + "?access_token=" + oauth_token;
 
   // parse the payload
-  var body = event.body.split("payload=")
+  var body = event.body.split("payload=")[1];
 
   console.log("BODY:", body);
   var body = unescape(body);
@@ -36,7 +36,7 @@ export function handler(event, context, callback) {
 
   callback(null, {
     statusCode: 200,
-    body: "payload.actions[0].value"
+    body: payload.actions[0].value
   })
 
 
