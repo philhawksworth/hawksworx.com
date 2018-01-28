@@ -9,10 +9,8 @@ export function handler(event, context, callback) {
   // get the arguments from the notification
   var data = JSON.parse(event.body);
 
+  // prepare call to the Slack API
   var slackURL = process.env.SLACK_WEBHOOK_COMMENT_URL;
-  console.log("-----------");
-  console.log(slackURL);
-
   var slackPayload = {
     "text": "New comment on hawksworx.com",
 	  "attachments": [
@@ -42,11 +40,14 @@ export function handler(event, context, callback) {
     };
 
 
-    request.post({url:slackURL, json: slackPayload}, function optionalCallback(err, httpResponse, body) {
+    console.log("-----------");
+    console.log(slackURL);
+
+    request.post({url:slackURL, json: slackPayload}, function callback(err, httpResponse, body) {
       if (err) {
-        return console.error('upload failed:', err);
+        return console.error('Post to Slack failed:', err);
       }
-      console.log('Upload successful!  Server responded with:', body);
+      return console.log('Post to Slack successful!  Server responded with:', body);
     });
 
 
