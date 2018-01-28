@@ -1,3 +1,7 @@
+---
+title: stubbed
+---
+
 <form name="approved-blog-comments" netlify-honeypot="full-name" action="thanks" netlify>
   <p class="honey">
     <label>Your full name: <input name="full-name"></label>
