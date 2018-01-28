@@ -14,7 +14,11 @@ export function handler(event, context, callback) {
 
 
   // var url = "https://api.netlify.com/api/v1/submissions/" +id + "?access_token=" + oauth_token;
-  console.log(JSON.stringify(arguments));
+
+  var body = JSON.parse(event.body);
+
+
+  console.log(body.payload);
   // console.log("Action: ", action, id);
 
 
@@ -25,7 +29,7 @@ export function handler(event, context, callback) {
 
   callback(null, {
     statusCode: 200,
-    body: "ok"
+    body: body.payload
   })
 
 
