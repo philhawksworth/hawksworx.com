@@ -15,8 +15,8 @@ export function handler(event, context, callback) {
     "text": "New comment on hawksworx.com",
 	  "attachments": [
       {
-        "fallback": "Required plain-text summary of the attachment.",
-        "color": "#36a64f",
+        "fallback": "RNew comment on hawksworx.com",
+        "color": "#444",
         "author_name": data.email,
         "title": "Title of page commented",
         "title_link": "https://www/hawksworx.com/blog/commented-on",
@@ -34,6 +34,7 @@ export function handler(event, context, callback) {
           },
           {
             "type": "button",
+            "style": "danger",
             "text": "Delete comment",
             "name": "delete",
             "value": data.id

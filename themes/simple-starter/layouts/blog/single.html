@@ -22,6 +22,7 @@
       {{ .Summary}}
     </div>
     {{ strings.TrimPrefix .Summary .Content | safeHTML }}
+    {{ partial "comment-form.html" . }}
   </div>
 {{ end }}
 
