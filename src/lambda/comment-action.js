@@ -7,15 +7,15 @@ var oauth_token = process.env.NETLIFY_TOKEN;
 export function handler(event, context, callback) {
 
   // get the action we'll perform" [ delete | approve ]
-  var action = event.queryStringParameters['action'];
+  // var action = event.queryStringParameters['action'];
 
   // get the id of the submission in question from the request
-  var id = event.queryStringParameters['id'];
+  // var id = event.queryStringParameters['id'];
 
 
   // var url = "https://api.netlify.com/api/v1/submissions/" +id + "?access_token=" + oauth_token;
   console.log("Event: ", event);
-  console.log("Action: ", action, id);
+  // console.log("Action: ", action, id);
 
 
   // delete: delete this submission via the api

@@ -1,8 +1,6 @@
 'use strict';
 
 var request = require("request");
-var oauth_token = process.env.NETLIFY_TOKEN;
-
 
 export function handler(event, context, callback) {
 
@@ -28,22 +26,20 @@ export function handler(event, context, callback) {
           {
             "type": "button",
             "text": "Approve comment",
-            "url": "https://www.hawksworx.com/.netlify/functions/comments-action?id=" & data.id & "&action=approve"
+            "name": "action",
+            "value": "approve"
           },
           {
             "type": "button",
             "text": "Delete comment",
-            "url": "https://www.hawksworx.com/.netlify/functions/comments-action?id=" & data.id & "&action=delete"
+            "name": "action",
+            "value": "delete"
           }
         ]
       }]
     };
 
-
-    console.log("-----------");
-    console.log(event.body);
-    console.log(slackURL);
-
+    // post the notification to Slack
     request.post({url:slackURL, json: slackPayload}, function(err, httpResponse, body) {
       var msg;
       if (err) {
@@ -51,15 +47,11 @@ export function handler(event, context, callback) {
       } else {
         msg = 'Post to Slack successful!  Server responded with:' + body;
       }
-
       callback(null, {
         statusCode: 200,
         body: msg
       })
-
       return console.log(msg);
     });
 
-
 }
-
