@@ -29,7 +29,7 @@ events:
   - name: JAMstack Meetup London
     location: "London, UK"
     date: 2018-02-05T19:00:00Z
-    url: meetup.com/JAMstack-London/events/247153958/
+    url: https://meetup.com/JAMstack-London/events/247153958/
     countrycode: gb-eng
 
  - name: Smashing Conference
