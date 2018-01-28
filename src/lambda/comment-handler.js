@@ -22,6 +22,7 @@ export function handler(event, context, callback) {
       },
       {
         "fallback": "Manage comments on https://www.hawksworx.com",
+        "callback_id": "comment-action",
         "actions": [
           {
             "type": "button",
