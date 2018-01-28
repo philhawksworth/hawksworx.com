@@ -16,7 +16,8 @@ export function handler(event, context, callback) {
   // var url = "https://api.netlify.com/api/v1/submissions/" +id + "?access_token=" + oauth_token;
 
   // parse the payload
-  var body = unescape(event.body).split("payload=")[0];
+  var body = event.body.split("payload=")
+  var body = unescape(body);
   var payload = JSON.parse(body);
 
 
