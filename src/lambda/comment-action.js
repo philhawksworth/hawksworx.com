@@ -25,7 +25,7 @@ export function handler(event, context, callback) {
 
     request.delete(url, function(err, response, body){
 
-      console.log("API called");
+      console.log("API called", response);
 
       if(!err && response.statusCode === 200){
         callback(null, {
