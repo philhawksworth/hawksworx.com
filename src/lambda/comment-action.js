@@ -50,7 +50,7 @@ export function handler(event, context, callback) {
 
         console.log(body);
 
-        var data = JSON.parse(body);
+        var data = JSON.parse(body).data;
 
         var approvedURL = "https://api.netlify.com/api/v1/submissions/" +id + "?access_token=" + oauth_token;
         var payload = {
