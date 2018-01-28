@@ -4,7 +4,7 @@
 <form name="blog-comment-queue" netlify-honeypot="full-name" action="thanks" netlify>
   <p class="honey">
     <label>Your full name: <input name="full-name"></label>
-    <label>Path: <input name="path"></label>
+    <label>Path: <input name="path" value="{{ .RelPermalink }}"></label>
   </p>
   <p>
     <label for="name">Your name<small>What should I call you?.</small></label>
