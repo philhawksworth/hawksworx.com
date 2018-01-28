@@ -26,11 +26,11 @@ events:
     url: http://www.frontendlondon.co.uk/
     countrycode: gb-eng
 
- - name: Smashing Conference
+  - name: Smashing Conference
     location: "London, UK"
     date: 2018-02-07T09:00:00Z
     url: https://smashingconf.com/london-2018
-    countrycode: gb-eng
+    countrycod : gb-eng
 
   - name: JAMstack Meetup London
     location: "London, UK"
