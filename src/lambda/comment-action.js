@@ -24,6 +24,9 @@ export function handler(event, context, callback) {
     console.log("ok, deleted it fro the form API: ", url);
 
     request.delete(url, function(err, response, body){
+
+      console.log("API called");
+
       if(!err && response.statusCode === 200){
         callback(null, {
           statusCode: 200,
