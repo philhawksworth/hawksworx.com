@@ -1,3 +1,5 @@
+import { log } from "util";
+
 'use strict';
 
 var request = require("request");
@@ -19,8 +21,6 @@ function purgeComment(id) {
     }
   });
 }
-
-
 
 
 
@@ -47,22 +47,43 @@ export function handler(event, context, callback) {
     var url = "https://api.netlify.com/api/v1/submissions/" +id + "?access_token=" + oauth_token;
     request(url, function(err, response, body){
       if(!err && response.statusCode === 200){
-        console.log("...we got a result");
+
+        console.log(body);
+
+        var data = JSON.parse(event.body);
+
+        var approvedURL = "https://api.netlify.com/api/v1/submissions/" +id + "?access_token=" + oauth_token;
+        var payload = {
+          path: data.path,
+          email: data.email,
+          name: data.name,
+          comment: data.comment
+        };
+
+        console.log(payload);
+
+        // post the comment to the approved lost
+        request.post({url:approvedURL, json: payload}, function(err, httpResponse, body) {
+          var msg;
+          if (err) {
+            msg = 'Post to approved comments failed:' + err;
+          } else {
+            msg = 'Post to approved comments successful!  Server responded with:' + body;
+          }
+          purgeComment(id);
+          var msg = "Comment approved. Site deploying to include it.";
+          callback(null, {
+            statusCode: 200,
+            body: msg
+          })
+          return console.log(msg);
+        });
+
       }
     });
 
-    // post the comment to the approved lost
 
-    // delete it from the queue
-    purgeComment(id);
 
-    var msg = "Comment approved. Site deploying to include it.";
-    callback(null, {
-      statusCode: 200,
-      body: msg
-    });
-
-    return console.log(msg);
 
     // var commentFormURL = "https://www.hawksworx.com/stubs/comments/thank-you";
     // var messagePayload = {
