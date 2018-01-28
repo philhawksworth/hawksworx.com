@@ -20,6 +20,9 @@ export function handler(event, context, callback) {
     // delete: delete this submission via the api
     var url = "https://api.netlify.com/api/v1/submissions/" +id + "?access_token=" + oauth_token;
 
+
+    console.log("ok, deleted it fro the form API: ", url);
+
     request.delete(url, function(err, response, body){
       if(!err && response.statusCode === 200){
         callback(null, {
