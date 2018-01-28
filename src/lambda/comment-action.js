@@ -23,6 +23,7 @@ export function handler(event, context, callback) {
           statusCode: 200,
           body: "Comment deleted"
         })
+        return console.log("Comment deleted");
       }
     });
   } else if (method == "approve"){
@@ -35,7 +36,7 @@ export function handler(event, context, callback) {
       name: "test-name",
       comment: "test-comment"
     };
-    request.post({url:slackURL, json: messagePayload}, function(err, httpResponse, body) {
+    request.post({url:commentFormURL, json: messagePayload}, function(err, httpResponse, body) {
       var msg;
       if (err) {
         msg = 'Post to comment stash failed:' + err;
@@ -44,18 +45,11 @@ export function handler(event, context, callback) {
       }
       callback(null, {
         statusCode: 200,
-        body: msg
+        body: "Comment approved. Site deploying to include it."
       })
-      return console.log(msg);
+      return console.log("Comment approved. Site deploying to include it.");
     });
 
-
-
-
-    callback(null, {
-      statusCode: 200,
-      body: "Comment approved. Site deploying to include it."
-    })
   }
 
 }
