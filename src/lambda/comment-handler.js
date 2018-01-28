@@ -41,21 +41,25 @@ export function handler(event, context, callback) {
 
 
     console.log("-----------");
+    console.log(event.body);
     console.log(slackURL);
 
-    request.post({url:slackURL, json: slackPayload}, function callback(err, httpResponse, body) {
+    request.post({url:slackURL, json: slackPayload}, function(err, httpResponse, body) {
+      var msg;
       if (err) {
-        return console.error('Post to Slack failed:', err);
+        msg = 'Post to Slack failed:' + err;
+      } else {
+        msg = 'Post to Slack successful!  Server responded with:' + body;
       }
-      return console.log('Post to Slack successful!  Server responded with:', body);
+
+      callback(null, {
+        statusCode: 200,
+        body: msg
+      })
+
+      return console.log(msg);
     });
 
-
-
-  // callback(null, {
-  //   statusCode: 200,
-  //   body: JSON.stringify(event)
-  // })
 
 }
 

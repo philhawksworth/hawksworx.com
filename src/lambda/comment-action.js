@@ -14,6 +14,7 @@ export function handler(event, context, callback) {
 
 
   // var url = "https://api.netlify.com/api/v1/submissions/" +id + "?access_token=" + oauth_token;
+  console.log("Event: ", event);
   console.log("Action: ", action, id);
 
 
@@ -22,20 +23,9 @@ export function handler(event, context, callback) {
   // approve: post this comment to the approved comments form and let Netlify trigger a build to include it.
 
 
-
-
-
-  // request.post({url:slackURL, formData: slackPayload}, function optionalCallback(err, httpResponse, body) {
-  //   if (err) {
-  //     return console.error('upload failed:', err);
-  //   }
-  //   console.log('Upload successful!  Server responded with:', body);
-  // });
-
-
   callback(null, {
     statusCode: 200,
-    body: "Action: ", action, id
+    body: event
   })
 
 
