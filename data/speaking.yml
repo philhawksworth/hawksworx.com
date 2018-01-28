@@ -30,7 +30,7 @@ events:
     location: "London, UK"
     date: 2018-02-07T09:00:00Z
     url: https://smashingconf.com/london-2018
-    countrycod : gb-eng
+    countrycode : gb-eng
 
   - name: JAMstack Meetup London
     location: "London, UK"
