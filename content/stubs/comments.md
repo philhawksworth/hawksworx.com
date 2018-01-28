@@ -19,4 +19,7 @@ title: stubbed
     <label for="comment">Your comment<small>Markdown is fine.</small></label>
     <textarea name="comment" id="comment"></textarea>
   </p>
+    <p>
+    <button type="submit" class="btn">Post your comment</button>
+  </p>
 </form>

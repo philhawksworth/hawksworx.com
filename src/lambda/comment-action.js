@@ -12,18 +12,18 @@ var oauth_token = process.env.NETLIFY_TOKEN;
 function purgeComment(id) {
   var url = "https://api.netlify.com/api/v1/submissions/" +id + "?access_token=" + oauth_token;
   request.delete(url, function(err, response, body){
-    if(!err){
-    //  callback(null, {
-    //    statusCode: 200,
-    //    body: "Comment deleted"
-    //  })
+    if(err){
+      return console.log(err);
+    } else {
       return console.log("Comment deleted from queue.");
     }
   });
 }
 
 
-
+/*
+  Handle the lambda invocation
+*/
 export function handler(event, context, callback) {
 
   // parse the payload
@@ -32,8 +32,6 @@ export function handler(event, context, callback) {
   var method = payload.actions[0].name
   var id = payload.actions[0].value
 
-  console.log(method, id);
-
   if(method == "delete") {
     purgeComment(id);
     callback(null, {
@@ -41,7 +39,7 @@ export function handler(event, context, callback) {
       body: "Comment deleted"
     });
   } else if (method == "approve"){
-    // approve: post this comment to the approved comments form and let Netlify trigger a build to include it.
+    // post this comment to the approved comments form and let Netlify trigger a build to include it.
 
     // get the comment data
     var url = "https://api.netlify.com/api/v1/submissions/" +id + "?access_token=" + oauth_token;
@@ -52,7 +50,8 @@ export function handler(event, context, callback) {
 
         var data = JSON.parse(body).data;
 
-        var approvedURL = "https://api.netlify.com/api/v1/submissions/" +id + "?access_token=" + oauth_token;
+        // var approvedURL = "https://www.hawksworx.com/stubs/comments/thanks";
+        var approvedURL = "https://comment--hawksworx.netlify.com/stubs/comments";
         var payload = {
           path: data.path,
           email: data.email,
@@ -67,8 +66,10 @@ export function handler(event, context, callback) {
           var msg;
           if (err) {
             msg = 'Post to approved comments failed:' + err;
+            console.log(msg);
           } else {
             msg = 'Post to approved comments successful!  Server responded with:' + body;
+            console.log(msg);
           }
           purgeComment(id);
           var msg = "Comment approved. Site deploying to include it.";
