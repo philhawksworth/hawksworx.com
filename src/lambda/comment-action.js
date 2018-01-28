@@ -3,6 +3,27 @@
 var request = require("request");
 var oauth_token = process.env.NETLIFY_TOKEN;
 
+
+/*
+  delete this submission via the api
+*/
+function purgeComment(id) {
+  var url = "https://api.netlify.com/api/v1/submissions/" +id + "?access_token=" + oauth_token;
+  request.delete(url, function(err, response, body){
+    if(!err){
+    //  callback(null, {
+    //    statusCode: 200,
+    //    body: "Comment deleted"
+    //  })
+      return console.log("Comment deleted from queue.");
+    }
+  });
+}
+
+
+
+
+
 export function handler(event, context, callback) {
 
   // parse the payload
@@ -14,41 +35,55 @@ export function handler(event, context, callback) {
   console.log(method, id);
 
   if(method == "delete") {
-    // delete: delete this submission via the api
-    var url = "https://api.netlify.com/api/v1/submissions/" +id + "?access_token=" + oauth_token;
-    request.delete(url, function(err, response, body){
-      if(!err){
-        console.log("Deleted");
-        callback(null, {
-          statusCode: 200,
-          body: "Comment deleted"
-        })
-        return console.log("Comment deleted");
-      }
+    purgeComment(id);
+    callback(null, {
+      statusCode: 200,
+      body: "Comment deleted"
     });
   } else if (method == "approve"){
     // approve: post this comment to the approved comments form and let Netlify trigger a build to include it.
 
-    var commentFormURL = "https://www.hawksworx.com/stubs/comments/thank-you";
-    var messagePayload = {
-      path: "test-path",
-      email: "test-email",
-      name: "test-name",
-      comment: "test-comment"
-    };
-    request.post({url:commentFormURL, json: messagePayload}, function(err, httpResponse, body) {
-      var msg;
-      if (err) {
-        msg = 'Post to comment stash failed:' + err;
-      } else {
-        msg = 'Post to comment stash successful!  Server responded with:' + body;
+    // get the comment data
+    var url = "https://api.netlify.com/api/v1/submissions/" +id + "?access_token=" + oauth_token;
+    request(url, function(err, response, body){
+      if(!err && response.statusCode === 200){
+        console.log("...we got a result");
       }
-      callback(null, {
-        statusCode: 200,
-        body: "Comment approved. Site deploying to include it."
-      })
-      return console.log("Comment approved. Site deploying to include it.");
     });
+
+    // post the comment to the approved lost
+
+    // delete it from the queue
+    purgeComment(id);
+
+    var msg = "Comment approved. Site deploying to include it.";
+    callback(null, {
+      statusCode: 200,
+      body: msg
+    });
+
+    return console.log(msg);
+
+    // var commentFormURL = "https://www.hawksworx.com/stubs/comments/thank-you";
+    // var messagePayload = {
+    //   path: "test-path",
+    //   email: "test-email",
+    //   name: "test-name",
+    //   comment: "test-comment"
+    // };
+    // request.post({url:commentFormURL, json: messagePayload}, function(err, httpResponse, body) {
+    //   var msg;
+    //   if (err) {
+    //     msg = 'Post to comment stash failed:' + err;
+    //   } else {
+    //     msg = 'Post to comment stash successful!  Server responded with:' + body;
+    //   }
+    //   callback(null, {
+    //     statusCode: 200,
+    //     body: "Comment approved. Site deploying to include it."
+    //   })
+    //   return console.log("Comment approved. Site deploying to include it.");
+    // });
 
   }
 
