@@ -17,7 +17,11 @@ export function handler(event, context, callback) {
 
   // parse the payload
   var body = event.body.split("payload=")
+
+  console.log("BODY:", body);
   var body = unescape(body);
+  console.log("BODY(U):", body);
+
   var payload = JSON.parse(body);
 
 
@@ -32,7 +36,7 @@ export function handler(event, context, callback) {
 
   callback(null, {
     statusCode: 200,
-    body: payload.actions[0].value
+    body: "payload.actions[0].value"
   })
 
 
