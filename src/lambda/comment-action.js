@@ -53,7 +53,8 @@ export function handler(event, context, callback) {
           "path": data.path,
           "email": data.email,
           "name": data.name,
-          "comment": data.comment
+          "comment": data.comment,
+          "date": new Date()
         };
 
         console.log("Posting to", approvedURL);
