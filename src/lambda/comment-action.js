@@ -39,16 +39,14 @@ export function handler(event, context, callback) {
       body: "Comment deleted"
     });
   } else if (method == "approve"){
-    // post this comment to the approved comments form and let Netlify trigger a build to include it.
 
-    // get the comment data
+    // get the comment data fro the queue
     var url = "https://api.netlify.com/api/v1/submissions/" +id + "?access_token=" + oauth_token;
     request(url, function(err, response, body){
       if(!err && response.statusCode === 200){
-
         var data = JSON.parse(body).data;
 
-        // var approvedURL = "https://www.hawksworx.com/stubs/comments/thanks";
+        // now we have the data, let's massage it and post it to the approved form
         var approvedURL = "https://comment--hawksworx.netlify.com/stubs/comments";
         var payload = {
           "form-name" : "approved-blog-comments",
@@ -58,6 +56,7 @@ export function handler(event, context, callback) {
           "comment": data.comment
         };
 
+        console.log("Posting to", approvedURL);
         console.log(payload);
 
         // post the comment to the approved lost
@@ -78,39 +77,8 @@ export function handler(event, context, callback) {
           })
           return console.log(msg);
         });
-
       }
     });
 
-
-
-
-    // var commentFormURL = "https://www.hawksworx.com/stubs/comments/thank-you";
-    // var messagePayload = {
-    //   path: "test-path",
-    //   email: "test-email",
-    //   name: "test-name",
-    //   comment: "test-comment"
-    // };
-    // request.post({url:commentFormURL, json: messagePayload}, function(err, httpResponse, body) {
-    //   var msg;
-    //   if (err) {
-    //     msg = 'Post to comment stash failed:' + err;
-    //   } else {
-    //     msg = 'Post to comment stash successful!  Server responded with:' + body;
-    //   }
-    //   callback(null, {
-    //     statusCode: 200,
-    //     body: "Comment approved. Site deploying to include it."
-    //   })
-    //   return console.log("Comment approved. Site deploying to include it.");
-    // });
-
   }
-
 }
-
-
-  // get the action we'll perform" [ delete | approve ]
-  // var action = event.queryStringParameters['action'];
-
