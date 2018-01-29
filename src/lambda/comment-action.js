@@ -46,12 +46,10 @@ export function handler(event, context, callback) {
     request(url, function(err, response, body){
       if(!err && response.statusCode === 200){
 
-        console.log(body);
-
         var data = JSON.parse(body).data;
 
         // var approvedURL = "https://www.hawksworx.com/stubs/comments/thanks";
-        var approvedURL = "https://comment--hawksworx.netlify.com/stubs/comments/thanks";
+        var approvedURL = "https://comment--hawksworx.netlify.com/stubs/comments";
         var payload = {
           "form-name" : "approved-blog-comments",
           "path": data.path,
@@ -63,7 +61,7 @@ export function handler(event, context, callback) {
         console.log(payload);
 
         // post the comment to the approved lost
-        request.post({url:approvedURL, json: payload}, function(err, httpResponse, body) {
+        request.post({url:approvedURL, formData: payload}, function(err, httpResponse, body) {
           var msg;
           if (err) {
             msg = 'Post to approved comments failed:' + err;
