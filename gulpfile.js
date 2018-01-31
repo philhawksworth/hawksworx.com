@@ -10,7 +10,7 @@ var fs            = require('fs');
 var yaml          = require('json2yaml');
 var glob          = require('glob');
 var path          = require('path');
-
+var request       = require("request");
 
 // load environment variables
 require('dotenv').config()
@@ -114,6 +114,58 @@ gulp.task("cards", function () {
   }
   return;
 });
+
+
+
+// Collect and stash comments for the build
+gulp.task("get:comments", function () {
+
+  // get all submissions from from approved comment form
+  var oauth_token = process.env.NETLIFY_TOKEN;
+  var formID = "5a6df445ae52900fdc164e26";
+  // var url = "https://api.netlify.com/api/v1/forms?access_token=" + oauth_token;
+  var url = "https://api.netlify.com/api/v1/submissions/" + formID + "?access_token=" + oauth_token;
+
+  request(url, function(err, response, body){
+    if(!err && response.statusCode === 200){
+
+      console.log("got result");
+      console.log(body);
+
+      // parse the data and assemble a data set for saving
+      var data = JSON.parse(body).data;
+      var comments = {};
+      for(var item in data){
+        console.log(item);
+      }
+
+
+      // iterate over the data object to and create a comments file for each URL path found
+
+
+      // stash the comments local in a data file named: data/{slug}/comments.yml
+
+      /*
+      var commentFile = "data/" + data.path + "/comments.yml";
+      var ymlText = yaml.stringify(comments)
+      fs.writeFile(__dirname + commentFile, ymlText, function(err) {
+        if(err) {
+          console.log(err);
+        } else {
+          console.log("Comments data saved.");
+        }
+      });
+      */
+
+    } else {
+      console.log("bad get");
+    }
+  });
+
+  return;
+});
+
+
 
 
 // Set watch as default task

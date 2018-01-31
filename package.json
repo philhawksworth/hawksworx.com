@@ -10,6 +10,7 @@
     "watch": "gulp watch",
     "scss": "gulp scss",
     "tweets": "gulp get:tweets",
+    "comments": "gulp get:comments",
     "cards": "gulp cards",
     "build:lambda": "netlify-lambda build src/lambda"
   },
@@ -29,7 +30,7 @@
     "netlify-lambda": "^0.2.0",
     "node-fetch": "^1.7.3",
     "pageres": "^4.5.1",
-    "request": "^2.51.0",
+    "request": "^2.83.0",
     "resolve-redirect": "0.0.3",
     "resolver": "^0.1.12",
     "run-sequence": "^2.2.0",
