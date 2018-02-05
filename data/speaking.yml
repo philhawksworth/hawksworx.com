@@ -23,7 +23,7 @@ events:
     url: https://2018.render-conf.com/
     countrycode: gb-eng
 
-  - name: JAMStack Meetup Toulouse
+  - name: JAMStack Toulouse Meetup
     location: "Toulouse, France"
     date: 2018-03-16T18:00:00Z
     url: https://www.meetup.com/en-AU/JAMstack-Toulouse/events/246940796/
@@ -39,6 +39,12 @@ events:
     location: "London, UK"
     date: 2018-02-07T09:00:00Z
     url: https://smashingconf.com/london-2018
+    countrycode: gb-eng
+
+  - name: JAMstack London Meetup
+    location: "London, UK"
+    date: 2018-02-05T18:30:00Z
+    url: https://www.meetup.com/JAMstack-London/events/247153958/
     countrycode: gb-eng
 
   - name: ScriptConf
