@@ -1,23 +1,32 @@
 events:
 
-  - name: TBA
+  - name: TBA (MC)
+    location: "Copenhagen, Denmark"
+    date: 2018-11-13T09:00:00Z
+    countrycode: dk
+
+  - name: Webconf.asia
     location: "Hong Kong"
     date: 2018-06-07T09:00:00Z
+    url: https://webconf.asia/
     countrycode: hk
 
-  - name: TBA (MC)
+  - name: ALl Day Hey (MC)
     location: "Leeds, UK"
     date: 2018-04-30T09:00:00Z
+    url: http://leedsinternationalfestival.com/event/all-day-hey
     countrycode: gb-eng
 
-  - name: TBA
-    location: "UK"
+  - name: Render Conf
+    location: "Oxford, UK"
     date: 2018-03-23T09:00:00Z
+    url: https://2018.render-conf.com/
     countrycode: gb-eng
 
   - name: JAMStack Meetup Toulouse
     location: "Toulouse, France"
     date: 2018-03-16T18:00:00Z
+    url: https://www.meetup.com/en-AU/JAMstack-Toulouse/events/246940796/
     countrycode: fr
 
   - name: Front End London
