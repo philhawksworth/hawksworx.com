@@ -58,3 +58,8 @@
   to = "https://speakerdeck.com/philhawksworth/next-wave-infrastructure"
   status = 302
 
+  [[redirects]]
+  from = "/talks/JAMLDN1"
+  to = "https://speakerdeck.com/philhawksworth/next-wave-infrastructure"
+  status = 302
+
