@@ -63,3 +63,7 @@
   to = "https://speakerdeck.com/philhawksworth/next-wave-infrastructure"
   status = 302
 
+ [[redirects]]
+  from = "/talks/smashing"
+  to = "https://speakerdeck.com/philhawksworth/next-wave-infrastructure"
+  status = 302
