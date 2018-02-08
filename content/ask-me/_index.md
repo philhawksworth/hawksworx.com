@@ -18,5 +18,5 @@ I'll do my best to respond, just as long as you ask nicely ;)
 
 ## What?
 
-- [Ask me questions about speaking.](./to-speak)
-- [Ask me questions about, well... anything else.](./anything)
+- [Ask me questions about speaking.](/ask-me/to-speak)
+- [Ask me questions about, well... anything else.](/ask-me/anything)
