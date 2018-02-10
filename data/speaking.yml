@@ -17,6 +17,11 @@ events:
     url: http://leedsinternationalfestival.com/event/all-day-hey
     countrycode: gb-eng
 
+  - name: TBA
+    location: "Romania"
+    date: 2018-04-19T09:00:00Z
+    countrycode: ro
+
   - name: Render Conf
     location: "Oxford, UK"
     date: 2018-03-23T09:00:00Z
