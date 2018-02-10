@@ -23,9 +23,13 @@
       <p>I'll be speaking at these events soon. For information on more upcoming events, coverage or previous events, or on infoprmation on booking me to speak at your event, visit the <a href="/speaking">speaking</a> page.</p>
       <div class="listing">
         <ul>
+          {{ $.Scratch.Add "counter" 0 }}
           {{ range sort .Site.Data.speaking.events "date" "asc" }}
             {{ if (time .date).After now }}
-              {{ partial "talk.html" . }}
+              {{ if lt ($.Scratch.Get "counter") 3 }}
+                {{ partial "talk.html" . }}
+                {{ $.Scratch.Add "counter" 1 }}
+              {{ end }}
             {{ end }}
           {{ end }}
         </ul>
