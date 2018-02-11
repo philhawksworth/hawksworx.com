@@ -50,14 +50,15 @@ export function handler(event, context, callback) {
       if(!err && response.statusCode === 200){
         var data = JSON.parse(body).data;
 
-        console.log("SITE: ", data);
+        console.log("SITE: ", JSON.parse(body));
+        var received = new Date().toString();
 
         // now we have the data, let's massage it and post it to the approved form
         var approvedURL = "https://comment--hawksworx.netlify.com/thanks";
         var payload = {
           'form-name' : "approved-blog-comments",
           'path': data.path,
-          'submission-date': (new Date().toString()),
+          'submission-date': received,
           'email': data.email,
           'name': data.name,
           'comment': data.comment
