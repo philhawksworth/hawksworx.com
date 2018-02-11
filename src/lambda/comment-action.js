@@ -67,7 +67,8 @@ console.log(event);
         console.log(payload);
 
         // post the comment to the approved lost
-        request.post({'url':approvedURL, 'formData': {"form-name":"approved-blog-comments", "payload": JSON.stringify(payload) }}, function(err, httpResponse, body) {
+        // request.post({'url':approvedURL, 'formData': {"form-name":"approved-blog-comments", "payload": JSON.stringify(payload) }}, function(err, httpResponse, body) {
+        request.post({'url':approvedURL, 'formData': payload }, function(err, httpResponse, body) {
           var msg;
           if (err) {
             msg = 'Post to approved comments failed:' + err;
