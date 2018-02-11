@@ -60,16 +60,13 @@ console.log(event);
           "email": data.email,
           "name": data.name,
           "comment": data.comment,
-          "date": new Date().toString()
+          "submission-date": new Date().toString()
         };
-
-        toString
 
         console.log("Posting to", approvedURL);
         console.log(payload);
 
         // post the comment to the approved lost
-        // request.post({'url':approvedURL, 'formData': {"form-name":"approved-blog-comments", "payload": JSON.stringify(payload) }}, function(err, httpResponse, body) {
         request.post({'url':approvedURL, 'formData': payload }, function(err, httpResponse, body) {
           var msg;
           if (err) {
