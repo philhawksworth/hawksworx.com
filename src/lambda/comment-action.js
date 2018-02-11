@@ -60,8 +60,10 @@ console.log(event);
           "email": data.email,
           "name": data.name,
           "comment": data.comment,
-          "date": new Date()
+          "date": new Date().toString()
         };
+
+        toString
 
         console.log("Posting to", approvedURL);
         console.log(payload);
