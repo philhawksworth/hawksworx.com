@@ -55,6 +55,7 @@ console.log(event);
         // now we have the data, let's massage it and post it to the approved form
         var approvedURL = "https://comment--hawksworx.netlify.com/thanks";
         var payload = {
+          "form-name" : "approved-blog-comments",
           "path": data.path,
           "email": data.email,
           "name": data.name,
@@ -66,7 +67,7 @@ console.log(event);
         console.log(payload);
 
         // post the comment to the approved lost
-        request.post({'url':approvedURL, 'form-name' : "approved-blog-comments", 'formData': JSON.stringify(payload)}, function(err, httpResponse, body) {
+        request.post({'url':approvedURL, 'formData': {"form-name":"approved-blog-comments", "payload": JSON.stringify(payload) }}, function(err, httpResponse, body) {
           var msg;
           if (err) {
             msg = 'Post to approved comments failed:' + err;
