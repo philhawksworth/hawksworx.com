@@ -58,7 +58,7 @@ export function handler(event, context, callback) {
         var payload = {
           'form-name' : "approved-blog-comments",
           'path': data.path,
-          'submission-date': received,
+          'received': received,
           'email': data.email,
           'name': data.name,
           'comment': data.comment
