@@ -1,6 +1,6 @@
 # hawksworx.com
 
-Phil Hawksworth's blog.  Served up at [https://www.hawksworx.com]() and hosted on [Netlify](http://www.netlify.com)
+Phil Hawksworth's blog.  Served up at [https://www.hawksworx.com](https://www.hawksworx.com) and hosted on [Netlify](http://www.netlify.com)
 
 
 ## Overview
@@ -28,7 +28,7 @@ The site can then be built via npm with the command:
 
 The build command above will generate a set of static assets in a `dist` folder which can be deployed to any web hosting service.
 
-My prefered method is to host on [Netlify](http://www.netlify.com) who can also run this build process in their own CI environment and then depliy teh build to their distributed CDN. Such deployments are triggered automatically by every git push to the `master` branch of the origin repository.
+My preferred method is to host on [Netlify](http://www.netlify.com) who can also run this build process in their own CI environment and then depliy teh build to their distributed CDN. Such deployments are triggered automatically by every git push to the `master` branch of the origin repository.
 
 
 ## Development
@@ -36,12 +36,12 @@ My prefered method is to host on [Netlify](http://www.netlify.com) who can also 
 To develop the site locally, run:
 
 - `npm run watch` to monitor and regenerate all Sass code automatically
-- `hugo server --disableFastRender` to monitor and rebuild the entire site automatically (and relosd the local site)
+- `hugo server --disableFastRender` to monitor and rebuild the entire site automatically (and reload the local site)
 
 
 ## other commands
 
-`npm run cards` at the end of the build processv (`npm run build`) but can be invoked separately of desired. This generates image assets based on a special "card" output format for every page in the site. The images are copied to the `dist/images` directory and are referenced as an Open Graph asset in each page in order to be served as Twitter cards and open graph assets omn Facebook.
+`npm run cards` at the end of the build process (`npm run build`) but can be invoked separately of desired. This generates image assets based on a special "card" output format for every page in the site. The images are copied to the `dist/images` directory and are referenced as an Open Graph asset in each page in order to be served as Twitter cards and open graph assets omn Facebook.
 
 
 
