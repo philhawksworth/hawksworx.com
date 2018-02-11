@@ -29,6 +29,8 @@ function purgeComment(id) {
 */
 export function handler(event, context, callback) {
 
+console.log(event);
+
   // parse the payload
   var body = event.body.split("payload=")[1];
   var payload = JSON.parse(unescape(body));
@@ -45,6 +47,7 @@ export function handler(event, context, callback) {
 
     // get the comment data fro the queue
     var url = "https://api.netlify.com/api/v1/submissions/" +id + "?access_token=" + oauth_token;
+
     request(url, function(err, response, body){
       if(!err && response.statusCode === 200){
         var data = JSON.parse(body).data;
@@ -52,7 +55,6 @@ export function handler(event, context, callback) {
         // now we have the data, let's massage it and post it to the approved form
         var approvedURL = "https://comment--hawksworx.netlify.com/thanks";
         var payload = {
-          "form-name" : "approved-blog-comments",
           "path": data.path,
           "email": data.email,
           "name": data.name,
@@ -64,7 +66,7 @@ export function handler(event, context, callback) {
         console.log(payload);
 
         // post the comment to the approved lost
-        request.post({url:approvedURL, formData: JSON.stringify(payload)}, function(err, httpResponse, body) {
+        request.post({'url':approvedURL, 'form-name' : "approved-blog-comments", 'formData': JSON.stringify(payload)}, function(err, httpResponse, body) {
           var msg;
           if (err) {
             msg = 'Post to approved comments failed:' + err;
