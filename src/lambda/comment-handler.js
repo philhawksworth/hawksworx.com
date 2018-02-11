@@ -2,6 +2,12 @@
 
 var request = require("request");
 
+// populate environment variables locally.
+require('dotenv').config()
+
+
+
+
 export function handler(event, context, callback) {
 
   // get the arguments from the notification

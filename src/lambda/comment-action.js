@@ -1,8 +1,11 @@
-import { log } from "util";
-
 'use strict';
 
 var request = require("request");
+
+// populate environment variables locally.
+require('dotenv').config()
+
+// All calls to the Netlify API will need an auth token
 var oauth_token = process.env.NETLIFY_TOKEN;
 
 

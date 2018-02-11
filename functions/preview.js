@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 204);
+/******/ 	return __webpack_require__(__webpack_require__.s = 205);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -599,14 +599,14 @@ var algs = __webpack_require__(5);
 var crypto = __webpack_require__(1);
 var Fingerprint = __webpack_require__(21);
 var Signature = __webpack_require__(9);
-var DiffieHellman = __webpack_require__(55).DiffieHellman;
+var DiffieHellman = __webpack_require__(56).DiffieHellman;
 var errs = __webpack_require__(8);
 var utils = __webpack_require__(3);
 var PrivateKey = __webpack_require__(6);
 var edCompat;
 
 try {
-	edCompat = __webpack_require__(57);
+	edCompat = __webpack_require__(58);
 } catch (e) {
 	/* Just continue through, and bail out if we try to use it. */
 }
@@ -615,12 +615,12 @@ var InvalidAlgorithmError = errs.InvalidAlgorithmError;
 var KeyParseError = errs.KeyParseError;
 
 var formats = {};
-formats['auto'] = __webpack_require__(58);
+formats['auto'] = __webpack_require__(59);
 formats['pem'] = __webpack_require__(10);
 formats['pkcs1'] = __webpack_require__(41);
 formats['pkcs8'] = __webpack_require__(23);
 formats['rfc4253'] = __webpack_require__(15);
-formats['ssh'] = __webpack_require__(60);
+formats['ssh'] = __webpack_require__(61);
 formats['ssh-private'] = __webpack_require__(30);
 formats['openssh'] = formats['ssh-private'];
 
@@ -1056,14 +1056,14 @@ var Signature = __webpack_require__(9);
 var errs = __webpack_require__(8);
 var util = __webpack_require__(2);
 var utils = __webpack_require__(3);
-var dhe = __webpack_require__(55);
+var dhe = __webpack_require__(56);
 var generateECDSA = dhe.generateECDSA;
 var generateED25519 = dhe.generateED25519;
 var edCompat;
 var nacl;
 
 try {
-	edCompat = __webpack_require__(57);
+	edCompat = __webpack_require__(58);
 } catch (e) {
 	/* Just continue through, and bail out if we try to use it. */
 }
@@ -1075,7 +1075,7 @@ var KeyParseError = errs.KeyParseError;
 var KeyEncryptedError = errs.KeyEncryptedError;
 
 var formats = {};
-formats['auto'] = __webpack_require__(58);
+formats['auto'] = __webpack_require__(59);
 formats['pem'] = __webpack_require__(10);
 formats['pkcs1'] = __webpack_require__(41);
 formats['pkcs8'] = __webpack_require__(23);
@@ -7372,7 +7372,7 @@ var Identity = __webpack_require__(24);
 
 var formats = {};
 formats['openssh'] = __webpack_require__(112);
-formats['x509'] = __webpack_require__(61);
+formats['x509'] = __webpack_require__(62);
 formats['pem'] = __webpack_require__(113);
 
 var CertificateParseError = errs.CertificateParseError;
@@ -8542,7 +8542,7 @@ module.exports = require("https");
 
 // Load modules
 
-const Sntp = __webpack_require__(53);
+const Sntp = __webpack_require__(54);
 const Boom = __webpack_require__(35);
 
 
@@ -9489,7 +9489,7 @@ function readSSHPrivate(type, buf, options) {
 		var rounds = kdfOptsBuf.readInt();
 		var cinf = utils.opensshCipherInfo(cipher);
 		if (bcrypt === undefined) {
-			bcrypt = __webpack_require__(59);
+			bcrypt = __webpack_require__(60);
 		}
 
 		if (typeof (options.passphrase) === 'string') {
@@ -9610,7 +9610,7 @@ function write(key, options) {
 		kdfopts = kdfssh.toBuffer();
 
 		if (bcrypt === undefined) {
-			bcrypt = __webpack_require__(59);
+			bcrypt = __webpack_require__(60);
 		}
 		var pass = new Uint8Array(passphrase);
 		var salti = new Uint8Array(salt);
@@ -11481,6 +11481,12 @@ module.exports = uuid;
 
 /***/ }),
 /* 47 */
+/***/ (function(module, exports) {
+
+module.exports = require("fs");
+
+/***/ }),
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11525,7 +11531,7 @@ exports.jar = function (store) {
 
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11536,7 +11542,7 @@ exports.jar = function (store) {
 
 
 
-var punycode = __webpack_require__(49);
+var punycode = __webpack_require__(50);
 
 module.exports.getPublicSuffix = function getPublicSuffix(domain) {
   /*!
@@ -11630,13 +11636,13 @@ var index = module.exports.index = Object.freeze(
 
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports) {
 
 module.exports = require("punycode");
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11714,7 +11720,7 @@ Store.prototype.getAllCookies = function(cb) {
 
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11749,7 +11755,7 @@ Store.prototype.getAllCookies = function(cb) {
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-var pubsuffix = __webpack_require__(48);
+var pubsuffix = __webpack_require__(49);
 
 // Gives the permutation of all possible domainMatch()es of a given domain. The
 // array is in shortest-to-longest order.  Handy for indexing.
@@ -11777,7 +11783,7 @@ exports.permuteDomain = permuteDomain;
 
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11845,7 +11851,7 @@ exports.pathMatch = pathMatch;
 
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12264,7 +12270,7 @@ exports.now = function () {
 
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12359,7 +12365,7 @@ exports.fixedTimeComparison = function (a, b) {
 
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Copyright 2017 Joyent, Inc.
@@ -12407,7 +12413,7 @@ function DiffieHellman(key) {
 	} else if (key.type === 'ecdsa') {
 		if (!CRYPTO_HAVE_ECDH) {
 			if (ecdh === undefined)
-				ecdh = __webpack_require__(56);
+				ecdh = __webpack_require__(57);
 			if (ec === undefined)
 				ec = __webpack_require__(29);
 			if (jsbn === undefined)
@@ -12736,7 +12742,7 @@ function generateECDSA(curve) {
 
 	} else {
 		if (ecdh === undefined)
-			ecdh = __webpack_require__(56);
+			ecdh = __webpack_require__(57);
 		if (ec === undefined)
 			ec = __webpack_require__(29);
 		if (jsbn === undefined)
@@ -12776,7 +12782,7 @@ function generateECDSA(curve) {
 
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var crypto = __webpack_require__(1);
@@ -12839,7 +12845,7 @@ exports.ECKey = function(curve, key, isPublic)
 
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Copyright 2015 Joyent, Inc.
@@ -12941,7 +12947,7 @@ Signer.prototype.sign = function () {
 
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Copyright 2015 Joyent, Inc.
@@ -12957,7 +12963,7 @@ var Key = __webpack_require__(4);
 var PrivateKey = __webpack_require__(6);
 
 var pem = __webpack_require__(10);
-var ssh = __webpack_require__(60);
+var ssh = __webpack_require__(61);
 var rfc4253 = __webpack_require__(15);
 
 function read(buf, options) {
@@ -13020,7 +13026,7 @@ function write(key, options) {
 
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13583,7 +13589,7 @@ module.exports = {
 
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Copyright 2015 Joyent, Inc.
@@ -13703,7 +13709,7 @@ function write(key, options) {
 
 
 /***/ }),
-/* 61 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Copyright 2017 Joyent, Inc.
@@ -14435,7 +14441,7 @@ function writeBitField(setBits, bitIndex) {
 
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -14624,7 +14630,7 @@ function dumpException(ex)
 
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14819,13 +14825,13 @@ function populateMaps (extensions, types) {
 
 
 /***/ }),
-/* 64 */
+/* 65 */
 /***/ (function(module, exports) {
 
 module.exports = require("tls");
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var util = __webpack_require__(2);
@@ -15017,12 +15023,6 @@ CombinedStream.prototype._emitError = function(err) {
   this.emit('error', err);
 };
 
-
-/***/ }),
-/* 66 */
-/***/ (function(module, exports) {
-
-module.exports = require("fs");
 
 /***/ }),
 /* 67 */
@@ -16831,13 +16831,11 @@ module.exports = function generate__limitProperties(it, $keyword, $ruleType) {
 // Unique ID creation requires a high quality random # generator.  In node.js
 // this is pretty straight-forward - we use the crypto API.
 
-var rb = __webpack_require__(1).randomBytes;
+var crypto = __webpack_require__(1);
 
-function rng() {
-  return rb(16);
-}
-
-module.exports = rng;
+module.exports = function nodeRNG() {
+  return crypto.randomBytes(16);
+};
 
 
 /***/ }),
@@ -16891,7 +16889,7 @@ module.exports = bytesToUuid;
 
 
 var extend = __webpack_require__(32)
-var cookies = __webpack_require__(47)
+var cookies = __webpack_require__(48)
 var helpers = __webpack_require__(34)
 
 var paramsHaveRequestBody = helpers.paramsHaveRequestBody
@@ -17069,15 +17067,15 @@ Object.defineProperty(request, 'debug', {
 
 var net = __webpack_require__(33);
 var urlParse = __webpack_require__(7).parse;
-var pubsuffix = __webpack_require__(48);
-var Store = __webpack_require__(50).Store;
+var pubsuffix = __webpack_require__(49);
+var Store = __webpack_require__(51).Store;
 var MemoryCookieStore = __webpack_require__(89).MemoryCookieStore;
-var pathMatch = __webpack_require__(52).pathMatch;
+var pathMatch = __webpack_require__(53).pathMatch;
 var VERSION = __webpack_require__(90).version;
 
 var punycode;
 try {
-  punycode = __webpack_require__(49);
+  punycode = __webpack_require__(50);
 } catch(e) {
   console.warn("cookie: can't load punycode; won't use punycode for domain normalization");
 }
@@ -18373,7 +18371,7 @@ module.exports = {
   pathMatch: pathMatch,
   getPublicSuffix: pubsuffix.getPublicSuffix,
   cookieCompare: cookieCompare,
-  permuteDomain: __webpack_require__(51).permuteDomain,
+  permuteDomain: __webpack_require__(52).permuteDomain,
   permutePath: permutePath,
   canonicalDomain: canonicalDomain
 };
@@ -18415,9 +18413,9 @@ module.exports = {
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-var Store = __webpack_require__(50).Store;
-var permuteDomain = __webpack_require__(51).permuteDomain;
-var pathMatch = __webpack_require__(52).pathMatch;
+var Store = __webpack_require__(51).Store;
+var permuteDomain = __webpack_require__(52).permuteDomain;
+var pathMatch = __webpack_require__(53).pathMatch;
 var util = __webpack_require__(2);
 
 function MemoryCookieStore() {
@@ -18618,7 +18616,7 @@ var hawk = __webpack_require__(95)
 var aws2 = __webpack_require__(103)
 var aws4 = __webpack_require__(104)
 var httpSignature = __webpack_require__(106)
-var mime = __webpack_require__(63)
+var mime = __webpack_require__(64)
 var stringstream = __webpack_require__(122)
 var caseless = __webpack_require__(42)
 var ForeverAgent = __webpack_require__(124)
@@ -18627,7 +18625,7 @@ var extend = __webpack_require__(32)
 var isstream = __webpack_require__(73)
 var isTypedArray = __webpack_require__(132).strict
 var helpers = __webpack_require__(34)
-var cookies = __webpack_require__(47)
+var cookies = __webpack_require__(48)
 var getProxyFromURI = __webpack_require__(133)
 var Querystring = __webpack_require__(134).Querystring
 var Har = __webpack_require__(137).Har
@@ -20176,7 +20174,7 @@ module.exports = require("zlib");
 // Export sub-modules
 
 exports.error = exports.Error = __webpack_require__(35);
-exports.sntp = __webpack_require__(53);
+exports.sntp = __webpack_require__(54);
 
 exports.server = __webpack_require__(99);
 exports.client = __webpack_require__(102);
@@ -20388,7 +20386,7 @@ module.exports = require("dns");
 
 const Boom = __webpack_require__(35);
 const Hoek = __webpack_require__(19);
-const Cryptiles = __webpack_require__(54);
+const Cryptiles = __webpack_require__(55);
 const Crypto = __webpack_require__(37);
 const Utils = __webpack_require__(26);
 
@@ -21415,7 +21413,7 @@ module.exports = {"_from":"hawk@~6.0.2","_id":"hawk@6.0.2","_inBundle":false,"_i
 
 const Url = __webpack_require__(7);
 const Hoek = __webpack_require__(19);
-const Cryptiles = __webpack_require__(54);
+const Cryptiles = __webpack_require__(55);
 const Crypto = __webpack_require__(37);
 const Utils = __webpack_require__(26);
 
@@ -23951,7 +23949,7 @@ function getCertType(key) {
 
 // Copyright 2016 Joyent, Inc.
 
-var x509 = __webpack_require__(61);
+var x509 = __webpack_require__(62);
 
 module.exports = {
 	read: read,
@@ -24446,7 +24444,7 @@ module.exports = {
 var mod_assert = __webpack_require__(0);
 var mod_util = __webpack_require__(2);
 
-var mod_extsprintf = __webpack_require__(62);
+var mod_extsprintf = __webpack_require__(63);
 var mod_verror = __webpack_require__(116);
 var mod_jsonschema = __webpack_require__(118);
 
@@ -25187,7 +25185,7 @@ function mergeObjects(provided, overrides, defaults)
 var mod_assertplus = __webpack_require__(0);
 var mod_util = __webpack_require__(2);
 
-var mod_extsprintf = __webpack_require__(62);
+var mod_extsprintf = __webpack_require__(63);
 var mod_isError = __webpack_require__(117).isError;
 var sprintf = mod_extsprintf.sprintf;
 
@@ -26267,7 +26265,7 @@ ForeverAgent.SSL = ForeverAgentSSL
 var util = __webpack_require__(2)
   , Agent = __webpack_require__(18).Agent
   , net = __webpack_require__(33)
-  , tls = __webpack_require__(64)
+  , tls = __webpack_require__(65)
   , AgentSSL = __webpack_require__(25).Agent
   
 function getConnectionName(host, port) {  
@@ -26405,14 +26403,14 @@ function createConnectionSSL (port, host, options) {
 /* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var CombinedStream = __webpack_require__(65);
+var CombinedStream = __webpack_require__(66);
 var util = __webpack_require__(2);
 var path = __webpack_require__(36);
 var http = __webpack_require__(18);
 var https = __webpack_require__(25);
 var parseUrl = __webpack_require__(7).parse;
-var fs = __webpack_require__(66);
-var mime = __webpack_require__(63);
+var fs = __webpack_require__(47);
+var mime = __webpack_require__(64);
 var asynckit = __webpack_require__(127);
 var populate = __webpack_require__(131);
 
@@ -27704,7 +27702,7 @@ module.exports = function (str, opts) {
 "use strict";
 
 
-var fs = __webpack_require__(66)
+var fs = __webpack_require__(47)
 var qs = __webpack_require__(27)
 var validate = __webpack_require__(138)
 var extend = __webpack_require__(32)
@@ -32403,20 +32401,12 @@ var bytesToUuid = __webpack_require__(86);
 // Inspired by https://github.com/LiosK/UUID.js
 // and http://docs.python.org/library/uuid.html
 
-// random #'s we need to init node and clockseq
-var _seedBytes = rng();
-
-// Per 4.5, create and 48-bit node id, (47 random bits + multicast bit = 1)
-var _nodeId = [
-  _seedBytes[0] | 0x01,
-  _seedBytes[1], _seedBytes[2], _seedBytes[3], _seedBytes[4], _seedBytes[5]
-];
-
-// Per 4.2.2, randomize (14 bit) clockseq
-var _clockseq = (_seedBytes[6] << 8 | _seedBytes[7]) & 0x3fff;
+var _nodeId;
+var _clockseq;
 
 // Previous uuid creation time
-var _lastMSecs = 0, _lastNSecs = 0;
+var _lastMSecs = 0;
+var _lastNSecs = 0;
 
 // See https://github.com/broofa/node-uuid for API details
 function v1(options, buf, offset) {
@@ -32424,8 +32414,26 @@ function v1(options, buf, offset) {
   var b = buf || [];
 
   options = options || {};
-
+  var node = options.node || _nodeId;
   var clockseq = options.clockseq !== undefined ? options.clockseq : _clockseq;
+
+  // node and clockseq need to be initialized to random values if they're not
+  // specified.  We do this lazily to minimize issues related to insufficient
+  // system entropy.  See #189
+  if (node == null || clockseq == null) {
+    var seedBytes = rng();
+    if (node == null) {
+      // Per 4.5, create and 48-bit node id, (47 random bits + multicast bit = 1)
+      node = _nodeId = [
+        seedBytes[0] | 0x01,
+        seedBytes[1], seedBytes[2], seedBytes[3], seedBytes[4], seedBytes[5]
+      ];
+    }
+    if (clockseq == null) {
+      // Per 4.2.2, randomize (14 bit) clockseq
+      clockseq = _clockseq = (seedBytes[6] << 8 | seedBytes[7]) & 0x3fff;
+    }
+  }
 
   // UUID timestamps are 100 nano-second units since the Gregorian epoch,
   // (1582-10-15 00:00).  JSNumbers aren't precise enough for this, so
@@ -32486,7 +32494,6 @@ function v1(options, buf, offset) {
   b[i++] = clockseq & 0xff;
 
   // `node`
-  var node = options.node || _nodeId;
   for (var n = 0; n < 6; ++n) {
     b[i + n] = node[n];
   }
@@ -32508,7 +32515,7 @@ function v4(options, buf, offset) {
   var i = buf && offset || 0;
 
   if (typeof(options) == 'string') {
-    buf = options == 'binary' ? new Array(16) : null;
+    buf = options === 'binary' ? new Array(16) : null;
     options = null;
   }
   options = options || {};
@@ -32837,7 +32844,7 @@ exports.generateBase = generateBase
 
 
 var uuid = __webpack_require__(46)
-var CombinedStream = __webpack_require__(65)
+var CombinedStream = __webpack_require__(66)
 var isstream = __webpack_require__(73)
 var Buffer = __webpack_require__(17).Buffer
 
@@ -33299,7 +33306,7 @@ exports.Tunnel = Tunnel
 
 
 var net = __webpack_require__(33)
-  , tls = __webpack_require__(64)
+  , tls = __webpack_require__(65)
   , http = __webpack_require__(18)
   , https = __webpack_require__(25)
   , events = __webpack_require__(200)
@@ -33593,7 +33600,8 @@ module.exports = require("events");
 /***/ }),
 /* 202 */,
 /* 203 */,
-/* 204 */
+/* 204 */,
+/* 205 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
