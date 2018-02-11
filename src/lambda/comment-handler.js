@@ -20,7 +20,7 @@ export function handler(event, context, callback) {
     "text": "New comment on hawksworx.com",
 	  "attachments": [
       {
-        "fallback": "RNew comment on hawksworx.com",
+        "fallback": "New comment on hawksworx.com",
         "color": "#444",
         "author_name": data.email,
         "title": "Title of page commented",
