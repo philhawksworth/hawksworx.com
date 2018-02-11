@@ -54,7 +54,7 @@ export function handler(event, context, callback) {
         var approvedURL = "https://comment--hawksworx.netlify.com/thanks";
         var payload = {
           "form-name" : "approved-blog-comments",
-          "submissiondate": (new Date().toString()),
+          "submission-date": new Date().toString(),
           "path": data.path,
           "email": data.email,
           "name": data.name,
