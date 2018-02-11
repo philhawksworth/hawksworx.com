@@ -6,7 +6,7 @@ title: stubbed
   <p class="honey">
     <label>Your full name: <input name="full-name"></label>
     <label>Path: <input name="path"></label>
-    <label>Date: <input type="text" name="submission-date"></label>
+    <label>Date: <input type="text" name="submission-date" value="hello"></label>
   </p>
   <p>
     <label for="name">Your name<small>What should I call you?.</small></label>
