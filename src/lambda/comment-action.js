@@ -73,11 +73,11 @@ console.log(event);
             msg = 'Post to approved comments failed:' + err;
             console.log(msg);
           } else {
-            msg = 'Post to approved comments successful!  Server responded with:' + body;
+            msg = 'Post to approved comments list successful.'
             console.log(msg);
           }
           purgeComment(id);
-          var msg = "Comment approved. Site deploying to include it.";
+          var msg = "Comment registered. Site deploying to include it.";
           callback(null, {
             statusCode: 200,
             body: msg
