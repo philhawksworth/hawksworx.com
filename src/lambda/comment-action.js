@@ -29,8 +29,6 @@ function purgeComment(id) {
 */
 export function handler(event, context, callback) {
 
-console.log(event);
-
   // parse the payload
   var body = event.body.split("payload=")[1];
   var payload = JSON.parse(unescape(body));
@@ -56,11 +54,11 @@ console.log(event);
         var approvedURL = "https://comment--hawksworx.netlify.com/thanks";
         var payload = {
           "form-name" : "approved-blog-comments",
+          "submissiondate": (new Date().toString()),
           "path": data.path,
           "email": data.email,
           "name": data.name,
-          "comment": data.comment,
-          "submission-date": new Date().toString()
+          "comment": data.comment
         };
 
         console.log("Posting to", approvedURL);
