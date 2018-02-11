@@ -124,19 +124,22 @@ gulp.task("get:comments", function () {
   var oauth_token = process.env.NETLIFY_TOKEN;
   var formID = "5a6df445ae52900fdc164e26";
   // var url = "https://api.netlify.com/api/v1/forms?access_token=" + oauth_token;
-  var url = "https://api.netlify.com/api/v1/submissions/" + formID + "?access_token=" + oauth_token;
+  var url = "https://api.netlify.com/api/v1/forms/" + formID + "/submissions/?access_token=" + oauth_token;
+
+  console.log(url);
 
   request(url, function(err, response, body){
     if(!err && response.statusCode === 200){
 
       console.log("got result");
       console.log(body);
-
+      console.log("------------");
       // parse the data and assemble a data set for saving
-      var data = JSON.parse(body).data;
+      var body = JSON.parse(body);
       var comments = {};
-      for(var item in data){
-        console.log(item);
+      for(var item in body){
+        console.log(body[item].data);
+        console.log("---");
       }
 
 
