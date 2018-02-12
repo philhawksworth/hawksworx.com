@@ -393,7 +393,8 @@ button {
     border-bottom: none;
   }
   .talk,
-  .tweet {
+  .tweet,
+  .comment {
     border-top: solid 1px #eee;
     padding-top:1.5em;
     padding-bottom:1.5em;
@@ -441,6 +442,21 @@ button {
   }
 }
 
+.comment {
+  img.comment-avatar {
+    width:50px;
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .commenter {
+    font-size: 0.9em;
+  }
+  .comment-content {
+    margin-top: 1.4em;
+    margin-bottom: 2em;
+  }
+}
 
 .link {
   margin-bottom: 4em;
