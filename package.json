@@ -20,6 +20,7 @@
   "devDependencies": {
     "del": "^3.0.0",
     "dotenv": "^4.0.0",
+    "gravatar": "^1.6.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-clean": "^0.3.2",

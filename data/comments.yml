@@ -1,15 +1,28 @@
 ---
-  /blog/keeping-a-jamstack-site-feeling-fresh-with-recent-tweets/: 
-    - 
-      name: "test"
-      comment: "a comment on the twitter jamstack post"
-      date: "2018-02-11T22:15:46.276Z"
   /blog/smashing-magazine-moves-to-a-jam-stack-architecture/: 
     - 
+      name: "Phil"
+      avatar: "https://s.gravatar.com/avatar/465724d73fe3a92c0879fdfb43a3a6f3?s=100&r=x&d=retro"
+      comment: "I posted this at 10:45 and expect to see it near the top of the list.\r\n\r\nAlso:\r\n\r\n- is\r\n- markdown\r\n- ok?"
+      date: "2018-02-12T10:46:40.206Z"
+    - 
       name: "phil"
+      avatar: "https://s.gravatar.com/avatar/465724d73fe3a92c0879fdfb43a3a6f3?s=100&r=x&d=retro"
+      comment: "I posted this about smashing on _the 12th of Feb_ and it included markdown!"
+      date: "2018-02-12T10:12:45.057Z"
+    - 
+      name: "phil"
+      avatar: "https://s.gravatar.com/avatar/465724d73fe3a92c0879fdfb43a3a6f3?s=100&r=x&d=retro"
       comment: "another comment on smashing"
       date: "2018-02-11T22:14:57.214Z"
     - 
       name: "flip"
+      avatar: "https://s.gravatar.com/avatar/10ca8fcb1f434f8929dca2a8867fb71d?s=100&r=x&d=retro"
       comment: "well received?"
       date: "2018-02-11T14:40:50.861Z"
+  /blog/keeping-a-jamstack-site-feeling-fresh-with-recent-tweets/: 
+    - 
+      name: "test"
+      avatar: "https://s.gravatar.com/avatar/aa9f3667d0e24bc81f757db16e9f7684?s=100&r=x&d=retro"
+      comment: "a comment on the twitter jamstack post"
+      date: "2018-02-11T22:15:46.276Z"

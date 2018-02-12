@@ -11,6 +11,7 @@ var yaml          = require('json2yaml');
 var glob          = require('glob');
 var path          = require('path');
 var request       = require("request");
+var gravatar      = require('gravatar');
 
 // load environment variables
 require('dotenv').config()
@@ -133,6 +134,7 @@ gulp.task("get:comments", function () {
         var data = body[item].data;
         var comment = {
           name: data.name,
+          avatar: gravatar.url(data.email, {s: '100', r: 'x', d: 'retro'}, true),
           comment: data.comment,
           date: body[item].created_at
         };

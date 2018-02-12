@@ -1,10 +1,9 @@
-<li class="tweet">
+<li class="comment">
+  <img src="{{ .avatar }}" alt="Profile photo for {{ .name }}">
   <p class="publish-date">
-
-      {{ .name }} on {{ (time .date).Format "2 January, 2006" }}
-
+      {{ .name }} commnented on {{ (time .date).Format "2 January, 2006" }}
   </p>
-  <p class="tweet-content">{{ .comment | markdownify }}</p>
+  <p class="comment-content">{{ .comment | markdownify }}</p>
 </li>
 
 
