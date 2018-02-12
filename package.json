@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp clean-build && gulp scss && gulp get:tweets && hugo && gulp cards && npm run build:lambda",
-    "build:branch": "gulp clean-build && gulp scss && hugo && npm run build:lambda",
+    "build": "gulp clean-build && gulp scss && gulp get:tweets && gulp get:comments && hugo && gulp cards && npm run build:lambda",
+    "build:branch": "gulp clean-build && gulp scss && gulp get:comments && hugo && npm run build:lambda",
     "watch": "gulp watch",
     "scss": "gulp scss",
     "tweets": "gulp get:tweets",

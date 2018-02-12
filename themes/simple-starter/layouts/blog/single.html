@@ -23,6 +23,15 @@
     </div>
     {{ strings.TrimPrefix .Summary .Content | safeHTML }}
     {{ partial "comment-form.html" . }}
+
+    <hr>
+
+    {{ with (index .Site.Data.comments ($.URL)) }}
+    {{ range . }}
+      {{ partial "comment.html" . }}
+    {{ end }}
+    {{ end }}
+
   </div>
 {{ end }}
 

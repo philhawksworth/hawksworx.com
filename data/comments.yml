@@ -1,0 +1,15 @@
+---
+  /blog/keeping-a-jamstack-site-feeling-fresh-with-recent-tweets/: 
+    - 
+      name: "test"
+      comment: "a comment on the twitter jamstack post"
+      date: "2018-02-11T22:15:46.276Z"
+  /blog/smashing-magazine-moves-to-a-jam-stack-architecture/: 
+    - 
+      name: "phil"
+      comment: "another comment on smashing"
+      date: "2018-02-11T22:14:57.214Z"
+    - 
+      name: "flip"
+      comment: "well received?"
+      date: "2018-02-11T14:40:50.861Z"

@@ -123,51 +123,45 @@ gulp.task("get:comments", function () {
   // get all submissions from from approved comment form
   var oauth_token = process.env.NETLIFY_TOKEN;
   var formID = "5a6df445ae52900fdc164e26";
-  // var url = "https://api.netlify.com/api/v1/forms?access_token=" + oauth_token;
   var url = "https://api.netlify.com/api/v1/forms/" + formID + "/submissions/?access_token=" + oauth_token;
-
-  console.log(url);
 
   request(url, function(err, response, body){
     if(!err && response.statusCode === 200){
-
-      console.log("got result");
-      console.log(body);
-      console.log("------------");
-      // parse the data and assemble a data set for saving
       var body = JSON.parse(body);
       var comments = {};
       for(var item in body){
-        console.log(body[item].data);
-        console.log("---");
+        var data = body[item].data;
+        var comment = {
+          name: data.name,
+          comment: data.comment,
+          date: body[item].created_at
+        };
+        // Add it to an existing array or create a new one
+        if(comments[data.path]){
+          comments[data.path].push(comment);
+        } else {
+          comments[data.path] = [comment];
+        }
       }
 
-
-      // iterate over the data object to and create a comments file for each URL path found
-
-
-      // stash the comments local in a data file named: data/{slug}/comments.yml
-
-      /*
-      var commentFile = "data/" + data.path + "/comments.yml";
-      var ymlText = yaml.stringify(comments)
-      fs.writeFile(__dirname + commentFile, ymlText, function(err) {
+      // store all of the organised comments in a yaml file keyed by the path for each comment
+      var commentFile = "/data/comments.yml";
+      var ymlText = yaml.stringify(comments);
+      fs.outputFile(__dirname + commentFile, ymlText, function(err) {
         if(err) {
           console.log(err);
         } else {
           console.log("Comments data saved.");
         }
       });
-      */
 
     } else {
-      console.log("bad get");
+      console.log("Couldn't get comments from Netlify");
     }
   });
 
   return;
 });
-
 
 
 

@@ -1,0 +1,10 @@
+<li class="tweet">
+  <p class="publish-date">
+
+      {{ .name }} on {{ (time .date).Format "2 January, 2006" }}
+
+  </p>
+  <p class="tweet-content">{{ .comment | markdownify }}</p>
+</li>
+
+
