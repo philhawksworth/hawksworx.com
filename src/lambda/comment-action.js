@@ -54,14 +54,12 @@ export function handler(event, context, callback) {
         // var received = new Date().toString();
 
         // now we have the data, let's massage it and post it to the approved form
-        var approvedURL = "https://comment--hawksworx.netlify.com/thanks";
+        var approvedURL = "https://linkylinky.netlify.com/done";
         var payload = {
-          'form-name' : "approved-blog-comments",
-          'path': data.path,
-          'received': new Date().toString(),
-          'email': data.email,
-          'name': data.name,
-          'comment': data.comment
+          'form-name' : "routes",
+          'destination': data.path,
+          'code': new Date().toString(),
+          'expires': data.email
         };
 
         console.log("Posting to", approvedURL);
