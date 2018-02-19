@@ -29,6 +29,12 @@ events:
     url: https://2018.render-conf.com/
     countrycode: gb-eng
 
+  - name: JAMstack London Meetup (MC)
+    location: "London, UK"
+    date: 2018-02-19T18:30:00Z
+    url: https://www.meetup.com/JAMstack-London/events/tbspgpyxfbhb/
+    countrycode: gb-eng
+
   - name: JAMStack Toulouse Meetup
     location: "Toulouse, France"
     date: 2018-03-16T18:00:00Z
