@@ -1,8 +1,9 @@
 events:
 
-  - name: TBA (MC)
+  - name: Coldfront (MC)
     location: "Copenhagen, Denmark"
     date: 2018-11-13T09:00:00Z
+    url: https://2018.coldfront.co/
     countrycode: dk
 
   - name: Webconf.asia
