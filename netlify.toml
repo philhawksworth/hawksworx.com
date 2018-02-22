@@ -67,3 +67,8 @@
   from = "/talks/smashing"
   to = "https://speakerdeck.com/philhawksworth/next-wave-infrastructure"
   status = 302
+
+ [[redirects]]
+  from = "/talks/stealth"
+  to = "https://speakerdeck.com/philhawksworth/stealthy-git-solving-cms-woes-with-git-on-the-quiet"
+  status = 302
