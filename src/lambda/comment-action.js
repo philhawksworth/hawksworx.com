@@ -51,6 +51,12 @@ export function handler(event, context, callback) {
         var data = JSON.parse(body).data;
 
 
+        var approvedURL = process.env.URL;
+
+        console.log("CONTEXT:", process.env.CONTEXT)
+        console.log("URL:", process.env.URL)
+        console.log("DEPLOY_PRIME_URL:", process.env.DEPLOY_PRIME_URL)
+
         // are we posting to production or a pre-prod branch?
         if(process.env.CONTEXT == "production") {
           var approvedURL = process.env.URL;
