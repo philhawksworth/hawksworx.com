@@ -161,7 +161,13 @@ gulp.task("get:comments", function () {
 
       // store all of the organised comments in a yaml file keyed by the path for each comment
       var commentFile = "/data/comments.yml";
-      var ymlText = yaml.stringify(comments);
+
+      if(body.length === 0) {
+        ymlText = "---"
+      } else {
+        var ymlText = yaml.stringify(comments);
+      }
+
       fs.writeFile(__dirname + commentFile, ymlText, function(err) {
         if(err) {
           console.log(err);
