@@ -5,6 +5,7 @@ date: 2017-11-10T19:46:38Z
 publishdate: 2017-11-10T19:46:38Z
 section: blog
 draft: false
+allowcomments: true
 tags: ["announcements", "rga"]
 ---
 

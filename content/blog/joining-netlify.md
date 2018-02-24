@@ -3,6 +3,7 @@ title: Joining Netlify
 date: 2017-11-17T09:14:55Z
 publishdate: 2017-11-17T09:14:55Z
 draft: false
+allowcomments: false
 description: I'm happy to announce that I'll be joining Netlify's Developer Relations team.
 tags:
   - announcements

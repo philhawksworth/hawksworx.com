@@ -23,6 +23,27 @@
     </div>
     {{ strings.TrimPrefix .Summary .Content | safeHTML }}
   </div>
+  <div class="content container listing post-content">
+    {{ with (index .Site.Data.comments ($.URL)) }}
+    <h2>Comments</h2>
+    <ul>
+      {{ range . }}
+      {{ partial "comment.html" . }}
+      {{ end }}
+    </ul>
+    {{ end }}
+
+    {{ if .Params.allowcomments }}
+    {{ partial "comment-form.html" . }}
+    {{ else }}
+    <h2>Comments are now closed for this post</h2>
+    <p>
+      If you feel strongly about it, you could always
+      <a href="https://twitter.com/intent/tweet?text=I have some thoughts about this from @philhawksworth&url={{ $.Permalink }}">comment on twitter</a>.
+    </p>
+    {{ end }}
+
+  </div>
 {{ end }}
 
 {{  define "footer-tout" }}

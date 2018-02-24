@@ -4,12 +4,13 @@
   "description": "Useful to help me get new hugo site builds up and running quickly",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp clean-build && gulp scss && gulp get:tweets && hugo && gulp cards && npm run build:lambda",
-    "build:branch": "gulp clean-build && gulp scss && hugo",
+    "start": "yarn run build && gulp watch & gulp serve",
+    "build": "gulp clean-build && gulp scss && gulp get:tweets && gulp get:comments && hugo && gulp cards && yarn run build:lambda",
+    "build:branch": "gulp clean-build && gulp scss && gulp get:comments && hugo && yarn run build:lambda",
     "watch": "gulp watch",
     "scss": "gulp scss",
     "tweets": "gulp get:tweets",
+    "comments": "gulp get:comments",
     "cards": "gulp cards",
     "build:lambda": "netlify-lambda build src/lambda"
   },
@@ -19,6 +20,7 @@
   "devDependencies": {
     "del": "^3.0.0",
     "dotenv": "^4.0.0",
+    "gravatar": "^1.6.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-clean": "^0.3.2",
@@ -29,10 +31,13 @@
     "netlify-lambda": "^0.2.0",
     "node-fetch": "^1.7.3",
     "pageres": "^4.5.1",
-    "request": "^2.51.0",
+    "request": "^2.83.0",
     "resolve-redirect": "0.0.3",
     "resolver": "^0.1.12",
     "run-sequence": "^2.2.0",
     "twitter": "^1.7.1"
+  },
+  "dependencies": {
+    "gulp-serve": "^1.4.0"
   }
 }

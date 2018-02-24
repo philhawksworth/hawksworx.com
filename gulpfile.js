@@ -1,6 +1,7 @@
 var gulp          = require("gulp");
 var sass          = require("gulp-sass");
 var autoprefixer  = require("gulp-autoprefixer");
+var serve         = require('gulp-serve');
 var runSequence   = require('run-sequence');
 var hash          = require("gulp-hash");
 var clean         = require('gulp-clean');
@@ -10,10 +11,23 @@ var fs            = require('fs');
 var yaml          = require('json2yaml');
 var glob          = require('glob');
 var path          = require('path');
-
+var request       = require("request");
+var gravatar      = require('gravatar');
 
 // load environment variables
 require('dotenv').config()
+
+
+// what goes where?
+// var buildSrc = "src";
+var buildDest = "dist";
+
+
+// local webserver for development
+gulp.task('serve', serve({
+  root: [buildDest],
+  port: 8008,
+}));
 
 
 // Delete our old css files
@@ -114,6 +128,56 @@ gulp.task("cards", function () {
   }
   return;
 });
+
+
+
+// Collect and stash comments for the build
+gulp.task("get:comments", function () {
+
+  // get all submissions from from approved comment form
+  var oauth_token = process.env.NETLIFY_TOKEN;
+  var formID = "5a6df445ae52900fdc164e26";
+  var url = "https://api.netlify.com/api/v1/forms/" + formID + "/submissions/?access_token=" + oauth_token;
+
+  request(url, function(err, response, body){
+    if(!err && response.statusCode === 200){
+      var body = JSON.parse(body);
+      var comments = {};
+      for(var item in body){
+        var data = body[item].data;
+        var comment = {
+          name: data.name,
+          avatar: gravatar.url(data.email, {s: '50', r: 'x', d: 'retro'}, true),
+          comment: data.comment,
+          date: body[item].created_at
+        };
+        // Add it to an existing array or create a new one
+        if(comments[data.path]){
+          comments[data.path].push(comment);
+        } else {
+          comments[data.path] = [comment];
+        }
+      }
+
+      // store all of the organised comments in a yaml file keyed by the path for each comment
+      var commentFile = "/data/comments.yml";
+      var ymlText = yaml.stringify(comments);
+      fs.writeFile(__dirname + commentFile, ymlText, function(err) {
+        if(err) {
+          console.log(err);
+        } else {
+          console.log("Comments data saved.");
+        }
+      });
+
+    } else {
+      console.log("Couldn't get comments from Netlify");
+    }
+  });
+
+  return;
+});
+
 
 
 // Set watch as default task

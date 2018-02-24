@@ -3,6 +3,7 @@ title: Smashing Magazine moves to a JAM stack architecture
 date: 2017-11-22T10:23:03Z
 publishdate: 2017-11-22T10:23:03Z
 draft: false
+allowcomments: true
 tags: ["jamstack", "development", "web"]
 ---
 

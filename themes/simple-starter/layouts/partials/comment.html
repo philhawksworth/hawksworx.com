@@ -1,0 +1,7 @@
+<li class="comment">
+  <img src="{{ .avatar }}" class="comment-avatar" alt="Profile photo for {{ .name }}">
+  <span class="commenter">
+    <b>{{ .name }}</b> commented on <b>{{ (time .date).Format "2 January, 2006" }}</b>
+  </span>
+  <div class="comment-content">{{ .comment | markdownify }}</div>
+</li>
