@@ -50,10 +50,15 @@ export function handler(event, context, callback) {
       if(!err && response.statusCode === 200){
         var data = JSON.parse(body).data;
 
-        console.log("URL for approval: ", process.env.URL);
+
+        // are we posting to production or a pre-prod branch?
+        if(process.env.CONTEXT == "production") {
+          var approvedURL = process.env.URL;
+        } else {
+          var approvedURL = process.env.DEPLOY_PRIME_URL;
+        }
 
         // now we have the data, let's massage it and post it to the approved form
-        var approvedURL = "https://comment--hawksworx.netlify.com/thanks";
         var payload = {
           'form-name' : "approved-blog-comments",
           'path': data.path,
