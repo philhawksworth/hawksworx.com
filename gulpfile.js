@@ -164,8 +164,10 @@ gulp.task("get:comments", function () {
 
       if(body.length === 0) {
         ymlText = "---"
+        console.log("No comments :( ");
       } else {
         var ymlText = yaml.stringify(comments);
+        console.log("There are comments to stash");
       }
 
       fs.writeFile(__dirname + commentFile, ymlText, function(err) {
