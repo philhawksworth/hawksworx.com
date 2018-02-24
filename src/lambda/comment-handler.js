@@ -6,7 +6,6 @@ var request = require("request");
 require('dotenv').config()
 
 
-
 export function handler(event, context, callback) {
 
   // get the arguments from the notification
