@@ -53,16 +53,16 @@ export function handler(event, context, callback) {
 
         var approvedURL = process.env.URL;
 
-        console.log("CONTEXT:", process.env.CONTEXT)
-        console.log("URL:", process.env.URL)
-        console.log("DEPLOY_PRIME_URL:", process.env.DEPLOY_PRIME_URL)
+        // console.log("CONTEXT:", process.env.CONTEXT)
+        // console.log("URL:", process.env.URL)
+        // console.log("DEPLOY_PRIME_URL:", process.env.DEPLOY_PRIME_URL)
 
         // are we posting to production or a pre-prod branch?
-        if(process.env.CONTEXT == "production") {
-          var approvedURL = process.env.URL;
-        } else {
-          var approvedURL = process.env.DEPLOY_PRIME_URL;
-        }
+        // if(process.env.CONTEXT == "production") {
+        //   var approvedURL = process.env.URL;
+        // } else {
+        //   var approvedURL = process.env.DEPLOY_PRIME_URL;
+        // }
 
         // now we have the data, let's massage it and post it to the approved form
         var payload = {
