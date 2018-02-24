@@ -50,16 +50,17 @@ export function handler(event, context, callback) {
       if(!err && response.statusCode === 200){
         var data = JSON.parse(body).data;
 
-        // console.log("SITE: ", JSON.parse(body));
-        // var received = new Date().toString();
+        console.log("URL for approval: ", process.env.URL);
 
         // now we have the data, let's massage it and post it to the approved form
-        var approvedURL = "https://linkylinky.netlify.com/done";
+        var approvedURL = "https://comment--hawksworx.netlify.com/thanks";
         var payload = {
-          'form-name' : "routes",
-          'destination': data.path,
-          'code': new Date().toString(),
-          'expires': data.email
+          'form-name' : "approved-blog-comments",
+          'path': data.path,
+          'received': new Date().toString(),
+          'email': data.email,
+          'name': data.name,
+          'comment': data.comment
         };
 
         console.log("Posting to", approvedURL);
@@ -74,8 +75,8 @@ export function handler(event, context, callback) {
           } else {
             msg = 'Post to approved comments list successful.'
             console.log(msg);
+            purgeComment(id);
           }
-          purgeComment(id);
           var msg = "Comment registered. Site deploying to include it.";
           callback(null, {
             statusCode: 200,
