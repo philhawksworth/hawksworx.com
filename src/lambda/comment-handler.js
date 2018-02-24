@@ -12,8 +12,6 @@ export function handler(event, context, callback) {
   // get the arguments from the notification
   var data = JSON.parse(event.body);
 
-  console.log(data);
-
   // prepare call to the Slack API
   var slackURL = process.env.SLACK_WEBHOOK_COMMENT_URL;
   var slackPayload = {
@@ -23,8 +21,8 @@ export function handler(event, context, callback) {
         "fallback": "New comment on hawksworx.com",
         "color": "#444",
         "author_name": data.email,
-        "title": "Title of page commented",
-        "title_link": "https://www/hawksworx.com/blog/commented-on",
+        "title": data.path,
+        "title_link": process.env.URL + data.path,
         "text": data.summary
       },
       {

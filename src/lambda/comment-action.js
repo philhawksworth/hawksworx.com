@@ -43,26 +43,12 @@ export function handler(event, context, callback) {
     });
   } else if (method == "approve"){
 
-    // get the comment data fro the queue
+    // get the comment data from the queue
     var url = "https://api.netlify.com/api/v1/submissions/" +id + "?access_token=" + oauth_token;
 
     request(url, function(err, response, body){
       if(!err && response.statusCode === 200){
         var data = JSON.parse(body).data;
-
-
-        var approvedURL = process.env.URL;
-
-        // console.log("CONTEXT:", process.env.CONTEXT)
-        // console.log("URL:", process.env.URL)
-        // console.log("DEPLOY_PRIME_URL:", process.env.DEPLOY_PRIME_URL)
-
-        // are we posting to production or a pre-prod branch?
-        // if(process.env.CONTEXT == "production") {
-        //   var approvedURL = process.env.URL;
-        // } else {
-        //   var approvedURL = process.env.DEPLOY_PRIME_URL;
-        // }
 
         // now we have the data, let's massage it and post it to the approved form
         var payload = {
@@ -73,6 +59,7 @@ export function handler(event, context, callback) {
           'name': data.name,
           'comment': data.comment
         };
+        var approvedURL = process.env.URL;
 
         console.log("Posting to", approvedURL);
         console.log(payload);
