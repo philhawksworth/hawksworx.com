@@ -4,9 +4,9 @@
   "description": "Useful to help me get new hugo site builds up and running quickly",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp clean-build && gulp scss && gulp get:tweets && gulp get:comments && hugo && gulp cards && npm run build:lambda",
-    "build:branch": "gulp clean-build && gulp scss && gulp get:comments && hugo && npm run build:lambda",
+    "start": "yarn run build && gulp watch & gulp serve",
+    "build": "gulp clean-build && gulp scss && gulp get:tweets && gulp get:comments && hugo && gulp cards && yarn run build:lambda",
+    "build:branch": "gulp clean-build && gulp scss && gulp get:comments && hugo && yarn run build:lambda",
     "watch": "gulp watch",
     "scss": "gulp scss",
     "tweets": "gulp get:tweets",
@@ -36,5 +36,8 @@
     "resolver": "^0.1.12",
     "run-sequence": "^2.2.0",
     "twitter": "^1.7.1"
+  },
+  "dependencies": {
+    "gulp-serve": "^1.4.0"
   }
 }

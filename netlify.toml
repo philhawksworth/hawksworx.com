@@ -1,10 +1,10 @@
 [build]
   Functions = "functions"
-  command = "npm run build"
+  command = "yarn run build"
 
 # do a lighter build on the branches
 [context.branch-deploy]
-  command = "npm run build:branch"
+  command = "yarn run build:branch"
 
 
 [[headers]]

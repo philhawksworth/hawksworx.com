@@ -1,6 +1,7 @@
 var gulp          = require("gulp");
 var sass          = require("gulp-sass");
 var autoprefixer  = require("gulp-autoprefixer");
+var serve         = require('gulp-serve');
 var runSequence   = require('run-sequence');
 var hash          = require("gulp-hash");
 var clean         = require('gulp-clean');
@@ -15,6 +16,18 @@ var gravatar      = require('gravatar');
 
 // load environment variables
 require('dotenv').config()
+
+
+// what goes where?
+// var buildSrc = "src";
+var buildDest = "dist";
+
+
+// local webserver for development
+gulp.task('serve', serve({
+  root: [buildDest],
+  port: 8008,
+}));
 
 
 // Delete our old css files
