@@ -8,6 +8,7 @@
     "build": "gulp clean-build && gulp scss && gulp get:tweets && gulp get:comments && hugo && gulp cards && yarn run build:lambda",
     "build:branch": "gulp clean-build && gulp scss && gulp get:comments && hugo && yarn run build:lambda",
     "watch": "gulp watch",
+    "serve": "gulp serve",
     "scss": "gulp scss",
     "tweets": "gulp get:tweets",
     "comments": "gulp get:comments",

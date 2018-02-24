@@ -1,29 +1,28 @@
 
 {{ define "hero" }}
 <div class="hero hero-{{ .Params.section }}">
-    <div class="container">
-      <p class="publish-date">{{ .PublishDate.Format "2 January, 2006" }}</p>
-      <h1>{{ .Title }}</h1>
-      <div class="tags">
-        tagged:
-        <ul>
+  <div class="container">
+    <p class="publish-date">{{ .PublishDate.Format "2 January, 2006" }}</p>
+    <h1>{{ .Title }}</h1>
+    <div class="tags">
+      <ul>
         {{ range .Params.tags }}
-          <li><a href="/tags/{{ . }}">{{ . }}</a></li>
+        <li><a href="/tags/{{ . }}">{{ . }}</a></li>
         {{ end }}
-        </ul>
-      </div>
+      </ul>
+    </div>
     </div>
   </div>
 {{ end }}
 
 {{ define "main" }}
-  <div class="content container post-content">
+  <div class="container post content">
     <div class="post-summary">
       {{ .Summary}}
     </div>
     {{ strings.TrimPrefix .Summary .Content | safeHTML }}
   </div>
-  <div class="content container listing post-content">
+  <div class="container post content listing">
     {{ with (index .Site.Data.comments ($.URL)) }}
     <h2>Comments</h2>
     <ul>
