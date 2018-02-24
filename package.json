@@ -1,6 +1,6 @@
 {
   "name": "HugoBoilerplate",
-  "version": "1.0.0",
+  "version": "1.3.2",
   "description": "Useful to help me get new hugo site builds up and running quickly",
   "main": "index.js",
   "scripts": {
@@ -26,6 +26,7 @@
     "gulp-clean": "^0.3.2",
     "gulp-hash": "^4.1.1",
     "gulp-sass": "^3.1.0",
+    "gulp-serve": "^1.4.0",
     "json2yaml": "^1.1.0",
     "moment": "^2.9.0",
     "netlify-lambda": "^0.2.0",
@@ -35,7 +36,6 @@
     "resolve-redirect": "0.0.3",
     "resolver": "^0.1.12",
     "run-sequence": "^2.2.0",
-    "gulp-serve": "^1.4.0",
     "twitter": "^1.7.1"
   }
 }
