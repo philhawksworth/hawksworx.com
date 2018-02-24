@@ -35,9 +35,7 @@
     "resolve-redirect": "0.0.3",
     "resolver": "^0.1.12",
     "run-sequence": "^2.2.0",
+    "gulp-serve": "^1.4.0",
     "twitter": "^1.7.1"
-  },
-  "dependencies": {
-    "gulp-serve": "^1.4.0"
   }
 }
