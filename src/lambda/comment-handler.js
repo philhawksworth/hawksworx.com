@@ -10,7 +10,7 @@ require('dotenv').config()
 export function handler(event, context, callback) {
 
   // get the arguments from the notification
-  var data = JSON.parse(event.body);
+  var body = JSON.parse(event.body);
 
   // prepare call to the Slack API
   var slackURL = process.env.SLACK_WEBHOOK_COMMENT_URL;
@@ -20,10 +20,10 @@ export function handler(event, context, callback) {
       {
         "fallback": "New comment on hawksworx.com",
         "color": "#444",
-        "author_name": data.email,
-        "title": data.path,
-        "title_link": process.env.URL + data.path,
-        "text": data.summary
+        "author_name": body.data.email,
+        "title": body.data.path,
+        "title_link": process.env.URL + body.data.path,
+        "text": body.data.comment
       },
       {
         "fallback": "Manage comments on https://www.hawksworx.com",
@@ -33,14 +33,14 @@ export function handler(event, context, callback) {
             "type": "button",
             "text": "Approve comment",
             "name": "approve",
-            "value": data.id
+            "value": body.id
           },
           {
             "type": "button",
             "style": "danger",
             "text": "Delete comment",
             "name": "delete",
-            "value": data.id
+            "value": body.id
           }
         ]
       }]
