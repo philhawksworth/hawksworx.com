@@ -193,7 +193,7 @@ gulp.task("get:comments", function () {
 // to support trackers in split testing automatically.
 gulp.task("get:git", function () {
   git.branch(function (str) {
-    var ymlText = yaml.stringify({"branch": "master"});
+    var ymlText = yaml.stringify({"branch": str});
     fs.writeFile(__dirname + "/data/git.yml", ymlText, function(err) {
       if(err) {
         console.log(err);
