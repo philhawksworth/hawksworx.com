@@ -37,7 +37,7 @@ header {
   position: relative;
   text-align: center;
   .logo {
-    padding-top:40vh;
+    padding-top:30vh;
   }
 }
 
@@ -76,7 +76,6 @@ a.scroll-hint:hover {
   list-style: none;
   background-color: #000;
   color: #fff;
-  font-size:0;
 
   li {
     display: inline-block;
@@ -86,20 +85,21 @@ a.scroll-hint:hover {
   a:link,
   a:visited {
     display: inline-block;
-    padding-top:3em;
-    padding-bottom:3em;
-    padding-left:1em;
-    padding-right:1em;
-    font-size: 13px;
-    color: #fff;
+    padding-top:1.5em;
+    padding-bottom:1.5em;
+    padding-left:0.4em;
+    padding-right:0.4em;
+    color: $page-color;
     text-decoration: none;
+    @include bp(narrow) {
+      padding-left:0.7em;
+      padding-right:0.7em;
+      padding-top:2em;
+      padding-bottom:2em;
+    }
     @include bp(mid) {
       padding-left:1em;
       padding-right:1em;
-    }
-    @include bp(wide) {
-      padding-left:3em;
-      padding-right:3em;
     }
 
   }
@@ -111,19 +111,16 @@ a.scroll-hint:hover {
   a:visited .hint {
     display:none;
     line-height:1em;
-    font-size: 10px;
+    font-size: 0.7em;
     margin-top:0.4em;
     opacity: 0.7;
-    @include bp(mid) {
-      display: block;
-    }
     @include bp(wide) {
       display: block;
     }
   }
   a.home:link,
   a.home:visited {
-    color:rgb(192, 255, 17);
+    color:$accent-color;
   }
 }
 
@@ -193,7 +190,11 @@ a.scroll-hint:hover {
   width: 100%;
   text-align: center;
   padding-top: 4em;
-  padding-bottom: 4em;
+  padding-bottom: 2em;
+
+  .subtitle {
+    margin-top:-1.5em;
+  }
 }
 
 .noodle {
@@ -209,7 +210,6 @@ a.scroll-hint:hover {
   padding-top: 12em;
   padding-bottom: 6em;
   background-color: $accent-color;
-
 }
 
 
@@ -355,7 +355,7 @@ button {
 .link {
 
   h3 {
-    margin-top:6em;
+    margin-top:4em;
     padding-bottom:0.2em;
     color:#000;
   }
@@ -388,13 +388,12 @@ button {
 .callout {
   background-color: #000;
   color: #ccc;
-  margin-bottom:4em;
+  padding-top: 1em;
 
   h2 {
     display: inline-block;
-    color: rgb(192, 255, 17);
+    color: $accent-color;
     font-weight: normal;
-    font-size: 14px;
     text-align: center;
     margin-top: 0;
     margin-bottom: 1em;
@@ -420,52 +419,45 @@ blockquote {
 
 footer {
   width: 100%;
-  margin-top: 6em;
-  padding-bottom: 4em;
-  font-size: 12px;
+  margin-top: 2em;
+  padding-bottom: 2em;
   background-color: #000;
   color: #aaa;
   text-align: center;
 
   a:link,
   a:visited {
-    color: #fff;
+    color: #999;
+    text-decoration: none;
+  }
+  a:hover,
+  a:focus {
+    color: #ccc;
+    border-bottom: solid 1px rgb(192, 255, 17);
   }
   .nav {
     margin-bottom: 3em;
   }
   .logo {
     padding-top: 3em;
-    padding-bottom: 3em;
-  }
-  .callout {
-    margin-bottom:6em;
   }
   .meta {
-    padding-top:6em;
-    padding-bottom:6em;
+    padding-top:4em;
+    padding-bottom:4em;
     text-align: center;
     margin-left:auto;
     margin-right:auto;
     line-height: 1.6em;
     color:#555;
     width:80%;
-    @include bp(narrow) {
-      width: 320px;
-    }
-    @include bp(mid) {
-      width: 400px;
-    }
-      a:link,
-      a:visited {
-        color: #999;
-        text-decoration: none;
+
+      @include bp(narrow) {
+        width: 320px;
       }
-      a:hover,
-      a:focus {
-        color: #ccc;
-        border-bottom: solid 1px rgb(192, 255, 17);
+      @include bp(mid) {
+        width: 440px;
       }
+
     }
 
   }
@@ -476,7 +468,6 @@ footer {
     border-radius: 102px;
     box-shadow: 0 0px 16px 0 rgba(255,255,255,.4);
     padding: 1px;
-    margin-top: -4em;
 }
 
 .footer-tout {
