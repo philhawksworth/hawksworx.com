@@ -3,5 +3,6 @@
 /dist
 /functions
 /data/**/hash.*
+/data/git.yml
 /themes/simple-starter/static/css/*.css
 .env

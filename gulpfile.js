@@ -13,6 +13,8 @@ var glob          = require('glob');
 var path          = require('path');
 var request       = require("request");
 var gravatar      = require('gravatar');
+var git           = require('git-rev')
+
 
 // load environment variables
 require('dotenv').config()
@@ -185,6 +187,23 @@ gulp.task("get:comments", function () {
 
   return;
 });
+
+
+// Get git information. we'll use the name of the branch in custom trackers
+// to support trackers in split testing automatically.
+gulp.task("get:git", function () {
+  git.branch(function (str) {
+    var ymlText = yaml.stringify({"branch": "master"});
+    fs.writeFile(__dirname + "/data/git.yml", ymlText, function(err) {
+      if(err) {
+        console.log(err);
+      } else {
+        console.log("Git info saved.");
+      }
+    });
+  })
+});
+
 
 
 
