@@ -192,6 +192,11 @@ gulp.task("get:comments", function () {
 // Get git information. we'll use the name of the branch in custom trackers
 // to support trackers in split testing automatically.
 gulp.task("get:git", function () {
+
+  console.log("Running on branch: ", process.env.BRANCH);
+  console.log("ENV: ", process.env);
+
+
   git.branch(function (str) {
     var ymlText = yaml.stringify({"branch": str});
     fs.writeFile(__dirname + "/data/git.yml", ymlText, function(err) {
