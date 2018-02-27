@@ -27,6 +27,7 @@ body {
 header {
   position: fixed;
   top:0;
+  border-top:solid 3px $accent-color;
   width: 100%;
   z-index: 999;
   background-color: #000;
