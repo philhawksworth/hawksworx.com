@@ -37,7 +37,6 @@
     "resolve-redirect": "0.0.3",
     "resolver": "^0.1.12",
     "run-sequence": "^2.2.0",
-    "twitter": "^1.7.1",
-    "git-rev": "^0.2.1"
+    "twitter": "^1.7.1"
   }
 }
