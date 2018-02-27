@@ -13,7 +13,6 @@ var glob          = require('glob');
 var path          = require('path');
 var request       = require("request");
 var gravatar      = require('gravatar');
-var git           = require('git-rev')
 
 
 // load environment variables
@@ -193,20 +192,21 @@ gulp.task("get:comments", function () {
 // to support trackers in split testing automatically.
 gulp.task("get:git", function () {
 
-  console.log("Running on branch: ", process.env.BRANCH);
-  console.log("ENV: ", process.env);
+  var ymlText = yaml.stringify({
+    "branch": process.env.BRANCH,
+    "commit": process.env.COMMIT_REF
+  });
 
+  console.log(ymlText);
 
-  git.branch(function (str) {
-    var ymlText = yaml.stringify({"branch": str});
-    fs.writeFile(__dirname + "/data/git.yml", ymlText, function(err) {
-      if(err) {
-        console.log(err);
-      } else {
-        console.log("Git info saved.");
-      }
-    });
-  })
+  fs.writeFile(__dirname + "/data/git.yml", ymlText, function(err) {
+    if(err) {
+      console.log(err);
+    } else {
+      console.log("Git info saved.");
+    }
+  });
+
 });
 
 
