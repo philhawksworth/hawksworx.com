@@ -6,7 +6,7 @@
   "scripts": {
     "start": "yarn run build:branch && gulp watch & gulp serve",
     "build": "yarn run build:branch && gulp cards",
-    "build:branch": "gulp clean-build && gulp scss && gulp get:comments && gulp get:git && hugo && yarn run build:lambda",
+    "build:branch": "gulp clean-build && gulp scss && gulp get:comments && hugo && yarn run build:lambda",
     "watch": "gulp watch",
     "serve": "gulp serve",
     "scss": "gulp scss",

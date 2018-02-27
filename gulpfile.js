@@ -188,29 +188,5 @@ gulp.task("get:comments", function () {
 });
 
 
-// Get git information. we'll use the name of the branch in custom trackers
-// to support trackers in split testing automatically.
-gulp.task("get:git", function () {
-
-  var ymlText = yaml.stringify({
-    "branch": process.env.BRANCH,
-    "commit": process.env.COMMIT_REF
-  });
-
-  console.log(ymlText);
-
-  fs.writeFile(__dirname + "/data/git.yml", ymlText, function(err) {
-    if(err) {
-      console.log(err);
-    } else {
-      console.log("Git info saved.");
-    }
-  });
-
-});
-
-
-
-
 // Set watch as default task
 gulp.task("default", ["watch"]);
