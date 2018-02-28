@@ -21,5 +21,5 @@ Clicking this button will add a cookie which will result in Netlify's intelligen
 
 Ok, you tires the orange theme and hated it. That's ok. That's why we test. The button below will opt you out of the "beta" version of the site and keep things bright, lime, fluorescent, lively green.
 
-<a href="#" id="btn-opt-out" class="btn">Keep me here. That orange version was horrible.</a>
+<a href="#" id="btn-opt-out" class="btn">Green me! This orange version is horrible.</a>
 
