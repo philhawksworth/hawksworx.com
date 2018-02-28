@@ -6,10 +6,11 @@
   "scripts": {
     "start": "yarn run build:branch && gulp watch & gulp serve",
     "build": "yarn run build:branch && gulp cards",
-    "build:branch": "gulp clean-build && gulp scss && gulp get:comments && hugo && yarn run build:lambda",
+    "build:branch": "gulp clean-build && gulp js && gulp scss && gulp get:comments && hugo && yarn run build:lambda",
     "watch": "gulp watch",
     "serve": "gulp serve",
     "scss": "gulp scss",
+    "js": "gulp js",
     "tweets": "gulp get:tweets",
     "comments": "gulp get:comments",
     "cards": "gulp cards",
@@ -38,5 +39,8 @@
     "resolver": "^0.1.12",
     "run-sequence": "^2.2.0",
     "twitter": "^1.7.1"
+  },
+  "dependencies": {
+    "gulp-concat": "^2.6.1"
   }
 }

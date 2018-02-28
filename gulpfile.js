@@ -3,6 +3,7 @@ var sass          = require("gulp-sass");
 var autoprefixer  = require("gulp-autoprefixer");
 var serve         = require('gulp-serve');
 var runSequence   = require('run-sequence');
+var concat        = require('gulp-concat');
 var hash          = require("gulp-hash");
 var clean         = require('gulp-clean');
 var Pageres       = require('pageres');
@@ -20,7 +21,7 @@ require('dotenv').config()
 
 
 // what goes where?
-// var buildSrc = "src";
+var buildSrc = "src";
 var buildDest = "dist";
 
 
@@ -40,8 +41,16 @@ gulp.task('clean-css', function () {
 
 // cleanup the build output
 gulp.task('clean-build', function () {
-  return gulp.src('dist', {read: false})
+  return gulp.src(buildDest, {read: false})
     .pipe(clean());
+});
+
+
+// simplest possible noddy js management
+gulp.task("js", function () {
+  return gulp.src(buildSrc + "/js/**/*.js")
+    .pipe(concat('hawksworx.js'))
+    .pipe(gulp.dest('static/js'))
 });
 
 
@@ -62,11 +71,6 @@ gulp.task("scss", ['clean-css'], function () {
     .pipe(gulp.dest("data/css"))
 });
 
-
-// Watch asset folder for changes
-gulp.task("watch", ["scss"], function () {
-  gulp.watch("src/scss/**/*", ["scss"])
-});
 
 
 
@@ -186,6 +190,15 @@ gulp.task("get:comments", function () {
 
   return;
 });
+
+
+
+// Watch src folder for changes
+gulp.task("watch", ["scss", "js"], function () {
+  gulp.watch("src/scss/**/*", ["scss"])
+  gulp.watch("src/js/**/*", ["js"])
+});
+
 
 
 // Set watch as default task
