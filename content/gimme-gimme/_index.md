@@ -19,7 +19,7 @@ Clicking this button will add a cookie which will result in Netlify's intelligen
 <a href="#" id="btn-opt-in" class="btn">Gimme access to the beta pleeeeease!</a>
 
 
-Ok, you tires the orange theme and hated it. That's ok. That's why we test. The button below will opt you out of the "beta" version of the site and keep things bright, lime, fluorescent, lively green.
+Ok, you tried the orange theme and hated it. That's ok. That's why we test. The button below will opt you out of the "beta" version of the site and keep things bright, lime, fluorescent, lively green.
 
-<a href="#" id="btn-opt-out" class="btn">Keep me here. That orange version was horrible.</a>
+<a href="#" id="btn-opt-out" class="btn">Green me. That orange version was horrible.</a>
 
