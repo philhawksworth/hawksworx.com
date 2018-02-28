@@ -12,7 +12,7 @@ tags:
 
 After a bit of a hiatus, I've recently been concentrating on developing my pet project, <a href="http://getteamtasks.com" title="getteamtasks - get your flexible task management wiki here.">teamtasks</a> again.  Teamtasks is a simple application built using Tiddlywik.
 
-<img src="http://farm4.static.flickr.com/3182/2674867706_0397fca6e0.jpg" alt="">
+<img src="https://farm4.static.flickr.com/3182/2674867706_0397fca6e0.jpg" alt="">
 <!--more-->
 
 

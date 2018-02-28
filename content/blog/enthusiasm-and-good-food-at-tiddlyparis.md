@@ -13,7 +13,7 @@ tags:
 Yesterday I was fortunate to be able to make the quick trip over to Paris to attend a meeting of <a href="http://tiddlywiki.com" title="TiddlyWiki - a reusable non-linear personal web notebook">TiddlyWiki</a> enthusiasts at <a href="http://upcoming.yahoo.com/event/1028826/" title="TiddlyParis (TiddlyWiki get together) at Culture Biere (Tuesday August 26, 2008) - Upcoming">TiddlyParis</a>. Arranged by long time TiddlyWiki community member and <a href="http://unamesa.org">Una Mesa</a> stalwart <a href="http://lewcid.org">Saq Imtiaz</a>, this event was a great chance to put some faces to the names of some of the TiddlyWiki developers and users whose work I have been enjoying and benefitting from for some time.
 
 
-<img src="http://farm4.static.flickr.com/3131/2803239794_6a48afbdc3.jpg" alt="">
+<img src="https://farm4.static.flickr.com/3131/2803239794_6a48afbdc3.jpg" alt="">
 <!--more-->
 
 
