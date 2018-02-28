@@ -1,6 +1,7 @@
 /node_modules
 /public
 /dist
+/static/js
 /functions
 /data/**/hash.*
 /data/git.yml
