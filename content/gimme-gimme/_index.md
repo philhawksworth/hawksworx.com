@@ -9,17 +9,12 @@ description: Opt-in to a beta via Netlify's split testing feature
 
 ## Don't get excited. This isn't access to a real beta
 
-The buttons below are just to help demonstrate a clever little trick you can do with Netlify's Split Test feature.
+The button below is just to help demonstrate a clever little trick you can do with Netlify's Split Test feature.
 
 
 ## In or out?
 
-Clicking this button will add a cookie which will result in Netlify's intelligent CDN routing your requests to hawksworx.com to a version where I'm experimenting with a brave new colour scheme. All the orange you can eat!
+Clicking this button will add a cookie which will result in Netlify's intelligent CDN invisibly routing your requests to hawksworx.com to a specific branch where a beta version of the site is being serve. Don't too get excited, it's just a bit orange. To prove the concept
 
-<a href="#" id="btn-opt-in" class="btn">Gimme access to the beta pleeeeease!</a>
-
-
-Ok, you tried the orange theme and hated it. That's ok. That's why we test. The button below will opt you out of the "beta" version of the site and keep things bright, lime, fluorescent, lively green.
-
-<a href="#" id="btn-opt-out" class="btn">Green me. That orange version was horrible.</a>
+<a href="#" id="btn-opt-out" class="btn">Opt in. I want me some orange</a>
 
