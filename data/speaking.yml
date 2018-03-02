@@ -18,6 +18,12 @@ events:
     url: http://leedsinternationalfestival.com/event/all-day-hey
     countrycode: gb-eng
 
+  - name: WeAreDevelopers world congress
+    location: "Vienna, Austria"
+    date: 2018-05-16T09:00:00Z
+    url: https://www.wearedevelopers.com/congress/
+    countrycode: at
+
   - name: JS Heroes
     location: "Cluj-Napoca, Romania"
     date: 2018-04-19T09:00:00Z
