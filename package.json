@@ -4,7 +4,10 @@
   "description": "Phil Hawksworth's personal website - hawksworx.com",
   "main": "index.js",
   "scripts": {
-    "start": "yarn run build:branch && gulp watch & gulp serve",
+
+    "start": "gulp clean-build && gulp scss && gulp js && hugo server -D --disableFastRender & gulp watch",
+
+
     "build": "yarn run build:branch && gulp cards",
     "build:branch": "gulp clean-build && gulp js && gulp scss && gulp get:comments && hugo && yarn run build:lambda",
     "watch": "gulp watch",
