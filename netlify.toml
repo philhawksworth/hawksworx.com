@@ -71,3 +71,13 @@
   from = "/talks/stealth"
   to = "https://speakerdeck.com/philhawksworth/stealthy-git-solving-cms-woes-with-git-on-the-quiet"
   status = 302
+
+ [[redirects]]
+  from = "/talks/render"
+  to = "https://speakerdeck.com/philhawksworth/serving-for-the-win-deployments-and-infrastructure-for-the-rest-of-us"
+  status = 302
+
+ [[redirects]]
+  from = "/talks/serve"
+  to = "https://speakerdeck.com/philhawksworth/serving-for-the-win-deployments-and-infrastructure-for-the-rest-of-us"
+  status = 302
