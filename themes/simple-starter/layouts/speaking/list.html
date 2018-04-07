@@ -24,7 +24,7 @@
 
     <h2>Previous events</h2>
     <ul>
-      {{ range .Site.Data.speaking.events }}
+      {{ range sort .Site.Data.speaking.events "date" "desc" }}
       {{ if (time .date).Before now }}
       {{ partial "talk.html" . }}
       {{ end }}
