@@ -64,7 +64,7 @@ Doing this at scale can be challenging. Strategies to make sites more resilient 
 
 > Webserver management is not trivial.
 
-I want to focus on creating web sites which deliver beautiful experiences. I don't want design and manage infrastructure which addresses commodotized problems.
+I want to focus on creating web sites which deliver beautiful experiences. I don't want to design and manage infrastructure which addresses commoditized problems.
 
 So, if I can build sites in a way that lets me cut out some of this complexity and risk?... If I can build a site in a way which, by default, is perfectly suited to deploying across distributed content delivery networks ?...
 
