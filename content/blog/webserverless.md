@@ -8,10 +8,11 @@ allowcomments: true
 tags: ["jamstack", "static", "web"]
 ---
 
-![Sledgehammers and nuts](/images/sledgehammer-nut.jpg "Sledgehammers and nuts")
 Today I saw a question on twitter which I have seen a few times before. It was posed by the rather excellent and lovely Drew McLellan.
 
 > What do you think the best use cases are for a static site generator? <cite>— <a href="https://twitter.com/drewm/status/983634762433810432">Drew McLellan</a></cite>
+
+![Sledgehammers and nuts](/images/sledgehammer-nut.jpg "Sledgehammers and nuts")
 
 There were some interesting responses, but this cheeky and playful response from the irrepressible Bruce Lawson jumped out at me:
 

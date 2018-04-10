@@ -11,7 +11,7 @@
       </a>
     </h3>
     <p class="excerpt">
-      {{ .Summary | markdown }}
+      {{ .Summary  | markdownify }}
     </p>
     <a href="{{ .URL }}" class="btn btn-more">Read on...</a>
   </div>
