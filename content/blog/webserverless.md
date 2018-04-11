@@ -70,7 +70,7 @@ So, if I can build sites in a way that lets me cut out some of this complexity a
 
 I'll choose that.
 
-[Static site generators](https://staticgen.io) are tools for creating sites which are _capable_ of being served predictably and reliably from a CDN. Whether those sites are brochure sites which changes infrequently, blogs like this this one, or large publishing sites like [Smashing Magazine](https://www.netlify.com/blog/2017/03/16/smashing-magazine-just-got-10x-faster/) complete with comments, subscriptions and e-commerce.
+[Static site generators](https://staticgen.com) are tools for creating sites which are _capable_ of being served predictably and reliably from a CDN. Whether those sites are brochure sites which changes infrequently, blogs like this this one, or large publishing sites like [Smashing Magazine](https://www.netlify.com/blog/2017/03/16/smashing-magazine-just-got-10x-faster/) complete with comments, subscriptions and e-commerce.
 
 Having a site which is _capable_ of being served without a webserver offers huge advantages.
 
