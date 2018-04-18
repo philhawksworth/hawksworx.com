@@ -81,3 +81,11 @@
   from = "/talks/serve"
   to = "https://speakerdeck.com/philhawksworth/serving-for-the-win-deployments-and-infrastructure-for-the-rest-of-us"
   status = 302
+  
+ [[redirects]]
+  from = "/talks/netlify-intro"
+  to = "https://speakerdeck.com/philhawksworth/netlify-show-and-tell"  
+  status = 302
+  
+  
+  
