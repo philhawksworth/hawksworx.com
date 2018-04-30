@@ -28,7 +28,7 @@ The site can then be built via npm with the command:
 
 The build command above will generate a set of static assets in a `dist` folder which can be deployed to any web hosting service.
 
-My preferred method is to host on [Netlify](http://www.netlify.com) who can also run this build process in their own CI environment and then depliy teh build to their distributed CDN. Such deployments are triggered automatically by every git push to the `master` branch of the origin repository.
+My preferred method is to host on [Netlify](http://www.netlify.com) who can also run this build process in their own CI environment and then deploy the build to their distributed CDN. Such deployments are triggered automatically by every git push to the `master` branch of the origin repository.
 
 
 ## Development
