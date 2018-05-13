@@ -24,7 +24,7 @@ export function handler(event, context, callback) {
     headers: { "Content-Type": "text/html" },
     body: `<html>Hello from a serverless
       <a href="https://github.com/philhawksworth/hawksworx.com/blob/master/src/lambda/hello.js">function</a>,
-      ${name}!</hml>`
+      <em>${name}!</em></hml>`
   });
 
 }
