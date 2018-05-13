@@ -12,14 +12,16 @@ events:
     url: https://webconf.asia/
     countrycode: hk
 
-  - name: TBA
+  - name: McrFRED
     location: "Manchester, UK"
     date: 2018-05-30T18:00:00Z
+    url: https://s10wen.com/blog/2018/05/04/mcrfred-60-phil-hawksworth/
     countrycode: gb-eng
 
-  - name: TBA
+  - name: JAMstack Porto
     location: "Porto, Portugal"
     date: 2018-05-24T18:00:00Z
+    url: https://www.meetup.com/JAMstack-Porto/events/plkdqpyxhbgc/
     countrycode: pt
 
   - name: All Day Hey (MC)
