@@ -15,8 +15,8 @@
 // A standard Lambda function handler
 export function handler(event, context, callback) {
 
-  // who's there? Or is it the World?
-  const  { name: name = "World" } = event.queryStringParameters;
+  // Who's there?
+  const  { name } = event.queryStringParameters;
 
   // Say hello
   callback(null, {
