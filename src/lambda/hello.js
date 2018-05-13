@@ -1,10 +1,10 @@
 /**
  *  This is a serverless function  which runs in AWS Lambda.
- *  It is built for use on Netlify so that building, versioning
+ *  It is deployed via Netlify so that building, versioning
  *  and deploying is easier than it might be otherwise.
  *
  *  No need to configure AWS, just include a file like this in
- *  your site, and deploy as you would any other site on Netlify.
+ *  your code, and deploy as you would any other site on Netlify.
  *
  *  https://www.netlify.com/docs/functions/
  */
@@ -16,7 +16,7 @@
 export function handler(event, context, callback) {
 
   // Who's there?
-  const  { name } = event.queryStringParameters;
+  const { name } = event.queryStringParameters;
 
   // Say hello
   callback(null, {
