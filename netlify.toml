@@ -36,8 +36,8 @@
 
 # Lambda fun
  [[redirects]]
-  from = "/cgi-bin/hello/*"
-  to = "/.netlify/functions/hello?name=:splat"
+  from = "/cgi-bin/hello/:name"
+  to = "/.netlify/functions/hello?name=:name"
   status = 200
 
 # Talks and sldes
