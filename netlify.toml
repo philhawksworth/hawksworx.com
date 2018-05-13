@@ -34,11 +34,11 @@
   to = "/blog/:slug"
   status = 301
 
-# Puttr now lives in its own project on a sundomain
-[[redirects]]
-  from = "/puttr"
-  to = "https://puttr.hawksworx.com"
-  status = 301
+# Lambda fun
+ [[redirects]]
+  from = "/cgi-bin/hello/*"
+  to = "/.netlify/functions/hello?name=:splat"
+  status = 200
 
 # Talks and sldes
 [[redirects]]
