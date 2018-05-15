@@ -10,6 +10,10 @@ outputFormats:
     mediaType: "text/html"
     baseName: "card"
     isHTML: true
+  feed:
+    mediaType: "application/javascript"
+    baseName: "feed"
+    isHTML: false
 
 outputs:
   home:
@@ -18,6 +22,8 @@ outputs:
   page:
     - "html"
     - "card"
+    - "feed"
   section:
     - "html"
     - "card"
+    - "feed"

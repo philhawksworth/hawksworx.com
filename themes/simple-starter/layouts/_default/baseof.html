@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0">
     <link rel="stylesheet" href="/css/{{ index .Site.Data.css.hash "main.css" }}" />
     <script src="/js/hawksworx.js" defer></script>
+    {{ range .AlternativeOutputFormats -}}
+    <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
+    {{ end -}}
     {{ partial "opengraph.html" . }}
   </head>
   <body class="{{ .Section }}">
