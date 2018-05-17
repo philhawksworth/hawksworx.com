@@ -93,5 +93,10 @@
   to = "https://speakerdeck.com/philhawksworth/netlify-show-and-tell"
   status = 302
 
+  [[redirects]]
+  from = "/talks/wad"
+  to = "https://noti.st/philhawksworth/8ryB2o/next-wave-infrastructure-and-how-to-use-it-for-an-easier-life"
+  status = 302
+
 
 
