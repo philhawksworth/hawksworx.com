@@ -1,0 +1,8 @@
+"posts" : [
+{%- for item in collections.posts -%}
+  {
+    url : "{{ item.url }}"
+    title : "{{ item.data.title }}"
+  }
+{%- endfor -%}
+]

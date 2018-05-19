@@ -1,0 +1,43 @@
+
+h1, h2, h3, h4 {
+  line-height: 2.4rem;
+  margin-bottom: .45rem;
+  color: #5D5D5D;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  position: relative;
+}
+
+h1 {
+  font-size: 2.0em;
+  color: $text-color;
+}
+h2 {
+  font-size: 1.6em;
+  color: mix($text-color, $page-color, 70%);
+}
+h3 { font-size: 1.6em;}
+h4 { font-size: 1.2em;}
+
+h4 {
+  padding-top: 0.6em;
+  padding-bottom: 0.4em;
+}
+
+p {
+  margin: 1em 0 1em;
+}
+
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p {
+  margin: 0em 0 1em;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+

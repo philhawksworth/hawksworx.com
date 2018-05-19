@@ -1,0 +1,8 @@
+"links" : [
+{%- for item in collections.links -%}
+  {
+    url : "{{ item.url }}"
+    title : "{{ item.data.title }}"
+  }
+{%- endfor -%}
+]

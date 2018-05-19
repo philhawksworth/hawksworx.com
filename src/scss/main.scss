@@ -1,1 +1,73 @@
-@import 'theme2/_main';
+@import '_variables';
+@import '_mixins';
+@import '_type';
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+  font-family: 'Source Serif Pro', serif;
+  font-weight: 300;
+  font-size: 18px;
+  background-color: $page-color;
+  color: $text-color;
+  line-height: 1.8rem;
+  min-height:100%;
+}
+
+::-moz-selection {
+  background-color: rgb(192, 255, 17);
+  color: #000;
+}
+::selection {
+  background-color: rgb(192, 255, 17);
+  color: #000;
+}
+
+.content {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  border-left-style: solid;
+  border-left-width: 8px;
+  border-left-color: mix(#fff, $page-color, 10%);
+  padding-left: 60px;
+  text-align: left;
+}
+
+ul.listing {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  list-style: none;
+
+  li {
+    margin-bottom: 4em;
+    position: relative;
+  }
+
+  h3::before {
+    position: absolute;
+    left: -102px;
+    content: '';
+    vertical-align: middle;
+    border: solid 8px mix(#fff, $page-color, 10%);
+    border-radius: 60px;
+    width: 60px;
+    height: 60px;
+    background-color: $page-color;
+    margin-right: 20px;
+    box-shadow: 0 0 10px 1px $page-color;
+  }
+}
+
+
+a {
+  &:link,
+  &:visited {
+    color: #3ac7ff;
+  }
+}

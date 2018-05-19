@@ -1,10 +1,4 @@
 node_modules
-public
 dist
-static/js
 functions
-data/**/hash.*
-data/git.yml
-themes/simple-starter/static/css/*.css
 .env
-static/js/hawksworx.js

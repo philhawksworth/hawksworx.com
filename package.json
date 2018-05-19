@@ -1,46 +1,33 @@
 {
-  "name": "Hawksworx.com",
+  "name": "hawksworx.com",
   "version": "1.3.2",
   "description": "Phil Hawksworth's personal website - hawksworx.com",
   "main": "index.js",
   "scripts": {
-    "start": "gulp clean-build && gulp scss && gulp js && hugo server -D --disableFastRender & gulp watch",
-    "build": "yarn run build:branch && gulp cards",
-    "build:branch": "gulp clean-build && gulp js && gulp scss && gulp get:comments && gulp get:tweets && hugo && yarn run build:lambda",
-    "watch": "gulp watch",
-    "serve": "gulp serve",
-    "scss": "gulp scss",
-    "js": "gulp js",
-    "tweets": "gulp get:tweets",
-    "comments": "gulp get:comments",
-    "cards": "gulp cards",
-    "build:lambda": "netlify-lambda build src/lambda"
+    "start": "gulp build:local && gulp serve & gulp watch",
+    "build": "gulp build",
+    "refresh": "gulp get:data",
+    "build:local": "gulp build:local"
   },
   "keywords": [],
   "author": "Phil Hawksworth",
   "license": "ISC",
-  "devDependencies": {
-    "del": "^3.0.0",
+  "dependencies": {
+    "@11ty/eleventy": "^0.3.0",
+    "axios": "^0.18.0",
     "dotenv": "^4.0.0",
     "gravatar": "^1.6.0",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
     "gulp-clean": "^0.3.2",
-    "gulp-hash": "^4.1.1",
+    "gulp-concat": "^2.6.1",
     "gulp-sass": "^3.1.0",
     "gulp-serve": "^1.4.0",
-    "json2yaml": "^1.1.0",
-    "moment": "^2.9.0",
-    "netlify-lambda": "^0.2.0",
-    "node-fetch": "^1.7.3",
+    "gulp-shell": "^0.6.5",
+    "gulp-uglify": "^3.0.0",
     "pageres": "^4.5.1",
-    "request": "^2.83.0",
-    "resolve-redirect": "0.0.3",
-    "resolver": "^0.1.12",
-    "run-sequence": "^2.2.0",
+    "pump": "^3.0.0",
+    "require-dir": "^1.0.0",
+    "run-sequence": "^2.2.1",
     "twitter": "^1.7.1"
-  },
-  "dependencies": {
-    "gulp-concat": "^2.6.1"
   }
 }

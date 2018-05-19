@@ -14,24 +14,24 @@ function flagIfEmpty(input){
   if(forms.length == 0){ return;}
 
   // do this for all forms on the page
-  for (let f = 0; f < forms.length; f++) {
+  for (var f = 0; f < forms.length; f++) {
     forms[f].addEventListener('submit', function(event) {
       event.preventDefault();
-      let form = event.target;
+      var form = event.target;
 
       // reset any flags
       var flags = form.querySelectorAll('.needs-content');
-      for (let f = 0; f < flags.length; f++) {
+      for (var f = 0; f < flags.length; f++) {
         flags[f].classList.remove('needs-content');
       }
 
       // flag any fields which are missing input
-      let inputs = form.querySelectorAll('input');
-      for (let i = 0; i < inputs.length; i++) {
+      var inputs = form.querySelectorAll('input');
+      for (var i = 0; i < inputs.length; i++) {
         flagIfEmpty(inputs[i]);
       }
-      let text = form.querySelectorAll('textarea');
-      for (let t = 0; t < text.length; t++) {
+      var text = form.querySelectorAll('textarea');
+      for (var t = 0; t < text.length; t++) {
         flagIfEmpty(text[t]);
       }
 
