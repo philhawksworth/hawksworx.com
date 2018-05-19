@@ -1,4 +1,3 @@
 {
-  "layout" : "layouts/post.md",
-  "tags": ["blog"]
+  "layout" : "layouts/post.md"
 }

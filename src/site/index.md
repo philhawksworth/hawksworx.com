@@ -8,7 +8,6 @@ description: Phil Hawksworth's home on the Web. Blog posts, conference talks, li
 
 some blurb in here I expect
 
-
 <ul class="listing">
 {%- for i in range(0, 10) -%}
   {% set item = collections.posts[i] %}

@@ -28,6 +28,7 @@ gulp.task('build', function(callback) {
 */
 gulp.task('build:local', function(callback) {
   runSequence(
+    ['clean-build'],
     ['generate', 'styles', 'scripts'],
     callback
   );
