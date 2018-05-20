@@ -1,10 +1,15 @@
 
 /*
-  Splite the content
+  Split the content
 */
 module.exports = function(str) {
   var content = new String(str);
-  var delimit = "<!--more-->";
-  return content.split(delimit)[1];
+  var delimit = "\n<!--more-->\n";
+  var parts = content.split(delimit)[0];
+  if(parts.length) {
+    return parts[1];
+  } else {
+    return str
+  }
 }
 

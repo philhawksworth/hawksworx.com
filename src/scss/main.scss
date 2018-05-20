@@ -47,7 +47,6 @@ body {
       content: '';
     }
   }
-
 }
 
 .search-panel {
@@ -58,7 +57,6 @@ body {
     padding-bottom: 1em;
   }
 }
-
 
 .title-section {
 
@@ -83,7 +81,7 @@ body {
     font-size: 2.6em;
     color: #fff;
     &::before {
-      transition: all 0.1s ease;
+      transition: all 0.2s ease;
       position: absolute;
       left: -142px;
       margin-top: -14px;
@@ -94,6 +92,7 @@ body {
       height: 100px;
       background-image: url('/images/philhawksworth-goon.jpg');
       background-size: 100px 100px;
+      background-position: 0 0;
     }
   }
 }
@@ -160,7 +159,7 @@ ul.listing {
   list-style: none;
 
   li.item {
-    margin-bottom: 10em;
+    margin-bottom: 7em;
     position: relative;
 
     &:hover {
@@ -199,6 +198,9 @@ ul.listing {
 
 
 a {
+
+  transition: all 0.2s ease;
+
   &:link,
   &:visited {
     color: lighten($text-color, 80%);
