@@ -50,6 +50,15 @@ body {
 
 }
 
+.search-panel {
+  background-color: $accent-color;
+  .container {
+    border-left-color: mix(#000, $accent-color, 20%);
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+}
+
 
 .title-section {
 
@@ -117,7 +126,9 @@ img.heroImage {
   margin-top: 3em;
 }
 
-
+.date {
+  color: mix($text-color, $page-color, 60%);
+}
 
 ul.meta {
   list-style: none;
@@ -224,6 +235,10 @@ footer {
 
   background-color: darken($page-color, 5);
   color: mix($text-color, $page-color, 50%);
+
+  .nav {
+    margin-bottom: 6em;
+  }
 
   .container {
     padding-top: 4em;

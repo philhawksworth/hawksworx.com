@@ -21,7 +21,7 @@ description: Phil Hawksworth's home on the Web. Blog posts, conference talks, li
   {# next speaking event #}
   <li class="item item-event">
     <h2><a href="#">Next event</a></h2>
-    <div>Will take place on <time datetime="">May 24th 2018</time></div>
+    <div class="date">Will take place on <time datetime="">May 24th 2018</time></div>
     <p>
       <a href="#">JAMstack Porto</a> - Porto, Portugal
     </p>
@@ -31,7 +31,7 @@ description: Phil Hawksworth's home on the Web. Blog posts, conference talks, li
   {% set item = collections.blogposts[i] %}
   <li class="item item-post">
     <h2><a href="{{ item.url }}">{{ item.data.title }}</a></h2>
-    <div>Posted on <time datetime="{{ item.date }}">{{ item.date | dateDisplay }}</time></div>
+    <div class="date">Posted on <time datetime="{{ item.date }}">{{ item.date | dateDisplay }}</time></div>
     <ul class="meta tags">
     {%- for tag in item.data.tags -%}
       <li><a href="/tags/{{tag}}">{{tag}}</a></li>
