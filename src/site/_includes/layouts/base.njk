@@ -6,19 +6,18 @@
     <link rel="stylesheet" href="/css/main.css" />
     <title>{{ title }}</title>
   </head>
-  <body class="{{ bodyClass }}" >
+  <body class="{{ pageClass }}" >
     <header>
-      <ul class="nav">
-        <li><a href="/">home</a></li>
-        <li><a href="/blog">blog</a></li>
-        <li><a href="/speaking">speaking</a></li>
-        <li><a href="/links">links</a></li>
-        <li><a href="/about">about</a></li>
-      </ul>
+      <div class="container">
+      {% include "navigation.njk" %}
+      </div>
     </header>
-    <div class="content">
+    <div class="container">
       {{ content | safe }}
     </div>
+    <footer>
+      {% include "footer.njk" %}
+    </footer>
   </body>
 </html>
 

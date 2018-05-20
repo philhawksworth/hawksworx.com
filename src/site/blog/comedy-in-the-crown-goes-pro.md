@@ -6,13 +6,15 @@ draft: false
 section: blog
 allowcomments: true
 tags: ["comedy", "events"]
+hero: /images/hal-cruttenden.jpg
 ---
 
 Almost three years ago, [my friend](https://twitter.com/leewilsoncomedy) and I started a free, open mic comedy night at a pub in St Albans. [Comedy in the Crown](https://www.comedyinthecrown.com) quickly grew from an experiment held once a month, into to a pretty solid, weekly comedy night which we are both rather proud of. So it was fun and exciting to try something new - a night with four professional comedians. We were delighted with the results.
 
+<!--more-->
+
 ![Hal gets mean](/images/hal-cruttenden.jpg "Hal gets mean")
 
-<!--more-->
 
 ## Curating a lineup for the audience
 

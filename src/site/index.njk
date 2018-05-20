@@ -1,0 +1,45 @@
+---
+layout: layouts/base.njk
+pageClass: home
+title: Phil Hawksworth
+description: Phil Hawksworth's home on the Web. Blog posts, conference talks, links and other knick knacks.
+---
+
+<h1>Hawksworx</h1>
+<p>
+  Rumblings about the web from Phil Hawksworth.
+</p>
+<ul class="meta social">
+  <li><a href="https://twitter.com/philhawksworth">twitter</a></li>
+  <li><a href="https://github.com/philhawksworth">github</a></li>
+  <li><a href="https://linkedIn.com/philhawksworth">linkedIn</a></li>
+  <li><a href="https://noti.st/philhawksworth">notist</a></li>
+</ul>
+<ul class="listing">
+  {# next speaking event #}
+  <li class="item item-event">
+    <h2><a href="#">Next event</a></h2>
+    <div>Will take place on <time datetime="">May 24th 2018</time></div>
+    <p>
+      <a href="#">JAMstack Porto</a> - Porto, Portugal
+    </p>
+  </li>
+  {# 5 most recent blog posts #}
+  {%- for i in range(0, 5) -%}
+  {% set item = collections.blogposts[i] %}
+  <li class="item item-post">
+    <h2><a href="{{ item.url }}">{{ item.data.title }}</a></h2>
+    <div>Posted on <time datetime="{{ item.date }}">{{ item.date | dateDisplay }}</time></div>
+    <ul class="meta tags">
+    {%- for tag in item.data.tags -%}
+      <li><a href="/tags/{{tag}}">{{tag}}</a></li>
+    {% endfor -%}
+    </ul>
+    <img src="{{item.data.hero }}" class="heroImage" />
+    <div class="excerpt">
+      {{- item.templateContent | excerpt | safe -}}
+    </div>
+    <a class="more" href="{{ item.url }}">read more</a>
+  </li>
+  {%- endfor -%}
+</ul>

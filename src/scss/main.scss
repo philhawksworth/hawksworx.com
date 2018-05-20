@@ -2,10 +2,22 @@
 @import '_mixins';
 @import '_type';
 
+::-moz-selection {
+  background-color: $accent-color;
+  color: #000;
+}
+::selection {
+  background-color: $accent-color;
+  color: #000;
+}
 
 * {
   margin: 0;
   padding: 0;
+}
+
+html {
+  background-color: $accent-color;
 }
 
 body {
@@ -15,52 +27,121 @@ body {
   font-size: 18px;
   background-color: $page-color;
   color: $text-color;
-  line-height: 1.8rem;
+  line-height: 1.8;
   min-height:100%;
+  border-top: solid 3px $accent-color;
 }
 
-::-moz-selection {
-  background-color: rgb(192, 255, 17);
-  color: #000;
-}
-::selection {
-  background-color: rgb(192, 255, 17);
-  color: #000;
+.nav {
+  list-style: none;
+  li {
+    display: inline;
+    &::after {
+      content: '/';
+      margin-left: 0.8em;
+      margin-right: 0.6em;
+    }
+  }
+  li:last-of-type {
+    &::after {
+      content: '';
+    }
+  }
+
 }
 
-.content {
+.home {
+  h1 {
+    padding-top: 2em;
+    font-size: 2.6em;
+    color: #fff;
+    &::before {
+      position: absolute;
+      left: -142px;
+      margin-top: -0.6em;
+      content: '';
+      border: solid 8px mix(#fff, $page-color, 10%);
+      border-radius: 100px;
+      width: 100px;
+      height: 100px;
+      background-image: url('/images/philhawksworth-goon.jpg');
+      background-size: 100px 100px;
+      box-shadow: 0 0 10px 1px $page-color;
+    }
+  }
+}
+
+
+.container {
   width: 600px;
   margin-left: auto;
   margin-right: auto;
   border-left-style: solid;
   border-left-width: 8px;
   border-left-color: mix(#fff, $page-color, 10%);
-  padding-left: 60px;
+  padding-left: 80px;
   text-align: left;
+
+  img {
+    width: 100%;
+  }
+
 }
 
-ul.listing {
-  margin-top: 1em;
+img.heroImage {
+  filter: sepia(100) hue-rotate(180deg) brightness(0.7);
+  opacity: 0.8;
+  margin-bottom: 1em;
+}
+
+ul.meta {
+  list-style: none;
+  font-size: 0.9em;
+  li {
+    display: inline-block;
+    margin-right: 0.2em;
+  }
+}
+
+ul.social {
+  margin-top: -1.8em;
   margin-bottom: 2em;
+}
+
+ul.tags {
+  font-size: 0.8em;
+  margin-bottom: 2em;
+  li::before {
+    content: '#';
+    margin-right: 0.2em;
+  }
+}
+
+
+ul.listing {
+  padding-top: 3em;
+  padding-bottom: 2em;
   list-style: none;
 
-  li {
-    margin-bottom: 4em;
+  li.item {
+    padding-bottom: 4em;
     position: relative;
   }
 
-  h3::before {
-    position: absolute;
-    left: -102px;
-    content: '';
-    vertical-align: middle;
-    border: solid 8px mix(#fff, $page-color, 10%);
-    border-radius: 60px;
-    width: 60px;
-    height: 60px;
-    background-color: $page-color;
-    margin-right: 20px;
-    box-shadow: 0 0 10px 1px $page-color;
+  h2 {
+    margin-bottom: 0.2em;
+    &::before {
+      position: absolute;
+      left: -122px;
+      margin-top: -0.6em;
+      content: '';
+      border: solid 8px mix(#fff, $page-color, 10%);
+      border-radius: 60px;
+      width: 60px;
+      height: 60px;
+      background-color: $page-color;
+      box-shadow: 0 0 10px 1px $page-color;
+    }
   }
 }
 
@@ -68,6 +149,62 @@ ul.listing {
 a {
   &:link,
   &:visited {
-    color: #3ac7ff;
+    color: lighten($text-color, 80%);
+    text-decoration: none;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: mix($accent-color, $page-color, 40%);
   }
+  &:hover,
+  &:focus {
+    color: mix($accent-color, $page-color, 100%);
+    border-bottom-style: solid;
+    border-bottom-color: mix($accent-color, $page-color, 100%);
+  }
+
+  &.more::after {
+    content: '→';
+    margin-left: 0.3em;
+    color: $text-color;
+  }
+}
+
+header {
+  background-color: darken($page-color, 5);
+  color: mix($text-color, $page-color, 50%);
+
+  .nav {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+}
+
+footer {
+
+  background-color: darken($page-color, 5);
+  color: mix($text-color, $page-color, 50%);
+
+  .container {
+    padding-top: 4em;
+    padding-bottom: 4em;
+    font-size: 0.9em;
+  }
+
+  a {
+    &:link,
+    &:visited {
+      color: mix($text-color, $page-color, 90%);
+      text-decoration: none;
+      border-bottom-style: none;
+
+    }
+    &:hover,
+    &:focus {
+      color: #fff;
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+      border-bottom-color: $accent-color;
+    }
+  }
+
 }

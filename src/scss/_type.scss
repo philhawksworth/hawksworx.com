@@ -26,7 +26,8 @@ h4 {
 }
 
 p {
-  margin: 1em 0 1em;
+  padding-top: 0;
+  padding-bottom: 1em;
 }
 
 h1 + p,
@@ -34,10 +35,6 @@ h2 + p,
 h3 + p,
 h4 + p {
   margin: 0em 0 1em;
-}
-
-li {
-  margin-bottom: 0.5em;
 }
 
 

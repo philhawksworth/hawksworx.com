@@ -7,7 +7,7 @@ layout: layouts/base.njk
 
 
 <ul class="listing">
-{%- for item in collections.posts -%}
+{%- for item in collections.blogposts -%}
   <li>
     <a href="{{ item.url }}">{{ item.data.title }}</a> -
     <time datetime="{{ item.date }}">{{ item.date | dateDisplay }}</time>
