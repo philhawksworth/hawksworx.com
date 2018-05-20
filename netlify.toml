@@ -7,7 +7,7 @@
   command = "yarn run build:branch"
 
 [context.to-11ty]
-  environment = { NODE_ENV = "8.9.0" }
+  # environment = { NODE_ENV = "8.9.0" }
   command = "yarn run build"
 
 [[headers]]
