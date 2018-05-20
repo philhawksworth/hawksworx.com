@@ -70,26 +70,27 @@ body {
 }
 
 .title-section {
+  margin-bottom: 2em;
 
-  margin-bottom: 4em;
-
-  &:hover {
-    h1::before {
-      border-radius: 110px;
-      width: 110px;
-      height: 110px;
-      margin-top: -19px;
-      left: -147px;
-      background-size: 110px 110px;
+  @include bp(wide) {
+    margin-bottom: 4em;
+    &:hover {
+      h1::before {
+        border-radius: 110px;
+        width: 110px;
+        height: 110px;
+        margin-top: -19px;
+        left: -147px;
+        background-size: 110px 110px;
+      }
     }
   }
-
 }
 
 .home {
   h1 {
     color: #fff;
-    padding-top: 1em;
+    padding-top: 1.4em;
     font-size: 1.8em;
     @include bp(wide) {
       padding-top: 2em;
@@ -100,12 +101,12 @@ body {
       transition: all 0.2s ease;
       position: absolute;
       content: '';
-      border-color: mix(#fff, $page-color, 10%);
-      border-style: solid;
       background-image: url('/images/philhawksworth-goon.jpg');
+      border-color: mix(#fff, $page-color, 10%);
       background-size: 40px 40px;
-      left: -58px;
+      left: -62px;
       background-position: 0 0;
+      border-style: solid;
       border-width: 4px;
       border-radius: 40px;
       width: 40px;
@@ -133,22 +134,17 @@ body {
   border-left-style: solid;
   border-left-color: mix(#fff, $page-color, 10%);
   text-align: left;
-  width: 200px;
+  width: 300px;
   border-left-width: 5px;
-  padding-left: 30px;
+  padding-left: 35px;
 
-  @include bp(narrow) {
-    width: 400px;
-    padding-left: 40px;
-    border-left-width: 6px;
-  }
   @include bp(mid) {
     width: 500px;
-    padding-left: 80px;
-    border-left-width: 8px;
   }
   @include bp(wide) {
     width: 600px;
+    padding-left: 80px;
+    border-left-width: 8px;
   }
 
   img {
@@ -196,44 +192,64 @@ ul.tags {
 
 
 ul.listing {
-  padding-top: 3em;
-  padding-bottom: 2em;
   list-style: none;
+  padding-top: 2em;
+  padding-bottom: 1em;
+
+  @include bp(wide) {
+    padding-top: 3em;
+    padding-bottom: 2em;
+  }
 
   li.item {
-    margin-bottom: 7em;
+    margin-bottom: 5em;
     position: relative;
+
+    @include bp(wide) {
+      margin-bottom: 7em;
+    }
 
     &:hover {
       img.heroImage {
         filter: none;
       }
-      h2::before {
-        border-radius: 80px;
-        width: 80px;
-        height: 80px;
-        left: -132px;
-        margin-top: -22px;
+      @include bp(wide) {
+        h2::before {
+          border-radius: 80px;
+          width: 80px;
+          height: 80px;
+          left: -132px;
+          margin-top: -22px;
+        }
       }
+
     }
   }
-
-
 
 
   h2 {
     margin-bottom: 0.2em;
     &::before {
       position: absolute;
-      left: -122px;
-      margin-top: -12px;
       content: '';
-      border: solid 8px mix(#fff, $page-color, 10%);
-      border-radius: 60px;
-      width: 60px;
-      height: 60px;
-      background-color: $page-color;
       transition: all 0.2s ease;
+      background-color: $page-color;
+      border-style: solid;
+      border-color: mix(#fff, $page-color, 10%);
+      border-width: 4px;
+      border-radius: 30px;
+      left: -56px;
+      width: 30px;
+      height:30px;
+
+      @include bp(wide) {
+        margin-top: -12px;
+        border-width: 8px;
+        border-radius: 60px;
+        left: -122px;
+        width: 60px;
+        height: 60px;
+      }
     }
   }
 }
@@ -281,7 +297,10 @@ footer {
   color: mix($text-color, $page-color, 50%);
 
   .nav {
-    margin-bottom: 6em;
+    margin-bottom: 5em;
+    @include bp(wide) {
+      margin-bottom: 6em;
+    }
   }
 
   .container {
