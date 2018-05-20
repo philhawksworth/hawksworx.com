@@ -24,12 +24,23 @@ body {
   text-align: center;
   font-family: 'Source Serif Pro', serif;
   font-weight: 300;
-  font-size: 18px;
+  font-size: 12px;
   background-color: $page-color;
   color: $text-color;
-  line-height: 1.8;
-  min-height:100%;
+  line-height: 1.5;
   border-top: solid 3px $accent-color;
+  @include bp(narrow) {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  @include bp(mid) {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  @include bp(wide) {
+    font-size: 18px;
+    line-height: 1.8;
+  }
 }
 
 .nav {
@@ -77,41 +88,72 @@ body {
 
 .home {
   h1 {
-    padding-top: 2em;
-    font-size: 2.6em;
     color: #fff;
+    padding-top: 1em;
+    font-size: 1.8em;
+    @include bp(wide) {
+      padding-top: 2em;
+      font-size: 2.6em;
+    }
+
     &::before {
       transition: all 0.2s ease;
       position: absolute;
-      left: -142px;
-      margin-top: -14px;
       content: '';
-      border: solid 8px mix(#fff, $page-color, 10%);
-      border-radius: 100px;
-      width: 100px;
-      height: 100px;
+      border-color: mix(#fff, $page-color, 10%);
+      border-style: solid;
       background-image: url('/images/philhawksworth-goon.jpg');
-      background-size: 100px 100px;
+      background-size: 40px 40px;
+      left: -58px;
       background-position: 0 0;
+      border-width: 4px;
+      border-radius: 40px;
+      width: 40px;
+      height: 40px;
+
+      @include bp(wide) {
+        background-size: 100px 100px;
+        left: -142px;
+        margin-top: -14px;
+        background-position: 0 0;
+        border-width: 8px;
+        border-radius: 100px;
+        width: 100px;
+        height: 100px;
+      }
+
     }
   }
 }
 
 
 .container {
-  width: 600px;
   margin-left: auto;
   margin-right: auto;
   border-left-style: solid;
-  border-left-width: 8px;
   border-left-color: mix(#fff, $page-color, 10%);
-  padding-left: 80px;
   text-align: left;
+  width: 200px;
+  border-left-width: 5px;
+  padding-left: 30px;
+
+  @include bp(narrow) {
+    width: 400px;
+    padding-left: 40px;
+    border-left-width: 6px;
+  }
+  @include bp(mid) {
+    width: 500px;
+    padding-left: 80px;
+    border-left-width: 8px;
+  }
+  @include bp(wide) {
+    width: 600px;
+  }
 
   img {
     width: 100%;
   }
-
 }
 
 img.heroImage {
