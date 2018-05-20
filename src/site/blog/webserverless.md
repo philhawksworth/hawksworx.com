@@ -24,8 +24,9 @@ Bruce has a knack of cutting to the chase, and this made me smile. But it nudged
 
 > Ok, so when/why would you make a static site? <cite>— <a href="https://twitter.com/drewm/status/983635104286281729">Drew McLellan</a></cite>
 
-
 <!--more-->
+
+![A sledgehammer and a nut](/images/sledgehammer-nut.jpg "A sledgehammer and a nut")
 
 ## A static site
 

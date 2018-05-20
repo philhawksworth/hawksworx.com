@@ -5,6 +5,7 @@ title: Phil Hawksworth
 description: Phil Hawksworth's home on the Web. Blog posts, conference talks, links and other knick knacks.
 ---
 
+<div class="title-section">
 <h1>Hawksworx</h1>
 <p>
   Rumblings about the web from Phil Hawksworth.
@@ -15,6 +16,7 @@ description: Phil Hawksworth's home on the Web. Blog posts, conference talks, li
   <li><a href="https://linkedIn.com/philhawksworth">linkedIn</a></li>
   <li><a href="https://noti.st/philhawksworth">notist</a></li>
 </ul>
+</div>
 <ul class="listing">
   {# next speaking event #}
   <li class="item item-event">
@@ -35,7 +37,9 @@ description: Phil Hawksworth's home on the Web. Blog posts, conference talks, li
       <li><a href="/tags/{{tag}}">{{tag}}</a></li>
     {% endfor -%}
     </ul>
+    {%- if loop.first -%}
     <img src="{{item.data.hero }}" class="heroImage" />
+    {%- endif -%}
     <div class="excerpt">
       {{- item.templateContent | excerpt | safe -}}
     </div>

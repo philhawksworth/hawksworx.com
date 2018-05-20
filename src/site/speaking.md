@@ -12,4 +12,4 @@ layout: layouts/base.njk
 
 I'm lucky enough to have been able to travel to speak at many conferences and events around the world. Usually talking about the hows and whys of web development.
 
-<img src="/images/philhawksworth-txjs.jpg" alt="Phil Hawksworth's speaking" /> If you'd like me to speak at an event then [please do get in touch](/ask-me/to-speak)_
+<img src="https://2018.coldfront.co/static/images/host-phill-h.jpg" alt="Phil Hawksworth's speaking" /> If you'd like me to speak at an event then [please do get in touch](/ask-me/to-speak)_

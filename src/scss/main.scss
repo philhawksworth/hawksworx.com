@@ -50,15 +50,34 @@ body {
 
 }
 
+
+.title-section {
+
+  margin-bottom: 4em;
+
+  &:hover {
+    h1::before {
+      border-radius: 110px;
+      width: 110px;
+      height: 110px;
+      margin-top: -19px;
+      left: -147px;
+      background-size: 110px 110px;
+    }
+  }
+
+}
+
 .home {
   h1 {
     padding-top: 2em;
     font-size: 2.6em;
     color: #fff;
     &::before {
+      transition: all 0.1s ease;
       position: absolute;
       left: -142px;
-      margin-top: -0.6em;
+      margin-top: -14px;
       content: '';
       border: solid 8px mix(#fff, $page-color, 10%);
       border-radius: 100px;
@@ -66,7 +85,6 @@ body {
       height: 100px;
       background-image: url('/images/philhawksworth-goon.jpg');
       background-size: 100px 100px;
-      box-shadow: 0 0 10px 1px $page-color;
     }
   }
 }
@@ -89,10 +107,17 @@ body {
 }
 
 img.heroImage {
-  filter: sepia(100) hue-rotate(180deg) brightness(0.7);
+  filter: sepia(100) hue-rotate(180deg) brightness(0.7) contrast(1.2);
   opacity: 0.8;
-  margin-bottom: 1em;
+  margin-bottom: -1em;
+  transition: all 0.1s ease;
 }
+
+.excerpt {
+  margin-top: 3em;
+}
+
+
 
 ul.meta {
   list-style: none;
@@ -124,23 +149,39 @@ ul.listing {
   list-style: none;
 
   li.item {
-    padding-bottom: 4em;
+    margin-bottom: 10em;
     position: relative;
+
+    &:hover {
+      img.heroImage {
+        filter: none;
+      }
+      h2::before {
+        border-radius: 80px;
+        width: 80px;
+        height: 80px;
+        left: -132px;
+        margin-top: -22px;
+      }
+    }
   }
+
+
+
 
   h2 {
     margin-bottom: 0.2em;
     &::before {
       position: absolute;
       left: -122px;
-      margin-top: -0.6em;
+      margin-top: -12px;
       content: '';
       border: solid 8px mix(#fff, $page-color, 10%);
       border-radius: 60px;
       width: 60px;
       height: 60px;
       background-color: $page-color;
-      box-shadow: 0 0 10px 1px $page-color;
+      transition: all 0.2s ease;
     }
   }
 }

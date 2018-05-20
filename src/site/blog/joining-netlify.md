@@ -9,15 +9,16 @@ tags:
   - announcements
   - jamstack
   - netlify
+hero: /images/netlify-banner.png
 ---
 
 I'm very happy to announce that I am joining the Developer Relations team at Netlify. From where you are, you can't see me hopping from foot to foot with excitement, but feel free to imagine that. Because it's happening.
 
 I should probably explain why.
 
-![Netlify](/images/netlify-banner.png "Netlify")
-
 <!--more-->
+
+![Netlify](/images/netlify-banner.png "Netlify")
 
 ## Who are Netlify?
 
