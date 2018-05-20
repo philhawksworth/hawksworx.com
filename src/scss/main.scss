@@ -45,6 +45,12 @@ body {
 
 .nav {
   list-style: none;
+  font-size: 0.9em;
+
+  @include bp(narrow) {
+    font-size: 1em;
+  }
+
   li {
     display: inline;
     &::after {
@@ -297,10 +303,7 @@ footer {
   color: mix($text-color, $page-color, 50%);
 
   .nav {
-    margin-bottom: 5em;
-    @include bp(wide) {
-      margin-bottom: 6em;
-    }
+    margin-bottom: 6em;
   }
 
   .container {
