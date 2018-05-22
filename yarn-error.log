@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js start
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js run events
 
 PATH: 
   /Users/phil/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/phil/bin
@@ -23,6 +23,7 @@ npm manifest:
       "start": "gulp build:local && gulp serve & gulp watch",
       "build": "gulp build",
       "refresh": "gulp get:data",
+      "events": "gulp get:events",
       "build:local": "gulp build:local"
     },
     "keywords": [],
@@ -5273,7 +5274,7 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: sh
-  Arguments: -c gulp build:local && gulp serve & gulp watch
+  Arguments: -c gulp get:events
   Directory: /Users/phil/projects/hawksworx/hawksworx.com
   Output:
   

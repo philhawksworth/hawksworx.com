@@ -20,25 +20,15 @@ description: Phil Hawksworth's home on the Web. Blog posts, conference talks, li
 <ul class="listing">
   {# next speaking event #}
   <li class="item item-talk">
-    <h2><a href="#">Next event</a></h2>
+    <h2><a href="/speaking#upcoming">Next event</a></h2>
     <div class="date">Will take place on <time datetime="">May 24th 2018</time></div>
     <p>
       <a href="#">JAMstack Porto</a> - Porto, Portugal
     </p>
   </li>
 
-  {# latest link post  #}
-  <li class="item item-link">
-    <h2><a href="#">Typora.io</a></h2>
-    <div class="direct-link"><a href="https://typora.io/" rel="no-opener" target="_BLANK">https://typora.io/</a></div>
-    <div class="excerpt">
-      A clean and simple writing experience for those who like to write in Markdown. Including instant preview as you type, CSS-based themes, PDF and HTML exports.
-    </div>
-     <a class="more" href="/links">other links</a>
-  </li>
-
   {# 5 most recent blog posts #}
-  {%- for i in range(0, 5) -%}
+  {%- for i in range(0, 3) -%}
   {% set item = collections.blogposts[i] %}
   <li class="item item-post">
     <h2><a href="{{ item.url }}">{{ item.data.title }}</a></h2>
@@ -57,4 +47,16 @@ description: Phil Hawksworth's home on the Web. Blog posts, conference talks, li
     <a class="more" href="{{ item.url }}">read more</a>
   </li>
   {%- endfor -%}
+
+  {# latest link post  #}
+  <li class="item item-link">
+    <h2><a href="#">Typora.io</a></h2>
+    <div class="direct-link"><a href="https://typora.io/" rel="no-opener" target="_BLANK">https://typora.io/</a></div>
+    <div class="excerpt">
+      A clean and simple writing experience for those who like to write in Markdown. Including instant preview as you type, CSS-based themes, PDF and HTML exports.
+    </div>
+     <a class="more" href="/links">other links</a>
+  </li>
+
+
 </ul>
