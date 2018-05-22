@@ -1,0 +1,22 @@
+---
+layout: layouts/base.njk
+pageClass: posts
+templateEngineOverride: njk, md
+---
+
+<div class="title-section">
+  <h1>{{ title }}</h1>
+  <div class="date">
+    Published by <a href="/about">Phil Hawksworth</a> on <time datetime="{{ date }}">{{ date | dateDisplay }}</time>
+  </div>
+  <ul class="meta tags">
+  {%- for tag in page.data.tags -%}
+    <li><a href="/tags/{{tag}}">{{tag}}</a></li>
+  {% endfor -%}
+  </ul>
+</div>
+
+
+<main>
+  {{ content | safe }}
+</main>

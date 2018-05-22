@@ -1,16 +1,20 @@
 ---
-title: Writing
+title: Phil Hawksworth's blog
 subtitle: blog posts and announcements
 description: Blog posts and announcements from Phil Hawksworth
 layout: layouts/base.njk
+pageClass: home
 ---
+
+<h2>Blog</h2>
+<p>All of the articles I've posted here on the blog</p>
 
 
 <ul class="listing">
 {%- for item in collections.blogposts -%}
   <li>
     <a href="{{ item.url }}">{{ item.data.title }}</a> -
-    <time datetime="{{ item.date }}">{{ item.date | dateDisplay }}</time>
+    {# <time datetime="{{ item.date }}">{{ item.date | dateDisplay }}</time> #}
   </li>
 {%- endfor -%}
 </ul>

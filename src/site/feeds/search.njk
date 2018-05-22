@@ -1,0 +1,20 @@
+---
+permalink: search.json
+---
+
+'search' : [
+{%- for item in collections.blogposts -%}
+  {
+    'url' : "{{ item.url }}",
+    'title' : "{{ item.data.title }}",
+    'text' : "{{ item.templateContent | escape | squash }}"
+  },
+{%- endfor -%}
+{%- for item in collections.links -%}
+  {
+    'url' : "{{ item.url }}",
+    'title' : "{{ item.data.title }}",
+    'text' : "{{ item.templateContent | escape | squash }}"
+  }{% if loop.last !== true %},{%- endif -%}
+{%- endfor -%}
+];

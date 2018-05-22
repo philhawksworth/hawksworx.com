@@ -6,26 +6,37 @@ description: Phil Hawksworth's home on the Web. Blog posts, conference talks, li
 ---
 
 <div class="title-section">
-<h1>Hawksworx</h1>
-<p>
-  Rumblings about the web from Phil Hawksworth.
-</p>
-<ul class="meta social">
-  <li><a href="https://twitter.com/philhawksworth">twitter</a></li>
-  <li><a href="https://github.com/philhawksworth">github</a></li>
-  <li><a href="https://linkedIn.com/philhawksworth">linkedIn</a></li>
-  <li><a href="https://noti.st/philhawksworth">notist</a></li>
-</ul>
+  <h1 class="face">Hawksworx</h1>
+  <p>
+    Rumblings about the web from Phil Hawksworth.
+  </p>
+  <ul class="meta social">
+    <li><a href="https://twitter.com/philhawksworth">twitter</a></li>
+    <li><a href="https://github.com/philhawksworth">github</a></li>
+    <li><a href="https://linkedIn.com/philhawksworth">linkedIn</a></li>
+    <li><a href="https://noti.st/philhawksworth">notist</a></li>
+  </ul>
 </div>
 <ul class="listing">
   {# next speaking event #}
-  <li class="item item-event">
+  <li class="item item-talk">
     <h2><a href="#">Next event</a></h2>
     <div class="date">Will take place on <time datetime="">May 24th 2018</time></div>
     <p>
       <a href="#">JAMstack Porto</a> - Porto, Portugal
     </p>
   </li>
+
+  {# latest link post  #}
+  <li class="item item-link">
+    <h2><a href="#">Typora.io</a></h2>
+    <div class="direct-link"><a href="https://typora.io/" rel="no-opener" target="_BLANK">https://typora.io/</a></div>
+    <div class="excerpt">
+      A clean and simple writing experience for those who like to write in Markdown. Including instant preview as you type, CSS-based themes, PDF and HTML exports.
+    </div>
+     <a class="more" href="/links">other links</a>
+  </li>
+
   {# 5 most recent blog posts #}
   {%- for i in range(0, 5) -%}
   {% set item = collections.blogposts[i] %}
@@ -41,7 +52,7 @@ description: Phil Hawksworth's home on the Web. Blog posts, conference talks, li
     <img src="{{item.data.hero }}" class="heroImage" />
     {%- endif -%}
     <div class="excerpt">
-      {{- item.templateContent | excerpt | safe -}}
+      {{- item.templateContent | section('excerpt') | safe -}}
     </div>
     <a class="more" href="{{ item.url }}">read more</a>
   </li>
