@@ -36,7 +36,7 @@ gulp.task("get:comments", function() {
           }
         }
         // save our data to file for the the SSG to use later
-        project.storeData('data/comments.json', JSON.stringify(comments));
+        project.storeData(project.buildSrc + '/site/_data/comments.json', JSON.stringify(comments));
     })
     .catch(function (error) {
       console.log(error);

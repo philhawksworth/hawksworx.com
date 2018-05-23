@@ -25,7 +25,7 @@ gulp.task('get:events', function () {
             talks.push(res[talk].data.data[0].relationships.data[0].attributes);
           }
           // stash the data for the SSG to use
-          project.storeData("/data/events.json", JSON.stringify(talks));
+          project.storeData(project.buildSrc + "/site/_data/events.json", JSON.stringify(talks));
         })
       );
     })

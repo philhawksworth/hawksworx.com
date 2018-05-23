@@ -5,25 +5,28 @@ title: Speaking
 subtitle: talks at conferences and meetups
 description: Phil Hawksworth's upcoming conference talks and a record of those given previously
 layout: layouts/base.njk
-
 ---
 
-## Future events and coverage of previous talks
+<h1>Future events and coverage of previous talks</h1>
+<p>
+  I'm lucky enough to have been able to travel to speak at many conferences and events around the world. Usually talking about the hows and whys of web development.
+</p>
+<img src="https://2018.coldfront.co/static/images/host-phill-h.jpg" alt="Phil Hawksworth's speaking" />
+<p>
+  If you'd like me to speak at an event then <a href="/ask-me/to-speak">please do get in touch</a>
+</p>
 
-I'm lucky enough to have been able to travel to speak at many conferences and events around the world. Usually talking about the hows and whys of web development.
-
-<img src="https://2018.coldfront.co/static/images/host-phill-h.jpg" alt="Phil Hawksworth's speaking" /> If you'd like me to speak at an event then [please do get in touch](/ask-me/to-speak)_
-
-
+<h2>Coming up</h2>
 <ul class="listing">
 {%- for event in events -%}
   <li>
-    {% if event.url %}
-    <a href="{{ event.url }}">{{ event.title }}</a> -
-    {% else  %}
-    <span>{{ event.title }}<span> -
-    {% endif %}
     <time datetime="{{ event.starts_on }}">{{ event.starts_on | dateDisplay }}</time>
+    {% if event.url %}
+    <h3><a href="{{ event.url }}">{{ event.title }}</a></h3>
+    {% else  %}
+    <h3>{{ event.title }}</h3>
+    {% endif %}
+    <p>{{ event.address }}</p>
   </li>
 {%- endfor -%}
 </ul>

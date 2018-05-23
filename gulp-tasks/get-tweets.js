@@ -27,7 +27,7 @@ gulp.task('get:tweets', function() {
         recentTweets.recent.push(t);
       }
       // save our data to file for the the SSG to use later
-      project.storeData('data/tweets.json', JSON.stringify(recentTweets));
+      project.storeData(project.buildSrc + '/site/_data/tweets.json', JSON.stringify(recentTweets));
     }
     else {
       console.log(error);
