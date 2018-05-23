@@ -49,14 +49,14 @@ description: Phil Hawksworth's home on the Web. Blog posts, conference talks, li
   {%- endfor -%}
 
   {# latest link post  #}
+  {% set item = collections.links[0] %}
   <li class="item item-link">
-    <h2><a href="#">Typora.io</a></h2>
-    <div class="direct-link"><a href="https://typora.io/" rel="no-opener" target="_BLANK">https://typora.io/</a></div>
+    <h2><a href="{{ item.url }}">{{ item.data.displayName }}</a></h2>
+    <div class="direct-link"><a href="{{ item.data.link }}" rel="no-opener" target="_BLANK">{{ item.data.link }}</a></div>
     <div class="excerpt">
-      A clean and simple writing experience for those who like to write in Markdown. Including instant preview as you type, CSS-based themes, PDF and HTML exports.
+      {{- item.templateContent | safe -}}
     </div>
      <a class="more" href="/links">other links</a>
   </li>
-
 
 </ul>
