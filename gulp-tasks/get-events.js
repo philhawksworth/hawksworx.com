@@ -13,12 +13,14 @@ gulp.task('get:events', function () {
       var events = response.data.data[0].relationships.data;
       var eventURLs = [];
       events.forEach(element => {
+        console.log('related :', element.links.related);
         eventURLs.push(element.links.related);
       });
 
       // Fetch all of the presentation data
       axios.all(eventURLs.map(l => axios.get(l)))
-      .then(axios.spread(function (...res) {
+        .then(axios.spread(function (...res) {
+
           // gather the data about for each presentation
           var talks = [];
           for (var talk in res) {
