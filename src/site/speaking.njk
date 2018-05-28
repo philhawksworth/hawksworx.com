@@ -18,15 +18,16 @@ layout: layouts/base.njk
 
 <h2>Coming up</h2>
 <ul class="listing">
-{%- for event in events -%}
-  <li>
-    <time datetime="{{ event.starts_on }}">{{ event.starts_on | dateDisplay }}</time>
-    {% if event.url %}
-    <h3><a href="{{ event.url }}">{{ event.title }}</a></h3>
-    {% else  %}
-    <h3>{{ event.title }}</h3>
-    {% endif %}
-    <p>{{ event.address }}</p>
-  </li>
+{%- for event in events.future | reverse -%}
+  {%- set item = event -%}
+  {% include "event.njk" %}
+{%- endfor -%}
+</ul>
+
+<h2>Previously</h2>
+<ul class="listing">
+{%- for event in events.past -%}
+  {%- set item = event -%}
+  {%- include "event.njk" -%}
 {%- endfor -%}
 </ul>
