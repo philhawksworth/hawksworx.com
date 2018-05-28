@@ -13,18 +13,24 @@ description: Phil Hawksworth's home on the Web. Blog posts, conference talks, li
   <ul class="meta social">
     <li><a href="https://twitter.com/philhawksworth">twitter</a></li>
     <li><a href="https://github.com/philhawksworth">github</a></li>
-    <li><a href="https://linkedIn.com/philhawksworth">linkedIn</a></li>
+    <li><a href="https://linkedIn.com/in/philhawksworth">linkedIn</a></li>
     <li><a href="https://noti.st/philhawksworth">notist</a></li>
   </ul>
 </div>
 <ul class="listing">
+
+
   {# next speaking event #}
+  {% set event = events[0] %}
   <li class="item item-talk">
     <h2><a href="/speaking#upcoming">Next event</a></h2>
-    <div class="date">Will take place on <time datetime="">May 24th 2018</time></div>
-    <p>
-      <a href="#">JAMstack Porto</a> - Porto, Portugal
-    </p>
+    <div class="date">Will take place on <time datetime="{{ event.starts_on }}">{{ event.starts_on | dateDisplay }}</time></div>
+    {% if event.url %}
+    <p><a href="{{ event.url }}">{{ event.title }}</a>, {{ event.address }}</p>
+    {% else  %}
+    <p>{{ event.title }}, {{ event.address }}</p>
+    {% endif %}
+
   </li>
 
   {# 5 most recent blog posts #}

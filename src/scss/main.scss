@@ -124,16 +124,16 @@ body {
 
   @include bp(wide) {
     margin-bottom: 4em;
-    &:hover {
-      h1::before {
-        border-radius: 110px;
-        width: 110px;
-        height: 110px;
-        margin-top: -19px;
-        left: -147px;
-        background-size: 110px 110px;
-      }
-    }
+    // &:hover {
+    //   h1::before {
+    //     border-radius: 110px;
+    //     width: 110px;
+    //     height: 110px;
+    //     margin-top: -19px;
+    //     left: -147px;
+    //     background-size: 110px 110px;
+    //   }
+    // }
   }
 }
 
@@ -344,32 +344,4 @@ footer {
 
 }
 
-// themes list items
-.item-talk {
-  a {
-    &:link,
-    &:visited {
-      border-bottom-color: mix($accent-color-talk, $page-color, 40%);
-    }
-    &:hover,
-    &:focus {
-      color: mix($accent-color-talk, $page-color, 100%);
-      border-bottom-color: mix($accent-color-talk, $page-color, 100%);
-    }
-  }
-}
-
-.item-link {
-  a {
-    &:link,
-    &:visited {
-      border-bottom-color: mix($accent-color-link, $page-color, 40%);
-    }
-    &:hover,
-    &:focus {
-      color: mix($accent-color-link, $page-color, 100%);
-      border-bottom-color: mix($accent-color-link, $page-color, 100%);
-    }
-  }
-}
 
