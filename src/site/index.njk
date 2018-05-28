@@ -21,7 +21,7 @@ description: Phil Hawksworth's home on the Web. Blog posts, conference talks, li
 
 
   {# next speaking event #}
-  {% set event = events[0] %}
+  {% set event = events.future[0] %}
   <li class="item item-talk">
     <h2><a href="/speaking#upcoming">Next event</a></h2>
     <div class="date">Will take place on <time datetime="{{ event.starts_on }}">{{ event.starts_on | dateDisplay }}</time></div>
