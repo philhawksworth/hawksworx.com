@@ -18,7 +18,7 @@ layout: layouts/base.njk
   </p>
 </div>
 
-<h2>Coming up</h2>
+<h2 id="upcoming">Coming up</h2>
 <ul class="listing">
 {%- for event in events.future | reverse -%}
   {%- set item = event -%}
@@ -26,7 +26,7 @@ layout: layouts/base.njk
 {%- endfor -%}
 </ul>
 
-<h2>Previously</h2>
+<h2 id="previously">Previously</h2>
 <ul class="listing">
 {%- for event in events.past -%}
   {%- set item = event -%}
