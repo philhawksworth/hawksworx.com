@@ -3,17 +3,30 @@ title: Phil Hawksworth's blog
 subtitle: blog posts and announcements
 description: Blog posts and announcements from Phil Hawksworth
 layout: layouts/base.njk
-pageClass: home
+pageClass: blog
 ---
 
-<h2>Blog</h2>
-<p>All of the articles I've posted here on the blog</p>
-
+<div class="title-section">
+  <h1>Blog</h1>
+  <p>
+    All of the articles I've posted here on the blog
+  </p>
+</div>
 
 <ul class="listing">
+{% set year = 0 %}
 {%- for item in collections.blogposts -%}
   <li>
-    <a href="{{ item.url }}">{{ item.data.title }}</a> -
+    {% if year != item.data.date | dateDisplay('year') %}
+    <h2>{{ item.data.date | dateDisplay('year') }}</h2>
+    {% set year = item.data.date | dateDisplay('year') %}
+    {% endif %}
+    <a href="{{ item.url }}">{{ item.data.title }}</a>
+    <div class="tags">
+    {%- for tag in item.data.tags -%}
+    <a class="tag"  href="/tags/{{tag}}">{{tag}}</a>
+    {% endfor -%}
+    </div>
     {# <time datetime="{{ item.date }}">{{ item.date | dateDisplay }}</time> #}
   </li>
 {%- endfor -%}

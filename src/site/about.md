@@ -4,6 +4,7 @@ draft: false
 title: About
 subtitle: About the author, and about this site
 description: A little background on Phil Hawksworth, and on how this website is built.
+layout: layouts/base.njk
 ---
 <img src="/images/philhawksworth-goon@2x.jpg" alt="Phil Hawksworth's face" class="avatar avatar-upclose" />
 

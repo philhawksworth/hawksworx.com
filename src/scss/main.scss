@@ -77,14 +77,19 @@ body {
 
 
 
+
+
 .title-section {
+  padding-top: 2em;
   margin-bottom: 2em;
 
   h1 {
     color: #fff;
     padding-top: 1.4em;
     margin-bottom: 0.5em;
-    font-size: 1.8em;
+    padding-top: 2em;
+    margin-bottom: 1em;
+
     @include bp(wide) {
       padding-top: 2em;
       font-size: 2.6em;
@@ -93,6 +98,7 @@ body {
     &::before {
       transition: all 0.1s ease;
       position: absolute;
+      margin-top: -0.2em;
       content: '';
       background-color: $page-color;
       border-color: mix(#fff, $page-color, 10%);
@@ -108,7 +114,7 @@ body {
       @include bp(wide) {
         background-size: 100px 100px;
         left: -142px;
-        margin-top: -14px;
+        margin-top: -0.8em;
         background-position: 0 0;
         border-width: 8px;
         border-radius: 100px;
@@ -118,10 +124,12 @@ body {
     }
   }
 
-  h1.face::before {
-    background-image: url('/images/philhawksworth-goon.jpg');
+  h1.face {
+    margin-bottom: 0.1em;
+    &::before {
+      background-image: url('/images/philhawksworth-goon.jpg');
+    }
   }
-
   @include bp(wide) {
     margin-bottom: 4em;
     // &:hover {
@@ -138,11 +146,7 @@ body {
 }
 
 
-.home .title-section {
-  h1 {
-    margin-bottom: 0em;
-  }
-}
+
 
 
 .container {
@@ -198,12 +202,17 @@ ul.social {
   margin-bottom: 2em;
 }
 
-ul.tags {
+.tags {
   font-size: 0.8em;
   margin-bottom: 2em;
-  li::before {
-    content: '#';
-    margin-right: 0.2em;
+  opacity: 0.6;
+
+  .tag {
+    margin-right:0.4em;
+    &::before {
+      content: '#';
+      margin-right: 0.2em;
+    }
   }
 }
 
@@ -310,8 +319,41 @@ ul.listing {
       }
     }
   }
+
 }
 
+.blog .listing {
+
+  padding-top: 0em;
+
+
+  h2 {
+    margin-top: 2em;
+    margin-bottom: 1.2em;
+    &::before {
+      position: absolute;
+      content: '';
+      transition: all 0.1s ease;
+      background-color: $page-color;
+      border-style: solid;
+      border-color: mix(#fff, $page-color, 10%);
+      border-width: 4px;
+      border-radius: 30px;
+      left: -56px;
+      width: 30px;
+      height:30px;
+
+      @include bp(wide) {
+        margin-top: -12px;
+        border-width: 8px;
+        border-radius: 40px;
+        left: -112px;
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}
 
 
 
@@ -345,10 +387,13 @@ a {
 header {
   background-color: darken($page-color, 5);
   color: mix($text-color, $page-color, 50%);
-
   .nav {
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    a:link,
+    a:visited {
+      border-bottom-style: none;
+    }
   }
 }
 

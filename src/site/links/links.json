@@ -1,3 +1,3 @@
 {
-  "layout" : "layouts/post.njk"
+  "layout" : "layouts/base.njk"
 }
