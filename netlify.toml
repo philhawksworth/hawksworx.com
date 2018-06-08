@@ -97,4 +97,10 @@
   status = 302
 
 
+ [[redirects]]
+  from = "/talks/hk"
+  to = "https://noti.st/philhawksworth/XbZbu1/promoting-performance-from-the-ground-up"
+  status = 302
+
+
 
