@@ -21,6 +21,7 @@ description: Phil Hawksworth's home on the Web. Blog posts, conference talks, li
 
 
   {# next speaking event #}
+  {% if events.future.length %}
   {% set event = events.future[0] %}
   <li class="item item-talk">
     <h2><a href="/speaking#upcoming">Next event</a></h2>
@@ -30,8 +31,8 @@ description: Phil Hawksworth's home on the Web. Blog posts, conference talks, li
     {% else  %}
     <p>{{ event.title }}, {{ event.address }}</p>
     {% endif %}
-
   </li>
+  {% endif %}
 
   {# 5 most recent blog posts #}
   {%- for i in range(0, 3) -%}

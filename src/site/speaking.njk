@@ -9,15 +9,20 @@ layout: layouts/base.njk
 
 <div class="title-section">
   <h1>Conferencess &amp; events</h1>
-  <p>
-    I'm lucky enough to have been able to travel to speak at many conferences and events around the world. Usually talking about the hows and whys of web development.
-  </p>
-  <img src="https://2018.coldfront.co/static/images/host-phill-h.jpg" alt="Phil Hawksworth speaking at Coldfront, 2017" />
-  <p>
-    If you'd like me to speak at an event then <a href="/ask-me/to-speak">please do get in touch</a>
-  </p>
+  <div class="cols">
+    <img class="speaking-shot" src="/images/phil-speaking-coldfront-17.jpg" alt="Phil Hawksworth speaking at Coldfront, 2017" />
+    <div>
+      <p>
+        I'm lucky enough to have been able to travel to speak at many conferences and events around the world. Usually talking about the hows and whys of web development.
+      </p>
+      <p>
+        If you'd like me to speak at an event, please <a href="/ask-me/to-speak" class="cta">let me know</a> the details.
+      </p>
+    </div>
+  </div>
 </div>
 
+{% if events.future.length %}
 <h2 id="upcoming">Coming up</h2>
 <ul class="listing">
 {%- for event in events.future | reverse -%}
@@ -25,6 +30,7 @@ layout: layouts/base.njk
   {% include "event.njk" %}
 {%- endfor -%}
 </ul>
+{% endif %}
 
 <h2 id="previously">Previously</h2>
 <ul class="listing">
