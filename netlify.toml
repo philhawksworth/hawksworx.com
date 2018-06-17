@@ -2,6 +2,10 @@
   Functions = "functions"
   command = "yarn run build"
 
+[build.environment]
+  NODE_VERSION = "8.9.0"
+
+
 # do a lighter build on the branches
 [context.branch-deploy]
   command = "yarn run build:branch"
