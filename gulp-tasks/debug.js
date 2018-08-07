@@ -3,6 +3,6 @@ var gulp    = require('gulp');
 
 // Get the latest few tweets to include in some pages
 gulp.task('debug', function() {
-    console.log("ENV");
-    console.log(process.env);
+    console.log("commit");
+    console.log(process.env.COMMIT_REF);
 });
