@@ -15,6 +15,7 @@ require('require-dir')('./gulp-tasks');
 */
 gulp.task('build', function(callback) {
   runSequence(
+    ['debug'],
     ['get:data'],
     ['generate', 'images', 'styles', 'scripts'],
     // ['cards'],
