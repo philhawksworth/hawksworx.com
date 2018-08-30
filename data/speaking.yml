@@ -1,7 +1,13 @@
 events:
 
+  - name: JAMstack Conf (MC)
+    location: "San Francisco, USA"
+    date: 2018-10-29T09:00:00Z
+    url: https://jamstackconf.com/
+    countrycode: us
+
   - name: VueJS London (MC)
-    location: "London, UL"
+    location: "London, UK"
     date: 2018-09-21T09:00:00Z
     url: https://vuejs.london/
     countrycode: gb-eng
