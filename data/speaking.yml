@@ -1,7 +1,7 @@
 events:
 
   - name: VueJS London (MC)
-    location: "Lodon, UL"
+    location: "London, UL"
     date: 2018-09-21T09:00:00Z
     url: https://vuejs.london/
     countrycode: gb-eng
