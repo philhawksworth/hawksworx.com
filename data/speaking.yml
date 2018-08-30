@@ -1,5 +1,11 @@
 events:
 
+  - name: VueJS London (MC)
+    location: "London, UL"
+    date: 2018-09-21T09:00:00Z
+    url: https://vuejs.london/
+    countrycode: gb-eng
+    
   - name: Coldfront (MC)
     location: "Copenhagen, Denmark"
     date: 2018-11-13T09:00:00Z
