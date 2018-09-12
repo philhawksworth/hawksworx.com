@@ -1,18 +1,25 @@
-module.exports = function(config) {
+
+module.exports = function(eleventyConfig) {
+
+  // Components
+  const PostTitle = require('src/site/_includes/components/PostTitle.js');
+
+  // Shortcodes
+  eleventyConfig.addShortcode('PostTitle', PostTitle);
 
   // Add filters to Nunjucks
-  config.addFilter("dateDisplay", require("./filters/dates.js") );
-  config.addFilter("timestamp", require("./filters/timestamp.js") );
-  config.addFilter("section", require("./filters/section.js") );
-  config.addFilter("squash", require("./filters/squash.js") );
+  // config.addFilter("dateDisplay", require("./filters/dates.js") );
+  // config.addFilter("timestamp", require("./filters/timestamp.js") );
+  // config.addFilter("section", require("./filters/section.js") );
+  // config.addFilter("squash", require("./filters/squash.js") );
 
-  // Group posts and links into collections without leaning on tags
-  config.addCollection("links", function(collection) {
-    return collection.getFilteredByGlob("src/site/links/*.md").reverse();
-  });
-  config.addCollection("blogposts", function(collection) {
-    return collection.getFilteredByGlob("src/site/blog/*.md").reverse();
-  });
+  // // Group posts and links into collections without leaning on tags
+  // config.addCollection("links", function(collection) {
+  //   return collection.getFilteredByGlob("src/site/links/*.md").reverse();
+  // });
+  // config.addCollection("blogposts", function(collection) {
+  //   return collection.getFilteredByGlob("src/site/blog/*.md").reverse();
+  // });
 
   return {
     dir: {

@@ -2,33 +2,17 @@
   "name": "hawksworx.com",
   "version": "1.3.2",
   "description": "Phil Hawksworth's personal website - hawksworx.com",
-  "main": "index.js",
   "scripts": {
-    "start": "gulp build:local && gulp serve & gulp watch",
-    "build": "gulp build",
-    "refresh": "gulp get:data",
-    "events": "gulp get:events",
-    "build:local": "gulp build:local"
+    "start": "gulp watch && eleventy --watch",
+    "build": "gulp build && eleventy"
   },
   "keywords": [],
   "author": "Phil Hawksworth",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "0.4.0",
+    "@11ty/eleventy": "0.5.3",
     "axios": "^0.18.0",
-    "dotenv": "^4.0.0",
-    "gravatar": "^1.6.0",
-    "gulp": "^3.9.1",
-    "gulp-clean": "^0.4.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-sass": "^3.1.0",
-    "gulp-serve": "^1.4.0",
-    "gulp-shell": "^0.6.5",
-    "gulp-uglify": "^3.0.0",
-    "pageres": "^4.5.1",
-    "pump": "^3.0.0",
-    "require-dir": "^1.0.0",
-    "run-sequence": "^2.2.1",
-    "twitter": "^1.7.1"
+    "xml2js": "^0.4.19",
+    "gulp": "^4.0.0"
   }
 }
