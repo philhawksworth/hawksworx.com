@@ -12,7 +12,8 @@
   "dependencies": {
     "@11ty/eleventy": "0.5.3",
     "axios": "^0.18.0",
-    "xml2js": "^0.4.19",
-    "gulp": "^4.0.0"
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.1",
+    "xml2js": "^0.4.19"
   }
 }

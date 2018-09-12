@@ -4,3 +4,14 @@ layouts: layouts/base.njk
 ---
 
 A reference of styles and components in this site. Useful for development. Perhaps interesting for reference.
+
+## Post title
+
+{% PostTitle {
+  text: 'Post Title text'
+} %}
+
+{% PostTitle {
+  text: 'Post Title text with link',
+  href: '#'
+} %}
