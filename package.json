@@ -3,8 +3,8 @@
   "version": "1.3.2",
   "description": "Phil Hawksworth's personal website - hawksworx.com",
   "scripts": {
-    "start": "gulp watch && eleventy --watch",
-    "build": "gulp build && eleventy"
+    "start": "gulp watch & eleventy --serve",
+    "build": "gulp build & eleventy"
   },
   "keywords": [],
   "author": "Phil Hawksworth",

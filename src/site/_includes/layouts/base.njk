@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/main.css" />
+    <style>{% include "css/main.css" %}</style>
     <title>{{ title }}</title>
   </head>
   <body class="{{ pageClass }}" >
@@ -12,19 +12,9 @@
       {% include "navigation.njk" %}
       </div>
     </header>
-    {# <div class="search-panel">
-      <div class="container">
-        <input type="search" />
-      </div>
-    </div> #}
     <div class="container">
       {{ content | safe }}
     </div>
-    {# <div class="search-panel">
-      <div class="container">
-        <input type="search" />
-      </div>
-    </div> #}
     <footer>
       {% include "footer.njk" %}
     </footer>

@@ -1,6 +1,6 @@
 
 const gulp      = require("gulp");
-const gulp      = require("gulp");
+const sass      = require("gulp-sass");
 // const postcss   = require("gulp-postcss");
 // const precss    = require('precss');
 // const cssnano   = require('cssnano');
@@ -25,12 +25,12 @@ const gulp      = require("gulp");
 // });
 
 gulp.task('css', function() {
-  return gulp.src('src/site/_scss/main.scss')
+  return gulp.src('./src/site/_scss/main.scss')
     .pipe(sass({
       outputStyle: 'compressed'
     })
     .on('error', sass.logError))
-    .pipe(gulp.dest('src/site/css'));
+    .pipe(gulp.dest('./src/site/_includes/css'));
 });
 
 
@@ -39,7 +39,7 @@ gulp.task('css', function() {
   Watch folders for changess
 */
 gulp.task("watch", function() {
-  gulp.watch('src/site/_css/**/*.css', gulp.parallel('css'));
+  gulp.watch('./src/site/_scss/**/*.scss', gulp.parallel('css'));
 });
 
 
@@ -55,4 +55,4 @@ gulp.task('build', gulp.series(
 /*
   default tasks
 */
-gulp.task('default', ['build']);
+// gulp.task('default', ['build']);
