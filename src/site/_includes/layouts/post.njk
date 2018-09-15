@@ -1,10 +1,10 @@
 ---
 layout: layouts/base.njk
-pageClass: posts
+pageClass: post
 templateEngineOverride: njk, md
 ---
 
-<div class="title-section">
+{# <div class="title-section">
   <h1>{{ title }}</h1>
   <div class="date">
     Published by <a href="/about">Phil Hawksworth</a> on <time datetime="{{ date }}">{{ date | dateDisplay }}</time>
@@ -14,8 +14,14 @@ templateEngineOverride: njk, md
     <li><a href="/tags/{{tag}}">{{tag}}</a></li>
   {% endfor -%}
   </ul>
-</div>
-
+</div> #}
+{% PostTitle {
+  title: 'SOME TITLES ARE LONGER THAN OTHERS AND HAVE EXCEEDINGLY LONG WORDS AT TIMES',
+  date: '12th September 2018',
+  href: '#',
+  tags: 'array soon',
+  theme: 'red'
+} %}
 
 <main>
   {{ content | safe }}

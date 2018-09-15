@@ -3,9 +3,11 @@ module.exports = function(eleventyConfig) {
 
   // Components
   const PostTitle = require('./src/site/_includes/components/PostTitle.js');
+  // const PostTitle = require('./src/site/_includes/components/PostTeaser.js');
 
   // Shortcodes
   eleventyConfig.addShortcode('PostTitle', PostTitle);
+  // eleventyConfig.addShortcode('PostTeaser', PostTeaser);
 
   // Add filters to Nunjucks
   // config.addFilter("dateDisplay", require("./filters/dates.js") );
@@ -23,8 +25,8 @@ module.exports = function(eleventyConfig) {
 
   return {
     dir: {
-      input: "./src/site",
-      output: "./dist",
+      input: "src/site",
+      output: "dist",
       data: "_data"
     },
     templateFormats : ["njk", "md"],

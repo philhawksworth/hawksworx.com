@@ -12,7 +12,7 @@
 
 [context.to-11ty]
   # environment = { NODE_ENV = "8.9.0" }
-  command = "yarn run build"
+  command = "npm run build"
 
 [[headers]]
 
