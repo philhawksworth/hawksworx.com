@@ -11,9 +11,9 @@ module.exports = function(eleventyConfig) {
 
   // Add filters to Nunjucks
   eleventyConfig.addFilter("dateDisplay", require("./src/site/_filters/dates.js") );
+  eleventyConfig.addFilter("section", require("./src/site/_filters/section.js") );
 
   // config.addFilter("timestamp", require("./filters/timestamp.js") );
-  // config.addFilter("section", require("./filters/section.js") );
   // config.addFilter("squash", require("./filters/squash.js") );
 
   // // Group posts and links into collections without leaning on tags

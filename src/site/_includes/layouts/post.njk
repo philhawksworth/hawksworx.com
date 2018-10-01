@@ -4,11 +4,11 @@ pageClass: post
 templateEngineOverride: njk, md
 ---
 
-{% block sidebar %}
-  <h1>post title things</h1>
-{% endblock %}
 
 {% block content %}
-  {{ content | safe }}
+<div class="excerpt">
+  {{ content | section | safe }}
+</div>
+{{ content | section('remainder') | safe }}
 {% endblock %}
 
