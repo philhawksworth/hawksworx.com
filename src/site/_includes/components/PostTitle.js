@@ -5,7 +5,7 @@ module.exports = ({ title, date, href, tags, theme='red' }) => (`
         <li>${tags}</li>
       </ul>
       <div class="card">
-        <h3>${title}</h3>
+        <h3><a href="${href}">${title}</a></h3>
       </div>
       <p class="date">${date}</p>
     </div>

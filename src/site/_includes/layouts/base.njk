@@ -7,15 +7,30 @@
     <title>{{ title }}</title>
   </head>
   <body class="{{ pageClass }}" >
-    <header>
+    {% block sidebar %}
+    <div class="sidebar">
+      <header>
+        <div class="sidebar-container">
+          {% include "navigation.njk" %}
+          {# page title and meta data #}
+          <div class="page-details">
+            <p class="date">{{ date | dateDisplay }}</p>
+            <h1>{{ title }}</h1>
+            {% for tag in tags %}
+              <li><a href="/tags/{{ tag }}"># {{ tag }}</a></li>
+            {% endfor %}
+          </div>
+        </div>
+      </header>
+    </div>
+    {% endblock %}
+    <div class="main">
       <div class="container">
-      {% include "navigation.njk" %}
+      {% block content %}
+      {{ content | safe }}
+      {% endblock %}
       </div>
-    </header>
-    {{ content | safe }}
-    <footer>
-      {% include "footer.njk" %}
-    </footer>
+    </div>
   </body>
 </html>
 

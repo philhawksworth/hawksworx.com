@@ -3,18 +3,15 @@ title: Blog
 layout: layouts/page.njk
 ---
 
-## A starting point
+## Blog
 
-The files can in include _markdown_.
+{%- for post in collections.posts -%}
+{% PostTitle {
+  title: post.data.title,
+  date: post.data.date,
+  href: post.url,
+  tags: 'array soon',
+  theme: 'red'
+} %}
 
-{%- for page in collections.post -%}
-  {% PostTitle {
-    title: page.title,
-    date: '12th September 2018',
-    href: '#',
-    tags: 'array soon',
-    theme: 'red'
-  } %}
 {%- endfor -%}
-
-

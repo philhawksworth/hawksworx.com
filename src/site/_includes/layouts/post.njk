@@ -4,25 +4,11 @@ pageClass: post
 templateEngineOverride: njk, md
 ---
 
-{# <div class="title-section">
-  <h1>{{ title }}</h1>
-  <div class="date">
-    Published by <a href="/about">Phil Hawksworth</a> on <time datetime="{{ date }}">{{ date | dateDisplay }}</time>
-  </div>
-  <ul class="meta tags">
-  {%- for tag in page.data.tags -%}
-    <li><a href="/tags/{{tag}}">{{tag}}</a></li>
-  {% endfor -%}
-  </ul>
-</div> #}
-{% PostTitle {
-  title: 'SOME TITLES ARE LONGER THAN OTHERS AND HAVE EXCEEDINGLY LONG WORDS AT TIMES',
-  date: '12th September 2018',
-  href: '#',
-  tags: 'array soon',
-  theme: 'red'
-} %}
+{% block sidebar %}
+  <h1>post title things</h1>
+{% endblock %}
 
-<main>
+{% block content %}
   {{ content | safe }}
-</main>
+{% endblock %}
+
