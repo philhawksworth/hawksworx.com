@@ -88,7 +88,6 @@ body {
   }
 }
 
-
 a {
   text-decoration: none;
   border-bottom-style: solid;
@@ -160,11 +159,9 @@ blockquote {
   border-left-width: 0.8em;
 }
 
-
-
 .blog-list-item {
   padding-bottom: 4em;
-  h2 {
+  h2,h3 {
     margin-top:0;
     margin-bottom:0;
     padding-top:0;
@@ -274,7 +271,8 @@ blockquote {
     border-style: none;
   }
 }
-.blog-list-item h2 a {
+.blog-list-item h2 a ,
+.blog-list-item h3 a {
     color: #444;
 }
 .sidebar {
@@ -304,14 +302,7 @@ blockquote {
 .painted-ruby { @include theme(#A03029) }
 .painted-red { @include theme(#c22943) }
 .painted-blue { @include theme(#468BDB) }
-.painted-purple { @include theme(#5b159c) }
 .painted-lime { @include theme(#7B892D) }
 .painted-seagreen { @include theme(#578671) }
 .painted-greyblue { @include theme(#323D3E) }
 .painted-sepia { @include theme(#7E7570) }
-
-
-
-
-
-
