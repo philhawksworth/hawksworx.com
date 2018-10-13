@@ -1,13 +1,14 @@
 ---
 layout: layouts/base.njk
-pageClass: post
 templateEngineOverride: njk, md
 ---
 
 {% block content %}
-<div class="excerpt">
-  {{ content | section | safe }}
+  <div class="post">
+  <div class="excerpt">
+    {{ content | section | safe }}
+  </div>
+  {{ content | section('remainder') | safe }}
 </div>
-{{ content | section('remainder') | safe }}
 {% endblock %}
 

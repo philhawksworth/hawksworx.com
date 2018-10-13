@@ -21,12 +21,12 @@ module.exports = function(eleventyConfig) {
   //   return collection.getFilteredByGlob("src/site/links/*.md").reverse();
   // });
   eleventyConfig.addCollection("posts", function(collection) {
-    return collection.getFilteredByGlob("src/site/posts/*.md").reverse();
+    return collection.getFilteredByGlob("src/site/blog/*.md").reverse();
   });
 
   // static passthroughs
   eleventyConfig.addPassthroughCopy("src/site/_static");
-
+  eleventyConfig.addPassthroughCopy("src/site/images");
 
 
   return {

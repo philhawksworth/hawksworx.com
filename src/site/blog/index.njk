@@ -1,19 +1,23 @@
 ---
-title: Phil Hawksworth's blog
-subtitle: blog posts and announcements
-description: Blog posts and announcements from Phil Hawksworth
-layout: layouts/base.njk
-pageClass: blog
+title: Blog
+layout: layouts/page.njk
 ---
 
-<div class="title-section">
-  <h1>Blog</h1>
-  <p>
-    All of the articles I've posted here on the blog
-  </p>
-</div>
 
-<ul class="listing">
+## Blog
+
+{%- for post in collections.posts -%}
+{% PostTitle {
+  title: post.data.title,
+  date: post.data.date,
+  href: post.url,
+  tags: 'array soon',
+  theme: 'red'
+} %}
+
+{%- endfor -%}
+
+{# <ul class="listing">
 {% set year = 0 %}
 {%- for item in collections.blogposts -%}
   <li>
@@ -28,6 +32,6 @@ pageClass: blog
     {% endfor -%}
     </div>
     {# <time datetime="{{ item.date }}">{{ item.date | dateDisplay }}</time> #}
-  </li>
+  {# </li>
 {%- endfor -%}
-</ul>
+</ul> #}

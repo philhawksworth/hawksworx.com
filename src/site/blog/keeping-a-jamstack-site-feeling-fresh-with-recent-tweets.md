@@ -7,6 +7,7 @@ draft: false
 allowcomments: true
 tags: ["web", "development", "static", "jamstack"]
 description: Rather than using Javascript in the browser to show recent tweets, I'd rather remove that dependency and bake the tweets into the HTML. A few simple tools can automate that and keep a site fresh.
+pageClass: "painted painted-lime"
 ---
 
 Having somewhere on your site to show a few of your recent tweets is a common requirement. Twitter provides some easy ways to embed tweets or twitter feeds onto your site via Javascript, but I'm keen to remove external javascript dependencies from my site. It helps the site to render more quickly, and lets me control exactly how it looks.

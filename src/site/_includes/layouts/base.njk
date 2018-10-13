@@ -15,7 +15,7 @@
           {% include "navigation.njk" %}
           {# page title and meta data #}
           <div class="page-details">
-            <p class="date">{{ date | dateDisplay }}</p>
+            <p class="date">{{ date | dateDisplay }} by <a href="/about">Phil Hawksworth</a></p>
             <h1>{{ title }}</h1>
             <ul class="tags">
             {% for tag in tags %}
