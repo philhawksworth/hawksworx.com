@@ -11,3 +11,10 @@
   }
 
 }
+
+
+@mixin theme($colour) {
+  .sidebar { background-color: $colour;}
+  a.home {color: $colour; }
+  blockquote { border-left-color: mix($colour, #fff, 10%);}
+}
