@@ -13,8 +13,26 @@
 }
 
 
+// Apply some colours based on one root colour
 @mixin theme($colour) {
-  .sidebar { background-color: $colour;}
-  a.home {color: $colour; }
-  blockquote { border-left-color: mix($colour, #fff, 10%);}
+
+  background-color: mix($colour, #fff, 20%);
+  .sidebar {
+    color: mix($colour, #fff, 30%);
+    background-color: $colour;
+  }
+  a.home {
+    color: $colour;
+  }
+  blockquote {
+    border-left-color: mix($colour, #fff, 10%);
+  }
+  .solid-footer {
+    background-color: $colour;
+    color: mix($colour, #fff, 40%);
+    @include bp(wide) {
+      background-color: rgba(0,0,0,0.05);
+    }
+  }
+
 }

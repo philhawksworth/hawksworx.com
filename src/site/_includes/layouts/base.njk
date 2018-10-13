@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="{{ pageClass }}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
     <style>{% include "css/main.css" %}</style>
     <title>{{ title }}</title>
   </head>
-  <body class="{{ pageClass }}" >
+  <body >
     {% block sidebar %}
     <div class="sidebar">
       <header>
@@ -33,6 +33,19 @@
       {{ content | safe }}
       {% endblock %}
       </div>
+      <footer>
+        {# tese the previous post here? #}
+        <div class="solid-footer">
+          <div class="container">
+            <p>
+              The source code of this site is available to view and fork on Github and served on the JAMstack by Netlify.
+            </p>
+            <p>
+  Other than where specified, the content on this site is published under a Creative Commons Attribution 3.0 licence.
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

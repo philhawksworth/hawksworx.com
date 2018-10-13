@@ -5,6 +5,7 @@ publishdate: 2016-08-01T08:23:35Z
 draft: false
 tags: ["web", "development", "static", "jamstack"]
 description: A simplified yet powerful model for delivering ready-to-consume web pages which enhance to a dynamic client-side rendering approach
+pageClass: painted-ruby
 ---
 I have been experimenting with something that seemed obvious to me for a while. A web development model which gives a pre-rendered, ready-to-consume, straight-into-the-eyeballs web page at every URL of a site. One which, once loaded then behaves like a client-side, single page app.
 
