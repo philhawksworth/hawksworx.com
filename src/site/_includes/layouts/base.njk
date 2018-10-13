@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="/_static/fonts/placardmtstd-cond-webfont.woff2" as="font" type="font/woff2" crossorigin>
     <style>{% include "css/main.css" %}</style>
     <title>{{ title }}</title>
   </head>
@@ -16,9 +17,11 @@
           <div class="page-details">
             <p class="date">{{ date | dateDisplay }}</p>
             <h1>{{ title }}</h1>
+            <ul class="tags">
             {% for tag in tags %}
-              <li><a href="/tags/{{ tag }}"># {{ tag }}</a></li>
+              <li><a href="/tags/{{ tag }}" class="tag"># {{ tag }}</a></li>
             {% endfor %}
+            </ul>
           </div>
         </div>
       </header>

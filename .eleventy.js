@@ -24,6 +24,11 @@ module.exports = function(eleventyConfig) {
     return collection.getFilteredByGlob("src/site/posts/*.md").reverse();
   });
 
+  // static passthroughs
+  eleventyConfig.addPassthroughCopy("src/site/_static");
+
+
+
   return {
     dir: {
       input: "src/site",
@@ -32,7 +37,8 @@ module.exports = function(eleventyConfig) {
     },
     templateFormats : ["njk", "md"],
     htmlTemplateEngine : "njk",
-    markdownTemplateEngine : "njk"
+    markdownTemplateEngine : "njk",
+    passthroughFileCopy: true
   };
 
 };
