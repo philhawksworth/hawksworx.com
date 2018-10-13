@@ -1,14 +1,21 @@
----
-layout: layouts/base.njk
-templateEngineOverride: njk, md
----
+{% extends 'layouts/base.njk' %}
+
+
+{% block sidebar %}
+  <p class="by-line">{{ date | dateDisplay }} by <a href="/about">Phil Hawksworth</a></p>
+  <h1>{{ title }}</h1>
+  <ul class="tags">
+  {% for tag in tags -%}
+    <li><a href="/tags/{{ tag }}" class="tag"># {{ tag }}</a></li>
+  {% endfor -%}
+  </ul>
+{% endblock %}
+
 
 {% block content %}
-  <div class="post">
   <div class="excerpt">
     {{ content | section | safe }}
   </div>
   {{ content | section('remainder') | safe }}
-</div>
 {% endblock %}
 

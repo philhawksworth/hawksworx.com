@@ -14,6 +14,9 @@ Today I saw a question on twitter which I have seen a few times before. It was p
 
 > What do you think the best use cases are for a static site generator? <cite>— <a href="https://twitter.com/drewm/status/983634762433810432">Drew McLellan</a></cite>
 
+![A sledgehammer and a nut](/images/sledgehammer-nut.jpg "A sledgehammer and a nut")
+
+<!--more-->
 
 There were some interesting responses, but this cheeky and playful response from the irrepressible Bruce Lawson jumped out at me:
 
@@ -25,9 +28,6 @@ Bruce has a knack of cutting to the chase, and this made me smile. But it nudged
 
 > Ok, so when/why would you make a static site? <cite>— <a href="https://twitter.com/drewm/status/983635104286281729">Drew McLellan</a></cite>
 
-<!--more-->
-
-![A sledgehammer and a nut](/images/sledgehammer-nut.jpg "A sledgehammer and a nut")
 
 ## A static site
 

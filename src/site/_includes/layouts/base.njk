@@ -8,40 +8,32 @@
     <title>{{ title }}</title>
   </head>
   <body >
-    {% block sidebar %}
     <div class="sidebar">
       <header>
         <div class="sidebar-container">
           {% include "navigation.njk" %}
-          {# page title and meta data #}
           <div class="page-details">
-            <p class="date">{{ date | dateDisplay }} by <a href="/about">Phil Hawksworth</a></p>
-            <h1>{{ title }}</h1>
-            <ul class="tags">
-            {% for tag in tags %}
-              <li><a href="/tags/{{ tag }}" class="tag"># {{ tag }}</a></li>
-            {% endfor %}
-            </ul>
+          {% block sidebar %}
+          {% endblock %}
           </div>
         </div>
       </header>
     </div>
-    {% endblock %}
     <div class="main">
       <div class="container">
-      {% block main %}
-      {{ content | safe }}
-      {% endblock %}
+        {% block content %}
+        {{ content | safe }}
+        {% endblock %}
       </div>
       <footer>
         {# tese the previous post here? #}
         <div class="solid-footer">
           <div class="container">
             <p>
-              The source code of this site is available to view and fork on Github and served on the JAMstack by Netlify.
+              The <a href="{{ pkg.repository.url }}" target="new" rel="noopener">source code</a> of this site is available on Github and served on the JAMstack by <a href="https://www.netlify.com" target="new" rel="noopener">Netlify</a>.
             </p>
             <p>
-  Other than where specified, the content on this site is published under a Creative Commons Attribution 3.0 licence.
+              Other than where specified, the content on this site is published under a <a href="http://creativecommons.org/licenses/by/3.0/" target="new" rel="noopener">Creative Commons Attribution 3.0</a> licence.
             </p>
           </div>
         </div>

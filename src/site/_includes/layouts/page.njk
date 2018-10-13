@@ -1,8 +1,9 @@
----
-layout: layouts/base.njk
-templateEngineOverride: njk, md
----
-<div class="container">
+{% extends 'layouts/base.njk' %}
+
+{% block sidebar %}
   <h1>{{ title }}</h1>
-  {{ content | safe }}
-</div>
+{% endblock %}
+
+{% block content %}
+    {{ content | safe }}
+{% endblock %}

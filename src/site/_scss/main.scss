@@ -74,7 +74,6 @@ body {
 }
 
 
-
 .page-details {
   margin-top: 5em;
   padding-bottom: 2em;
@@ -101,6 +100,7 @@ ul.tags {
   margin-top:0;
   margin-left:0;
   padding-left:0;
+  font-size: 0.9em;
 
   li {
     line-height: 1.5;
@@ -117,11 +117,12 @@ a.tag {
 h1, h2, h3, h4 {
   font-family: arial, sans-serif;
   padding-top:1em;
-  line-height: 1;
+  line-height: 1.1;
 }
 h1 {
   font-family: Placard, arial, sans-serif;
   font-size: 3.8em;
+  line-height: 1;
   text-transform: uppercase;
   font-weight: normal;
   margin-top:0;
@@ -133,16 +134,17 @@ h2 { font-size: 1.6em; }
 h3 { font-size: 1.4em; }
 h4 { font-size: 1.1em; }
 
-.post {
-
+.main {
   img {
     width: 100%;
     padding-top:1em;
     padding-bottom:1em;
   }
-
 }
 
+.by-line {
+  font-size: 0.8em;
+}
 
 .excerpt {
   font-style: italic;
@@ -156,6 +158,29 @@ blockquote {
   padding-bottom: 0.01em;
   border-left-style: solid;
   border-left-width: 0.8em;
+}
+
+
+
+.blog-list-item {
+  padding-bottom: 4em;
+  h2 {
+    margin-top:0;
+    margin-bottom:0;
+    padding-top:0;
+    padding-bottom:0;
+  }
+  .by-line {
+    margin-bottom: 0;
+  }
+  .grab {
+    margin-top: 1em;
+    margin-bottom: 0;
+  }
+  img {
+    margin:0;
+    padding:0;
+  }
 }
 
 
@@ -199,8 +224,6 @@ footer {
   .solid-footer{
     font-size: 0.7em;
     line-height: 1.5;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
   }
 
   @include bp(wide) {
@@ -219,13 +242,11 @@ footer {
 }
 
 
-
-
 /*
  colours
 */
 html {
-  background-color: mix(#3c3c3c, #fff, 20%);
+  background-color: mix(#333, #fff, 20%);
 }
 a {
   border-bottom-color: #9bf;
@@ -240,18 +261,25 @@ a {
   }
 }
 blockquote {
-  border-left-color: mix(#3c3c3c, #fff, 10%);
+  border-left-color: mix(#333, #fff, 10%);
 }
 .solid-footer {
-  background-color: #3c3c3c;
-  color: mix(#3c3c3c, #fff, 40%);
+  background-color: #333;
+  color: mix(#333, #fff, 40%);
   @include bp(wide) {
     background-color: rgba(0,0,0,0.05);
   }
+  a {
+    color: #fff;
+    border-style: none;
+  }
+}
+.blog-list-item h2 a {
+    color: #444;
 }
 .sidebar {
-  background-color: #3c3c3c;
-  color: mix(#3c3c3c, #fff, 20%);
+  background-color: #333;
+  color: mix(#333, #fff, 20%);
   h1 {
     color: #fff;
   }
@@ -260,7 +288,7 @@ blockquote {
     border-color: #fff;
   }
   a.home {
-    color: #3c3c3c;
+    color: #333;
     background-color: #fff;
   }
   ul.nav {
@@ -281,6 +309,8 @@ blockquote {
 .painted-seagreen { @include theme(#578671) }
 .painted-greyblue { @include theme(#323D3E) }
 .painted-sepia { @include theme(#7E7570) }
+
+
 
 
 

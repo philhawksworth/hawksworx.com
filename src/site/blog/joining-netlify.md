@@ -17,9 +17,9 @@ I'm very happy to announce that I am joining the Developer Relations team at Net
 
 I should probably explain why.
 
-<!--more-->
-
 ![Netlify](/images/netlify-banner.png "Netlify")
+
+<!--more-->
 
 ## Who are Netlify?
 

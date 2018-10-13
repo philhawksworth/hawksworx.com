@@ -1,17 +1,26 @@
----
-title: Blog
-layout: layouts/page.njk
----
+{% extends 'layouts/page.njk' %}
 
-## Blog
+{% block sidebar %}
+  <h1>The Blog</h1>
+  <p>
+    Various noodlings. Mostly about the web.
+  </p>
+{% endblock %}
 
-{%- for post in collections.posts -%}
-{% PostTitle {
-  title: post.data.title,
-  date: post.data.date,
-  href: post.url,
-  tags: 'array soon',
-  theme: 'red'
-} %}
 
-{%- endfor -%}
+{% block content %}
+  {%- for post in collections.posts  -%}
+  <div class="blog-list-item">
+    <p class="by-line">{{ post.date | dateDisplay }}</p>
+    <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+    {% if loop.index < 5%}
+    <div class="grab">
+    {{ post.templateContent | section | safe }}
+    </div>
+    <a href="{{ post.url }}" class="more-link">read more</a>
+    {% endif %}
+  </div>
+  {%- endfor -%}
+{% endblock %}
+
+

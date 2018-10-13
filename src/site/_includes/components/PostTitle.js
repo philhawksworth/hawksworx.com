@@ -1,13 +1,9 @@
-module.exports = ({ title, date, href, tags, theme='red' }) => (`
+module.exports = ({ title, date, href, tags' }) => (`
   <div class="tout blog-tout">
-    <div class="container">
-      <ul class="tag-list">
-        <li>${tags}</li>
-      </ul>
-      <div class="card">
-        <h3><a href="${href}">${title}</a></h3>
-      </div>
-      <p class="date">${date}</p>
-    </div>
+    <p class="by-line">${date}</p>
+    <h3><a href="${href}">${title}</a></h3>
+    <ul class="tag-list">
+      <li>${tags}</li>
+    </ul>
   </div>
 `);

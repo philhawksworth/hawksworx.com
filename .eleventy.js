@@ -2,11 +2,11 @@
 module.exports = function(eleventyConfig) {
 
   // Components
-  const PostTitle = require('./src/site/_includes/components/PostTitle.js');
+  // const PostTitle = require('./src/site/_includes/components/PostTitle.js');
   // const PostTitle = require('./src/site/_includes/components/PostTeaser.js');
 
   // Shortcodes
-  eleventyConfig.addShortcode('PostTitle', PostTitle);
+  // eleventyConfig.addShortcode('PostTitle', PostTitle);
   // eleventyConfig.addShortcode('PostTeaser', PostTeaser);
 
   // Add filters to Nunjucks
@@ -27,7 +27,6 @@ module.exports = function(eleventyConfig) {
   // static passthroughs
   eleventyConfig.addPassthroughCopy("src/site/_static");
   eleventyConfig.addPassthroughCopy("src/site/images");
-
 
   return {
     dir: {

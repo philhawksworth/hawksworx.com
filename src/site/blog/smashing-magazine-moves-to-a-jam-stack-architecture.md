@@ -6,12 +6,12 @@ draft: false
 allowcomments: true
 tags: ["jamstack", "development", "web"]
 hero: /images/smashing-relaunch.jpg
-pageClass: "painted-red"
+pageClass: "painted-ruby"
 ---
 
 Smashing Magazine, the much beloved and prolific resource for web designers and developers, has [relaunched with a new design and new membership model](https://www.smashingmagazine.com/2017/11/from-cats-with-love-welcome-the-new-smashing-membership/). At the same time, it migrated from a variety of platforms which ran its publishing, comments, e-commerce, user management and more, over to a new [technology platform](https://www.netlify.com/blog/2017/11/21/smashing-magazine-is-now-live-on-netlify/) and sets a new benchmark in what can be achieved with what was once thought of a basic, static architecture. And it is now live, for Smashing's several million monthly visitors, on Netlify. ([Also my new home](/blog/joining-netlify))
 
-
+![Smashing Magazine relaunch](/images/smashing-relaunch.jpg "Smashing Magazine relaunch")
 
 <!--more-->
 

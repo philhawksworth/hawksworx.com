@@ -6,7 +6,10 @@
     "start": "gulp watch & eleventy --serve",
     "build": "gulp build & eleventy"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/philhawksworth/hawksworx.com"
+  },
   "author": "Phil Hawksworth",
   "license": "ISC",
   "dependencies": {
