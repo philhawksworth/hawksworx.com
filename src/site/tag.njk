@@ -22,15 +22,9 @@ permalink: /tags/{{ tag }}/
 {% endblock %}
 
 {% block content %}
-  {# <p>
-    There are {{ taglist.length }} items tagged with '{{ tag }}'.<br />
-    And there a lots of other <a href="/tags">tags</a> to explore.
-  </p>
-  <hr /> #}
   {% for item in taglist | reverse %}
     {%- include "post-teaser-condensed.njk" -%}
   {% endfor %}
-
 {% endblock %}
 
 

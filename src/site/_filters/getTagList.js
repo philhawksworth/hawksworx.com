@@ -27,5 +27,5 @@ module.exports = function(collection) {
   });
 
   // returning an array in addCollection works in Eleventy 0.5.3
-  return [...tagSet];
+  return [...tagSet].sort();
 };
