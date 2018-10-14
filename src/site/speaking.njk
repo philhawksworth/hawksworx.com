@@ -1,4 +1,7 @@
-
+---
+title: Phil Hawksworth's speaking history and schedule
+description: Covereage of Phil Hawksworth's previous conference talks, and listing of where he will be speaking next.
+---
 
 {% extends 'layouts/page.njk' %}
 
@@ -7,30 +10,19 @@
   <p>
     I’m lucky enough to have been able to travel to speak at many conferences and events around the world. Usually talking about the hows and whys of web development.
   </p>
+  {# <img src="/images/speaking-at-coldfront.jpeg" alt=""> #}
 {% endblock %}
 
 
 {% block content %}
+  <h2>Upcoming events</h2>
+  {%- for item in notist.events.future -%}
+    {%- include "event.njk" -%}
+  {%- endfor -%}
 
-
-<h2>Upcoming events</h2>
-{% for item in notist.events.future %}
-  <div class="blog-list-item">
-    <p class="by-line">{{ item.starts_on | dateDisplay }} in {{ item.address }}</p>
-    <h3><img src="/images/flags/{{ item.country }}"><a href="{{ item.url }}" target="NEW" rel="noopener">{{ item.title }}</a></h3>
-  </div>
- {% endfor %}
-
-
-<h2>Previous events</h2>
-{% for item in notist.events.past %}
-  <div class="blog-list-item">
-    <p class="by-line">{{ item.starts_on | dateDisplay }} in {{ item.address }}</p>
-    <h3><a href="{{ item.url }}" target="NEW" rel="noopener">{{ item.title }}</a></h3>
-  </div>
- {% endfor %}
-
-
+  <h2>Previous events</h2>
+  {%- for item in notist.events.past -%}
+    {%- include "event.njk" -%}
+  {%- endfor -%}
 {% endblock %}
-
 

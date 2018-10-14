@@ -4,7 +4,7 @@ var axios  = require('axios');
 // If this is defined in an environment variable in Netlufy, we'll use that
 // Otherwise, we'll just show you Phil's
 var url = 'https://noti.st/philhawksworth.json';
-
+var now = new Date();
 
 // expose these results as data to eleventy.
 module.exports = () => {
@@ -19,7 +19,13 @@ module.exports = () => {
       var events = response.data.data[0].relationships.data;
       var eventURLs = [];
       events.forEach(element => {
-        eventURLs.push(element.links.event);
+        var when = new Date(element.attributes.presented_on);
+        var future = now - when < 0 ? true : false;
+        if(future) {
+          eventURLs.push(element.links.event);
+        } else {
+          eventURLs.push('https://noti.st/philhawksworth/' + element.id.replace('pr_','') + '.json' );
+        }
       })
 
       // now go and get the info for each event
@@ -31,17 +37,38 @@ module.exports = () => {
           future : [],
           past : []
         };
-        var now = new Date();
+
         for (var talk in res) {
-          var thisTalk = res[talk].data.data[0].attributes;
-          var when = new Date(thisTalk.ends_on);
-          var future = now - when < 0 ? true : false;
-          if(future) {
-            talks.future.push(thisTalk);
+
+          // is this an event ot a presentatoin?
+          // (since we onnly ask for events if this is in the future)
+          var type = res[talk].data.data[0].type;
+
+          console.log('type :', type);
+
+          if(type == 'events'){
+            var thisTalk = res[talk].data.data[0].attributes;
+            var when = new Date(thisTalk.ends_on);
+            var future = now - when < 0 ? true : false;
+            if(future) {
+              talks.future.push(thisTalk);
+            } else {
+              talks.past.push(thisTalk);
+            }
           } else {
-            talks.past.push(thisTalk);
+            var thisTalk = res[talk].data.data[0].attributes;
+            var when = new Date(thisTalk.ends_on);
+            var future = now - when < 0 ? true : false;
+            if(future) {
+              talks.future.push(thisTalk);
+            } else {
+              thisTalk = res[talk].data.data[0].relationships.data[0].attributes;
+              talks.past.push(thisTalk);
+            }
           }
         }
+
+
 
         // we've giot all the data now. So resolve the promise to return the data
         resolve({'url': url, 'events': talks  });

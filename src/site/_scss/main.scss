@@ -179,6 +179,10 @@ blockquote {
     padding:0;
   }
 }
+img.flag {
+  width: 1em;
+  margin-right: 0.5em;
+}
 
 
 
@@ -301,7 +305,7 @@ blockquote {
 */
 .painted-ruby { @include theme(#A03029) }
 .painted-red { @include theme(#c22943) }
-.painted-blue { @include theme(#468BDB) }
+.painted-blue { @include theme(#246bbd) }
 .painted-lime { @include theme(#7B892D) }
 .painted-seagreen { @include theme(#578671) }
 .painted-greyblue { @include theme(#323D3E) }

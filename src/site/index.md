@@ -1,5 +1,4 @@
 ---
-title: Hawksworx
 layout: layouts/page.njk
 ---
 

@@ -1,18 +1,10 @@
-  <li class="item-speaking">
-    {%- if item.country_code -%}
-    <div class="flag"><img src="/images/flags/{{ item.country_code }}.svg" /></div>
-    {%- else -%}
-    <div class="flag"></div>
-    {%- endif -%}
-    <time datetime="{{ item.starts_on }}">{{ item.starts_on | dateDisplay }}</time>
-    {%- if item.url -%}
-    <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
-    {%- else  -%}
-    <h3>{{ item.title }}</h3>
-    {%- endif -%}
-    {%- if item.address == 'Earth' -%}
-    <p>Online</p>
-    {%- else  -%}
-    <p>{{ item.address }}</p>
-    {%- endif -%}
-  </li>
+  <div class="blog-list-item">
+    <p class="by-line">
+      {{ item.starts_on | dateDisplay }},
+      {% if item.address == 'Earth' -%} online{%- else  -%} in {{ item.address }}
+    </p>{%- endif %}
+    <h3>
+      <img src="/images/flags/{% if item.country_code %}{{ item.country_code }}{% else %}world{% endif %}.svg" class="flag" />
+      <a href="{{ item.url }}" target="NEW" rel="noopener">{{ item.title }}</a>
+    </h3>
+  </div>
