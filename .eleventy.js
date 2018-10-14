@@ -1,3 +1,4 @@
+const htmlmin = require("html-minifier");
 
 module.exports = function(eleventyConfig) {
 
@@ -12,14 +13,9 @@ module.exports = function(eleventyConfig) {
   // Add filters to Nunjucks
   eleventyConfig.addFilter("dateDisplay", require("./src/site/_filters/dates.js") );
   eleventyConfig.addFilter("section", require("./src/site/_filters/section.js") );
-
-  // config.addFilter("timestamp", require("./filters/timestamp.js") );
   // config.addFilter("squash", require("./filters/squash.js") );
 
-  // // Group posts and links into collections without leaning on tags
-  // config.addCollection("links", function(collection) {
-  //   return collection.getFilteredByGlob("src/site/links/*.md").reverse();
-  // });
+  // Group posts into a collection without leaning on tags
   eleventyConfig.addCollection("posts", function(collection) {
     return collection.getFilteredByGlob("src/site/blog/*.md").reverse();
   });
@@ -27,6 +23,20 @@ module.exports = function(eleventyConfig) {
   // static passthroughs
   eleventyConfig.addPassthroughCopy("src/site/fonts");
   eleventyConfig.addPassthroughCopy("src/site/images");
+
+  // minify the html ouptput
+  eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
+    if( outputPath.endsWith(".html") ) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: false,
+        collapseWhitespace: true
+      });
+      return minified;
+    }
+    return content;
+  });
+
 
   return {
     dir: {

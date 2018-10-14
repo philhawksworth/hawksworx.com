@@ -11,7 +11,7 @@
  */
 module.exports = function(str, section) {
   var content = new String(str);
-  var delimit = "\n<!--more-->\n";
+  var delimit = "<!--more-->";
   var parts = content.split(delimit);
   var which = section == 'remainder' ? 1 : 0;
   if(parts.length) {
