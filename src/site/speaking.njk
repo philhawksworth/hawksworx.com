@@ -1,6 +1,7 @@
 ---
 title: Phil Hawksworth's speaking history and schedule
 description: Covereage of Phil Hawksworth's previous conference talks, and listing of where he will be speaking next.
+pageClass: painted-darkblue
 ---
 
 {% extends 'layouts/page.njk' %}
@@ -10,11 +11,19 @@ description: Covereage of Phil Hawksworth's previous conference talks, and listi
   <p>
     I’m lucky enough to have been able to travel to speak at many conferences and events around the world. Usually talking about the hows and whys of web development.
   </p>
-  {# <img src="/images/speaking-at-coldfront.jpeg" alt=""> #}
 {% endblock %}
 
 
 {% block content %}
+
+  <p>
+    This summary of conference and meetup talks is taken from my <a href="https://noti.st/philhawksworth" target="NEW" rel="noopener">Notist</a> profile where I collect all of my talks including slides, videos and coverage.
+  </p>
+  <p>
+    You can also find my speaker bio and other resources there on my <a href="https://noti.st/philhawksworth/bio" target="NEW" rel="noopener">speaker bio page</a>.
+  </p>
+  <img src="/images/speaking-at-coldfront-cropped.jpg" alt="Phil Hawksworth speaking at ColdFront Conference">
+
   <h2>Upcoming events</h2>
   {%- for item in notist.events.future -%}
     {%- include "event.njk" -%}

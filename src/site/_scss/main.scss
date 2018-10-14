@@ -3,8 +3,8 @@
 
 @font-face {
   font-family: Placard;
-  src: url('/_static/fonts/placardmtstd-cond-webfont.woff2') format('woff2'),
-       url('/_static/fonts/placardmtstd-cond-webfont.woff') format('woff');
+  src: url('/fonts/placardmtstd-cond-webfont.woff2') format('woff2'),
+       url('/fonts/placardmtstd-cond-webfont.woff') format('woff');
   font-display: swap;
 }
 
@@ -116,7 +116,7 @@ a.tag {
 h1, h2, h3, h4 {
   font-family: arial, sans-serif;
   padding-top:1em;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 h1 {
   font-family: Placard, arial, sans-serif;
@@ -130,7 +130,7 @@ h1 {
   padding-bottom:0.4rem;
 }
 h2 { font-size: 1.6em; }
-h3 { font-size: 1.4em; }
+h3 { font-size: 1.2em; }
 h4 { font-size: 1.1em; }
 
 .main {
@@ -181,7 +181,6 @@ blockquote {
 }
 img.flag {
   width: 1em;
-  margin-right: 0.5em;
 }
 
 
@@ -306,7 +305,8 @@ blockquote {
 .painted-ruby { @include theme(#A03029) }
 .painted-red { @include theme(#c22943) }
 .painted-blue { @include theme(#246bbd) }
+.painted-darkblue { @include theme(#3E4E75) }
+.painted-greyblue { @include theme(#323D3E) }
 .painted-lime { @include theme(#7B892D) }
 .painted-seagreen { @include theme(#578671) }
-.painted-greyblue { @include theme(#323D3E) }
 .painted-sepia { @include theme(#7E7570) }
