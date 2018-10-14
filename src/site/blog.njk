@@ -8,7 +8,7 @@ description: Various blog posts about web development, the JAMstack, events and 
 {% block sidebar %}
   <h1>The Blog</h1>
   <p>
-    My various noodlings. Mostly, but not exclusively, about the web.
+    My various noodlings. Mostly, but not exclusively, about technology and the web.
   </p>
   <p>
     I also write blog posts and announcements on the Netlify Blog. You can find <a href="https://www.netlify.com/authors/phil-hawksworth/">my posts</a> and many others there.
@@ -17,17 +17,8 @@ description: Various blog posts about web development, the JAMstack, events and 
 
 
 {% block content %}
-  {%- for post in collections.posts  -%}
-  <div class="blog-list-item">
-    <p class="by-line">{{ post.date | dateDisplay }}</p>
-    <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
-    {% if loop.index < 5%}
-    <div class="grab">
-    {{ post.templateContent | section | safe }}
-    </div>
-    <a href="{{ post.url }}" class="more-link">read more</a>
-    {% endif %}
-  </div>
+  {%- for item in collections.posts  -%}
+  {% include 'post-teaser.njk' %}
   {%- endfor -%}
 {% endblock %}
 

@@ -1,0 +1,24 @@
+
+{% extends 'layouts/page.njk' %}
+
+{% block sidebar %}
+  <h1>Hawksworx</h1>
+  <p>
+    The blog, playground, and a general home on the web for <a href="/about" class="no-wrap">Phil Hawksworth</a>
+  </p>
+{% endblock %}
+
+{% block content %}
+  {% if notist.events.future.length %}
+  {% set item = notist.events.future[0] %}
+  <h2><a href="/speaking#upcoming">Next speaking event</a></h2>
+  {%- include "event.njk" -%}
+  {% endif %}
+  <hr />
+  <h2><a href="/blog">Recently on the blog</a></h2>
+  {%- for i in range(0, 1) -%}
+  {% set item = collections.posts[0] %}
+    {% include 'post-teaser.njk' %}
+  {%- endfor -%}
+{% endblock %}
+

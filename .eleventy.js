@@ -20,6 +20,8 @@ module.exports = function(eleventyConfig) {
     return collection.getFilteredByGlob("src/site/blog/*.md").reverse();
   });
 
+  eleventyConfig.addCollection("tagList", require("./src/site/_filters/getTagList.js"));
+
   // static passthroughs
   eleventyConfig.addPassthroughCopy("src/site/fonts");
   eleventyConfig.addPassthroughCopy("src/site/images");

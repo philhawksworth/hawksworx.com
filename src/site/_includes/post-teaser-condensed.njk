@@ -1,0 +1,10 @@
+  <div class="blog-list-item">
+    <p class="by-line">{{ item.date | dateDisplay }}</p>
+    <h2><a href="{{ item.url }}">{{ item.data.title }}</a></h2>
+    <div class="tags">
+    {% for tag in item.data.tags -%}
+      <a href="/tags/{{ tag }}" class="tag">#{{ tag }}</a>
+      {{ "" if loop.last else "," }}
+    {% endfor -%}
+    </div>
+  </div>

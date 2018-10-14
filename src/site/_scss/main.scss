@@ -105,7 +105,7 @@ ul, ol {
 
 ul.tags {
   list-style: none;
-  margin-top:0;
+  margin-top:0.6em;
   margin-left:0;
   font-size: 0.9em;
 
@@ -171,21 +171,21 @@ h4 { font-size: 1.1em; }
 
 blockquote {
   margin-left: 0;
-  padding-left: 1.5em;
-  padding-top: 0.01em;
-  padding-bottom: 0.01em;
+  padding: 0.01em 1.5em;
   border-left-style: solid;
   border-left-width: 0.8em;
 }
 
+hr {
+  border-style: none;
+  border-bottom: solid 1px #eee;
+  margin: 2em 0;
+}
 
 form {
   border-radius: 2px;
   padding: 1em 2em;
-  margin-left: -2em;
-  margin-right: -2em;
-  margin-top: 2em;
-  margin-bottom: 1em;
+  margin: 2em -2em 1em -2em
 }
 label small {
   opacity: 0.6em;
@@ -216,7 +216,7 @@ button {
 }
 
 .blog-list-item {
-  padding-bottom: 4em;
+  padding-bottom: 1em;
   h2,h3 {
     margin-top:0;
     margin-bottom:0;
@@ -239,6 +239,11 @@ img.flag {
   width: 1em;
 }
 
+.more-link {
+  display:inline-block;
+  margin-bottom: 4rem;
+}
+
 
 
 // Header
@@ -256,10 +261,7 @@ header {
     }
     a {
       display:inline-block;
-      padding-top:4em;
-      padding-bottom:0.2em;
-      padding-left:0.5em;
-      padding-right:0.5em;
+      padding: 4em 0.5em 0.2em 0.5em;
       border-bottom-style: none;
     }
     a.home {

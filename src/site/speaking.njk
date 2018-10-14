@@ -24,12 +24,12 @@ pageClass: painted-darkblue
   </p>
   <img src="/images/speaking-at-coldfront-cropped.jpg" alt="Phil Hawksworth speaking at ColdFront Conference">
 
-  <h2>Upcoming events</h2>
+  <h2 id="upcoming">Upcoming events</h2>
   {%- for item in notist.events.future -%}
     {%- include "event.njk" -%}
   {%- endfor -%}
 
-  <h2>Previous events</h2>
+  <h2 id="previous">Previous events</h2>
   {%- for item in notist.events.past -%}
     {%- include "event.njk" -%}
   {%- endfor -%}
