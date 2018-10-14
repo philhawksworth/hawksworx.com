@@ -6,7 +6,6 @@
     <link rel="preload" href="/fonts/placardmtstd-cond-webfont.woff2" as="font" type="font/woff2" crossorigin>
     <style>{% include "css/main.css" %}</style>
     <title>{%- if title -%}{{ title }}{%- else -%}Hawksworx - Phil Hawksworth{%- endif -%}</title>
-    <meta >
     <meta name="description" content="{%- if description -%}{{ description }}{%- else -%}Phil Hawksworth's home on the web. Read his blog, ask questions, and find coverage of his recent conference talks about web development.{%- endif -%}"/>
   </head>
   <body >
@@ -31,12 +30,7 @@
         {# tese the previous post here? #}
         <div class="solid-footer">
           <div class="container">
-            <p>
-              The <a href="{{ pkg.repository.url }}" target="new" rel="noopener">source code</a> of this site is available on Github and served on the JAMstack by <a href="https://www.netlify.com" target="new" rel="noopener">Netlify</a>.
-            </p>
-            <p>
-              Other than where specified, the content on this site is published under a <a href="http://creativecommons.org/licenses/by/3.0/" target="new" rel="noopener">Creative Commons Attribution 3.0</a> licence.
-            </p>
+          {% include "footer.njk" %}
           </div>
         </div>
       </footer>

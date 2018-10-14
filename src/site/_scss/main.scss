@@ -133,6 +133,17 @@ h2 { font-size: 1.6em; }
 h3 { font-size: 1.2em; }
 h4 { font-size: 1.1em; }
 
+.no-wrap {
+  white-space: nowrap;
+}
+
+.avatar-large {
+  width: 120px;
+  border-radius: 4px;
+  border:solid 2px #fff;
+  box-shadow: #000 0 0 4px;
+}
+
 .main {
   img {
     width: 100%;
@@ -309,4 +320,4 @@ blockquote {
 .painted-greyblue { @include theme(#323D3E) }
 .painted-lime { @include theme(#7B892D) }
 .painted-seagreen { @include theme(#578671) }
-.painted-sepia { @include theme(#7E7570) }
+.painted-sepia { @include theme(#565043) }
