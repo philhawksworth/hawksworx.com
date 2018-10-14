@@ -3,12 +3,11 @@ title: Jsspec Bundle for Textmate Helps With Writing
 date: 2008-04-18T00:00:00Z
 publishdate: 2008-04-18T00:00:00Z
 draft: false
-description: A handy unit testin utility on Textmate
+description: A handy unit testing utility on Textmate
 tags:
 - javascript
 - development
 - tools
-- tiddlywiki
 - osmosoft
 ---
 

@@ -80,7 +80,7 @@ body {
 
 .page-details {
   margin-top: 5em;
-  padding-bottom: 2em;
+  padding-bottom: 5em;
   @include bp(narrow) {
     max-width: 80%;
   }
