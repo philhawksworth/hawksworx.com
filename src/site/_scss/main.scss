@@ -201,14 +201,16 @@ textarea {
 textarea {
   height: 8rem;
 }
+
+.btn,
 button {
   cursor: pointer;
   font-size: 1em;
-  background-color: #333;
+  background-color: #555;
   color:#fff;
   font-family: Georgia, serif;
   border-style: none;
-  padding: 0.4em 1em;
+  padding: 0.5em 1em;
   border-radius: 3px
 }
 .honey {
@@ -239,7 +241,8 @@ img.flag {
   width: 1em;
 }
 
-.more-link {
+a.more-link {
+  background-color: #eee;
   display:inline-block;
   margin-bottom: 4rem;
 }

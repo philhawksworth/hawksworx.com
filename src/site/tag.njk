@@ -13,6 +13,7 @@ permalink: /tags/{{ tag }}/
 {% set taglist = collections[ tag ] %}
 
 {% block sidebar %}
+  <p class="by-line">Blog posts tagged:</p>
   <h1>{{ tag }}</h1>
   <p>
     There are {{ taglist.length }} items tagged <em>#{{ tag }}</em>.<br />

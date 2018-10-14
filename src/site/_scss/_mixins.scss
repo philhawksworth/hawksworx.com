@@ -16,7 +16,7 @@
 // Apply some colours based on one root colour
 @mixin theme($colour) {
 
-  background-color: mix($colour, #fff, 20%);
+  background-color: mix($colour, #fff, 30%);
   .sidebar {
     color: mix($colour, #fff, 30%);
     background-color: $colour;
