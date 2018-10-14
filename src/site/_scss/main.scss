@@ -16,7 +16,7 @@ html, body {
 body {
   text-align: center;
   color: #444;
-  font-family: Georgia;
+  font-family: Georgia, serif;
   font-style: normal;
   font-weight: normal;
   line-height: 26px;
@@ -68,7 +68,7 @@ body {
   padding-top: 3em;
   padding-bottom: 4em;
   @include bp(wide) {
-    margin-left: 3em;
+    margin-left: 4em;
   }
 }
 .sidebar-container {
@@ -176,6 +176,43 @@ blockquote {
   padding-bottom: 0.01em;
   border-left-style: solid;
   border-left-width: 0.8em;
+}
+
+
+form {
+  border-radius: 2px;
+  padding: 1em 2em;
+  margin-left: -2em;
+  margin-right: -2em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+label small {
+  opacity: 0.6em;
+  display: block;
+}
+input,
+textarea {
+  width: 100%;
+  border: solid 1px #bbb;
+  padding: 0.2em 0 0.2em 0.2em;
+  font-size: 1.2rem;
+}
+textarea {
+  height: 8rem;
+}
+button {
+  cursor: pointer;
+  font-size: 1em;
+  background-color: #333;
+  color:#fff;
+  font-family: Georgia, serif;
+  border-style: none;
+  padding: 0.4em 1em;
+  border-radius: 3px
+}
+.honey {
+  display:none;
 }
 
 .blog-list-item {
@@ -296,6 +333,9 @@ blockquote {
 .blog-list-item h2 a ,
 .blog-list-item h3 a {
     color: #444;
+}
+form {
+  background-color: #f9f9f9;
 }
 .sidebar {
   background-color: #333;

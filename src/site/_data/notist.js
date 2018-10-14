@@ -43,9 +43,6 @@ module.exports = () => {
           // is this an event ot a presentatoin?
           // (since we onnly ask for events if this is in the future)
           var type = res[talk].data.data[0].type;
-
-          console.log('type :', type);
-
           if(type == 'events'){
             var thisTalk = res[talk].data.data[0].attributes;
             var when = new Date(thisTalk.ends_on);
@@ -67,8 +64,6 @@ module.exports = () => {
             }
           }
         }
-
-
 
         // we've giot all the data now. So resolve the promise to return the data
         resolve({'url': url, 'events': talks  });
