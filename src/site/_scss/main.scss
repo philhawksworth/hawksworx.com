@@ -98,11 +98,15 @@ a {
   border-bottom-width: 1px;
 }
 
+ul, ol {
+  padding-left:0;
+  list-style-position: inside;
+}
+
 ul.tags {
   list-style: none;
   margin-top:0;
   margin-left:0;
-  padding-left:0;
   font-size: 0.9em;
 
   li {
