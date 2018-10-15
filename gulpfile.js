@@ -1,13 +1,16 @@
 
-const gulp      = require("gulp");
-const sass      = require("gulp-sass");
+const gulp    = require("gulp");
+const sass    = require("gulp-sass");
+const uglify  = require('gulp-uglify');
+const concat  = require('gulp-concat');
+const pump    = require('pump');
 
 
 /*
   generate the css with sass
 */
 gulp.task('css', function() {
-  return gulp.src('./src/site/_scss/main.scss')
+  return gulp.src('./src/scss/main.scss')
     .pipe(sass({
       outputStyle: 'compressed'
     })
@@ -17,10 +20,28 @@ gulp.task('css', function() {
 
 
 /*
+ Uglify our javascript files into one.
+ Use pump to expose errors more usefully.
+*/
+gulp.task('scripts', function(done) {
+  pump([
+      gulp.src("./src/js/**/*.js"),
+      concat('hawksworx.js'),
+      uglify(),
+      gulp.dest('./src/site/_includes/js')
+    ],
+    done()
+  );
+});
+
+
+
+/*
   Watch folders for changess
 */
 gulp.task("watch", function() {
-  gulp.watch('./src/site/_scss/**/*.scss', gulp.parallel('css'));
+  gulp.watch('./src/scss/**/*.scss', gulp.parallel('css'));
+  gulp.watch('./src/js/**/*.scss', gulp.parallel('scripts'));
 });
 
 
@@ -28,5 +49,6 @@ gulp.task("watch", function() {
   Let's build this sucker.
 */
 gulp.task('build', gulp.series(
-  'css'
+  'css',
+  'scripts'
 ));

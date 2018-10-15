@@ -35,6 +35,8 @@
         </div>
       </footer>
     </div>
+    {% set js %}{% include "js/hawksworx.js" %}{% endset %}
+    <script>{{ js |  safe }}</script>
   </body>
 </html>
 

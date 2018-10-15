@@ -4,7 +4,8 @@
   "description": "Phil Hawksworth's personal website - hawksworx.com",
   "scripts": {
     "start": "gulp watch & eleventy --serve",
-    "build": "gulp build & eleventy"
+    "build": "gulp build & eleventy",
+    "js": "gulp scripts"
   },
   "repository": {
     "type": "git",
@@ -16,8 +17,11 @@
     "@11ty/eleventy": "0.5.3",
     "axios": "^0.18.0",
     "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
     "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.1",
     "html-minifier": "^3.5.20",
+    "pump": "^3.0.0",
     "xml2js": "^0.4.19"
   }
 }
