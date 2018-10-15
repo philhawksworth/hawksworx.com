@@ -6,9 +6,8 @@ draft: false
 description: Building a tool to provide comments and other user generated content
   for sites built with static site generators like Jekyll.
 tags:
-  - jekyll
-  - static
   - ssg
+  - static
   - jamstack
 ---
 

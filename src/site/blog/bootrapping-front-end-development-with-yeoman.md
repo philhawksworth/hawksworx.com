@@ -9,7 +9,6 @@ footnote: |
   You can keep up to date with Yeoman on its <a href="https://plus.google.com/101063139999404044459/posts">Google Plus page</a>
 tags:
 - development
-- html
 - javascript
 - resources
 ---

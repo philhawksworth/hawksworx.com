@@ -8,7 +8,6 @@ description: Hacking together a tool to generate charts of the viewports used to
 tags:
   - web
   - development
-  - rwd
 ---
 
 A few nice folks around the web have been sharing visualisations of the most popular viewport sizes appearing in the analytics for their sites. I thought these were beautiful and useful and wanted to make it easier for people to create their own and highlight the need for responsive web design.

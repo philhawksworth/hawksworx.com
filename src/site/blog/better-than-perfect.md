@@ -8,12 +8,11 @@ description: Trying to keep a useful message in mind when trying to create thing
 tags:
   - web
   - development
-  - thoughts
+  - opinions
 ---
 
 Every now an again, I have to remind my self of the old addage about <i>the perfect being the enemy of the good</i>. I can spend a lot of time on something wothout ever getting to the finish line when I forget this. I'm not unusual. It's a common trait. But getting beyond this is so important, and I have had this brought into sharp focus a few of times lately in ways I found rather inspiring.
 
-<img src="/images/viewport-graph-wide.png" alt="The most common viewports used to view this site">
 <!--more-->
 
 
@@ -52,10 +51,6 @@ One of the sessions there, given by <a href="https://twitter.com/rozemaryking">R
 
 The third example came at the end of that same conference in Manchester. There had been several talks about the best way to approach web development, and several moments where people described the latest hot tool which you <i>absolutely must be using or else you're doing it wrong</i>.
 
-<figure>
-  <img src="/images/viewport-graph-wide.png" alt="A slide showing 'The Hipster Tax'">
-  <p>The Hipster Tax – trendy task automation tools</p>
-</figure>
 
 I sometimes refer to "the hipster tax". It's the price you pay if you want to always be using the latest technologoy or technique. If you're not careful, you can be in a perpetual state of learning something new at the expense of using that new thing to accomplish your goals.
 
@@ -82,7 +77,7 @@ The answer I gave, was that she should not worry about falling in to line with w
   </p>
 </blockquote>
 
-Sure, for many projects, FTP deployments aren't going to cut it, and understanding the alternative will be valuable later. I personally have moved away from them for ALL projects, regardless of scale. But in asking this question, she reminded me of Rozemary's ealier message about the danger of stifling the creativity of others by being unfairly critical. It also reminded me of the dangers of optimising too early on software projects.
+Sure, for many projects, FTP deployments aren't going to cut it, and understanding the alternative will be valuable later. I personally have moved away from them for ALL projects, regardless of scale. But in asking this question, she reminded me of Rozemary's earlier message about the danger of stifling the creativity of others by being unfairly critical. It also reminded me of the dangers of optimising too early on software projects.
 
 But most of all, it reminded me that done is better than perfect.
 

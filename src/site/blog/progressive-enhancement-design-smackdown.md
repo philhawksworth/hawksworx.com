@@ -7,8 +7,8 @@ description: Gearing up for a public debate about the plight of design and devel
   on the modern web.
 tags:
   - web
-  - development
-  - conference
+  - conferences
+  - discussions
 ---
 
 

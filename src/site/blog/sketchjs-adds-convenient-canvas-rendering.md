@@ -8,9 +8,8 @@ footnote: |
   Download: <a href="https://github.com/soulwire/sketch.js">sketch.js</a>
 image: sketchjs.png
 tags:
-- canvas
-- webgl
 - javascript
+- development
 - resources
 ---
 
