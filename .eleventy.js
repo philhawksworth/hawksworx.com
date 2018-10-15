@@ -13,7 +13,7 @@ module.exports = function(eleventyConfig) {
   // Add filters to Nunjucks
   eleventyConfig.addFilter("dateDisplay", require("./src/site/_filters/dates.js") );
   eleventyConfig.addFilter("section", require("./src/site/_filters/section.js") );
-  // config.addFilter("squash", require("./filters/squash.js") );
+  eleventyConfig.addFilter("squash", require("./src/site/_filters/squash.js") );
 
   // Group posts into a collection without leaning on tags
   eleventyConfig.addCollection("posts", function(collection) {
