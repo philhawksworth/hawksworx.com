@@ -42,7 +42,7 @@ This year, I was lucky enough to be invited to speak at <a href="http://fronteer
 
 
 
-<div class='embed-container'><iframe src='http://player.vimeo.com/video/53317254' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+<div class='embed-container'><iframe src='https://player.vimeo.com/video/53317254' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
 <h3>Questions and answers</h3>
 
 <blockquote>
