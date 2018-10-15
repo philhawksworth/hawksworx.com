@@ -23,7 +23,7 @@ pageClass: painted-black
   </p>
   <hr />
   {% if notist.events.future.length %}
-  {% set item = notist.events.future[0] %}
+  {% set item = notist.events.future | last %}
   <h2><a href="/speaking#upcoming">Next conference appearance</a></h2>
   {%- include "event.njk" -%}
   {% endif %}

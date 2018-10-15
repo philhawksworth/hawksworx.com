@@ -25,7 +25,7 @@ pageClass: painted-blue
   <img src="/images/speaking-at-coldfront-cropped.jpg" alt="Phil Hawksworth speaking at ColdFront Conference">
 
   <h2 id="upcoming">Upcoming events</h2>
-  {%- for item in notist.events.future -%}
+  {%- for item in notist.events.future | reverse -%}
     {%- include "event.njk" -%}
   {%- endfor -%}
 
