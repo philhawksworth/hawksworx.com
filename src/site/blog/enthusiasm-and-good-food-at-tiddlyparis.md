@@ -25,13 +25,13 @@ Yesterday I was fortunate to be able to make the quick trip over to Paris to att
 
 <p>At the other end of the spectrum we have Jacques, who has been working with TiddlyWiki since the very early days.  Jacques showed us all his TiddlyWiki PIM on his 4 year old tablet PC. The file was well over 3MB in size (something of a beast in TiddlyWiki terms) chock full of content and heavily customised. I  mean really heavily customised!  Jacques had moulded it to fit his way of working and had borrowed from the best TiddlyWiki adaptations around the web. With advanced workflow management and various task lists, widgets and doohickies, I found it a bit hard to drink it all in, but it was a perfect fit for Jacques and goes everywhere with him.  Jacques pledged to make a blank copy available at some point. You'll need to speak French though as he had also carried out extensive translation.</p>
 
-<figure><img alt="" src="http://farm4.static.flickr.com/3013/2802391393_d939f28c9a.jpg" /> </figure>
+<figure><img alt="" src="https://farm4.static.flickr.com/3013/2802391393_d939f28c9a.jpg" /> </figure>
 
 <p>I was delighted to learn that relative newcomer Pier, whose Google Maps / TiddlyWiki mashup gathers information about popular activities and movements around Paris, chose TiddlyWiki primarily because of its ease of use as a mashup platform. Score!  (He was also attracted by the snazzy tiddler animations!)</p>
 
 <p>Loic Dachary revealed several TiddlyWiki resources which have been around for a while, but I had failed to stumble upon. Perhaps targeted at the more techie geeks among us, they were impressive nonetheless. My favorite was <a href="http://tiddlywikicp.dachary.org/">TiddlyWiki_CP</a> which is a ruby gem providing a library and a command line interface to copy TiddlyWiki tiddlers to files and vice versa. Incredibly useful for any developer who builds a variety of TiddlyWikis.</p>
 
-<figure><img alt="" src="http://farm4.static.flickr.com/3209/2802391055_ca4fe53d4e.jpg" /> </figure>
+<figure><img alt="" src="https://farm4.static.flickr.com/3209/2802391055_ca4fe53d4e.jpg" /> </figure>
 
 
 <p>I was very keen to meet BidiX who has quietly been producing great TiddlyWiki assets for some time. Recent work includes <a href="http://itw.bidix.info/">iTW</a>, the best iPhone TiddlyWiki that I know of. The <a href="http://itw.bidix.info/tiddlyparis/">TiddlyParis edition</a> of iTW went with me in my pocket to help me find the venue and read about the agenda.  BidiX is also the man behind <a href="http://tiddlyhome.bidix.info">TiddlyHome</a>, a lovely and seemingly simple hosted TiddlyWiki resource which he recently deployed to Google App Engine for its <a href="http://th2.bidix.info/">next release</a> (which we got to play with, but he insists isn't quite ready for prime time yet).</p>
