@@ -23,6 +23,12 @@
    Referrer-Policy= "no-referrer-when-downgrade"
 
 
+# 404s
+[[redirects]]
+  from = "*"
+  to = "/404"
+  status = 404
+
 # Simplify requests for my headshots
 [[redirects]]
   from = "/philhawksworth-*"
