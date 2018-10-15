@@ -1,0 +1,41 @@
+@mixin bp($point) {
+
+  @if $point == narrow {
+    @media #{$bp-narrow} { @content; }
+  }
+  @else if $point == mid {
+    @media #{$bp-mid} { @content; }
+  }
+  @else if $point == wide {
+    @media #{$bp-wide}  { @content; }
+  }
+
+}
+
+
+// Apply some colours based on one root colour
+@mixin theme($colour) {
+
+  background-color: mix($colour, #fff, 30%);
+  .sidebar {
+    color: mix($colour, #fff, 30%);
+    background-color: $colour;
+  }
+  a.home {
+    color: $colour;
+  }
+  blockquote {
+    border-left-color: mix($colour, #fff, 10%);
+  }
+  .solid-footer {
+    background-color: $colour;
+    color: mix($colour, #fff, 40%);
+    @include bp(wide) {
+      background-color: rgba(0,0,0,0.05);
+    }
+  }
+  form {
+    background-color: mix($colour, #fff, 10%);
+  }
+
+}

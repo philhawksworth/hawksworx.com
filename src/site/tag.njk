@@ -1,0 +1,30 @@
+---
+title: Phil Hawksworth's blog posts
+description: Various blog posts about web development, the JAMstack, events and other bits and pieces.
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+permalink: /tags/{{ tag }}/
+---
+
+{% extends 'layouts/page.njk' %}
+
+{% set taglist = collections[ tag ] %}
+
+{% block sidebar %}
+  <p class="by-line">Blog posts tagged:</p>
+  <h1>{{ tag }}</h1>
+  <p>
+    There are {{ taglist.length }} items tagged <em>#{{ tag }}</em>.<br />
+    And there a lots of other <a href="/tags">tags</a> to explore.
+  </p>
+{% endblock %}
+
+{% block content %}
+  {% for item in taglist | reverse %}
+    {%- include "post-teaser-condensed.njk" -%}
+  {% endfor %}
+{% endblock %}
+
+
