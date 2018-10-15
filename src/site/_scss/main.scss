@@ -99,14 +99,14 @@ a {
 }
 
 ul, ol {
-  padding-left:0;
-  list-style-position: inside;
+  padding-left:1em;
 }
 
 ul.tags {
   list-style: none;
-  margin-top:0.6em;
+  margin-top:0.5em;
   margin-left:0;
+  padding-left:0;
   font-size: 0.9em;
 
   li {

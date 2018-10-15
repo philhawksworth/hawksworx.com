@@ -1,5 +1,6 @@
-{% extends 'layouts/base.njk' %}
 
+{% extends 'layouts/base.njk' %}
+{% set section = 'blog' %}
 
 {% block sidebar %}
   <p class="by-line">{{ date | dateDisplay }} by <a href="/about">Phil Hawksworth</a></p>

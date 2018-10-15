@@ -18,7 +18,11 @@ description: Various blog posts about web development, the JAMstack, events and 
 
 {% block content %}
   {%- for item in collections.posts  -%}
+  {% if loop.index < 4 %}
   {% include 'post-teaser.njk' %}
+  {% else %}
+  {% include 'post-teaser-condensed.njk' %}
+  {% endif %}
   {%- endfor -%}
 {% endblock %}
 

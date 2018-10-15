@@ -28,6 +28,11 @@
       </div>
       <footer>
         {# tease the previous post here? #}
+        {% if section == 'blog' %}
+        <div class="container">
+          {% include 'previous.njk' %}
+        </div>
+        {% endif %}
         <div class="solid-footer">
           <div class="container">
           {% include "footer.njk" %}
