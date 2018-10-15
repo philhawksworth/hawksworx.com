@@ -176,6 +176,11 @@ blockquote {
   border-left-width: 0.8em;
 }
 
+.phonetic {
+  font-size: 1.5rem;
+  margin-top:0;
+}
+
 hr {
   border-style: none;
   border-bottom: solid 1px #eee;
@@ -279,12 +284,26 @@ header {
 
 
 // footer
-
 footer {
 
   .solid-footer{
     font-size: 0.7em;
     line-height: 1.5;
+    padding: 3em 0;
+  }
+
+  .teaser {
+    font-size:1.4em;
+    margin:0 0 2em 0;
+    padding: 0.5em 1em;
+    border-radius: 3px;
+    background-color: rgba(255,255,255,0.05);
+    span {
+      display: block;
+    }
+    a {
+      color: #fff;
+    }
   }
 
   @include bp(wide) {
@@ -295,6 +314,7 @@ footer {
 
   }
   .container {
+    padding: 0;
     @include bp(wide) {
       margin-right: 3rem;
       margin-left: auto;
@@ -324,9 +344,10 @@ a {
 blockquote {
   border-left-color: mix(#333, #fff, 10%);
 }
+
 .solid-footer {
-  background-color: #333;
   color: mix(#333, #fff, 40%);
+  background-color: #333;
   @include bp(wide) {
     background-color: rgba(0,0,0,0.05);
   }
@@ -366,10 +387,11 @@ form {
 /*
   themes
 */
+.painted-black { @include theme(#222) }
 .painted-ruby { @include theme(#A03029) }
 .painted-red { @include theme(#af2a40) }
-.painted-blue { @include theme(#246bbd) }
-.painted-brightblue { @include theme(#2155BD) }
+.painted-blue { @include theme(#3B58A2) }
+.painted-brightblue { @include theme(#246bbd) }
 .painted-darkblue { @include theme(#3E4E75) }
 .painted-greyblue { @include theme(#323D3E) }
 .painted-lime { @include theme(#7B892D) }

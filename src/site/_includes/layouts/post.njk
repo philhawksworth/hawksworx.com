@@ -2,6 +2,7 @@
 {% extends 'layouts/base.njk' %}
 {% set section = 'blog' %}
 
+
 {% block sidebar %}
   <p class="by-line">{{ date | dateDisplay }} by <a href="/about">Phil Hawksworth</a></p>
   <h1>{{ title }}</h1>
@@ -20,3 +21,7 @@
   {{ content | section('remainder') | safe }}
 {% endblock %}
 
+
+{% block prefooter %}
+  {% include 'previous.njk' %}
+{% endblock %}
