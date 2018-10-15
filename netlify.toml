@@ -30,8 +30,8 @@
 
 # Look after the old use of journal in urls
 [[redirects]]
-  from = "/journal*"
-  to = "/blog:splat"
+  from = "/journal/*"
+  to = "/blog/:splat"
   status = 301
 
 # Simplified blog urls for slugs
