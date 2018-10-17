@@ -25,7 +25,7 @@ gulp.task('css', function() {
 */
 gulp.task('scripts', function(done) {
   pump([
-      gulp.src("./src/js/**/*.js"),
+      gulp.src("./src/js/*.js", {base: './'}),
       concat('hawksworx.js'),
       uglify(),
       gulp.dest('./src/site/_includes/js')
@@ -39,9 +39,9 @@ gulp.task('scripts', function(done) {
 /*
   Watch folders for changess
 */
-gulp.task("watch", function() {
+gulp.task("watch", gulp.parallel('css'), function() {
   gulp.watch('./src/scss/**/*.scss', gulp.parallel('css'));
-  gulp.watch('./src/js/**/*.scss', gulp.parallel('scripts'));
+  // gulp.watch('./src/js/**/*.js', gulp.parallel('scripts'));
 });
 
 
@@ -49,6 +49,6 @@ gulp.task("watch", function() {
   Let's build this sucker.
 */
 gulp.task('build', gulp.series(
-  'css',
-  'scripts'
+  'css'
+  // 'scripts'
 ));

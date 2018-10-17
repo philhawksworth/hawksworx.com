@@ -1,4 +1,5 @@
 const htmlmin = require("html-minifier");
+const UglifyJS = require("uglify-js");
 
 module.exports = function(eleventyConfig) {
 
@@ -38,6 +39,17 @@ module.exports = function(eleventyConfig) {
     }
     return content;
   });
+
+
+
+  eleventyConfig.addFilter("jsmin", function(code) {
+    let minified = UglifyJS.minify(code);
+    if( minified.error ) {
+        console.log("UglifyJS error: ", minified.error);
+        return code;
+    }
+    return minified.code;
+});
 
 
   return {

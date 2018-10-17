@@ -13,6 +13,7 @@
       <header>
         <div class="sidebar-container">
           {% include "navigation.njk" %}
+          {% include "search-ui.njk" %}
           <div class="page-details">
           {% block sidebar %}
           {% endblock %}
@@ -35,8 +36,13 @@
         </div>
       </footer>
     </div>
-    {% set js %}{% include "js/hawksworx.js" %}{% endset %}
-    <script>{{ js |  safe }}</script>
+    {% set js %}
+      {% include "js/core.js" %}
+      {% include "js/beta.js" %}
+      {% include "js/form-validate.js" %}
+      {% include "js/search.js" %}
+    {% endset %}
+    <script>{{ js | jsmin |  safe }}</script>
   </body>
 </html>
 

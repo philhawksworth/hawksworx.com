@@ -21,6 +21,7 @@
     "gulp-uglify": "^3.0.1",
     "html-minifier": "^3.5.20",
     "pump": "^3.0.0",
+    "uglify-js": "^3.4.9",
     "xml2js": "^0.4.19"
   }
 }

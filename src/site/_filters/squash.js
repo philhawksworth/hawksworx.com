@@ -9,6 +9,9 @@
 module.exports = function(text) {
   var content = new String(text);
 
+  // all lower case, please
+  var content = content.toLowerCase();
+
   // remove all html elements and new lines
   var re = /(&lt;.*?&gt;)/gi;
   var plain = unescape(content.replace(re, ''));

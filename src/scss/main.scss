@@ -285,6 +285,32 @@ header {
   }
 }
 
+.search-ui,
+.teaser {
+  font-size:1.4em;
+  margin:0 0 2em 0;
+  padding: 0.5em 1em;
+  border-radius: 3px;
+  background-color: rgba(255,255,255,0.05);
+  span {
+    display: block;
+  }
+  a {
+    color: #fff;
+  }
+}
+
+.invisible {
+  display: none;
+}
+
+.search-ui {
+  margin: 1em -1em;
+  padding-top: 1em;
+}
+.search-results {
+  font-size: 0.8em;
+}
 
 // footer
 footer {
@@ -295,19 +321,6 @@ footer {
     padding: 3em 0;
   }
 
-  .teaser {
-    font-size:1.4em;
-    margin:0 0 2em 0;
-    padding: 0.5em 1em;
-    border-radius: 3px;
-    background-color: rgba(255,255,255,0.05);
-    span {
-      display: block;
-    }
-    a {
-      color: #fff;
-    }
-  }
 
   @include bp(wide) {
     position: fixed;
