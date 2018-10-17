@@ -37,12 +37,9 @@
       </footer>
     </div>
     {% set js %}
-      {% include "js/core.js" %}
-      {% include "js/beta.js" %}
-      {% include "js/form-validate.js" %}
-      {% include "js/search.js" %}
+    {% include "js/hawksworx.min.js" %}
     {% endset %}
-    <script>{{ js | jsmin |  safe }}</script>
+    <script>{{ js | safe }}</script>
   </body>
 </html>
 

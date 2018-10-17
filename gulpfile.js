@@ -26,7 +26,7 @@ gulp.task('css', function() {
 gulp.task('scripts', function(done) {
   pump([
       gulp.src("./src/js/*.js", {base: './'}),
-      concat('hawksworx.js'),
+      concat('hawksworx.min.js'),
       uglify(),
       gulp.dest('./src/site/_includes/js')
     ],
@@ -41,7 +41,7 @@ gulp.task('scripts', function(done) {
 */
 gulp.task("watch", gulp.parallel('css'), function() {
   gulp.watch('./src/scss/**/*.scss', gulp.parallel('css'));
-  // gulp.watch('./src/js/**/*.js', gulp.parallel('scripts'));
+  gulp.watch('./src/js/**/*.js', gulp.parallel('scripts'));
 });
 
 
@@ -49,6 +49,6 @@ gulp.task("watch", gulp.parallel('css'), function() {
   Let's build this sucker.
 */
 gulp.task('build', gulp.series(
-  'css'
-  // 'scripts'
+  'css',
+  'scripts'
 ));
