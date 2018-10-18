@@ -48,18 +48,20 @@
       searchIndex = response.search;
     });
     searchUI.classList.toggle('invisible');
+
+    // listen for input changes
+    searchInput.addEventListener('change', function(event) {
+      var str = searchInput.value;
+      if(str.length > 2) {
+        find(str);
+      } else {
+        clearResults();
+      }
+    });
+
     searchInput.focus()
   });
 
-  // listen for input changes
-  searchInput.addEventListener('input', function(event) {
-    var str = searchInput.value;
-    if(str.length > 2) {
-      find(str);
-    } else {
-      clearResults();
-    }
-  });
 
 
 })();
