@@ -21,7 +21,7 @@ To build the site you need:
 ```bash
 
 # clone this repository
-git clone https://github.com/philhawksworth/hawksworx.com
+git clone git@github.com:philhawksworth/hawksworx.com.git
 
 # go to the working directory
 cd hawksworx.com
