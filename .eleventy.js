@@ -1,5 +1,4 @@
 const htmlmin = require("html-minifier");
-const UglifyJS = require("uglify-js");
 
 module.exports = function(eleventyConfig) {
 

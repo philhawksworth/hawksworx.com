@@ -14,6 +14,9 @@
 
   // search and display
   var find = function(str) {
+
+    str = str.toLowerCase();
+
     // look for matches in the JSON
     var results = [];
     for(var item in searchIndex ) {
@@ -22,6 +25,7 @@
         results.push(searchIndex[item])
       }
     }
+
     // build and insert the new result entries
     clearResults();
     for(var item in results) {
@@ -48,7 +52,7 @@
 
     // listen for input changes
     searchInput.addEventListener('keyup', function(event) {
-      var str = searchInput.value;
+      var str = searchInput.value
       if(str.length > 2) {
         find(str);
       } else {
