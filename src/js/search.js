@@ -50,7 +50,7 @@
     searchUI.classList.toggle('invisible');
 
     // listen for input changes
-    searchInput.addEventListener('change', function(event) {
+    searchInput.addEventListener('keypress', function(event) {
       var str = searchInput.value;
       if(str.length > 2) {
         find(str);
