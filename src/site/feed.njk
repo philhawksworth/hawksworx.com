@@ -1,0 +1,36 @@
+---
+permalink: feed.xml
+metadata:
+  title: Hawksworx - Phil Hawksworth's blog
+  url: https://www.hawksworx.com
+  author:
+    name: Phil Hawksworth
+  feed:
+    subtitle: Phil Hawksworth's home on the web. Read his blog, ask questions, and find coverage of his recent conference talks about web development.
+    filename: feed.xml
+    path: feed.xml
+    url: https://www.hawksworx.com/feed.xml
+    id: https://www.hawksworx.com
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ metadata.title }}</title>
+  <subtitle>{{ metadata.feed.subtitle }}</subtitle>
+  <link href="{{ metadata.feed.url }}" rel="self"/>
+  <link href="{{ metadata.url }}"/>
+  <updated>{{ collections.posts | rssLastUpdatedDate }}</updated>
+  <id>{{ metadata.feed.id }}</id>
+  <author>
+    <name>{{ metadata.author.name }}</name>
+  </author>
+  {%- for post in collections.posts %}
+  {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    <link href="{{ absolutePostUrl }}"/>
+    <updated>{{ post.date | rssDate }}</updated>
+    <id>{{ absolutePostUrl }}</id>
+    <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+  </entry>
+  {%- endfor %}
+</feed>

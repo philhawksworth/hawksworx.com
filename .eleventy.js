@@ -8,6 +8,10 @@ module.exports = function(eleventyConfig) {
     templateFormats: "md"
   });
 
+  // RSS plugin
+  const pluginRss = require("@11ty/eleventy-plugin-rss");
+  eleventyConfig.addPlugin(pluginRss);
+
 
   // Add filters to Nunjucks
   eleventyConfig.addFilter("dateDisplay", require("./src/site/_filters/dates.js") );
