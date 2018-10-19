@@ -1,10 +1,13 @@
-var axios  = require('axios');
+const axios  = require('axios');
+const env = process.env.ELEVENTY_ENV
 
 // Were are we getting data?
 // If this is defined in an environment variable in Netlufy, we'll use that
 // Otherwise, we'll just show you Phil's
 var url = 'https://noti.st/philhawksworth.json';
 var now = new Date();
+
+
 
 // expose these results as data to eleventy.
 module.exports = () => {
@@ -65,7 +68,10 @@ module.exports = () => {
           }
         }
 
-        // we've giot all the data now. So resolve the promise to return the data
+        // we've got all the data now. So resolve the promise to return the data
+        // console.log('-----');
+        // console.log(JSON.stringify({'url': url, 'events': talks }));
+        // console.log('-----');
         resolve({'url': url, 'events': talks  });
       }))
       .catch((error) => {

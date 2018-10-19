@@ -1,0 +1,207 @@
+{
+  "url": "https://noti.st/philhawksworth.json",
+  "events": {
+    "future": [
+      {
+        "title": "ColdFront!!!",
+        "slug": "coldfront",
+        "starts_on": "2018-11-12 08:00:00",
+        "ends_on": "2018-11-15 18:00:00",
+        "timezone": "Europe/Copenhagen",
+        "address": "Copenhagen, Denmark",
+        "latitude": "55.676097",
+        "longitude": "12.568337",
+        "country_code": "DK",
+        "blurb": { "html": null },
+        "hashtag": "coldfront",
+        "url": "https://2018.coldfront.co"
+      },
+      {
+        "title": "JAMstack Conf",
+        "slug": "jamstack-conf",
+        "starts_on": "2018-10-29 13:00:00",
+        "ends_on": "2018-10-30 18:00:00",
+        "timezone": "America/Los_Angeles",
+        "address": "San Francisco, CA, USA",
+        "latitude": "37.774930",
+        "longitude": "-122.419416",
+        "country_code": "US",
+        "blurb": { "html": null },
+        "hashtag": "jamstack",
+        "url": "https://jamstackconf.com/"
+      },
+      {
+        "title": "Smashing Conference",
+        "slug": "smashing-conference",
+        "starts_on": "2018-10-23 08:00:00",
+        "ends_on": "2018-10-24 18:00:00",
+        "timezone": "America/New_York",
+        "address": "New York, NY, USA",
+        "latitude": "40.712775",
+        "longitude": "-74.005973",
+        "country_code": "US",
+        "blurb": { "html": null },
+        "hashtag": "smashingconf",
+        "url": "https://smashingconf.com/ny-2018/"
+      }
+    ],
+    "past": [
+      {
+        "title": "London Microservices Meetup",
+        "slug": "london-microservices-meetup",
+        "starts_on": "2018-08-09 08:00:00",
+        "ends_on": "2018-08-09 18:00:00",
+        "timezone": "Europe/London",
+        "address": "London,UK",
+        "latitude": "51.507351",
+        "longitude": "-0.127758",
+        "country_code": "GB",
+        "url": "https://www.meetup.com/London-Microservices-User-Group/events/tngzjlyxlbcb/"
+      },
+      {
+        "title": "Webconf.asia",
+        "slug": "webconf-asia",
+        "starts_on": "2018-06-06 00:00:00",
+        "ends_on": "2018-06-09 07:59:00",
+        "timezone": "Asia/Hong_Kong",
+        "address": "Hong Kong",
+        "latitude": "22.396428",
+        "longitude": "114.109497",
+        "country_code": "HK",
+        "url": "https://www.webconf.asia/"
+      },
+      {
+        "title": "Mcr FRED 60",
+        "slug": "mcr-fred-60",
+        "starts_on": "2018-05-30 18:30:00",
+        "ends_on": "2018-05-30 18:00:00",
+        "timezone": "Europe/London",
+        "address": "Manchester, UK",
+        "latitude": "53.480759",
+        "longitude": "-2.242631",
+        "country_code": "GB",
+        "url": "https://s10wen.com/blog/2018/05/04/mcrfred-60-phil-hawksworth/"
+      },
+      {
+        "title": "McrFRED",
+        "slug": "mcrfred",
+        "starts_on": "2018-05-30 08:00:00",
+        "ends_on": "2018-05-30 18:00:00",
+        "timezone": "Europe/London",
+        "address": "Manchester, UK",
+        "latitude": "53.480759",
+        "longitude": "-2.242631",
+        "country_code": "GB",
+        "url": "https://www.meetup.com/McrFRED/events/250444591/"
+      },
+      {
+        "title": "JAMstack Porto",
+        "slug": "jamstack-porto",
+        "starts_on": "2018-05-24 08:00:00",
+        "ends_on": "2018-05-24 18:00:00",
+        "timezone": "Europe/Lisbon",
+        "address": "Porto, Portugal",
+        "latitude": "41.157944",
+        "longitude": "-8.629105",
+        "country_code": "PT",
+        "url": "https://www.meetup.com/en-AU/JAMstack-Porto/events/plkdqpyxhbgc/"
+      },
+      {
+        "title": "Certified Fresh Events - Modern Web Developmentwith the JAMStack",
+        "slug": "certified-fresh-events-modern-web-development-with-the-jamstack",
+        "starts_on": "2018-05-23 08:00:00",
+        "ends_on": "2018-05-23 18:00:00",
+        "timezone": "GMT",
+        "address": "Earth",
+        "latitude": null,
+        "longitude": null,
+        "country_code": null,
+        "url": "https://certifiedfreshevents.com/events/jamstack/"
+      },
+      {
+        "title": "WeAreDevelopers World Congress",
+        "slug": "wearedevelopers-world-congress",
+        "starts_on": "2018-05-16 00:00:00",
+        "ends_on": "2018-05-19 01:59:00",
+        "timezone": "Europe/Vienna",
+        "address": "Vienna, Austria",
+        "latitude": "48.208174",
+        "longitude": "16.373819",
+        "country_code": "AT",
+        "url": "https://www.wearedevelopers.com/"
+      },
+      {
+        "title": "Render Conf",
+        "slug": "render-conf",
+        "starts_on": "2018-03-23 00:00:00",
+        "ends_on": "2018-03-23 23:59:00",
+        "timezone": "Europe/London",
+        "address": "Oxford, UK",
+        "latitude": "51.752021",
+        "longitude": "-1.257726",
+        "country_code": "GB",
+        "url": "https://2018.render-conf.com/"
+      },
+      {
+        "title": "Front-Trends 2017",
+        "slug": "front-trends-2017",
+        "starts_on": "2017-05-24 02:00:00",
+        "ends_on": "2017-05-26 01:59:00",
+        "timezone": "Europe/Warsaw",
+        "address": "Warsaw, Poland",
+        "latitude": "52.229676",
+        "longitude": "21.012229",
+        "country_code": "PL",
+        "url": "https://2017.front-trends.com/"
+      },
+      {
+        "title": "Beyond Tellerrand",
+        "slug": "beyond-tellerrand",
+        "starts_on": "2017-05-15 09:00:00",
+        "ends_on": "2017-05-17 20:00:00",
+        "timezone": "Europe/Berlin",
+        "address": "Düsseldorf, Germany",
+        "latitude": "51.227741",
+        "longitude": "6.773456",
+        "country_code": "DE",
+        "url": "https://beyondtellerrand.com/events/duesseldorf-2017/speakers"
+      },
+      {
+        "title": "Fronteers Conference",
+        "slug": "fronteers-conference",
+        "starts_on": "2016-10-06 02:00:00",
+        "ends_on": "2016-10-07 01:59:00",
+        "timezone": "Europe/Amsterdam",
+        "address": "Amsterdam, Netherlands",
+        "latitude": "52.370216",
+        "longitude": "4.895168",
+        "country_code": "NL",
+        "url": "https://fronteers.nl/congres/2012"
+      },
+      {
+        "title": "Front-Trends 2016",
+        "slug": "front-trends-2016",
+        "starts_on": "2016-05-18 02:00:00",
+        "ends_on": "2016-05-19 01:59:00",
+        "timezone": "Europe/Warsaw",
+        "address": "Warsaw, Poland",
+        "latitude": "52.229676",
+        "longitude": "21.012229",
+        "country_code": "PL",
+        "url": "https://2016.front-trends.com/"
+      },
+      {
+        "title": "ColdFront Conference",
+        "slug": "coldfront-conference",
+        "starts_on": "2014-09-04 02:00:00",
+        "ends_on": "2014-09-04 02:00:00",
+        "timezone": "Europe/Copenhagen",
+        "address": "Copenhagen, Denmark",
+        "latitude": "55.676097",
+        "longitude": "12.568337",
+        "country_code": "DK",
+        "url": "https://2014.coldfront.co/#speakers"
+      }
+    ]
+  }
+}

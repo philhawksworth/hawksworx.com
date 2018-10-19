@@ -1,4 +1,13 @@
+const env = process.env.ELEVENTY_ENV;
+
 module.exports = function(eleventyConfig) {
+
+  // syntax highlighting plugin
+  const syntaxHighlightPlugin = require("@11ty/eleventy-plugin-syntaxhighlight");
+  eleventyConfig.addPlugin(syntaxHighlightPlugin, {
+    templateFormats: "md"
+  });
+
 
   // Add filters to Nunjucks
   eleventyConfig.addFilter("dateDisplay", require("./src/site/_filters/dates.js") );
@@ -11,30 +20,33 @@ module.exports = function(eleventyConfig) {
     return collection.getFilteredByGlob("src/site/blog/*.md").reverse();
   });
 
+
   // static passthroughs
   eleventyConfig.addPassthroughCopy("src/site/fonts");
   eleventyConfig.addPassthroughCopy("src/site/images");
 
-  // minify the html ouptput
-  const htmlmin = require("html-minifier");
-  eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
-    if( outputPath.endsWith(".html") ) {
-      let minified = htmlmin.minify(content, {
-        useShortDoctype: true,
-        removeComments: false,
-        collapseWhitespace: true
-      });
-      return minified;
-    }
-    return content;
-  });
+  // minify the html output if this is for production
+  if(env == 'prod') {
+    const htmlmin = require("html-minifier");
+    eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
+      if( outputPath.endsWith(".html") ) {
+        let minified = htmlmin.minify(content, {
+          useShortDoctype: true,
+          removeComments: false,
+          collapseWhitespace: true
+        });
+        return minified;
+      }
+      return content;
+    });
+  }
 
   // otehr config settings
   return {
     dir: {
       input: "src/site",
       output: "dist",
-      data: "_data"
+      data: `_data/${env}`
     },
     templateFormats : ["njk", "md"],
     htmlTemplateEngine : "njk",

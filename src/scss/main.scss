@@ -1,5 +1,6 @@
 @import '_variables';
 @import '_mixins';
+@import '_syntax';
 
 @font-face {
   font-family: Placard;
@@ -312,6 +313,11 @@ header {
   font-size: 0.8em;
 }
 
+pre {
+  overflow: auto;
+  font-size: 0.8em;
+}
+
 // footer
 footer {
 
@@ -410,6 +416,7 @@ form {
 .painted-brightblue { @include theme(#246bbd) }
 .painted-darkblue { @include theme(#3E4E75) }
 .painted-greyblue { @include theme(#323D3E) }
+.painted-steelblue { @include theme(#5B7589) }
 .painted-lime { @include theme(#7B892D) }
 .painted-seagreen { @include theme(#578671) }
 .painted-sepia { @include theme(#565043) }

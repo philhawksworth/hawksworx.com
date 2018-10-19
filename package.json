@@ -3,8 +3,8 @@
   "version": "2.0.1",
   "description": "Phil Hawksworth's personal website - hawksworx.com",
   "scripts": {
-    "start": "gulp watch & eleventy --serve",
-    "build": "gulp build & eleventy"
+    "start": "gulp watch & ELEVENTY_ENV=dev eleventy --serve",
+    "build": "gulp build & ELEVENTY_ENV=prod eleventy"
   },
   "repository": {
     "type": "git",
@@ -13,7 +13,8 @@
   "author": "Phil Hawksworth",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "0.5.3",
+    "@11ty/eleventy": "0.5.4",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.0",
     "axios": "^0.18.0",
     "gulp": "^4.0.0",
     "gulp-concat": "^2.6.1",
