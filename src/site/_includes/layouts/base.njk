@@ -26,6 +26,9 @@
         {% block content %}
         {{ content | safe }}
         {% endblock %}
+        {% block credits %}
+        {% include "page-credits.njk" %}
+        {% endblock %}
       </div>
       <footer>
         <div class="solid-footer">
