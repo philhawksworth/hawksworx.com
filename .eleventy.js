@@ -25,21 +25,20 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/site/fonts");
   eleventyConfig.addPassthroughCopy("src/site/images");
 
-  // minify the html output if this is for production
-  if(env == 'prod') {
-    const htmlmin = require("html-minifier");
-    eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
-      if( outputPath.endsWith(".html") ) {
-        let minified = htmlmin.minify(content, {
-          useShortDoctype: true,
-          removeComments: false,
-          collapseWhitespace: true
-        });
-        return minified;
-      }
-      return content;
-    });
-  }
+  // minify the html output
+  const htmlmin = require("html-minifier");
+  eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
+    if( outputPath.endsWith(".html") ) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: false,
+        collapseWhitespace: true
+      });
+      return minified;
+    }
+    return content;
+  });
+
 
   // otehr config settings
   return {

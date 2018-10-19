@@ -40,6 +40,7 @@
 
   // add an event listenrer for a click on the search link
   btnHandler('#search-link', function(){
+
     // get the data
     fetch('/search.json').then(function(response) {
       return response.json();

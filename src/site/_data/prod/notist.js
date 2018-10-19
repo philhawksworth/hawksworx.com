@@ -68,10 +68,11 @@ module.exports = () => {
           }
         }
 
-        // we've got all the data now. So resolve the promise to return the data
         // console.log('-----');
         // console.log(JSON.stringify({'url': url, 'events': talks }));
         // console.log('-----');
+
+        // we've got all the data now. So resolve the promise to return the data
         resolve({'url': url, 'events': talks  });
       }))
       .catch((error) => {
