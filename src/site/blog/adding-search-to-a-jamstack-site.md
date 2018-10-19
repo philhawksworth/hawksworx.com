@@ -155,19 +155,21 @@ By iterating over the collection of posts for the site, I can construct the JSON
 - A title: The page title to display to the user inn the results
 - A text index: Which contains every unique word contained in that post's title and text
 
-To make things a little more efficient, I condensed that text property a little. By passing the content to a filter that I created called _sqaush_ I can massage it into shape a little more. The squash filter does the following:
+To make things a little more efficient, I condensed that text property a little. By passing the content to a filter that I created called _sqaush_ I can massage it into shape a little more. The [squash filter](https://github.com/philhawksworth/hawksworx.com/blob/8c96ba2541c8fd6fe6f521cdb5e17848c231636c/src/site/_filters/squash.js) does the following:
 
 - Makes every word lowercase
 - Removes all duplicated words.
 - Removes words that are less meaningfully for searching. Like _on, in, me, my_ and so on.
 
-Many static site generators will give you the ability to add filters and utilities in this way. I like [how filter work in Eleventy](https://www.11ty.io/docs/filters/) since everything is JavaScript. I don't need to learn Ruby (as I did when I implemented the same thing with less confidence in an earlier version of this site built with Jekyll)
+Many static site generators will give you the ability to add filters and utilities in this way. I like [how filters work in Eleventy](https://www.11ty.io/docs/filters/) since everything is JavaScript. I don't need to learn Ruby (as I did when I implemented the same thing with less confidence in an earlier version of this site built with Jekyll)
 
 ## The building blocks we need
 
 When we bring these building blocks together, we can assemble whatever behaviors we like in our UI. This is a simple search capability, but give it a try. It works nicely.
 
 When we have the ability to inspect and manipulate the data and content that makes up our sites. And generate data services to expose whatever we like, we gain the ability to craft a wide variety of experiences in our website.  Delivering search functionalities like this prove to be far more simple than we might have originally expected.
+
+With a little imagination, adding this and other dynamic features to JAMstack sites is really satisfying.
 
 
 
