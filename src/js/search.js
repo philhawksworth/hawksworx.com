@@ -4,12 +4,16 @@
   var searchUI = document.querySelector('.search-ui');
   var resultsUI = document.querySelector('.search-results');
   var searchInput = document.querySelector('#search-str');
+  var footer = document.querySelector('footer');
 
   // clear the current results
   var clearResults = function(){
     while (resultsUI.firstChild) {
       resultsUI.removeChild(resultsUI.firstChild);
     }
+    // unhide the footer again
+    footer.classList.remove('invisible');
+
   }
 
   // search and display
@@ -28,6 +32,7 @@
 
     // build and insert the new result entries
     clearResults();
+    footer.classList.add('invisible');
     for(var item in results) {
       var listItem = document.createElement('li');
       var link = document.createElement('a');
