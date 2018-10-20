@@ -18,19 +18,22 @@ module.exports = () => {
       var recentTweets = {"recent" : []};
       for(var tweet in tweets) {
 
-        // massage th data into the shape we want
+        // massage the data into the shape we want
+        // and clean up some of the formatting from twitter
         var split = tweets[tweet].full_text.lastIndexOf('https://t.co');
         var text =tweets[tweet].full_text.substring(0, split);
+        text = text.replace(/\n/g,'<br/>');
+        text = text.replace(/<br\/><br\/>/g,'<p/><p>');
         var t = {
-          "text": text.replace(/\n/g,'<br/>'),
+          "text": text,
           "url": `https://twitter.com/philhawksworth/status/${tweets[tweet].id_str}`,
           "date":  tweets[tweet].created_at,
         };
         recentTweets.recent.push(t);
       }
-      // console.log('-----------');
-      // console.log(JSON.stringify(recentTweets));
-      // console.log('-----------');
+      console.log('-----------');
+      console.log(JSON.stringify(recentTweets));
+      console.log('-----------');
       return recentTweets;
     })
     .catch(function (error) {
