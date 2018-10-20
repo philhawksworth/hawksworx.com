@@ -1,22 +1,25 @@
-const axios  = require('axios');
-const env = process.env.ELEVENTY_ENV
+const axios = require("axios");
 
 // Were are we getting data?
 // If this is defined in an environment variable in Netlufy, we'll use that
 // Otherwise, we'll just show you Phil's
-var url = 'https://noti.st/philhawksworth.json';
+var url = "https://noti.st/philhawksworth.json";
 var now = new Date();
 
-
+// We'll need to sort the results by date.
+function compare(a,b) {
+  if (a.starts_on < b.starts_on)
+    return 1;
+  if (a.starts_on > b.starts_on)
+    return -1;
+  return 0;
+}
 
 // expose these results as data to eleventy.
 module.exports = () => {
-
   return new Promise((resolve, reject) => {
-
     // go get it
-    axios.get(url).then((response) => {
-
+    axios.get(url).then(response => {
       // do some walking around in the JSON returned from Notist
       // to collect all of the data sources for each event found
       var events = response.data.data[0].relationships.data;
@@ -24,61 +27,72 @@ module.exports = () => {
       events.forEach(element => {
         var when = new Date(element.attributes.presented_on);
         var future = now - when < 0 ? true : false;
-        if(future) {
+        if (future) {
           eventURLs.push(element.links.event);
         } else {
-          eventURLs.push('https://noti.st/philhawksworth/' + element.id.replace('pr_','') + '.json' );
+          eventURLs.push(
+            "https://noti.st/philhawksworth/" +
+              element.id.replace("pr_", "") +
+              ".json"
+          );
         }
-      })
+      });
 
       // now go and get the info for each event
-      axios.all(eventURLs.map(l => axios.get(l))).then(axios.spread(function (...res) {
+      axios
+        .all(eventURLs.map(l => axios.get(l)))
+        .then(
+          axios.spread(function(...res) {
+            // gather the data about for each presentation and
+            // collect them in future and past arrays
+            var talks = {
+              future: [],
+              past: require("../speaking.json").events // grab the legacy events not yet populated on Notist
+            };
 
-        // gather the data about for each presentation and
-        // collect them in future and past arrays
-        var talks = {
-          future : [],
-          past : []
-        };
-
-        for (var talk in res) {
-
-          // is this an event ot a presentatoin?
-          // (since we onnly ask for events if this is in the future)
-          var type = res[talk].data.data[0].type;
-          if(type == 'events'){
-            var thisTalk = res[talk].data.data[0].attributes;
-            var when = new Date(thisTalk.ends_on);
-            var future = now - when < 0 ? true : false;
-            if(future) {
-              talks.future.push(thisTalk);
-            } else {
-              talks.past.push(thisTalk);
+            for (var talk in res) {
+              // is this an event ot a presentatoin?
+              // (since we onnly ask for events if this is in the future)
+              var type = res[talk].data.data[0].type;
+              if (type == "events") {
+                var thisTalk = res[talk].data.data[0].attributes;
+                var when = new Date(thisTalk.ends_on);
+                var future = now - when < 0 ? true : false;
+                if (future) {
+                  talks.future.push(thisTalk);
+                } else {
+                  talks.past.push(thisTalk);
+                }
+              } else {
+                var thisTalk = res[talk].data.data[0].attributes;
+                var when = new Date(thisTalk.ends_on);
+                var future = now - when < 0 ? true : false;
+                if (future) {
+                  talks.future.push(thisTalk);
+                } else {
+                  thisTalk =
+                    res[talk].data.data[0].relationships.data[0].attributes;
+                  talks.past.push(thisTalk);
+                }
+              }
             }
-          } else {
-            var thisTalk = res[talk].data.data[0].attributes;
-            var when = new Date(thisTalk.ends_on);
-            var future = now - when < 0 ? true : false;
-            if(future) {
-              talks.future.push(thisTalk);
-            } else {
-              thisTalk = res[talk].data.data[0].relationships.data[0].attributes;
-              talks.past.push(thisTalk);
-            }
-          }
-        }
 
-        // console.log('-----');
-        // console.log(JSON.stringify({'url': url, 'events': talks }));
-        // console.log('-----');
 
-        // we've got all the data now. So resolve the promise to return the data
-        resolve({'url': url, 'events': talks  });
-      }))
-      .catch((error) => {
-        reject(error);
-      })
-    })
+            // sort the events object by date
+            // because we are manually inserting some legacy data too
+            talks.past.sort(compare);
 
-  })
-}
+            console.log('-----');
+            console.log(JSON.stringify({'url': url, 'events': talks }));
+            console.log('-----');
+
+            // we've got all the data now. So resolve the promise to return the data
+            resolve({ url: url, events: talks });
+          })
+        )
+        .catch(error => {
+          reject(error);
+        });
+    });
+  });
+};

@@ -31,9 +31,9 @@ module.exports = () => {
         };
         recentTweets.recent.push(t);
       }
-      console.log('-----------');
-      console.log(JSON.stringify(recentTweets));
-      console.log('-----------');
+      // console.log('-----------');
+      // console.log(JSON.stringify(recentTweets));
+      // console.log('-----------');
       return recentTweets;
     })
     .catch(function (error) {

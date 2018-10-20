@@ -29,6 +29,8 @@ pageClass: painted-blue
     {%- include "event.njk" -%}
   {%- endfor -%}
 
+  <hr />
+
   <h2 id="previous">Previous events</h2>
   {%- for item in notist.events.past -%}
     {%- include "event.njk" -%}
