@@ -25,7 +25,7 @@ My site, this site, is made with Jekyll. Perhaps the most popular static site ge
 
 To bring recent tweets into the site, I add a [gulp task which requests my recent tweets](https://github.com/philhawksworth/hawksworx.com/blob/f5ece4ed3d06a3caae75978155e7f091c965cfaa/gulpfile.js#L168-L206) from Twitter's API, and stashes them in a YAML Data file. [Jekyll makes YAML Data files available](https://jekyllrb.com/docs/datafiles/) to its templates so I can use the content however I need.
 
-So far, so simple. Now to trigger a build and deplyment whenever I tweet.
+So far, so simple. Now to trigger a build and deployment whenever I tweet.
 
 Netlify can run your build for you in their environment in exactly the same way that as it runs in your local development environment. The output then gets deployed to their distributed CDN.
 
@@ -46,6 +46,6 @@ With these pieces in place, things start working nicely. Each tweet will find it
 1. IFTTT monitors activity from my twitter feed
 2. New tweets result in a call to a webhook
 3. POST requests to the specified webhook invoke a new build on Netlify
-4. The site build pulls in recent tweets from the Twitter API and [includes them in the site](#footer)
+4. The site build pulls in recent tweets from the Twitter API and [includes them in the home page of the site ](/#tweets)
 5. Victory dance
 
