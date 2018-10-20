@@ -78,13 +78,15 @@ module.exports = () => {
             }
 
 
-            // sort the events object by date
-            // because we are manually inserting some legacy data too
+            // sort the events object by date because we
+            // are manually inserting some legacy data too
             talks.past.sort(compare);
 
-            console.log('-----');
-            console.log(JSON.stringify({'url': url, 'events': talks }));
-            console.log('-----');
+            // Handy to log thr results out if we want
+            // to prime the dev data source
+            // console.log('-----');
+            // console.log(JSON.stringify({'url': url, 'events': talks }));
+            // console.log('-----');
 
             // we've got all the data now. So resolve the promise to return the data
             resolve({ url: url, events: talks });
