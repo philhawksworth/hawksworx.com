@@ -21,7 +21,7 @@
 
     str = str.toLowerCase();
 
-    // look for matches in the JSON
+    // look for matches in the search JSON
     var results = [];
     for(var item in searchIndex ) {
       var found = searchIndex[item].text.indexOf(str);

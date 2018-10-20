@@ -3,7 +3,7 @@
   "version": "2.0.1",
   "description": "Phil Hawksworth's personal website - hawksworx.com",
   "scripts": {
-    "start": "gulp watch & ELEVENTY_ENV=dev eleventy --serve",
+    "start": "gulp build && gulp watch & ELEVENTY_ENV=dev eleventy --serve",
     "build": "gulp build & ELEVENTY_ENV=prod eleventy"
   },
   "repository": {

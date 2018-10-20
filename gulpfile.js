@@ -36,7 +36,7 @@ gulp.task('js', function() {
 /*
   Watch folders for changess
 */
-gulp.task("watch", gulp.parallel('css','js'), function() {
+gulp.task("watch", function() {
   gulp.watch('./src/scss/**/*.scss', gulp.parallel('css'));
   gulp.watch('./src/js/**/*.js', gulp.parallel('js'));
 });
@@ -45,7 +45,7 @@ gulp.task("watch", gulp.parallel('css','js'), function() {
 /*
   Let's build this sucker.
 */
-gulp.task('build', gulp.series(
+gulp.task('build', gulp.parallel(
   'css',
   'js'
 ));
