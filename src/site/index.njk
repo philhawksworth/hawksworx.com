@@ -21,17 +21,37 @@ pageClass: painted-black
   <p>
     Wherever you find me, online or in the real world, please do come and say a friendly hello.
   </p>
+
   <hr />
+
   {% if notist.events.future.length %}
   {% set item = notist.events.future | last %}
   <h2><a href="/speaking#upcoming">Next conference appearance</a></h2>
   {%- include "event.njk" -%}
   {% endif %}
+
   <hr />
+
   <h2><a href="/blog">Recently on the blog</a></h2>
-  {%- for i in range(0, 1) -%}
-  {% set item = collections.posts[0] %}
-    {% include 'post-teaser.njk' %}
+  {% set item = collections.posts | first %}
+  {% include 'post-teaser.njk' %}
+
+
+  <hr />
+
+  <h2 id="tweets"><a href="https://twitter.com/philhawksworth">Recently on Twitter</a></h2>
+  <p>
+    Recently posted on <a href="https://twitter.com/philhawksworth">@philhawksworth</a> (excluding @replies).
+  </p>
+  {%- for i in range(0, 3) -%}
+  {% set item = tweets.recent[i] %}
+  {% include 'tweet.njk' %}
   {%- endfor -%}
+
+  <p>
+    <em>
+      These tweets are pulled from Twitter and baked into this page automatically whenever I tweet. You can <a href="/blog/keeping-a-jamstack-site-feeling-fresh-with-recent-tweets/">read about how</a> in a blog post.
+    </em>
+  </p>
 {% endblock %}
 

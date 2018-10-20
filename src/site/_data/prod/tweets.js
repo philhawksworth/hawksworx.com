@@ -1,0 +1,40 @@
+var Twitter = require('twitter');
+
+module.exports = () => {
+
+  // load environment variables
+  require('dotenv').config()
+
+  var client = new Twitter({
+    consumer_key: process.env.TWITTER_KEY,
+    consumer_secret: process.env.TWITTER_SECRET,
+    access_token_key: '',
+    access_token_secret: ''
+  });
+  var params = {screen_name: 'philhawksworth', count: 50, exclude_replies: true, tweet_mode: 'extended'};
+
+  return client.get('statuses/user_timeline', params)
+    .then(function(tweets) {
+      var recentTweets = {"recent" : []};
+      for(var tweet in tweets) {
+
+        // massage th data into the shape we want
+        var split = tweets[tweet].full_text.lastIndexOf('https://t.co');
+        var text =tweets[tweet].full_text.substring(0, split);
+        var t = {
+          "text": text.replace(/\n/g,'<br/>'),
+          "url": `https://twitter.com/philhawksworth/status/${tweets[tweet].id_str}`,
+          "date":  tweets[tweet].created_at,
+        };
+        recentTweets.recent.push(t);
+      }
+      // console.log('-----------');
+      // console.log(JSON.stringify(recentTweets));
+      // console.log('-----------');
+      return recentTweets;
+    })
+    .catch(function (error) {
+      throw error;
+    })
+
+}

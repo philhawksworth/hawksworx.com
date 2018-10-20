@@ -226,7 +226,7 @@ button {
 }
 
 .blog-list-item {
-  padding-bottom: 1em;
+  padding: 1em 0 2em;
   h2,h3 {
     margin-top:0;
     margin-bottom:0;
@@ -252,7 +252,14 @@ img.flag {
 a.more-link {
   background-color: #eee;
   display:inline-block;
-  margin-bottom: 4rem;
+}
+
+.tweet {
+  font-size: 0.9em;
+  background-color: rgba(0,0,0,0.03);
+  border-radius: 4px;
+  padding: 2em 2em 1em;
+  margin: 1em -2em 0.5em;
 }
 
 
