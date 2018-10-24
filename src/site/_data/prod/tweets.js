@@ -20,9 +20,9 @@ module.exports = () => {
 
         // massage the data into the shape we want
         // and clean up some of the formatting from twitter
-        var split = tweets[tweet].full_text.lastIndexOf('https://t.co');
-        var text =tweets[tweet].full_text.substring(0, split);
-        text = text.replace(/\n/g,'<br/>');
+        // var split = tweets[tweet].full_text.lastIndexOf('https://t.co');
+        // var text =tweets[tweet].full_text.substring(0, split);
+        var text = tweets[tweet].full_text.replace(/\n/g,'<br/>');
         text = text.replace(/<br\/><br\/>/g,'<p/><p>');
         var t = {
           "text": text,
