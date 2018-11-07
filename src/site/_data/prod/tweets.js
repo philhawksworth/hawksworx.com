@@ -1,4 +1,5 @@
-var Twitter = require('twitter');
+const Twitter = require('twitter');
+const fs      = require("fs");
 
 module.exports = () => {
 
@@ -31,9 +32,19 @@ module.exports = () => {
         };
         recentTweets.recent.push(t);
       }
-      // console.log('-----------');
-      // console.log(JSON.stringify(recentTweets));
-      // console.log('-----------');
+
+      // Handy to save the results to a local file
+      // to prime the dev data source
+      if(process.env.ELEVENTY_ENV == 'prime') {
+        fs.writeFile(__dirname + '/../dev/tweets.json', JSON.stringify(recentTweets), function(err) {
+          if(err) {
+            console.log(err);
+          } else {
+            console.log("Twitter content primed for dev.");
+          }
+        });
+      }
+
       return recentTweets;
     })
     .catch(function (error) {

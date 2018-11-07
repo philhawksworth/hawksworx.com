@@ -4,6 +4,7 @@
   "description": "Phil Hawksworth's personal website - hawksworx.com",
   "scripts": {
     "start": "gulp build && gulp watch & ELEVENTY_ENV=dev eleventy --serve",
+    "prime": "gulp build & ELEVENTY_ENV=prime eleventy",
     "build": "gulp build & ELEVENTY_ENV=prod eleventy"
   },
   "repository": {

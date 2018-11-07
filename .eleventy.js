@@ -1,4 +1,4 @@
-const env = process.env.ELEVENTY_ENV;
+var env = process.env.ELEVENTY_ENV;
 
 module.exports = function(eleventyConfig) {
 
@@ -44,7 +44,10 @@ module.exports = function(eleventyConfig) {
   });
 
 
-  // otehr config settings
+  // other config settings
+
+  // make the prime target act like prod
+  env = (env=="prime") ? "prod" : env;
   return {
     dir: {
       input: "src/site",

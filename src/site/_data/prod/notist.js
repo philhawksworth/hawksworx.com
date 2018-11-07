@@ -1,7 +1,8 @@
 const axios = require("axios");
+const fs    = require("fs");
 
 // Were are we getting data?
-// If this is defined in an environment variable in Netlufy, we'll use that
+// If this is defined in an environment variable in Netlify, we'll use that
 // Otherwise, we'll just show you Phil's
 var url = "https://noti.st/philhawksworth.json";
 var now = new Date();
@@ -32,22 +33,22 @@ module.exports = () => {
         } else {
           eventURLs.push(
             "https://noti.st/philhawksworth/" +
-              element.id.replace("pr_", "") +
-              ".json"
-          );
-        }
-      });
+            element.id.replace("pr_", "") +
+            ".json"
+            );
+          }
+        });
 
-      // now go and get the info for each event
-      axios
+        // now go and get the info for each event
+        axios
         .all(eventURLs.map(l => axios.get(l)))
         .then(
           axios.spread(function(...res) {
             // gather the data about for each presentation and
             // collect them in future and past arrays
             var talks = {
-              future: [],
-              past: require("../speaking.json").events // grab the legacy events not yet populated on Notist
+              future:  require("../speaking-tba.json").events, // prime the upcoming events list with any which are TBA
+              past: require("../speaking-legacy.json").events // grab the legacy events not yet populated on Notist
             };
 
             for (var talk in res) {
@@ -81,12 +82,19 @@ module.exports = () => {
             // sort the events object by date because we
             // are manually inserting some legacy data too
             talks.past.sort(compare);
+            talks.future.sort(compare);
 
-            // Handy to log thr results out if we want
+            // Handy to save the results to a local file
             // to prime the dev data source
-            // console.log('-----');
-            // console.log(JSON.stringify({'url': url, 'events': talks }));
-            // console.log('-----');
+            if(process.env.ELEVENTY_ENV == 'prime') {
+              fs.writeFile(__dirname + '/../dev/notist.json', JSON.stringify({'url': url, 'events': talks }), function(err) {
+                if(err) {
+                  console.log(err);
+                } else {
+                  console.log("Speaking content primed for dev.");
+                }
+              });
+            }
 
             // we've got all the data now. So resolve the promise to return the data
             resolve({ url: url, events: talks });

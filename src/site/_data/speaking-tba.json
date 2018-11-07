@@ -1,0 +1,22 @@
+{
+    "events": [
+        {
+          "title": "TBA",
+          "address": "Leeds, UK",
+          "starts_on": "2019-04-30T09:00:00Z",
+          "country_code": "gb-eng"
+        },
+        {
+          "title": "TBA",
+          "address": "San Francisco, USA",
+          "starts_on": "2019-04-16T09:00:00Z",
+          "country_code": "us"
+        },
+        {
+          "title": "TBA",
+          "address": "York, UK",
+          "starts_on": "2018-12-06T18:00:00Z",
+          "country_code": "gb-eng"
+        }
+      ]
+}
