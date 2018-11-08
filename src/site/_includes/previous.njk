@@ -8,6 +8,6 @@
 {% if previousItem %}
 <div class="teaser">
   <span>Previously posted:</span>
-  <a href="{{ previousItem.url | url }}">{{ previousItem.data.title }}</a>
+  <a href="{% if previousItem.data.externalurl %}{{ previousItem.data.externalurl }}{% else %}{{ previousItem.url | url }}{% endif %}">{{ previousItem.data.title }}</a>
 </div>
 {% endif %}
