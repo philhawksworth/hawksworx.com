@@ -254,6 +254,16 @@ a.more-link {
   display:inline-block;
 }
 
+img.external-link {
+  width: 0.8em;
+  padding-left:0.4em;
+  vertical-align: middle;
+  opacity: 0.3;
+}
+h2 img.external-link {
+  width: 0.6em;
+}
+
 .tweet {
   font-size: 0.9em;
   background-color: rgba(0,0,0,0.03);
