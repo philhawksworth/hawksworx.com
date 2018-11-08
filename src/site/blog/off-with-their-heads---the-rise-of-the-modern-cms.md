@@ -4,7 +4,7 @@ title: Off with their heads ! The rise of the modern CMS
 date: 2018-06-14T00:00:00Z
 tags:
   - cms
-  - opinion
+  - opinions
   - jamstack
 externalurl: https://medium.com/netlify/off-with-their-heads-the-rise-of-the-modern-cms-e0089538aed6
 ---
