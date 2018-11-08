@@ -35,7 +35,7 @@ module.exports = function(eleventyConfig) {
     if( outputPath.endsWith(".html") ) {
       let minified = htmlmin.minify(content, {
         useShortDoctype: true,
-        removeComments: false,
+        removeComments: false, // we need comments to identify the expcerpt split marker.
         collapseWhitespace: true
       });
       return minified;
