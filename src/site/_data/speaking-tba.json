@@ -1,16 +1,29 @@
 {
     "events": [
-        {
-          "title": "TBA",
-          "address": "Leeds, UK",
-          "starts_on": "2019-04-30T09:00:00Z",
-          "country_code": "gb-eng"
-        },
-        {
-          "title": "TBA",
-          "address": "San Francisco, USA",
-          "starts_on": "2019-04-16T09:00:00Z",
-          "country_code": "us"
-        }
-      ]
+      {
+        "title": "Webinar: I’ve got 99 problems but the server ain’t one",
+        "address": "Earth",
+        "starts_on": "2018-11-27T17:00:00Z",
+        "url": "https://www.contentful.com/resources/how-modern-developers-build-scalable-architectures-without-maintaining-servers/"
+      },
+      {
+        "title": "Fronteers Workshop: Netlify & Static Site Generators",
+        "address": "Utrecht, Netherlands",
+        "starts_on": "2019-01-25T09:00:00Z",
+        "url": "https://fronteers.nl/workshops/workshop-netlify-static-site-generators",
+        "country_code": "nl"
+      },
+      {
+        "title": "TBA",
+        "address": "Leeds, UK",
+        "starts_on": "2019-04-30T09:00:00Z",
+        "country_code": "gb-eng"
+      },
+      {
+        "title": "TBA",
+        "address": "San Francisco, USA",
+        "starts_on": "2019-04-16T09:00:00Z",
+        "country_code": "us"
+      }
+    ]
 }
