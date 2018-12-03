@@ -1,6 +1,12 @@
 {
     "events": [
         {
+          "title": "Webinar: I’ve got 99 problems but the server ain’t one",
+          "address": "Earth",
+          "starts_on": "2018-11-27T17:00:00Z",
+          "url": "https://www.contentful.com/resources/how-modern-developers-build-scalable-architectures-without-maintaining-servers/"
+        },
+        {
             "title": "VueJS London (MC)",
             "address": "London, UK",
             "starts_on": "2018-09-21T09:00:00Z",
