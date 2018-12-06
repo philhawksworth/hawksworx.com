@@ -1,5 +1,6 @@
 [build]
   command = "yarn run build"
+  functions = "functions"
 
 [build.environment]
   NODE_VERSION = "8.9.0"
