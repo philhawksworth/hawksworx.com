@@ -383,6 +383,37 @@ blockquote {
   border-left-color: mix(#333, #fff, 10%);
 }
 
+.thumbnail-grid {
+
+  img {
+    width: 100%;
+    border: solid 4px #fff;
+    padding:0;
+    margin:0;
+    filter: grayscale(90%);
+    transition-duration: 0.5s;
+  }
+
+  a:link,
+  a:visited {
+    border-bottom-style:none;
+    display: inline-block;
+    width: 16%;
+    padding:0;
+    margin:0;
+    line-height: 1;
+
+    &:hover img,
+    &:focus img {
+      filter: grayscale(0%);
+    }
+
+  }
+
+
+
+}
+
 
 .solid-footer {
   color: mix(#333, #fff, 40%);

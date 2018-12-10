@@ -36,6 +36,16 @@ pageClass: painted-black
   {% set item = collections.posts | first %}
   {% include 'post-teaser.njk' %}
 
+  <hr />
+
+  <h2 id="instagram"><a href="https://instagram.com/philhawksworth">Recently on Instagram</a></h2>
+  <div class="thumbnail-grid">
+  {% for entry in instagram.slice(0,12) %}
+    <a href="{{ entry.link }}" target="_BLANK" rel="noopener">
+      <img src="{{ entry.images.thumbnail.url }}"/>
+    </a>
+  {%- endfor -%}
+  </div>
 
   <hr />
 
@@ -52,5 +62,6 @@ pageClass: painted-black
       These tweets are pulled from Twitter and baked into this page automatically whenever I tweet. You can <a href="/blog/keeping-a-jamstack-site-feeling-fresh-with-recent-tweets/">read about how</a> in a blog post.
     </em>
   </p>
+
 {% endblock %}
 
