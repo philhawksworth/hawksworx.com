@@ -360,9 +360,32 @@ footer {
   }
 }
 
+.thumbnail-grid {
+  img {
+    width: 100%;
+    border: solid 4px #fff;
+    padding:0;
+    margin:0;
+    filter: grayscale(90%);
+    transition-duration: 0.5s;
+  }
+  a:link,
+  a:visited {
+    border-bottom-style:none;
+    display: inline-block;
+    width: 16%;
+    padding:0;
+    margin:0;
+    line-height: 1;
+    &:hover img,
+    &:focus img {
+      filter: grayscale(0%);
+    }
+  }
+}
 
 /*
- colours
+ base colours
 */
 html {
   background-color: mix(#333, #fff, 20%);
@@ -382,39 +405,6 @@ a {
 blockquote {
   border-left-color: mix(#333, #fff, 10%);
 }
-
-.thumbnail-grid {
-
-  img {
-    width: 100%;
-    border: solid 4px #fff;
-    padding:0;
-    margin:0;
-    filter: grayscale(90%);
-    transition-duration: 0.5s;
-  }
-
-  a:link,
-  a:visited {
-    border-bottom-style:none;
-    display: inline-block;
-    width: 16%;
-    padding:0;
-    margin:0;
-    line-height: 1;
-
-    &:hover img,
-    &:focus img {
-      filter: grayscale(0%);
-    }
-
-  }
-
-
-
-}
-
-
 .solid-footer {
   color: mix(#333, #fff, 40%);
   background-color: #333;
@@ -457,14 +447,98 @@ form {
 /*
   themes
 */
-.painted-black { @include theme(#222) }
-.painted-ruby { @include theme(#A03029) }
-.painted-red { @include theme(#af2a40) }
-.painted-blue { @include theme(#3B58A2) }
-.painted-brightblue { @include theme(#246bbd) }
-.painted-darkblue { @include theme(#3E4E75) }
-.painted-greyblue { @include theme(#323D3E) }
-.painted-steelblue { @include theme(#5B7589) }
-.painted-lime { @include theme(#7B892D) }
-.painted-seagreen { @include theme(#578671) }
-.painted-sepia { @include theme(#565043) }
+
+// dark themes (where text in the side bar should be light)
+// root colour specified as rgb triple so that it can me manipulated without preprocessing
+.theme-ruby { --theme-base: 158, 48, 40; }
+.theme-black { --theme-base:34, 34, 34; }
+.theme-red { --theme-base:175, 42, 64; }
+.theme-blue { --theme-base:59, 88, 162; }
+.theme-brightblue { --theme-base:36, 107, 189; }
+.theme-darkblue { --theme-base:62, 78, 117; }
+.theme-greyblue { --theme-base:50, 61, 62; }
+.theme-lime { --theme-base:123, 137, 45; }
+.theme-seagreen { --theme-base:87, 134, 113; }
+.theme-sepia { --theme-base:86, 80, 67; }
+.theme-steelblue { --theme-base: 91, 117, 137; }
+
+// bright themes (where text in the side bar should be dark)
+// root colour specified as rgb triple so that it can me manipulated without preprocessing
+.theme-neonblue {--theme-base: 30, 235, 250; }
+.theme-neongreen { --theme-base: 173, 247, 0; }
+.theme-nearwhite { --theme-base: 245, 245, 245; }
+
+
+
+// for all dark themes
+.dark-theme {
+  background-color: rgba(var(--theme-base),0.3);
+  .sidebar {
+    color: rgba(#fff,0.7);
+    background-color: rgba(var(--theme-base),1);
+  }
+  a.home {
+    color: rgba(var(--theme-base),1);
+  }
+  blockquote {
+    border-left-color: rgba(var(--theme-base), 0.1);
+  }
+  .solid-footer {
+    background-color: rgba(var(--theme-base),1);
+    color: rgba(#fff,0.6);
+    @include bp(wide) {
+      background-color: rgba(#000,0.05);
+    }
+  }
+  form {
+    background-color: rgba(var(--theme-base),0.1);
+  }
+}
+
+
+.bright-theme {
+  background-color: rgba(var(--theme-base),0.3);
+  .sidebar {
+    color:rgba(#000,0.7);
+    background-color: rgba(var(--theme-base),1);
+    h1 {
+      color: rgba(#000,0.8);
+    }
+    a {
+      color: #000;
+      border-color: rgba(#000,0.6);
+    }
+    a.home {
+      color: rgba(var(--theme-base),1);
+      background-color: rgba(0,0,0,0.8);
+    }
+    ul.nav {
+      a:hover { background-color: rgba(0,0,0,0.06); }
+      a.home:hover { background-color:  rgba(0,0,0,0.9); }
+    }
+  }
+  blockquote {
+    border-left-color: rgba(var(--theme-base), 0.3);
+  }
+  .search-ui,
+  .teaser {
+    background-color: rgba(#000,0.03);
+    a { color: #000; }
+  }
+  .solid-footer {
+    background-color: rgba(var(--theme-base),1);
+    color: rgba(#000,0.6);
+    a {
+      color: #000;
+    }
+    @include bp(wide) {
+      background-color: rgba(#000,0.05);
+    }
+  }
+
+}
+
+
+
+
+

@@ -8,7 +8,7 @@ draft: false
 allowcomments: true
 tags: ["announcements", "rga"]
 hero: /images/badge-and-gun.jpg
-pageClass: painted-sepia
+pageClass: dark-theme theme-sepia
 ---
 
 The time has come to close a precious chapter of my career. [Six years ago](/blog/joining-rga-london/) I joined R/GA, and by crikey, it has been quite a ride. I'll soon be handing in my "R/GA badge and gun" to move on to my next adventure, and I'm incredibly excited about it. But more on that later. For now, I want to take a breath and reflect on six rewarding years.

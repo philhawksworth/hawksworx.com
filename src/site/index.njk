@@ -1,5 +1,5 @@
 ---
-pageClass: painted-black
+pageClass: dark-theme theme-black
 ---
 
 {% extends 'layouts/page.njk' %}
@@ -24,17 +24,17 @@ pageClass: painted-black
 
   <hr />
 
+  <h2><a href="/blog">Recently on the blog</a></h2>
+  {% set item = collections.posts | first %}
+  {% include 'post-teaser.njk' %}
+
+  <hr />
+
   {% if notist.events.future.length %}
   {% set item = notist.events.future | last %}
   <h2><a href="/speaking#upcoming">Next conference appearance</a></h2>
   {%- include "event.njk" -%}
   {% endif %}
-
-  <hr />
-
-  <h2><a href="/blog">Recently on the blog</a></h2>
-  {% set item = collections.posts | first %}
-  {% include 'post-teaser.njk' %}
 
   <hr />
 

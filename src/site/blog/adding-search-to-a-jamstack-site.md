@@ -6,7 +6,7 @@ tags: ["jamstack", "javascript", "tips"]
 photoCredits:
   - name: "Sandro Kradolfer"
     url: "https://unsplash.com/photos/IVYZWptFt1g"
-pageClass: "painted-steelblue"
+pageClass: "dark-theme theme-steelblue"
 ---
 
 Search is often cited as a limitation of static sites. Searching _feels_ dynamic, so surely it is impossible on a _static_ site, right? Thankfully not. Here is a nice technique to use with most any [static site generator](https://staticgen.com) and a little JavaScript as a progressive enhancement to add search functionality to your [JAMstack](https://jamstack.org) site.
@@ -170,15 +170,3 @@ When we bring these building blocks together, we can assemble whatever behaviors
 When we have the ability to inspect and manipulate the data and content that makes up our sites. And generate data services to expose whatever we like, we gain the ability to craft a wide variety of experiences in our website.  Delivering search functionalities like this prove to be far more simple than we might have originally expected.
 
 With a little imagination, adding this and other dynamic features to JAMstack sites is really satisfying.
-
-
-
-
-
-
-
-
-
-
-
-

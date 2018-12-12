@@ -7,7 +7,7 @@ section: blog
 allowcomments: true
 tags: ["jamstack", "static", "web"]
 hero: /images/sledgehammer-nut.jpg
-pageClass: "painted-greyblue"
+pageClass: "dark-theme theme-greyblue"
 ---
 
 Today I saw a question on twitter which I have seen a few times before. It was posed by the rather excellent and lovely Drew McLellan.
