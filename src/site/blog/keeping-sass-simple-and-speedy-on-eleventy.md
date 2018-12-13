@@ -9,7 +9,7 @@ photoCredits:
 pageClass: "bright-theme theme-neonblue"
 ---
 
-I've experimented with quite a few different static site generators over the years. Currently I'm really enjoying using [Eleventy](https://www.11ty.io/docs/tutorials/#quick-tips) for this site, and feel like I've got the most simple setup I've had in years. Eleventy has [some nice tips](https://www.11ty.io/docs/tutorials/#quick-tips) for compiling your CSS and JavaScript into your site which feel very elegant to me. But for sites with very many pages, these might have a slight overhead for site generation speed, so I'm using a variation to speed things up.
+I've experimented with quite a few different static site generators over the years. [Currently](https://5c125977f00f9a00078d2ea6--hawksworx.netlify.com/) I'm really enjoying using [Eleventy](https://www.11ty.io/docs/tutorials/#quick-tips) for this site, and feel like I've got the most simple setup I've had in years. Eleventy has [some nice tips](https://www.11ty.io/docs/tutorials/#quick-tips) for compiling your CSS and JavaScript into your site which feel very elegant to me. But for sites with very many pages, these might have a slight overhead for site generation speed, so I'm using a variation to speed things up.
 
 
 ![Speeding](/images/jack-b-762488-unsplash.jpg "Speeding")
@@ -88,10 +88,10 @@ No need for a filter now. Just an include of the file:
 That's it. Now I only need to generate and minify the CSS once each time I build, rather than once per page. I have a very similar process for the small amount of JavaScript I use in the site.
 
 You can look closer at the code to see:
-- the source Sass files
-- the generated CSS
-- the template which includes them
-- the gulp file which generates them and watches for changes
+- the source [Sass files](https://github.com/philhawksworth/hawksworx.com/tree/e359bc4fd55d96f01ab90f19dae721536f17225f/src/scss)
+- the [generated CSS](https://github.com/philhawksworth/hawksworx.com/blob/e359bc4fd55d96f01ab90f19dae721536f17225f/src/site/_includes/css/main.css)
+- the [template](https://github.com/philhawksworth/hawksworx.com/blob/e359bc4fd55d96f01ab90f19dae721536f17225f/src/site/_includes/layouts/base.njk#L7) which includes them
+- the [gulp file](https://github.com/philhawksworth/hawksworx.com/blob/e359bc4fd55d96f01ab90f19dae721536f17225f/gulpfile.js#L11-L18) which generates them and watches for changes
 
 
 
