@@ -18,6 +18,12 @@
         "address": "San Francisco, USA",
         "starts_on": "2019-04-16T09:00:00Z",
         "country_code": "us"
+      },
+      {
+        "title": "TBA",
+        "address": "Utrecht, Netherlands",
+        "starts_on": "2019-05-16T09:00:00Z",
+        "country_code": "nl"
       }
     ]
 }
