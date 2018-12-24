@@ -5,7 +5,7 @@ allowcomments: true
 tags: ["jamstack", "ssg", "tips"]
 photoCredits:
   - name: "Jack B"
-    url: "https://unsplash.com/photos/ca0TmysC14Us"
+    url: "https://unsplash.com/photos/ca0TmysC14U"
 pageClass: "bright-theme theme-neonblue"
 ---
 
