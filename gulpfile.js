@@ -9,7 +9,7 @@ const concat  = require('gulp-concat');
   generate the css with sass
 */
 gulp.task('css', function() {
-  return gulp.src('./src/scss/main.scss')
+  return gulp.src('./src/scss/*.scss')
     .pipe(sass({
       outputStyle: 'compressed'
     })
