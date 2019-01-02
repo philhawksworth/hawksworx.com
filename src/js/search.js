@@ -43,7 +43,7 @@
     }
   }
 
-  // add an event listenrer for a click on the search link
+  // add an event listener for a click on the search link
   btnHandler('#search-link', function(){
 
     // get the data
