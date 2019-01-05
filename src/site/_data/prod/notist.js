@@ -87,7 +87,7 @@ module.exports = () => {
             // Handy to save the results to a local file
             // to prime the dev data source
             if(process.env.ELEVENTY_ENV == 'prime') {
-              fs.writeFile(__dirname + '/../dev/notist.json', JSON.stringify({'url': url, 'events': talks }), function(err) {
+              fs.writeFile(__dirname + '/../dev/notist.json', JSON.stringify({'url': url, 'events': talks }), err => {
                 if(err) {
                   console.log(err);
                 } else {
@@ -100,8 +100,8 @@ module.exports = () => {
             resolve({ url: url, events: talks });
           })
         )
-        .catch(error => {
-          reject(error);
+        .catch(err => {
+          reject(err);
         });
     });
   });

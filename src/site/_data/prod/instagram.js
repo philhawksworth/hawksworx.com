@@ -8,24 +8,22 @@ var url = `https://api.instagram.com/v1/users/self/media/recent/?access_token=${
 module.exports = () => {
   return new Promise((resolve, reject) => {
     axios.get(url)
-      .then((response) => {
-
-     // Handy to save the results to a local file
-      // to prime the dev data source
-      if(process.env.ELEVENTY_ENV == 'prime') {
-        fs.writeFile(__dirname + '/../dev/instagram.json', JSON.stringify(response.data.data), function(err) {
-          if(err) {
-            console.log(err);
-          } else {
-            console.log("Instagram content primed for dev.");
-          }
-        });
-      }
-
+      .then(response => {
+        // Handy to save the results to a local file
+        // to prime the dev data source
+        if(process.env.ELEVENTY_ENV == 'prime') {
+          fs.writeFile(__dirname + '/../dev/instagram.json', JSON.stringify(response.data.data), err => {
+            if(err) {
+              console.log(err);
+            } else {
+              console.log("Instagram content primed for dev.");
+            }
+          });
+        }
         resolve(response.data.data);
       })
-      .catch((error) => {
-        reject(error);
+      .catch(err => {
+        reject(err);
       });
   })
 }

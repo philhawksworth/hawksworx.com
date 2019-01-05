@@ -36,7 +36,7 @@ module.exports = () => {
       // Handy to save the results to a local file
       // to prime the dev data source
       if(process.env.ELEVENTY_ENV == 'prime') {
-        fs.writeFile(__dirname + '/../dev/tweets.json', JSON.stringify(recentTweets), function(err) {
+        fs.writeFile(__dirname + '/../dev/tweets.json', JSON.stringify(recentTweets), err => {
           if(err) {
             console.log(err);
           } else {
@@ -47,8 +47,8 @@ module.exports = () => {
 
       return recentTweets;
     })
-    .catch(function (error) {
-      throw error;
+    .catch(err => {
+      throw err;
     })
 
 }
