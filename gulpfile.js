@@ -1,15 +1,16 @@
 
-const gulp    = require("gulp");
-const sass    = require("gulp-sass");
-const uglify  = require('gulp-uglify');
-const concat  = require('gulp-concat');
+const gulp      = require("gulp");
+const sass      = require("gulp-sass");
+const uglify    = require('gulp-uglify');
+const concat    = require('gulp-concat');
+
 
 
 /*
   generate the css with sass
 */
 gulp.task('css', function() {
-  return gulp.src('./src/scss/main.scss')
+  return gulp.src('./src/scss/*.scss')
     .pipe(sass({
       outputStyle: 'compressed'
     })
@@ -22,15 +23,12 @@ gulp.task('css', function() {
  Uglify our javascript files into one.
  Use pump to expose errors more usefully.
 */
-
 gulp.task('js', function() {
   return gulp.src("./src/js/**/*.js")
     .pipe(concat('hawksworx.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./src/site/_includes/js'));
 });
-
-
 
 
 /*

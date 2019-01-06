@@ -1,5 +1,6 @@
 ---
 title: Keeping Sass simple and speedy on Eleventy
+description: Optimising your local development pipleine, for faster Eleventy Sass compilation
 date: 2018-12-12
 allowcomments: true
 tags: ["jamstack", "ssg", "tips"]

@@ -1,5 +1,6 @@
 ---
 title: Adding search to a JAMstack site
+description: Using progressive enhancement, JavaScript and a static site generator to create site search facility.
 date: 2018-10-18
 allowcomments: true
 tags: ["jamstack", "javascript", "tips"]

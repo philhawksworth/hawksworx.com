@@ -1,12 +1,9 @@
 ---
 title: Keeping a Jamstack Site Feeling Fresh With Recent Tweets
+description: "Rather than using Javascript in the browser to show recent tweets, I'd rather remove that dependency and bake the tweets into the HTML. A few simple tools can automate that and keep a site fresh."
 date: 2017-03-27T10:56:18Z
-publishdate: 2017-03-27T10:56:18Z
-section: blog
-draft: false
 allowcomments: true
 tags: ["web", "development", "static", "jamstack"]
-description: Rather than using Javascript in the browser to show recent tweets, I'd rather remove that dependency and bake the tweets into the HTML. A few simple tools can automate that and keep a site fresh.
 pageClass: "dark-theme theme-lime"
 ---
 
