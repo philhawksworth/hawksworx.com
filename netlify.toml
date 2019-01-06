@@ -31,7 +31,6 @@
   status = 302
 
 
-
 # Simplify requests for my headshots
 [[redirects]]
   from = "/philhawksworth-*"
