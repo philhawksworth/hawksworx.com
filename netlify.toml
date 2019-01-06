@@ -26,7 +26,7 @@
 
 # social media card assets
 [[redirects]]
-  from = "/card-image/:path"
+  from = "/card-image/*"
   to = "https://hawksworx-cards.netlify.com/card/www-hawksworx-com:splat"
   status = 200
 
