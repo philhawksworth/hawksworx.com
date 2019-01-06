@@ -11,6 +11,7 @@ html, body {
   margin: 0;
   padding: 0;
   text-align: center;
+  // --theme-base: 20, 20, 20
 }
 
 .container {
@@ -37,8 +38,8 @@ ul.nav {
     text-decoration: none;
   }
   a.home {
-    color: rgba(var(--theme-base),1);
-    background-color: #fff;
+    color: #fff;
+    background-color: #333;
   }
 }
 
@@ -53,6 +54,7 @@ h1 {
   padding-top:0.3rem;
   padding-bottom:0rem;
   width: 60%;
+  color: #333;
 }
 
 .subtitle {
@@ -63,11 +65,12 @@ h1 {
   font-style: italic;
 }
 
+
 // for all dark themes
 html.bright-theme {
   background-color: rgba(var(--theme-base),1);
-  color: rgba(#333, 0.7);
-  a.home {
+  color: rgba(#000, 0.7);
+  ul.nav a.home {
     color: rgba(var(--theme-base),1);
     background-color: #333;
   }
@@ -80,6 +83,10 @@ html.bright-theme {
 html.dark-theme {
   background-color: rgba(var(--theme-base),1);
   color: rgba(#fff, 0.7);
+  ul.nav a.home {
+    color: rgba(var(--theme-base),1);
+    background-color: #fff;
+  }
   h1 {
     color: #fff;
   }
