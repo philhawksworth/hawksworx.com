@@ -28,7 +28,7 @@
 [[redirects]]
   from = "/card-image/:path"
   to = "https://hawksworx-cards.netlify.com/card/www-hawksworx-com:path"
-  status = 200
+  status = 302
 
 
 
