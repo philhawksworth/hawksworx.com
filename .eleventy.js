@@ -17,6 +17,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("dateDisplay", require("./src/site/_filters/dates.js") );
   eleventyConfig.addFilter("section", require("./src/site/_filters/section.js") );
   eleventyConfig.addFilter("squash", require("./src/site/_filters/squash.js") );
+  eleventyConfig.addFilter("kebab", require("./src/site/_filters/kebab.js") );
 
   // Assemble some collections
   eleventyConfig.addCollection("tagList", require("./src/site/_filters/getTagList.js"));

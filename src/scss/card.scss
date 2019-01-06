@@ -33,7 +33,7 @@ ul.nav {
   }
   a {
     display:inline-block;
-    padding: 4em 0.7em 0.4em 0.7em;
+    padding: 5em 0.8em 0.5em 0.8em;
     border-bottom-style: none;
     text-decoration: none;
   }
@@ -72,7 +72,7 @@ html.bright-theme {
   color: rgba(#000, 0.7);
   ul.nav a.home {
     color: rgba(var(--theme-base),1);
-    background-color: #333;
+    background-color: rgba(0,0,0,0.8);
   }
   h1 {
     color: #333;

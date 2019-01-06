@@ -24,6 +24,14 @@
    Referrer-Policy= "no-referrer-when-downgrade"
 
 
+# social media card assets
+[[redirects]]
+  from = "/card-image/*"
+  to = "https://hawksworx-cards.netlify.com/card/www-hawksworx-com-:splat"
+  status = 200
+
+
+
 # Simplify requests for my headshots
 [[redirects]]
   from = "/philhawksworth-*"
