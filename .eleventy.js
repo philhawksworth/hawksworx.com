@@ -24,6 +24,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("posts", function(collection) {
     return collection.getFilteredByGlob("src/site/blog/*.md").reverse();
   });
+  eleventyConfig.addCollection("cards", function(collection) {
+    return collection.getAll().filter(function(item) {
+      return "card" in item.data;
+    });
+  });
 
 
   // static passthroughs

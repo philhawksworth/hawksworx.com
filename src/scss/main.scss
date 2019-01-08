@@ -10,6 +10,7 @@
   font-display: swap;
 }
 
+
 html, body {
   margin: 0;
   padding: 0;
@@ -435,6 +436,7 @@ form {
   }
   a.home {
     color: #333;
+    // color:rgba(var(--theme-base));
     background-color: #fff;
   }
   ul.nav {
