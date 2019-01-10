@@ -88,6 +88,20 @@ No need for a filter now. Just an include of the file:
 
 That's it. Now I only need to generate and minify the CSS once each time I build, rather than once per page. I have a very similar process for the small amount of JavaScript I use in the site.
 
+
+## Watch and learn
+
+One last step to grease the development wheels further, is to watch for changes in the Sass and recompile if changes are found. Eleventy already provides hot reloading and browsersync assistance which rebuilds and refreshes when it detects changes, but my Sass compilation happens upstream of that.
+
+By adding a gulp task to watch for changes, and running that concurrently with `eleventy --serve` I get the best of both worlds. Changes to the Sass files trigger a rebuild of the CSS, which is output as an asset in the Eleventy build (so its changes then trigger an Eleventy rebuild and refresh too).
+
+I run this command via a [Yarn script helper](https://github.com/philhawksworth/hawksworx.com/tree/e359bc4fd55d96f01ab90f19dae721536f17225f/package.json#L6), but doing so via NPM or directly would work nicely too:
+
+```
+gulp watch & eleventy --serve
+```
+
+
 You can look closer at the code to see:
 - the source [Sass files](https://github.com/philhawksworth/hawksworx.com/tree/e359bc4fd55d96f01ab90f19dae721536f17225f/src/scss)
 - the [generated CSS](https://github.com/philhawksworth/hawksworx.com/blob/e359bc4fd55d96f01ab90f19dae721536f17225f/src/site/_includes/css/main.css)
