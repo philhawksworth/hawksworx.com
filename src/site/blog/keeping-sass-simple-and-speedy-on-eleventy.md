@@ -97,7 +97,7 @@ By adding a gulp task to watch for changes, and running that concurrently with `
 
 I run this command via a [Yarn script helper](https://github.com/philhawksworth/hawksworx.com/tree/e359bc4fd55d96f01ab90f19dae721536f17225f/package.json#L6), but doing so via NPM or directly would work nicely too:
 
-```
+```bash
 gulp watch & eleventy --serve
 ```
 
