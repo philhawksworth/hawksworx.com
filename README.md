@@ -36,6 +36,8 @@ yarn start
 
 ## Deployment
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/793e740d-7c84-4e39-b528-a34be81cd71e/deploy-status)](https://app.netlify.com/sites/hawksworx/deploys)
+
 The build command `yarn run build` will generate a set of static assets in a `dist` folder which can be deployed to any web hosting service.
 
 My preferred method is to host on [Netlify](http://www.netlify.com) which can run this build process in a CI environment and then deploy the build to automatically to a global CDN. Such deployments are [triggered automatically](https://www.netlify.com/docs/continuous-deployment/) by every git push to the `master` branch of the origin repository.
