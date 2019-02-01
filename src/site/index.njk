@@ -42,7 +42,7 @@ pageClass: dark-theme theme-black
   <div class="thumbnail-grid">
   {% for entry in instagram.slice(0,12) %}
     <a href="{{ entry.link }}" target="_BLANK" rel="noopener">
-      <img src="{{ entry.images.thumbnail.url }}"/>
+      <img src="{{ entry.images.thumbnail.url }}" alt="Instagram photo: {{ entry.caption.text }}" />
     </a>
   {%- endfor -%}
   </div>
