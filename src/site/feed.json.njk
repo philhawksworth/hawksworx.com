@@ -24,8 +24,7 @@ metadata:
     {
       "title": "{{ post.data.title }}",
       "link": "{{ absolutePostUrl }}",
-      "updated": "{{ post.date | rssDate }}",
-      "content" : "{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}"
+      "updated": "{{ post.date | rssDate }}"
     }{% if not loop.last %},{% else %}{%- endif -%}
 
   {%- endfor %}
