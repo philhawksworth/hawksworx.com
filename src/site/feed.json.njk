@@ -13,20 +13,21 @@ metadata:
     id: https://www.hawksworx.com
 ---
 {
-  "title": {{ metadata.title }},
-  "subtitle": {{ metadata.feed.subtitle }},
-  "link": {{ metadata.feed.id }},
-  "feed: {{ metadata.feed.url }},
-  "author" {{ metadata.author.name }},
+  "title": "{{ metadata.title }}",
+  "subtitle": "{{ metadata.feed.subtitle }}",
+  "link": "{{ metadata.feed.id }}",
+  "feed": "{{ metadata.feed.url }}",
+  "author": "{{ metadata.author.name }}",
   "entries" : [
     {%- for post in collections.posts %}
     {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
     {
-      "title": {{ post.data.title }}
-      "link": {{ absolutePostUrl }}"
-      "updated": {{ post.date | rssDate }}
-      "content" : {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
-    }
+      "title": "{{ post.data.title }}",
+      "link": "{{ absolutePostUrl }}",
+      "updated": "{{ post.date | rssDate }}",
+      "content" : "{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}"
+    }{% if not loop.last %},{% else %}{%- endif -%}
+
   {%- endfor %}
   ]
 }
