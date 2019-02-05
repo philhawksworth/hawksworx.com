@@ -20,9 +20,10 @@
         "country_code": "us"
       },
       {
-        "title": "TBA",
+        "title": "Front End United",
         "address": "Utrecht, Netherlands",
         "starts_on": "2019-05-16T09:00:00Z",
+        "url": "https://www.frontendunited.org/",
         "country_code": "nl"
       }
     ]
