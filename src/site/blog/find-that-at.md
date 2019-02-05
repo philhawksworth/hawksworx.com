@@ -11,7 +11,7 @@ pageClass: "bright-theme theme-neongreen"
 
 I've recently started to roll my own short URLs. Using Netlify's optimised edge redirects via Netlify's redirects API is incredibly efficient and gives me URLs which I manage on my own domain instead of farming that out to a third-party provider who might go away.
 
-It is remarkable easy to set up. Here's how.
+It is remarkably easy to set up. Here's how.
 
 
 ![Ant and leaf](/images/vlad-tchompalov-450777-unsplash.jpg "Ant and leaf")
