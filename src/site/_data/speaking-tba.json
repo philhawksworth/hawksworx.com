@@ -1,13 +1,6 @@
 {
     "events": [
       {
-        "title": "Fronteers Workshop: Netlify & Static Site Generators",
-        "address": "Utrecht, Netherlands",
-        "starts_on": "2019-01-25T09:00:00Z",
-        "url": "https://fronteers.nl/workshops/workshop-netlify-static-site-generators",
-        "country_code": "nl"
-      },
-      {
         "title": "TBA",
         "address": "Leeds, UK",
         "starts_on": "2019-05-03T09:00:00Z",
