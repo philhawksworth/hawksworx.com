@@ -58,7 +58,7 @@ module.exports = () => {
               if (type == "events") {
                 var thisTalk = res[talk].data.data[0].attributes;
                 var when = new Date(thisTalk.ends_on);
-                var future = now - when < 0 ? true : false;
+                var future = now - when <= 0 ? true : false;
                 if (future) {
                   talks.future.push(thisTalk);
                 } else {
