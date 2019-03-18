@@ -52,6 +52,19 @@ module.exports = function(eleventyConfig) {
   });
 
 
+  // Avoid orphans
+	eleventyConfig.addFilter("orphanWrap", function(text) {
+		let splitSpace = text.split(" ");
+		let after = "";
+		if( splitSpace.length > 2 ) {
+			after += " ";
+			let lastWord = splitSpace.pop();
+			let secondLastWord = splitSpace.pop();
+			after += `${secondLastWord}&nbsp;${lastWord}`;
+		}
+		return splitSpace.join(" ") + after;
+	});
+
   // other config settings
 
   // make the prime target act like prod
