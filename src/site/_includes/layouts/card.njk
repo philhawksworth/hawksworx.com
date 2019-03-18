@@ -11,7 +11,7 @@
         <li><a href="/" class="home">hawksworx</a></li>
         <li class="subtitle">by Phil Hawksworth</li>
       </ul>
-      <h1>{{ post.data.title }}</h1>
+      <h1>{{ post.data.title | orphanWrap }}</h1>
       {# <p class="grab">{{ post.data.description }}</p> #}
     </div>
   </body>

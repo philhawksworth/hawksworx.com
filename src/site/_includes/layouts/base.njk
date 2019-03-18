@@ -19,8 +19,8 @@
           {% include "search-ui.njk" %}
           <div class="page-details">
           {% block sidebar %}
-            <h1>{{ title }}</h1>
-            <p>{{ subtitle }}</p>
+            <h1>{{ title | orphanWrap | safe }}</h1>
+            <p>{{ subtitle | orphanWrap | safe }}</p>
           {% endblock %}
           </div>
         </div>

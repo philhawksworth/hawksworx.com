@@ -2,9 +2,9 @@
   <div class="blog-list-item">
     <p class="by-line">{{ item.date | dateDisplay }}</p>
     {% if item.data.externalurl %}
-    <h2><a href="{{ item.data.externalurl }}">{{ item.data.title }}</a><img src="/images/icons/external-link-icon.svg" class="external-link" alt="Read this post on the site on which it was posted."></h2>
+    <h2><a href="{{ item.data.externalurl }}">{{ item.data.title | orphanWrap | safe }}</a><img src="/images/icons/external-link-icon.svg" class="external-link" alt="Read this post on the site on which it was posted."></h2>
     {% else %}
-    <h2><a href="{{ item.url }}">{{ item.data.title }}</a></h2>
+    <h2><a href="{{ item.url }}">{{ item.data.title | orphanWrap | safe }}</a></h2>
     {% endif %}
     <div class="tags">
     {% for tag in item.data.tags -%}
@@ -13,7 +13,7 @@
     {% endfor -%}
     </div>
     <div class="grab">
-    {{ item.templateContent | section | safe }}
+    {{ item.templateContent | section | orphanWrap | safe }}
     </div>
     {% if item.data.externalurl %}
     <a href="{{ item.data.externalurl }}" class="more-link btn external-link">read more <img src="/images/icons/external-link-icon.svg" class="external-link" alt="Read this post on the site on which it was posted."></a>
