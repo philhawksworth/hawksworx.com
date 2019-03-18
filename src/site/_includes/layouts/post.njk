@@ -16,7 +16,7 @@
 
 {% block content %}
   <div class="excerpt">
-    {{ content | section | orphanWrap  | safe }}
+    {{ content | section | orphanWrap | safe }}
   </div>
   {{ content | section('remainder') | safe }}
 {% endblock %}

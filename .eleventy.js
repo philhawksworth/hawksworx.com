@@ -54,6 +54,7 @@ module.exports = function(eleventyConfig) {
 
   // Avoid orphans
 	eleventyConfig.addFilter("orphanWrap", function(text) {
+    if(!text) return;
 		let splitSpace = text.split(" ");
 		let after = "";
 		if( splitSpace.length > 2 ) {
