@@ -43,5 +43,8 @@ The build command `yarn run build` will generate a set of static assets in a `di
 My preferred method is to host on [Netlify](http://www.netlify.com) which can run this build process in a CI environment and then deploy the build to automatically to a global CDN. Such deployments are [triggered automatically](https://www.netlify.com/docs/continuous-deployment/) by every git push to the `master` branch of the origin repository.
 
 
+## Clone and deploy your own
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/philhawksworth/hawksworx.com)
+
 
 
