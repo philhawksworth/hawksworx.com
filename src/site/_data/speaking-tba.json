@@ -4,14 +4,14 @@
         "title": "All Day Hey",
         "address": "Leeds, UK",
         "starts_on": "2019-05-03T09:00:00Z",
-        "url" : "https://alldayhey.com"
+        "url" : "https://alldayhey.com",
         "country_code": "gb-eng"
       },
       {
         "title": "Smashing Conference",
         "address": "San Francisco, USA",
         "starts_on": "2019-04-16T09:00:00Z",
-        "url": "https://smashingconf.com/sf-2019/lunch-sessions"
+        "url": "https://smashingconf.com/sf-2019/lunch-sessions",
         "country_code": "us"
       },
       {
