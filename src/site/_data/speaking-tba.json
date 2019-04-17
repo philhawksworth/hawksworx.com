@@ -22,10 +22,11 @@
         "country_code": "nl"
       },
       {
-        "title": "TBA",
+        "title": "Smashing Conference",
         "address": "Toronto, Canada",
         "starts_on": "2019-06-25T09:00:00Z",
-        "country_code": "ca"
+        "country_code": "ca",
+        "url":"https://smashingconf.com/toronto-2019/"
       }
     ]
 }
