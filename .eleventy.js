@@ -53,18 +53,18 @@ module.exports = function(eleventyConfig) {
 
 
   // Avoid orphans
-	eleventyConfig.addFilter("orphanWrap", function(text) {
+  eleventyConfig.addFilter("orphanWrap", function(text) {
     if(!text) return;
-		let splitSpace = text.split(" ");
-		let after = "";
-		if( splitSpace.length > 2 ) {
-			after += " ";
-			let lastWord = splitSpace.pop();
-			let secondLastWord = splitSpace.pop();
-			after += `${secondLastWord}&nbsp;${lastWord}`;
-		}
-		return splitSpace.join(" ") + after;
-	});
+    let splitSpace = text.split(" ");
+    let after = "";
+    if(splitSpace.length > 2) {
+      after += " ";
+      let lastWord = splitSpace.pop();
+      let secondLastWord = splitSpace.pop();
+      after += `${secondLastWord}&nbsp;${lastWord}`;
+    }
+    return splitSpace.join(" ") + after;
+  });
 
   // other config settings
 
