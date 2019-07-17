@@ -9,4 +9,4 @@ tags:
 externalurl: https://dev.to/philhawksworth/reflecting-on-london-s-first-jamstack-conference-13e9
 ---
 
-A summary of what took place at the first[JAMstack conference in London](https://2019.jamstackconf/com/london), including my thoughts and a list of the speakers and activities.
+A summary of what took place at the first [JAMstack conference in London](https://2019.jamstackconf/com/london), including my thoughts and a list of the speakers and activities.
