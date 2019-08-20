@@ -460,3 +460,20 @@ form {
     a.home:hover { background-color: #fff; }
   }
 }
+
+a.floating-lozenge {
+  border-style:none;
+  img {
+    border-radius: 5px;
+    box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.37);
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  &:hover,
+  &:focus {
+    img {
+      box-shadow: 0 1px 10px 0px rgba(0, 0, 0, 0.45);
+    }
+  }
+}
