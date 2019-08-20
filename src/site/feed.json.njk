@@ -20,7 +20,10 @@ metadata:
   "author": "{{ metadata.author.name }}",
   "entries" : [
     {%- for post in collections.posts %}
-    {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
+    {% set absolutePostUrl %}
+    {%- if post.data.externalurl -%}{{ post.data.externalurl }}{%- else -%}
+    {{ post.url | url | absoluteUrl(metadata.url) }}{%- endif -%}
+    {% endset %}
     {
       "title": "{{ post.data.title }}",
       "link": "{{ absolutePostUrl }}",
