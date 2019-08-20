@@ -4,7 +4,8 @@ permalink: search.json
 {"search" : [
 {%- for item in collections.posts -%}
   {
-    "url" : "{{ item.url }}",
+    {% if item.data.externalurl %}"url" : "{{ item.data.externalurl }}",
+    {% else %}"url" : "{{ item.url }}",{% endif %}
     "title" : "{{ item.data.title }}",
     "text" : "{{ (item.data.title + " " + item.templateContent) | squash }}"
   }{% if not loop.last %},{% else %}{%- endif -%}

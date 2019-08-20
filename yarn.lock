@@ -19,7 +19,7 @@
   dependencies:
     prismjs "^1.15.0"
 
-"@11ty/eleventy@0.8.3":
+"@11ty/eleventy@0.7.1":
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/@11ty/eleventy/-/eleventy-0.7.1.tgz#56ef50fae0b1390f5799b25abf85f0a60abc21ad"
   integrity sha512-tG5L9f2JcwLcoG6XnR8EOYMJWZIw7Gl33BDVct9dRh+upAL5qMPfwgPMN6kKdaMQ9ki42EBHKmLLAVRcyCk1yg==
