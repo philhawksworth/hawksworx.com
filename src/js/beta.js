@@ -1,6 +1,6 @@
 // Set a cookie to opt in to the beta
 btnHandler('#btn-opt-in', function(){
-  document.cookie = "nf_ab=oh-so-orange; expires=Thu, 01 Jan 2019 00:00:00 GMT";
+  document.cookie = "nf_ab=oh-so-orange; expires=Thu, 01 Jan 2021 00:00:00 GMT";
   window.location.reload(true);
 });
 
