@@ -1,3 +1,10 @@
 {
-    "events": []
+    "events": [
+      {
+        "title": "TBA",
+        "address": "Toronto, Canada",
+        "starts_on": "2019-11-14 18:00",
+        "country_code": "ca"
+      }
+    ]
 }
