@@ -6,6 +6,7 @@ const fs    = require("fs");
 // Otherwise, we'll just show you Phil's
 var url = "https://noti.st/philhawksworth.json";
 var now = new Date();
+var today = now.setHours(0,0,0,0);
 
 // We'll need to sort the results by date.
 function compare(a,b) {
@@ -14,6 +15,14 @@ function compare(a,b) {
   if (a.starts_on > b.starts_on)
     return -1;
   return 0;
+}
+
+// return true if a date string is in the future
+function isFuture (date) {
+  var when = new Date(date);
+  when.setHours(0,0,0,0);
+  var future = today - when <= 0 ? true : false;
+  return future;
 }
 
 // expose these results as data to eleventy.
@@ -26,9 +35,7 @@ module.exports = () => {
       var events = response.data.data[0].relationships.data;
       var eventURLs = [];
       events.forEach(element => {
-        var when = new Date(element.attributes.presented_on);
-        var future = now - when < 0 ? true : false;
-        if (future) {
+        if (isFuture(element.attributes.presented_on)) {
           eventURLs.push(element.links.event);
         } else {
           eventURLs.push(
@@ -57,22 +64,17 @@ module.exports = () => {
               var type = res[talk].data.data[0].type;
               if (type == "events") {
                 var thisTalk = res[talk].data.data[0].attributes;
-                var when = new Date(thisTalk.ends_on);
-                var future = now - when <= 0 ? true : false;
-                if (future) {
+                if (isFuture(thisTalk.ends_on)) {
                   talks.future.push(thisTalk);
                 } else {
                   talks.past.push(thisTalk);
                 }
               } else {
                 var thisTalk = res[talk].data.data[0].attributes;
-                var when = new Date(thisTalk.ends_on);
-                var future = now - when < 0 ? true : false;
-                if (future) {
+                if (isFuture(thisTalk.ends_on)) {
                   talks.future.push(thisTalk);
                 } else {
-                  thisTalk =
-                    res[talk].data.data[0].relationships.data[0].attributes;
+                  thisTalk = res[talk].data.data[0].relationships.data[0].attributes;
                   talks.past.push(thisTalk);
                 }
               }
