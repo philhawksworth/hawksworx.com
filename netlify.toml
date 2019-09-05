@@ -71,3 +71,9 @@
   from = "/talks/stealth"
   to = "https://speakerdeck.com/philhawksworth/stealthy-git-solving-cms-woes-with-git-on-the-quiet"
   status = 302
+
+ [[redirects]]
+  from = "https://oh-so-orange--hawksworx.netlify.com*"
+  to = "https://hawksworx.com:splat"
+  status = 302
+  force = true
