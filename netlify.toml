@@ -73,6 +73,12 @@
   status = 302
 
  [[redirects]]
+  from = "https://oh-so-orange--hawksworx.netlify.com"
+  to = "https://hawksworx.coms"
+  status = 302
+  force = true
+
+[[redirects]]
   from = "https://oh-so-orange--hawksworx.netlify.com/*"
   to = "https://hawksworx.com/:splat"
   status = 302
