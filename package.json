@@ -8,7 +8,8 @@
     "build": "gulp build & ELEVENTY_ENV=prod eleventy && yarn run build:lambda",
     "dryrun": "gulp build & ELEVENTY_ENV=dev eleventy",
     "build:lambda": "netlify-lambda build src/lambda",
-    "start:lambda": "netlify-lambda serve src/lambda"
+    "start:lambda": "netlify-lambda serve src/lambda",
+    "new:link": "node utils/new.js link"
   },
   "repository": {
     "type": "git",
