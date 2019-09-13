@@ -10,7 +10,7 @@ if (dd < 10) {
 if (mm < 10) {
   mm = '0' + mm;
 }
-const datestamp = dd + '-' + mm + '-' + yyyy;
+const datestamp = yyyy + '-' + mm + '-' + dd;
 
 // get the meaningful arguments
 process.argv.splice(0,2);
@@ -20,11 +20,12 @@ if(process.argv[0] == 'link') {
   process.argv.splice(0,1);
 
   let props = {
-    title: process.argv.join("-").toLowerCase(),
+    filename: process.argv.join("-").toLowerCase(),
+    title: process.argv.join(" "),
     date: datestamp
   }
 
-  let path = `src/site/blog/${props.title}.md`;
+  let path = `src/site/blog/${props.filename}.md`;
   let fileContent = template(props);
 
   fs.writeFile(path, fileContent, err => {
