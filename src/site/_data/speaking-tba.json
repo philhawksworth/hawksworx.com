@@ -5,6 +5,12 @@
         "address": "Toronto, Canada",
         "starts_on": "2019-11-14 18:00",
         "country_code": "ca"
+      },
+      {
+        "title": "TBA",
+        "address": "London, UK",
+        "starts_on": "2020-04-02 09:00",
+        "country_code": "uk"
       }
     ]
 }
