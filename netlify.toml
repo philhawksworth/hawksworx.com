@@ -20,7 +20,7 @@
     X-PNH-CUSTOM-TEST = "/blog/*.html"
 
 [[headers]]
-  for = "/blog/*"
+  for = "/speaking/*"
   [headers.values]
     X-PNH-CUSTOM-TEST = "/blog/*"
 
