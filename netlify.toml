@@ -7,13 +7,17 @@
 
 
 [[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy= "no-referrer-when-downgrade"
 
- for = "/*"
- [headers.values]
-   X-Frame-Options = "DENY"
-   X-XSS-Protection = "1; mode=block"
-   X-Content-Type-Options = "nosniff"
-   Referrer-Policy= "no-referrer-when-downgrade"
+[[headers]]
+  for = "/blog/*.html"
+  [headers.values]
+    PNH-CUSTOM-TEST = "/blog/*.html"
 
 
 # social media card assets
