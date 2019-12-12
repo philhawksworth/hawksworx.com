@@ -17,8 +17,12 @@
 [[headers]]
   for = "/blog/*.html"
   [headers.values]
-    PNH-CUSTOM-TEST = "/blog/*.html"
+    X-PNH-CUSTOM-TEST = "/blog/*.html"
 
+[[headers]]
+  for = "/blog/*"
+  [headers.values]
+    X-PNH-CUSTOM-TEST = "/blog/*"
 
 # social media card assets
 [[redirects]]
