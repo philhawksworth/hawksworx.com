@@ -14,15 +14,6 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy= "no-referrer-when-downgrade"
 
-[[headers]]
-  for = "/blog/*.html"
-  [headers.values]
-    X-PNH-CUSTOM-TEST = "/blog/*.html"
-
-[[headers]]
-  for = "/speaking/*"
-  [headers.values]
-    X-PNH-CUSTOM-TEST = "/blog/*"
 
 # social media card assets
 [[redirects]]

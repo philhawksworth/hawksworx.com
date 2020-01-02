@@ -11,7 +11,7 @@ tags:
   - opinions
 ---
 
-Every now an again, I have to remind my self of the old addage about <i>the perfect being the enemy of the good</i>. I can spend a lot of time on something wothout ever getting to the finish line when I forget this. I'm not unusual. It's a common trait. But getting beyond this is so important, and I have had this brought into sharp focus a few of times lately in ways I found rather inspiring.
+Every now an again, I have to remind my self of the old adage about <i>the perfect being the enemy of the good</i>. I can spend a lot of time on something without ever getting to the finish line when I forget this. I'm not unusual. It's a common trait. But getting beyond this is so important, and I have had this brought into sharp focus a few of times lately in ways I found rather inspiring.
 
 <!--more-->
 
