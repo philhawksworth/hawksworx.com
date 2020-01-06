@@ -23,7 +23,7 @@ Here is a short explanation about why.
 By "pre-rendering", we mean, "to generate the site in advance". This is different to generating each page view in response to a request from a user which is a more traditional model these days. Pre-rendering brings a number of advantages:
 
 1. **Speed**. When all the work of turning data and templates into markup is done ahead of time, serving a response is faster than doing it _on demand_.
-1. **Security**. Since we pre-rendered our response, we can serve it as static assets. This has huge advantages in terms of complexity and security of hosting infrastracutre.
+1. **Security**. Since we pre-rendered our response, we can serve it as static assets. This has huge advantages in terms of complexity and security of hosting infrastructure.
 1. **Scale**. Traditional "dynamic" stacks which assemble each response _a la minute_ struggle at times of heavy load. Capacity planning is an art in itself. One strategy is to introduce complex caching layers to hold static snapshots of common database queries, commonly used assets, or even common page views. But a pre-rendered site can be cached at a CDN by default. No more fearing being "slash-dotted".
 1. **Certainty**. While some are excited by the aspect of JAMstack which suggests serverless hosting (indeed, JAMstack can take maintaining a webserver refreshingly out of the equation), describing JAMstack as serverless hosting is only partially accurate. Serverless can be a wonderful companion to JAMstack sites (I'll save that for another post). But by pre-rendering our sites we can be certain that our pages are correct before we deploy them. I like to talk about putting distance between the user and the technical complexity.
 
