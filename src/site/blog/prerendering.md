@@ -12,7 +12,7 @@ pageClass: "bright-theme theme-khaki "
 
 2019 seemed to be the year that the term [JAMstack](https://jamstack.org?utm_source=devto&utm_medium=jamuary-prerendering-pnh&utm_campaign=devex) started to really grow in popularity with more web developers than ever before. It is approach that I have believed in for many years. [Netlify](https://netlify.com/?utm_source=devto&utm_medium=jamuary-prerendering-pnh&utm_campaign=devex) (where I work) was created to enable exactly this type of architecture and indeed coined the very term.
 
-But JAMstack can sound confusing. There are a number of emerging interpretations. In my opinion, thre is one aspect of JAMstack which absolutely: Pre-rendering.
+But JAMstack can sound confusing. There are a number of emerging interpretations. In my opinion, there is one aspect of JAMstack which absolutely key: Pre-rendering.
 
 Here is a short explanation about why.
 
