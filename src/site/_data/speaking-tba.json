@@ -1,10 +1,36 @@
 {
     "events": [
       {
-        "title": "TBA",
+        "title": "Generate",
         "address": "London, UK",
         "starts_on": "2020-04-02 09:00",
-        "country_code": "gb"
+        "country_code": "gb",
+        "url": "https://www.generateconf.com/"
+      },
+      {
+        "title": "TBA",
+        "address": "St Petersburg, Russia",
+        "starts_on": "2020-04-10 09:00",
+        "country_code": "ru"
+      },
+      {
+        "title": "Smashing Conference",
+        "address": "San Francisco, US",
+        "starts_on": "2020-04-21 09:00",
+        "country_code": "us",
+        "url": "https://smashingconf.com/sf-2020/"
+      },
+      {
+        "title": "TBA",
+        "address": "Austin, US",
+        "starts_on": "2020-07-09 09:00",
+        "country_code": "us"
+      },
+      {
+        "title": "JAMstack Conf",
+        "address": "San Francisco, US",
+        "starts_on": "2020-10-06 09:00",
+        "country_code": "us"
       }
     ]
 }
