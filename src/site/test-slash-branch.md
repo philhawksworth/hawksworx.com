@@ -13,7 +13,7 @@ The button below is just to help demonstrate a clever little trick you can do wi
 
 ## In or out?
 
-Clicking this button will add a cookie which will result in Netlify's intelligent CDN invisibly routing your requests to hawksworx.com to a specific branch where a beta version of the site is being serve. Don't too get excited, it will just be show this page with the word SLASHES on it.
+If you see this, then you have opted in to the `test/slashes-with-branches` branch. Although you won't see that in your URL.
 
-<a href="#" id="btn-opt-in-slash" class="btn more-link">Opt in. A branch with slashes in its name</a>
+<a href="#" id="btn-opt-out" class="btn more-link">Opt out. Back to the master branch please/</a>
 
