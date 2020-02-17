@@ -13,7 +13,7 @@ btnHandler('#btn-opt-in-slash', function(){
   var now = new Date();
   var expires = now.getTime() + 1000 * 3600 * 24 * 365;
   now.setTime(expires);
-  document.cookie = 'nf_ab=oh-so-orange; expires=' + now.toUTCString();
+  document.cookie = 'nf_ab=test-slashes-in-branches; expires=' + now.toUTCString();
   window.location.reload(true);
 })
 
