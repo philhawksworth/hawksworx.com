@@ -13,7 +13,7 @@ module.exports = function(text) {
   var content = content.toLowerCase();
 
   // remove all html elements and new lines
-  var re = /(&lt;.*?&gt;)/gi;
+  var re = /(&lt;.*?&gt;)|(<.*?>)/gi;
   var plain = unescape(content.replace(re, ''));
 
   // remove duplicated words
@@ -26,8 +26,7 @@ module.exports = function(text) {
   //remove newlines, and punctuation
   result = result.replace(/\.|\,|\?|-|—|\n/g, '');
   //remove repeated spaces
-  result = result.replace(/[ ]{2,}/g, ' ');
+  result = result.replace(/([ ]{2,}|\t+)/g, ' ');
 
   return result;
 }
-
