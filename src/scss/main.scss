@@ -362,28 +362,32 @@ footer {
 }
 
 .thumbnail-grid {
+
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  a:link,
+  a:visited {
+    border-bottom-style:none;
+    width: 22%;
+    &:hover img,
+    &:focus img {
+      filter: grayscale(0%);
+    }
+  }
+
   img {
-    width: 100%;
+    // width: 100%;
     border: solid 4px #fff;
     padding:0;
     margin:0;
     filter: grayscale(90%);
     transition-duration: 0.5s;
   }
-  a:link,
-  a:visited {
-    border-bottom-style:none;
-    display: inline-block;
-    width: 16%;
-    padding:0;
-    margin:0;
-    line-height: 1;
-    &:hover img,
-    &:focus img {
-      filter: grayscale(0%);
-    }
-  }
 }
+
 
 .embed-container {
   position: relative;

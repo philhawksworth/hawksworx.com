@@ -40,9 +40,9 @@ pageClass: dark-theme theme-black
 
   <h2 id="instagram"><a href="https://instagram.com/philhawksworth">Recently on Instagram</a></h2>
   <div class="thumbnail-grid">
-  {% for entry in instagram.slice(0,12) %}
-    <a href="{{ entry.link }}" target="_BLANK" rel="noopener">
-      <img src="{{ entry.images.thumbnail.url }}" alt="Instagram photo: {{ entry.caption.text }}" />
+  {% for entry in instagram %}
+    <a href="{{ entry.instagramURL }}" target="_BLANK" rel="noopener">
+      <img src="/images/instagram/{{ entry.id }}.jpeg" alt="Instagram photo: {{ entry.caption }}" />
     </a>
   {%- endfor -%}
   </div>
