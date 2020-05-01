@@ -140,7 +140,7 @@
     # t (thumbnail)
     # m (medium)
     # l (large)
-    imageSize = "m"
+    imageSize = "t"
 
     # Instagram username
     username = "philhawksworth"
