@@ -37,20 +37,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/site/manifest.json");
   eleventyConfig.addPassthroughCopy("src/site/browserconfig.xml");
 
-  // minify the html output
-  const htmlmin = require("html-minifier");
-  eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
-    if( outputPath.endsWith(".html") ) {
-      let minified = htmlmin.minify(content, {
-        useShortDoctype: true,
-        removeComments: false, // we need comments to identify the excerpt split marker.
-        collapseWhitespace: true
-      });
-      return minified;
-    }
-    return content;
-  });
-
 
   // Avoid orphans
   eleventyConfig.addFilter("orphanWrap", function(text) {
