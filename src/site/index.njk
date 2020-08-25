@@ -36,16 +36,6 @@ pageClass: dark-theme theme-black
   {%- include "event.njk" -%}
   {% endif %}
 
-  <hr />
-
-  <h2 id="instagram"><a href="https://instagram.com/philhawksworth">Recently on Instagram</a></h2>
-  <div class="thumbnail-grid">
-  {% for entry in instagram %}
-    <a href="{{ entry.instagramURL }}" target="_BLANK" rel="noopener">
-      <img src="/images/instagram/{{ entry.id }}_t.jpeg" alt="Instagram photo: {{ entry.caption }}" />
-    </a>
-  {%- endfor -%}
-  </div>
 
   <hr />
 

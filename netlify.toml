@@ -117,35 +117,6 @@
   status = 404
 
 
-
-# Config for the Netlify Build Plugin: netlify-plugin-add-instagram
-[[plugins]]
-  package = "netlify-plugin-add-instagram"
-
-  [plugins.inputs]
-
-    # Where to put the image files
-    imageFolder = "src/site/images/instagram"
-
-    # Also stash data about the images in a json file
-    dataFile = "src/site/_data/prod/instagram.json"
-
-    # How many seconds should we cache the instagram feed for?
-    feedTTL = 180
-
-    # How many seconds should we cache each instagram image for?
-    imageTTL = 1209600   # 2 weeks
-
-    # Which of Instagram's image sizes should we fetch?
-    # t (thumbnail)
-    # m (medium)
-    # l (large)
-    imageSize = "t"
-
-    # Instagram username
-    username = "philhawksworth"
-
-
 # Config for the Netlify Build Plugin: netlify-plugin-minify-html
 [[plugins]]
   package = "netlify-plugin-minify-html"
