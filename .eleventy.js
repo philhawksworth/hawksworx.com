@@ -2,6 +2,7 @@ let env = process.env.ELEVENTY_ENV;
 
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const uglify = require("uglify-js");
 const sass = require("sass");
 
 module.exports = function(eleventyConfig) {
@@ -33,6 +34,20 @@ module.exports = function(eleventyConfig) {
     }
   });
  
+  // JS pipeline. Just minify.
+  eleventyConfig.addTemplateFormats("js");
+  eleventyConfig.addExtension("js", {
+    outputFileExtension: "js",
+    compile: function(contents) {
+      return (data) => {
+        const min = uglify.minify(
+          contents, {}
+        );
+        return min.code;
+      }
+    }
+  });
+
 
 
   // Add filters to Nunjucks
