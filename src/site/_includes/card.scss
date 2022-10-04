@@ -1,0 +1,94 @@
+@import '_themes';
+
+@font-face {
+  font-family: Placard;
+  src: url('/fonts/placardmtstd-cond-webfont.woff2') format('woff2'),
+       url('/fonts/placardmtstd-cond-webfont.woff') format('woff');
+  font-display: swap;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.container {
+  width: 70%;
+  text-align: left;
+  margin: 0 auto;
+}
+
+ul.nav {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 0.9em;
+  list-style: none;
+  margin:0 0 5em 0;
+  padding:0;
+  li {
+    display: inline;
+    margin-right: 1em;
+  }
+  a {
+    display:inline-block;
+    padding: 5em 0.8em 0.5em 0.8em;
+    border-bottom-style: none;
+    text-decoration: none;
+  }
+  a.home {
+    color: #fff;
+    background-color: #333;
+  }
+}
+
+h1 {
+  font-family: Placard, arial, sans-serif;
+  font-size: 4em;
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-top:0;
+  margin-bottom:0;
+  padding-top:0.3rem;
+  padding-bottom:0rem;
+  width: 60%;
+  color: #333;
+}
+
+.subtitle {
+  font-weight: normal;
+}
+.grab {
+  font-size: 1.6em;
+  font-style: italic;
+}
+
+
+// for all dark themes
+html.bright-theme {
+  background-color: rgba(var(--theme-base),1);
+  color: rgba(#000, 0.7);
+  ul.nav a.home {
+    color: rgba(var(--theme-base),1);
+    background-color: rgba(0,0,0,0.8);
+  }
+  h1 {
+    color: #333;
+  }
+}
+
+// for all dark themes
+html.dark-theme {
+  background-color: rgba(var(--theme-base),1);
+  color: rgba(#fff, 0.7);
+  ul.nav a.home {
+    color: rgba(var(--theme-base),1);
+    background-color: #fff;
+  }
+  h1 {
+    color: #fff;
+  }
+}
+
+

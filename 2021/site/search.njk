@@ -1,0 +1,42 @@
+---
+title: Search Phil Hawksworth's blog
+description: Various blog posts about web development, the JAMstack, events and other bits and pieces. Seek and ye might find.
+---
+
+{% extends 'layouts/page.njk' %}
+
+{% block sidebar %}
+  <h1>Search 🔎</h1>
+  <p>
+    Search this site
+  </p>
+{% endblock %}
+
+
+{% block content %}
+
+  <h2>Search this site</h2>
+  <p>
+    This site is indexed by Google. So it can be searched.
+  </p>
+
+  <form action="https://www.google.co.uk/search" method="get" class="search">
+    <input type="hidden" name="q" id="q" value="site:http://hawksworx.com">
+    <p><label for="search-str">Search <small>(results displayed on Google's site)</small></label>
+    <input type="text" name="q" id="search-str"></p>
+    <p><button type="submit" class="submit">Search with Google</button></p>
+  </form>
+
+  <h2>Tagged posts</h2>
+  <p>
+    If you are struggling to find what you are looking for, you might also find it by exploring the tags.
+  </p>
+  <ul>
+  {% for tag in collections.tagList %}
+    {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+    <li><a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a> ({{ collections[tag].length }})</li>
+  {% endfor %}
+  </ul>
+{% endblock %}
+
+

@@ -1,0 +1,8 @@
+  <div class="blog-list-item tweet">
+    <h3>
+      <a href="{{ item.url }}">{{ item.date | dateDisplay }}</a>
+    </h3>
+    <p>
+      {{ item.text | urlize | safe }}
+    </p>
+  </div>

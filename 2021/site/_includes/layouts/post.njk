@@ -1,0 +1,27 @@
+
+{% extends 'layouts/base.njk' %}
+{% set section = 'blog' %}
+
+
+{% block sidebar %}
+  <p class="by-line">{{ date | dateDisplay }} by <a href="/about">Phil Hawksworth</a></p>
+  <h1>{{ title | orphanWrap | safe }}</h1>
+  <ul class="tags">
+  {% for tag in tags -%}
+    <li><a href="/tags/{{ tag }}" class="tag">#{{ tag }}</a></li>
+  {% endfor -%}
+  </ul>
+{% endblock %}
+
+
+{% block content %}
+  <div class="excerpt">
+    {{ content | section | orphanWrap | safe }}
+  </div>
+  {{ content | section('remainder') | safe }}
+{% endblock %}
+
+
+{% block prefooter %}
+  {% include 'previous.njk' %}
+{% endblock %}

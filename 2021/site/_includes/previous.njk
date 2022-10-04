@@ -1,0 +1,13 @@
+{% set currentItemIndex = 0 %}
+{% for item in collections.posts %}
+  {% if item.url == page.url %}
+  	{% set currentItemIndex = loop.index0 %}
+	{% endif %}
+{% endfor %}
+{% set previousItem = collections.posts[currentItemIndex + 1] %}
+{% if previousItem %}
+<div class="teaser">
+  <span>Previously posted:</span>
+  <a href="{% if previousItem.data.externalurl %}{{ previousItem.data.externalurl }}{% else %}{{ previousItem.url | url }}{% endif %}">{{ previousItem.data.title }}</a>
+</div>
+{% endif %}

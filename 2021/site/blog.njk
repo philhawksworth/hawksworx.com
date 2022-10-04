@@ -1,0 +1,30 @@
+---
+title: Phil Hawksworth's blog posts
+description: Various blog posts about web development, the JAMstack, events and other bits and pieces.
+card: true
+---
+
+{% extends 'layouts/page.njk' %}
+
+{% block sidebar %}
+  <h1>The Blog</h1>
+  <p>
+    My various noodlings. Mostly, but not exclusively, about technology and the web.
+  </p>
+  <p>
+    I also write blog posts and announcements on the Netlify Blog. You can find <a href="https://www.netlify.com/authors/phil-hawksworth/">my posts</a> and many others there.
+  </p>
+{% endblock %}
+
+
+{% block content %}
+  {%- for item in collections.posts  -%}
+  {% if loop.index < 4 %}
+  {% include 'post-teaser.njk' %}
+  {% else %}
+  {% include 'post-teaser-condensed.njk' %}
+  {% endif %}
+  {%- endfor -%}
+{% endblock %}
+
+

@@ -1,0 +1,14 @@
+  <div class="blog-list-item">
+    <p class="by-line">
+      {{ item.starts_on | dateDisplay }},
+      {% if item.address == 'Earth' -%} online{%- else  -%} in {{ item.address }}
+    </p>{%- endif %}
+    <h3>
+      <img src="/images/flags/{% if item.country_code %}{{ item.country_code }}{% else %}un{% endif %}.svg" class="flag" alt="The flag for {{ item.address }}" />
+      {% if item.url %}
+      <a href="{{ item.url }}" target="NEW" rel="noopener">{{ item.title }}</a>
+      {% else %}
+      {{ item.title }}
+      {% endif %}
+    </h3>
+  </div>

@@ -1,0 +1,9 @@
+{% if photoCredits %}
+<hr />
+<h4>Photo credits</h4>
+<blockquote>
+{% for item in photoCredits %}
+  <p><em>{{ item.name }} - <a href="{{ item.url }}" target="NEW" rel="noopener">{{ item.url }}</em></p>
+{% endfor %}
+</blockquote>
+{% endif %}

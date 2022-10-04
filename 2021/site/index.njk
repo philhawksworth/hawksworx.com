@@ -1,0 +1,57 @@
+---
+pageClass: dark-theme theme-black
+---
+
+{% extends 'layouts/page.njk' %}
+
+{% block sidebar %}
+  <h1>Hawksworx</h1>
+  <p class="phonetic">
+   /hɔːkswəːks/
+  </p>
+  <p>
+    The blog, playground, and generally a home on the web for <a href="/about" class="no-wrap">Phil Hawksworth</a>, a web nerd, amateur comedian, and cat&nbsp;botherer.
+  </p>
+{% endblock %}
+
+{% block content %}
+  <p>
+    You can usually find me on <a href="https://twitter.com/philhawksworth">Twitter</a>. And you can sometimes find me at web development <a href="/speaking">conferences</a>, where I might be talking about development techniques. I blog here less frequently than I'd like, but manage it a little more often on the <a href="https://www.netlify.com/blog">Netlify blog</a>.
+  </p>
+  <p>
+    Wherever you find me, online or in the real world, please do come and say a friendly hello.
+  </p>
+
+  <hr />
+
+  <h2><a href="/blog">Recently on the blog</a></h2>
+  {% set item = collections.posts | first %}
+  {% include 'post-teaser.njk' %}
+
+  <hr />
+
+  {% if notist.events.future.length %}
+  {% set item = notist.events.future | last %}
+  <h2><a href="/speaking#upcoming">Next conference appearance</a></h2>
+  {%- include "event.njk" -%}
+  {% endif %}
+
+
+  <hr />
+
+  <h2 id="tweets"><a href="https://twitter.com/philhawksworth">Recently on Twitter</a></h2>
+  <p>
+    Recently posted on <a href="https://twitter.com/philhawksworth">@philhawksworth</a> (excluding @replies).
+  </p>
+  {%- for i in range(0, 3) -%}
+  {% set item = tweets.recent[i] %}
+  {% include 'tweet.njk' %}
+  {%- endfor -%}
+  <p>
+    <em>
+      These tweets are pulled from Twitter and baked into this page automatically whenever I tweet. You can <a href="/blog/keeping-a-jamstack-site-feeling-fresh-with-recent-tweets/">read about how</a> in a blog post.
+    </em>
+  </p>
+
+{% endblock %}
+

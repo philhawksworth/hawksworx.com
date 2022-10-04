@@ -1,16 +1,38 @@
-var env = process.env.ELEVENTY_ENV;
+let env = process.env.ELEVENTY_ENV;
+
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
+const sass = require("sass");
 
 module.exports = function(eleventyConfig) {
 
   // syntax highlighting plugin
-  const syntaxHighlightPlugin = require("@11ty/eleventy-plugin-syntaxhighlight");
-  eleventyConfig.addPlugin(syntaxHighlightPlugin, {
-    templateFormats: "md"
+  eleventyConfig.addPlugin(syntaxHighlight, {
+    templateFormats: ["md"]
   });
 
   // RSS plugin
-  const pluginRss = require("@11ty/eleventy-plugin-rss");
   eleventyConfig.addPlugin(pluginRss);
+
+
+  // Sass pipeline
+  eleventyConfig.addTemplateFormats("scss");
+  eleventyConfig.addExtension("scss", {
+    outputFileExtension: "css",
+    compile: function(contents, includePath) {
+      let includePaths = [this.config.dir.includes];
+      return () => {
+        let ret = sass.renderSync({
+          file: includePath,
+          includePaths,
+          data: contents,
+          outputStyle: "compressed"
+        });
+        return ret.css.toString("utf8");
+      }
+    }
+  });
+ 
 
 
   // Add filters to Nunjucks

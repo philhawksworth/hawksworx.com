@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en" class="{{ post.data.pageClass }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>{% include "css/card.css" %}</style>
+  </head>
+  <body>
+    <div class="container">
+      <ul class="nav">
+        <li><a href="/" class="home">hawksworx</a></li>
+        <li class="subtitle">by Phil Hawksworth</li>
+      </ul>
+      <h1>{{ post.data.title | orphanWrap | safe }}</h1>
+      {# <p class="grab">{{ post.data.description }}</p> #}
+    </div>
+  </body>
+</html>

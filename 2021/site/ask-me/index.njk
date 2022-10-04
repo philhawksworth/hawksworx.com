@@ -1,0 +1,73 @@
+---
+title: Ask Phil Hawksworth questions
+description: Ask Phil Hawksworth to speak at your event. Or ask pretty much anything else.
+card: true
+---
+
+{% extends 'layouts/page.njk' %}
+
+{% block sidebar %}
+<h1>Ask me anything</h1>
+<p>
+  You've got questions?<br />
+  I might have answers.<br/>
+  You can but ask!
+</p>
+{% endblock %}
+
+{% block content %}
+<p>
+  You can always <a href="https://www.twitter.com/philhawksworth">ask me things on Twitter</a> but if that's not your thing don't worry, you can ask me questions directly through this site.
+</p>
+<p>
+  I'll do my best to respond, just as long as you ask nicely ;)
+</p>
+
+<h2 id="anything">Ask me anything</h2>
+<p>
+  How was this site made? What do you do for a living? How did you get started? Who is your favorite Beatle? Do you only like cats or are dogs ok too?
+</p>
+<p>
+  These are all perfectly reasonable questions. I'm probably not going to give you my PIN number though.
+</p>
+
+
+<form name="ask-me-anything" netlify-honeypot="full-name" action="/ask-me/thanks" netlify>
+  <p class="honey">
+    <label>Your full name: <input name="full-name"></label>
+  </p>
+  <p>
+    <label for="email">Your contact details <small>(usually email or twitter works best)</small></label>
+    <input type="text" name="name" id="email">
+  </p>
+  <p>
+    <label for="message">Your question <small>(I'll do my best to answer if I can)</small></label>
+    <textarea name="message" id="message"></textarea>
+  </p>
+  <p>
+    <button type="submit" class="btn">Ask Phil that burning question</button>
+  </p>
+</form>
+
+
+<h2 id="to-speak">Ask me to speak at your event</h2>
+<p>
+  If you'd like me to speak at your conference, meetup, company, university, or school, then please get in touch.
+</p>
+<form name="speaking-enquiries" netlify-honeypot="full-name" action="/ask-me/thanks" netlify>
+  <p class="honey">
+    <label>Your full name: <input name="full-name"></label>
+  </p>
+  <p>
+    <label for="email">Your email <small>(so that I can get back to you)</small></label>
+    <input type="email" name="name" id="email">
+  </p>
+  <p>
+    <label for="message">Your message <small>(and a little about your event)</small></label>
+    <textarea name="message" id="message"></textarea>
+  </p>
+  <p>
+    <button type="submit" class="btn">Ask Phil about speaking</button>
+  </p>
+</form>
+{% endblock %}

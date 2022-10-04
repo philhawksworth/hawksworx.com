@@ -1,0 +1,23 @@
+---
+title: Phil Hawksworth's blog posts
+description: Various blog posts about web development, the JAMstack, events and other bits and pieces.
+card: true
+---
+
+{% extends 'layouts/page.njk' %}
+
+{% block sidebar %}
+  <h1>Tags</h1>
+{% endblock %}
+
+
+{% block content %}
+<ul>
+{% for tag in collections.tagList %}
+  {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+  <li><a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a> ({{ collections[tag].length }})</li>
+{% endfor %}
+</ul>
+{% endblock %}
+
+

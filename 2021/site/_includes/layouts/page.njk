@@ -1,0 +1,9 @@
+{% extends 'layouts/base.njk' %}
+
+{% block sidebar %}
+  <h1>{{ title | orphanWrap | safe }}</h1>
+{% endblock %}
+
+{% block content %}
+    {{ content | safe }}
+{% endblock %}

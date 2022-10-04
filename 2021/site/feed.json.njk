@@ -1,0 +1,35 @@
+---
+permalink: feed.json
+metadata:
+  title: Hawksworx - Phil Hawksworth's blog
+  url: https://www.hawksworx.com
+  author:
+    name: Phil Hawksworth
+  feed:
+    subtitle: Phil Hawksworth's home on the web. Read his blog, ask questions, and find coverage of his recent conference talks about web development.
+    filename: feed.xml
+    path: feed.xml
+    url: https://www.hawksworx.com/feed.xml
+    id: https://www.hawksworx.com
+---
+{
+  "title": "{{ metadata.title }}",
+  "subtitle": "{{ metadata.feed.subtitle }}",
+  "link": "{{ metadata.feed.id }}",
+  "feed": "{{ metadata.feed.url }}",
+  "author": "{{ metadata.author.name }}",
+  "entries" : [
+    {%- for post in collections.posts %}
+    {% set absolutePostUrl %}
+    {%- if post.data.externalurl -%}{{ post.data.externalurl }}{%- else -%}
+    {{ post.url | url | absoluteUrl(metadata.url) }}{%- endif -%}
+    {% endset %}
+    {
+      "title": "{{ post.data.title }}",
+      "link": "{{ absolutePostUrl }}",
+      "updated": "{{ post.date | rssDate }}"
+    }{% if not loop.last %},{% else %}{%- endif -%}
+
+  {%- endfor %}
+  ]
+}

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" class="{{ pageClass }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="/fonts/placardmtstd-cond-webfont.woff2" as="font" type="font/woff2" crossorigin>
+    <style>{% include "css/main.css" %}</style>
+    <title>{%- if title -%}{{ title }}{%- else -%}Hawksworx - Phil Hawksworth{%- endif -%}</title>
+    <meta name="description" content="{%- if description -%}{{ description }}{%- else -%}Phil Hawksworth's home on the web. Read his blog, ask questions, and find coverage of his recent conference talks about web development.{%- endif -%}"/>
+    <link rel="alternate" href="/feed.xml" title="Hawksworx blog feed, by Phil Hawksworth" type="application/atom+xml">
+    {% include "favicons.njk" %}
+    {% include "social.njk" %}
+  </head>
+  <body >
+    <div class="sidebar">
+      <header>
+        <div class="sidebar-container">
+          {% include "navigation.njk" %}
+          {% include "search-ui.njk" %}
+          <div class="page-details">
+          {% block sidebar %}
+            <h1>{{ title | orphanWrap | safe }}</h1>
+            <p>{{ subtitle | orphanWrap | safe }}</p>
+          {% endblock %}
+          </div>
+        </div>
+      </header>
+    </div>
+    <div class="main">
+      <div class="container">
+        {% block content %}
+        {{ content | safe }}
+        {% endblock %}
+        {% block credits %}
+        {% include "page-credits.njk" %}
+        {% endblock %}
+      </div>
+      <footer>
+        <div class="solid-footer">
+          <div class="container">
+          {% block prefooter %}{% endblock %}
+          {% include "footer.njk" %}
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>{% include "js/hawksworx.js" %}</script>
+  </body>
+</html>
+
+
+

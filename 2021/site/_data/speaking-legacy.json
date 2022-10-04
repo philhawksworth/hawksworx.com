@@ -1,0 +1,389 @@
+{
+    "events": [
+        {
+          "title": "All Day Hey",
+          "address": "Leeds, UK",
+          "starts_on": "2019-05-03T09:00:00Z",
+          "url" : "https://alldayhey.com",
+          "country_code": "gb-eng"
+
+        },
+        {
+          "title": "Webinar: I’ve got 99 problems but the server ain’t one",
+          "address": "Earth",
+          "starts_on": "2018-11-27T17:00:00Z",
+          "url": "https://www.contentful.com/resources/how-modern-developers-build-scalable-architectures-without-maintaining-servers/"
+        },
+        {
+            "title": "VueJS London (MC)",
+            "address": "London, UK",
+            "starts_on": "2018-09-21T09:00:00Z",
+            "url": "https://vuejs.london/",
+            "country_code": "gb-eng"
+        },
+        {
+            "title": "Hey Stac",
+            "address": "Leeds, UK",
+            "starts_on": "2018-08-30T18:00:00Z",
+            "country_code": "gb-eng",
+            "url": "https://heyst.ac/people/phil-hawksworth"
+        },
+        {
+            "title": "All Day Hey (MC)",
+            "address": "Leeds, UK",
+            "starts_on": "2018-04-30T09:00:00Z",
+            "url": "http://leedsinternationalfestival.com/event/all-day-hey",
+            "country_code": "gb-eng"
+        },
+        {
+            "title": "JS Heroes",
+            "address": "Cluj-Napoca, Romania",
+            "starts_on": "2018-04-19T09:00:00Z",
+            "url": "https://jsheroes.io/",
+            "country_code": "ro"
+        },
+        {
+            "title": "JAMstack London Meetup (MC)",
+            "address": "London, UK",
+            "starts_on": "2018-03-19T18:30:00Z",
+            "url": "https://www.meetup.com/JAMstack-London/events/tbspgpyxfbhb/",
+            "country_code": "gb-eng"
+        },
+        {
+            "title": "JAMStack Toulouse Meetup",
+            "address": "Toulouse, France",
+            "starts_on": "2018-03-16T18:00:00Z",
+            "url": "https://www.meetup.com/en-AU/JAMstack-Toulouse/events/246940796/",
+            "country_code": "fr"
+        },
+        {
+            "title": "Front End London",
+            "address": "London, UK",
+            "starts_on": "2018-02-22T18:00:00Z",
+            "url": "http://www.frontendlondon.co.uk/",
+            "country_code": "gb-eng"
+        },
+        {
+            "title": "Smashing Conference",
+            "address": "London, UK",
+            "starts_on": "2018-02-07T09:00:00Z",
+            "url": "https://smashingconf.com/london-2018",
+            "country_code": "gb-eng"
+        },
+        {
+            "title": "JAMstack London Meetup",
+            "address": "London, UK",
+            "starts_on": "2018-02-05T18:30:00Z",
+            "url": "https://www.meetup.com/JAMstack-London/events/247153958/",
+            "country_code": "gb-eng"
+        },
+        {
+            "title": "ScriptConf",
+            "address": "Linz, Austria",
+            "starts_on": "2018-01-19T09:00:00Z",
+            "url": "https://scriptconf.org/",
+            "country_code": "at"
+        },
+        {
+            "title": "Smashing Conference (MC)",
+            "address": "Freiburg, Germany",
+            "starts_on": "2017-09-11T09:00:00Z",
+            "url": "https://smashingconf.com/freiburg-2017/",
+            "country_code": "de"
+        },
+        {
+            "title": "Coldfront (MC)",
+            "address": "Copenhagen, Denmark",
+            "starts_on": "2017-09-07T09:00:00Z",
+            "url": "https://2017.coldfront.co",
+            "country_code": "dk"
+        },
+        {
+            "title": "Front Trends (Talk and MC)",
+            "address": "Warsaw, Poland",
+            "starts_on": "2017-05-24T09:00:00Z",
+            "url": "https://2017.front-trends.com",
+            "country_code": "pl"
+        },
+        {
+            "title": "Contentful meetup",
+            "address": "London, UK",
+            "starts_on": "2017-05-10T19:00:00Z",
+            "url": "https://www.meetup.com/meetup-group-qCrvByhz/events/239172315/",
+            "country_code": "gb-eng"
+        },
+        {
+            "title": "All Day Hey (MC)",
+            "address": "Leeds, UK",
+            "starts_on": "2017-04-24T09:00:00Z",
+            "url": "https://heyst.ac/all-day",
+            "country_code": "gb-eng"
+        },
+        {
+            "title": "JAMStack meetup",
+            "address": "San Francisco, USA",
+            "starts_on": "2016-11-09 19:00:00Z",
+            "url": "http://www.meetup.com/jamstack-sf/",
+            "country_code": "us"
+        },
+        {
+            "title": "Internet and Mobile World",
+            "address": "Bucharest, Romania",
+            "starts_on": "2016-10-05T09:00:00Z",
+            "url": "http://imworld.ro/",
+            "country_code": "ro"
+        },
+        {
+            "title": "Dutch Digital Day",
+            "address": "Amsterdam, Netherlands",
+            "starts_on": "2016-09-15T09:00:00Z",
+            "url": "http://dutchdigitalday.com/",
+            "country_code": "nl"
+        },
+        {
+            "title": "Smashing Conference",
+            "address": "New York, USA",
+            "starts_on": "2016-06-14T09:00:00Z",
+            "url": "http://lanyrd.com/2016/smashingconf-new-york",
+            "country_code": "us"
+        },
+        {
+            "title": "Fronteers Spring (MC)",
+            "address": "Amsterdam, Netherlands",
+            "starts_on": "2016-04-01T09:00:00Z",
+            "url": "https://fronteers.nl/congres/2016-spring",
+            "country_code": "nl"
+        },
+        {
+            "title": "Enhance Conference",
+            "address": "London, England",
+            "starts_on": "2016-03-04T09:00:00Z",
+            "url": "http://enhanceconf.com",
+            "country_code": "gb-eng"
+        },
+        {
+            "title": "Fronteers",
+            "address": "Amsterdam, Netherlands",
+            "starts_on": "2015-10-08T09:00:00Z",
+            "url": "https://fronteers.nl/congres/2015",
+            "country_code": "nl"
+        },
+        {
+            "title": "Generate",
+            "address": "London, England",
+            "starts_on": "2015-09-17T09:30:00Z",
+            "url": "http://www.generateconf.com/london-2015",
+            "country_code": "gb-eng"
+        },
+        {
+            "title": "Milton Keynes Geek Night",
+            "address": "Milton Keynes, England",
+            "starts_on": "2015-09-10 20:00:00Z",
+            "url": "http://mkgeeknight.co.uk",
+            "country_code": "gb-eng"
+        },
+        {
+            "title": "Dot York",
+            "address": "York, England",
+            "starts_on": "2015-04-09T09:00:00Z",
+            "url": "http://dotyork.com",
+            "country_code": "gb-eng"
+        },
+        {
+            "title": "Awwwards Conference",
+            "address": "Barcelona, Spain",
+            "starts_on": "2015-02-24T09:00:00Z",
+            "url": "http://conference.awwwards.com/",
+            "country_code": "es"
+        },
+        {
+            "title": "Front End North",
+            "address": "Manchester, England",
+            "starts_on": "2014-11-15T09:00:00Z",
+            "url": "http://makedo.in/frontendnorth/",
+            "country_code": "gb-eng"
+        },
+        {
+            "title": "The Web Is..",
+            "address": "Cardiff, Wales",
+            "starts_on": "2014-10-30T09:00:00Z",
+            "url": "http://theweb.is",
+            "country_code": "gb-wls"
+        },
+        {
+            "title": "Smashing Conference",
+            "address": "Freiburg, Germany",
+            "starts_on": "2014-09-14T09:00:00Z",
+            "url": "http://smashingconf.com/freiburg-2014/",
+            "country_code": "de"
+        },
+        {
+            "title": "ColdFront Conference",
+            "address": "Copenhagen, Denmark",
+            "starts_on": "2014-09-04T09:00:00Z",
+            "url": "http://coldfrontconf.com/",
+            "country_code": "dk"
+        },
+        {
+            "title": "Wuthering Bytes",
+            "address": "Hebden Bridge, England",
+            "starts_on": "2014-08-15T09:00:00Z",
+            "url": "http://wutheringbytes.com/",
+            "country_code": "gb-eng"
+        },
+        {
+            "title": "JSCamp",
+            "address": "Bucharest, Romania",
+            "starts_on": "2014-06-03T09:00:00Z",
+            "url": "http://www.jscamp.ro",
+            "country_code": "ro"
+        },
+        {
+            "title": "DevConFu",
+            "address": "Riga, Latvia",
+            "starts_on": "2014-05-29 13:00:00Z",
+            "url": "http://devconfu.eu",
+            "country_code": "lv"
+        },
+        {
+            "title": "LondonJS",
+            "address": "London, England",
+            "starts_on": "2014-02-13T09:00:00Z",
+            "url": "http://www.londonjsconf.com",
+            "country_code": "gb-eng"
+        },
+        {
+            "title": "Untangle The Web",
+            "address": "London, England",
+            "starts_on": "2013-12-13 19:00:00Z",
+            "url": "http://www.meetup.com/Untangling-the-Web-London",
+            "country_code": "gb-eng"
+        },
+        {
+            "title": "Future of Web Apps",
+            "address": "London, England",
+            "starts_on": "2013-10-24T09:00:00Z",
+            "url": "http://futureofwebapps.com/london-2013/",
+            "country_code": "gb-eng"
+        },
+        {
+            "title": "Breaking Development Conference",
+            "address": "Nashville, USA",
+            "starts_on": "2013-10-21T09:00:00Z",
+            "url": "http://bdconf.com/2013/nashville/",
+            "country_code": "us"
+        },
+        {
+            "title": "Internet and Mobile World",
+            "address": "Bucharest, Romania",
+            "starts_on": "2013-10-09T09:00:00Z",
+            "url": "http://www.imworld.ro/",
+            "country_code": "ro"
+        },
+        {
+            "title": "Speak The Web",
+            "address": "Leeds, England",
+            "starts_on": "2013-07-23 20:00:00Z",
+            "url": "http://speaktheweb.org",
+            "country_code": "gb-eng"
+        },
+        {
+            "title": "London Web Standards",
+            "address": "London, England",
+            "starts_on": "2013-07-22 20:00:00Z",
+            "url": "http://londonwebstandards.org/2013/07/london-web-standard-july-2013-how-to-present-lightning-talks-lwslightning",
+            "country_code": "gb-eng"
+        },
+        {
+            "title": "Gotham JS",
+            "address": "New York, USA",
+            "starts_on": "2013-07-12T08:00:00Z",
+            "url": "http://www.gothamjs.com",
+            "country_code": "us"
+        },
+        {
+            "title": "Content Strategy Lightning Talks",
+            "address": "London, England",
+            "starts_on": "2013-06-17 18:00:00Z",
+            "url": "https://togetherlondon.com/events/meetup",
+            "country_code": "gb-eng"
+        },
+        {
+            "title": "jsDay",
+            "address": "Verona, Italy",
+            "starts_on": "2013-05-15T09:00:00Z",
+            "url": "http://2013.jsday.it",
+            "country_code": "it"
+        },
+        {
+            "title": "Texas JavaScript",
+            "address": "Austin, USA",
+            "starts_on": "2013-04-15T09:00:00Z",
+            "url": "http://2013.texasjavascript.com",
+            "country_code": "us"
+        },
+        {
+            "title": "HTML5 Developer Conference",
+            "address": "San Francisco, USA",
+            "starts_on": "2013-04-01T09:00:00Z",
+            "url": "http://2013.html5devconf.com",
+            "country_code": "us"
+        },
+        {
+            "title": "Fronteers",
+            "address": "Amsterdam, Netherlands",
+            "starts_on": "2012-10-05T09:00:00Z",
+            "url": "http://fronteers.nl/congres/2012",
+            "country_code": "nl"
+        },
+        {
+            "title": "Toster JavaScript",
+            "address": "Moscow, Russia",
+            "starts_on": "2012-05-25T09:00:00Z",
+            "url": "http://toster.ru/",
+            "country_code": "ru"
+        },
+        {
+            "title": "HTML5 DevUp",
+            "address": "Barcelona, Spain",
+            "starts_on": "2012-05-27T09:00:00Z",
+            "url": "http://devup.ideateca.com/html5/thankyou.php",
+            "country_code": "es"
+        },
+        {
+            "title": "SXSW Interactive",
+            "address": "Austin, USA",
+            "starts_on": "2012-03-12T09:00:00Z",
+            "url": "http://schedule.sxsw.com/2012/events/event_IAP11002",
+            "country_code": "us"
+        },
+        {
+            "title": "FullFrontal",
+            "address": "Brighton, England",
+            "starts_on": "2011-11-11 11:00:00Z",
+            "url": "http://2011.full-frontal.org",
+            "country_code": "gb-eng"
+        },
+        {
+            "title": "Async - Getting started with Node",
+            "address": "Brighton, England",
+            "starts_on": "2011-05-26 19:15:00Z",
+            "url": "http://asyncjs.com/intro-nodejs/",
+            "country_code": "gb-eng"
+        },
+        {
+            "title": "Async",
+            "address": "Brighton, England",
+            "starts_on": "2011-11-10 19:00:00Z",
+            "url": "http://asyncjs.com/intro-nodejs/",
+            "country_code": "gb-eng"
+        },
+        {
+            "title": "UX People",
+            "address": "London, England",
+            "starts_on": "2010-03-22 10:00:00Z",
+            "url": "http://uxpeople.co.uk/2010/",
+            "country_code": "gb-eng"
+        }
+    ]
+}
