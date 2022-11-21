@@ -17,12 +17,12 @@
 [[redirects]] 
   from = "/notes/*"
   to = "https://hawksworx-notes.netlify.app/notes/:splat"
-  status = 302
+  status = 200
 
 [[redirects]] 
   from = "/note/*"
   to = "https://hawksworx-notes.netlify.app/note/:splat"
-  status = 302
+  status = 200
 
 # social media card assets
 [[redirects]]
