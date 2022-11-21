@@ -14,6 +14,15 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy= "no-referrer-when-downgrade"
 
+[[redirects]] 
+  from = "/notes/*"
+  to = "https://hawksworx-notes.netlify.app/notes/:splat"
+  status = 200
+
+[[redirects]] 
+  from = "/note/*"
+  to = "https://hawksworx-notes.netlify.app/note/:splat"
+  status = 200
 
 # social media card assets
 [[redirects]]
