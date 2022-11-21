@@ -16,7 +16,7 @@
 
 [[redirects]] 
   from = "/notes-styles.css"
-  to = "https://hawksworx-notes.netlify.app/notes/notes-styles.css"
+  to = "https://hawksworx-notes.netlify.app/notes-styles.css"
   status = 200
 
 [[redirects]] 
