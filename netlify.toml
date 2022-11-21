@@ -15,6 +15,11 @@
     Referrer-Policy= "no-referrer-when-downgrade"
 
 [[redirects]] 
+  from = "/notes-styles.css"
+  to = "https://hawksworx-notes.netlify.app/notes/notes-styles.css"
+  status = 200
+
+[[redirects]] 
   from = "/notes/*"
   to = "https://hawksworx-notes.netlify.app/notes/:splat"
   status = 200
