@@ -5,7 +5,7 @@
   "scripts": {
     "start": "ELEVENTY_ENV=dev eleventy --serve",
     "prime": "ELEVENTY_ENV=prime eleventy",
-    "build": "ELEVENTY_ENV=prod eleventy ",
+    "build": "npx eleventy ",
     "dryrun": "ELEVENTY_ENV=dev eleventy",
     "new:link": "node utils/new.js link"
   },
