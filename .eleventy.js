@@ -1,5 +1,3 @@
-let env = process.env.ELEVENTY_ENV;
-
 const { EleventyEdgePlugin } = require("@11ty/eleventy");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
