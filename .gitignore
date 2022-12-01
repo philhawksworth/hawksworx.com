@@ -7,3 +7,6 @@ src/site/images/instagram/*.jpeg
 .netlify
 .DS_Store
 tweets.json
+
+# Eleventy Edge Build Data files
+netlify/edge-functions/_generated
