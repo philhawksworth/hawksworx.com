@@ -1,6 +1,7 @@
 [build]
-  command = "yarn run build"
-  functions = "functions"
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
 
 [build.environment]
   NODE_VERSION = "16.17.1"
@@ -14,26 +15,40 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy= "no-referrer-when-downgrade"
 
+[[edge_functions]]
+  function = "eleventy-edge"
+  path = "/notes*"
 
-[[redirects]] 
-  from = "/notes-styles.css"
-  to = "https://hawksworx-notes.netlify.app/notes-styles.css"
+[[redirects]]
+  from = "/notes"
+  to = "/notes/1/"
+  status = 301
+
+[[redirects]]
+  from = "/note/tw/*"
+  to = "/.netlify/functions/note-tweet"
   status = 200
 
-[[redirects]] 
-  from = "/notes-img/*"
-  to = "https://hawksworx-notes.netlify.app/notes-img/:splat"
-  status = 200
 
-[[redirects]] 
-  from = "/notes/*"
-  to = "https://hawksworx-notes.netlify.app/notes/:splat"
-  status = 200
+# [[redirects]] 
+#   from = "/notes-styles.css"
+#   to = "https://hawksworx-notes.netlify.app/notes-styles.css"
+#   status = 200
 
-[[redirects]] 
-  from = "/note/*"
-  to = "https://hawksworx-notes.netlify.app/note/:splat"
-  status = 200
+# [[redirects]] 
+#   from = "/notes-img/*"
+#   to = "https://hawksworx-notes.netlify.app/notes-img/:splat"
+#   status = 200
+
+# [[redirects]] 
+#   from = "/notes/*"
+#   to = "https://hawksworx-notes.netlify.app/notes/:splat"
+#   status = 200
+
+# [[redirects]] 
+#   from = "/note/*"
+#   to = "https://hawksworx-notes.netlify.app/note/:splat"
+#   status = 200
 
 
 # social media card assets

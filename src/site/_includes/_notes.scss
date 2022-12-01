@@ -1,0 +1,140 @@
+
+.social-post {
+  margin:1em; 
+  padding: 2em;
+  background-color: #f3f3f3;
+  border-radius: 4px;
+  text-align: center;
+  
+  @include bp(mid) {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+
+  .main {
+    padding-top:-0.5rem;
+    flex-grow: 1;
+    background-color: inherit;
+
+    @include bp(mid) {
+      padding-top:0.75rem;
+    }
+  }
+
+
+  a:link,
+  a:visited {
+    color: #2c4dba;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-underline-offset: 4px;
+    text-decoration-color: #96a3d4;
+    border-bottom-style: none;
+  }
+
+  a:hover,
+  a:focus {
+    color: #3355cc;
+    text-decoration: underline;
+  }
+
+  .meta {
+    display: inline-block;
+    color: #777;
+    padding-top:0.75rem;
+
+    a:link,
+    a:visited {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-style: solid;
+      text-underline-offset: 4px;
+      text-decoration-color: #ccc;
+    }
+
+    .author-name {
+      color: #000;
+      font-weight: bold;
+      display: none;
+      @include bp(mid) {
+        display: inline-block;
+      }
+    }
+
+  }
+
+  .permalinks {
+    list-style: none;
+    margin:3em 0 1em;
+    padding-top:1em;
+    text-align: right;
+    color: #aaa;
+    border-top: solid 1px #ccc;
+
+    li {
+      display: inline-block;
+      padding: 0 0.3em;
+    }
+
+    li:last-child {
+      padding-right:0;
+    }
+  }
+
+  .avatar img {
+    width: 3rem;
+    aspect-ratio: 1;
+    border-radius: 50%;    
+    margin-right: 0.5rem;
+    vertical-align: middle;
+  }
+
+  a.author-handle:link,
+  a.author-handle:visited {
+    font-weight: bold;
+    color: #111;
+  }
+
+  .content {
+    margin:2em 0 1em;
+    text-align: left;
+
+    a {
+      line-break: anywhere;
+    }
+
+  }
+
+  .media img {
+    width:100%;
+  }
+
+}
+
+
+.social-post:hover {
+  background-color: #eee;
+}
+
+nav ul {
+  list-style: none;
+  background-color: #1111112d;
+  border-radius: 4px;
+  text-align: center;
+  padding: 0.5rem;
+
+  li {
+    display: inline;
+    
+    &::after {
+      content: " | ";
+      color: #ccc;
+    }
+  }
+
+  li:last-child:after {
+    content: "";
+  }
+}

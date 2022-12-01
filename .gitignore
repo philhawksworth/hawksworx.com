@@ -1,10 +1,9 @@
 node_modules
 dist
-functions
 .env
 src/site/_includes/css/*
 _soon
 src/site/images/instagram/*.jpeg
 .netlify
 .DS_Store
-
+tweets.json

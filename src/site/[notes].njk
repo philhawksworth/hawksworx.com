@@ -1,0 +1,54 @@
+---
+pagination:
+  data: notes
+  size: 25
+permalink: "/notes/{{ pagination.pageNumber + 1 }}/index.html"
+---
+
+{% extends 'layouts/page.njk' %}
+
+{% block sidebar %}
+    <h1>Notes{% if pagination.pageNumber != 0 %} - page {{pagination.pageNumber + 1 }} {% endif %}</h1>
+
+
+    <nav aria-labelledby="notes-pagination">
+      <ul>
+        <li>{% if page.url != pagination.href.first %}<a href="{{ pagination.href.first }}">Newest</a>{% else %}Newest{% endif %}</li>
+        <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}</li>
+        <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{% else %}Next{% endif %}</li>
+        <li>{% if page.url != pagination.href.last %}<a href="{{ pagination.href.last }}">Oldest</a>{% else %}Oldest{% endif %}</li>
+      </ul>
+    </nav>
+
+    <p>
+      The archive of what I posted on Twitter, which I now self host due to a lack of trust in Twitter and some <a href="https://twitter.com/philhawksworth/status/1594287602445713415?s=20&t=d5EAfeCeFqYv58FOX8ONjw">other reasons</a>.
+    </p>
+    <p>
+      I'll soon begin refelcting all <a href="https://indieweb.social/@philhawksworth">my Mastodon posts</a> here too. I'm happier self-hosting or maintaining an archive of my content on URLs that I can own.
+    </p>
+    <p>
+      There are tools to help you do this too. <a href="https://github.com/tweetback/tweetback">Such as this one</a> from the makers of <a href="https://11ty.dev">Eleventy</a>.
+    </p>
+{% endblock %}
+
+
+{% block content %}
+
+
+{%- for item in pagination.items %}
+  {% set post = item %}
+  {% include 'components/social-post.njk' %}
+{% endfor -%}
+
+
+
+<nav aria-labelledby="my-pagination">
+  <ul>
+    <li>{% if page.url != pagination.href.first %}<a href="{{ pagination.href.first }}">Newest</a>{% else %}Newest{% endif %}</li>
+    <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}</li>
+    <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{% else %}Next{% endif %}</li>
+    <li>{% if page.url != pagination.href.last %}<a href="{{ pagination.href.last }}">Oldest</a>{% else %}Oldest{% endif %}</li>
+  </ul>
+</nav>
+
+{% endblock %}

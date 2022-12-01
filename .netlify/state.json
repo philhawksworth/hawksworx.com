@@ -1,3 +1,20 @@
 {
-	"siteId": "793e740d-7c84-4e39-b528-a34be81cd71e"
+	"siteId": "793e740d-7c84-4e39-b528-a34be81cd71e",
+	"geolocation": {
+		"data": {
+			"city": "St Albans",
+			"country": {
+				"code": "GB",
+				"name": "United Kingdom"
+			},
+			"subdivision": {
+				"code": "ENG",
+				"name": "England"
+			},
+			"timezone": "Europe/London",
+			"latitude": 51.753,
+			"longitude": -0.3256
+		},
+		"timestamp": 1669832082323
+	}
 }

@@ -1,11 +1,14 @@
 let env = process.env.ELEVENTY_ENV;
 
+const { EleventyEdgePlugin } = require("@11ty/eleventy");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const uglify = require("uglify-js");
 const sass = require("sass");
 
 module.exports = function(eleventyConfig) {
+
+  eleventyConfig.addPlugin(EleventyEdgePlugin);
 
   // syntax highlighting plugin
   eleventyConfig.addPlugin(syntaxHighlight, {
@@ -92,12 +95,12 @@ module.exports = function(eleventyConfig) {
   // other config settings
 
   // make the prime target act like prod
-  env = (env=="prime") ? "prod" : env;
+  // env = (env=="prime") ? "prod" : env;
   return {
     dir: {
       input: "src/site",
       output: "dist",
-      data: `_data/${env}`
+      data: "_data/prod"
     },
     templateFormats : ["njk", "md"],
     htmlTemplateEngine : "njk",
