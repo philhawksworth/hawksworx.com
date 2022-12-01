@@ -15,9 +15,17 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy= "no-referrer-when-downgrade"
 
+
 [[edge_functions]]
   function = "eleventy-edge"
-  path = "/notes*"
+  path = "/notes/search*"
+
+[[redirects]]
+  from = "/notes/search/*"
+  to = "/notes/search/"
+  status = 200
+
+
 
 [[redirects]]
   from = "/notes"

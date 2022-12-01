@@ -138,3 +138,29 @@ nav ul {
     content: "";
   }
 }
+
+form.notes-search {
+  
+  background-color: #1111118d;
+  
+  border-radius: 4px;
+  text-align: center;
+  padding: 0rem;
+  margin:1rem 0;
+
+  &:hover,
+  &:focus {
+    background-color: black;
+    cursor: pointer;
+  }
+  input {
+    margin:0;
+    background-color: transparent;
+    border-style:none;
+    color: #f3f3f3;
+    font-size: 0.9em;
+    padding:1rem;
+    width: calc(100% - 2rem);
+  }
+
+}

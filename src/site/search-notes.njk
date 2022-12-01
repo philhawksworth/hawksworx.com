@@ -1,0 +1,63 @@
+---
+permalink: /notes/search/index.html
+---
+
+{% extends 'layouts/page.njk' %}
+
+
+
+{% block sidebar %}
+  <h1>Search all notes</h1>
+{% edge "liquid" %}
+  <form action="." method="GET" class="notes-search">
+    <input type="text" name="str" value="{% if filteredNotes.filter %}{{filteredNotes.filter}}{% endif %}" >
+  </form>
+  {% if filteredNotes.filter %}
+  <p>Of the <a href="/notes/">{{notes.length}} notes</a>, {{filteredNotes.results.length}} contained "{{ filteredNotes.filter }}"</p>
+  {% endif %}
+{% endedge %}
+{% endblock %}
+
+
+{% block content %}
+
+{% edge "liquid" %}
+
+{%- for post in filteredNotes.results %}
+
+<div class="social-post">
+
+  <a href="https://twitter.com/philhawksworth" class="avatar"><img src="/images/philhawksworth-goon.jpg" alt="A photo of Phil Hawksworth's face"></a>
+
+<div class="main">
+
+  <div class="meta">
+    <span class="author-name">Phil Hawksworth</span>
+    <a href="https://twitter.com/philhawksworth" class="author-handle">@philhawksworth</a> &#8226;
+    <time datetime="{{ post.created_at }}"><a href="https://twitter.com/philhawksworth/status/{{post.id}}">{{ post.created_at  }}</a></time>
+
+    {% if post.in_reply_to_status_id %}
+      replying to <a href="https://twitter.com/{{post.in_reply_to_screen_name}}/status/{{post.in_reply_to_status_id}}">this from @{{post.in_reply_to_screen_name}}</a>
+    {% endif %}
+  </div>
+  <div class="content">{{ post.full_text | replace: "\n", "<br />" }}</div>
+  <div class="media">
+    {% for item in post.media %}
+      <img src="{{item}}" alt="Embedded image from Twitter" />
+    {% endfor %}
+
+  </div>
+  <ul class="permalinks">
+    <li><a href="/note/tw/{{post.id}}">Permalink</a></li> |
+    <li><a href="https://twitter.com/philhawksworth/status/{{post.id}}">Twitter</a></li>
+  </ul>
+
+  </div>
+</div>
+
+
+{% endfor -%} 
+{% endedge %}
+
+{% endblock %}
+
