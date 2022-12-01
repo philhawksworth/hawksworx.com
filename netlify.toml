@@ -3,10 +3,6 @@
   publish = "dist"
   functions = "netlify/functions"
 
-[build.environment]
-  NODE_VERSION = "16.17.1"
-
-
 [dev]
   command = "npm run build"
   publish = "dist"
