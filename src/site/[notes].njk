@@ -41,11 +41,6 @@ permalink: "/notes/{{ pagination.pageNumber + 1 }}/index.html"
 {% block content %}
 
 
-{% edge "liquid" %}
-{{ eleventy.edge | json }}
-{% endedge %}
-
-
 {%- for item in pagination.items %}
   {% set post = item %}
   {% include 'components/social-post.njk' %}
