@@ -7,13 +7,13 @@
   command = "npm run dev"
   publish = "dist"
 
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy= "no-referrer-when-downgrade"
+# [[headers]]
+#   for = "/*"
+#   [headers.values]
+#     X-Frame-Options = "DENY"
+#     X-XSS-Protection = "1; mode=block"
+#     X-Content-Type-Options = "nosniff"
+#     Referrer-Policy= "no-referrer-when-downgrade"
 
 
 [[edge_functions]]
@@ -24,7 +24,6 @@
   from = "/notes/search/*"
   to = "/notes/search/"
   status = 200
-
 
 
 [[redirects]]
@@ -70,93 +69,10 @@
   to = "/.netlify/functions/hello?name=:name"
   status = 200
 
-# Talks and sldes
-[[redirects]]
-  from = "/talks"
-  to = "/speaking"
-  status = 302
-
-# Talks and sldes
-[[redirects]]
-  from = "/talks/scriptconf"
-  to = "https://speakerdeck.com/philhawksworth/next-wave-infrastructure"
-  status = 302
-
-  [[redirects]]
-  from = "/talks/scriptcom"
-  to = "https://speakerdeck.com/philhawksworth/next-wave-infrastructure"
-  status = 302
-
-  [[redirects]]
-  from = "/talks/JAMLDN1"
-  to = "https://speakerdeck.com/philhawksworth/next-wave-infrastructure"
-  status = 302
-
- [[redirects]]
-  from = "/talks/smashing"
-  to = "https://speakerdeck.com/philhawksworth/next-wave-infrastructure"
-  status = 302
-
- [[redirects]]
-  from = "/talks/stealth"
-  to = "https://speakerdeck.com/philhawksworth/stealthy-git-solving-cms-woes-with-git-on-the-quiet"
-  status = 302
-
- [[redirects]]
-  from = "/talks/render"
-  to = "https://speakerdeck.com/philhawksworth/serving-for-the-win-deployments-and-infrastructure-for-the-rest-of-us"
-  status = 302
-
- [[redirects]]
-  from = "/talks/serve"
-  to = "https://speakerdeck.com/philhawksworth/serving-for-the-win-deployments-and-infrastructure-for-the-rest-of-us"
-  status = 302
-
- [[redirects]]
-  from = "/talks/jsheroes"
-  to = "https://speakerdeck.com/philhawksworth/serving-for-the-win-deployments-and-infrastructure-for-the-rest-of-us"
-  status = 302
-
- [[redirects]]
-  from = "/talks/netlify-intro"
-  to = "https://speakerdeck.com/philhawksworth/netlify-show-and-tell"
-  status = 302
-
-[[redirects]]
-  from = "/talks/wad"
-  to = "https://noti.st/philhawksworth/8ryB2o/next-wave-infrastructure-and-how-to-use-it-for-an-easier-life"
-  status = 302
-
- [[redirects]]
-  from = "/talks/hk"
-  to = "https://noti.st/philhawksworth/XbZbu1/promoting-performance-from-the-ground-up"
-  status = 302
-
-
 
 # 404s
-[[redirects]]
-  from = "*"
-  to = "/404"
-  status = 404
+# [[redirects]]
+#   from = "*"
+#   to = "/404"
+#   status = 404
 
-
-# # Config for the Netlify Build Plugin: netlify-plugin-minify-html
-# [[plugins]]
-#   package = "netlify-plugin-minify-html"
-
-#   # Specify which deploy contexts we'll minify HTML in.
-#   # Supports any Deploy Contexts available in Netlify.
-#   # https://docs.netlify.com/site-deploys/overview/#deploy-contexts
-#   [plugins.inputs]
-#     contexts = [
-#       'production',
-#       'branch-deploy',
-#       'deploy-preview'
-#     ]
-
-#   # Override the default options for the minification
-#   # https://github.com/kangax/html-minifier#options-quick-reference
-#   [plugins.inputs.minifierOptions]
-#     removeComments = true
-#     collapseInlineTagWhitespace = false

@@ -4,10 +4,7 @@
   "description": "Phil Hawksworth's personal website - hawksworx.com",
   "scripts": {
     "dev": "eleventy --serve",
-    "prime": "ELEVENTY_ENV=prime eleventy",
-    "build": "eleventy ",
-    "dryrun": "ELEVENTY_ENV=dev eleventy",
-    "new:link": "node utils/new.js link"
+    "build": "eleventy "
   },
   "repository": {
     "type": "git",
