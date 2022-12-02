@@ -98,7 +98,7 @@ module.exports = function(eleventyConfig) {
     dir: {
       input: "src/site",
       output: "dist",
-      data: "_data/prod"
+      data: "_data"
     },
     templateFormats : ["njk", "md"],
     htmlTemplateEngine : "njk",

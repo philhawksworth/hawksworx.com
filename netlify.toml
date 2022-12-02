@@ -22,9 +22,8 @@
 
 [[redirects]]
   from = "/notes/search/*"
-  to = "/notes/search/"
+  to = "/notes/search"
   status = 200
-
 
 [[redirects]]
   from = "/notes"
