@@ -4,7 +4,7 @@
   "description": "Phil Hawksworth's personal website - hawksworx.com",
   "scripts": {
     "dev": "eleventy --serve",
-    "build": "eleventy "
+    "build": "eleventy"
   },
   "repository": {
     "type": "git",
