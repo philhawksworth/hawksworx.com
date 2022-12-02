@@ -18,11 +18,11 @@
 
 [[edge_functions]]
   function = "eleventy-edge"
-  path = "/notes/search*"
+  path = "/search/notes*"
 
 [[redirects]]
-  from = "/notes/search/*"
-  to = "/notes/search"
+  from = "/search/notes/*"
+  to = "/search/notes/"
   status = 200
 
 [[redirects]]
