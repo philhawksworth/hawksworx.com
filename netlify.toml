@@ -4,7 +4,7 @@
   functions = "netlify/functions"
 
 [dev]
-  command = "npm run build"
+  command = "npm run dev"
   publish = "dist"
   functions = "netlify/functions"
 
@@ -37,7 +37,6 @@
   from = "/note/tw/*"
   to = "/.netlify/functions/note-tweet"
   status = 200
-
 
 
 # social media card assets

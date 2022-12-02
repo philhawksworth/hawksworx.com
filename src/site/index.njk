@@ -40,21 +40,5 @@ pageClass: dark-theme theme-black
   {% endif %}
 
 
-  <hr />
-
-  <h2 id="tweets"><a href="https://twitter.com/philhawksworth">Recently on Twitter</a></h2>
-  <p>
-    Recently posted on <a href="https://twitter.com/philhawksworth">@philhawksworth</a> (excluding @replies).
-  </p>
-  {%- for i in range(0, 3) -%}
-  {% set item = tweets.recent[i] %}
-  {% include 'tweet.njk' %}
-  {%- endfor -%}
-  <p>
-    <em>
-      These tweets are pulled from Twitter and baked into this page automatically whenever I tweet. You can <a href="/blog/keeping-a-jamstack-site-feeling-fresh-with-recent-tweets/">read about how</a> in a blog post.
-    </em>
-  </p>
-
 {% endblock %}
 

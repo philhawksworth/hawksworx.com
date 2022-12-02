@@ -3,7 +3,7 @@
   "version": "2.0.1",
   "description": "Phil Hawksworth's personal website - hawksworx.com",
   "scripts": {
-    "start": "ELEVENTY_ENV=dev eleventy --serve",
+    "dev": "npx eleventy --serve",
     "prime": "ELEVENTY_ENV=prime eleventy",
     "build": "ELEVENTY_ENV=prod eleventy ",
     "dryrun": "ELEVENTY_ENV=dev eleventy",
