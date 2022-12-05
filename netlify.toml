@@ -6,15 +6,6 @@
   command = "npm run dev"
   publish = "dist"
 
-# [[headers]]
-#   for = "/*"
-#   [headers.values]
-#     X-Frame-Options = "DENY"
-#     X-XSS-Protection = "1; mode=block"
-#     X-Content-Type-Options = "nosniff"
-#     Referrer-Policy= "no-referrer-when-downgrade"
-
-
 [[edge_functions]]
   function = "hello"
   path = "/hello"
