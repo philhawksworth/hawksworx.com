@@ -1,7 +1,6 @@
 [build]
   command = "npm run build"
   publish = "dist"
-  environment = { NODE_VERSION = "16.18.1" }
 
 [dev]
   command = "npm run dev"
@@ -74,8 +73,8 @@
 
 
 # 404s
-# [[redirects]]
-#   from = "*"
-#   to = "/404"
-#   status = 404
+[[redirects]]
+  from = "*"
+  to = "/404"
+  status = 404
 
