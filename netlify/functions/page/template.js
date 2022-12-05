@@ -31,7 +31,7 @@ module.exports = (post) => `
     <link rel="stylesheet" href="/main.css">
     <title>@philhawksworth said...</title>
   </head>
-  <body>
+  <body class="solo">
   <div class="container">
   <div class="social-post">
   
@@ -57,6 +57,9 @@ module.exports = (post) => `
         </ul>
       </div>
     </div>
+    <p class="addendum">
+      My tweets and posts live here on <a href="/">my own domain</a> these days.<br/ >You can <a href="/notes/">explore them here</a> and follow me on <a href="https://indieweb.social/@philhawksworth">Mastodon</a> instead of Twitter where I'm not currently active.
+    </p>
     </div>
 
   </body
