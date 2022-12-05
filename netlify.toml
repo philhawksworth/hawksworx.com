@@ -17,6 +17,10 @@
 
 
 [[edge_functions]]
+  function = "hello"
+  path = "/hello"
+
+[[edge_functions]]
   function = "eleventy-edge"
   path = "/*"
 
