@@ -7,7 +7,7 @@
   <div class="meta">
     <span class="author-name">Phil Hawksworth</span>
     <a href="https://twitter.com/philhawksworth" class="author-handle">@philhawksworth</a> &#8226;
-    <time datetime="{{ post.created_at }}"><a href="https://twitter.com/philhawksworth/status/{{post.id}}">{{ post.created_at  | dateDisplay }}</a></time>
+    <time datetime="{{ post.created_at }}"><a href="https://twitter.com/philhawksworth/status/{{post.id}}">{{ post.created_at | dateDisplay }}</a></time>
 
     {% if post.in_reply_to_status_id %}
       replying to <a href="https://twitter.com/{{post.in_reply_to_screen_name}}/status/{{post.in_reply_to_status_id}}">this from @{{post.in_reply_to_screen_name}}</a>

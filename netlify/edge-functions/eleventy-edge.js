@@ -4,6 +4,7 @@ import {
 } from "./_generated/eleventy-edge-app.js";
 
 import notes from "../../src/site/_data/notes.json" assert {type: 'json'}; 
+import dateDisplay from "../../src/site/_filters/edgeFilters/dates.js";
 
 export default async (request, context) => {
   try {
@@ -30,6 +31,7 @@ export default async (request, context) => {
     
     edge.config((eleventyConfig) => {
       // Add some custom Edge-specific configuration
+      eleventyConfig.addFilter("dateDisplay", dateDisplay);
       eleventyConfig.addGlobalData("filteredNotes", filteredNotes);
       eleventyConfig.addGlobalData("notes", notes);
     });

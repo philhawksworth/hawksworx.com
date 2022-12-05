@@ -1,9 +1,8 @@
 /*
 A date formatter filter for Nunjucks
 */
-module.exports = function(date, part) {
 
-  
+export default function (date, part) {
   
   var d = new Date(date);
   // console.log(`${date} — ${d}`);
@@ -34,5 +33,5 @@ module.exports = function(date, part) {
     23 : "rd",
     31 : "st"
   };
-  return month[d.getMonth()] + " " + d.getDate() + (ordinal[d.getDate()] || "th") + " " +d.getUTCFullYear();
+  return month[d.getMonth()] + " " + d.getDate() + (ordinal[d.getDate()] || "th") + " " +d.getUTCFullYear(); 
 }
