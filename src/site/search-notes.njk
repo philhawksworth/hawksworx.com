@@ -7,6 +7,12 @@ permalink: /notes/search/index.html
 
 
 {% block sidebar %}
+
+{% edge "liquid" %}
+  {{ eleventy.edge | json }}
+{% endedge %}
+
+
   <h1>Search all notes</h1>
 {% edge "liquid" %}
   <form action="." method="GET" class="notes-search">
