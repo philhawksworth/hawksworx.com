@@ -23,7 +23,7 @@ export function handler(event, context, callback) {
     statusCode: 200,
     headers: { "Content-Type": "text/html" },
     body: `<html>Hello from a serverless
-      <a href="https://github.com/philhawksworth/hawksworx.com/blob/master/src/lambda/hello.js">function</a>,
+      <a href="https://github.com/philhawksworth/hawksworx.com/blob/master/netlify/functions/hello.js">function</a>,
       <em>${name}!</em></html>`
   });
 
