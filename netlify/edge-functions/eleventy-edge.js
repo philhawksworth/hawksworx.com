@@ -19,14 +19,16 @@ export default async (request, context) => {
     
     const url = new URL(request.url);
     const searchStr = url.searchParams.get("str");
+
     let filteredNotes = {
       filter: searchStr,
-      results: []
+      results: notes
     };
     if(searchStr) {
       console.log("search for ", searchStr );
       filteredNotes.results = notes.filter(e => e.full_text.indexOf(searchStr) !== -1);
     }
+
 
     
     edge.config((eleventyConfig) => {
