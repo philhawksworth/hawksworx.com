@@ -5,7 +5,7 @@ _soon
 src/site/images/instagram/*.jpeg
 src/site/_includes/css/*
 .netlify
-.DS_Store
+/**/.DS_Store
 tweets.json
 
 # Eleventy Edge Build Data files
