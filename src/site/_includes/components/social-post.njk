@@ -6,8 +6,20 @@
 
   <div class="meta">
     <span class="author-name">Phil Hawksworth</span>
+
+    {% if post.platform == "twitter" %}
     <a href="https://twitter.com/philhawksworth" class="author-handle">@philhawksworth</a> &#8226;
-    <time datetime="{{ post.created_at }}"><a href="https://twitter.com/philhawksworth/status/{{post.id}}">{{ post.created_at | dateDisplay }}</a></time>
+    {% elif post.platform == "mastodon" %}
+    <a href="https://indieweb.social/@philhawksworth" class="author-handle">@philhawksworth</a> &#8226;
+    {% endif %}
+
+    <time datetime="{{ post.created_at }}">
+      {% if post.platform == "twitter" %}
+      <a href="https://twitter.com/philhawksworth/status/{{post.id}}">{{ post.created_at | dateDisplay }}</a>
+      {% elif post.platform == "mastodon" %}
+      <a href="https://indieweb.social/@philhawksworth/{{post.id}}">{{ post.created_at | dateDisplay }}</a>
+      {% endif %}
+    </time>
 
     {% if post.in_reply_to_status_id %}
       replying to <a href="https://twitter.com/{{post.in_reply_to_screen_name}}/status/{{post.in_reply_to_status_id}}">this from @{{post.in_reply_to_screen_name}}</a>
@@ -21,8 +33,13 @@
 
   </div>
   <ul class="permalinks">
+  {% if post.platform == "twitter" %}
     <li><a href="/note/tw/{{post.id}}">Permalink</a></li> |
     <li><a href="https://twitter.com/philhawksworth/status/{{post.id}}">Twitter</a></li>
+  {% elif post.platform == "mastodon" %}
+    <li><a href="/note/mtdn/{{post.id}}">Permalink</a></li> |
+    <li><a href="https://indieweb.social/@philhawksworth/{{post.id}}">Mastodon</a></li>
+  {% endif %}
   </ul>
 
   </div>
