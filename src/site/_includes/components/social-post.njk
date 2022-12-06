@@ -1,46 +1,27 @@
 <div class="social-post">
-
-  <a href="https://twitter.com/philhawksworth" class="avatar"><img src="/images/philhawksworth-goon.jpg" alt="A photo of Phil Hawksworth's face"></a>
-
-<div class="main">
-
-  <div class="meta">
-    <span class="author-name">Phil Hawksworth</span>
-
-    {% if post.platform == "twitter" %}
-    <a href="https://twitter.com/philhawksworth" class="author-handle">@philhawksworth</a> &#8226;
-    {% elif post.platform == "mastodon" %}
-    <a href="https://indieweb.social/@philhawksworth" class="author-handle">@philhawksworth</a> &#8226;
-    {% endif %}
-
-    <time datetime="{{ post.created_at }}">
-      {% if post.platform == "twitter" %}
-      <a href="https://twitter.com/philhawksworth/status/{{post.id}}">{{ post.created_at | dateDisplay }}</a>
-      {% elif post.platform == "mastodon" %}
-      <a href="https://indieweb.social/@philhawksworth/{{post.id}}">{{ post.created_at | dateDisplay }}</a>
+  <a href="{% socialLink post.platform, 'philhawksworth' %}" class="avatar"><img src="/images/philhawksworth-goon.jpg" alt="A photo of Phil Hawksworth's face"></a>
+  <div class="main">
+    <div class="meta">
+      <span class="author-name">Phil Hawksworth</span>
+      <a href="{% socialLink post.platform, 'philhawksworth' %}" class="author-handle">@philhawksworth</a> &#8226;
+      <time datetime="{{ post.created_at }}">
+        <a href="{% socialLink post.platform, 'philhawksworth', post.id %}">{{ post.created_at | dateDisplay }}</a>
+      </time>
+      {% if post.in_reply_to_status_id %}
+        replying to <a href="{{ post.in_reply_to_status_id }}">this from @{{post.in_reply_to_screen_name}}</a>
       {% endif %}
-    </time>
-
-    {% if post.in_reply_to_status_id %}
-      replying to <a href="https://twitter.com/{{post.in_reply_to_screen_name}}/status/{{post.in_reply_to_status_id}}">this from @{{post.in_reply_to_screen_name}}</a>
-    {% endif %}
-  </div>
-  <div class="content">{{ post.full_text.replaceAll("\n", "<br />")  | safe }}</div>
-  <div class="media">
-    {% for item in post.media %}
-      <img src="{{item}}" alt="Embedded image from Twitter" />
-    {% endfor %}
-
-  </div>
-  <ul class="permalinks">
-  {% if post.platform == "twitter" %}
-    <li><a href="/note/tw/{{post.id}}">Permalink</a></li> |
-    <li><a href="https://twitter.com/philhawksworth/status/{{post.id}}">Twitter</a></li>
-  {% elif post.platform == "mastodon" %}
-    <li><a href="/note/mtdn/{{post.id}}">Permalink</a></li> |
-    <li><a href="https://indieweb.social/@philhawksworth/{{post.id}}">Mastodon</a></li>
-  {% endif %}
-  </ul>
-
+    </div>
+    <div class="content">
+      {{ post.full_text.replaceAll("\n", "<br />")  | safe }}
+    </div>
+    <div class="media">
+      {% for item in post.media %}
+        <img src="{{item}}" alt="Embedded image from Twitter" />
+      {% endfor %}
+    </div>
+    <ul class="permalinks">
+      <li><a href="/note/{% if post.platform == 'twitter' %}tw{% else %}mstdn{% endif %}/{{post.id}}">Permalink</a></li> |
+      <li><a href="{% socialLink post.platform, 'philhawksworth', post.id %}">{{ post.platform | capitalize }}</a></li>
+    </ul>
   </div>
 </div>

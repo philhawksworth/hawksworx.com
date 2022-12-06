@@ -51,7 +51,9 @@ module.exports = function(eleventyConfig) {
 
 
 
-  // Add filters to Nunjucks
+  // Add filters and shortcodes
+  eleventyConfig.addShortcode("socialLink", require("./src/site/_filters/socialLink.js") );
+  
   eleventyConfig.addFilter("dateDisplay", require("./src/site/_filters/dates.js") );
   eleventyConfig.addFilter("section", require("./src/site/_filters/section.js") );
   eleventyConfig.addFilter("squash", require("./src/site/_filters/squash.js") );
