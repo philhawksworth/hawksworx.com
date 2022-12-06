@@ -4,10 +4,13 @@ const { builder } = require('@netlify/functions');
 
 const handler = async(event) => {
   
-    // get the note ID from the request
-    const noteID = event.path.split("note/tw/")[1];
-    console.log(`lookup ${noteID}`);
+    const re = /note\/(tw|mstdn)\/(.+)/gm;
+
+    const match = [...event.path.matchAll(re)];
+    const noteID = match[0][2]
     
+    console.log(`lookup ${noteID}`);
+
     const note = notes.find(x => x.id === noteID)
     if(!note) {
       console.log('Not found:', noteID);
@@ -15,7 +18,7 @@ const handler = async(event) => {
 
         statusCode: 301,
         headers: {
-          Location: `/notes/index.html`,
+          Location: `/notes/`,
         }
       };
       

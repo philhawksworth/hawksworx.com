@@ -14,12 +14,29 @@ const embedMedia = function (media) {
 }
 
 
-
-
 const formatDate = function (dateStamp) {
   const date = new Date(dateStamp);
   const month = ["Jan","Feb","March","April","May","June","July","Aug","Sept","Oct","Nov","Dec"];
   return `${date.getDate()} ${month[date.getMonth()]}, ${date.getFullYear()}`;
+}
+
+
+const socialLink = function(platform, user, status) {
+  const platformRoot = {
+    "twitter": "https://twitter.com/",
+    "mastodon": "https://indieweb.social/@"
+  };
+  const platformStatusPath = {
+    "twitter": "/status/",
+    "mastodon": "/"
+  }
+  const userLink = `${platformRoot[platform]}${user}`;
+  if (status) {
+    return `${userLink}${platformStatusPath[platform]}${status}`
+  }
+  else {
+    return userLink;
+  }
 }
 
 
@@ -35,15 +52,15 @@ module.exports = (post) => `
   <div class="container">
   <div class="social-post">
   
-  <a href="https://twitter.com/philhawksworth" class="avatar">
+  <a href="${socialLink(post.platform, 'philhawksworth')}" class="avatar">
         <img src="/images/philhawksworth-goon.jpg" alt="A photo of Phil Hawksworth's face">
       </a>
 
       <div class="main">
         <div class="meta">
           <span class="author-name">Phil Hawksworth</span>
-          <a href="https://twitter.com/philhawksworth" class="author-handle">@philhawksworth</a> &#8226;
-          <time datetime="${post.created_at}"><a href="https://twitter.com/philhawksworth/status/${post.id}">${formatDate(post.created_at)}</a></time>
+          <a href="${socialLink(post.platform, 'philhawksworth')}" class="author-handle">@philhawksworth</a> &#8226;
+          <time datetime="${post.created_at}"><a href="${socialLink(post.platform, 'philhawksworth', post.id)}">${formatDate(post.created_at)}</a></time>
           ${inreply(post)}
         </div>
         <div class="content">${post.full_text.replaceAll("\n", "<br />")}</div>
@@ -53,10 +70,13 @@ module.exports = (post) => `
         
         <ul class="permalinks">
           <li><a href="/note/tw/${post.id}">Permalink</a></li>
-          <li><a href="https://twitter.com/philhawksworth/status/${post.id}">Twitter</a></li>
+          <li><a href="${socialLink(post.platform, 'philhawksworth', post.id)}">${post.platform.charAt(0).toUpperCase()
+            + post.platform.slice(1)}</a></li>
         </ul>
       </div>
     </div>
+
+
     <p class="addendum">
       My tweets and posts live here on <a href="/">my own domain</a> these days.<br/ >You can <a href="/notes/">explore them here</a> and follow me on <a href="https://indieweb.social/@philhawksworth">Mastodon</a> instead of Twitter where I'm not currently active.
     </p>
