@@ -5,10 +5,9 @@ let archive = require('./social_archive.json');
 module.exports = async function() {
 
   let asset = new AssetCache("mastodon_feed");
-  if(asset.isCacheValid("1m")) {
+  if(asset.isCacheValid("10m")) {
     return asset.getCachedValue();
   }
-
 
   const data = await parse("https://indieweb.social/@philhawksworth.rss");
   const latestToot = data.items[0];
@@ -16,11 +15,11 @@ module.exports = async function() {
 
   // only proceed if the archive is out of date
   const latestTootDate = Number(new Date(latestToot.published));
-  const latestArchiveDate = Number(new Date("2022-12-05T22:16:27.000Z"));
-  // const latestArchiveDate = Number(new Date(latestArchived.created_at));
+  // const latestArchiveDate = Number(new Date("2022-12-05T22:16:27.000Z"));
+  const latestArchiveDate = Number(new Date(latestArchived.created_at));
 
   let newPosts = [];
-  let newPostsFormatted = []
+  let newPostsFormatted = [];
 
   if(latestArchiveDate < latestTootDate) {
     console.log(`archive needs an update`);

@@ -38,7 +38,6 @@ export default async (request, context) => {
       eleventyConfig.addShortcode("socialLink", socialLink);
       eleventyConfig.addGlobalData("filteredNotes", filteredNotes);
       eleventyConfig.addGlobalData("notes", notes);
-      eleventyConfig.addGlobalData("notes", notes);
     });
 
     return await edge.handleResponse();
