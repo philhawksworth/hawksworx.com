@@ -5,6 +5,7 @@ _soon
 src/site/images/instagram/*.jpeg
 src/site/_includes/css/*
 .netlify
+.netlify/state.json
 .cache
 /**/.DS_Store
 
