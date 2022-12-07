@@ -3,7 +3,7 @@ import {
   precompiledAppData,
 } from "./_generated/eleventy-edge-app.js";
 
-import notes from "../../src/site/_data/notes.json" assert {type: 'json'}; 
+import notes from "../../src/site/_data/social_archive.json" assert {type: 'json'}; 
 import dateDisplay from "../../src/site/_filters/edgeFilters/dates.js";
 import socialLink from "../../src/site/_filters/edgeFilters/socialLink.js";
 

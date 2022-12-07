@@ -5,8 +5,12 @@ _soon
 src/site/images/instagram/*.jpeg
 src/site/_includes/css/*
 .netlify
+.cache
 /**/.DS_Store
+
+# Social media archive exports
 tweets.json
+outbox.json
 
 # Eleventy Edge Build Data files
 netlify/edge-functions/_generated
