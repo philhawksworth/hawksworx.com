@@ -39,7 +39,7 @@ export default async (request, context) => {
     }
   
     filteredNotes.filter = searchStr;
-    filteredNotes.results = notes.filter(e => e.full_text.indexOf(searchStr) !== -1);
+    filteredNotes.results = notes.filter(e => e.full_text.toLowerCase().indexOf(searchStr.toLocaleLowerCase()) !== -1);
   
     edge.config((eleventyConfig) => {
       // Add some custom Edge-specific configuration
