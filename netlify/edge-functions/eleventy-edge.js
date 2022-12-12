@@ -19,19 +19,28 @@ export default async (request, context) => {
     });
     
     const url = new URL(request.url);
-    const searchStr = url.searchParams.get("str");
-
     let filteredNotes = {
-      filter: searchStr,
+      filter: "",
       results: notes
     };
-    if(searchStr) {
-      console.log("search for ", searchStr );
-      filteredNotes.results = notes.filter(e => e.full_text.indexOf(searchStr) !== -1);
-    }
-
-
     
+    const searchStr = url.searchParams.get("str");
+
+    // if there is an empty str param, ignore the search and go to the notes page
+    for (const [key, value] of url.searchParams.entries()) {
+      if(key == "str" && value == "") {
+        return Response.redirect(`${url.origin}/notes`, 302);
+      }
+    }
+    
+    // if there is not str at all, we can ignore
+    if(!searchStr) {
+      return context.next();
+    }
+  
+    filteredNotes.filter = searchStr;
+    filteredNotes.results = notes.filter(e => e.full_text.indexOf(searchStr) !== -1);
+  
     edge.config((eleventyConfig) => {
       // Add some custom Edge-specific configuration
       eleventyConfig.addFilter("dateDisplay", dateDisplay);
