@@ -35,7 +35,7 @@ All we need is to add a rewrite rule. This in the [netlify.toml](https://github.
 ```toml
 [[redirects]]
   from = "/.well-known/webfinger"
-  to = "https://indieweb.social/.well-known/webfinger?resource=acct:USER_HANDLE@INSTANCE_NAME"
+  to = "https://INSTANCE_NAME/.well-known/webfinger?resource=acct:USER_HANDLE@INSTANCE_NAME"
   status = 200
 ```
 
