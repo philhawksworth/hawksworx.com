@@ -87,15 +87,21 @@
   status = 200
 
 
-  [[redirects]]
-    from = "/.well-known/webfinger"
-    to = "https://indieweb.social/.well-known/webfinger?resource=acct:philhawksworth@indieweb.social"
-    status = 200
+[[redirects]]
+  from = "/.well-known/webfinger"
+  to = "https://indieweb.social/.well-known/webfinger?resource=acct:philhawksworth@indieweb.social"
+  status = 200
+
+
+[[redirects]]
+  from = "/.well-known/webfinger"
+  to = "https://indieweb.social/.well-known/webfinger?resource=acct:HANDLE@INSTANCE"
+  status = 200
 
 
 # 404s
-# [[redirects]]
-#   from = "*"
-#   to = "/404"
-#   status = 404
+[[redirects]]
+  from = "*"
+  to = "/404"
+  status = 404
 
