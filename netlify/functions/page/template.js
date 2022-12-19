@@ -8,7 +8,7 @@ const inreply = function (post) {
 const embedMedia = function (media) {
   let html = [];
     media.forEach(item => {
-      html.push(`<img src="${item}" alt="Embedded image from Twitter" />`)
+      html.push(`<img src="${item.url}" alt="Embedded image from Twitter" />`)
     });
     return html;
 }
