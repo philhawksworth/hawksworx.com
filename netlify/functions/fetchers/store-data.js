@@ -8,6 +8,10 @@ const GH_repo = "hawksworx.com";
 
 const save = async function(path, data) {
 
+
+  console.log("stores executes: ", process.cwd());
+
+
   const octokit = new Octokit({ auth: process.env.GH_TOKEN });
 
   const commits = await octokit.rest.repos.listCommits({
@@ -22,6 +26,7 @@ const save = async function(path, data) {
 		path: archivePath,
 		mode: '100644',
 		type: 'commit',
+		// content: JSON.stringify(await archiveData())
 		content: JSON.stringify(data)
 	}];
   
@@ -37,6 +42,8 @@ const save = async function(path, data) {
     parents: [commitSHA],
   });
 
+  console.log(`currentTreeSHA ${currentTreeSHA}`);
+
   
   // create a commit
   const {
@@ -49,7 +56,7 @@ const save = async function(path, data) {
     parents: [commitSHA],
   });
   
-  console.log(newCommitSHA);
+  console.log(`newCommitSHA ${newCommitSHA}`);
   
   // push the commit
   const status = await octokit.rest.git.updateRef({
@@ -59,7 +66,6 @@ const save = async function(path, data) {
     ref: "heads/master", // Whatever branch you want to push to
   });
 
-  // console.log({status});
   if(status.status == 200) {
     console.log(`data saved to repo`);
   } else {
