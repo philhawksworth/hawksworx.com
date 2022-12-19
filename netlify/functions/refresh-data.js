@@ -1,5 +1,5 @@
 const saveToRepo = require('./fetchers/store-data.js')
-const archiveFile = '../../src/site/_data/social_archive.json';
+const archiveFile = '../../src/site/_data/test_social_archive.json';
 const archive = require(archiveFile);
 
 

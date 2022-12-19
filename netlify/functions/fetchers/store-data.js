@@ -9,7 +9,7 @@ const GH_repo = "hawksworx.com";
 const save = async function(path, data) {
 
 
-  console.log("stores executes: ", process.cwd());
+  // console.log("stores executes: ", process.cwd());
 
 
   const octokit = new Octokit({ auth: process.env.GH_TOKEN });
@@ -21,7 +21,7 @@ const save = async function(path, data) {
   const commitSHA = commits.data[0].sha;
 
 
-  const archivePath = "src/site/_data/social_archive.json";
+  const archivePath = "src/site/_data/test_social_archive.json";
   const archive = [{
 		path: archivePath,
 		mode: '100644',
@@ -64,7 +64,10 @@ const save = async function(path, data) {
     ref: "heads/master", // Whatever branch you want to push to
   });
 
-  console.log({status});
+  // console.log({status});
+  if(status.status == 200) {
+    console.log(`data saved to repo`);
+  } 
   
 
 }
