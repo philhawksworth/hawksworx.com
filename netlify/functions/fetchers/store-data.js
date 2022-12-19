@@ -62,7 +62,9 @@ const save = async function(path, data) {
   // console.log({status});
   if(status.status == 200) {
     console.log(`data saved to repo`);
-  } 
+  } else {
+    console.log({status});
+  }
   
 
 }
