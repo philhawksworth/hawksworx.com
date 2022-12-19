@@ -8,10 +8,6 @@ const GH_repo = "hawksworx.com";
 
 const save = async function(path, data) {
 
-
-  // console.log("stores executes: ", process.cwd());
-
-
   const octokit = new Octokit({ auth: process.env.GH_TOKEN });
 
   const commits = await octokit.rest.repos.listCommits({
@@ -21,12 +17,11 @@ const save = async function(path, data) {
   const commitSHA = commits.data[0].sha;
 
 
-  const archivePath = "src/site/_data/test_social_archive.json";
+  const archivePath = "src/site/_data/social_archive.json";
   const archive = [{
 		path: archivePath,
 		mode: '100644',
 		type: 'commit',
-		// content: JSON.stringify(await archiveData())
 		content: JSON.stringify(data)
 	}];
   

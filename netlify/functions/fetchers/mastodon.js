@@ -13,6 +13,12 @@ async function fetchFresh () {
   const latestToot = data.items[0];
   const latestArchived = archive[0];
 
+
+  console.log(`LATEST`);
+  console.log({latestArchived});
+  console.log({latestToot});
+  
+
   // only proceed if the archive is out of date
   const latestTootDate = Number(new Date(latestToot.published));
   // const latestArchiveDate = Number(new Date("2022-12-05T22:16:27.000Z"));
@@ -25,6 +31,10 @@ async function fetchFresh () {
   let newPosts = [];
   let newPostsFormatted = [];
 
+console.log(latestArchiveDate, latestTootDate);
+
+
+
   if(latestArchiveDate < latestTootDate) {
     console.log(`The archive needs an update`);
 
@@ -36,7 +46,7 @@ async function fetchFresh () {
 
     newPosts.forEach(post => {
       
-      newPostsFormatted.unshift({
+      newPostsFormatted.push({
         "id": post.link.split("@philhawksworth/")[1],
         "platform": "mastodon",
         "created_at": new Date(post.published),
