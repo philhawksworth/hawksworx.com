@@ -18,3 +18,4 @@ netlify/edge-functions/_generated
 
 
 commit.js
+.netlify/state.json
