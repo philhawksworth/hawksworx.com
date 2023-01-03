@@ -8,10 +8,6 @@ const GH_repo = "hawksworx.com";
 
 const save = async function(path, data) {
 
-
-  console.log("stores executes: ", process.cwd());
-
-
   const octokit = new Octokit({ auth: process.env.GH_TOKEN });
 
   console.log({octokit});
@@ -47,7 +43,7 @@ const save = async function(path, data) {
 
   console.log(`currentTreeSHA ${currentTreeSHA}`);
 
-  return;
+  // return;
 
   
   // create a commit
