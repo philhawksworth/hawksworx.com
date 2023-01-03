@@ -1,4 +1,4 @@
-const { Octokit, App } = require("octokit");
+const { Octokit, App } = require("@octokit/rest");
 // const dataPath = "../../src/site/_data/notes.js";
 // const archiveData = require(dataPath);
 
@@ -15,7 +15,7 @@ const save = async function(path, data) {
   
 
 
-  const commits = await octokit.rest.repos.listCommits({
+  const commits = await octokit.repos.listCommits({
     owner: GH_user,
     repo: GH_repo,
   });
@@ -36,7 +36,7 @@ const save = async function(path, data) {
   
   // add files to the tree
   const {
-    data: { sha: currentTreeSHA } } = await octokit.rest.git.createTree({
+    data: { sha: currentTreeSHA } } = await octokit.git.createTree({
     owner: GH_user,
     repo: GH_repo,
     tree: archive,
@@ -53,7 +53,7 @@ const save = async function(path, data) {
   // create a commit
   const {
     data: { sha: newCommitSHA },
-  } = await octokit.rest.git.createCommit({
+  } = await octokit.git.createCommit({
     owner: GH_user,
     repo: GH_repo,
     tree: currentTreeSHA,
@@ -64,7 +64,7 @@ const save = async function(path, data) {
   console.log(`newCommitSHA ${newCommitSHA}`);
   
   // push the commit
-  const status = await octokit.rest.git.updateRef({
+  const status = await octokit.git.updateRef({
     owner: GH_user,
     repo: GH_repo,
     sha: newCommitSHA,
