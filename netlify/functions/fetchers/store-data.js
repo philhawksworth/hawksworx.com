@@ -10,15 +10,14 @@ const save = async function(path, data) {
 
   const octokit = new Octokit({ auth: process.env.GH_TOKEN });
 
-  console.log({octokit});
-  
-
   const commits = await octokit.rest.repos.listCommits({
     owner: GH_user,
     repo: GH_repo,
   });
   const commitSHA = commits.data[0].sha;
 
+  console.log(`COMMITS: ${commits.data.length}`);
+  
 
   const archivePath = "src/site/_data/social_archive.json";
   const archive = [{
@@ -43,7 +42,7 @@ const save = async function(path, data) {
 
   console.log(`currentTreeSHA ${currentTreeSHA}`);
 
-  // return;
+  return;
 
   
   // create a commit
@@ -61,8 +60,8 @@ const save = async function(path, data) {
   
   // push the commit
   const status = await octokit.rest.git.updateRef({
-    owner: "philhawksworth",
-    repo: "hawksworx.com",
+    owner: GH_user,
+    repo: GH_repo,
     sha: newCommitSHA,
     ref: "heads/master", // Whatever branch you want to push to
   });

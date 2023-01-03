@@ -8,8 +8,7 @@ exports.handler = async (event, context) => {
   const mastodon = require('./fetchers/mastodon.js');
   const toots = await mastodon.fetchFresh();
 
-  console.log(toots);
-  
+  // console.log(toots);
 
   if(toots.length) {
     const updatedArchive = toots.concat(archive);
