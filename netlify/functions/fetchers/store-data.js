@@ -1,19 +1,12 @@
-const { Octokit, App } = require("@octokit/rest");
-// const dataPath = "../../src/site/_data/notes.js";
-// const archiveData = require(dataPath);
-
+const { Octokit } = require("@octokit/rest");
 const GH_user = "philhawksworth";
 const GH_repo = "hawksworx.com";
+const GH_branch = "master";
 
 
 const save = async function(path, data) {
 
   const octokit = new Octokit({ auth: process.env.GH_TOKEN });
-
-  const user = await octokit.request("/user");
-  console.log(user);
-  
-
 
   const commits = await octokit.repos.listCommits({
     owner: GH_user,
@@ -21,15 +14,11 @@ const save = async function(path, data) {
   });
   const commitSHA = commits.data[0].sha;
 
-  console.log(`COMMITS: ${commits.data.length}`);
-  
-
-  const archivePath = "src/site/_data/social_archive.json";
+  const archivePath = path;
   const archive = [{
 		path: archivePath,
 		mode: '100644',
 		type: 'commit',
-		// content: JSON.stringify(await archiveData())
 		content: JSON.stringify(data)
 	}];
   
@@ -42,12 +31,10 @@ const save = async function(path, data) {
     tree: archive,
     base_tree: commitSHA,
     message: 'Social media archive automatically stashed',
-    parents: [commitSHA],
+    parents: [commitSHA]
   });
 
-  console.log(`currentTreeSHA ${currentTreeSHA}`);
-  
-  // create a commit
+    // create a commit
   const {
     data: { sha: newCommitSHA },
   } = await octokit.git.createCommit({
@@ -55,17 +42,15 @@ const save = async function(path, data) {
     repo: GH_repo,
     tree: currentTreeSHA,
     message: `Social media archive automatically stashed`,
-    parents: [commitSHA],
+    parents: [commitSHA]
   });
   
-  console.log(`newCommitSHA ${newCommitSHA}`);
-  
-  // push the commit
+    // push the commit
   const status = await octokit.git.updateRef({
     owner: GH_user,
     repo: GH_repo,
     sha: newCommitSHA,
-    ref: "heads/master", // Whatever branch you want to push to
+    ref: `heads/${GH_branch}`
   });
 
   if(status.status == 200) {
@@ -73,7 +58,6 @@ const save = async function(path, data) {
   } else {
     console.log({status});
   }
-  
 
 }
 

@@ -13,10 +13,8 @@ async function fetchFresh () {
 
   // only proceed if the archive is out of date
   const latestTootDate = Number(new Date(latestToot.published));
-  // const latestArchiveDate = Number(new Date("2022-12-05T22:16:27.000Z"));
   const latestArchiveDate = Number(new Date(latestArchived.created_at));
  
-
   let newPosts = [];
   let newPostsFormatted = [];
 

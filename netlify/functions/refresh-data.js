@@ -1,6 +1,6 @@
 const saveToRepo = require('./fetchers/store-data.js')
-const archiveFile = '../../src/site/_data/social_archive.json';
-const archive = require(archiveFile);
+const archive = require('../../src/site/_data/social_archive.json');
+const archiveRepoPath = '/src/site/_data/social_archive.json';
 
 
 exports.handler = async (event, context) => {
@@ -12,7 +12,7 @@ exports.handler = async (event, context) => {
 
   if(toots.length) {
     const updatedArchive = toots.concat(archive);
-    saveToRepo.save(archiveFile, updatedArchive)
+    saveToRepo.save(archiveRepoPath, updatedArchive)
   }
     
   return {
