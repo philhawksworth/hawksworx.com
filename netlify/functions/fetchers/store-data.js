@@ -10,6 +10,11 @@ const save = async function(path, data) {
 
   const octokit = new Octokit({ auth: process.env.GH_TOKEN });
 
+  const user = await octokit.request("/user");
+  console.log(user);
+  
+
+
   const commits = await octokit.rest.repos.listCommits({
     owner: GH_user,
     repo: GH_repo,
