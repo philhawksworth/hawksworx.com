@@ -46,9 +46,6 @@ const save = async function(path, data) {
   });
 
   console.log(`currentTreeSHA ${currentTreeSHA}`);
-
-  return;
-
   
   // create a commit
   const {
