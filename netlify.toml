@@ -15,6 +15,9 @@
 #     X-Content-Type-Options = "nosniff"
 #     Referrer-Policy= "no-referrer-when-downgrade"
 
+[functions]
+  node_bundler = "esbuild"
+
 
 [[edge_functions]]
   function = "eleventy-edge"
