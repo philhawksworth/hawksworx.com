@@ -13,7 +13,7 @@
   "author": "Phil Hawksworth",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "2.0.0-canary.16",
+    "@11ty/eleventy": "2.0.0-canary.23",
     "@11ty/eleventy-fetch": "^3.0.0",
     "@11ty/eleventy-plugin-rss": "^1.0.3",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.2.0",
