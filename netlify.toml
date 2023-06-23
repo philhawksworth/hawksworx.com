@@ -18,7 +18,6 @@
 [functions]
   node_bundler = "esbuild"
 
-
 [[edge_functions]]
   function = "eleventy-edge"
   path = "/*"

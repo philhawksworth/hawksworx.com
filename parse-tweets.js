@@ -71,6 +71,12 @@ for (let t = 0; t < data.length; t++) {
           url: link.id_str,
           type: link.type
         }
+
+        if(link.media_url_https == "https://pbs.twimg.com/media/FhxYQnjacAAXkaa.jpg") {
+          console.log(link.media_url_https);
+      }
+
+
         media.push(link.media_url);
       }
 
@@ -94,9 +100,10 @@ for (let t = 0; t < data.length; t++) {
       "urls": tweet.entities?.urls || null,
       "in_reply_to_status_id": tweet.in_reply_to_status_id || null,
       "in_reply_to_screen_name": tweet.in_reply_to_screen_name || null,
-      "media" : media || null
+      "media" : { "url" : media || null }
     });
   }
+
 
   
 }

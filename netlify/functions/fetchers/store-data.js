@@ -14,9 +14,9 @@ const save = async function(path, data) {
   });
   const commitSHA = commits.data[0].sha;
 
-  const archivePath = path;
+  const archivePath = "src/site/_data/social_archive.json";
   const archive = [{
-		path: archivePath,
+		path: path,
 		mode: '100644',
 		type: 'commit',
 		content: JSON.stringify(data)

@@ -1,6 +1,6 @@
 const saveToRepo = require('./fetchers/store-data.js')
 const archive = require('../../src/site/_data/social_archive.json');
-const archiveRepoPath = '/src/site/_data/social_archive.json';
+const archiveRepoPath = 'src/site/_data/social_archive.json';
 
 
 exports.handler = async (event, context) => {

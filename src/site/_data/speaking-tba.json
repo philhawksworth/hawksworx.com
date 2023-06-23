@@ -1,0 +1,18 @@
+{
+    "events": [
+      {
+        "title": "Middlesbrough Front End",
+        "address": "Middlesbrough, UK",
+        "starts_on": "2023-07-19 09:00",
+        "country_code": "gb-eng",
+        "url": "https://www.middlesbroughfe.co.uk/"
+      },
+      {
+        "title": "WaysConf",
+        "address": "Krakow, Poland",
+        "starts_on": "2023-09-04 09:00",
+        "country_code": "pl",
+        "url": "https://www.waysconf.com/"
+      }
+    ]
+}
