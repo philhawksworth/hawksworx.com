@@ -2,7 +2,7 @@
 title: "On song - Finding my lost voice"
 tags: ["personal"]
 date: 2023-06-26
-pageClass: dark-theme theme-red
+pageClass: dark-theme theme-brightblue
 
 
 ---
