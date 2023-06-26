@@ -79,5 +79,3 @@ Mini tangent alert...
 This means that if I deploy a build of my site where something on every single pre-generated page has changed, the deploy will take longer to complete than when I deploy a version of my site when just a few pages have been added or updated. That’s irrespective of the time it takes for the build to run first.
 
 Most of my deployments just have a few updates and additions, resulting in times in the 35-40 second range. But occasionally I might do something global, like rollout a new design or update the global navigation, then I’m seeing those deploys take between 3.5 to 4 minutes as all those thousands of new assets are distributed following the build. Very manageable.
-
-## What’s next?

@@ -482,3 +482,25 @@ a.floating-lozenge {
     }
   }
 }
+
+
+.main figure {
+  
+  padding:0;
+  margin:0;
+  margin-bottom: 1em;
+
+  img {
+    width:100%;
+    margin: 0;
+    padding:0
+  }
+  figcaption {
+    font-size: 0.8em;
+    font-style: italic;
+    text-align: center;
+    padding:0;
+    margin:-0.1em 0 0 0;
+    line-height: 1.4;
+  }
+}
