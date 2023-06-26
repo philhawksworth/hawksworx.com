@@ -9,7 +9,7 @@ pageClass: dark-theme theme-brightblue
 
 I love music. All sorts of music. And particularly the sound of voices. Many voices harmonising and resonating together gives me goosebumps. It's magical. But ever since one moment in my early teens, I've felt that it wasn't something I could ever do. I've been silent.
 
-However, after more than 30 years of bashfully hiding my singing voice, and feeling embarrassed of it even in the privacy of driving in the car onm my own, or with shampoo in my eyes in the shower, I've finally found my voice. And I'm going to gush about that for a few paragraphs if you don't mind.
+However, after more than 30 years of bashfully hiding my singing voice, and feeling embarrassed of it even in the privacy of driving in the car on my own, or with shampoo in my eyes in the shower, I've finally found my voice. And I'm going to gush about that for a few paragraphs if you don't mind.
 
 <figure>
     <img src="/images/cc-barcelona-sound-check.jpg">
