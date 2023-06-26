@@ -13,7 +13,7 @@ However, after more than 30 years of bashfully hiding my singing voice, and feel
 
 <figure>
     <img src="/images/cc-barcelona-sound-check.jpg">
-    <figcaption>Sound checking with Classical Chorus at L'Auditori, Barcelona</figcaption>
+    <figcaption>Sound-checking with Classical Chorus at L'Auditori, Barcelona</figcaption>
 </figure>
 
 
