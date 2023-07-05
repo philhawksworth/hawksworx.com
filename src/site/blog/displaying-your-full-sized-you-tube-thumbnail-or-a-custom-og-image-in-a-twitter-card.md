@@ -41,7 +41,7 @@ So, rather links to YouTube videos unfurling in Twitter like this:
     <figcaption>The small, default preview that Twitter shoes for links a YouTube video </figcaption>
 </figure>
 
-Thay can look like this:
+They can look [like this](https://twitter.com/philhawksworth/status/1676503469350346753):
 
 <figure>
     <img src="/images/unfurl-large-card.jpg">
@@ -67,7 +67,7 @@ The [code to do this in a netlify Edge Function](https://github.com/philhawkswor
 // Detecting if Twitter is the requesting user agent
 const agent = request.headers.get("user-agent");
 if(agent.includes("Twitter")) {
-  // Peepo!
+  // Got something just for you, Twitter!
 } 
 
 ```
@@ -80,7 +80,7 @@ To do this, our edge function fetches the open graph data from the destination U
 // fetching the open graph data from the destination page, 
 // and rendering it in a template
 
-// Import Cheerio for easy DOM interogation
+// Import Cheerio for easy DOM interrogation
 import * as cheerio from "https://esm.sh/cheerio@1.0.0-rc.12";
 
 // get the og data from the final destination page via our redirect lookup
@@ -130,7 +130,7 @@ Now, just by making a convenient short link to any YouTube, when we share that l
 
 There's more! Now that we have this logic which displays a custom page view to Twitter, we can use it to show any OG image we like and not just relay the one specified at the destination URL.
 
-This lets us use _our own branding_ when we share a shortened link on Twitter. By expanding the list of user agent strings that we detect, we can add the same support for other places that unfurl URLs to show a preview image, like Slack, Mastadon, LinkedIn and others.
+This lets us use _our own branding_ when we share a shortened link on Twitter. By expanding the list of user agent strings that we detect, we can add the same support for other places that unfurl URLs to show a preview image, like Slack, Mastodon, LinkedIn and others.
 
 A few more lines of logic in our function, and we can populate our custom template with our own OG image if we have one that matches the path in our short link. If not, not problem, just show the one intended by the owners of the destination page.
 
