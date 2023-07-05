@@ -3,7 +3,7 @@
   "version": "2.0.1",
   "description": "Phil Hawksworth's personal website - hawksworx.com",
   "scripts": {
-    "dev": "eleventy --serve --quiet",
+    "dev": "npx eleventy --serve --quiet",
     "build": "eleventy"
   },
   "repository": {
