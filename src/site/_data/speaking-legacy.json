@@ -1,6 +1,13 @@
 {
     "events": [
       {
+        "title": "Middlesbrough Front End",
+        "address": "Middlesbrough, UK",
+        "starts_on": "2023-07-19 09:00",
+        "country_code": "gb-eng",
+        "url": "https://www.middlesbroughfe.co.uk/"
+      },
+      {
         "title": "PixelPioneers, 2023 (MC)",
         "address": "Bristol, UK",
         "starts_on": "2023-06-16 09:00",
