@@ -1,9 +1,9 @@
 ---
 layout: layouts/base.liquid
 ---
-
-{% render "navigation" %}
+{% render "navigation" pkg:pkg %}
 <h1>{{title}}</h1>
 {{ content }}
-{% render "site-footer" %}
+{% render "site-footer" pkg:pkg %}
+
 

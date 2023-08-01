@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "eleventy",
+    "build": "npx eleventy",
     "clean": "rm -rf _site",
-    "start": "npm run clean && eleventy --serve"
+    "start": "npm run clean && npx eleventy --serve"
+  },
+  "repository": {
+    "url": "https://github.com/philhawksworth/hawksworx.com"
   },
   "keywords": [],
   "author": "",
