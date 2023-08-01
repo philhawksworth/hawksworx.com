@@ -1,0 +1,10 @@
+---
+layout: layouts/default.liquid
+title: Blog
+---
+
+<ul>
+{% for post in collections.blog %}
+  <li><a href="{{post.url}}">{{post.data.title }}</a></li>
+{% endfor %}
+</ul>
