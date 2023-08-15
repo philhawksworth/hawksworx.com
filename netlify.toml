@@ -84,7 +84,7 @@
 # A serverless cgi-bin!
 # https://www.hawksworx.com/cgi-bin/hello/friend
  [[redirects]]
-  from = "/cgi-bin/hello?name=*"
+  from = "/cgi-bin/hello/*"
   to = "/.netlify/functions/hello?name=:splat"
   status = 200
 
