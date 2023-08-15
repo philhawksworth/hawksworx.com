@@ -4,8 +4,10 @@ const markdownItAttrs = require('markdown-it-attrs');
 
 module.exports = function(eleventyConfig) {
 	
+  // Sass pipeline
   eleventyConfig.addPlugin(eleventySass);
 
+  // Extend markdown
   eleventyConfig.amendLibrary("md", mdLib => mdLib.use(markdownItAttrs));
 
   // Create a blog collection
@@ -13,6 +15,8 @@ module.exports = function(eleventyConfig) {
     return collectionApi.getFilteredByGlob("src/blog/*.md").reverse();
   });
 
+  // file passthrough
+  eleventyConfig.addPassthroughCopy({ "static": "/" });
 
   return {
     dir: {

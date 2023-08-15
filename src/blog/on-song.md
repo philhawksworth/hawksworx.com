@@ -3,8 +3,6 @@ title: "On song - Finding my lost voice"
 tags: ["personal"]
 date: 2023-06-26
 pageClass: dark-theme theme-brightblue
-
-
 ---
 
 I love music. All sorts of music. And particularly the sound of voices. Many voices harmonising and resonating together gives me goosebumps. It's magical. But ever since one moment in my early teens, I've felt that it wasn't something I could ever do. I've been silent.
@@ -12,8 +10,8 @@ I love music. All sorts of music. And particularly the sound of voices. Many voi
 However, after more than 30 years of bashfully hiding my singing voice, and feeling embarrassed of it even in the privacy of driving in the car on my own, or with shampoo in my eyes in the shower, I've finally found my voice. And I'm going to gush about that for a few paragraphs if you don't mind.
 
 <figure>
-    <img src="/images/cc-barcelona-sound-check.jpg">
-    <figcaption>Sound-checking with Classical Chorus at L'Auditori, Barcelona</figcaption>
+  <img src="/images/cc-barcelona-sound-check.jpg">
+  <figcaption>Sound-checking with Classical Chorus at L'Auditori, Barcelona</figcaption>
 </figure>
 
 
@@ -23,7 +21,8 @@ However, after more than 30 years of bashfully hiding my singing voice, and feel
 
 There's a back-story. One or two folks who have tried to drag me kicking and screaming to do karaoke may have heard some version of it as I mounted my defense and squirmed free. You're not trying to do that, so I can share it in a less desperate and pleading tone, and in the knowledge that there's a happy ending to this now. Here goes.
 
-I used to love singing in the school choir at primary school. I’m sure it was “a treat” for all the parents. Thinking back to my first ever time singing in a group in a little concert, perhaps 8 years old, I can still recall getting an unexpected lump in my throat from that feeling of all the voices coming together. 
+
+I used to love singing in the school choir at primary school. I’m sure it was “a treat” for all the parents. Thinking back to my first ever time singing in a group in a little concert, perhaps 8 years old, I can still recall getting an unexpected lump in my throat from that feeling of all the voices coming together.{.pancake}
 
 But then came my teenage years. And at 13, I was giggling in class with my mates as we had a very naff sing-a-long around the piano in our school music lesson. 30 kids with our heads down in a music book muttering our way through something naff and pedestrian. Annoyed by my chattering (fair) the music teacher made the decision to use music as a punishment and made me stand in front of the class and sing the song as a solo. Twice. 
 

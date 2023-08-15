@@ -1,4 +1,4 @@
 {
-  "layout" : "layouts/default.liquid",
+  "layout" : "layouts/article.liquid",
   "card" : true
 }
