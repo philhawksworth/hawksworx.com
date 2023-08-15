@@ -16,7 +16,7 @@
 export function handler(event, context, callback) {
 
   // Who's there?
-  const { name = "friend" } = event.queryStringParameters;
+  const name = event.queryStringParameters["name"] || "friend"
 
   // Say hello
   callback(null, {
