@@ -1,0 +1,18 @@
+---
+import Footer from '../components/Footer.astro';
+const { title } = Astro.props;
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{title}</title>
+  </head>
+  <body>
+    <h1>{title}</h1>
+    <article>
+      <slot /> <!-- your content is injected here -->
+    </article>
+    <Footer />
+  </body>
+</html>

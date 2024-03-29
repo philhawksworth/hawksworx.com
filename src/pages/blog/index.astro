@@ -1,0 +1,17 @@
+---
+import { getCollection } from 'astro:content';
+const allBlogPosts = await getCollection('blog');
+import MySiteLayout from '../../layouts/BaseLayout.astro';
+---
+<MySiteLayout title="blog">
+
+
+<ul>
+{allBlogPosts.map(p => (
+  <li>
+    <a href={p.slug}>{p.data.title}</a>
+    </li>
+    ))}
+</ul>
+</MySiteLayout>
+	

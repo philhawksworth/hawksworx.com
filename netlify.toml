@@ -1,10 +1,10 @@
 [build] 
   publish = "dist"
-  command = "npm run build"
+  command = "pnpm run build"
 
 [dev] 
   publish = "dist"
-  command = "npm run dev"
+  command = "pnpm run dev"
 
 [[redirects]]
   from = "/api/*"
