@@ -1,7 +1,7 @@
 ---
 import Footer from '@components/Footer.astro';
 import Header from '@components/Header.astro';
-const { title } = Astro.props;
+const { title } = Astro.props.frontmatter || Astro.props;
 ---
 <html lang="en">
   <head>
