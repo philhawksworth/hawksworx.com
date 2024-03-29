@@ -1,0 +1,31 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+
+// Get all entries from a collection.
+// Requires the name of the collection as an argument.
+// Example: retrieve `src/content/blog/**`
+const allBlogPosts = await getCollection('blog');
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<h1>Astro</h1>
+    <a href="/">home</a>
+    blog
+
+    <ul>
+      {allBlogPosts.map(p => (
+        <li>
+          <a href={p.slug}>{p.data.title}</a>
+        </li>
+      ))}
+    </ul>
+	</body>
+</html>
