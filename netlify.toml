@@ -4,7 +4,7 @@
 
 [dev] 
   publish = "dist"
-  command = "npm run start"
+  command = "npm run dev"
 
 [[redirects]]
   from = "/api/*"
