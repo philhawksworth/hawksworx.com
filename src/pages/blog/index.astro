@@ -1,9 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
 const allBlogPosts = await getCollection('blog');
-import MySiteLayout from '../../layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
-<MySiteLayout title="blog">
+<BaseLayout title="blog">
 
 
 <ul>
@@ -13,5 +13,5 @@ import MySiteLayout from '../../layouts/BaseLayout.astro';
     </li>
     ))}
 </ul>
-</MySiteLayout>
+</BaseLayout>
 	

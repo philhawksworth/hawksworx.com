@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const { title } = Astro.props;
+---
+<BaseLayout>
+  
+  <h1>BLOG: {title}</h1>
+  <article>
+    <slot /> <!-- your content is injected here -->
+  </article>
+
+</BaseLayout>
