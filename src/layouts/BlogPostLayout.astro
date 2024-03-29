@@ -1,10 +1,14 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
-const { title } = Astro.props;
+const { title, tags } = Astro.props;
 ---
 <BaseLayout>
   
   <h1>BLOG: {title}</h1>
+  <h2>tags</h2>
+  <ul>
+    { tags.map(t => (<li><a href={"/blog/tags/"+t}>{t}</a></li>)) }
+  </ul>
   <article>
     <slot /> <!-- your content is injected here -->
   </article>

@@ -13,7 +13,7 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<BlogPageLayout title={entry.data.title}>
+<BlogPageLayout title={entry.data.title} tags={entry.data.tags}>
 
   <h1>{entry.data.title}</h1>
   <Content />
