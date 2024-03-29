@@ -6,6 +6,16 @@
   publish = "dist"
   command = "pnpm run dev"
 
+# Netlify image CDN for blog content images
+[[redirects]]
+  from = "/images/full/:file"
+  to = "/.netlify/images/?url=/images/:file"
+  status = 200
+[[redirects]]
+  from = "/images/:width/:file"
+  to = "/.netlify/images/?w=:width&url=/images/:file"
+  status = 200
+
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"

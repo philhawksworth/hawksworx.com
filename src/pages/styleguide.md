@@ -1,6 +1,6 @@
 ---
-layout: layouts/article.liquid
 title: Styleguide and typography reference for hawksworx.com
+layout: '@layouts/BaseLayout.astro'
 date: 2023-08-01
 ---
 

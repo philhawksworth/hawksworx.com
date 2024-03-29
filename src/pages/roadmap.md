@@ -1,6 +1,6 @@
 ---
-layout: layouts/default.liquid
 title: Site Roadmap
+layout: '@layouts/BaseLayout.astro'
 ---
 
 Tracking the development roadmap for this site.
