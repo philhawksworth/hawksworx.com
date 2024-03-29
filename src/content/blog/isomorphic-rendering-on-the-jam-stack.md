@@ -13,7 +13,7 @@ The fact that so many frameworks set about this with all manner of complex add-o
 
 ![comedyinthecrown.com](/images/Comedy_in_the_Crown.jpg "comedyinthecrown.com - delivered via an enhanced JAM stack")
 
-<!--more-->
+
 
 
 First thing's first. Let's look at the site. It's a simple site, not a big complex application, but that's precisely the type of thing I'm seeing regularly over-engineered, so it fits my purpose. Take a quick peek, then come back to read about how it was put together.

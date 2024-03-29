@@ -14,7 +14,7 @@ All I need now is a silly pun or portmanteau for a name and... wait... behold! [
 
 [![ElevenTail screenshot](/images/eleventail-screenshot.jpg "ElevenTail screenshot")](https://eleventail.netlify.com)
 
-<!--more-->
+
 
 ## What does ElevenTail provide?
 

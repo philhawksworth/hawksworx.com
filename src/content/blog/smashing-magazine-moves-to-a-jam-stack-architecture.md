@@ -13,7 +13,7 @@ Smashing Magazine, the much beloved and prolific resource for web designers and 
 
 ![Smashing Magazine relaunch](/images/smashing-relaunch.jpg "Smashing Magazine relaunch")
 
-<!--more-->
+
 
 > I'll be watching the progress and impact of this carefully. But already, we can see a more than 10x improvement in page performance. That's huge!
 

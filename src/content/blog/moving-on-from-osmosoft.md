@@ -16,7 +16,7 @@ tags:
 Last week was both sad and exciting for me. Exciting because I was gearing up to start my new job at <a href="http://theteam.co.uk">theTeam</a>, a London-based communications agency with a slightly silly name. Sad because it was my last week working at <a href="http://osmosoft.com">Osmosoft</a> (a company that created plenty of silly named things itself).
 
 <img src="/images/osmosoft.jpg" alt="">
-<!--more-->
+
 
 
 <p>

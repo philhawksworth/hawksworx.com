@@ -16,7 +16,7 @@ I'm rather excited to be speaking at Texas JavaScript in Austin this year. <a hr
 
 <img src="/images/txjs.jpeg" alt="">
 
-<!--more-->
+
 
 
 <h3>Here's the synopsis:</h3>

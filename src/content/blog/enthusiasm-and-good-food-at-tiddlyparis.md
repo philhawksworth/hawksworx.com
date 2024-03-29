@@ -14,7 +14,7 @@ Yesterday I was fortunate to be able to make the quick trip over to Paris to att
 
 
 <img src="https://farm4.static.flickr.com/3131/2803239794_6a48afbdc3.jpg" alt="">
-<!--more-->
+
 
 
 <p>Gathering in a funky bar on the Champs Elysees, the 10 of us shared a beer or two and got to talk about what we were all doing with TiddlyWiki and get to know each other a little better.</p>

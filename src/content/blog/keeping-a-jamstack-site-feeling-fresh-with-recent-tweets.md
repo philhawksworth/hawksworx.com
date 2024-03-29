@@ -13,7 +13,7 @@ But for a [static site](https://www.jamstack.org), it would be a pain to need to
 
 ![Fresh slice](/images/kiwi-slice.jpg "Keeping things fresh")
 
-<!--more-->
+
 
 My site, this site, is made with Jekyll. Perhaps the most popular static site generator. I already have a few bits of Gulp as part of my build automation and the whole thing is hosted on [Netlify](https://www.netlify.com), my very favorite static site hosting service.
 

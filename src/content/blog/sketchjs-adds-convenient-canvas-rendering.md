@@ -17,7 +17,7 @@ tags:
 	</p>
 
 <img src="/images/sketchjs.png" alt="">
-<!--more-->
+
 
 <p>
     Sketch helps by augmenting things like the mouse, touch and keyboard events with often neded utilities. It also sets up your animation loop and helps to manage it with enriched math functions and other handy bits and pieces.

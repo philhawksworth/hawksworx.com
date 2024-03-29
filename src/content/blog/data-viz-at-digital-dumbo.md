@@ -14,7 +14,7 @@ tags:
  This week, as the <a href="http://digitalshoreditch.com/">Digital Shoreditch</a> festival draws to a close, a few of us from <a href="http://rga.com">R/GA</a> got the chance to attend an evening to talk with other London agencies and start-ups about data visualisation. We couldn't resist the urge to build a little something to take along.
 
 <img src="/images/dd-data-viz.gif" alt="">
-<!--more-->
+
 
 
 <p>

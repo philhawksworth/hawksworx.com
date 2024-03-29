@@ -11,7 +11,7 @@ tags:
 
 I stumbled upon a simple method for opening a Finder window at your current Terminal session location recently.  Since it is something that I have a regular need for, I thought that there might be other Mac users out there who might also find this useful from time to time.
 
-<!--more-->
+
 
 <p>To set things up so that it is easy to use whenever you need it, you just need to follow these two steps:</p>
 <p>First, using your <a href="http://www.macromates.com">preferred text editor</a> create a file which contains this command:</p>

@@ -8,7 +8,7 @@ Recently I made the decision to reclaim my content from Twitter and [host all of
 
 I also wanted to ensure that my future posts on Mastodon, the platform du jour, would accumulate as part of the same searchable and addressable archive over time. Giving everything a URL on my own domain that I could be ensure would live on for as long as I wanted.
 
-<!--more-->
+
 
 I’ll describe how I made Mastodon posts automatically accrue in my own archive and website in another post, but first the more pressing matter was of how to unhitch my wagon from Twitter and sensibly incorporate every tweet I ever posted [since 2007](/note/tw/163673622) into my site. I’d be adding around 25,000 new pages to my site which is currently pre-generated using [Eleventy](https://11ty.dev) and hosted as static assets on [Netlify](https://netlify.com).
 

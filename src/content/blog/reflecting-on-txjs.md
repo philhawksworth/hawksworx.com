@@ -15,7 +15,7 @@ draft: false
 I recently <a href="/blog/excess-cms-and-stink-at-txjs/">blogged</a> that I'd be speaking at the annual <a href="http://2013.texasjavascript.com">Texas JavaScript</a> conference in Austin. After a few days to reflect, I'd have to say that it was not only a privilege to speak at TXJS, but also that it was a pretty special event to attend.
 
 <img src="/images/paramount-theatre.jpeg" alt="">
-<!--more-->
+
 
 
 <p>

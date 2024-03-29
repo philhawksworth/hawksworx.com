@@ -16,7 +16,7 @@ tags:
 The trend for 'parallax' or 'scrolljacking' web sites has long had me grumbling about their large page weight, slow rendering times and general accessibility black spots, but some are better than others. That got me thinking, do they ever do a good job?
 
 <img src="/images/funk.jpg" alt="">
-<!--more-->
+
 
 
 <p>

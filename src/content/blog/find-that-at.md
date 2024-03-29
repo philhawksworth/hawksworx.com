@@ -16,7 +16,7 @@ It is remarkably easy to set up. Here's how.
 
 ![Ant and leaf](/images/vlad-tchompalov-450777-unsplash.jpg "Ant and leaf")
 
-<!--more-->
+
 
 ## The redirect API
 

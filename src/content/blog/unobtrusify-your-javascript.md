@@ -13,7 +13,7 @@ tags:
 Recently <a href="http://jaybyjayfresh.com" title="jaybyjayfresh">Jon Lister</a>, a colleague of mine at <a href="http://www.osmosoft.com">Osmosoft</a> showed me a website made by his friend <a href="http://joshuabradley.co.uk/" title="Joshua Bradley">Joshua Bradley</a>. The site, used some of the Javscript code from <a href="http://tiddlywiki.com" title="TiddlyWiki">TiddlyWiki</a>'s animation engine to create some nice visual effects. I loved the design, but could see some room for improvement in the implementation. I'm a big advocate of <a href="http://en.wikipedia.org/wiki/Unobtrusive_JavaScript" title="Unobtrusive JavaScript">Unobtrusive Javascript</a> and <a href="http://en.wikipedia.org/wiki/Progressive_enhancement" title="Progressive enhancement">Progressive Enhancement</a> and so I set about producing a quick demo of how a similar result could be achieved in the most Web-kind and accessible way available using <a href="http://jquery.com" title="jQuery">jQuery</a> for the behaviors.
 
 <img src="/images/unobtrusive.jpg" alt="">
-<!--more-->
+
 
 
 <p>

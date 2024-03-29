@@ -15,7 +15,7 @@ OK, I'm being over dramatic, but sometimes it does feel like I'm on a bit of a s
 
 <img src="/images/flashvjs.png" alt="">
 
-<!--more-->
+
 
 
 <p>

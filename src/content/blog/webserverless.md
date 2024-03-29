@@ -16,7 +16,7 @@ Today I saw a question on twitter which I have seen a few times before. It was p
 
 ![A sledgehammer and a nut](/images/sledgehammer-nut.jpg "A sledgehammer and a nut")
 
-<!--more-->
+
 
 There were some interesting responses, but this cheeky and playful response from the irrepressible Bruce Lawson jumped out at me:
 

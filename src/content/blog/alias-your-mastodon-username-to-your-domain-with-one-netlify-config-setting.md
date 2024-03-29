@@ -14,7 +14,7 @@ Did you know you could use your own domain for your mastodon username without ho
 
 ![Mastodon client showing @phil@hawksworx.com resolving to @philhawksworth@indeweb.social](/images/mastodon-aliased-with-webfinger.jpg "Mastodon client showing @phil@hawksworx.com resolving to @philhawksworth@indeweb.social")
 
-<!--more-->
+
 
 One of the nice things of Mastodon is that you can move from one instance to another if you ever feel the need. Your username is a combination of your handle and the name of your instance. I'm currently on the [indieweb.social](https://indieweb.social) instance and very happy there. But perhaps one day I'll want to move to a different instance. If I do, it would be nice to have control of a consistent username. And to have it associated with the domain name that I control would be lovely.
 

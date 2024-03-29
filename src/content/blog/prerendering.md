@@ -16,7 +16,7 @@ But JAMstack can sound confusing. There are a number of emerging interpretations
 
 Here is a short explanation about why.
 
-<!--more-->
+
 
 ![Baking, not frying](/images/muffin-tray-LqkFX2Km1a0-unsplash.jpg "Baking, not frying")
 

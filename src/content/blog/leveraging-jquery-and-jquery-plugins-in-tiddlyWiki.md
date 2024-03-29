@@ -13,7 +13,7 @@ tags:
 The recent release of <a href="http://tiddlywiki.com/">TiddlyWiki v2.5</a> included something rather exciting for me: <a href="http://jquery.com">jQuery</a>, the popular Javascript library is now part of the TiddlyWiki core.
 
 <img src="/images/jquery-logo-large.jpg" alt=""></figure>
-<!--more-->
+
 
 
 

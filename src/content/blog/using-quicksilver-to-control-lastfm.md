@@ -13,7 +13,7 @@ For a while, I've been using handy <a href="http://docs.blacktree.com/quicksilve
 
 <img src="/images/quicksilver_lastfm.jpg" alt="">
 
-<!--more-->
+
 
 <p>
     At the moment though, I find myself listening to <a href="http://last.fm" rel="org fn url">Last.fm</a> more and more, and have been looking for a similar way to control the Last.fm application. I couldn't find a plugin for Quicksilver to achieve this so I set about writing an Applescript which I could trigger with Quicksilver.  I'm not much of an Applescript whizz, but I managed to put the following script together to skip the track currently playing in the Last.fm application:

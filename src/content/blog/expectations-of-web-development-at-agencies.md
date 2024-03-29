@@ -17,7 +17,7 @@ Recently I was involved in an very short bit of consultancy for an e-commerce co
 
 <img src="/images/production-line.jpg" alt=""></figure>
 
-<!--more-->
+
 
 <p>
     This isn't the first time that I've encountered that attitude towards agencies. It seems that there is a perception from companies whose bread and butter is developing their product for the Web, that an agency would never go to the same lengths as them to ensure quality and performance.

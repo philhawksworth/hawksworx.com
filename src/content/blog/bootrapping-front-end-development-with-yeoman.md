@@ -16,7 +16,7 @@ tags:
 Recently Addy Osmani posted a sneak peek at <a href="http://yeoman.io/">Yeoman.io</a>, which is described as a client-side stack, comprised of tools and frameworks that can help developers  build beautiful web applications. For me, this is incredibly timely as at <a href="http://rga.com">R/GA</a> we have been making some effort to build tools to help us streamline our front-end development efforts, and keep the quality high.
 
 <img src="/images/yeoman.png" alt="">
-<!--more-->
+
 
 <p>
     At the time of writing, Yeoman was not quite ready to be released, but the teaser video and description of its capabilities look bang on to me. It tackles things like:

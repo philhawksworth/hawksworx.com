@@ -14,7 +14,7 @@ tags:
 After a few great years at <a href="http://theteam.co.uk" title="The Team">The Team</a>, the time has come to move to new pastures. Leaving a job is always, I find, an exciting but difficult experience and this feels particularly true in this case.
 
 <img src="/images/theteam-pub.jpg" alt=""></figure>
-<!--more-->
+
 
 <p>
     I joined The Team tasked with leading the way for the front-end development efforts across all of our clients and projects, but soon became responsible for all of the development and technical output of the agency. This represented a significant challenge for me, and it has not been a road entirely free from bumps.

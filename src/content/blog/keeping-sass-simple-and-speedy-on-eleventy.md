@@ -15,7 +15,7 @@ I've experimented with quite a few different static site generators over the yea
 
 ![Speeding](/images/jack-b-762488-unsplash.jpg "Speeding")
 
-<!--more-->
+
 
 Eleventy is written in JavaScript and has a very logical route to customisation and extension. Its main config file, which holds various configuration settings and variables, can also contain JavaScript functions which can be executed when needed as utilities.
 

@@ -13,7 +13,7 @@ tags:
 After more than 14 wonderful years with my girlfriend, Verity, last weekend we finally tied the knot.
 
 <img src="/images/hitched-beam.jpeg" alt="">
-<!--more-->
+
 
 
 

@@ -14,7 +14,7 @@ Almost three years ago, [my friend](https://twitter.com/leewilsoncomedy) and I s
 
 ![Hal gets mean](/images/hal-cruttenden.jpg "Hal gets mean")
 
-<!--more-->
+
 
 ## Curating a lineup for the audience
 

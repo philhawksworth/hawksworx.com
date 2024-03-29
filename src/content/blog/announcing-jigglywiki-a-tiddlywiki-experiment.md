@@ -14,7 +14,7 @@ tags:
 Once upon a time I was resistant to the idea of Javascript libraries. That was due to a couple of things. Firstly, I was comfortable with writing the Javascript for my projects myself and didn't like the idea of relying on someone else's code which I couldn't easily inspect. Secondly, at the time there weren't really any libraries. Then there were a few, but they were all, well, to be blunt, a bit pants.
 
 <img src="/images/jigglywiki.jpg" alt="">
-<!--more-->
+
 
 
 <p>

@@ -14,7 +14,7 @@ tags:
 Last week I travelled with some of my <a href="/blog/joining-rga.html">new R/GA colleagues</a> to Salford near Manchester to visit the BBC's new Media City development and talk to The Beeb about their continuing efforts to engage more openly and effectively with the online community. The BBC are keen to share their thinking and product plans for this and the event was kicked off by <a href="http://www.bbc.co.uk/blogs/bbcinternet/ralph_rivera/">Ralph Rivera</a>, Director, Future Media.
 
 <img src="/images/media_city.jpg" alt="">
-<!--more-->
+
 
 
 <p>

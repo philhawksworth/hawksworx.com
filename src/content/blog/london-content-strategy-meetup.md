@@ -15,7 +15,7 @@ tags:
 Last night I faced a bit of a fear of mine by giving a 5 minute lightning talk at The popular Content Strategy Meetup, hosted at <a href="http://www.wearetbc.com/">The Book Club</a> in London's startup-rich Shoreditch.
 
 <img src="/images/bookclub-bulbs.jpg" alt="">
-<!--more-->
+
 
 <p>
     The fear was less about speaking in public, which I enjoy (although it still gives me a certain amount of the heebie-jeebies) but more about the format. Speaking for five minutes with 20 slides which automatically advance every 15 seconds is, for me, bum-clenchingly terrifying. It strips me of all of my security mechanisms and forces a particular focus and rhythm. An interesting challenge.

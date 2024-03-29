@@ -14,7 +14,7 @@ tags:
 
 It seems that the <a href="http://twitter.com">Twitterverse</a> is all of a flutter following recent blog posts from Phillie Casablanca and Paul Downey.  I'm watching this with keen interest and it has been the subject of much impassioned discussion in our office.
 
-<!--more-->
+
 
 <p>Frustrated by the noisy habits of <a href="http://twitter.com/gapingvoid">some</a> <a href="http://twitter.com/scobleizer">twitterers</a>, <a href="http://philwhitehouse.blogspot.com/" title="The Casablanca Weblog">Phil</a> <a href="http://philwhitehouse.blogspot.com/2008/01/tweetaholics.html" title="The Casablanca Weblog: Tweetaholics">opened a discussion</a> on good Twitter practices that led to him posting the <a href="http://philwhitehouse.blogspot.com/2008/01/ten-commandments-of-twitter.html" title="The Casablanca Weblog: The Ten Commandments of Twitter">10 Commandments of Twitter</a>, an attempt to articulate some of the good, and highlight some of the annoying, practices when posting tweets. For the record, I'm right behind him, and was quick to follow the 10 commandments. It has been interesting though, to observe the response to his post, and to see how many people agree and how many people strongly object to his suggestions.</p>
 

@@ -12,7 +12,7 @@ tags:
 While I was sad in my previous post to share that I was <a href="/blog/time-to-move-on-from-the-team" title="From the Hawksworx blog: Time to move on from The Team">leaving The Team</a>, I can now share with some excitement that I'll be moving on to join the considerable talent present at <a href="http://rga.com" title="R/GA">R/GA</a>.
 
 <img src="/images/rga.png" alt="">
-<!--more-->
+
 
 <p>
 	As I mentioned before, the decision to leave was a difficult one, but the potential at R/GA provides a substantial pull and I can't wait to get stuck in. I'll be joining in the role of Technical Director, the same role that I have enjoyed so much at The Team, but the outlook is somewhat different. The organisation is digital to its core and has real momentum in attracting high profile, engaging clients who seem to have a real appetite for R/GA to push the boundaries of creativity and innovation in the work that they do for them.

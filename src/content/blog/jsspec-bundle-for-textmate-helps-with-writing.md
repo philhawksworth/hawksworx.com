@@ -13,7 +13,7 @@ tags:
 
 Recently, we at <a href="http://www.osmosoft.com">Osmosoft</a> have been trying to make good on one of our pledges: To introduce a unit testing framework to <a href="http://www.tiddlywiki.com">Tiddlywiki</a> development.
 
-<!--more-->
+
 
 <p>Along the way we examined several Javascript testing frameworks and found that JSSpec suited our needs quite nicely. JSSpec resembles the popular <a href="http://rspec.info/">RSpec</a> testing framework popularly used by Ruby developers.
 </p>

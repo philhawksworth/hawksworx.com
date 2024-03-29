@@ -3,8 +3,7 @@ title: Adding a Static Comments System to My Jekyll Build
 date: 2014-07-22T00:00:00Z
 publishdate: 2014-07-22T00:00:00Z
 draft: false
-description: Building a tool to provide comments and other user generated content
-  for sites built with static site generators like Jekyll.
+description: Building a tool to provide comments and other user generated content for sites built with static site generators like Jekyll.
 tags:
   - ssg
   - static
@@ -15,9 +14,9 @@ I'm a big fan of simplicity when building web sites. That's just one of the reas
 
 That's why I decided to create a simple service which would provide that capability to any static sites. I'm using it to add comments to this site, and you can use it for yours too.
 
-<img src="/images/hello-poole.png" alt="Poole">
+<img src="/images/hello-poole.png" alt="Poole" />
 
-<!--more-->
+
 
 <h2>Introducing Poole</h2>
 <p>
@@ -72,7 +71,7 @@ That's why I decided to create a simple service which would provide that capabil
 <h3>The Gulp task to get comments from Poole</h3>
 <p>I run this when I get a notification from Poole of a new comment. I also have a command to deploy which just pushes the build to Github pages.</p>
 
-```
+```js
 // Get comments form Poole
 gulp.task("comments", function() {
 
@@ -121,8 +120,8 @@ gulp.task("comments", function() {
   Once I've run the Gulp task above, I just run the Jekyll build as normal. The post template includes this logic to add the comments to the page which they originated from.
 </p>
 
-{% raw %}
-```
+
+```astro
 <ul class="listing comments">
   {% for comment in site.data.comments.sessions %}
     {% if comment.path == page.url %}
@@ -142,14 +141,13 @@ gulp.task("comments", function() {
   {% endfor %}
 </ul>
 ```
-{% endraw %}
 
 <h3>The comments form which posts the data to Poole</h3>
 <p>
   The post template adds this form to each blog post page. A hidden field keeps track of the page where a comment originates from so that it can be inserted by the template later.  Poole also lets you specify which page on your domain to redirect to after a successful post. That way the user never feels like they have been routed away to a third party service.
 </p>
 
-```
+```html
 <form action="http://pooleapp.herokuapp.com/data/{API-KEY}/" method="post">
   <h2>Leave your comment</h2>
   <input type="hidden" name="redirect_to" value="/thanks" />

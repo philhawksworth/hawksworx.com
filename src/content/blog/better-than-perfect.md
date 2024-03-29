@@ -13,7 +13,7 @@ tags:
 
 Every now an again, I have to remind my self of the old adage about <i>the perfect being the enemy of the good</i>. I can spend a lot of time on something without ever getting to the finish line when I forget this. I'm not unusual. It's a common trait. But getting beyond this is so important, and I have had this brought into sharp focus a few of times lately in ways I found rather inspiring.
 
-<!--more-->
+
 
 
 The first was at <a href="http://theweb.is" title="The Web Is conference">The Web Is</a>, which was a conference in Cardiff earlier this year. The annoyingly talented Seb Lee Delisle made a throwaway comment about his 'not being that smart'. About how his skill was just that he focussed on getting things finished. That's the hard part, getting ideas out of your head and into the world. I liked that message.

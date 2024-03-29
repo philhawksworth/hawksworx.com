@@ -16,7 +16,7 @@ tags:
 On April 1st, I'll be speaking at the <a href="http://html5devconf.com">HTML5DevConf</a> at the Palace Hotel in San Francisco. I'll be giving a version of my "I can smell yor CMS" talk which looks at how content managment systems can adversily effect performance and experience in the front-end.
 
 <img src="/images/i-can-smell-your-cms.jpg" alt="">
-<!--more-->
+
 
 <h3>Here's the synopsis:</h3>
 <blockquote>

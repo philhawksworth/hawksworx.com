@@ -12,7 +12,7 @@ tags:
 For a while I have been meaning to start posting screencasts of some of my work to spread the word, and to explain some of the details that are difficult to describe in text.
 
 <img src="https://farm4.static.flickr.com/3182/2674867706_0397fca6e0.jpg" alt="">
-<!--more-->
+
 
 
 

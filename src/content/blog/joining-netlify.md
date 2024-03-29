@@ -19,7 +19,7 @@ I should probably explain why.
 
 ![Netlify](/images/netlify-banner.png "Netlify")
 
-<!--more-->
+
 
 ## Who are Netlify?
 

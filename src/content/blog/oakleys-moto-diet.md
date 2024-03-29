@@ -14,7 +14,7 @@ tags:
 I <a href="/blog/oakleys-monster-page-of-baubles/">recently blogged</a> some crticism about a site which had an 85MB home page. At the time of writing, <a href="http://moto.oakley.com">Oakley's Moto</a> site was the most dramatic example I had ever seen of an excessively enhanced, heavyweight single page site.  Since then, the team at Oakley have responded by putting the site on a diet and dramatically improving its performance and footprint. Great stuff!
 
 <img src="/images/oakley-moto-2.jpeg" alt="">
-<!--more-->
+
 
 <p>
     My criticisms of the site provoked some conversation on Twitter. Many people echoed my surprise at such an excessive page weight, others argued that this was a great example of pushing the boundaries of the web.

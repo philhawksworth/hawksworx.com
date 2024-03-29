@@ -14,7 +14,7 @@ tags:
 This year, I was lucky enough to be invited to speak at <a href="http://fronteers.nl/congres/2012">Fronteers</a>, the very well regarded web development conference in Amsterdam.  I was particular excited by this since the event had been high on my wishlist to attend for the last few years.  I spoke about the negative impact that content management systems regularly have on the front-end development effort, and how we might try to combat this.
 
 <img src="/images/fronteers-theatre.jpg" alt="">
-<!--more-->
+
 
 
 <p>

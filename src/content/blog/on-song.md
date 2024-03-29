@@ -15,7 +15,7 @@ However, after more than 30 years of bashfully hiding my singing voice, and feel
 </figure>
 
 
-<!--more-->
+
 
 ## You? But you're always talking in front of people. Why would you be shy?
 

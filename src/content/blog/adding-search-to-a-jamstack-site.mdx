@@ -14,7 +14,7 @@ Search is often cited as a limitation of static sites. Searching _feels_ dynamic
 
 ![Searching](/images/sandro-kradolfer-1077230-unsplash.jpg "Searching")
 
-<!--more-->
+
 
 There are a number of services available to can bring fully featured, rich, search functionality to your sites. If I had needed more sophisticated searching, with things like fuzzy matching, related content associations, and deep search analytics, I could have used a service like [Algolia](https://www.algolia.com/), who are experts in this sort of thing.
 
@@ -133,7 +133,7 @@ generating this search index can be done at build time, so it is ready to serve 
 
 Currently, I am using a static site generator called [Eleventy](https://11ty.io) to generate this site. With Eleventy, making a template to output my search.json is straight forward.
 
-{% raw %}
+
 ```js
 ---
 permalink: search.json
@@ -148,7 +148,6 @@ permalink: search.json
 {%- endfor -%}
 ]}
 ```
-{% endraw %}
 
 By iterating over the collection of posts for the site, I can construct the JSON to suit my needs later. For convenience I chose:
 

@@ -15,7 +15,7 @@ tags:
 It seems to me that this is the time for some responsibility. In the face of the kind of <a href="http://www.bbc.co.uk/news/uk-england-london-14450248" title="BBC News - Further riots in London as violence spreads across England">civil unrest that we have witnessed</a> in the UK over the last few days, starting in north London and spreading to many other areas across the city and then to other cities we must have a return to responsible behaviour.  I'm not just talking about the people turning to criminal acts, young and old, men and women, but also about, <em>specifically</em> about, the media.
 
 <img src="/images/london-cleanup.jpg" alt="">
-<!--more-->
+
 
 <p>
     It's easy to watch the footage playing in a depressingly lengthening loop and simply shout at the idiots looting, mugging and destroying. I know, because that's what I have been doing into the early hours of the morning.  But the media needs to be careful. The apparent need to fill the airwaves with an uninterrupted stream of coverage as the disgraceful activities unfolded has lead to presenters resorting to delivering noise rather than facts.

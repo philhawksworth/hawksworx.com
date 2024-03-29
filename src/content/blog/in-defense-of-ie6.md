@@ -16,7 +16,7 @@ tags:
 No really! Read that title again. I'm about to argue against placing so much blame for painful Web development at the door of Internet Explorer 6. I'm not going try and claim that IE6 isn't a huge pain in the arse of all good Web developers. Let's face it, Web developers <a href="http://twitter.com/#search?q=ie6" title="Twitter - search for IE6">love to bitch</a> about it, but I do think that it's time for some accountability.
 
 <img src="/images/defending-ie.jpg" alt=""></figure>
-<!--more-->
+
 
 
 <p>

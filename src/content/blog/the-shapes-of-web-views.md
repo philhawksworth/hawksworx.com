@@ -13,7 +13,7 @@ tags:
 A few nice folks around the web have been sharing visualisations of the most popular viewport sizes appearing in the analytics for their sites. I thought these were beautiful and useful and wanted to make it easier for people to create their own and highlight the need for responsive web design.
 
 <img src="/images/viewport-graph-wide.png" alt="The most common viewports used to view this site">
-<!--more-->
+
 
 <p>
   Lara Hogan of Etsy <a href="https://twitter.com/lara_hogan/status/516660720378052608">published the first which caught my eye</a>. Etsy are doing great work when it comes to sharing their learning about site performance and optimisations. This was just another example of that.

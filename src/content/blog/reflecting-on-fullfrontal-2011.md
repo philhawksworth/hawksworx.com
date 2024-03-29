@@ -16,7 +16,7 @@ tags:
 The third installment of Full Frontal, the JavaScript conference hosted each year in Brighton by <a href="http://leftlogic.com">LeftLogic</a>, was a great event once again. I was lucky enough to be a speaker this year, which perhaps gave me a slightly different perspective of the day, but as an enthusiastic attendee I also found it to be an excellent experience.
 
 <img src="/images/ph_excessive_enhancement.jpg" alt="">
-<!--more-->
+
 
 
 <p>
