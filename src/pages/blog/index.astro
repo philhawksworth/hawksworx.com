@@ -1,17 +1,33 @@
 ---
-import { getCollection } from 'astro:content';
-const allBlogPosts = await getCollection('blog');
 import BaseLayout from '@layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allBlogPosts = await getCollection('blog');
+const uniqueTags = [...new Set(allBlogPosts.map((post) => post.data.tags).flat())].sort();
+
+
+
 ---
 <BaseLayout title="blog">
 
+  <h2>Tags</h2>
+  <ul>
+    {
+      uniqueTags.map(t => (
+        <li>
+          <a href={"/blog/tags/"+t}>{t}</a>
+          </li>))
+        }
+  </ul>
 
-<ul>
-{allBlogPosts.map(p => (
-  <li>
-    <a href={p.slug}>{p.data.title}</a>
-    </li>
-    ))}
-</ul>
+  <h2>Posts</h2>
+  <ul>
+  {
+    allBlogPosts.map(p => (
+    <li>
+      <a href={"/blog/"+p.slug}>{p.data.title}</a>
+    </li>))
+  }
+  </ul>
 </BaseLayout>
 	
