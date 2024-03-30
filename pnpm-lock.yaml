@@ -14,6 +14,9 @@ dependencies:
   markdown-it-attrs:
     specifier: ^4.1.6
     version: 4.1.6(markdown-it@14.1.0)
+  remark-unwrap-images:
+    specifier: ^4.0.0
+    version: 4.0.0
 
 packages:
 
@@ -3383,6 +3386,14 @@ packages:
       '@types/mdast': 4.0.3
       mdast-util-to-markdown: 2.1.0
       unified: 11.0.4
+    dev: false
+
+  /remark-unwrap-images@4.0.0:
+    resolution: {integrity: sha512-Ilr5ZhrhZSvnjemy1rRuxlTC0I/39YyWDRiE9d5vF079APcwdYYzwcZL8RGehlCtQCiik8hWMyo4Xhz2Fq0JhA==}
+    dependencies:
+      '@types/mdast': 4.0.3
+      hast-util-whitespace: 3.0.0
+      unist-util-visit: 5.0.0
     dev: false
 
   /resolve@1.22.8:

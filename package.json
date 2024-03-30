@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/mdx": "^2.2.2",
     "astro": "^4.5.12",
-    "markdown-it-attrs": "^4.1.6"
+    "markdown-it-attrs": "^4.1.6",
+    "remark-unwrap-images": "^4.0.0"
   }
 }
