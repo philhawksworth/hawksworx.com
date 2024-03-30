@@ -11,10 +11,46 @@ const { title } = Astro.props.frontmatter || Astro.props;
   </head>
   <body>
     <Header />
-    <h1>{title}</h1>
-    <article>
-      <slot />
-    </article>
+    <main>
+      <h1>{title}</h1>
+      <article>
+        <slot />
+      </article>
+    </main>
     <Footer />
   </body>
 </html>
+
+<style is:global>
+
+html, body, ul, ol, h1, h2, h3, h4, figure {
+  margin:0;
+  padding:0;
+}
+
+body {
+  background-color: #000;
+  color: #333;
+  font-family: sans-serif;
+  line-height: 1.4;
+}
+
+a:link,
+a:visited {
+  color: #000;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: #2391ff99;
+  text-underline-offset: 3px;
+}
+a:hover,
+a:focus {
+  color: #2391ff99;
+}
+
+main {
+  padding: 10rem 3rem;
+  background-color: #fff;
+}
+
+</style>

@@ -1,5 +1,45 @@
 ---
-import Nav from '@components/GlobalNav.astro';
 ---
-<Nav/>
-<hr>
+<header>
+  <nav>
+    <ul>
+      <li><a href="/">hawksworx</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style is:global>
+
+header {
+  text-align: left;
+  position: fixed;
+  width: 100%;
+  top:0;
+}
+
+nav {
+  display: inline-block;
+  background-color: #000000cc;
+  backdrop-filter: blur(2px);
+  color: #fff;
+  margin:1em;
+  padding: 1em;
+  border-radius: 2em;
+} 
+
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  list-style: none;
+  gap:0.66em;
+  padding:0 1em;
+}
+
+header a:link,
+header a:visited {
+  color: #fff;
+}
+
+</style>
