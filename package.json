@@ -1,18 +1,10 @@
 {
-  "name": "astro-version",
-  "type": "module",
-  "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "build": "eleventy",
+    "dev": "eleventy --serve"
   },
-  "dependencies": {
-    "@astrojs/mdx": "^2.2.2",
-    "astro": "^4.5.12",
-    "markdown-it-attrs": "^4.1.6",
-    "remark-unwrap-images": "^4.0.0"
+  "devDependencies": {
+    "@11ty/eleventy": "3.0.0-alpha.10",
+    "sass": "^1.77.4"
   }
 }

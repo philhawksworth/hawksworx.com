@@ -1,0 +1,28 @@
+@use "_includes/css/reset.scss";
+@use "_includes/css/variables.scss";
+@use "_includes/css/layout.scss";
+
+
+:root{
+  --color-page: var(--color-cream);
+  --color-text: #222;
+}
+
+
+::selection {
+  color: var(--color-page);
+  background-color: var(--color-text);
+}
+
+
+body {
+  padding: 0 2em;
+  background-color: var(--color-page);
+  color: var(--color-text);
+}
+
+
+.card {
+  margin:2em;
+  background-color: #fff;
+}
