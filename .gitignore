@@ -1,6 +1,11 @@
 # Local Netlify folder
 .netlify
 
+# Build output
 dist
+
+# Dependencies
 node_modules
+
+# Gubbins
 .DS_Store
