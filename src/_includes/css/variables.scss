@@ -1,3 +1,24 @@
 :root {
+  // colors
   --color-cream: #F6F5F1;
+
+  //  Font faces
+  --font-system: system-ui, -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+  “Helvetica Neue”, Arial, sans-serif;
+  --font-primary: "EB Garamond", serif;
+  // --font-secondary: Pacaembu, var(--font-system);
+  --font-heading: var(--font-primary);
+  --font-monospace: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+
+  
+  // responsive type style
+  --step--1: clamp(0.625rem, 0.5729rem + 0.2083vi, 0.7292rem);
+  --step-0: clamp(0.75rem, 0.6875rem + 0.25vi, 0.875rem);
+  --step-1: clamp(0.9rem, 0.825rem + 0.3vi, 1.05rem);
+  --step-2: clamp(1.08rem, 0.99rem + 0.36vi, 1.26rem);
+  --step-3: clamp(1.296rem, 1.188rem + 0.432vi, 1.512rem);
+  --step-4: clamp(1.5552rem, 1.4256rem + 0.5184vi, 1.8144rem);
+  --step-5: clamp(1.8662rem, 1.7107rem + 0.6221vi, 2.1773rem);
+  --step-6: clamp(2.2395rem, 2.0529rem + 0.7465vi, 2.6127rem)
+
 }

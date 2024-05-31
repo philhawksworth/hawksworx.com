@@ -8,6 +8,9 @@ devDependencies:
   '@11ty/eleventy':
     specifier: 3.0.0-alpha.10
     version: 3.0.0-alpha.10
+  markdown-it-attrs:
+    specifier: ^4.1.6
+    version: 4.1.6(markdown-it@14.1.0)
   sass:
     specifier: ^1.77.4
     version: 1.77.4
@@ -788,6 +791,15 @@ packages:
   /luxon@3.4.4:
     resolution: {integrity: sha512-zobTr7akeGHnv7eBOXcRgMeCP6+uyYsczwmeRCauvpvaAltgNyTbLH/+VaEAPUeWBT+1GuNmz4wC/6jtQzbbVA==}
     engines: {node: '>=12'}
+    dev: true
+
+  /markdown-it-attrs@4.1.6(markdown-it@14.1.0):
+    resolution: {integrity: sha512-O7PDKZlN8RFMyDX13JnctQompwrrILuz2y43pW2GagcwpIIElkAdfeek+erHfxUOlXWPsjFeWmZ8ch1xtRLWpA==}
+    engines: {node: '>=6'}
+    peerDependencies:
+      markdown-it: '>= 9.0.0'
+    dependencies:
+      markdown-it: 14.1.0
     dev: true
 
   /markdown-it@14.1.0:

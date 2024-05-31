@@ -5,6 +5,7 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "3.0.0-alpha.10",
+    "markdown-it-attrs": "^4.1.6",
     "sass": "^1.77.4"
   }
 }

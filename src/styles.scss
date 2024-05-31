@@ -1,11 +1,13 @@
 @use "_includes/css/reset.scss";
 @use "_includes/css/variables.scss";
+@use "_includes/css/fonts.scss";
 @use "_includes/css/layout.scss";
+@use "_includes/css/typography.scss";
 
 
 :root{
   --color-page: var(--color-cream);
-  --color-text: #222;
+  --color-text: #555;
 }
 
 
@@ -25,4 +27,8 @@ body {
 .card {
   margin:2em;
   background-color: #fff;
+}
+
+.red {
+  color: red;
 }
