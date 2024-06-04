@@ -1,0 +1,4 @@
+{
+  "layout" : "layouts/post.njk",
+  "card" : true
+}
