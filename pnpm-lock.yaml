@@ -8,12 +8,27 @@ devDependencies:
   '@11ty/eleventy':
     specifier: 3.0.0-alpha.10
     version: 3.0.0-alpha.10
+  '@11ty/eleventy-plugin-syntaxhighlight':
+    specifier: ^5.0.0
+    version: 5.0.0
+  luxon:
+    specifier: ^3.4.4
+    version: 3.4.4
+  markdown-it:
+    specifier: ^14.1.0
+    version: 14.1.0
+  markdown-it-anchor:
+    specifier: ^9.0.1
+    version: 9.0.1(@types/markdown-it@14.1.1)(markdown-it@14.1.0)
   markdown-it-attrs:
     specifier: ^4.1.6
     version: 4.1.6(markdown-it@14.1.0)
   sass:
     specifier: ^1.77.4
     version: 1.77.4
+  slugify:
+    specifier: ^1.6.6
+    version: 1.6.6
 
 packages:
 
@@ -63,6 +78,12 @@ packages:
       debug: 4.3.5
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@11ty/eleventy-plugin-syntaxhighlight@5.0.0:
+    resolution: {integrity: sha512-y9BUmP1GofmbJgxM1+ky/UpFCpD8JSOeLeKItUs0WApgnrHk9haHziW7lS86lbArX5SiCVo4zTTw9x53gvRCaA==}
+    dependencies:
+      prismjs: 1.29.0
     dev: true
 
   /@11ty/eleventy-utils@1.0.2:
@@ -167,6 +188,21 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       escape-string-regexp: 5.0.0
+    dev: true
+
+  /@types/linkify-it@5.0.0:
+    resolution: {integrity: sha512-sVDA58zAw4eWAffKOaQH5/5j3XeayukzDk+ewSsnv3p4yJEZHCCzMDiZM8e0OUrRvmpGZ85jf4yDHkHsgBNr9Q==}
+    dev: true
+
+  /@types/markdown-it@14.1.1:
+    resolution: {integrity: sha512-4NpsnpYl2Gt1ljyBGrKMxFYAYvpqbnnkgP/i/g+NLpjEUa3obn1XJCur9YbEXKDAkaXqsR1LbDnGEJ0MmKFxfg==}
+    dependencies:
+      '@types/linkify-it': 5.0.0
+      '@types/mdurl': 2.0.0
+    dev: true
+
+  /@types/mdurl@2.0.0:
+    resolution: {integrity: sha512-RGdgjQUZba5p6QEFAVx2OGb8rQDL/cPRG7GiedRzMcJ1tYnUANBncjbSB1NRGwbvjcPeikRABz2nshyPk1bhWg==}
     dev: true
 
   /a-sync-waterfall@1.0.1:
@@ -793,6 +829,16 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
+  /markdown-it-anchor@9.0.1(@types/markdown-it@14.1.1)(markdown-it@14.1.0):
+    resolution: {integrity: sha512-cBt7aAzmkfX8X7FqAe8EBryiKmToXgMQEEMqkXzWCm0toDtfDYIGboKeTKd8cpNJArJtutrf+977wFJTsvNGmQ==}
+    peerDependencies:
+      '@types/markdown-it': '*'
+      markdown-it: '*'
+    dependencies:
+      '@types/markdown-it': 14.1.1
+      markdown-it: 14.1.0
+    dev: true
+
   /markdown-it-attrs@4.1.6(markdown-it@14.1.0):
     resolution: {integrity: sha512-O7PDKZlN8RFMyDX13JnctQompwrrILuz2y43pW2GagcwpIIElkAdfeek+erHfxUOlXWPsjFeWmZ8ch1xtRLWpA==}
     engines: {node: '>=6'}
@@ -1022,6 +1068,11 @@ packages:
     dependencies:
       posthtml-parser: 0.11.0
       posthtml-render: 3.0.0
+    dev: true
+
+  /prismjs@1.29.0:
+    resolution: {integrity: sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q==}
+    engines: {node: '>=6'}
     dev: true
 
   /promise@7.3.1:

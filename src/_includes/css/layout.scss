@@ -1,0 +1,27 @@
+body {
+  padding: 0;
+  margin: 0; 
+  background-color: #fff;
+}
+header {
+  background-color: var(--color-page);
+  margin:0;
+  padding: 1em 0;
+}
+main {
+  padding:0 1.5em 4em;
+  background-color: var(--color-page);
+  section {
+    width:95%;
+    margin:0 auto;
+    max-width: 600px;
+  }
+
+
+}
+footer {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  padding: 2em 1em 8em;
+}

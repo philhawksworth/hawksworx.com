@@ -1,5 +1,6 @@
 ---
 title: Bootstrapping front-end development with Yeoman
+subtitle: Developer tooling
 date: 2012-07-25T00:00:00Z
 publishdate: 2012-07-25T00:00:00Z
 draft: false

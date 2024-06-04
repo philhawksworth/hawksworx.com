@@ -1,13 +1,13 @@
 ---
 title: Webserverless
+subtitle: "Simplicity and power in web architecture"
 date: 2018-04-10T06:47:03-07:00
 publishdate: 2018-04-10T06:47:03-07:00
-draft: false
-section: blog
+section: feature
 allowcomments: true
 tags: ["jamstack", "static", "web"]
 hero: /images/sledgehammer-nut.jpg
-pageClass: "dark-theme theme-greyblue"
+# layout: feature.liquid
 ---
 
 Today I saw a question on twitter which I have seen a few times before. It was posed by the rather excellent and lovely Drew McLellan.
@@ -81,4 +81,9 @@ I approach the technical design of each site I work on, not by asking "Can I mak
 Where possible, I'm going webserverless.
 
 
+{% css %}
+body {
+  color: red;
+}
+{% endcss %}
 

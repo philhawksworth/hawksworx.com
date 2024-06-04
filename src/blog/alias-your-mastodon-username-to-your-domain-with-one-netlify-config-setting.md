@@ -1,5 +1,6 @@
 ---
-title: Alias your mastodon account to your own domain with Netlify redirect
+title: Alias your mastodon account to your own domain 
+subtitle: Using a Netlify redirect
 description: Learn how you can use a Netlify redirect to alias your own domain to your Mastodon account
 date: 2022-12-12
 tags:
@@ -26,7 +27,7 @@ So instead of sharing my username as `@philhawksworth@indieweb.social`, I could 
 
 As Phil explains:
 
-> Implementing WebFinger requires your domain to respond to a request to /.well-known/webfinger with a JSON representation of the associated accounts. If you have a Mastodon account you can check out what your WebFinger JSON looks like by making a request to https://#{instance}/.well-known/webfinger?resource=acct:#{username}@#{instance}. 
+> Implementing WebFinger requires your domain to respond to a request to `/.well-known/webfinger` with a JSON representation of the associated accounts. If you have a Mastodon account you can check out what your WebFinger JSON looks like by making a request to `https://#{instance}/.well-known/webfinger?resource=acct:#{username}@#{instance}`. 
 
 His solution is nice and simple, but got me thinking that we could simplify even further and achieve this with a single redirect rule, which can be achieved very simply with Netlify, where I happen to host this site.
 

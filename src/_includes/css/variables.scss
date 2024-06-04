@@ -1,24 +1,44 @@
 :root {
   // colors
-  --color-cream: #F6F5F1;
+  --color-cream: #f6f4f0;
+  --color-blue: #70b4fc;
+  --color-grey-dark: #222;
+  --color-grey-mid: #333;
+  --color-grey-light: #bbb;
+
+
+  // theme colors
+  --color-accent: var(--color-blue);
+  --color-page: var(--color-cream);
+  --color-text: var(--color-grey-dark);
+  --color-headings: #000;
+  --shade-down-1: #00000005;
+  --shade-down-2: #00000015;
+  --shade-up: #ffffffcc;
 
   //  Font faces
   --font-system: system-ui, -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Oxygen-Sans, Ubuntu, Cantarell,
   “Helvetica Neue”, Arial, sans-serif;
   --font-primary: "EB Garamond", serif;
+  // --font-primary: "Cormorant", serif;
   // --font-secondary: Pacaembu, var(--font-system);
   --font-heading: var(--font-primary);
   --font-monospace: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
 
   
   // responsive type style
-  --step--1: clamp(0.625rem, 0.5729rem + 0.2083vi, 0.7292rem);
-  --step-0: clamp(0.75rem, 0.6875rem + 0.25vi, 0.875rem);
-  --step-1: clamp(0.9rem, 0.825rem + 0.3vi, 1.05rem);
-  --step-2: clamp(1.08rem, 0.99rem + 0.36vi, 1.26rem);
-  --step-3: clamp(1.296rem, 1.188rem + 0.432vi, 1.512rem);
-  --step-4: clamp(1.5552rem, 1.4256rem + 0.5184vi, 1.8144rem);
-  --step-5: clamp(1.8662rem, 1.7107rem + 0.6221vi, 2.1773rem);
-  --step-6: clamp(2.2395rem, 2.0529rem + 0.7465vi, 2.6127rem)
+  --step--2: clamp(0.7813rem, 0.7594rem + 0.1094vi, 0.8442rem);
+  --step--1: clamp(0.9375rem, 0.8722rem + 0.3266vi, 1.1253rem);
+  --step-0: clamp(1.125rem, 0.9946rem + 0.6522vi, 1.5rem);
+  --step-1: clamp(1.35rem, 1.1241rem + 1.1296vi, 1.9995rem);
+  --step-2: clamp(1.62rem, 1.2564rem + 1.818vi, 2.6653rem);
+  --step-3: clamp(1.944rem, 1.3844rem + 2.7981vi, 3.5529rem);
+  --step-4: clamp(2.3328rem, 1.4969rem + 4.1795vi, 4.736rem);
+  --step-5: clamp(2.7994rem, 1.5772rem + 6.1108vi, 6.3131rem);
+
+  // Breakpoints
+  --bp-narrow: 400px;
+  --bp-mid: 600px;
+  --bp-wide: 1000px;
 
 }

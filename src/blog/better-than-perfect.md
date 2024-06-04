@@ -1,5 +1,6 @@
 ---
 title: Better Than Perfect
+subtitle: The reminder I always need
 date: 2014-12-02T00:00:00Z
 publishdate: 2014-12-02T00:00:00Z
 draft: true

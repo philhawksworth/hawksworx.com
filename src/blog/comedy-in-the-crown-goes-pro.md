@@ -1,5 +1,6 @@
 ---
 title: Comedy in the Crown goes pro
+subtitle: The evolution of our open mic night
 date: 2018-04-29T06:47:03-07:00
 publishdate: 2018-04-29T06:47:03-07:00
 draft: false

@@ -1,5 +1,6 @@
 ---
-title: Announcing JigglyWiki. A TiddlyWiki experiment with jQuery
+title: Announcing JigglyWiki
+subtitle: A TiddlyWiki experiment with jQuery
 date: 2008-08-27T00:00:00Z
 publishdate: 2008-08-27T00:00:00Z
 draft: false
@@ -13,7 +14,7 @@ tags:
 
 Once upon a time I was resistant to the idea of Javascript libraries. That was due to a couple of things. Firstly, I was comfortable with writing the Javascript for my projects myself and didn't like the idea of relying on someone else's code which I couldn't easily inspect. Secondly, at the time there weren't really any libraries. Then there were a few, but they were all, well, to be blunt, a bit pants.
 
-<img src="/images/jigglywiki.jpg" alt="">
+<img src="/images/jigglywiki.jpg" alt="A screenshot of Jigglywiki, a web based wiki application">
 <!--more-->
 
 

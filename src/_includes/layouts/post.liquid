@@ -1,0 +1,32 @@
+---
+layout: base.liquid
+---
+
+<section class="center">
+  <p class="meta">
+    By <a href="">Phil Hawksworth</a><br>
+    <time datetime="{{date}}">{{date | formatDate }}</time>
+  </p>
+  <hgroup>
+    <h1>{{title}}</h1>
+    <p>{{subtitle}}</p>
+  </hgroup>
+  {% for tag in tags %}
+    <a href="/blog/{{tag}}" class="tag">{{tag}}</a>
+  {% endfor %}
+</section>
+<hr>
+<section>
+  <div class="excerpt">
+    {{ content | section  }}
+  </div>
+  {{ content | section: 'remainder' }}
+</section>
+<section class="right">
+<hr>
+<h4>More posts</h4>
+
+Next post
+
+</section>
+

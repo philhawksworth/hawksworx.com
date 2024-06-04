@@ -1,5 +1,6 @@
 ---
 title: Adding a Static Comments System to My Jekyll Build
+subtitle: An alternative approach to comments
 date: 2014-07-22T00:00:00Z
 publishdate: 2014-07-22T00:00:00Z
 draft: false

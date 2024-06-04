@@ -1,5 +1,6 @@
 ---
-title: Adding search to a JAMstack site
+title: Adding search to a Jamstack site
+subtitle: A progressive enhancement approach
 description: Using progressive enhancement, JavaScript and a static site generator to create site search facility.
 date: 2018-10-18
 allowcomments: true
@@ -10,11 +11,13 @@ photoCredits:
 pageClass: "dark-theme theme-steelblue"
 ---
 
-Search is often cited as a limitation of static sites. Searching _feels_ dynamic, so surely it is impossible on a _static_ site, right? Thankfully not. Here is a nice technique to use with most any [static site generator](https://staticgen.com) and a little JavaScript as a progressive enhancement to add search functionality to your [JAMstack](https://jamstack.org) site.
+Search is often cited as a limitation of static sites. Searching _feels_ dynamic, so surely it is impossible on a _static_ site, right? Thankfully not. Here is a nice technique to use with most any [static site generator](https://staticgen.com) and a little JavaScript as a progressive enhancement to add search functionality to your [Jamstack](https://jamstack.org) site.
 
 ![Searching](/images/sandro-kradolfer-1077230-unsplash.jpg "Searching")
 
 <!--more-->
+
+
 
 There are a number of services available to can bring fully featured, rich, search functionality to your sites. If I had needed more sophisticated searching, with things like fuzzy matching, related content associations, and deep search analytics, I could have used a service like [Algolia](https://www.algolia.com/), who are experts in this sort of thing.
 
@@ -23,10 +26,10 @@ There are a number of services available to can bring fully featured, rich, sear
 
 My needs on this site are relatively simple. So rather than using an external service I wanted to roll my own simple search which would help people find content in my blog posts. I set myself the following requirements:
 
-> 1. Using JavaScript for the best experience is fine, but searching should be possible without it.
-> 1. Searching should feel very fast, and find items in my blog by looking at the blog post titles and content.
-> 1. No additional overhead of JavaScript libraries or third party services, so I could keep things simple and manageable.
-> 1. No impact on the perceived page speed whatsoever.
+1. Using JavaScript for the best experience is fine, but searching should be possible without it.
+1. Searching should feel very fast, and find items in my blog by looking at the blog post titles and content.
+1. No additional overhead of JavaScript libraries or third party services, so I could keep things simple and manageable.
+1. No impact on the perceived page speed whatsoever.
 
 
 ## The technique
@@ -170,4 +173,4 @@ When we bring these building blocks together, we can assemble whatever behaviors
 
 When we have the ability to inspect and manipulate the data and content that makes up our sites. And generate data services to expose whatever we like, we gain the ability to craft a wide variety of experiences in our website.  Delivering search functionalities like this prove to be far more simple than we might have originally expected.
 
-With a little imagination, adding this and other dynamic features to JAMstack sites is really satisfying.
+With a little imagination, adding this and other dynamic features to Jamstack sites is really satisfying.

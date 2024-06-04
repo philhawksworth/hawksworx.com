@@ -1,11 +1,24 @@
 ---
-layout: "layouts/base.liquid"
+layout: "base.liquid"
 title: "Styleguide"
 ---
 
-## {{title}}
+
+<section>
+
+{% render 'title-block.liquid', 
+ title: title, 
+ subtitle: "A reference for the styling of elements in the hawksworx.com site"  
+%}
+</section>
 
 ---
+
+<section>
+
+# h1. First level heading
+
+Et Lorem sit ut ad. Culpa nisi proident ea exercitation ex exercitation laborum nulla nulla consectetur enim commodo cupidatat. Commodo irure ullamco consequat mollit cillum nisi.
 
 ## h2. Second level heading
 
@@ -19,7 +32,36 @@ Et Lorem sit ut ad. Culpa nisi proident ea exercitation ex exercitation laborum 
 
 Et Lorem sit ut ad. Culpa nisi proident ea exercitation ex exercitation laborum nulla nulla consectetur enim commodo cupidatat. Commodo irure ullamco consequat mollit cillum nisi.
 
----
+
+<hgroup>
+  <h2>Heading group h2</h2>
+  <p>Subtitle in a heading group</p>
+</hgroup>
+
+Et Lorem sit ut ad. Culpa nisi proident ea exercitation ex exercitation laborum nulla nulla consectetur enim commodo cupidatat. Commodo irure ullamco consequat mollit cillum nisi.
+
+<hr>
+<div class="center">
+<hgroup>
+  <h2>Centered group h2</h2>
+  <p>Subtitle in a heading group</p>
+</hgroup>
+
+Et Lorem sit ut ad. Culpa nisi proident ea exercitation ex exercitation laborum nulla nulla consectetur enim commodo cupidatat. Commodo irure ullamco consequat mollit cillum nisi.
+
+</div>
+
+<hr>
+
+## Images, figures, and pictures
+
+Images in `main` are displayed a little wider where possible, and where they appear as part of a `figure` with a caption, the caption is muted until you mouseover the image.
+
+<figure>
+    <img src="/images/cc-barcelona-sound-check.jpg">
+    <figcaption>Sound-checking with Classical Chorus at L'Auditori, Barcelona</figcaption>
+</figure>
+
 
 ## Paragraph styles
 
@@ -29,8 +71,28 @@ Et Lorem sit ut ad. Culpa nisi proident ea exercitation ex exercitation laborum 
 
 > Blockquote et Lorem sit ut ad. Culpa nisi proident ea exercitation ex exercitation laborum nulla nulla consectetur enim commodo cupidatat. Commodo irure ullamco consequat mollit cillum nisi.
 
----
+Et Lorem sit ut ad. Culpa nisi proident ea exercitation ex exercitation laborum nulla nulla consectetur enim commodo cupidatat. Commodo irure ullamco consequat mollit cillum nisi.
 
 ### Links and buttons
 
-Et Lorem sit ut ad. [Culpa nisi proident](/) ea exercitation ex [exercitation](/){.red} laborum nulla nulla consectetur enim commodo cupidatat. Commodo irure ullamco consequat mollit cillum nisi.
+Et Lorem sit ut ad. [Culpa nisi proident](/) ea exercitation ex [exercitation](/)laborum nulla nulla consecteturenim commodo cupidatat. Commodo irure ullamco consequat mollit cillum nisi.
+
+https://hawksworx.com
+
+#### Tags
+
+[Tag link](/){.tag} [Tag link](/){.tag} [Tag link](/){.tag}
+
+
+## Lists
+
+- Unordered
+- lists 
+- look like this
+
+1. Ordered
+1. lists 
+1. look like this
+
+</section>
+
