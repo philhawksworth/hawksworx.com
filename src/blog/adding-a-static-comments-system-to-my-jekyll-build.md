@@ -73,7 +73,7 @@ That's why I decided to create a simple service which would provide that capabil
 <h3>The Gulp task to get comments from Poole</h3>
 <p>I run this when I get a notification from Poole of a new comment. I also have a command to deploy which just pushes the build to Github pages.</p>
 
-```
+```js
 // Get comments form Poole
 gulp.task("comments", function() {
 
@@ -122,13 +122,16 @@ gulp.task("comments", function() {
   Once I've run the Gulp task above, I just run the Jekyll build as normal. The post template includes this logic to add the comments to the page which they originated from.
 </p>
 
-```
+```html
+{% raw %}
 <ul class="listing comments">
   {% for comment in site.data.comments.sessions %}
     {% if comment.path == page.url %}
     <li>
       <img src="{{ comment.avatar }}" alt="{{ comment.name }}">
-      <time datetime="{{ comment.created | date_to_xmlschema }}">{{ comment.created | date_to_long_string  }}</time>
+      <time datetime="{{ comment.created | date_to_xmlschema }}">
+        {{ comment.created | date_to_long_string  }}
+      </time>
       {% if comment.url %}
         <a href="{{ comment.url }}" class="commenter">{{ comment.name }}</a>
       {% else %}
@@ -141,6 +144,7 @@ gulp.task("comments", function() {
     {% endif %}
   {% endfor %}
 </ul>
+{% endraw %}
 ```
 
 
@@ -149,7 +153,8 @@ gulp.task("comments", function() {
   The post template adds this form to each blog post page. A hidden field keeps track of the page where a comment originates from so that it can be inserted by the template later.  Poole also lets you specify which page on your domain to redirect to after a successful post. That way the user never feels like they have been routed away to a third party service.
 </p>
 
-```
+```html
+{% raw %}
 <form action="http://pooleapp.herokuapp.com/data/{API-KEY}/" method="post">
   <h2>Leave your comment</h2>
   <input type="hidden" name="redirect_to" value="/thanks" />
@@ -160,6 +165,7 @@ gulp.task("comments", function() {
   <label for="comment">Your comment</label><textarea name="comment" class="comment-text"></textarea>
   <input type="submit" value="Post comment" class="submit" />
 </form>
+{% endraw %}
 ```
 
 <h2>Try it out</h2>
@@ -169,7 +175,6 @@ gulp.task("comments", function() {
 <p>
   I've keen to hear thoughts on the usefulness or otherwise of this tool, and also to receive feature requests in the comments below or on our <a href="https://trello.com/b/lyQEqQMq/poole">roadmap board on Trello</a>.
 </p>
-
 
 
 

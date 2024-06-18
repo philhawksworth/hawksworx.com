@@ -19,14 +19,28 @@ layout: base.liquid
 <section>
   <div class="excerpt">
     {{ content | section  }}
+    {% if externalurl %}
+    <a href="{{externalurl}}">Visit this article</a>
+    {% endif %}
   </div>
   {{ content | section: 'remainder' }}
 </section>
-<section class="right">
+<section class="right small">
 <hr>
-<h4>More posts</h4>
+<h4>Previously posted</h4>
 
-Next post
+
+{% assign currentItemIndex = 0 %}
+{% for item in collections.localposts %}
+  {% if item.url == page.url %}
+  	{% assign currentItemIndex = forloop.index0 %}
+	{% endif %}
+{% endfor %}
+{% assign previousIndex = currentItemIndex | plus: 1 %}
+{% assign previousItem = collections.localposts[previousIndex] %}
+{% if previousItem %}
+  <a href="{% if previousItem.data.externalurl %}{{ previousItem.data.externalurl }}{% else %}{{ previousItem.url | url }}{% endif %}">{{ previousItem.data.title }}</a>
+{% endif %}
 
 </section>
 

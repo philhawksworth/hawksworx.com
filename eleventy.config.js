@@ -55,6 +55,11 @@ export default async function(eleventyConfig) {
   eleventyConfig.addCollection("posts", function(collection) {
     return collection.getFilteredByGlob("src/blog/*.md").reverse();
   });
+  eleventyConfig.addCollection("localposts", function(collection) {
+    return collection.getFilteredByGlob("src/blog/*.md").filter(function (item) {
+			return !("externalurl" in item.data);
+		}).reverse();
+  });
 
   // Filters
   eleventyConfig.addFilter("section",  function(str, section) {

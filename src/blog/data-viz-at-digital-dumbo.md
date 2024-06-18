@@ -1,5 +1,6 @@
 ---
 title: Data Viz at Digital Dumbo
+subtitle: Talking data visualisation
 date: 2013-05-29T00:00:00Z
 publishdate: 2013-05-29T00:00:00Z
 draft: false

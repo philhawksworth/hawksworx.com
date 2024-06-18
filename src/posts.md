@@ -12,7 +12,6 @@ title: "Phil Hawksworth - posts"
 
 ---
 
-
 <section>
   <!-- <hgroup>
     <h2>Features</h2>
@@ -34,7 +33,7 @@ title: "Phil Hawksworth - posts"
       <h3>{{ displayedYear }}</h3>
     {%- endunless -%}
       <div class="list-item">
-        <h4><a href="{{post.url}}">{{post.data.title}}</a></h4>  
+        <h4><a href="{{ post.url }}">{{post.data.title}}</a></h4>  
         <p>{{post.data.subtitle}}</p>
         {%- for tag in post.data.tags -%}
         <a href="/blog/{{tag}}" class="tag">{{tag}}</a>
