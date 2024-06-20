@@ -6,7 +6,7 @@ title: "Phil Hawksworth - posts"
 <section>
   <hgroup>
     <h1>Posts</h1>
-    <p>Blog posts and brain burps on social and anti-social media</p>
+    <p>Blog post other writing, here and elsewhere</p>
   </hgroup>
 </section>
 
@@ -20,10 +20,6 @@ title: "Phil Hawksworth - posts"
   
   <hr> -->
 
-  <hgroup>
-    <h2>Blog posts</h2>
-    <p>Semi-regular thoughts and ramblings</p>
-  </hgroup>
 
   <div class="listing">
   {%- for post in collections.posts -%}
@@ -36,19 +32,11 @@ title: "Phil Hawksworth - posts"
         <h4><a href="{{ post.url }}">{{post.data.title}}</a></h4>  
         <p>{{post.data.subtitle}}</p>
         {%- for tag in post.data.tags -%}
-        <a href="/blog/{{tag}}" class="tag">{{tag}}</a>
+        <a href="/blog/tags/{{tag}}" class="tag">{{tag}}</a>
         {% endfor -%}
         </div>
   {%- endfor -%}
   </div>
-
-  <hr>
-
-  <hgroup>
-    <h2>Social posts</h2>
-    <p>Perhaps conversation, perhaps guff.</p>
-  </hgroup>
-
 
 
 

@@ -53,13 +53,27 @@ export default async function(eleventyConfig) {
 
   // Content collections
   eleventyConfig.addCollection("posts", function(collection) {
-    return collection.getFilteredByGlob("src/blog/*.md").reverse();
+    return collection.getFilteredByGlob("src/blog/posts/*.md").reverse();
   });
   eleventyConfig.addCollection("localposts", function(collection) {
-    return collection.getFilteredByGlob("src/blog/*.md").filter(function (item) {
+    return collection.getFilteredByGlob("src/blog/posts/*.md").filter(function (item) {
 			return !("externalurl" in item.data);
 		}).reverse();
   });
+  eleventyConfig.addCollection("allTags", (collection) => {
+    const posts = collection.getFilteredByGlob("src/blog/posts/*.md");
+    let ret = {};
+    for (let post of posts) {
+      for (let tag of post.data.tags) {
+        let normaltag = tag.toLowerCase();
+        ret[normaltag] ??= [];
+        ret[normaltag].push(post);
+      }
+    }
+    ret = Object.fromEntries(Object.entries(ret).sort());
+    return ret;
+  });
+
 
   // Filters
   eleventyConfig.addFilter("section",  function(str, section) {
