@@ -17,8 +17,7 @@ However, after more than 30 years of bashfully hiding my singing voice, and feel
 </figure>
 
 
-
-## But you're always talking in front of lots of people.<br>You can't be shy!
+## But you're always [talking](/speaking/) in front of lots of people.<br>You can't be shy!
 
 There's a back-story. One or two folks who have tried to drag me kicking and screaming to do karaoke may have heard some version of it as I mounted my defense and squirmed free. You're not trying to do that, so I can share it in a less desperate and pleading tone, and in the knowledge that there's a happy ending to this now. Here goes.
 

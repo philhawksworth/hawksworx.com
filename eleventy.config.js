@@ -53,11 +53,13 @@ export default async function(eleventyConfig) {
 
   // Content collections
   eleventyConfig.addCollection("posts", function(collection) {
-    return collection.getFilteredByGlob("src/blog/posts/*.md").reverse();
+    return collection.getFilteredByGlob("src/blog/posts/*.md").filter(function (item) {
+			return item.data.draft !== true;
+		}).reverse();
   });
   eleventyConfig.addCollection("localposts", function(collection) {
     return collection.getFilteredByGlob("src/blog/posts/*.md").filter(function (item) {
-			return !("externalurl" in item.data);
+			return !(("externalurl" in item.data) || (item.data.draft === true));
 		}).reverse();
   });
   eleventyConfig.addCollection("allTags", (collection) => {
@@ -88,7 +90,6 @@ export default async function(eleventyConfig) {
     }
   });
 
-
 	eleventyConfig.addFilter("formatDate", (dateObj, format = "LLLL dd, yyyy") => {
 		if (typeof dateObj === "string") {
 			return DateTime.fromISO(dateObj).toFormat(format);
@@ -97,6 +98,25 @@ export default async function(eleventyConfig) {
 		}
 		return DateTime.fromJSDate(dateObj).toFormat(format);
 	});
+
+  eleventyConfig.addFilter("previously",  function(obj, property) {
+    const today = new Date();
+    return Object.keys(obj).reduce(function(r, e) {
+      let date = new Date(obj[e][property]);
+      if (date <= today) r.push(obj[e]);
+      return r;
+    }, [])
+
+  });
+  eleventyConfig.addFilter("upcoming",  function(obj, property) {
+    const today = new Date();
+    return Object.keys(obj).reduce(function(r, e) {
+      let date = new Date(obj[e][property]);
+      if (date > today) r.push(obj[e]);
+      return r;
+    }, [])
+
+  });
 
   // Passthrough
   eleventyConfig.addPassthroughCopy({"public/": "/"});

@@ -5,21 +5,14 @@ title: "Phil Hawksworth - posts"
 
 <section>
   <hgroup>
-    <h1>Posts</h1>
-    <p>Blog post other writing, here and elsewhere</p>
+    <h1>Writing</h1>
+    <p>Blog posts and other writing, here and elsewhere</p>
   </hgroup>
 </section>
 
 ---
 
 <section>
-  <!-- <hgroup>
-    <h2>Features</h2>
-    <p>Articles self-indulgently styled according to my wim</p>
-  </hgroup>
-  
-  <hr> -->
-
 
   <div class="listing">
   {%- for post in collections.posts -%}
@@ -37,8 +30,6 @@ title: "Phil Hawksworth - posts"
         </div>
   {%- endfor -%}
   </div>
-
-
 
 </section>
 

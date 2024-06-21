@@ -4,7 +4,7 @@ layout: base.liquid
 
 <section class="center">
   <p class="meta">
-    By <a href="">Phil Hawksworth</a><br>
+    By <a href="/">Phil Hawksworth</a><br>
     <time datetime="{{date}}">{{date | formatDate }}</time>
   </p>
   <hgroup>
@@ -12,7 +12,7 @@ layout: base.liquid
     <p>{{subtitle}}</p>
   </hgroup>
   {% for tag in tags %}
-    <a href="/blog/{{tag}}" class="tag">{{tag}}</a>
+    <a href="/blog/tags/{{tag}}" class="tag">{{tag}}</a>
   {% endfor %}
 </section>
 <hr>

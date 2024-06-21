@@ -104,3 +104,27 @@ main img {
   gap: 0.66em;
 }
 
+.brand-label {
+  font-weight: bold;
+}
+
+img.flag {
+  width: 1.2em;
+  box-shadow: none;
+  border-radius: 1px;
+  margin-top:0.5em;
+}
+
+.naked-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.marked-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5em;
+  padding-bottom: 1em;
+}

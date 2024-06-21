@@ -1,0 +1,43 @@
+---
+layout: "base.liquid"
+title: "Phil Hawksworth - Speaking"
+---
+
+<section>
+<hgroup>
+    <h1>Speaking</h1>
+    <p>Talks and appearances</p>
+  </hgroup>
+</section>
+<section>
+  <p>
+    I’m lucky enough to have been able to travel to speak at many conferences and events around the world. Usually talking about the hows and whys of web development.
+  </p>
+  <ul>
+    <li><a href="/speaking/enquiry/">Ask me to speak or emcee at your event</a></li>
+    <li><a href="/speaking/rider/">Review my speaker rider</a></li>
+  </ul>
+  <figure>
+    <img src="/images/emcee-vue-blur.jpg" alt="Emceeing Vue Conference">
+    <figcaption>Emcee-ing Vue Conference in London. Photo from my <a href="https://css-tricks.com/emcee-tips-for-a-conference-or-meetup/">CSS-Tricks article on Emcee-ing</a></figcaption>
+  </figure>
+</section>
+<section>
+  <hgroup>
+    <h2>Upcoming</h2>
+    <p>Future confirmed appearances</p>
+  </hgroup>
+  <ul class="naked-list">
+  {% assign events = speaking.events | upcoming: "starts_on" %}
+  {% render 'event-teaser.liquid' for events as item %}
+  </ul>
+
+  <hgroup>
+    <h2>Previously</h2>
+    <p>Previous Conference and meetup talks, emcee-ing, and singing</p>
+  </hgroup>
+  <ul class="naked-list">
+    {% assign events = speaking.events | previously: "starts_on" %}
+    {% render 'event-teaser.liquid' for events as item %}
+  </ul>
+</section>

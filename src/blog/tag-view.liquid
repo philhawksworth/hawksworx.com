@@ -7,11 +7,21 @@ layout: base.liquid
 permalink: /blog/tags/{{ tag }}/
 ---
 
-<h1>Tagged “{{ tag }}”</h1>
-
-<ol>
-{% assign taglist = collections[ tag ] %}
-{% for post in taglist | reverse %}
-  <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
-{% endfor %}
-</ol>
+<section>
+  <hgroup>
+    <h1>{{ tag }}</h1>
+    <p>All <a href="/blog/">posts</a> tagged "{{ tag }}"</p>
+  </hgroup>
+</section>
+<section>
+  <ol>
+  {% assign taglist = collections[ tag ] %}
+  {% for post in taglist | reverse %}
+    <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+  {% endfor %}
+  </ol>
+  <hr>
+  <p>
+    View the <a href="/blog/tags/">complete tag list</a>.
+  </p>
+</section>

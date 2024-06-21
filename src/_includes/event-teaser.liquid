@@ -1,0 +1,12 @@
+<li class="marked-item">
+  <img src="/images/flags/{{item.country_code}}.svg" class="flag" alt="Country flag for this event in {{ item.address }}">
+  <div>
+    {% if item.url %} 
+      <a href="{{item.url}}">{{item.title}}</a>
+      {% else %}
+      {{item.title}}
+    {% endif %}
+  — <datetime time="{{ item.starts_on}}">{{ item.starts_on | formatDate}}</datetime>  
+    <address>{{ item.address }}</address>
+  </div>
+</li>
