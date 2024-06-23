@@ -14,6 +14,7 @@
   --color-headings: #000;
   --shade-down-1: #00000005;
   --shade-down-2: #00000015;
+  --shade-down-3: #00000035;
   --shade-up: #ffffffcc;
 
   //  Font faces
@@ -24,6 +25,7 @@
   // --font-secondary: Pacaembu, var(--font-system);
   --font-heading: var(--font-primary);
   --font-monospace: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+  --font-sans: "Arial", sans-serif;
 
   
   // responsive type style

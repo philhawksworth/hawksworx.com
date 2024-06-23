@@ -6,7 +6,12 @@
       {% else %}
       {{item.title}}
     {% endif %}
-  — <datetime time="{{ item.starts_on}}">{{ item.starts_on | formatDate}}</datetime>  
-    <address>{{ item.address }}</address>
+    — <datetime time="{{ item.starts_on}}">{{ item.starts_on | formatDate}}</datetime>  
+    {% if item.type == "singing" %}
+      <p>
+        Performing {{ item.repertoire }}
+        </p>
+      {% endif %}
+      <address>{{ item.address }}</address>
   </div>
 </li>

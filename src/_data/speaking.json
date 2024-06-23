@@ -9,10 +9,37 @@
     },
     {
       "title": "Smashing Conference",
-      "address": "Frieberg, Germany",
+      "address": "Freiburg, Germany",
       "starts_on": "2024-09-09T09:00",
       "country_code": "de",
       "url": "https://smashingconf.com/freiburg-2024"
+    },
+    {
+      "title": "Hertfordshire Chorus",
+      "address": "Ripon Cathedral, North Yorkshire, UK",
+      "starts_on": "2024-07-06",
+      "country_code": "gb-eng",
+      "url": "https://www.ticketsource.co.uk/hertfordshirechorus/t-gaeqgvg",
+      "type": "singing",
+      "repertoire": "Duruffle Requiem"
+    },
+    {
+      "title": "Classical Chorus",
+      "address": "Roman Amphetheatre, St Albans, UK",
+      "starts_on": "2024-06-02",
+      "country_code": "gb-eng",
+      "url": "hhttps://ovo.org.uk/shows/classical-chorus/",
+      "type": "singing",
+      "repertoire": "Mozart's Lacrimosa and a variety of classical and musical theatre favourites"
+    },
+    {
+      "title": "Classical Chorus",
+      "address": "Chester Cathedral, Chester, UK",
+      "starts_on": "2024-04-05",
+      "country_code": "gb-eng",
+      "url": "https://www.eventbrite.com/e/classical-chorus-at-chester-cathedral-tickets-834835695037?aff=erelpanelorg",
+      "type": "singing",
+      "repertoire": "A variety of classical and musical theatre favourites"
     },
     {
       "title": "PixelPioneers, 2023 (MC)",

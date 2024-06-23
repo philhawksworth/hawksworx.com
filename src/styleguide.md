@@ -75,9 +75,20 @@ Et Lorem sit ut ad. Culpa nisi proident ea exercitation ex exercitation laborum 
 
 ### Links and buttons
 
-Et Lorem sit ut ad. [Culpa nisi proident](/) ea exercitation ex [exercitation](/)laborum nulla nulla consecteturenim commodo cupidatat. Commodo irure ullamco consequat mollit cillum nisi.
+Inline links appear like so. [Culpa nisi proident](/) ea exercitation ex [exercitation](/) laborum nulla nulla consecteturenim commodo cupidatat. Commodo irure ullamco consequat mollit cillum nisi.
 
-https://hawksworx.com
+Absoulte links appear automatically like this: https://hawksworx.com
+
+There is also a provision for primary, secondary, and disabled buttons with appropriately decorated button elements:
+
+`<button class="btn-primary">Primary button</button>`
+
+<button class="btn-primary">Primary button</button> <button class="btn-primary" disabled>Primary button disabled</button>
+
+`<button class="btn-secondary">Secondary button</button>`
+
+<button class="btn-secondary">Secondary button</button> <button class="btn-secondary" disabled>Secondary button disabled</button>
+
 
 #### Tags
 

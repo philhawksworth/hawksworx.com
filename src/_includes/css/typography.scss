@@ -50,7 +50,6 @@ a {
   &:link,
   &:visited {
     color: #000;
-    text-decoration-color: var(--color-accent);
     text-decoration-color: #00000030;
     text-underline-offset: 0.15em;
   }
@@ -122,6 +121,40 @@ blockquote {
   color: #fff;
 }
 
+.btn-primary,
+.btn-secondary,
+a.btn-primary:link,
+a.btn-secondary:visited {
+  border: solid 2px #000;
+  background-color: #000;
+  color: var(--color-page);
+  font-weight: 600;
+  font-size: 0.7em;
+  font-family: var(--font-sans);
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px var(--shade-down-3);
+  text-decoration: none;
+
+  &:hover:not(:disabled),
+  &:focus:not(:disabled) {
+    box-shadow: 0 2px 6px var(--shade-down-3);
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+  }
+
+  &:disabled{
+    opacity: 0.3;
+  }
+}
+.btn-secondary {
+  background-color: transparent;
+  color: #000;
+}
+
+
+
 li::marker {
   color: #00000090;
 }
@@ -146,5 +179,25 @@ code {
   }
   .list-item {
     margin-bottom: 2em;
+  }
+}
+
+
+
+summary {
+  text-decoration: underline;
+  text-decoration-color:  var(--shade-down-2);
+  text-underline-offset: 0.15em;
+  color: #000;
+
+  &:hover,
+  &:focus {
+  text-decoration-color: var(--color-accent);
+  text-underline-offset: 0.2em;
+ 
+    &::marker {
+      cursor: pointer;
+      color: #000;
+    }
   }
 }

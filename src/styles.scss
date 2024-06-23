@@ -110,8 +110,8 @@ main img {
 
 img.flag {
   width: 1.2em;
-  box-shadow: none;
-  border-radius: 1px;
+  box-shadow: 0 0 3px var(--shade-down-2);
+  border-radius: 3px;
   margin-top:0.5em;
 }
 
@@ -127,4 +127,7 @@ img.flag {
   align-items: flex-start;
   gap: 0.5em;
   padding-bottom: 1em;
+  p {
+    margin: 0;
+  }
 }
