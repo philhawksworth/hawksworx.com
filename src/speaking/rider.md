@@ -68,7 +68,7 @@ The guidance below should help making my accepting [an invite to your event](/sp
   </summary>
 
 - Unless the event is within easy reach of my home, in which case I'm usually happy to travel
-- For events remote far removed from London, I ask for at least one full day of lodging _before_ the event since I'll likely be flying in the day
+- If your event is a significant time zone change from me (UK), I do ask that my arrival flight be booked to arrive a day or two before my speaking slot.
 </details>
 
 ### Ticket
@@ -164,7 +164,7 @@ I'm happy to discuss aspects of this rider and answer any questions. If you find
 This rider was compilled through a combination of thoughts from my own head, and rummaging through other good examples of speaker riders kindly shared by the likes of:
 
 - [Cassidy Williams](https://cass.run/rider)
-- Chris Coyier
+- [Kat Cosgrove](https://github.com/katcosgrove/katcosgrove/blob/main/speaking.md)
 - [Tatiana Mac](https://gist.github.com/tatianamac/493ca668ee7f7c07a5b282f6d9132552)
 
 
