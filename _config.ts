@@ -24,4 +24,16 @@ site.filter("contentAfterExcerpt", (value) => value.split("<!--more-->")[1]);
 // Static file pasthrough
 site.copy("_public", ".");
 
+
+site.process([".html"], (pages) => {
+  for (const page of pages) {
+    for (const img of page.document.querySelectorAll("h2")) {
+      if (!img.hasAttribute("alt")) {
+        img.setAttribute("alt", "This is a random alt");
+      }
+    }
+  }
+});
+
+
 export default site;
