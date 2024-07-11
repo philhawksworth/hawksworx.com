@@ -12,13 +12,15 @@ title: "Hawksworx"
 <hr>
 <section>
  <div class="listing">
-  {{set post = search.pages("post").reverse()[0] }}
+  {{ for post of search.pages("post", "order=desc date") }}
   <div class="list-item">
     <h4><a href="{{post.url}}">{{post.title}}</a></h4>  
-    <p>{{post.subtitle}}</p>  
+    <p>{{post.subtitle}}</p> 
+    <time datetime="">{{ post.date }}</time> 
     {{ for tag of post.tags }}
     <a class="tag" href="blog/tags/{{tag}}">{{tag}}</a>
     {{ /for }}
   </div>
+  {{ /for }}
 </section>
 

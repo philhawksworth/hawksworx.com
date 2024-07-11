@@ -12,9 +12,11 @@ const site = lume({
 site.use(date());
 site.use(sass({"format": "compressed"}));
 
-
 // Filters and helpers
 site.filter("contentExcerpt", (value) => value.split("<!--more-->")[0]);
 site.filter("contentAfterExcerpt", (value) => value.split("<!--more-->")[1]);
+
+// Static file pasthrough
+site.copy("_public", ".");
 
 export default site;
