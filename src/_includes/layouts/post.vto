@@ -1,0 +1,29 @@
+---
+layout: layouts/base.vto
+---
+<section class="center">
+  <p class="meta">
+    By <a href="/">Phil Hawksworth</a><br>
+    <time datetime="{{date}}">{{date}}</time>
+  </p>
+  <hgroup>
+    <h1>{{title}}</h1>
+    <p>{{subtitle}}</p>
+  </hgroup>
+  {{ for tag of tags }}
+    <a href="/blog/tags/{{tag}}" class="tag">{{tag}}</a>
+  {{ /for }}
+</section>
+<hr>
+<section>
+  <div class="excerpt">
+    {{ content |> contentExcerpt }}
+    {{ if externalurl }}<a href="{{externalurl}}">Visit this article</a>{{ /if }}
+  </div>
+  {{ content |> contentAfterExcerpt }}
+</section>
+<section class="right small">
+<hr>
+<h4>Previously posted</h4>
+</section>
+
