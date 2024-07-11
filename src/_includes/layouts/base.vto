@@ -8,18 +8,18 @@
 </head>
 <body>
   <header>
-  
+  {{ include "navigation.vto" }}
   </header>
   <main>
   {{content}}
   </main>
   <footer>
+  {{ include "navigation.vto" }}
     <ul class="social">
       <li><a href="https://indieweb.social/@philhawksworth">Mastodon</a></li>  
       <li><a href="https://x.com/philhawksworth">Twitter</a></li>  
       <li><a href="https://linkedin.com/in/philhawksworth">LinkedIn</a></li>  
     </ul>
-  
     <ul class="site-resources">
       <li><a href="/styleguide/">styles</a></li>  
       <li><a href="/colophone">colophone</a></li>  

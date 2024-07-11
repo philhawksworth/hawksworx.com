@@ -1,0 +1,21 @@
+---
+layout: "layouts/base.vto"
+url: /blog/tags/
+---
+
+<section>
+  <hgroup>
+    <h1>Tags</h1>
+    <p>All my <a href="/blog/">posts</a> organised by the tags</p>
+  </hgroup>
+</section>
+<hr>
+<section>
+{{ for tag of search.values("tags").filter((tag) => tag !== "post") |> toSorted  }}
+  <h2><a href="/blog/tags/{{tag}}" class="tag">{{tag}}</a></h2>
+  {{ for post of search.pages(tag) }}
+    <li><a href="{{post.url}}">{{ post.title }}</a></li>
+  {{ /for }}
+{{ /for }}
+</section>
+  

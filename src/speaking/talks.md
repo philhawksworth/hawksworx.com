@@ -1,5 +1,5 @@
 ---
-layout: "base.liquid"
+layout: "layouts/base.vto"
 title: "Talks"
 ---
 
