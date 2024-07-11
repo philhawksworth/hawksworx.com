@@ -4,7 +4,7 @@ layout: layouts/base.vto
 <section class="center">
   <p class="meta">
     By <a href="/">Phil Hawksworth</a><br>
-    <time datetime="{{date}}">{{date}}</time>
+    <time datetime="{{date}}">{{ date |> date('Lo MMMM, yyy')}}</time>
   </p>
   <hgroup>
     <h1>{{title}}</h1>
