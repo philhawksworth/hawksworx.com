@@ -2,6 +2,9 @@ import lume from "lume/mod.ts";
 import sass from "lume/plugins/sass.ts";
 import date from "lume/plugins/date.ts";
 import prism from "lume/plugins/prism.ts";
+import minifyHTML from "lume/plugins/minify_html.ts";
+
+import headingAnchors from "./utils/processors/heading-anchors.ts";
 
 // Config
 const site = lume({
@@ -16,6 +19,7 @@ site.data("layout", "layouts/base.vto");
 site.use(date());
 site.use(sass({"format": "compressed"}));
 site.use(prism());
+site.use(minifyHTML({options: { minify_css: false }}));
 
 // Filters and helpers
 site.filter("contentExcerpt", (value) => value.split("<!--more-->")[0]);
@@ -25,17 +29,10 @@ site.filter("contentAfterExcerpt", (value) => value.split("<!--more-->")[1]);
 site.copy("_public", ".");
 
 
-// Some embellishments once the site has been generated
+// Add heading anchors across the site
 site.process([".html"], (pages) => {
   for (const page of pages) {
-    for (const heading of page.document.querySelectorAll("h2")) {
-      heading.setAttribute("data-added", "ADDED");
-      let span = page.document.createElement("span");
-      span.innerHTML = '#'
-      span.setAttribute("aria-hidden","true");
-      span.setAttribute("data-pagefind-ignore", "");ccelg
-      heading.before(span);  
-    }
+    headingAnchors(page, "h2, h3");
   }
 });
 
