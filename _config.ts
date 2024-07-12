@@ -25,12 +25,16 @@ site.filter("contentAfterExcerpt", (value) => value.split("<!--more-->")[1]);
 site.copy("_public", ".");
 
 
+// Some embellishments once the site has been generated
 site.process([".html"], (pages) => {
   for (const page of pages) {
-    for (const img of page.document.querySelectorAll("h2")) {
-      if (!img.hasAttribute("alt")) {
-        img.setAttribute("alt", "This is a random alt");
-      }
+    for (const heading of page.document.querySelectorAll("h2")) {
+      heading.setAttribute("data-added", "ADDED");
+      let span = page.document.createElement("span");
+      span.innerHTML = '#'
+      span.setAttribute("aria-hidden","true");
+      span.setAttribute("data-pagefind-ignore", "");ccelg
+      heading.before(span);  
     }
   }
 });
