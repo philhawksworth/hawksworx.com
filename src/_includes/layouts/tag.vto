@@ -1,0 +1,18 @@
+---
+layout: layouts/base.vto
+---
+<section>
+  <hgroup>
+    <h1>Tag: {{tag}}</h1>
+    <p>All post tagged with <em>{{tag}}</em>.<br>
+    Or you can <a href="/blog/tags/">view all tags</a> and their posts</p>
+  </hgroup>
+</section>
+<hr>
+<section>
+  <h2><a href="/blog/tags/{{tag}}" class="tag">{{tag}}</a></h2>
+  {{ for post of search.pages(tag) }}
+    <li><a href="{{post.url}}">{{ post.title }}</a></li>
+  {{ /for }}
+</section>
+  

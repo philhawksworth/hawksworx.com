@@ -2,6 +2,7 @@ import lume from "lume/mod.ts";
 import sass from "lume/plugins/sass.ts";
 import date from "lume/plugins/date.ts";
 import prism from "lume/plugins/prism.ts";
+import pagefind from "lume/plugins/pagefind.ts";
 import minifyHTML from "lume/plugins/minify_html.ts";
 
 import headingAnchors from "./utils/processors/heading-anchors.ts";
@@ -9,7 +10,7 @@ import headingAnchors from "./utils/processors/heading-anchors.ts";
 // Config
 const site = lume({
   src: "./src",
-  dest: "./_site",
+  dest: "./dist",
 });
 
 // Global data
@@ -20,6 +21,9 @@ site.use(date());
 site.use(sass({"format": "compressed"}));
 site.use(prism());
 site.use(minifyHTML({options: { minify_css: false }}));
+// site.use(pagefind({
+//   ui: false
+// }));
 
 // Filters and helpers
 site.filter("contentExcerpt", (value) => value.split("<!--more-->")[0]);

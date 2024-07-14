@@ -154,7 +154,11 @@ a.btn-secondary:visited {
 }
 
 
+li {
+  padding-left: 1.5em;
+  text-indent: -1.5em;
 
+}
 li::marker {
   color: #00000090;
 }

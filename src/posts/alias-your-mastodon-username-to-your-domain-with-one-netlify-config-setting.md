@@ -4,10 +4,10 @@ subtitle: Using a Netlify redirect
 description: Learn how you can use a Netlify redirect to alias your own domain to your Mastodon account
 date: 2022-12-12
 tags:
-  - Mastodon
-  - Fediverse
-  - Netlify
-  - Indieweb
+  - mastodon
+  - fediverse
+  - netlify
+  - indieweb
 ---
 
 Did you know you could use your own domain for your mastodon username without hosting your own instance? It can be done with a single Netlify redirect rule.
