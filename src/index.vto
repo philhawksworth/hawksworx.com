@@ -13,13 +13,7 @@ title: "Hawksworx"
 <section>
  <div class="listing">
   {{ for post of search.pages("post", "date=desc", 1) }}
-  <div class="list-item">
-    <h4><a href="{{post.url}}">{{post.title}}</a></h4>  
-    <p>{{post.subtitle}}</p> 
-    {{ for tag of post.tags }}
-    <a class="tag" href="blog/tags/{{tag}}">{{tag}}</a>
-    {{ /for }}
-  </div>
+  {{ include "post-teaser.vto" { post } }}
   {{ /for }}
 </section>
 

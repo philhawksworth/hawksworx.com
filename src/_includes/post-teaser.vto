@@ -1,0 +1,5 @@
+   <h4><a href="{{post.url}}">{{post.title}}</a></h4>  
+    <p>{{post.subtitle}}</p> 
+    {{ for tag of post.tags.filter((tag) => tag !== "post") |> toSorted  }}
+    <a class="tag" href="/blog/tags/{{tag}}">{{tag}}</a>
+    {{ /for }}
