@@ -24,6 +24,16 @@ layout: layouts/base.vto
 </section>
 <section class="right small">
 <hr>
-<h4>Previously posted</h4>
+<h4>Other posts</h4>
+
+{{ set post = search.previousPage(url, "post") }}
+{{ if post }}
+  <a href="" rel="prev">← {{ post.title }}</a>
+{{ /if }}
+
+{{ set post = search.nextPage(url, "post") }}
+{{ if post }}
+  <a href="{{ post.url }}" rel="next">{{ post.title }} →</a>
+{{ /if }} 
 </section>
 
