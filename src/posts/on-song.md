@@ -102,6 +102,7 @@ Now, every long car journey is a chance to sing along together as we practice wi
 
 I get something different form each of the 3 choirs I’m now a member of, but above all feel I’m now making up for lost time after rediscovering the joy of singing with others. I can’t recommend it enough.
 
+> I've started to keep track of [my upcoming, and my previous concerts](/singing/). They're mouinting up and seeing them listed makes me proud.
 
 <figure>
     <img src="/images/outside-ram.jpg">

@@ -29,7 +29,7 @@ title: "Phil Hawksworth - Speaking"
     <p>Future confirmed appearances</p>
   </hgroup>
   <ul class="naked-list">
-  {{ for event of speaking.events |> filter((n) => (new Date(n.starts_on)) > new Date()) |> reverse }}
+  {{ for event of speaking |> filter((n) => (new Date(n.starts_on)) > new Date()) |> reverse }}
     {{ include "event-teaser.vto" { event } }}
   {{ /for }}
   </ul>
@@ -38,7 +38,7 @@ title: "Phil Hawksworth - Speaking"
     <p>Previous Conference and meetup talks, emcee-ing, and singing</p>
   </hgroup>
   <ul class="naked-list">
-  {{ for event of speaking.events |> filter((n) => (new Date(n.starts_on)) <= new Date()) }}
+  {{ for event of speaking |> filter((n) => (new Date(n.starts_on)) <= new Date()) }}
     {{ include "event-teaser.vto" { event } }}
   {{ /for }}
   </ul>

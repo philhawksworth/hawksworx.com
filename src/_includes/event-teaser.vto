@@ -7,7 +7,7 @@
     {{event.title}}
   {{ /if }}
     — <datetime time="{{ event.starts_on}}">{{ event.starts_on |> date('Lo MMMM, yyy') }}</datetime>  
-    {{ if event.type == "singing" }}
+    {{ if event.repertoire }}
       <p>
         Performing {{ event.repertoire }}
       </p>

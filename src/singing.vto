@@ -1,0 +1,45 @@
+---
+layout: "layouts/base.vto"
+title: "Singing — Phil Hawksworth"
+---
+<section>
+  <hgroup>
+      <h1>Singing</h1>
+      <p>Concerts and appearances</p>
+    </hgroup>
+</section>
+<section>
+  <p>
+    After a lifetime of being shy about singing in public, I found choral singing and it brings me significant joy.
+  </p>
+  <p>
+  You can read about <a href="/posts/on-song/">my journey to singing</a>, if you're curious about the backstory.
+  </p>
+  <p>
+   This page is mostly a reminder for me about the fantsastic opportunities and experiences that I've had as a result of this fulfilling hobby, but also holds links to upcoming concerts where you can buy tickets.
+  </p>
+  <figure>
+    <img src="/images/emcee-vue-blur.jpg" alt="Emceeing Vue Conference">
+    <figcaption>Emcee-ing Vue Conference in London. Photo from my <a href="https://css-tricks.com/emcee-tips-for-a-conference-or-meetup/">CSS-Tricks article on Emcee-ing</a></figcaption>
+  </figure>
+</section>
+<section>
+  <hgroup>
+    <h2>Upcoming</h2>
+    <p>Future confirmed concerts</p>
+  </hgroup>
+  <ul class="naked-list">
+  {{ for event of singing |> filter((n) => (new Date(n.starts_on)) > new Date()) |> reverse }}
+    {{ include "event-teaser.vto" { event } }}
+  {{ /for }}
+  </ul>
+  <hgroup>
+    <h2 id="previously">Previously</h2>
+    <p>Previous concerts</p>
+  </hgroup>
+  <ul class="naked-list">
+  {{ for event of singing |> filter((n) => (new Date(n.starts_on)) <= new Date()) }}
+    {{ include "event-teaser.vto" { event } }}
+  {{ /for }}
+  </ul>
+</section>
