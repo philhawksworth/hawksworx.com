@@ -60,7 +60,7 @@
 # social media card assets
 [[redirects]]
   from = "/card-image/:path"
-  to = "https://hawksworx-cards.netlify.com/card/www-hawksworx-com:path"
+  to = "https://hawksworx-cards.netlify.app/card/www-hawksworx-com:path"
   status = 302
 
 
@@ -98,6 +98,13 @@
 [[redirects]]
   from = "/.well-known/webfinger"
   to = "https://indieweb.social/.well-known/webfinger?resource=acct:HANDLE@INSTANCE"
+  status = 200
+
+
+# social media card assets
+[[redirects]]
+  from = "/resume"
+  to = "https://philhawksworth-resume.netlify.app/"
   status = 200
 
 
