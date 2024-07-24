@@ -6,3 +6,7 @@
   publish = "dist"
   command = "deno task serve"
 
+[[redirects]]
+  from = "/images/full/:file"
+  to = "/.netlify/images?url=/images/:file"
+  status = 200
