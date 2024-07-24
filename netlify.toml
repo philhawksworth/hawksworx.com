@@ -1,0 +1,8 @@
+[build] 
+  publish = "dist"
+  command = "deno task build"
+
+[dev] 
+  publish = "dist"
+  command = "deno task serve"
+
