@@ -2,7 +2,7 @@
   {
     "title": "Hertfordshire Chorus",
     "address": "St Mary's Church, Hitchin UK",
-    "starts_on": "2024-10-19",
+    "date": "2024-10-19",
     "country_code": "gb-eng",
     "url": "https://www.ticketsource.co.uk/hertfordshirechorus/rachmaninoff-vespers/e-qllzzl",
     "repertoire": "Rachmaninoff Vespers"
@@ -10,7 +10,7 @@
   {
     "title": "Hertfordshire Chorus",
     "address": "Ripon Cathedral, North Yorkshire, UK",
-    "starts_on": "2024-07-06",
+    "date": "2024-07-06",
     "country_code": "gb-eng",
     "url": "https://www.ticketsource.co.uk/hertfordshirechorus/t-gaeqgvg",
     "repertoire": "Duruflé Requiem"
@@ -18,7 +18,7 @@
   {
     "title": "Classical Chorus",
     "address": "Roman Amphetheatre, St Albans, UK",
-    "starts_on": "2024-06-02",
+    "date": "2024-06-02",
     "country_code": "gb-eng",
     "url": "hhttps://ovo.org.uk/shows/classical-chorus/",
     "repertoire": "Mozart's Lacrimosa and a variety of classical and musical theatre favourites"
@@ -26,7 +26,7 @@
   {
     "title": "Classical Chorus",
     "address": "Chester Cathedral, Chester, UK",
-    "starts_on": "2024-04-05",
+    "date": "2024-04-05",
     "country_code": "gb-eng",
     "url": "https://www.eventbrite.com/e/classical-chorus-at-chester-cathedral-tickets-834835695037?aff=erelpanelorg",
     "repertoire": "A variety of classical and musical theatre favourites"
