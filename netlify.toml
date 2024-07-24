@@ -6,7 +6,13 @@
   publish = "dist"
   command = "deno task serve"
 
+# Netlify Image CDN utiltiy redirects
 [[redirects]]
   from = "/images/full/:file"
   to = "/.netlify/images?url=/images/:file"
   status = 200
+[[redirects]]
+  from = "/images/:width/:file"
+  to = "/.netlify/images?url=/images/:file&width=:width"
+  status = 200
+  
