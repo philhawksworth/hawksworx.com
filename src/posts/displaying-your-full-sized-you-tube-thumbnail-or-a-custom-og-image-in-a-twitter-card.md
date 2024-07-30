@@ -12,7 +12,7 @@ These days, links to YouTube videos have been downgraded to only show a small im
 
 We can fix this with a crafty use of [Netlify's Edge Functions](https://www.netlify.com/products/?utm_source=hawksworx&utm_medium=findthatat-pnh&utm_campaign=devrel#netlify-edge-functions).
 
-![A custom OG image in a tweet](/images/custom-og-in-a-tweet.jpg "A custom opn graph image displayed in a tweet ")
+![A custom OG image in a tweet](/images/custom-og-in-a-tweet.jpg "A custom opn graph image displayed in a tweet "){responsive}
 
 
 <!--more-->
@@ -27,7 +27,7 @@ You can read about that in this blog post I wrote explaining it, including [a ha
 These days I use it in combination with [a little Raycast script](https://gist.github.com/philhawksworth/b77d876e865ac190a6bb849913d4a744) to make creating new URLs a snap.
 
 <figure>
-    <img src="/images/raycast-short-url.jpg">
+    <img src="/images/raycast-short-url.jpg" responsive>
     <figcaption>Making a new short URL using Raycast</figcaption>
 </figure>
 
@@ -37,14 +37,14 @@ Having a link shortener like this provides a nice opportunity. It offers the cha
 So, rather links to YouTube videos unfurling in Twitter like this:
 
 <figure>
-    <img src="/images/unfurl-small-card.jpg">
+    <img src="/images/unfurl-small-card.jpg" responsive>
     <figcaption>The small, default preview that Twitter shoes for links a YouTube video </figcaption>
 </figure>
 
 They can look [like this](https://twitter.com/philhawksworth/status/1676503469350346753):
 
 <figure>
-    <img src="/images/unfurl-large-card.jpg">
+    <img src="/images/unfurl-large-card.jpg" responsive>
     <figcaption>The larger preview that Twitter shows when we ask it nicely with a custom OG view</figcaption>
 </figure>
 
@@ -137,7 +137,7 @@ A few more lines of logic in our function, and we can populate our custom templa
 I've used this to add my own OG image when the link I'm sharing doesn't have one of its own, or I've wanted to enhance it for my own purposes, like the one below.
 
 <figure>
-    <img src="/images/custom-og-mfe.jpg">
+    <img src="/images/custom-og-mfe.jpg" responsive>
     <figcaption>How <a href="https://twitter.com/philhawksworth/status/1671930204275589146">Twitter previews</a> my <a href="https://findthat.at/mfe">custom link</a> to a conference where I'll be speaking.</figcaption>
 </figure>
 

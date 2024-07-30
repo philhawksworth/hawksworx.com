@@ -2,10 +2,11 @@ import lume from "lume/mod.ts";
 import sass from "lume/plugins/sass.ts";
 import date from "lume/plugins/date.ts";
 import prism from "lume/plugins/prism.ts";
-import pagefind from "lume/plugins/pagefind.ts";
 import minifyHTML from "lume/plugins/minify_html.ts";
+// import pagefind from "lume/plugins/pagefind.ts";
 
 import headingAnchors from "./utils/processors/heading-anchors.ts";
+import repsonsiveImages from "./utils/processors/responsive-images.ts";
 
 // Config
 const site = lume({
@@ -39,8 +40,10 @@ site.copy("_public", ".");
 site.process([".html"], (pages) => {
   for (const page of pages) {
     headingAnchors(page, "h2, h3");
+    repsonsiveImages(page);
   }
 });
+
 
 
 export default site;
