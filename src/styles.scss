@@ -36,8 +36,10 @@ hr {
   flex-direction: row;
   list-style: none;
   padding: 0;
-  gap: 0.3em;
-  margin: 2em 0 4em;
+  gap: 0.1em;
+  justify-content: center;
+  margin: 0;
+  flex-wrap: wrap;
 }
 
 .meta {
@@ -130,5 +132,29 @@ img.flag {
   padding-bottom: 1.5em;
   p {
     margin: 0;
+  }
+}
+
+.post-teaser {
+  margin-bottom: 3em;
+  hgroup {
+    margin:0;
+  }
+  h4 {
+    font-size: 1.4em;
+    margin: 0 0 0.4em;
+    padding: 0;
+    line-height: 1.2;
+  }
+  time {
+    color: var(--color-accent);
+    font-size: 0.8em;
+  }
+  .subtitle {
+    font-size: 0.8em;
+    margin-bottom: 0.5em;
+  }
+  .tag-list {
+    justify-content: flex-start;
   }
 }

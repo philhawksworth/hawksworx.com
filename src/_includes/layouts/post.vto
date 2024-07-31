@@ -10,9 +10,12 @@ layout: layouts/base.vto
     <h1>{{title}}</h1>
     <p>{{subtitle}}</p>
   </hgroup>
-  {{ for tag of tags }}
-    <a href="/blog/tags/{{tag}}" class="tag">{{tag}}</a>
-  {{ /for }}
+   <ul class="tag-list">
+   {{ for tag of tags.filter((tag) => tag !== "post") |> toSorted  }}
+   <li><a class="tag" href="/blog/tags/{{tag}}">{{tag}}</a>
+   </li>
+   {{ /for }}
+   </ul>
 </section>
 <hr>
 <section>

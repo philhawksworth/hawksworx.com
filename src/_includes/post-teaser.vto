@@ -1,5 +1,13 @@
-   <h4><a href="{{post.url}}">{{post.title}}</a></h4>  
-    <p>{{post.subtitle}}</p> 
-    {{ for tag of post.tags.filter((tag) => tag !== "post") |> toSorted  }}
-    <a class="tag" href="/blog/tags/{{tag}}">{{tag}}</a>
-    {{ /for }}
+<div class="post-teaser">
+   <hgroup>
+      <time datetime="{post.date}}">{{ post.date |> date('Lo MMMM, yyy')}}</time>
+      <h4><a href="{{post.url}}">{{post.title}}</a></h4>
+   </hgroup>
+   <p class="subtitle">{{post.subtitle}}</p> 
+   <ul class="tag-list">
+   {{ for tag of post.tags.filter((tag) => tag !== "post") |> toSorted  }}
+   <li><a class="tag" href="/blog/tags/{{tag}}">{{tag}}</a>
+   </li>
+   {{ /for }}
+   </ul>
+</div>

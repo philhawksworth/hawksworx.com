@@ -11,7 +11,7 @@ title: "Phil Hawksworth - posts"
 </section>
 <hr>
 <section>
-  <div class="listing">
+  <div class="listing"> 
   {{ for post of search.pages("post", "date=desc") }}
     <div class="list-item">
     {{ include "post-teaser.vto" { post } }}
