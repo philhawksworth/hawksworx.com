@@ -16,3 +16,12 @@
   to = "/.netlify/images?url=/images/:file&width=:width"
   status = 200
   
+#
+[[redirects]]
+  from = "/ask-me/to-speak"
+  to = "/ask-me/#to-speak"
+  status = 302
+[[redirects]]
+  from = "/ask-me/anything"
+  to = "/ask-me/#anything"
+  status = 302

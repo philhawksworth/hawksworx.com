@@ -35,15 +35,15 @@ site.filter("bydate", (arr) => { return arr.sort((a, b) => Date.parse(b.date) - 
 // Static file pasthrough
 site.copy("_public", ".");
 
-
-// Add heading anchors across the site
+// {Post processing}
 site.process([".html"], (pages) => {
   for (const page of pages) {
+    // Add heading anchors across the site
     headingAnchors(page, "h2, h3");
+    // Turn images into respsonive images
     repsonsiveImages(page);
   }
 });
-
 
 
 export default site;
