@@ -122,17 +122,18 @@ blockquote {
   color: #fff;
 }
 
+.naked-list {
+  list-style: none;
+  padding-left: 0;
+}
 
-
-li:not(.naked-list li) {
-  padding-left: 1.5em;
-  text-indent: -1.5em;
-
+ul, ol {
+  padding-left: 1em;
+  list-style-position: outside;
 }
 li::marker {
-  color: #00000090;
+  color: #000000;
 }
-
 
 footer {
   font-size: var(--step--1);
@@ -174,4 +175,13 @@ summary {
       color: #000;
     }
   }
+}
+
+
+footer {
+  color: var(--color-grey-lighter);
+  li {
+   display: block
+  }
+
 }

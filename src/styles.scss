@@ -99,8 +99,7 @@ main img {
   }
 }
 
-.nav,
-.social {
+header .nav {
   display: flex;
   flex-direction: row;
   list-style: none;
@@ -111,12 +110,14 @@ main img {
   font-weight: bold;
 }
 
+
 img.flag {
   width: 1.2em;
   box-shadow: 0 0 3px var(--shade-down-2);
   border-radius: 3px;
   margin-top:0.5em;
 }
+
 
 .naked-list {
   list-style: none;
@@ -132,6 +133,16 @@ img.flag {
   padding-bottom: 1.5em;
   p {
     margin: 0;
+  }
+}
+
+
+.icon {
+  width:1.8em;
+  height: 1.8em;
+  color: var(--color-grey-lighter);
+  &:hover{
+    color:#000;
   }
 }
 

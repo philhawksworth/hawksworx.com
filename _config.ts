@@ -3,6 +3,7 @@ import sass from "lume/plugins/sass.ts";
 import date from "lume/plugins/date.ts";
 import prism from "lume/plugins/prism.ts";
 import minifyHTML from "lume/plugins/minify_html.ts";
+import inline from "lume/plugins/inline.ts";
 // import pagefind from "lume/plugins/pagefind.ts";
 
 import headingAnchors from "./utils/processors/heading-anchors.ts";
@@ -21,6 +22,9 @@ site.data("layout", "layouts/base.vto");
 site.use(date());
 site.use(sass({"format": "compressed"}));
 site.use(prism());
+site.use(inline({
+  copyAttributes: ["title", /^data-/], // Copy the "title" and all data-* attributes
+}));
 site.use(minifyHTML({options: { minify_css: false }}));
 // site.use(pagefind({
 //   ui: false

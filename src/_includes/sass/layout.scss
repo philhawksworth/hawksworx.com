@@ -6,7 +6,7 @@ body {
 header {
   background-color: var(--color-page);
   margin:0;
-  padding: 1em 0;
+  padding: 1.5rem 1.5rem;
 }
 main {
   padding:0 1.5em 4em;
@@ -20,8 +20,37 @@ main {
 
 }
 footer {
+  padding: 4em 4em 8em;
   background-color: #fff;
+  color: var(--color-grey-lighter);
   display: flex;
   flex-direction: row;
-  padding: 2em 1em 8em;
+  justify-content: spoace-between;
+  gap: 1em 4em;
+  flex-wrap: wrap;
+
+  ul {
+    margin: 0.5rem 0;
+    padding:0;
+  }
+
+  .social {
+    display: flex;
+    gap:1em;
+    margin-top:1rem;
+  }
+  
+  .legal {
+    flex-grow: 3;
+    font-size: 0.8em;
+    p {
+      width:55ch;
+    }
+    
+    @media screen and (min-width:670px) {
+      border-left: 1px solid var(--shade-down-2);
+      padding-left: 4em;
+    }
+    
+  }
 }

@@ -13,9 +13,11 @@ url: /blog/tags/
 <section>
 {{ for tag of search.values("tags").filter((tag) => tag !== "post") |> toSorted  }}
   <h2><a href="/blog/tags/{{tag}}" class="tag">{{tag}}</a></h2>
+  <ul>
   {{ for post of search.pages(tag) }}
     <li><a href="{{post.url}}">{{ post.title }}</a></li>
   {{ /for }}
+  </ul>
 {{ /for }}
 </section>
   
