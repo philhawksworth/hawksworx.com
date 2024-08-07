@@ -89,13 +89,21 @@ main img {
 
 .direct-link {
   display:inline-block;
-  width: 0.8em;
-  margin-left: -0.8em;
-  opacity: 0.1;
+  width: calc(0.8em + 1rem);
+  margin-left: calc(-0.8em - 1rem);
+  opacity: 0.06;
   text-decoration: none;
+  vertical-align:middle;
+  
+  img {
+    width: 0.8em;
+    padding-right: 10px;
+    box-shadow: none;
+  }
 
   &:hover {
     opacity: 1;
+    box-shadow: none;
   }
 }
 
@@ -145,6 +153,8 @@ img.flag {
     color:#000;
   }
 }
+
+
 
 .post-teaser {
   margin-bottom: 3em;

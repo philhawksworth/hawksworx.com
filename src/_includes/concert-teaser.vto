@@ -1,0 +1,17 @@
+<li class="marked-item">
+  <img src="/images/flags/{{event.country_code}}.svg" class="flag" alt="Country flag for this event in {{ event.address }}">
+  <div>
+    {{ event.title }} — <datetime time="{{ event.date}}">{{ event.date |> date('do MMMM, yyy') }}</datetime>  
+    {{ if event.repertoire }}
+      <p>
+      {{ if event.url }}
+        <a href="{{event.url}}">{{event.repertoire}}</a>
+      {{ else }}
+        Performing {{ event.repertoire }}
+      {{ /if }}
+    {{ else }}
+      </p>
+    {{ /if }}
+    <address>{{ event.address }}</address>
+  </div>
+</li>

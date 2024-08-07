@@ -22,9 +22,7 @@ site.data("layout", "layouts/base.vto");
 site.use(date());
 site.use(sass({"format": "compressed"}));
 site.use(prism());
-site.use(inline({
-  copyAttributes: ["title", /^data-/], // Copy the "title" and all data-* attributes
-}));
+
 site.use(minifyHTML({options: { minify_css: false }}));
 // site.use(pagefind({
 //   ui: false
