@@ -1,0 +1,19 @@
+---
+title: notes
+---
+{{# <section>
+  <hgroup>
+    <h1>Posts tagged: {{tag}}</h1>
+    <p>Browse <a href="/blog/tags/">all tags</a> instead</p>
+  </hgroup>
+</section>
+<hr> #}}
+
+<section>
+  <ul>
+  {{ for note of notes }}
+    <li><a href="{{note.id}}">{{ note.id }}</a></li>
+  {{ /for }}
+  </ul>
+</section>
+  
