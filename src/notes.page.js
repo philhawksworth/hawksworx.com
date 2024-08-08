@@ -3,8 +3,8 @@ export const layout = "layouts/notes-list.vto";
 export default function* ({ notes, paginate }) {
     
   const options = {
-    url: (n) => `/notes/${n}/`,
-    size: 100,
+    url: (n) => n == 1 ? `/notes/` : `/notes/${n}/`,
+    size: 50,
   };
 
   for (const page of paginate(notes, options)) {

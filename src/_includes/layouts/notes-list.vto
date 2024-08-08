@@ -1,18 +1,30 @@
 ---
 title: notes
+layout: layouts/base.vto
 ---
-{{# <section>
+
+<section>
   <hgroup>
-    <h1>Posts tagged: {{tag}}</h1>
-    <p>Browse <a href="/blog/tags/">all tags</a> instead</p>
+    <h1>Notes (page {{ pagination.page }})</h1>
+    <p>An archive of {{pagination.totalResults}} of my social media posts</p>
   </hgroup>
+
+{{if pagination.previous }}
+<a href="{{pagination.previous}}">Previous page</a>
+{{/if}}
+
+{{if pagination.next}}
+<a href="{{pagination.next}}">Next page</a>
+{{/if}}
+
+
 </section>
-<hr> #}}
+<hr>
 
 <section>
   <ul>
-  {{ for note of notes }}
-    <li><a href="{{note.id}}">{{ note.id }}</a></li>
+  {{ for note of results }}
+    <div>{{note.full_text}}<a href="/note/{{note.id}}">{{ note.id }}</a></li>
   {{ /for }}
   </ul>
 </section>
