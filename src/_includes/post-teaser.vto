@@ -4,6 +4,7 @@
       <h4><a href="{{post.url}}">{{post.title}}</a></h4>
    </hgroup>
    <p class="subtitle">{{post.subtitle}}</p> 
+   {{ if feature }}{{ /if }}
    <ul class="tag-list">
    {{ for tag of post.tags.filter((tag) => tag !== "post") |> toSorted  }}
    <li><a class="tag" href="/blog/tags/{{tag}}">{{tag}}</a>

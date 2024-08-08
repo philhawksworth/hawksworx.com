@@ -1,6 +1,5 @@
 ---
 title: "Phil Hawksworth's speaker rider"
-templateEngine: [md, vto]
 ---
 
 <section>

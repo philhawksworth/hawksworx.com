@@ -1,8 +1,6 @@
 ---
 title: "Styleguide"
-templateEngine: [md, vto]
 ---
-
 
 <section>
   <hgroup>

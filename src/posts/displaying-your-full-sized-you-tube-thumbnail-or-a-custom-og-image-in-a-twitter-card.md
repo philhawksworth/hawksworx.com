@@ -14,8 +14,8 @@ We can fix this with a crafty use of [Netlify's Edge Functions](https://www.netl
 
 ![A custom OG image in a tweet](/images/custom-og-in-a-tweet.jpg "A custom opn graph image displayed in a tweet "){responsive}
 
-
 <!--more-->
+
 
 
 ## How I enriched my link shortener

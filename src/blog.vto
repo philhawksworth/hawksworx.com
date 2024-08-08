@@ -1,5 +1,4 @@
 ---
-layout: "layouts/base.vto"
 title: "Phil Hawksworth - posts"
 ---
 
@@ -12,7 +11,12 @@ title: "Phil Hawksworth - posts"
 <hr>
 <section>
   <div class="listing"> 
-  {{ for post of search.pages("post", "date=desc") }}
+  {{ set postCount = search.pages("post").length }}
+  {{ for post of search.pages("post", "date=desc", 3) }}
+    {{ include "post-teaser.vto" { post, feature: true } }}
+  {{ /for }}
+
+  {{ for post of search.pages("post", "date=desc", (postCount-3)*-1) }}
     <div class="list-item">
     {{ include "post-teaser.vto" { post } }}
     </div>

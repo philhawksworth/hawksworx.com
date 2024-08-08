@@ -22,6 +22,7 @@ site.data("layout", "layouts/base.vto");
 site.use(date());
 site.use(sass({"format": "compressed"}));
 site.use(prism());
+site.use(inline());
 
 site.use(minifyHTML({options: { minify_css: false }}));
 // site.use(pagefind({
@@ -31,6 +32,8 @@ site.use(minifyHTML({options: { minify_css: false }}));
 // Filters and helpers
 site.filter("contentExcerpt", (value) => value.split("<!--more-->")[0]);
 site.filter("contentAfterExcerpt", (value) => value.split("<!--more-->")[1]);
+
+
 site.filter("bydate", (arr) => { return arr.sort((a, b) => Date.parse(b.date) - Date.parse(a.date)) });
 
 
