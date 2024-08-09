@@ -1,6 +1,6 @@
 ---
-title: notes
 layout: layouts/base.vto
+title: "Phil Hawksworth's social media archive"
 ---
 
 <section>
@@ -8,8 +8,40 @@ layout: layouts/base.vto
     <h1>Notes (page {{ pagination.page }})</h1>
     <p>An archive of {{pagination.totalResults}} of my social media posts</p>
   </hgroup>
+  {{if pagination.previous }}
+  <a href="{{pagination.previous}}">Previous page</a>
+  {{/if}}
+  {{if pagination.next}}
+  <a href="{{pagination.next}}">Next page</a>
+  {{/if}}
+</section>
+<hr>
+<section>
+  {{ for note of results }}
+    <div class="social-note">
+      <div class="note-content">
+      {{note.full_text}}
+      </div>
+      <div class="note-meta">
+        <p>Posted by 
+        {{ if note.platform == "twitter" }}
+          <a href="https://x.com/philhawksworth/">@philhawksworth</a> 
+          <a href="https://x.com/philhawksworth/status/{{note.id}}" title="View original on Twitter">
+        {{ else if note.platform == "mastodon" }}
+          <a href="https://elk.zone/indieweb.social/@philhawksworth/">@philhawksworth</a> on
+          <a href="https://elk.zone/indieweb.social/@philhawksworth/{{note.id}}" title="View original on Mastodon">
+        {{ /if }}
+          <time datetime="{{ note.created_at }}">{{ note.created_at |> date('Lo MMMM, yyy') }}</time>
+          </a> |
+          <a href="/note/{{note.id}}">Permalink</a>
+        </p>
+      </div>
+    </div>
+  {{ /for }}
+</section>
 
-{{if pagination.previous }}
+<section>
+  {{if pagination.previous }}
 <a href="{{pagination.previous}}">Previous page</a>
 {{/if}}
 
@@ -17,15 +49,4 @@ layout: layouts/base.vto
 <a href="{{pagination.next}}">Next page</a>
 {{/if}}
 
-
 </section>
-<hr>
-
-<section>
-  <ul>
-  {{ for note of results }}
-    <div>{{note.full_text}}<a href="/note/{{note.id}}">{{ note.id }}</a></li>
-  {{ /for }}
-  </ul>
-</section>
-  
