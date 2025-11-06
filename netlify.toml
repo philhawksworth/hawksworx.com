@@ -1,7 +1,7 @@
 [build]
   command = "npm run build"
   publish = "dist"
-  environment = { NODE_VERSION = "16" }
+  environment = { NODE_VERSION = "22" }
 
 [dev]
   command = "npm run dev"

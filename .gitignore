@@ -12,6 +12,7 @@ src/site/_includes/css/*
 # Social media archive exports
 tweets.json
 outbox.json
+tw-archive
 
 # Eleventy Edge Build Data files
 netlify/edge-functions/_generated
