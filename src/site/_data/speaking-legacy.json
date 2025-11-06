@@ -1,5 +1,19 @@
 {
     "events": [
+                  {
+        "title": "Performance Now (MC)",
+        "address": "Amsterdam, Netherlands",
+        "starts_on": "2025-10-30 09:00",
+        "country_code": "nl",
+        "url": "https://perfnow.nl/"
+      },
+          {
+        "title": "Middlesbrough Front End",
+        "address": "Middlesbrough, UK",
+        "starts_on": "2023-07-19 09:00",
+        "country_code": "gb-eng",
+        "url": "https://www.middlesbroughfe.co.uk/"
+      },
       {
         "title": "PixelPioneers, 2023 (MC)",
         "address": "Bristol, UK",
