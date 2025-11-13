@@ -1,6 +1,13 @@
 {
     "events": [
       {
+        "title": "All Day Hey (MC)",
+        "address": "Leeds, Uk",
+        "starts_on": "2026-05-07 09:00",
+        "country_code": "gb-eng",
+        "url": "https://heypresents.com/conferences/2026"
+      },
+      {
         "title": "JS Heroes",
         "address": "Cluj-Napoca, Romania",
         "starts_on": "2026-05-14 09:00",
