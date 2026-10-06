@@ -1,0 +1,69 @@
+:root {
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --util: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --step--1: clamp(0.82rem, 0.8rem + 0.1vw, 0.88rem);
+  --step-0: clamp(1.03rem, 1rem + 0.17vw, 1.15rem);
+  --step-1: clamp(1.25rem, 1.18rem + 0.35vw, 1.5rem);
+  --step-2: clamp(1.5rem, 1.37rem + 0.65vw, 1.95rem);
+  --step-3: clamp(1.8rem, 1.56rem + 1.2vw, 2.55rem);
+  --step-4: clamp(2.2rem, 1.7rem + 2.4vw, 3.6rem);
+
+  --radius: 4px;
+  --selection: rgb(var(--flag-rgb) / 0.25);
+
+  --measure: 34rem;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+  --flow: 1.1em;
+  --annotation-col: 11rem;
+}
+
+@mixin light {
+  --ink: #16181d;
+  --ink-soft: #4a4f5a;
+  --paper: #fbfaf7;
+  --surface: #ffffff;
+  --rule: #cfcabb;
+  --mark: #076a7d;
+  --flag: #9b2226;
+  --flag-rgb: 155 34 38;
+  --on-accent: #fbfaf7;
+
+  --code-bg: #efece2;
+  --code-ink: var(--ink);
+  --pre-bg: #16181d;
+  --pre-ink: #fbfaf7;
+}
+
+@mixin dark {
+  --ink: #e8e6e1;
+  --ink-soft: #9a9790;
+  --paper: #14161a;
+  --surface: #1c1f24;
+  --rule: #353a42;
+  --mark: #28e6ff;
+  --flag: #befe34;
+  --flag-rgb: 190 254 52;
+  --on-accent: #14161a;
+
+  --code-bg: #262a31;
+  --code-ink: var(--ink);
+  --pre-bg: #0c0e11;
+  --pre-ink: #e8e6e1;
+}
+
+:root,
+[data-theme="light"] {
+  @include light;
+}
+
+[data-theme="dark"] {
+  @include dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    @include dark;
+  }
+}

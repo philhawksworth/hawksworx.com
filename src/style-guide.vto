@@ -1,0 +1,288 @@
+---
+layout: base.vto
+title: Style guide
+description: The typographic scale, colour palette and reusable components used across hawksworx.com.
+permalink: /style-guide/
+---
+
+<header class="masthead">
+  <div class="masthead__top">
+    <p class="masthead__kicker">Reference sheet / 2026</p>
+    <button
+      class="theme-toggle"
+      type="button"
+      data-theme-toggle
+      aria-pressed="false"
+    >
+      <span class="theme-toggle__dot" aria-hidden="true"></span>
+      <span data-theme-label>Dark</span>
+    </button>
+  </div>
+  <h1 class="masthead__title">Style guide</h1>
+  <p class="masthead__standfirst">
+    Every type style and component the site is built from, shown at the size it
+    ships at. Notes in the left column give the class or element to reach for.
+  </p>
+</header>
+
+<h2 class="section-head"><span>Colour</span></h2>
+
+<p class="specimen__note measure">
+  Values are set per theme. Toggle above to compare.
+</p>
+
+<ul class="swatches">
+  <li>
+    <div class="swatch__chip" style="background: var(--ink)"></div>
+    <span class="swatch__name">Ink</span>
+    <span class="swatch__hex">var(--ink) — body text, rules</span>
+  </li>
+  <li>
+    <div class="swatch__chip" style="background: var(--ink-soft)"></div>
+    <span class="swatch__name">Ink soft</span>
+    <span class="swatch__hex">var(--ink-soft) — captions, meta</span>
+  </li>
+  <li>
+    <div class="swatch__chip" style="background: var(--paper)"></div>
+    <span class="swatch__name">Paper</span>
+    <span class="swatch__hex">var(--paper) — page background</span>
+  </li>
+  <li>
+    <div class="swatch__chip" style="background: var(--surface)"></div>
+    <span class="swatch__name">Surface</span>
+    <span class="swatch__hex">var(--surface) — cards, notes</span>
+  </li>
+  <li>
+    <div class="swatch__chip" style="background: var(--rule)"></div>
+    <span class="swatch__name">Rule</span>
+    <span class="swatch__hex">var(--rule) — hairlines, borders</span>
+  </li>
+  <li>
+    <div class="swatch__chip" style="background: var(--mark)"></div>
+    <span class="swatch__name">Mark</span>
+    <span class="swatch__hex">var(--mark) — links, focus</span>
+  </li>
+  <li>
+    <div class="swatch__chip" style="background: var(--flag)"></div>
+    <span class="swatch__name">Flag</span>
+    <span class="swatch__hex">var(--flag) — warnings, notes</span>
+  </li>
+  <li>
+    <div class="swatch__chip" style="background: var(--on-accent)"></div>
+    <span class="swatch__name">On accent</span>
+    <span class="swatch__hex">var(--on-accent) — text on filled buttons</span>
+  </li>
+</ul>
+
+<h2 class="section-head"><span>Typography</span></h2>
+
+<div class="specimen">
+  <p class="specimen__note"><b>h1</b>Archivo 700, page title. One per page.</p>
+  <div><h1>Build on the web you can keep</h1></div>
+</div>
+
+<div class="specimen">
+  <p class="specimen__note"><b>h2</b>Section heading.</p>
+  <div><h2>Static sites, dynamic ideas</h2></div>
+</div>
+
+<div class="specimen">
+  <p class="specimen__note"><b>h3</b>Subsection inside a section.</p>
+  <div><h3>Deploying at the edge</h3></div>
+</div>
+
+<div class="specimen">
+  <p class="specimen__note"><b>h4</b>Minor heading within prose.</p>
+  <div><h4>What changed in the build step</h4></div>
+</div>
+
+<div class="specimen">
+  <p class="specimen__note"><b>h5</b>Rare. Labelling a group of fields.</p>
+  <div><h5>Response headers</h5></div>
+</div>
+
+<div class="specimen">
+  <p class="specimen__note"><b>h6</b>Mono eyebrow, used above sections.</p>
+  <div><h6>Filed under performance</h6></div>
+</div>
+
+<div class="specimen">
+  <p class="specimen__note">
+    <b>Body</b>Source Serif 4 on a 34rem measure. Wrap runs of prose in
+    <code>.flow .measure</code>.
+  </p>
+  <div class="flow measure">
+    <p>
+      The web rewards work that stays simple for long enough to be maintained.
+      Most of what follows is an argument for doing less at request time and
+      more at build time, then letting the network do what it is good at.
+    </p>
+    <p>
+      That means <strong>pre-rendering by default</strong>, reaching for
+      <a href="#">progressive enhancement</a> before client-side rendering, and
+      treating <em>every</em> runtime dependency as a cost to justify.
+    </p>
+  </div>
+</div>
+
+<div class="specimen">
+  <p class="specimen__note"><b>Lists</b>ul, ol and dl.</p>
+  <div class="flow measure">
+    <ul>
+      <li>Render ahead of the request</li>
+      <li>Cache at the edge</li>
+      <li>Hydrate only what needs it</li>
+    </ul>
+    <ol>
+      <li>Write the content</li>
+      <li>Build the pages</li>
+      <li>Deploy the folder</li>
+    </ol>
+    <dl>
+      <dt>Time to first byte</dt>
+      <dd>Measured from the nearest edge location, not the origin.</dd>
+      <dt>Build time</dt>
+      <dd>Paid once per deploy rather than once per visitor.</dd>
+    </dl>
+  </div>
+</div>
+
+<div class="specimen">
+  <p class="specimen__note"><b>blockquote</b>Pull quote with optional cite.</p>
+  <div class="measure">
+    <blockquote>
+      The fastest page is the one that was already finished before anybody asked
+      for it.
+      <cite>Talk notes, Jamstack Conf</cite>
+    </blockquote>
+  </div>
+</div>
+
+<div class="specimen">
+  <p class="specimen__note"><b>pre / code</b>Code blocks and inline code.</p>
+  <div class="flow measure">
+    <p>Run <code>npm run dev</code> to start the local server.</p>
+    <pre><code>export default {
+  dir: { input: "src", output: "_site" }
+};</code></pre>
+  </div>
+</div>
+
+<div class="specimen">
+  <p class="specimen__note"><b>table</b>Tabular data.</p>
+  <div>
+    <table>
+      <caption class="visually-hidden">Build output comparison</caption>
+      <thead>
+        <tr>
+          <th scope="col">Page</th>
+          <th scope="col">Size</th>
+          <th scope="col">Build</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Home</td><td>14 kB</td><td>0.2s</td></tr>
+        <tr><td>Archive</td><td>62 kB</td><td>1.4s</td></tr>
+        <tr><td>Style guide</td><td>21 kB</td><td>0.3s</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="specimen">
+  <p class="specimen__note"><b>figure</b>Image with caption.</p>
+  <figure>
+    <svg viewBox="0 0 400 140" role="img" aria-label="Placeholder diagram" style="width:100%;border:1px solid var(--rule)">
+      <rect width="400" height="140" fill="#efece2" />
+      <path d="M20 110 L120 50 L220 85 L380 25" fill="none" stroke="#1f4fd8" stroke-width="2" />
+    </svg>
+    <figcaption>Response times after moving rendering to the build step.</figcaption>
+  </figure>
+</div>
+
+<h2 class="section-head"><span>Components</span></h2>
+
+<div class="specimen">
+  <p class="specimen__note"><b>.button</b>Solid for primary, ghost for secondary.</p>
+  <div>
+    <a class="button" href="#">Read the notes</a>
+    <a class="button button--ghost" href="#">All writing</a>
+  </div>
+</div>
+
+<div class="specimen">
+  <p class="specimen__note"><b>.tag</b>Topic label. Pair with a list.</p>
+  <div>
+    <span class="tag">eleventy</span>
+    <span class="tag">performance</span>
+    <span class="tag">speaking</span>
+  </div>
+</div>
+
+<div class="specimen">
+  <p class="specimen__note"><b>.card</b>In <code>.card-grid</code> for indexes.</p>
+  <div class="card-grid">
+    <article class="card">
+      <p class="card__meta">12 March 2026 · Writing</p>
+      <h3 class="card__title"><a href="#">Serving less JavaScript</a></h3>
+      <p>How much of a page really needs to run in the browser.</p>
+    </article>
+    <article class="card">
+      <p class="card__meta">4 February 2026 · Talk</p>
+      <h3 class="card__title"><a href="#">The edge is a build step</a></h3>
+      <p>Notes from a conference talk about deploy-time rendering.</p>
+    </article>
+  </div>
+</div>
+
+<div class="specimen">
+  <p class="specimen__note"><b>.note</b>Caveats and asides in prose.</p>
+  <div class="measure">
+    <div class="note">
+      <p class="note__label">Heads up</p>
+      <p>This page is the source of truth. Add a specimen before adding CSS.</p>
+    </div>
+  </div>
+</div>
+
+<div class="specimen">
+  <p class="specimen__note"><b>.stack-list</b>Dated rows: talks, posts, events.</p>
+  <div>
+    <ul class="stack-list">
+      <li><time datetime="2026-05-19">19 May</time><span>Speaking at All Day Hey, Leeds</span></li>
+      <li><time datetime="2026-03-02">2 Mar</time><span>Workshop: building without a framework</span></li>
+      <li><time datetime="2026-01-14">14 Jan</time><span>Podcast: twenty years of static sites</span></li>
+    </ul>
+  </div>
+</div>
+
+<footer class="colophon">
+  <p>Archivo · Source Serif 4 · IBM Plex Mono — hawksworx.com, 2026 rebuild.</p>
+</footer>
+
+<script>
+  (() => {
+    const root = document.documentElement;
+    const button = document.querySelector("[data-theme-toggle]");
+    const label = document.querySelector("[data-theme-label]");
+
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+    const current = () =>
+      root.dataset.theme ?? (prefersDark.matches ? "dark" : "light");
+
+    const render = () => {
+      const next = current() === "dark" ? "light" : "dark";
+      label.textContent = next.charAt(0).toUpperCase() + next.slice(1);
+      button.setAttribute("aria-pressed", String(current() === "dark"));
+    };
+
+    button.addEventListener("click", () => {
+      root.dataset.theme = current() === "dark" ? "light" : "dark";
+      render();
+    });
+
+    prefersDark.addEventListener("change", render);
+    render();
+  })();
+</script>

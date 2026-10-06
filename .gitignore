@@ -1,22 +1,5 @@
 node_modules
-dist
+_site
+.DS_Store
 .env
-_soon
-src/site/images/instagram/*.jpeg
-src/site/_includes/css/*
-.netlify
-.netlify/state.json
 .cache
-/**/.DS_Store
-
-# Social media archive exports
-tweets.json
-outbox.json
-tw-archive
-
-# Eleventy Edge Build Data files
-netlify/edge-functions/_generated
-
-
-commit.js
-.netlify/state.json
