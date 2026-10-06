@@ -134,11 +134,6 @@
   text-shadow: 0 1px 1rem rgb(0 0 0 / 0.7);
 }
 
-.hero__content .masthead__kicker,
-.hero__phonetic {
-  color: #b9f6ff;
-}
-
 .hero__content .button {
   background: #ffffff;
   border-color: #ffffff;
@@ -185,12 +180,6 @@
 
 .hero__name {
   margin: 0;
-}
-
-.hero__phonetic {
-  font: var(--step-0) / 1 var(--util);
-  color: var(--ink-soft);
-  margin-top: 0.7rem;
 }
 
 .hero__strapline {
