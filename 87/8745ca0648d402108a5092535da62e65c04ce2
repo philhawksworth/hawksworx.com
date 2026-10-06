@@ -1,0 +1,21 @@
+package-lock.json
+  s_8859158a63522e::t_2daa3bf7fc8a34 13,126-233,1909-1918,2139-2151,2348-2353,2527-2533,2624-2630,3396-3435
+package.json
+  s_8859158a63522e::t_580761033c31d6 19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "878745ca0648d402108a5092535da62e65c04ce2",
+  "prompts": {},
+  "sessions": {
+    "s_8859158a63522e": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_eef2f6685ffemOJ9MN69JawdLs",
+        "model": "cloudflare/auto"
+      },
+      "human_author": "phawksworth <phawksworth@cloudflare.com>"
+    }
+  }
+}
