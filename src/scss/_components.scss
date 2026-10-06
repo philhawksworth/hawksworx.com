@@ -100,6 +100,7 @@
   width: 100vw;
   min-height: min(48rem, 100svh);
   margin-top: calc(var(--gutter) * -1);
+  margin-bottom: clamp(2.5rem, 6vh, 4.5rem);
   margin-left: -50vw;
   display: grid;
   align-items: end;
