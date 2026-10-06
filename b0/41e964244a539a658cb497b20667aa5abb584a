@@ -1,0 +1,25 @@
+.gitignore
+  s_8859158a63522e::t_4741ab577b11df 6-11
+cloudflare.config.ts
+  s_8859158a63522e::t_27f14809977ea2 1-11
+package-lock.json
+  s_8859158a63522e::t_edb29d4657b45a 13,15-16,204-1464,1771-1812,1846-1852,1989-1995,2020-2042,2085-2098,2273-2324,2944-3089,3123-3129,3261-3274,3527-3576,3647-3659,3700-3707,3715-3734,3759-3855,3877-3911
+wrangler.config.ts
+  s_8859158a63522e::t_9543e049d93c18 1-5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "b041e964244a539a658cb497b20667aa5abb584a",
+  "prompts": {},
+  "sessions": {
+    "s_8859158a63522e": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_eef2f6685ffemOJ9MN69JawdLs",
+        "model": "cloudflare/auto"
+      },
+      "human_author": "phawksworth <phawksworth@cloudflare.com>"
+    }
+  }
+}
