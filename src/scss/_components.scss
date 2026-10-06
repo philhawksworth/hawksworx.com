@@ -94,6 +94,7 @@
 }
 
 .hero {
+  --hero-fade: clamp(4rem, 12vh, 7rem);
   position: relative;
   left: 50%;
   width: 100vw;
@@ -112,8 +113,24 @@
   align-self: end;
   z-index: 1;
   height: 70%;
-  background: linear-gradient(to top, rgb(8 10 14 / 0.96), transparent);
+  background: linear-gradient(to top, rgb(8 10 14 / 0.96), rgb(8 10 14 / 0));
   pointer-events: none;
+}
+
+.hero__fade {
+  position: absolute;
+  inset: auto 0 -1px;
+  z-index: 3;
+  height: var(--hero-fade);
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--paper-rgb) / 0) 0%,
+    rgb(var(--paper-rgb) / 0.3) 38%,
+    rgb(var(--paper-rgb) / 0.7) 62%,
+    rgb(var(--paper-rgb) / 0.92) 82%,
+    rgb(var(--paper-rgb) / 1) 100%
+  );
 }
 
 .hero__portrait {
@@ -159,18 +176,9 @@
 
 @media (min-width: 46rem) {
   .hero {
+    --hero-fade: clamp(6rem, 16vh, 11rem);
     min-height: 100svh;
     align-items: center;
-  }
-
-  .hero::before {
-    content: "";
-    position: absolute;
-    inset: auto 0 0;
-    z-index: 1;
-    height: clamp(5rem, 14vh, 10rem);
-    background: linear-gradient(to bottom, transparent, var(--paper));
-    pointer-events: none;
   }
 
   .hero::after {
@@ -183,7 +191,7 @@
       rgb(8 10 14 / 0.92) 0%,
       rgb(8 10 14 / 0.78) 32%,
       rgb(8 10 14 / 0.2) 68%,
-      transparent 100%
+      rgb(8 10 14 / 0) 100%
     );
   }
 
