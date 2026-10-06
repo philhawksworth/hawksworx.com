@@ -94,63 +94,92 @@
 }
 
 .hero {
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  min-height: min(48rem, 100svh);
+  margin-top: calc(var(--gutter) * -1);
+  margin-left: -50vw;
   display: grid;
-  gap: var(--gutter);
-  padding: 1rem 0 3rem;
+  align-items: end;
+  overflow: hidden;
+  background: #0c0e11;
+}
+
+.hero::after {
+  content: "";
+  grid-area: 1 / 1;
+  align-self: end;
+  z-index: 1;
+  height: 70%;
+  background: linear-gradient(to top, rgb(8 10 14 / 0.96), transparent);
+  pointer-events: none;
 }
 
 .hero__portrait {
   grid-area: 1 / 1;
   width: 100%;
-  height: auto;
-  border-radius: var(--radius);
-  border: 1px solid var(--rule);
+  height: 100%;
+  min-height: min(48rem, 100svh);
+  object-fit: cover;
+  object-position: 53% center;
 }
 
 .hero__content {
-  grid-area: 2 / 1;
+  grid-area: 1 / 1;
+  z-index: 2;
+  width: min(100%, 38rem);
+  padding: var(--gutter);
+  color: #ffffff;
+  text-shadow: 0 1px 1rem rgb(0 0 0 / 0.7);
+}
+
+.hero__content .masthead__kicker,
+.hero__phonetic {
+  color: #b9f6ff;
+}
+
+.hero__content .button {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #16181d;
+  text-shadow: none;
+}
+
+.hero__content .button:hover {
+  background: #28e6ff;
+  border-color: #28e6ff;
+  color: #14161a;
+}
+
+.hero__content .button--ghost {
+  background: rgb(0 0 0 / 0.35);
+  color: #ffffff;
 }
 
 @media (min-width: 46rem) {
   .hero {
+    min-height: 100svh;
     align-items: center;
-    padding: 2rem 0 4.5rem;
+  }
+
+  .hero::after {
+    inset: 0 0 0 auto;
+    align-self: stretch;
+    width: 58%;
+    height: auto;
+    background: linear-gradient(to left, rgb(8 10 14 / 0.9), transparent);
   }
 
   .hero__portrait {
-    grid-area: 1 / 1;
+    min-height: 100svh;
+    object-position: 65% center;
   }
 
   .hero__content {
-    grid-area: 1 / 1;
-    z-index: 1;
-    width: 43%;
-    padding: clamp(1.5rem, 4vw, 3rem);
-    color: #ffffff;
-    text-shadow: 0 1px 1rem rgb(0 0 0 / 0.7);
-  }
-
-  .hero__content .masthead__kicker,
-  .hero__phonetic {
-    color: #b9f6ff;
-  }
-
-  .hero__content .button {
-    background: #ffffff;
-    border-color: #ffffff;
-    color: #16181d;
-    text-shadow: none;
-  }
-
-  .hero__content .button:hover {
-    background: #28e6ff;
-    border-color: #28e6ff;
-    color: #14161a;
-  }
-
-  .hero__content .button--ghost {
-    background: rgb(0 0 0 / 0.35);
-    color: #ffffff;
+    justify-self: end;
+    width: min(46%, 38rem);
+    margin-right: max(var(--gutter), calc((100vw - 72rem) / 2 + var(--gutter)));
   }
 }
 
