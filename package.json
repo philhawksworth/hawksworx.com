@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "eleventy --serve --quiet",
-    "build": "eleventy"
+    "build": "eleventy",
+    "deploy": "npm run build && cf deploy"
   },
   "repository": {
     "type": "git",
@@ -15,7 +16,9 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
+    "cf": "^1.0.0-beta.12",
     "eleventy-plugin-vento": "^7.0.0",
-    "sass": "^1.80.0"
+    "sass": "^1.80.0",
+    "wrangler": "^4.147.0"
   }
 }
