@@ -159,16 +159,28 @@
   }
 
   .hero::after {
-    inset: 0 0 0 auto;
+    inset: 0;
     align-self: stretch;
-    width: 58%;
+    width: 100%;
     height: auto;
-    background: linear-gradient(to left, rgb(8 10 14 / 0.9), transparent);
+    background: linear-gradient(
+      to left,
+      rgb(8 10 14 / 0.92) 0%,
+      rgb(8 10 14 / 0.78) 32%,
+      rgb(8 10 14 / 0.2) 68%,
+      transparent 100%
+    );
   }
 
   .hero__portrait {
-    min-height: 100svh;
-    object-position: 65% center;
+    position: absolute;
+    top: -15%;
+    left: -30%;
+    width: 130%;
+    height: 130%;
+    min-height: 0;
+    max-width: none;
+    object-position: center;
   }
 
   .hero__content {
