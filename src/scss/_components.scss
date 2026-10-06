@@ -93,6 +93,53 @@
   letter-spacing: 0.1em;
 }
 
+.hero {
+  display: grid;
+  gap: var(--gutter);
+  align-items: center;
+  padding: 1rem 0 3rem;
+}
+
+@media (min-width: 46rem) {
+  .hero {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: calc(var(--gutter) * 1.5);
+    padding: 2rem 0 4.5rem;
+  }
+}
+
+.hero__portrait {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--rule);
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.hero__name {
+  margin: 0;
+}
+
+.hero__phonetic {
+  font: var(--step-0) / 1 var(--util);
+  color: var(--ink-soft);
+  margin-top: 0.7rem;
+}
+
+.hero__strapline {
+  font-size: var(--step-1);
+  line-height: 1.45;
+  max-width: 28ch;
+  margin-top: 1.1rem;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.75rem;
+}
+
 .section-head {
   display: flex;
   align-items: baseline;
