@@ -158,6 +158,16 @@
     align-items: center;
   }
 
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    z-index: 1;
+    height: clamp(5rem, 14vh, 10rem);
+    background: linear-gradient(to bottom, transparent, var(--paper));
+    pointer-events: none;
+  }
+
   .hero::after {
     inset: 0;
     align-self: stretch;
