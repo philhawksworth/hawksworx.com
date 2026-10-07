@@ -1,8 +1,23 @@
 import { compileAsync } from "sass";
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import { VentoPlugin } from "eleventy-plugin-vento";
 
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(VentoPlugin);
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    formats: ["avif", "webp", "jpeg"],
+    widths: [640, 960, 1280, 1600, 2000],
+    fixOrientation: true,
+    sharpAvifOptions: { quality: 55, effort: 5 },
+    sharpWebpOptions: { quality: 72 },
+    sharpJpegOptions: { quality: 78, progressive: true },
+    htmlOptions: {
+      fallback: "largest",
+      imgAttributes: {
+        decoding: "async",
+      },
+    },
+  });
   eleventyConfig.addWatchTarget("src/scss");
 
   eleventyConfig.addTemplateFormats("scss");
@@ -22,6 +37,7 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addPassthroughCopy("src/fonts");
+  eleventyConfig.addPassthroughCopy({ "src/_redirects": "_redirects" });
 
   return {
     dir: {
